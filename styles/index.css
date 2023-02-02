@@ -7,29 +7,27 @@
 @layer base {
   body {
     font-family: "Inter", sans-serif;
-    @apply scroll-smooth;
   }
 }
 
 @layer components {
-  .container {
-    @apply w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px];
-  }
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
+  }
+
+  .sticky .header-logo {
+    @apply py-5 lg:py-2;
   }
 
   .sticky .menu-scroll.active {
     @apply opacity-70;
   }
 
+  input#togglePlan:checked ~ .dot {
+    @apply translate-x-full;
+  }
+
   input#checkboxLabel:checked ~ .box span {
     @apply opacity-100;
-  }
-}
-
-@media (max-width: 992px) {
-  .navbar {
-    @apply max-h-[400px] overflow-y-auto;
   }
 }

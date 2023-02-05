@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SigninPage = () => {
   return (
     <>
@@ -61,8 +63,7 @@ const SigninPage = () => {
                       htmlFor="email"
                       className="mb-3 block text-sm font-medium text-dark dark:text-white"
                     >
-                      {" "}
-                      Your Email{" "}
+                      Your Email
                     </label>
                     <input
                       type="email"
@@ -76,8 +77,7 @@ const SigninPage = () => {
                       htmlFor="password"
                       className="mb-3 block text-sm font-medium text-dark dark:text-white"
                     >
-                      {" "}
-                      Your Password{" "}
+                      Your Password
                     </label>
                     <input
                       type="password"
@@ -125,8 +125,7 @@ const SigninPage = () => {
                         href="#0"
                         className="text-sm font-medium text-primary hover:underline"
                       >
-                        {" "}
-                        Forgot Password?{" "}
+                        Forgot Password?
                       </a>
                     </div>
                   </div>
@@ -138,13 +137,9 @@ const SigninPage = () => {
                 </form>
                 <p className="text-center text-base font-medium text-body-color">
                   Don’t you have an account?
-                  <a
-                    href="signup.html"
-                    className="text-primary hover:underline"
-                  >
-                    {" "}
-                    Sign up{" "}
-                  </a>
+                  <Link href="/signup" className="text-primary hover:underline">
+                    Sign up
+                  </Link>
                 </p>
               </div>
             </div>

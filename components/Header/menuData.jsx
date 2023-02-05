@@ -72,8 +72,8 @@ const menuData = [
       },
       {
         id: 48,
-        title: "404 Page",
-        path: "/404",
+        title: "Error Page",
+        path: "/error",
         newTab: false,
       },
     ],

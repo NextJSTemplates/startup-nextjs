@@ -72,7 +72,7 @@ const ErrorPage = () => {
                     <path
                       d="M0 182H83.5V209H150.5V178H169.5V148.5C169.5 148.5 194 165 229.5 165C265 165 294 134.5 294 134.5V152H306.5H361V178H435V152H474"
                       stroke="white"
-                      stroke-opacity="0.08"
+                      strokeOpacity="0.08"
                       strokeWidth="2"
                     />
                     <defs>

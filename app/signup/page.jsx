@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SignupPage = () => {
   return (
     <>
@@ -133,18 +135,12 @@ const SignupPage = () => {
                       </div>
                       <span>
                         By creating account means you agree to the
-                        <a
-                          href="javascript:void(0)"
-                          className="text-primary hover:underline"
-                        >
+                        <a href="#0" className="text-primary hover:underline">
                           {" "}
                           Terms and Conditions{" "}
                         </a>
                         , and our
-                        <a
-                          href="javascript:void(0)"
-                          className="text-primary hover:underline"
-                        >
+                        <a href="#0" className="text-primary hover:underline">
                           {" "}
                           Privacy Policy{" "}
                         </a>
@@ -159,13 +155,9 @@ const SignupPage = () => {
                 </form>
                 <p className="text-center text-base font-medium text-body-color">
                   Already using Startup?
-                  <a
-                    href="signin.html"
-                    className="text-primary hover:underline"
-                  >
-                    {" "}
-                    Sign in{" "}
-                  </a>
+                  <Link href="/signin" className="text-primary hover:underline">
+                    Sign in
+                  </Link>
                 </p>
               </div>
             </div>

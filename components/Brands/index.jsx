@@ -21,15 +21,15 @@ const brandsData = [
   },
   {
     id: 4,
-    name: "Ayro UI",
-    href: "https://ayroui.com",
-    image: "/images/brands/ayroui.svg",
+    name: "GrayGrids",
+    href: "https://graygrids.com",
+    image: "/images/brands/graygrids.svg",
   },
   {
     id: 5,
-    name: "Plainadmin",
+    name: "TailAdmin",
     href: "https://plainadmin.com",
-    image: "/images/brands/plainadmin.svg",
+    image: "/images/brands/tailadmin.svg",
   },
 ];
 

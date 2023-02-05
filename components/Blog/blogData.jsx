@@ -11,7 +11,7 @@ const blogData = [
       designation: "Graphic Designer",
     },
     tags: ["creative"],
-    publishDate: "2015",
+    publishDate: "2025",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const blogData = [
       designation: "Content Writer",
     },
     tags: ["computer"],
-    publishDate: "2015",
+    publishDate: "2025",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const blogData = [
       designation: "Graphic Designer",
     },
     tags: ["design"],
-    publishDate: "2015",
+    publishDate: "2025",
   },
 ];
 export default blogData;

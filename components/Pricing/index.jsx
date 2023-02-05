@@ -64,7 +64,7 @@ const Pricing = () => {
           <PricingBox
             packageName="Lite"
             price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "ye"}
+            duration={isMonthly ? "mo" : "yr"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
             <OfferList text="All UI Components" status="active" />
@@ -77,7 +77,7 @@ const Pricing = () => {
           <PricingBox
             packageName="Basic"
             price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "ye"}
+            duration={isMonthly ? "mo" : "yr"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
             <OfferList text="All UI Components" status="active" />
@@ -90,7 +90,7 @@ const Pricing = () => {
           <PricingBox
             packageName="Plus"
             price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "ye"}
+            duration={isMonthly ? "mo" : "yr"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
             <OfferList text="All UI Components" status="active" />

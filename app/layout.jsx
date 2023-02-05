@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import "node_modules/react-modal-video/css/modal-video.css";
-import "./globals.css";
+import "../styles/index.css";
 
 export default function RootLayout({ children }) {
   return (

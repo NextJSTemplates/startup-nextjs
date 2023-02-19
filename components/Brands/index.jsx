@@ -28,7 +28,7 @@ const brandsData = [
   {
     id: 5,
     name: "TailAdmin",
-    href: "https://plainadmin.com",
+    href: "https://tailadmin.com",
     image: "/images/brands/tailadmin.svg",
   },
 ];

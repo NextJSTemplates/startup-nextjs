@@ -36,3 +36,9 @@ npm run dev
 
 - Open your favourite browser and access localhost:3000
 - Voila, you are ready for FE development
+
+## References
+
+- React: [Documentation](https://legacy.reactjs.org/docs/getting-started.html)
+- Next.js: [Documentation](https://nextjs.org/docs/getting-started)
+- Tailwind CSS (we use this css framework which already includes customized components): [Documentation](https://tailwindcss.com/)

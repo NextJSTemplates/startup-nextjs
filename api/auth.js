@@ -1,25 +1,40 @@
 import axios from './axios';
 
 export async function register(data) {
-    try {
-        const response = await axios.post(
-            'account/register/',
-            data,
-        );
-        return response;
-    } catch (error) {
-        return error;
-    }
+    const response = await axios.post(
+        'account/register/',
+        data,
+    );
+    return response;
 }
 
 export async function login(data) {
-    try{
-        const response = await axios.post(
-            'account/login/',
-            data,
-        );
-        return response;
-    } catch (error) {
-        return error;
-    }
+    const response = await axios.post(
+        'account/login/',
+        data,
+    );
+
+    console.log(response);
+
+    localStorage.setItem('token', response.data['token'])
+
+    return response;
+}
+
+export async function logout() {
+    token = localStorage.getItem('token');
+
+    const response = await axios.post(
+        'account/logout/',
+        {},
+        {
+            headers: {
+                'Authorization': `Token ${token}`,
+            }
+        }
+    )
+
+    localStorage.removeItem('token');
+
+    return response;
 }

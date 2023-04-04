@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import menuData from "./menuData";
 import { AuthContext } from "@/context/AuthContext";
+import accountMenuData from "./accountMenuData";
 
 const Header = () => {
   const authContext = useContext(AuthContext);
@@ -35,6 +36,12 @@ const Header = () => {
     } else {
       setOpenIndex(index);
     }
+  };
+
+  // account menu toggler
+  const [accountMenuOpen, setAccountMenuOpen] = useState(false);
+  const accountMenuToggleHandler = () => {
+    setAccountMenuOpen(!accountMenuOpen);
   };
 
   return (
@@ -148,9 +155,30 @@ const Header = () => {
                 {
                   authContext.isUserAuthenticated() ?
                   <>
-                    <h4 className="text-medium font-bold leading-tight text-black dark:text-white sm:text-small sm:leading-tight md:text-medium md:leading-tight">
+                    <h4 className="text-medium font-bold leading-tight text-black dark:text-white sm:text-small sm:leading-tight md:text-medium md:leading-tight hover:cursor-pointer" onClick={accountMenuToggleHandler}>
                       Halo, {`${authContext.authState.username}!`}
                     </h4>
+                    {
+                      accountMenuOpen &&
+                      <div className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark ${
+                        accountMenuOpen
+                          ? "visibility top-[70%] opacity-100"
+                          : "invisible top-[120%] opacity-0"
+                      }`}>
+                        <ul className="block">
+                          {accountMenuData.map((menuItem, index) => (
+                            <li key={menuItem.id} className="group relative">
+                              <Link
+                                href={menuItem.path}
+                                className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white`}
+                              >
+                                {menuItem.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    }
                   </> :
                   <>
                     <Link

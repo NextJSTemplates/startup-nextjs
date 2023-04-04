@@ -21,7 +21,7 @@ export async function login(data) {
 }
 
 export async function logout() {
-    token = localStorage.getItem('token');
+    const token = localStorage.getItem('token');
 
     const response = await axios.post(
         'account/logout/',
@@ -34,6 +34,7 @@ export async function logout() {
     )
 
     localStorage.removeItem('token');
+    localStorage.removeItem('username');
 
     return response;
 }

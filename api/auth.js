@@ -5,6 +5,10 @@ export async function register(data) {
         'account/register/',
         data,
     );
+
+    localStorage.setItem('token', response.data['token'])
+    localStorage.setItem('username', data['username'])
+
     return response;
 }
 

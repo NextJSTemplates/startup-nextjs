@@ -1,18 +1,22 @@
 "use client"
+import { logout } from "@/api/auth";
+import { AuthContext } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
-const { logout } = require("@/api/auth")
 
 const SignOutPage = () => {
+    const authContext = useContext(AuthContext);
     const router = useRouter();
 
     useEffect(() => {
         logout()
-            .then((response) => router.replace('/'));
-    });
+            .then((response) => {
+                authContext.clearAuthState();
+            });
+    }, [logout, authContext, router]);
     
-    return <></>
+    router.replace('/');
 }
 
 export default SignOutPage;

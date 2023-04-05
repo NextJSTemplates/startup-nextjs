@@ -10,14 +10,18 @@ const AuthProvider = ({ children }) => {
   });
 
   const setUserAuthInfo = ({ token, username }) => {
-   localStorage.setItem('token', token);
-   localStorage.setItem('username', username);
-
    setAuthState({
     token,
     username,
    });
  };
+
+ const clearUserAuthInfo = () => {
+  setAuthState({
+    token: '',
+    username: 'Anonymous',
+  })
+ }
 
  // checks if the user is authenticated or not
  const isUserAuthenticated = () => !!authState.token;
@@ -27,6 +31,7 @@ const AuthProvider = ({ children }) => {
      value={{
       authState,
       setAuthState: (userAuthInfo) => setUserAuthInfo(userAuthInfo),
+      clearAuthState: () => clearUserAuthInfo(),
       isUserAuthenticated,
     }}
    >

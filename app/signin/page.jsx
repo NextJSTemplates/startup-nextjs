@@ -1,11 +1,13 @@
 "use client"
 
 import { login } from "@/api/auth";
+import { AuthContext } from "@/context/AuthContext";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 const SigninPage = () => {
+  const authContext = useContext(AuthContext);
   const router = useRouter();
 
   const [username, setUsername] = useState('');
@@ -19,7 +21,13 @@ const SigninPage = () => {
     };
 
     login(data)
-      .then((response) => router.replace('/'))
+      .then((response) => {
+        authContext.setAuthState({
+          token: response.data['token'],
+          username,
+        });
+        router.replace('/');
+      })
       .catch((error) => {
         setError(JSON.stringify(error.response.data));
       });

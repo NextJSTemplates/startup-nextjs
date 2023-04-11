@@ -60,7 +60,7 @@ const SignupPage = () => {
                 <form>
                   <div className="mb-8">
                     <label
-                      for="name"
+                      htmlFor="name"
                       className="mb-3 block text-sm font-medium text-dark dark:text-white"
                     >
                       {" "}
@@ -75,7 +75,7 @@ const SignupPage = () => {
                   </div>
                   <div className="mb-8">
                     <label
-                      for="email"
+                      htmlFor="email"
                       className="mb-3 block text-sm font-medium text-dark dark:text-white"
                     >
                       {" "}
@@ -90,7 +90,7 @@ const SignupPage = () => {
                   </div>
                   <div className="mb-8">
                     <label
-                      for="password"
+                      htmlFor="password"
                       className="mb-3 block text-sm font-medium text-dark dark:text-white"
                     >
                       {" "}
@@ -105,7 +105,7 @@ const SignupPage = () => {
                   </div>
                   <div className="mb-8 flex">
                     <label
-                      for="checkboxLabel"
+                      htmlFor="checkboxLabel"
                       className="flex cursor-pointer select-none text-sm font-medium text-body-color"
                     >
                       <div className="relative">

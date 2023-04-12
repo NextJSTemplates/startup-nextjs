@@ -10,6 +10,7 @@ If you're looking for a high-quality and visually appealing, feature-rich Next.j
 - All Essential Business Sections and Pages
 - High-quality and Clean Design
 - Dark and Light Version
+- TypeScript Support
 and Much More ...
 
 ### [🚀 View Demo](https://startup.nextjstemplates.com/)

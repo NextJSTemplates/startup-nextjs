@@ -59,7 +59,7 @@ const Contact = () => {
                       </label>
                       <textarea
                         name="message"
-                        rows="5"
+                        rows={5}
                         placeholder="Enter your Message"
                         className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                       ></textarea>

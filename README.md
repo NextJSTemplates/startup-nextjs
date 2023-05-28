@@ -13,9 +13,13 @@ If you're looking for a high-quality and visually appealing, feature-rich Next.j
 - TypeScript Support
 and Much More ...
 
-### [🚀 View Demo](https://startup.nextjstemplates.com/)
+### [🚀 View Free Demo](https://startup.nextjstemplates.com/)
+
+### [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
 
 ### [📦 Download](https://nextjstemplates.com/templates/startup)
+
+### [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
 
 ### [🔌 Documentation](https://nextjstemplates.com/docs)
 

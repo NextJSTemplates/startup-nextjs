@@ -1,16 +1,24 @@
 import Link from "next/link";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Error Page | Free Next.js Template for Startup and SaaS",
+  description: "This is Error Page for Startup Nextjs Template",
+  // other metadata
+};
+
 const ErrorPage = () => {
   return (
     <>
-      <section className="relative z-10 pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
+      <section className="relative z-10 pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap">
+          <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[530px] text-center">
-                <div className="mx-auto mb-9 text-center">
+                <div className="mx-auto text-center mb-9">
                   <svg
-                    className="mx-auto w-full text-center"
+                    className="w-full mx-auto text-center"
                     height="210"
                     viewBox="0 0 474 210"
                     fill="none"
@@ -142,7 +150,7 @@ const ErrorPage = () => {
                 </p>
                 <Link
                   href="/"
-                  className="rounded-md bg-primary py-3 px-8 text-base font-bold text-white shadow-signUp duration-300 hover:bg-white hover:text-primary md:px-9 lg:px-8 xl:px-9"
+                  className="px-8 py-3 text-base font-bold text-white duration-300 rounded-md bg-primary shadow-signUp hover:bg-white hover:text-primary md:px-9 lg:px-8 xl:px-9"
                 >
                   Back to Homepage
                 </Link>
@@ -150,7 +158,7 @@ const ErrorPage = () => {
             </div>
           </div>
         </div>
-        <div className="absolute left-0 bottom-0 z-[-1] hidden sm:block">
+        <div className="absolute bottom-0 left-0 z-[-1] hidden sm:block">
           <svg
             width="406"
             height="286"
@@ -336,7 +344,7 @@ const ErrorPage = () => {
             </defs>
           </svg>
         </div>
-        <div className="absolute top-0 right-0 z-[-1] hidden sm:block">
+        <div className="absolute right-0 top-0 z-[-1] hidden sm:block">
           <svg
             width="406"
             height="286"

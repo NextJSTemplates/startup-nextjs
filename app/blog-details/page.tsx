@@ -2,10 +2,18 @@ import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
+  description: "This is Blog Details Page for Startup Nextjs Template",
+  // other metadata
+};
+
 const BlogDetailsPage = () => {
   return (
     <>
-      <section className="pt-[150px] pb-[120px]">
+      <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
@@ -16,7 +24,7 @@ const BlogDetailsPage = () => {
                 </h2>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
-                    <div className="mr-10 mb-5 flex items-center">
+                    <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                           <Image
@@ -27,10 +35,9 @@ const BlogDetailsPage = () => {
                         </div>
                       </div>
                       <div className="w-full">
-                        <h4 className="mb-1 text-base font-medium text-body-color">
-                          By
-                          <span>Musharof Chy</span>
-                        </h4>
+                        <span className="mb-1 text-base font-medium text-body-color">
+                          By <span>Musharof Chy</span>
+                        </span>
                       </div>
                     </div>
                     <div className="mb-5 flex items-center">
@@ -89,7 +96,7 @@ const BlogDetailsPage = () => {
                   <div className="mb-5">
                     <a
                       href="#0"
-                      className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
+                      className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                     >
                       Design
                     </a>
@@ -213,7 +220,7 @@ const BlogDetailsPage = () => {
                         </defs>
                       </svg>
                     </span>
-                    <span className="absolute right-0 bottom-0 z-[-1]">
+                    <span className="absolute bottom-0 right-0 z-[-1]">
                       <svg
                         width="53"
                         height="30"
@@ -309,9 +316,9 @@ const BlogDetailsPage = () => {
                   </p>
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
-                      <h5 className="mb-3 text-sm font-medium text-body-color">
+                      <h4 className="mb-3 text-sm font-medium text-body-color">
                         Popular Tags :
-                      </h5>
+                      </h4>
                       <div className="flex items-center">
                         <TagButton text="Design" />
                         <TagButton text="Development" />

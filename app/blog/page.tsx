@@ -2,6 +2,14 @@ import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog Page | Free Next.js Template for Startup and SaaS",
+  description: "This is Blog Page for Startup Nextjs Template",
+  // other metadata
+};
+
 const Blog = () => {
   return (
     <>
@@ -10,7 +18,7 @@ const Blog = () => {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
 
-      <section className="pt-[120px] pb-[120px]">
+      <section className="pb-[120px] pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             {blogData.map((blog) => (
@@ -62,9 +70,9 @@ const Blog = () => {
                   </a>
                 </li>
                 <li className="mx-1">
-                  <a className="flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color">
+                  <span className="flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color">
                     ...
-                  </a>
+                  </span>
                 </li>
                 <li className="mx-1">
                   <a

@@ -1,172 +1,260 @@
+"use client";
+
+import { useTheme } from "next-themes";
+
 const NewsLatterBox = () => {
+  const { theme } = useTheme();
+
   return (
     <div
-      className="wow fadeInUp relative z-10 rounded-md bg-primary/[3%] p-8 dark:bg-primary/10 sm:p-11 lg:p-8 xl:p-11"
+      className="wow fadeInUp shadow-three dark:bg-gray-dark relative z-10 rounded-sm bg-white p-8 sm:p-11 lg:p-8 xl:p-11"
       data-wow-delay=".2s"
     >
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
         Subscribe to receive future updates
       </h3>
-      <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base font-medium leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
+      <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
         Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
         massa quis lectus.
       </p>
-      <form>
+      <div>
         <input
           type="text"
           name="name"
           placeholder="Enter your name"
-          className="mb-4 w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50"
+          className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
         />
         <input
           type="email"
           name="email"
           placeholder="Enter your email"
-          className="mb-4 w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50"
+          className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
         />
         <input
           type="submit"
           value="Subscribe"
-          className="duration-80 mb-4 w-full cursor-pointer rounded-md border border-transparent bg-primary py-3 px-6 text-center text-base font-medium text-white outline-none transition ease-in-out hover:bg-opacity-80 hover:shadow-signUp focus-visible:shadow-none"
+          className="shadow-submit dark:shadow-submit-dark mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90"
         />
-        <p className="text-center text-base font-medium leading-relaxed text-body-color">
+        <p className="dark:text-body-color-dark text-center text-base leading-relaxed text-body-color">
           No spam guaranteed, So please don’t send any spam mail.
         </p>
-      </form>
-      <div className="absolute top-0 left-0 z-[-1]">
-        <svg
-          width="370"
-          height="596"
-          viewBox="0 0 370 596"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <mask
-            id="mask0_88:141"
-            style={{ maskType: "alpha" }}
-            maskUnits="userSpaceOnUse"
-            x="0"
-            y="0"
-            width="370"
-            height="596"
+      </div>
+
+      <div>
+        <span className="absolute left-2 top-7">
+          <svg
+            width="57"
+            height="65"
+            viewBox="0 0 57 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <rect width="370" height="596" rx="2" fill="#1D2144" />
-          </mask>
-          <g mask="url(#mask0_88:141)">
             <path
-              opacity="0.15"
-              d="M15.4076 50.9571L54.1541 99.0711L71.4489 35.1605L15.4076 50.9571Z"
-              fill="url(#paint0_linear_88:141)"
+              opacity="0.5"
+              d="M0.407629 15.9573L39.1541 64.0714L56.4489 0.160793L0.407629 15.9573Z"
+              fill="url(#paint0_linear_1028_600)"
             />
+            <defs>
+              <linearGradient
+                id="paint0_linear_1028_600"
+                x1="-18.3187"
+                y1="55.1044"
+                x2="37.161"
+                y2="15.3509"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0.62"
+                />
+                <stop
+                  offset="1"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0"
+                />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+
+        <span className="absolute bottom-24 left-1.5">
+          <svg
+            width="39"
+            height="32"
+            viewBox="0 0 39 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
-              opacity="0.15"
-              d="M20.7137 501.422L44.6431 474.241L6 470.624L20.7137 501.422Z"
-              fill="url(#paint1_linear_88:141)"
+              opacity="0.5"
+              d="M14.7137 31.4215L38.6431 4.24115L6.96581e-07 0.624124L14.7137 31.4215Z"
+              fill="url(#paint0_linear_1028_601)"
             />
+            <defs>
+              <linearGradient
+                id="paint0_linear_1028_601"
+                x1="39.1948"
+                y1="38.335"
+                x2="10.6982"
+                y2="10.2511"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0.62"
+                />
+                <stop
+                  offset="1"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0"
+                />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+
+        <span className="absolute right-2 top-[140px]">
+          <svg
+            width="38"
+            height="38"
+            viewBox="0 0 38 38"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
-              opacity="0.1"
-              d="M331.676 198.309C344.398 204.636 359.168 194.704 358.107 180.536C357.12 167.363 342.941 159.531 331.265 165.71C318.077 172.69 318.317 191.664 331.676 198.309Z"
-              fill="url(#paint2_linear_88:141)"
+              opacity="0.5"
+              d="M10.6763 35.3091C23.3976 41.6367 38.1681 31.7045 37.107 17.536C36.1205 4.3628 21.9407 -3.46901 10.2651 2.71063C-2.92254 9.69061 -2.68321 28.664 10.6763 35.3091Z"
+              fill="url(#paint0_linear_1028_602)"
             />
+            <defs>
+              <linearGradient
+                id="paint0_linear_1028_602"
+                x1="-0.571054"
+                y1="-37.1717"
+                x2="28.7937"
+                y2="26.7564"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0.62"
+                />
+                <stop
+                  offset="1"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0"
+                />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+
+        <span className="absolute right-0 top-0">
+          <svg
+            width="162"
+            height="91"
+            viewBox="0 0 162 91"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g opacity="0.3">
               <path
-                d="M209 89.9999C216 77.3332 235.7 50.7999 258.5 45.9999C287 39.9999 303 41.9999 314 30.4999C325 18.9999 334 -3.50014 357 -3.50014C380 -3.50014 395 4.99986 408.5 -8.50014C422 -22.0001 418.5 -46.0001 452 -37.5001C478.8 -30.7001 515.167 -45 530 -53"
-                stroke="url(#paint3_linear_88:141)"
+                opacity="0.45"
+                d="M1 89.9999C8 77.3332 27.7 50.7999 50.5 45.9999C79 39.9999 95 41.9999 106 30.4999C117 18.9999 126 -3.50014 149 -3.50014C172 -3.50014 187 4.99986 200.5 -8.50014C214 -22.0001 210.5 -46.0001 244 -37.5001C270.8 -30.7001 307.167 -45 322 -53"
+                stroke="url(#paint0_linear_1028_603)"
               />
               <path
-                d="M251 64.9999C258 52.3332 277.7 25.7999 300.5 20.9999C329 14.9999 345 16.9999 356 5.49986C367 -6.00014 376 -28.5001 399 -28.5001C422 -28.5001 437 -20.0001 450.5 -33.5001C464 -47.0001 460.5 -71.0001 494 -62.5001C520.8 -55.7001 557.167 -70 572 -78"
-                stroke="url(#paint4_linear_88:141)"
+                opacity="0.45"
+                d="M43 64.9999C50 52.3332 69.7 25.7999 92.5 20.9999C121 14.9999 137 16.9999 148 5.49986C159 -6.00014 168 -28.5001 191 -28.5001C214 -28.5001 229 -20.0001 242.5 -33.5001C256 -47.0001 252.5 -71.0001 286 -62.5001C312.8 -55.7001 349.167 -70 364 -78"
+                stroke="url(#paint1_linear_1028_603)"
               />
               <path
-                d="M212 73.9999C219 61.3332 238.7 34.7999 261.5 29.9999C290 23.9999 306 25.9999 317 14.4999C328 2.99986 337 -19.5001 360 -19.5001C383 -19.5001 398 -11.0001 411.5 -24.5001C425 -38.0001 421.5 -62.0001 455 -53.5001C481.8 -46.7001 518.167 -61 533 -69"
-                stroke="url(#paint5_linear_88:141)"
+                opacity="0.45"
+                d="M4 73.9999C11 61.3332 30.7 34.7999 53.5 29.9999C82 23.9999 98 25.9999 109 14.4999C120 2.99986 129 -19.5001 152 -19.5001C175 -19.5001 190 -11.0001 203.5 -24.5001C217 -38.0001 213.5 -62.0001 247 -53.5001C273.8 -46.7001 310.167 -61 325 -69"
+                stroke="url(#paint2_linear_1028_603)"
               />
               <path
-                d="M249 40.9999C256 28.3332 275.7 1.79986 298.5 -3.00014C327 -9.00014 343 -7.00014 354 -18.5001C365 -30.0001 374 -52.5001 397 -52.5001C420 -52.5001 435 -44.0001 448.5 -57.5001C462 -71.0001 458.5 -95.0001 492 -86.5001C518.8 -79.7001 555.167 -94 570 -102"
-                stroke="url(#paint6_linear_88:141)"
+                opacity="0.45"
+                d="M41 40.9999C48 28.3332 67.7 1.79986 90.5 -3.00014C119 -9.00014 135 -7.00014 146 -18.5001C157 -30.0001 166 -52.5001 189 -52.5001C212 -52.5001 227 -44.0001 240.5 -57.5001C254 -71.0001 250.5 -95.0001 284 -86.5001C310.8 -79.7001 347.167 -94 362 -102"
+                stroke="url(#paint3_linear_1028_603)"
               />
             </g>
-          </g>
-          <defs>
-            <linearGradient
-              id="paint0_linear_88:141"
-              x1="13.4497"
-              y1="63.5059"
-              x2="81.144"
-              y2="41.5072"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="white" />
-              <stop offset="1" stopColor="white" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_88:141"
-              x1="28.1579"
-              y1="501.301"
-              x2="8.69936"
-              y2="464.391"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="white" />
-              <stop offset="1" stopColor="white" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint2_linear_88:141"
-              x1="338"
-              y1="167"
-              x2="349.488"
-              y2="200.004"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="white" />
-              <stop offset="1" stopColor="white" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint3_linear_88:141"
-              x1="369.5"
-              y1="-53"
-              x2="369.5"
-              y2="89.9999"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="white" />
-              <stop offset="1" stopColor="white" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint4_linear_88:141"
-              x1="411.5"
-              y1="-78"
-              x2="411.5"
-              y2="64.9999"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="white" />
-              <stop offset="1" stopColor="white" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint5_linear_88:141"
-              x1="372.5"
-              y1="-69"
-              x2="372.5"
-              y2="73.9999"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="white" />
-              <stop offset="1" stopColor="white" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint6_linear_88:141"
-              x1="409.5"
-              y1="-102"
-              x2="409.5"
-              y2="40.9999"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="white" />
-              <stop offset="1" stopColor="white" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
+            <defs>
+              <linearGradient
+                id="paint0_linear_1028_603"
+                x1="291.35"
+                y1="12.1032"
+                x2="179.211"
+                y2="237.617"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop
+                  offset="0.328125"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                />
+                <stop
+                  offset="1"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0"
+                />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_1028_603"
+                x1="333.35"
+                y1="-12.8968"
+                x2="221.211"
+                y2="212.617"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop
+                  offset="0.328125"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                />
+                <stop
+                  offset="1"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0"
+                />
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_1028_603"
+                x1="294.35"
+                y1="-3.89678"
+                x2="182.211"
+                y2="221.617"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop
+                  offset="0.328125"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                />
+                <stop
+                  offset="1"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0"
+                />
+              </linearGradient>
+              <linearGradient
+                id="paint3_linear_1028_603"
+                x1="331.35"
+                y1="-36.8968"
+                x2="219.211"
+                y2="188.617"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop
+                  offset="0.328125"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                />
+                <stop
+                  offset="1"
+                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopOpacity="0"
+                />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
       </div>
     </div>
   );

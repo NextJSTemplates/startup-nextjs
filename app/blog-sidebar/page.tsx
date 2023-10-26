@@ -4,21 +4,29 @@ import TagButton from "@/components/Blog/TagButton";
 import NewsLatterBox from "@/components/Contact/NewsLatterBox";
 import Image from "next/image";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
+  description: "This is Blog Details Page for Startup Nextjs Template",
+  // other metadata
+};
+
 const BlogSidebarPage = () => {
   return (
     <>
-      <section className="overflow-hidden pt-[180px] pb-[120px]">
+      <section className="overflow-hidden pb-[120px] pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                   10 amazing sites to download stock photos & digital assets for
                   free
-                </h2>
+                </h1>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
-                    <div className="mr-10 mb-5 flex items-center">
+                    <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                           <Image
@@ -29,10 +37,9 @@ const BlogSidebarPage = () => {
                         </div>
                       </div>
                       <div className="w-full">
-                        <h4 className="mb-1 text-base font-medium text-body-color">
-                          By
-                          <span> Musharof Chy</span>
-                        </h4>
+                        <span className="mb-1 text-base font-medium text-body-color">
+                          By <span> Musharof Chy</span>
+                        </span>
                       </div>
                     </div>
                     <div className="mb-5 flex items-center">
@@ -91,7 +98,7 @@ const BlogSidebarPage = () => {
                   <div className="mb-5">
                     <a
                       href="#0"
-                      className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
+                      className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                     >
                       Design
                     </a>
@@ -217,7 +224,7 @@ const BlogSidebarPage = () => {
                         </defs>
                       </svg>
                     </span>
-                    <span className="absolute right-0 bottom-0 z-[-1]">
+                    <span className="absolute bottom-0 right-0 z-[-1]">
                       <svg
                         width="53"
                         height="30"
@@ -313,9 +320,9 @@ const BlogSidebarPage = () => {
                   </p>
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
-                      <h5 className="mb-3 text-sm font-medium text-body-color">
+                      <h4 className="mb-3 text-sm font-medium text-body-color">
                         Popular Tags :
-                      </h5>
+                      </h4>
                       <div className="flex items-center">
                         <TagButton text="Design" />
                         <TagButton text="Development" />
@@ -335,14 +342,17 @@ const BlogSidebarPage = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-4/12">
-              <div className="mt-12 mb-10 rounded-md bg-primary bg-opacity-5 p-6 dark:bg-opacity-5 lg:mt-0">
-                <form className="flex items-center justify-between">
+              <div className="shadow-three dark:bg-gray-dark mb-10 mt-12 rounded-sm bg-white p-6 dark:shadow-none lg:mt-0">
+                <div className="flex items-center justify-between">
                   <input
                     type="text"
                     placeholder="Search here..."
-                    className="palceholder-body-color mr-5 w-full rounded-md border border-transparent py-3 px-5 text-base font-medium text-body-color outline-none focus:border-primary dark:bg-white dark:bg-opacity-10"
+                    className="border-stroke dark:text-body-color-dark dark:shadow-two mr-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                   />
-                  <button className="flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-md bg-primary text-white">
+                  <button
+                    aria-label="search button"
+                    className="flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-sm bg-primary text-white"
+                  >
                     <svg
                       width="20"
                       height="18"
@@ -356,10 +366,10 @@ const BlogSidebarPage = () => {
                       />
                     </svg>
                   </button>
-                </form>
+                </div>
               </div>
-              <div className="mb-10 rounded-md bg-primary bg-opacity-5 dark:bg-opacity-10">
-                <h3 className="border-b border-body-color border-opacity-10 py-4 px-8 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
+                <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
                   Related Posts
                 </h3>
                 <ul className="p-8">
@@ -389,11 +399,11 @@ const BlogSidebarPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="mb-10 rounded-md bg-primary bg-opacity-5 dark:bg-opacity-10">
-                <h3 className="border-b border-body-color border-opacity-10 py-4 px-8 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
+                <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
                   Popular Category
                 </h3>
-                <ul className="py-6 px-8">
+                <ul className="px-8 py-6">
                   <li>
                     <a
                       href="#0"
@@ -436,11 +446,11 @@ const BlogSidebarPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="mb-10 rounded-md bg-primary bg-opacity-5 dark:bg-opacity-10">
-                <h3 className="border-b border-body-color border-opacity-10 py-4 px-8 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
+                <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
                   Popular Tags
                 </h3>
-                <div className="flex flex-wrap py-6 px-8">
+                <div className="flex flex-wrap px-8 py-6">
                   <TagButton text="Themes" />
                   <TagButton text="UI Kit" />
                   <TagButton text="Tailwind" />

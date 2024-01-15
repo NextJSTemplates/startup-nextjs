@@ -17,6 +17,9 @@ and Much More ...
 
 [![Startup Pro](https://cdn.nextjstemplates.com/Startup-Pro---Next.js-Starter-Template-for-SaaS-Startups-282e26f7-f543-4ae4-a777-ac306c08cce8.png)](https://nextjstemplates.com/templates/saas-starter-startup)
 
+Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
+
+
 ### [🚀 View Free Demo](https://startup.nextjstemplates.com/)
 
 ### [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)

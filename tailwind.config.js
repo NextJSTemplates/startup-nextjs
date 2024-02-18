@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
@@ -40,13 +42,20 @@ module.exports = {
         dark: "#1D2430",
         primary: "#4A6CF7",
         yellow: "#FBB040",
-        "body-color": "#788293",
-        "body-color-dark": "#959CB1",
-        "gray-dark": "#1E232E",
-        "gray-light": "#F0F2F9",
-        stroke: "#E3E8EF",
-        "stroke-dark": "#353943",
         "bg-color-dark": "#171C28",
+        "body-color": {
+          DEFAULT: "#788293",
+          dark: "#959CB1",
+        },
+        stroke: {
+          stroke: "#E3E8EF",
+          dark: "#353943",
+        },
+        gray: {
+          ...colors.gray,
+          dark: "#1E232E",
+          light: "#F0F2F9",
+        },
       },
 
       boxShadow: {

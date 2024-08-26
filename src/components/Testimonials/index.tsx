@@ -5,28 +5,37 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Ahsan ALi",
+    designation: "Founder @Disruptive AI",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "We're thoroughly impressed with the team at Codesphare Innovations. Their support has been exceptional, and the quality of their work is outstanding, especially in Next.js development. They have some of the best developers in the field, consistently delivering top-notch results that exceed our expectations.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Dr Taza Gul Ishaq",
+    designation: "Founder @Al-Ishaq Omerzai Pharmaceutical",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "The team at Codesphare Innovations is truly exceptional. Their expertise in website development has consistently impressed us with high-quality results. We're equally thrilled with their social media marketing team, whose creativity and strategic brilliance deliver remarkable outcomes. Working with Codesphare Innovations has been a fantastic experience, and their outstanding support and talent have exceeded our expectations.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Faizan Nasir",
+    designation: "Founder @Luitechsystem",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Collaborating with Codesphare Innovations has been a fantastic experience. They expertly handled our outsourcing projects and created a stunning website for us. Their developer team is exceptionally talented and innovative. We eagerly anticipate working with them again in the future.  ",
+    image: "/images/testimonials/author-01.png",
+    star: 5,
+  },
+  {
+    id: 3,
+    name: "Ayan Ali",
+    designation: "Founder @DarkenTech",
+    content:
+      "CodeSphere Innovation is phenomenal. We're genuinely impressed by their expertise, top-notch support, and superior quality of work. Partnering with CodeSphere has been an exceptional experience, and we're excited about continuing our collaboration in the future",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -34,11 +43,11 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="What Our Clients Says."
+          paragraph="Here is Our some Potential clients testimonial."
           center
         />
 

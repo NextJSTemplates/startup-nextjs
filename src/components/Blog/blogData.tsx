@@ -3,45 +3,82 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "Paytirment",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Paytirement is a website project we are creating for our client.",
     image: "/images/blog/blog-01.jpg",
-    author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-01.png",
-      designation: "Graphic Designer",
-    },
-    tags: ["creative"],
-    publishDate: "2025",
+    anchor: "https://paytirement-com.vercel.app/",
+    tags: ["Done"],
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "Disruptive AI",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "We’ve developed an impressive website for Disruptive AI, a leading company in artificial intelligence.",
     image: "/images/blog/blog-02.jpg",
-    author: {
-      name: "Musharof Chy",
-      image: "/images/blog/author-02.png",
-      designation: "Content Writer",
-    },
-    tags: ["computer"],
-    publishDate: "2025",
+    anchor: "https://disruptiveai-10cb1.web.app/",
+
+    tags: ["Done"],
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "Humonoid.",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "The AI based Project which we have created for Disruptive AI and this project is under testing. ",
     image: "/images/blog/blog-03.jpg",
-    author: {
-      name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
-    },
-    tags: ["design"],
-    publishDate: "2025",
+    anchor: "https://humonoidnext.vercel.app/",
+
+    tags: ["Testing"],
+  },
+  {
+    id: 4,
+    title: "Edps AI.",
+    paragraph:
+      "The AI based Project which we have created for Disruptive AI and this project is under testing. ",
+    image: "/images/blog/blog-4.jpg",
+    anchor: "https://humonoidnext.vercel.app/",
+
+    tags: ["Testing"],
+  },
+  {
+    id: 5,
+    title: "Safatix.",
+    paragraph:
+      "The AI based Project which we have created for Disruptive AI and this project is under testing. ",
+    image: "/images/blog/blog-5.jpg",
+    anchor: "https://safastix-xbti.vercel.app/",
+
+    tags: ["Testing"],
+  },
+  {
+    id: 6,
+    title: "DealGuru",
+    paragraph:
+      "We're creating a dynamic e-commerce website in collaboration with Deal Guru's IT department for our client. This project promises to deliver a seamless and engaging online shopping experience. ",
+    image: "/images/blog/blog-6.jpg",
+    anchor: "https://dealguru.se/",
+
+    tags: ["Done"],
+  },
+  {
+    id: 7,
+    title: "Pharmacy Company",
+    paragraph:
+      "We've crafted a stunning website for our client, Al Pharmacy, designed to enhance their online presence and deliver an exceptional user experience. ",
+    image: "/images/blog/blog-7.jpg",
+    anchor: "https://alishaqpharma.web.app/",
+
+    tags: ["Done"],
+  },
+  {
+    id: 8,
+    title: "Luitechsystem",
+    paragraph:
+      "Luitech Systems is a global software consultancy firm, and we at CodeSphere had the privilege of designing their impressive new website. Our work highlights their expertise and commitment to innovation on a global scale.",
+    image: "/images/blog/blog-8.jpg",
+    anchor: "https://alishaqpharma.web.app/",
+
+    tags: ["Done"],
   },
 ];
 export default blogData;

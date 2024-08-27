@@ -4,6 +4,13 @@ import React from "react";
 const FormComponent = () => {
   const handleRegister = async (event) => {
     event.preventDefault();
+
+    const newUser = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+    };
+    console.log(newUser);
   };
 
   return (

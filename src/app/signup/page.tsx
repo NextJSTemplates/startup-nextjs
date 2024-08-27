@@ -9,6 +9,10 @@ export const metadata: Metadata = {
 };
 
 const SignupPage = () => {
+  const handleRegister = async(event) => {
+    event.preventDefault()
+  }
+
   return (
     <>
       <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
@@ -80,7 +84,7 @@ const SignupPage = () => {
                   </p>
                   <span className="hidden h-[1px] w-full max-w-[60px] bg-body-color/50 sm:block"></span>
                 </div>
-                <form>
+                <form onSubmit={handleRegister}>
                   <div className="mb-8">
                     <label
                       htmlFor="name"

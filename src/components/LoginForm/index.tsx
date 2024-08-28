@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
+  const router = useRouter();
   const handleLogin = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
@@ -13,7 +15,10 @@ const LoginForm = () => {
       password,
       redirect: false,
     });
-    console.log(resp);
+
+    if (resp.status === 200) {
+      router.push("/");
+    }
   };
 
   return (

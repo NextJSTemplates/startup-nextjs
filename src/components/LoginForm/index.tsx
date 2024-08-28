@@ -2,6 +2,7 @@
 import React from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 
 const LoginForm = () => {
   const router = useRouter();
@@ -17,6 +18,13 @@ const LoginForm = () => {
     });
 
     if (resp.status === 200) {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "User login successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       router.push("/");
     }
   };

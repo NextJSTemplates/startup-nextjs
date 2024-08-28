@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const FormComponent = () => {
+  const router = useRouter();
   const handleRegister = async (event) => {
     event.preventDefault();
 
@@ -19,7 +21,7 @@ const FormComponent = () => {
       },
     });
     if (resp.status === 200) {
-      event.target.reset();
+      router.push("/");
     }
   };
 

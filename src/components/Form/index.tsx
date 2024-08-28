@@ -31,6 +31,16 @@ const FormComponent = () => {
       });
       router.push("/");
     }
+
+    if(resp.status !== 200){
+      Swal.fire({
+        position: "bottom-end",
+        icon: "error",
+        title: "User Registration failed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
   };
 
   return (

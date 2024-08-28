@@ -27,6 +27,16 @@ const LoginForm = () => {
       });
       router.push("/");
     }
+
+    if (resp.status !== 200) {
+      Swal.fire({
+        position: "bottom-end",
+        icon: "error",
+        title: "User Login Failed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
   };
 
   return (

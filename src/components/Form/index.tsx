@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-
+import { useRouter } from "next/navigation";
 const FormComponent = () => {
+  const navigation = useRouter();
   const handleRegister = async (event) => {
     event.preventDefault();
 
@@ -10,7 +11,7 @@ const FormComponent = () => {
       email: event.target.email.value,
       password: event.target.password.value,
     };
-    // console.log(newUser);
+
     const resp = await fetch("http://localhost:3000/signup/api", {
       method: "POST",
       body: JSON.stringify(newUser),

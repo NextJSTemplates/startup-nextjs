@@ -33,7 +33,7 @@ const TeamPage = () => {
                 <a href="#">Umar Imran</a>
               </h3>
               <span className="text-gray-500 dark:text-gray-400">
-                CEO & Web Developer
+                CEO & Full Stack developer
               </span>
               <p className="mb-4 mt-3 font-light text-gray-500 dark:text-gray-400">
                 Muhammed Umar, an enthusiastic student diving into the world of

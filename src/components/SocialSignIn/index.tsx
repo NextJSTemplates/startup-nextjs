@@ -1,38 +1,38 @@
 "use client";
-import { signIn, useSession } from "next-auth/react";
+import { getSession, signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React from "react";
 import Swal from "sweetalert2";
 
 const SocialButton = () => {
   const router = useRouter();
-  const session = useSession();
+  // const session = useSession();
   const handleSocialLogin = async (provider: string) => {
     console.log("handleSocialLogin called with provider:", provider);
     try {
       const resp = await signIn(provider, { redirect: false });
-      if (resp) {
-        console.log("Sign-in response:", resp);
+      if (resp?.ok) {
+        console.log("Sign-in successful, fetching session...");
+        const session = await getSession();
+        console.log("Session after social login:", session);
       } else {
-        console.log("No response received.");
+        console.log("Sign-in failed or no response received.");
       }
     } catch (error) {
       console.error("Error during social login:", error);
     }
   };
 
-  console.log(session);
-
-  if (session.status === "authenticated") {
-    Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "User login successful",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-    router.push("/");
-  }
+  // if (session.status === "authenticated") {
+  //   Swal.fire({
+  //     position: "top-end",
+  //     icon: "success",
+  //     title: "User login successful",
+  //     showConfirmButton: false,
+  //     timer: 1500,
+  //   });
+  //   router.push("/");
+  // }
 
   return (
     <>

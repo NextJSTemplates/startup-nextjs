@@ -1,8 +1,16 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React from "react";
+<<<<<<< HEAD
 import { useRouter } from "next/navigation";
 const FormComponent = () => {
   const navigation = useRouter();
+=======
+import Swal from "sweetalert2";
+
+const FormComponent = () => {
+  const router = useRouter();
+>>>>>>> a83ef62a56a49a9051e5121922b0d0611d106da1
   const handleRegister = async (event) => {
     event.preventDefault();
 
@@ -20,7 +28,24 @@ const FormComponent = () => {
       },
     });
     if (resp.status === 200) {
-      event.target.reset();
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Registration successful. You can login now",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      router.push("/");
+    }
+
+    if(resp.status !== 200){
+      Swal.fire({
+        position: "bottom-end",
+        icon: "error",
+        title: "User Registration failed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 

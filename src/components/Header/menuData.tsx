@@ -80,5 +80,11 @@ const menuData: Menu[] = [
   //     },
   //   ],
   // },
+  {
+    id: 5,
+    title: "Our Team",
+    path: "/team",
+    newTab: false,
+  },
 ];
 export default menuData;

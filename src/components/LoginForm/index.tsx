@@ -1,8 +1,43 @@
 "use client";
 import React from "react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 
 const LoginForm = () => {
-  const handleLogin = async () => {};
+  const router = useRouter();
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    const resp = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
+
+    if (resp.status === 200) {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "User login successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      router.push("/");
+    }
+
+    if (resp.status !== 200) {
+      Swal.fire({
+        position: "bottom-end",
+        icon: "error",
+        title: "User Login Failed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
+  };
 
   return (
     <form onSubmit={handleLogin}>

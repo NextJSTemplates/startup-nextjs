@@ -1,9 +1,45 @@
+"use client";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React from "react";
+import Swal from "sweetalert2";
 
 const SocialButton = () => {
+  const router = useRouter();
+  const session = useSession();
+  const handleSocialLogin = async (provider: string) => {
+    console.log("handleSocialLogin called with provider:", provider);
+    try {
+      const resp = await signIn(provider, { redirect: false });
+      if (resp) {
+        console.log("Sign-in response:", resp);
+      } else {
+        console.log("No response received.");
+      }
+    } catch (error) {
+      console.error("Error during social login:", error);
+    }
+  };
+
+  console.log(session);
+
+  if (session.status === "authenticated") {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "User login successful",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    router.push("/");
+  }
+
   return (
     <>
-      <button className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
+      <button
+        onClick={() => handleSocialLogin("google")}
+        className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
+      >
         <span className="mr-3">
           <svg
             width="20"

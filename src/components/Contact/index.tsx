@@ -1,6 +1,29 @@
+"use client";
+import { FormEvent, useEffect, useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
+import {
+  LoadCanvasTemplate,
+  loadCaptchaEnginge,
+  validateCaptcha,
+} from "react-simple-captcha";
 
 const Contact = () => {
+  const [userCaptchaval, setUserCaptcha] = useState("");
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!validateCaptcha(userCaptchaval)) {
+      alert("Invalid Capcha");
+      return;
+    }
+
+    // handle api call
+  }
+
+  useEffect(() => {
+    loadCaptchaEnginge(6);
+  }, []);
+
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -17,7 +40,7 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Our support team will get back to you ASAP via email.
               </p>
-              <form>
+              <form method="post" onSubmit={(e) => handleSubmit(e)}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -28,6 +51,7 @@ const Contact = () => {
                         Your Name
                       </label>
                       <input
+                        required
                         type="text"
                         placeholder="Enter your name"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -43,6 +67,7 @@ const Contact = () => {
                         Your Email
                       </label>
                       <input
+                        required
                         type="email"
                         placeholder="Enter your email"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -58,15 +83,30 @@ const Contact = () => {
                         Your Message
                       </label>
                       <textarea
+                        required
                         name="message"
                         rows={5}
                         placeholder="Enter your Message"
                         className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       ></textarea>
                     </div>
+                    <div className="mb-8 flex w-full flex-row">
+                      <input
+                        type="text"
+                        placeholder="Enter the capcha here"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        onChange={(e) => setUserCaptcha(e.target.value)}
+                      />
+                      <div className="w-21 ml-4 h-16">
+                        <LoadCanvasTemplate />
+                      </div>
+                    </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                    <button
+                      type="submit"
+                      className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                    >
                       Submit Ticket
                     </button>
                   </div>

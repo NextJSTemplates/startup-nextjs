@@ -17,6 +17,7 @@ const TeamPage = () => {
             Our Team
           </h2>
         </div>
+
         <div className="mb-6 grid gap-8 md:grid-cols-2 lg:mb-16">
           <div className="items-center rounded-lg bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-800 sm:flex">
             <a href="#">
@@ -100,7 +101,7 @@ const TeamPage = () => {
             <a href="#">
               <Image
                 className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                src="/images/team/GraphicsDesigner.png"
+                src="/images/team/ShanzaRafiq.jpg"
                 alt="Shanza Rafiq"
                 width={500}
                 height={500}

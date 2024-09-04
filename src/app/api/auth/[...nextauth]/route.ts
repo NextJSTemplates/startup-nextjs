@@ -46,6 +46,28 @@ const handler = NextAuth({
   pages: {
     signIn: "/signin",
   },
+  callbacks: {
+    async signIn({ user, account }: any): Promise<any> {
+      if (account.provider === "google") {
+        const { name, email } = user;
+        try {
+          const db = await connectDB();
+          const userCollection = db.collection("users");
+          const userExist = await userCollection.findOne({ email });
+          if (!userExist) {
+            const res = await userCollection.insertOne(user);
+            return user;
+          } else {
+            return user;
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      } else {
+        return user;
+      }
+    },
+  },
 });
 
 export { handler as GET, handler as POST };

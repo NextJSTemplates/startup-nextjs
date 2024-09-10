@@ -71,7 +71,9 @@ jobs:
       # Build Docker Image
       - name: Build Docker image
         run: |
-          docker build -t devops-nextjs:${{ github.sha }} .
+          # Use the first 7 characters of the GitHub SHA for a shorter, valid Docker tag
+          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          docker build -t my-app:${SHORT_SHA} .
 
       # Log in to Docker Hub
       - name: Log in to Docker Hub
@@ -80,11 +82,13 @@ jobs:
       # Tag Docker image
       - name: Tag Docker image
         run: |
-          docker tag devops-nextjs:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/devops-nextjs:${{ github.sha }}
-          docker tag devops-nextjs:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/devops-nextjs:latest
+          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          docker tag my-app:${SHORT_SHA} ${{ secrets.DOCKER_USERNAME }}/my-app:${SHORT_SHA}
+          docker tag my-app:${SHORT_SHA} ${{ secrets.DOCKER_USERNAME }}/my-app:latest
 
       # Push Docker image to Docker Hub
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/devops-nextjs:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USERNAME }}/devops-nextjs:latest
+          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          docker push ${{ secrets.DOCKER_USERNAME }}/my-app:${SHORT_SHA}
+          docker push ${{ secrets.DOCKER_USERNAME }}/my-app:latest

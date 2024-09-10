@@ -48,7 +48,7 @@ jobs:
 
   audit:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release')
     needs: build
     steps:
       - name: Checkout code

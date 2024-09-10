@@ -52,7 +52,7 @@ jobs:
   audit:
     name: Audit Dependencies
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release') && github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release'))
     steps:
       - name: Checkout code
         uses: actions/checkout@v3

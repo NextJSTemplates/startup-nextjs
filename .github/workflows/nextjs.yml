@@ -8,12 +8,8 @@ on:
   pull_request:
     types:
       - closed
-
 env:
-  # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
-  # github.repository as <account>/<repo>
-  IMAGE_NAME: csauercampus
 
 jobs:
   # Linting Job
@@ -101,7 +97,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@96383f45573cb7f253c731d3b3ab81c87ef81934 # v5.0.0
         with:
-          images: ${{ env.REGISTRY }}/${{ secrets.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ secrets.DOCKER_REPO }}
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action

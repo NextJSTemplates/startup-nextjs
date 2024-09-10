@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - "**" # Lint and build on all branches
+  pull_request:
+    types:
+      - closed
 
 jobs:
   # Linting Job
@@ -49,7 +52,7 @@ jobs:
   audit:
     name: Audit Dependencies
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release')
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release') && github.event.pull_request.merged == true
     steps:
       - name: Checkout code
         uses: actions/checkout@v3

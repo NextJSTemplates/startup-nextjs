@@ -48,11 +48,11 @@ jobs:
       - name: Build the app
         run: npm run build
 
-  # Audit Job (Security checks, audits only on main/release branches)
-  audit:
-    name: Audit Dependencies
+  # Audit and Docker Push Job (Runs only when a merge happens to the main branch)
+  audit_and_push:
+    name: Audit and Push Docker Image
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release'))
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, 'Merge pull request')
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -67,3 +67,24 @@ jobs:
 
       - name: Run npm audit
         run: npm audit --audit-level=high
+
+      # Build Docker Image
+      - name: Build Docker image
+        run: |
+          docker build -t devops-nextjs:${{ github.sha }} .
+
+      # Log in to Docker Hub
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      # Tag Docker image
+      - name: Tag Docker image
+        run: |
+          docker tag devops-nextjs:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/devops-nextjs:${{ github.sha }}
+          docker tag devops-nextjs:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/devops-nextjs:latest
+
+      # Push Docker image to Docker Hub
+      - name: Push Docker image
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/devops-nextjs:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/devops-nextjs:latest

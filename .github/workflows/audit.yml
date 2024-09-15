@@ -1,0 +1,24 @@
+name: audit
+
+on:
+  pull_request:
+    branches:
+      - main
+      - release
+    types:
+      - closed  # Triggered when a PR is closed
+
+jobs:
+  audit:
+    name: Audit
+    if: github.event.pull_request.merged == true  # Run only if the PR was merged
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Audit
+        run: npm audit

@@ -1,0 +1,6 @@
+name: lint and build for every branch
+
+on:
+  push:
+    branches:
+      - '**' # No specific branch - just all available

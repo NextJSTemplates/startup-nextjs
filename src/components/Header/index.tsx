@@ -115,8 +115,8 @@ const Header = () => {
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-2 lg:py-2 ${
                               usePathName === menuItem.path
-                                ? "text-primary bg-black text-white font-bold dark:text-black"
-                                : " hover:text-primary bg-black text-white dark:text-white/70 dark:hover:text-white"
+                                ? "ease-in-up hidden rounded-sm bg-primary p-2 text-base shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block text-primary bg-black text-white font-bold dark:text-black"
+                                : "ease-in-up hidden rounded-sm p-2 text-base shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block hover:text-primary bg-black text-white dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
                             {menuItem.title}

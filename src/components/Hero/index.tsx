@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import Link from "next/link";
 
 const Hero = () => {
@@ -5,16 +6,17 @@ const Hero = () => {
     <>
       <section
         id="home"
+        style={{ backgroundImage: 'url("/images/hero/Banner.png")' }}
         className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-white dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Your Imagination Our Innovation
                 </h1>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p className="mb-12 text-white !leading-relaxed sm:text-lg md:text-xl">
                   Start your innovative journey with CodeSphere Innovations. We
                   are here to help your business grow with our cutting-edge
                   website and mobile app development services, all at affordable
@@ -29,7 +31,7 @@ const Hero = () => {
                   </Link>
                   <Link
                     href="https://github.com/umarimran1234"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90  dark:text-white"
                   >
                     Star on GitHub
                   </Link>

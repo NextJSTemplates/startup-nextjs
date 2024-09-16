@@ -17,6 +17,7 @@ const TeamPage = () => {
             Our Team
           </h2>
         </div>
+
         <div className="mb-6 grid gap-8 md:grid-cols-2 lg:mb-16">
           <div className="items-center rounded-lg bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-800 sm:flex">
             <a href="#">
@@ -33,7 +34,7 @@ const TeamPage = () => {
                 <a href="#">Umar Imran</a>
               </h3>
               <span className="text-gray-500 dark:text-gray-400">
-                CEO & Web Developer
+                CEO & Full Stack developer
               </span>
               <p className="mb-4 mt-3 font-light text-gray-500 dark:text-gray-400">
                 Muhammed Umar, an enthusiastic student diving into the world of

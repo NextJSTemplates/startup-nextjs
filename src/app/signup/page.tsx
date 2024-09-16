@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import SocialButton from "@/components/SocialSignIn";
 
 export const metadata: Metadata = {
-  title: "Sign Up Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Sign Up Page for Startup Nextjs Template",
+  title: "Sign up",
+  description: "Sign up",
   // other metadata
 };
 
@@ -32,7 +32,7 @@ const SignupPage = () => {
                   </p>
                   <span className="hidden h-[1px] w-full max-w-[60px] bg-body-color/50 sm:block"></span>
                 </div>
-                <FormComponent></FormComponent>
+                <FormComponent />
                 <p className="text-center text-base font-medium text-body-color">
                   Already using Startup?{" "}
                   <Link href="/signin" className="text-primary hover:underline">

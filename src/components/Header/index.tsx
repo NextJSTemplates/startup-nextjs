@@ -113,10 +113,10 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-2 lg:py-2 ${
                               usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                                ? "text-primary bg-black text-white font-bold dark:text-black"
+                                : " hover:text-primary bg-black text-white dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
                             {menuItem.title}
@@ -161,18 +161,18 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
+              <div className="flex items-center justify-end gap-2 pr-16 lg:pr-0">
                 {!session.data ? (
                   <>
                     <Link
                       href="/signin"
-                      className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
+                      className={`ease-in-up ${usePathName === "/signin"? "bg-black text-white font-bold":"bg-white text-black "} hidden rounded-sm bg-primary px-8 py-3 text-base shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9`}
                     >
                       Sign In
                     </Link>
                     <Link
                       href="/signup"
-                      className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
+                      className={`ease-in-up ${usePathName === "/signup"? "bg-black text-white font-bold":"bg-white text-black "} hidden rounded-sm bg-primary px-8 py-3 text-base shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9`}
                     >
                       Sign Up
                     </Link>

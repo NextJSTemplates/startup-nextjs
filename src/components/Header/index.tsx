@@ -64,14 +64,14 @@ const Header = () => {
                   alt="logo"
                   width={120}
                   height={50}
-                  className="w-24  dark:hidden md:w-32"
+                  className="w-24 dark:hidden rounded-lg md:w-32"
                 />
                 <Image
                   src="/images/logo/logo.jpg"
                   alt="logo"
                   width={120}
                   height={50}
-                  className="hidden w-24 dark:block md:w-32"
+                  className="hidden w-24 dark:block rounded-lg md:w-32"
                 />
               </Link>
             </div>

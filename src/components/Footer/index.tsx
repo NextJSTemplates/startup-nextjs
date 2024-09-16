@@ -15,14 +15,14 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-3 inline-block">
                   <Image
-                    src="/images/logo/CEO.Jpg"
+                    src="/images/logo/CEO.jpg"
                     alt="logo"
                     className="rounded-full dark:hidden"
                     width={190}
                     height={30}
                   />
                   <Image
-                    src="/images/logo/CEO.Jpg"
+                    src="/images/logo/CEO.jpg"
                     alt="logo"
                     className="hidden  dark:block"
                     width={190}
@@ -123,7 +123,7 @@ const Footer = () => {
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Media
                 </h2>
-                <ul className="flex  items-center justify-around">
+                <ul className="flex  items-center gap-4">
                   <li>
                     <Link
                       href="https://github.com/umarimran1234"

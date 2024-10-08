@@ -97,6 +97,7 @@ const TeamPage = () => {
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </section>

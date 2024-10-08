@@ -7,7 +7,7 @@ const blogData: Blog[] = [
     paragraph:
       "Paytirement is a website project we are creating for our client.",
     image: "/images/blog/blog-01.jpg",
-    anchor: "https://paytirement-com.vercel.app/",
+    anchor: "https://paytirement-new.vercel.app/",
     tags: ["Done"],
   },
   {
@@ -16,7 +16,7 @@ const blogData: Blog[] = [
     paragraph:
       "We’ve developed an impressive website for Disruptive AI, a leading company in artificial intelligence.",
     image: "/images/blog/blog-02.jpg",
-    anchor: "https://disruptiveai-10cb1.web.app/",
+    anchor: "https://disruptiveai.co/",
 
     tags: ["Done"],
   },
@@ -72,11 +72,11 @@ const blogData: Blog[] = [
   },
   {
     id: 8,
-    title: "Luitechsystem",
+    title: "Luitech System",
     paragraph:
       "Luitech Systems is a global software consultancy firm, and we at CodeSphere had the privilege of designing their impressive new website. Our work highlights their expertise and commitment to innovation on a global scale.",
     image: "/images/blog/blog-8.jpg",
-    anchor: "https://alishaqpharma.web.app/",
+    anchor: "https://www.luitechsys.com/",
 
     tags: ["Done"],
   },

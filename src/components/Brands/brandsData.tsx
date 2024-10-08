@@ -43,6 +43,13 @@ const brandsData: Brand[] = [
     image: "/images/brands/openvoicehub_logo.png",
     imageLight: "/images/brands/openvoicehub_cover.jpeg",
   },
+  {
+    id: 6,
+    name: "Blue Soft Digi",
+    href: "https://www.linkedin.com/company/openvoicehub/posts/?feedView=all",
+    image: "/images/brands/Bluesoftdigi.jpg",
+    imageLight: "/images/brands/Bluesoftdigi.jpg",
+  },
 ];
 
 export default brandsData;

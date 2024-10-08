@@ -97,7 +97,7 @@ const TeamPage = () => {
               </ul>
             </div>
           </div>
-          <div className="items-center rounded-lg bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-800 sm:flex">
+          {/* <div className="items-center rounded-lg bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-800 sm:flex">
             <a href="#">
               <Image
                 className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
@@ -109,7 +109,7 @@ const TeamPage = () => {
             </a>
             <div className="p-5">
               <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">Shanza Rafiq</a>
+                <a href="#">Shanza Rafiq</a>
               </h3>
               <span className="text-gray-500 dark:text-gray-400">
                 Graphics Designer
@@ -135,7 +135,7 @@ const TeamPage = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

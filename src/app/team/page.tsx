@@ -4,7 +4,7 @@ import React from "react";
 const Team = () => {
   return (
     <div className="mt-20">
-      <TeamPage></TeamPage>
+      <TeamPage />
     </div>
   );
 };

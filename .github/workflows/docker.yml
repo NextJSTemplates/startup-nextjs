@@ -57,6 +57,11 @@ jobs:
       - name: Terraform Validate
         run: terraform validate
 
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
+        env:
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
       - name: Terraform Plan
         run: terraform plan -out=tfplan
         env:

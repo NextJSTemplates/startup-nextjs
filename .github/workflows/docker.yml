@@ -41,6 +41,11 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
         with:
@@ -54,6 +59,10 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
+        env:
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Terraform Apply
         run: terraform apply -auto-approve tfplan
+        env:
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}

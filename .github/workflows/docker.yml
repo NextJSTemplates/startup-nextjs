@@ -47,10 +47,13 @@ jobs:
           terraform_version: 1.0.0
 
       - name: Terraform Init
+        working-directory: terraform
         run: terraform init
 
       - name: Terraform Plan
+        working-directory: terraform
         run: terraform plan -out=tfplan
 
       - name: Terraform Apply
+        working-directory: terraform
         run: terraform apply -auto-approve tfplan

@@ -4,10 +4,10 @@ const AboutSectionTwo = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
+        <div className="flex items-center gap-10">
           <div className="w-full px-4 lg:w-1/2">
             <div
-              className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+              className="relative mx-auto mb-12 aspect-[25/24] max-w-full text-center lg:m-0"
               data-wow-delay=".15s"
             >
               <Image
@@ -25,32 +25,39 @@ const AboutSectionTwo = () => {
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">
-            <div className="max-w-[470px]">
+            <div className="max-w-full">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                  Step 1: Consultation & Requirement Gathering
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  We begin by understanding your goals, challenges, and project
+                  requirements. During this phase, we’ll discuss your vision,
+                  timelines, and expectations to ensure we’re aligned.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                  Step 2: Proposal & Agreement
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                  Based on our consultation, we craft a detailed proposal,
+                  including project milestones, deliverables, timelines, and
+                  cost estimates. Once you’re satisfied with the plan, we move
+                  forward with an agreement to kickstart the development
+                  process.
                 </p>
               </div>
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
+                  Step 3: Planning & Initial Payment
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
+                  Once the agreement is finalized, we proceed with project
+                  planning. This involves creating a detailed strategy,
+                  assigning the best resources, and establishing clear
+                  communication channels. After receiving the initial payment,
+                  we begin work on your project.
                 </p>
               </div>
             </div>

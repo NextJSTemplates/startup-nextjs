@@ -8,16 +8,16 @@ const testimonialData: Testimonial[] = [
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
+      "Working with Smart Pay Chain LLC was a game-changer for our business. They took the time to fully understand our needs and delivered a custom software solution that exceeded our expectations. The team’s professionalism, attention to detail, and commitment to quality were truly exceptional.",
     star: 5,
+    image: "/images/testimonials/auth-01.png",
   },
   {
     id: 2,
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "We partnered with Smart Pay Chain LLC for a complex IoT project, and they nailed it. Their ability to handle both hardware design and software integration was outstanding. The final product has significantly improved our operations and scalability. Truly a team of experts!",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -26,7 +26,7 @@ const testimonialData: Testimonial[] = [
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "What impressed us most about Smart Pay Chain LLC was their transparency and seamless communication throughout the project. Their team kept us informed at every stage and delivered a robust web application on time and within budget. We couldn’t have asked for a better experience.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -34,11 +34,11 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="What Our Clients Say About Us"
+          paragraph="Trusted by Industry Leaders to Deliver Excellence"
           center
         />
 

@@ -20,32 +20,26 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
+    id: 4,
+    title: "Portfolio",
+    newTab: false,
+    path: "/portfolio",
+  },
+  {
     id: 3,
-    title: "Support",
+    title: "Contact",
     path: "/contact",
     newTab: false,
   },
   {
     id: 4,
-    title: "Pages",
+    title: "Services",
     newTab: false,
     submenu: [
       {
         id: 41,
         title: "About Page",
         path: "/about",
-        newTab: false,
-      },
-      {
-        id: 42,
-        title: "Contact Page",
-        path: "/contact",
-        newTab: false,
-      },
-      {
-        id: 43,
-        title: "Blog Grid Page",
-        path: "/blog",
         newTab: false,
       },
       {

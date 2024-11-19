@@ -9,7 +9,7 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+    <p className="flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
         {checkIcon}
       </span>
@@ -22,34 +22,58 @@ const AboutSectionOne = () => {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
+            <div className="w-full px-4 lg:w-3/5">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="How We Deliver Excellence"
+                paragraph="From ideation to execution, we ensure every step of your project is handled with precision and care."
                 mb="44px"
               />
 
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
+              <div className="mb-12 max-w-full lg:mb-0" data-wow-delay=".15s">
                 <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                  <div className="flex w-full flex-col gap-6 px-3">
+                    <div className="flex flex-col items-center gap-2 md:grid md:grid-cols-2">
+                      <List text="Consultation" />
+                      <span className="flex w-full ">
+                        Understanding your goals and defining requirements.
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 md:grid md:grid-cols-2">
+                      <List text="Strategy" />
+                      <span className="flex w-full ">
+                        Tailoring a custom plan for maximum ROI
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 md:grid md:grid-cols-2">
+                      <List text="Design" />
+                      <span className="flex w-full ">
+                        Creating a stunning visual identity
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 md:grid md:grid-cols-2">
+                      <List text="Development" />
+                      <span className="flex w-full ">
+                        Building a robust, scalable solution
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 md:grid md:grid-cols-2">
+                      <List text="Testing" />
+                      <span className="flex w-full ">
+                        Ensuring quality and performance
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 md:grid md:grid-cols-2">
+                      <List text="Deployment & Support" />
+                      <span className="flex w-full ">
+                        Launching and maintaining your project
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="w-full px-4 lg:w-1/2">
+            <div className="w-full px-4 lg:w-2/5">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image
                   src="/images/about/about-image.svg"

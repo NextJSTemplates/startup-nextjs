@@ -75,7 +75,12 @@ module.exports = {
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
-    },
+			borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

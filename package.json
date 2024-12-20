@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-popover": "^1.1.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.1.0",
+    "lucide-react": "^0.469.0",
     "next": "^14.1.0",
     "next-auth": "^4.24.11",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-modal-video": "^2.0.1"
+    "react-modal-video": "^2.0.1",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",

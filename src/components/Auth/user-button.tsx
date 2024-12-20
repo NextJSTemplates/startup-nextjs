@@ -24,7 +24,7 @@ export default function UserButton() {
       </PopoverTrigger>
 
       {/* Popover Content with Log Out button */}
-      <PopoverContent align="center" className=" w-fit px-6 p-2  mt-2 bg-white !bg-opacity-80 dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky backdrop-blur-sm rounded-lg">
+      <PopoverContent align="center" className=" w-fit px-6 p-2  mt-6 bg-white !bg-opacity-80 dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky backdrop-blur-sm rounded-lg">
         <button
           onClick={() => signOut()}
           className=" block text-center mx-auto  p-2 text-sm rounded-md text-white/70 hover:text-white"

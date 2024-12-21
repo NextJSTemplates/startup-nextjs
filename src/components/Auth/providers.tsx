@@ -3,7 +3,7 @@ import ProviderButton from "./provider-button";
 
  
  
-export const GoogleButton = ( ) => {
+export const GoogleButton = async ( ) => {
   return (
     <ProviderButton provider="google">
       <span className="mr-3">
@@ -44,7 +44,7 @@ export const GoogleButton = ( ) => {
   );
 };
 
-export const GithubButton = ( ) => {
+export const GithubButton = async ( ) => {
   return (
     <ProviderButton provider="github">
       <span className="mr-3">

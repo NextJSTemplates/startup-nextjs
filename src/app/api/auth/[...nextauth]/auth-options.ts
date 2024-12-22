@@ -4,7 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
-import { AuthOptions } from "next-auth";
+import NextAuth, { AuthOptions } from "next-auth";
 import bcrypt from "bcryptjs";
 import { v4 as uuid } from "uuid"
 import { encode as defaultEncode } from "next-auth/jwt"
@@ -89,3 +89,5 @@ const authOptions: AuthOptions = {
 };
 
 export default authOptions;
+
+export const handler = NextAuth(authOptions)

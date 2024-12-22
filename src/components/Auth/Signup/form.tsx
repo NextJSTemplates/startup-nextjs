@@ -1,43 +1,45 @@
 "use client";
-import { registerUser } from "@/actions/auth";
-import React, {  useActionState, useEffect } from "react";
-import Field, { FieldProps } from "../field";
-import { useRouter } from "next/navigation";
+import { registerUser } from "@/actions/auth/signup";
+import React, { useActionState, useEffect } from "react";
+import Field  from "../field";
+import { useRouter, useSearchParams } from "next/navigation";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
-
-
 function SignupForm() {
-  const [signup_state, signup, pending,] = useActionState(registerUser, {
+  const searchParams = useSearchParams()
+
+  const [signup_state, signup, pending] = useActionState(registerUser, {
     message: "",
     success: false,
+    inputs: {
+      name: searchParams.get("name"),
+      email: searchParams.get("email"),
+      password: searchParams.get("password")
+    }
   });
-  const router = useRouter()
-   useEffect(() => {
+
+  const router = useRouter();
+  useEffect(() => {
     console.log("Signup", signup_state);
-    if ( signup_state && !signup_state?.success) {
+    if (signup_state && !signup_state?.success) {
       if (
         signup_state?.errors?.email?.includes("This email is already in use.")
       ) {
-
         //I suggest to implement  a better modal, or toast.
         alert(
           "This email seems to have already been used. Try signing in instead",
         );
       }
-     
+    } else {
+      router.push("/");
     }
-    else{
-      router.push("/")
-     }
   }, [router, signup_state]);
- 
 
   return (
     <form action={signup}>
       <Field
         state={signup_state}
-        labelContent= "Full Name"
+        labelContent="Full Name"
         minLength={3}
         maxLength={50}
         type="text"
@@ -45,19 +47,10 @@ function SignupForm() {
         required
         placeholder="Enter your full name"
       />
+       
       <Field
-              state={signup_state}
-
-        labelContent = "Your personal Email"
-        type="email"
-        name="email"
-        required
-        placeholder="Enter your Email"
-      />
-      <Field
-              state={signup_state}
-
-      labelContent = "A strong Password to autenticate in our webiste"
+        state={signup_state}
+        labelContent="A strong Password to autenticate in our webiste"
         type="password"
         name="password"
         required
@@ -109,7 +102,7 @@ function SignupForm() {
           disabled={pending}
           className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 disabled:bg-primary/50 dark:shadow-submit-dark"
         >
-          Sign up { pending && <LoadingSpinner />}
+          Sign up {pending && <LoadingSpinner />}
         </button>
       </div>
     </form>

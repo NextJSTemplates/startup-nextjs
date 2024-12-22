@@ -2,24 +2,38 @@
 "use client";
 import { useSession, signOut } from "next-auth/react";
 import Image from "next/image"; // Using Next.js optimized image
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"; // Import the Popover components
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/Ui/popover"; // Import the Popover components
 
-export default function UserButton() {
-  const { data: session } = useSession();
-
-  return (
+export default function UserButton(user:  {
+  name?: string;
+  email?: string;
+  image?: string;
+} ) {
+  const split = user.name.split(" ")
+  const firstLetter = split[0][0]
+  const secondLetter = split[1]? split[1][0]: split[0][1]
+  
+  const content = (firstLetter + secondLetter).toUpperCase()
+   return (
     <Popover>
       {/* User Button - Displaying Avatar Image */}
       <PopoverTrigger asChild>
-        <button className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full">
+        <button className="flex items-center justify-center w-12 h-12 dark:bg-dark  dark:text-gray-light font-semibold text-xl rounded-full">
+          
           {/* Replace with next/image for optimized image rendering */}
+          {user.image ?(
           <Image
-            src={session.user.image || "/default-avatar.png"}  // Fallback to default avatar if no user image is available
+            src={user.image  }  // Fallback to default avatar if no user image is available
             alt="User Avatar"
             width={40}   // You can adjust the width and height to your desired size
             height={40}
             className="rounded-full"
-          />
+          />):(
+            <div className=" rounded-full aspect-square
+            " aria-label={ content } >
+              {content}
+            </div>
+          )}
         </button>
       </PopoverTrigger>
 

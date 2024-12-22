@@ -1,22 +1,25 @@
 "use client";
 import { registerUser } from "@/actions/auth/signup";
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import LoadingSpinner from "@/components/Ui/loading-spinner";
-import {useFormState} from "react-dom"
+import { useFormState } from "react-dom";
+import Submit from "../submit";
+import Field from "../field";
 function SignupForm() {
-  const searchParams = useSearchParams()
-useFormState
-  const [signup_state, signup, pending] = useFormState(registerUser, {
+  const searchParams = useSearchParams();
+  useFormState;
+  const [signup_state, signup] = useFormState(registerUser, {
     message: "",
     success: false,
     inputs: {
       name: searchParams.get("name"),
       email: searchParams.get("email"),
-      password: searchParams.get("password")
-    }
+      password: searchParams.get("password"),
+    },
   });
+
+  console.log({ signup_state, signup });
 
   const router = useRouter();
   useEffect(() => {
@@ -37,7 +40,7 @@ useFormState
 
   return (
     <form action={signup}>
-      {/* <Field
+      <Field
         state={signup_state}
         labelContent="Full Name"
         minLength={3}
@@ -47,7 +50,14 @@ useFormState
         required
         placeholder="Enter your full name"
       />
-       
+      <Field
+        state={signup_state}
+        labelContent="Your personal Email"
+        type="email"
+        name="email"
+        required
+        placeholder="Enter your Email"
+      />
       <Field
         state={signup_state}
         labelContent="A strong Password to autenticate in our webiste"
@@ -56,7 +66,7 @@ useFormState
         required
         minLength={8}
         placeholder="Enter your Password"
-      /> */}
+      />{" "}
       <div className="mb-8 flex">
         <label
           htmlFor="checkboxLabel"
@@ -98,12 +108,9 @@ useFormState
         </label>
       </div>
       <div className="mb-6">
-        <button
-          disabled={pending}
-          className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 disabled:bg-primary/50 dark:shadow-submit-dark"
-        >
-          Sign up {pending && <LoadingSpinner />}
-        </button>
+        <Submit>
+          Sign up
+        </Submit>
       </div>
     </form>
   );

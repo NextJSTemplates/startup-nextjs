@@ -33,18 +33,20 @@ const authOptions: AuthOptions = {
     CredentialsProvider({
       credentials: {
         email: {},
-        name: {},
         password: {},
       },
       async authorize(credentials) {
         const { email, password } = credentials
 
         const user = await prisma.user.findUnique( { where:{email}})
-        if (user && bcrypt.compareSync(password, user.hashedPassword)) {
+        const correctPassword =bcrypt.compareSync(password, user.hashedPassword)
+ 
+        if ( correctPassword ) {
           return user
         }
 
-        return null
+        throw new Error("Invalid password");
+ 
       },
 
     }),

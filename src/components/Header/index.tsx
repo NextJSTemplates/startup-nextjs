@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { useSession } from "next-auth/react";
-import UserButton from "../Auth/user-button";
+import UserButton from "../User/user-button";
 
 const Header = () => {
   // Navbar toggle
@@ -162,7 +162,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {session.data?.user ? (<UserButton />) :(<> <Link
+                {session.data?.user ? (<UserButton {...session.data?.user} />) :(<> <Link
                   href="/signin"
                   className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
                 >

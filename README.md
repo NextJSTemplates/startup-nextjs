@@ -20,7 +20,7 @@ This is a customized version of the **Startup Free Next.js Startup Website Templ
 |-------------------------------------------|---------------|----------|
 | Next.js Landing Page                      | ✅ Yes        | ✅ Yes   |
 | Authentication Integration                | ✅ Yes        | ✅ Yes   |
-| Database Integration                      | ❌ No         | ✅ Yes   |
+| Database Integration                      | ✅ Yes        | ✅ Yes   |
 | Homepage Variations                       | 1             | 2        |
 | Additional SaaS Pages and Components      | ❌ No         | ✅ Yes   |
 | Functional Blog with Sanity               | ❌ No         | ✅ Yes   |

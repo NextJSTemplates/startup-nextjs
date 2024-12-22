@@ -2,11 +2,12 @@
 import { registerUser } from "@/actions/auth/signup";
 import React, { useEffect } from "react";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { redirect, useRouter, useSearchParams } from "next/navigation";
 import { useFormState } from "react-dom";
 import Submit from "../submit";
 import Field from "../field";
 import { cn } from "@/lib/utils";
+import { signIn } from "next-auth/react";
 function SignupForm() {
   const searchParams = useSearchParams();
   useFormState;
@@ -24,19 +25,25 @@ function SignupForm() {
 
   const router = useRouter();
   useEffect(() => {
-    console.log("Signup", signup_state);
-    if (signup_state && !signup_state?.success) {
-      if (
-        signup_state?.errors?.email?.includes("This email is already in use.")
-      ) {
-        //I suggest to implement  a better modal, or toast.
-        alert(
-          "This email seems to have already been used. Try signing in instead",
-        );
+    const onStateChange = async () => {
+      console.log("Signup", signup_state);
+      if (signup_state?.success) {
+        const { email, password } = signup_state.inputs;
+        await signIn("credentials", { email, password, redirect: false });
+        router.push("/");
+      } else {
+        if (
+          signup_state?.errors?.email?.includes("This email is already in use.")
+        ) {
+          //I suggest to implement  a better modal, or toast.
+          alert(
+            "This email seems to have already been used. Try signing in instead",
+          );
+        }
       }
-    } else {
-      router.push("/");
-    }
+    };
+
+    onStateChange();
   }, [router, signup_state]);
 
   return (

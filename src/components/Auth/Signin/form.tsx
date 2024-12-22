@@ -1,16 +1,17 @@
-"use client"
+"use client";
 import { logUser } from "@/actions/auth/signin";
 import { useSearchParams } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormState } from "react-dom";
 import Field from "../field";
 import Submit from "../submit";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 function SigninForm() {
   const searchParams = useSearchParams();
-
-  const [signin_state  , signin ] = useFormState(logUser, {
+  const router = useRouter();
+  const [signin_state, signin] = useFormState(logUser, {
     message: "",
     success: false,
     inputs: {
@@ -18,6 +19,12 @@ function SigninForm() {
       password: searchParams.get("password"),
     },
   });
+
+  useEffect(() => {
+    if (signin_state.success) {
+      router.push("/");
+    }
+  }, [router, signin_state]);
   return (
     <form action={signin}>
       <Field
@@ -39,7 +46,15 @@ function SigninForm() {
         placeholder="Enter your Password"
       />
 
-      <p className={cn( "  mb-5", signin_state.success? " text-green-800": " text-red-800")}>  {signin_state.message} </p>
+      <p
+        className={cn(
+          "  mb-5",
+          signin_state.success ? " text-green-800" : " text-red-800",
+        )}
+      >
+        {" "}
+        {signin_state.message}{" "}
+      </p>
       <div className="mb-8 flex flex-col justify-between sm:flex-row sm:items-center">
         <div className="mb-4 sm:mb-0">
           <label
@@ -80,9 +95,7 @@ function SigninForm() {
         </div>
       </div>
       <div className="mb-6">
-      <Submit>
-          Sign in
-        </Submit> 
+        <Submit>Sign in</Submit>
       </div>
     </form>
   );

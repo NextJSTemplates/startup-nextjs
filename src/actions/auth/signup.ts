@@ -16,9 +16,9 @@ export async function registerUser(_: SignupActionResponse | null, data: FormDat
       inputs: raw as z.infer<typeof signupSchema>,
     };
   }
-
-  const { email, name, password } = valid.data;
-
+  const inputs = valid.data 
+  const { email, name, password } = inputs;
+  
   try {
     const existingUser = await prisma.user.findUnique({ where: { email } });
     if (existingUser) {
@@ -26,7 +26,7 @@ export async function registerUser(_: SignupActionResponse | null, data: FormDat
         success: false,
         message: "Email is already registered.",
         errors: { email: ["This email is already in use."] },
-        inputs: valid.data,
+        inputs,
       };
     }
 
@@ -35,10 +35,12 @@ export async function registerUser(_: SignupActionResponse | null, data: FormDat
 
     //uncomment to test loading form state.
     //await new Promise(resolve => setTimeout(resolve, 3000));
-    return { message: "User registered successfully.", success: true };
+    
+    return { message: "User registered successfully.", success: true, inputs };
   } catch (error) {
     console.error("Registration error:", error);
-    return { success: false, message: "An error occurred during registration." };
+    return { success: false, message: "An error occurred during registration.",  inputs,
+    };
   }
 
 

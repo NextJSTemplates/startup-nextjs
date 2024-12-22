@@ -39,13 +39,12 @@ const authOptions: AuthOptions = {
         const { email, password } = credentials
 
         const user = await prisma.user.findUnique( { where:{email}})
-        const correctPassword =bcrypt.compareSync(password, user.hashedPassword)
- 
-        if ( correctPassword ) {
+        if (user && bcrypt.compareSync(password, user.hashedPassword)
+        ){
           return user
-        }
+        }  
 
-        throw new Error("Invalid password");
+        throw new Error("No user found with such email and password.");
  
       },
 

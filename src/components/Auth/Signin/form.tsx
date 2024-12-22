@@ -5,11 +5,13 @@ import React from "react";
 import { useFormState } from "react-dom";
 import Field from "../field";
 import Submit from "../submit";
+import { number } from "zod";
+import { cn } from "@/lib/utils";
 
 function SigninForm() {
   const searchParams = useSearchParams();
 
-  const [signin_state, signin ] = useFormState(logUser, {
+  const [signin_state  , signin ] = useFormState(logUser, {
     message: "",
     success: false,
     inputs: {
@@ -37,6 +39,8 @@ function SigninForm() {
         minLength={8}
         placeholder="Enter your Password"
       />
+
+      <p className={cn( "  mb-5", signin_state.success? " text-green-800": " text-red-800")}>  {signin_state.message} </p>
       <div className="mb-8 flex flex-col justify-between sm:flex-row sm:items-center">
         <div className="mb-4 sm:mb-0">
           <label

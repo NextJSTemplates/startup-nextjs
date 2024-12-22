@@ -1,21 +1,22 @@
+import { ActionResponse } from "@/lib/shared/auth";
 import { SignupActionResponse } from "@/lib/shared/auth/signup";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
-export type FieldProps = { state: SignupActionResponse, labelContent: ReactNode } & Omit<
+export type FieldProps<Fields> = { state:  ActionResponse<Fields>, labelContent: ReactNode } & Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
   "defaultValue"
 >;
 
-export default function Field({ state, labelContent, ...props }: FieldProps) {
+export default function Field<Fields>({ state, labelContent, ...props }: FieldProps<Fields>) {
   const { name, className } = props;
   const prev_value = state?.inputs ? state.inputs[name] : "";
-  const errors = state?.errors? state.errors[name]: []
+  const errors = state?.errors? state.errors[name]: null
   return (
     <div className={ cn ("mb-8", )}>
       <label
         htmlFor={name}
-        className={ cn("mb-3 block text-sm text-dark dark:text-white",   )}
+        className={ cn("mb-3 block text-sm text-dark dark:text-white", state.success?  "!text-green-800" : ( errors? " !text-red-800": "")  )}
       >
         {labelContent}
       </label>
@@ -29,9 +30,9 @@ export default function Field({ state, labelContent, ...props }: FieldProps) {
         )}
       />
       {errors && (
-        <ul className=" py-2  text-red-800">
+        <ul className="  text-red-900">
           { errors.map((e, i) => (
-            <li key={i}>{e}</li>
+            <li className=" p-0.5" key={i}>{e}</li>
           ))}
         </ul>
       )}

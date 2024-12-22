@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useFormState } from "react-dom";
 import Submit from "../submit";
 import Field from "../field";
+import { cn } from "@/lib/utils";
 function SignupForm() {
   const searchParams = useSearchParams();
   useFormState;
@@ -67,6 +68,15 @@ function SignupForm() {
         minLength={8}
         placeholder="Enter your Password"
       />{" "}
+      <p
+        className={cn(
+          "  mb-5",
+          signup_state.success ? " text-green-800" : " text-red-800",
+        )}
+      >
+        {" "}
+        {signup_state.message}{" "}
+      </p>
       <div className="mb-8 flex">
         <label
           htmlFor="checkboxLabel"
@@ -108,9 +118,7 @@ function SignupForm() {
         </label>
       </div>
       <div className="mb-6">
-        <Submit>
-          Sign up
-        </Submit>
+        <Submit>Sign up</Submit>
       </div>
     </form>
   );

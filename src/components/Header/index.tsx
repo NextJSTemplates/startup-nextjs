@@ -7,6 +7,7 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { useSession } from "next-auth/react";
 import UserButton from "../User/user-button";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   // Navbar toggle
@@ -163,14 +164,19 @@ const Header = () => {
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 {session.data?.user ? (<UserButton {...session.data?.user} />) :(<> <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
+                  href="/auth/signin"
+                  className={cn(
+                    "hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block",
+                    usePathName === "/auth/signin" && " bg-primary text-white rounded-xl transition-colors duration-300"
+                  )}                >
                   Sign In
                 </Link>
                 <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  href="/auth/signup"
+                  className={cn(
+                    "hidden px-7 py-3 text-base bg-transparent font-medium text-dark hover:opacity-70 dark:text-white md:block",
+                    usePathName === "/auth/signup" && " bg-primary text-white rounded-xl transition-colors duration-300"
+                  )}
                 >
                   Sign Up
                 </Link></>)}

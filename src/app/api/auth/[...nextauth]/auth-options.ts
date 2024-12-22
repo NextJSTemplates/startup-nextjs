@@ -33,18 +33,19 @@ const authOptions: AuthOptions = {
     CredentialsProvider({
       credentials: {
         email: {},
-        name: {},
         password: {},
       },
       async authorize(credentials) {
         const { email, password } = credentials
 
         const user = await prisma.user.findUnique( { where:{email}})
-        if (user && bcrypt.compareSync(password, user.hashedPassword)) {
+        if (user && bcrypt.compareSync(password, user.hashedPassword)
+        ){
           return user
-        }
+        }  
 
-        return null
+        throw new Error("No user found with such email and password.");
+ 
       },
 
     }),
@@ -90,4 +91,4 @@ const authOptions: AuthOptions = {
 
 export default authOptions;
 
-export const { handlers, signIn, signOut, auth } = NextAuth(authOptions)
+export const handler = NextAuth(authOptions)

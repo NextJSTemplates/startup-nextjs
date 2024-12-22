@@ -4,10 +4,9 @@ import bcrypt from "bcryptjs"
 import z from "zod"
 import {SignupActionResponse, signupSchema} from "@/lib/shared/auth/signup"
 
-  
 export async function registerUser(_: SignupActionResponse | null, data: FormData): Promise<SignupActionResponse> {
   const raw = { email: data.get("email"), name: data.get("name"), password: data.get("password") };
-  const valid = signupSchema.safeParse(raw);
+  const valid  = await signupSchema.safeParseAsync(raw);
 
   if (!valid.success) {
     return {
@@ -32,9 +31,10 @@ export async function registerUser(_: SignupActionResponse | null, data: FormDat
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    //await prisma.user.create({ data: { email, name, hashedPassword } });
+    await prisma.user.create({ data: { email, name, hashedPassword } });
 
-    await new Promise(resolve => setTimeout(resolve, 9000));
+    //uncomment to test loading form state.
+    //await new Promise(resolve => setTimeout(resolve, 3000));
     return { message: "User registered successfully.", success: true };
   } catch (error) {
     console.error("Registration error:", error);

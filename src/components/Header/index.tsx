@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { useSession } from "next-auth/react";
-import UserButton from "../Auth/user-button";
+import UserButton from "../User/user-button";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -163,21 +163,19 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {session.data?.user ? (<UserButton />) :(<> <Link
-                  href="/signin"
-                  className={cn("hidden rounded-sm px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block  transition duration-300 hover:bg-opacity-90  md:px-9 lg:px-6 xl:px-9",
-                    usePathName ===  "/signin"  && "bg-primary text-white"
-    
-                  )} 
-                >
+                {session.data?.user ? (<UserButton {...session.data?.user} />) :(<> <Link
+                  href="/auth/signin"
+                  className={cn(
+                    "hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block",
+                    usePathName === "/auth/signin" && " bg-primary text-white rounded-xl transition-colors duration-300"
+                  )}                >
                   Sign In
                 </Link>
                 <Link
-                  
-                  href="/signup"
-                  className={cn("hidden rounded-sm px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block  transition duration-300 hover:bg-opacity-90  md:px-9 lg:px-6 xl:px-9",
-                    usePathName ===  "/signup"  && "bg-primary text-white"
-    
+                  href="/auth/signup"
+                  className={cn(
+                    "hidden px-7 py-3 text-base bg-transparent font-medium text-dark hover:opacity-70 dark:text-white md:block",
+                    usePathName === "/auth/signup" && " bg-primary text-white rounded-xl transition-colors duration-300"
                   )}
                 >
                   Sign Up

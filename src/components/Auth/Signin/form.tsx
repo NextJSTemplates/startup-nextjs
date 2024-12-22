@@ -1,13 +1,17 @@
+"use client"
 import { logUser } from "@/actions/auth/signin";
 import { useSearchParams } from "next/navigation";
-import React, { useActionState } from "react";
+import React from "react";
+import { useFormState } from "react-dom";
 import Field from "../field";
-import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import Submit from "../submit";
+import { number } from "zod";
+import { cn } from "@/lib/utils";
 
 function SigninForm() {
   const searchParams = useSearchParams();
 
-  const [signin_state, signup, pending] = useActionState(logUser, {
+  const [signin_state  , signin ] = useFormState(logUser, {
     message: "",
     success: false,
     inputs: {
@@ -16,7 +20,7 @@ function SigninForm() {
     },
   });
   return (
-    <form>
+    <form action={signin}>
       <Field
         state={signin_state}
         labelContent="Your personal Email"
@@ -35,6 +39,8 @@ function SigninForm() {
         minLength={8}
         placeholder="Enter your Password"
       />
+
+      <p className={cn( "  mb-5", signin_state.success? " text-green-800": " text-red-800")}>  {signin_state.message} </p>
       <div className="mb-8 flex flex-col justify-between sm:flex-row sm:items-center">
         <div className="mb-4 sm:mb-0">
           <label
@@ -75,12 +81,9 @@ function SigninForm() {
         </div>
       </div>
       <div className="mb-6">
-        <button
-          disabled={pending}
-          className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 disabled:bg-primary/50 dark:shadow-submit-dark"
-        >
-          Sign in {pending && <LoadingSpinner />}
-        </button>
+      <Submit>
+          Sign in
+        </Submit> 
       </div>
     </form>
   );

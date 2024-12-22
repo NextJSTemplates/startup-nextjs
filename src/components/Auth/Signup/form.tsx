@@ -19,6 +19,8 @@ function SignupForm() {
       if (
         signup_state?.errors?.email?.includes("This email is already in use.")
       ) {
+
+        //I suggest to implement  a better modal, or toast.
         alert(
           "This email seems to have already been used. Try signing in instead",
         );

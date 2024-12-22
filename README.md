@@ -45,13 +45,23 @@ NEXTAUTH_SECRET=your-secret-key
 
 Replace `your-google-client-id`, `your-google-client-secret`, and `your-secret-key` with the appropriate values for your project. This is essential for authentication to work properly.
 
+### ⚡ Important Warning
+
+Since the React version has been updated, the `react-modal-video` dependency currently does not have a compatible version. To install dependencies successfully, you need to use the following command:
+
+```
+npm install --legacy-peer-deps
+```
+
+This ensures compatibility while installing dependencies.
+
 ### ⚡ Deploy Now
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
 
-## 📄 License
+## 🐄 License
 
 Startup is 100% free and open-source. Feel free to use this customized version with your personal and commercial projects.
 
@@ -62,3 +72,4 @@ If you find this template and my enhancements useful, please star this repositor
 ## ✨ Explore More
 
 Discover other free and premium templates at [Next.js Templates](https://nextjstemplates.com).
+

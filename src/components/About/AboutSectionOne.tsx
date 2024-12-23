@@ -38,12 +38,17 @@ const AboutSectionOne = () => {
                     <List text="Premium quality" />
                     <List text="Tailwind CSS" />
                     <List text="Use for lifetime" />
+                    <List text="Database integration." />
+
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Next.js" />
+                    <List text="Next auth" />
+
                     <List text="Rich documentation" />
                     <List text="Developer friendly" />
+
                   </div>
                 </div>
               </div>

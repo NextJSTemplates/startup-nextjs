@@ -25,7 +25,7 @@ export default async function Table({ name }: TableProps) {
   const fields = items.length > 0 ? Object.keys(items[0]) : [];
 
   return (
-    <Card>
+    <Card className="">
       <CardHeader>
         <CardTitle className="capitalize">{name}</CardTitle>
         <CardDescription>

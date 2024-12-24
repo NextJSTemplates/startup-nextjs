@@ -1,23 +1,20 @@
 "use client";
 import { logUser } from "@/actions/auth/signin";
-import { useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
 import { useFormState } from "react-dom";
 import Field from "../field";
 import Submit from "../submit";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { SigninFields } from "@/lib/shared/auth/signin";
 
-function SigninForm() {
-  const searchParams = useSearchParams();
+function SigninForm(searchParams: SigninFields) {
+  
   const router = useRouter();
   const [signin_state, signin] = useFormState(logUser, {
     message: "",
     success: false,
-    inputs: {
-      email: searchParams.get("email"),
-      password: searchParams.get("password"),
-    },
+    inputs: searchParams
   });
 
   useEffect(() => {

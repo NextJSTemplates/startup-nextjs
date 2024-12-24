@@ -2,23 +2,19 @@
 import { registerUser } from "@/actions/auth/signup";
 import React, { useEffect } from "react";
 
-import { redirect, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useFormState } from "react-dom";
 import Submit from "../submit";
 import Field from "../field";
 import { cn } from "@/lib/utils";
 import { signIn } from "next-auth/react";
-function SignupForm() {
-  const searchParams = useSearchParams();
+import { SignupFields } from "@/lib/shared/auth/signup";
+function SignupForm( searchParams: SignupFields) {
   useFormState;
   const [signup_state, signup] = useFormState(registerUser, {
     message: "",
     success: false,
-    inputs: {
-      name: searchParams.get("name"),
-      email: searchParams.get("email"),
-      password: searchParams.get("password"),
-    },
+    inputs: searchParams,
   });
 
   console.log({ signup_state, signup });

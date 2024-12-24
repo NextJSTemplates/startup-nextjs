@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { GithubButton, GoogleButton } from "@/components/Auth/providers";
 import SigninForm from "@/components/Auth/Signin/form";
+import { SignupFields } from "@/lib/shared/auth/signup";
 
 export const metadata: Metadata = {
   title: "Sign In Page | Free Next.js Template for Startup and SaaS",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const SigninPage = () => {
+const SigninPage = async ({searchParams }: {searchParams : SignupFields}) => {
   return (
     <>
       <div className="mx-auto max-w-[500px] rounded bg-white px-6 py-10 shadow-three dark:bg-dark sm:p-[60px]">
@@ -30,7 +31,7 @@ const SigninPage = () => {
           </p>
           <span className="hidden h-[1px] w-full max-w-[70px] bg-body-color/50 sm:block"></span>
         </div>
-        <SigninForm />
+        <SigninForm {...searchParams} />
         <p className="text-center text-base font-medium text-body-color">
           Don’t you have an account?{" "}
           <Link href="/signup" className="text-primary hover:underline">

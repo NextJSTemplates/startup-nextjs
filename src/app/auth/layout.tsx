@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 
-function layout({children}: {children:ReactNode}) {
+async function Auth({children}: {children:ReactNode}) {
   return (
     <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
     <div className="container">
@@ -71,4 +71,4 @@ function layout({children}: {children:ReactNode}) {
   )
 }
 
-export default layout
+export default Auth

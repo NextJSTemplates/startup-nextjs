@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { GithubButton, GoogleButton } from "@/components/Auth/providers";
 import SignupForm from "@/components/Auth/Signup/form";
+import { SigninFields } from "@/lib/shared/auth/signin";
 
 export const metadata: Metadata = {
   title: "Sign Up Page | Free Next.js Template for Startup and SaaS",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const SignupPage = () => {
+const SignupPage = async ({searchParams }: {searchParams : SigninFields}) => {
   return (
     <>
       <div className="mx-auto max-w-[500px] rounded bg-white px-6 py-10 shadow-three dark:bg-dark sm:p-[60px]">
@@ -30,7 +31,7 @@ const SignupPage = () => {
           </p>
           <span className="hidden h-[1px] w-full max-w-[60px] bg-body-color/50 sm:block"></span>
         </div>
-        <SignupForm />
+        <SignupForm  {...searchParams}/>
         <p className="text-center text-base font-medium text-body-color">
           Already using Startup?{" "}
           <Link href="/signin" className="text-primary hover:underline">

@@ -1,8 +1,9 @@
 // app/components/UserButton.tsx
 "use client";
-import { useSession, signOut } from "next-auth/react";
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/Ui/popover";
+import {  signOut } from "next-auth/react";
 import Image from "next/image"; // Using Next.js optimized image
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/Ui/popover"; // Import the Popover components
+
 
 export default function UserButton(user:  {
   name?: string;

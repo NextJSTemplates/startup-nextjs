@@ -12,7 +12,9 @@ import { encode as defaultEncode } from "next-auth/jwt"
 const adapter =  PrismaAdapter(prisma) 
 const authOptions: AuthOptions = {
   adapter,
-
+  pages: {
+    newUser: "/"
+  },
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({

@@ -2,6 +2,7 @@
 //client callback since next auth suppoorts only client side autentication.
 import { signIn } from "next-auth/react";
 import { SigninActionResponse, signinSchema } from "@/lib/shared/auth/signin";
+import { z } from "zod";
 
 export const logUser = async (
   _: SigninActionResponse | null,
@@ -20,12 +21,13 @@ export const logUser = async (
     return {
       message: "Validation failed.",
       success: false,
+      inputs: raw as z.infer<typeof signinSchema>,
       errors: validated.error.flatten().fieldErrors,
     };
   }
 
-  const { email, password } = validated.data;
- 
+  const inputs = validated.data;
+  const { email, password } = inputs
   // Effettuare il login con next-auth
   const result = await signIn("credentials", {
     email,
@@ -35,8 +37,8 @@ export const logUser = async (
 
   if (result?.error) {
     return {
-      message: result.error
-      ,
+      message: result.error,
+      inputs,
       success: false,
      
     };
@@ -45,6 +47,6 @@ export const logUser = async (
   return {
     message: "Login successful.",
     success: true,
-    errors: {},
-  };
+    inputs,
+   };
 };

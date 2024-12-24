@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/Ui/card";
 
 type TableProps = {
   name: string; // The name of the Prisma model

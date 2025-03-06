@@ -12,12 +12,12 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph=""
           center
           width="665px"
         />
 
-        <div className="w-full">
+        {/* <div className="w-full">
           <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
             <span
               onClick={() => setIsMonthly(true)}
@@ -55,47 +55,56 @@ const Pricing = () => {
               Yearly
             </span>
           </div>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Lite"
-            price={isMonthly ? "40" : "120"}
+            price={isMonthly ? "4.99" : "120"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Perfect for start ups, looking to keep overheads low whilst still having the best features around."
+            internationalTransfer="2%"
+            localTransfer="0.2%"
+            cardIssueSpend="£10, 1.3%"
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Virtual & Physical Cards" status="active" />
+            <OfferList text="GBP Wallet – dedicated IBAN" status="active" />
+            <OfferList text="Local & International Payments" status="active" />
+            <OfferList text="Web & App" status="active" />
+            {/* <OfferList text="Lifetime Access" status="inactive" />
+            <OfferList text="Free Lifetime Updates" status="inactive" /> */}
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
+            packageName="Classic"
+            price={isMonthly ? "14.99" : "789"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Ideal for business who have an established track record and are looking to expand their operations by working with a trusted provider."
+            internationalTransfer="From 1.5%"
+            localTransfer="From 0.1%"
+            cardIssueSpend="£10, 1.3%"
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
+            <OfferList text="Everything in Lite + Bulk payments" status="active" />
+            <OfferList text="EUR Wallet" status="active" />
+            <OfferList text="Increased Transaction Limits" status="active" />
+            {/* <OfferList text="Email Support" status="active" />
             <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Free Lifetime Updates" status="inactive" /> */}
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
+            packageName="Premium"
+            price={isMonthly ? "Custom" : "999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Well established businesses who are looking to take their business to the next level."
+            internationalTransfer="Speak to Sales"
+            localTransfer="Speak to Sales"
+            cardIssueSpend="Speak to Sales"
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
+            <OfferList text="Everything in Classic + High risk clients" status="active" />
+            <OfferList text="Personal Account Manager" status="active" />
+            <OfferList text="Tailored Transaction Limits" status="active" />
+            {/* <OfferList text="Email Support" status="active" />
             <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Free Lifetime Updates" status="active" /> */}
           </PricingBox>
         </div>
       </div>

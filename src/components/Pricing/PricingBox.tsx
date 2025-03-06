@@ -1,33 +1,44 @@
+import { InfoOutlined, InfoTwoTone } from "@mui/icons-material";
+import { IconButton, Tooltip } from "@mui/material";
+
 const PricingBox = (props: {
   price: string;
   duration: string;
   packageName: string;
   subtitle: string;
+  internationalTransfer?: string,
+  localTransfer?: string,
+  cardIssueSpend?: string,
   children: React.ReactNode;
 }) => {
-  const { price, duration, packageName, subtitle, children } = props;
+  const { price, duration, packageName, subtitle, internationalTransfer, localTransfer, cardIssueSpend, children } = props;
 
   return (
     <div className="w-full">
       <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
         <div className="flex items-center justify-between">
-          <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            $<span className="amount">{price}</span>
-            <span className="time text-lg font-medium text-body-color">
-              /{duration}
-            </span>
-          </h3>
+          <div className="flex flex-row gap-2 items-center">
+            <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
+              {price !== 'Custom' && "£"}<span className="amount">{price}</span>
+              {price !== 'Custom' && <span className="time text-lg font-medium text-body-color">
+                /{duration}
+              </span>}
+            </h3>
+            <Tooltip title={<div><p>Internations Transfers - {internationalTransfer}</p><p> Local Transfers - {localTransfer}</p><p>Card Issuance and Spend - {cardIssueSpend}</p></div>}>
+              <InfoOutlined fontSize="small"/>
+            </Tooltip>
+          </div>
           <h4 className="mb-2 text-xl font-bold text-dark dark:text-white">
             {packageName}
           </h4>
         </div>
-        <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
+        <p className="mb-4 flex h-28 text-base text-body-color">{subtitle}</p>
+        {/* <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
           <button className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
             Start Free Trial
           </button>
-        </div>
-        <div>{children}</div>
+        </div> */}
+        <div className="h-32">{children}</div>
         <div className="absolute bottom-0 right-0 z-[-1]">
           <svg
             width="179"

@@ -42,8 +42,8 @@ module.exports = {
         dark: "#1D2430",
         primary: "#4A6CF7",
         yellow: "#FBB040",
-        green: "#32cd32",
-        "bg-color-dark": "#008000",
+        green: "#008000",
+        "bg-color-dark": "#171C28",
         "body-color": {
           DEFAULT: "#788293",
           dark: "#959CB1",
@@ -76,6 +76,9 @@ module.exports = {
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
+      fontFamily:{
+        cormorant: ['"Cormorant"', 'sans-serif']
+      }
     },
   },
   plugins: [],

@@ -24,12 +24,12 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Simplifying Payments, Empowering Businesses"
+                paragraph="Pay First’s vision has always been to build a secure and quick platform for all businesses to benefit from. With strong founding team of tech wizzes, entrepreneurial geniuses and people who struggled with their own payments; Pay First’s first seeds were planted. We leverage the latest technology and industry expertise to deliver a frictionless experience, helping businesses of all sizes navigate the complexities of modern finance with ease"
                 mb="44px"
               />
 
-              <div
+              {/* <div
                 className="mb-12 max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
               >
@@ -46,19 +46,19 @@ const AboutSectionOne = () => {
                     <List text="Developer friendly" />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image
-                  src="/images/about/about-image.svg"
+                  src="/images/hero/Pay First 1.jpg"
                   alt="about-image"
                   fill
                   className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
                 <Image
-                  src="/images/about/about-image-dark.svg"
+                  src="/images/hero/Pay First 1.jpg"
                   alt="about-image"
                   fill
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"

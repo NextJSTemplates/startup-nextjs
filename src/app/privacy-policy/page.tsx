@@ -4,7 +4,7 @@ import React from 'react'
 const privacyPolicies = [
   {
     header: 'INTRODUCTION',
-    content: <p>Pay First Ltd ("Company," "we," "us," or "our") is committed to protecting the privacy and security of our Clients’ personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard information when you use our e-money distribution services.</p>
+    content: <p>Pay First Ltd (Company, we, us, or our) is committed to protecting the privacy and security of our Clients’ personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard information when you use our e-money distribution services.</p>
   },
   {
     header: 'INFORMATION WE COLLECT',

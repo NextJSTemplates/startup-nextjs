@@ -4,15 +4,15 @@ import React from 'react'
 const terms = [
   {
     header: 'INTRODUCTION',
-    content: <p>These Terms and Conditions ("Agreement") govern the services provided by Pay First Ltd ("Agent"), in relation to the handling and management of electronic money distribution ("E-Money"). By using the services of the Agent, the Client agrees to be bound by the terms and conditions outlined herein.</p>
+    content: <p>These Terms and Conditions (Agreement) govern the services provided by Pay First Ltd (Agent), in relation to the handling and management of electronic money distribution (E-Money). By using the services of the Agent, the Client agrees to be bound by the terms and conditions outlined herein.</p>
   },
   {
     header: 'DEFINITIONS',
     content: <ul className='list-inside list-disc'>
-            <li>"Agent" refers to Pay First Ltd, acting as an intermediary for the collection, holding, and disbursement of electronic money</li>
-            <li>"Client" refers to any party engaging the services of the Agent for handling E-Money transactions.</li>
-            <li>"E-Money" refers to electronically stored monetary value issued and distributed as part of financial transactions.</li>
-            <li>"Beneficiary" refers to the party entitled to receive the E-Money as per the terms of the transaction.</li>
+            <li><span className='italic'>Agent</span> refers to Pay First Ltd, acting as an intermediary for the collection, holding, and disbursement of electronic money</li>
+            <li><span className='italic'>Client</span> refers to any party engaging the services of the Agent for handling E-Money transactions.</li>
+            <li><span className='italic'>E-Money</span> refers to electronically stored monetary value issued and distributed as part of financial transactions.</li>
+            <li><span className='italic'>Beneficiary</span> refers to the party entitled to receive the E-Money as per the terms of the transaction.</li>
           </ul>
   },
   {
@@ -105,9 +105,5 @@ const Terms = () => {
   </>
   )
 }
-
-// 10. MISCELLANEOUS 10.1 This Agreement constitutes the entire agreement between the parties and supersedes all prior understandings. 10.2 No modification shall be valid unless made in writing and signed by both parties. 10.3 If any provision of this Agreement is found to be unenforceable, the remaining provisions shall remain in full force and effect.
-// By using the services of Pay First Ltd, the Client acknowledges and agrees to these Terms and Conditions.
-
 
 export default Terms

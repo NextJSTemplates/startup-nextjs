@@ -57,7 +57,7 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <Typography className="w-full dark:hidden text-9xl">
+                <Typography className="w-full dark:hidden text-3xl">
                   Pay First
                 </Typography>
                 <Typography className="font hidden w-full dark:block text-3xl">

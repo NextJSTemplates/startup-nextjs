@@ -15,18 +15,18 @@ export const metadata: Metadata = {
 const BlogSidebarPage = () => {
   return (
     <>
-      <section className="overflow-hidden pb-[120px] pt-[180px]">
+      <section className="overflow-hidden pt-[180px] pb-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h1 className="mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight dark:text-white">
                   10 amazing sites to download stock photos & digital assets for
                   free
                 </h1>
-                <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+                <div className="border-body-color/10 mb-10 flex flex-wrap items-center justify-between border-b pb-4 dark:border-white/10">
                   <div className="flex flex-wrap items-center">
-                    <div className="mb-5 mr-10 flex items-center">
+                    <div className="mr-10 mb-5 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                           <Image
@@ -37,13 +37,13 @@ const BlogSidebarPage = () => {
                         </div>
                       </div>
                       <div className="w-full">
-                        <span className="mb-1 text-base font-medium text-body-color">
+                        <span className="text-body-color mb-1 text-base font-medium">
                           By <span> Musharof Chy</span>
                         </span>
                       </div>
                     </div>
                     <div className="mb-5 flex items-center">
-                      <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                      <p className="text-body-color mr-5 flex items-center text-base font-medium">
                         <span className="mr-3">
                           <svg
                             width="15"
@@ -64,7 +64,7 @@ const BlogSidebarPage = () => {
                         </span>
                         12 Jan 2024
                       </p>
-                      <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                      <p className="text-body-color mr-5 flex items-center text-base font-medium">
                         <span className="mr-3">
                           <svg
                             width="18"
@@ -79,7 +79,7 @@ const BlogSidebarPage = () => {
                         </span>
                         50
                       </p>
-                      <p className="flex items-center text-base font-medium text-body-color">
+                      <p className="text-body-color flex items-center text-base font-medium">
                         <span className="mr-3">
                           <svg
                             width="20"
@@ -98,20 +98,20 @@ const BlogSidebarPage = () => {
                   <div className="mb-5">
                     <a
                       href="#0"
-                      className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                      className="bg-primary inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white"
                     >
                       Design
                     </a>
                   </div>
                 </div>
                 <div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat.
                   </p>
-                  <div className="mb-10 w-full overflow-hidden rounded">
-                    <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
+                  <div className="mb-10 w-full overflow-hidden rounded-sm">
+                    <div className="relative aspect-97/60 w-full sm:aspect-97/44">
                       <Image
                         src="/images/blog/blog-details-01.jpg"
                         alt="image"
@@ -120,7 +120,7 @@ const BlogSidebarPage = () => {
                       />
                     </div>
                   </div>
-                  <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color mb-8 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Quis enim lobortis scelerisque fermentum. Neque
@@ -133,7 +133,7 @@ const BlogSidebarPage = () => {
                     pellentesque nec nam aliquam sem et tortor consequat.
                     Pellentesque adipiscing commodo elit at imperdiet.
                   </p>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Semper auctor neque vitae tempus quam pellentesque nec.
                     <span className="text-primary underline dark:text-white">
                       {" "}
@@ -143,36 +143,36 @@ const BlogSidebarPage = () => {
                     aliquet porttitor. Odio pellentesque diam volutpat commodo
                     sed.
                   </p>
-                  <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                  <h3 className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
                     Digital marketplace for Ui/Ux designers.
                   </h3>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     consectetur adipiscing elit in voluptate velit esse cillum
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                     mattis vulputate cupidatat.
                   </p>
-                  <ul className="mb-10 list-inside list-disc text-body-color">
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                  <ul className="text-body-color mb-10 list-inside list-disc">
+                    <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
                       Consectetur adipiscing elit in voluptate velit.
                     </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
                       Mattis vulputate cupidatat.
                     </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
                       Vulputate enim nulla aliquet porttitor odio pellentesque
                     </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
                       Ligula ullamcorper malesuada proin
                     </li>
                   </ul>
-                  <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
-                    <p className="text-center text-base font-medium italic text-body-color">
+                  <div className="bg-primary/10 relative z-10 mb-10 overflow-hidden rounded-md p-8 md:p-9 lg:p-8 xl:p-9">
+                    <p className="text-body-color text-center text-base font-medium italic">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod incididunt utionals labore et dolore magna
                       aliqua. Quis lobortis scelerisque fermentum, The Neque ut
                       etiam sit amet.
                     </p>
-                    <span className="absolute left-0 top-0 z-[-1]">
+                    <span className="absolute top-0 left-0 z-[-1]">
                       <svg
                         width="132"
                         height="109"
@@ -224,7 +224,7 @@ const BlogSidebarPage = () => {
                         </defs>
                       </svg>
                     </span>
-                    <span className="absolute bottom-0 right-0 z-[-1]">
+                    <span className="absolute right-0 bottom-0 z-[-1]">
                       <svg
                         width="53"
                         height="30"
@@ -313,14 +313,14 @@ const BlogSidebarPage = () => {
                       </svg>
                     </span>
                   </div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     consectetur adipiscing elit in voluptate velit esse cillum
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                     mattis vulputate cupidatat.
                   </p>
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
-                      <h4 className="mb-3 text-sm font-medium text-body-color">
+                      <h4 className="text-body-color mb-3 text-sm font-medium">
                         Popular Tags :
                       </h4>
                       <div className="flex items-center">
@@ -330,7 +330,7 @@ const BlogSidebarPage = () => {
                       </div>
                     </div>
                     <div className="mb-5">
-                      <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
+                      <h5 className="text-body-color mb-3 text-sm font-medium sm:text-right">
                         Share this post :
                       </h5>
                       <div className="flex items-center sm:justify-end">
@@ -342,16 +342,16 @@ const BlogSidebarPage = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-4/12">
-              <div className="shadow-three dark:bg-gray-dark mb-10 mt-12 rounded-sm bg-white p-6 dark:shadow-none lg:mt-0">
+              <div className="shadow-three dark:bg-gray-dark mt-12 mb-10 rounded-xs bg-white p-6 lg:mt-0 dark:shadow-none">
                 <div className="flex items-center justify-between">
                   <input
                     type="text"
                     placeholder="Search here..."
-                    className="border-stroke dark:text-body-color-dark dark:shadow-two mr-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                    className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary mr-4 w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
                   />
                   <button
                     aria-label="search button"
-                    className="flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-sm bg-primary text-white"
+                    className="bg-primary flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xs text-white"
                   >
                     <svg
                       width="20"
@@ -368,12 +368,12 @@ const BlogSidebarPage = () => {
                   </button>
                 </div>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
-                <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
+                <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Related Posts
                 </h3>
                 <ul className="p-8">
-                  <li className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
+                  <li className="border-body-color/10 mb-6 border-b pb-6 dark:border-white/10">
                     <RelatedPost
                       title="Best way to boost your online sales."
                       image="/images/blog/post-01.jpg"
@@ -381,7 +381,7 @@ const BlogSidebarPage = () => {
                       date="12 Feb 2025"
                     />
                   </li>
-                  <li className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
+                  <li className="border-body-color/10 mb-6 border-b pb-6 dark:border-white/10">
                     <RelatedPost
                       title="50 Best web design tips & tricks that will help you."
                       image="/images/blog/post-02.jpg"
@@ -399,15 +399,15 @@ const BlogSidebarPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
-                <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
+                <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Popular Category
                 </h3>
                 <ul className="px-8 py-6">
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-body-color hover:text-primary mb-3 inline-block text-base font-medium"
                     >
                       Tailwind Templates
                     </a>
@@ -415,7 +415,7 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-body-color hover:text-primary mb-3 inline-block text-base font-medium"
                     >
                       Landing page
                     </a>
@@ -423,7 +423,7 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-body-color hover:text-primary mb-3 inline-block text-base font-medium"
                     >
                       Startup
                     </a>
@@ -431,7 +431,7 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-body-color hover:text-primary mb-3 inline-block text-base font-medium"
                     >
                       Business
                     </a>
@@ -439,15 +439,15 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="text-body-color hover:text-primary mb-3 inline-block text-base font-medium"
                     >
                       Multipurpose
                     </a>
                   </li>
                 </ul>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
-                <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
+                <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Popular Tags
                 </h3>
                 <div className="flex flex-wrap px-8 py-6">

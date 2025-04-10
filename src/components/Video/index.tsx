@@ -24,12 +24,17 @@ export default function Video() {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[770px] overflow-hidden rounded-md">
                 <div className="relative aspect-77/40 items-center justify-center">
-                  <Image src="/images/video/img.png" alt="video image" className="object-cover" fill />
-                  <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
+                  <Image
+                    src="/images/video/image.png"
+                    alt="video image"
+                    className="object-cover"
+                    fill
+                  />
+                  <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
                     <button
                       aria-label="video play button"
                       onClick={() => setOpen(true)}
-                      className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
+                      className="text-primary flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/75 transition hover:bg-white"
                     >
                       <svg
                         width="16"
@@ -46,14 +51,19 @@ export default function Video() {
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat">
+          <div className="absolute right-0 bottom-0 left-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat">
             {/* <div className="absolute bottom-0 left-0 right-0 z-[-1] "> */}
             {/* <img src="/images/video/shape.svg" alt="shape" className="w-full" /> */}
           </div>
         </div>
       </section>
-      
-      <VideoModal isOpen={isOpen} onClose={() => setOpen(false)} channel='youtube' videoId='L61p2uyiMSo' />
+
+      <VideoModal
+        isOpen={isOpen}
+        onClose={() => setOpen(false)}
+        channel="youtube"
+        videoId="L61p2uyiMSo"
+      />
     </>
   );
 };

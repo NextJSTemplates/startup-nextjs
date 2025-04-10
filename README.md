@@ -61,5 +61,13 @@ If you like the template, please star this repository to inspire the team to cre
 ### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)
 
 ### Update Log
+
+**10 April 2025**
+- Fix peer deps issue with Next.js 15
+- Refactored blog cards for handling edge cases(text ellipsis on bio, keeping author details at the bottom etc.)
+- Re-wrote blog details page with icons separation, fallback author image and better markup.
+- Fixed duplicate key errors on homepage.
+- Separated icons on theme-switcher button, and refactored scroll-to-top button.
+
 **29 Jan 2025**
 - Upgraded to Next.js 15

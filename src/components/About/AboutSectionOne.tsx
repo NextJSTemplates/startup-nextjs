@@ -25,7 +25,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Simplifying Payments, Empowering Businesses"
-                paragraph="Pay First’s hello has always been to build a secure and quick platform for all businesses to benefit from. With strong founding team of tech wizzes, entrepreneurial geniuses and people who struggled with their own payments; Pay First’s first seeds were planted. We leverage the latest technology and industry expertise to deliver a frictionless experience, helping businesses of all sizes navigate the complexities of modern finance with ease"
+                paragraph="Pay First’s vision has always been to build a secure and quick platform for all businesses to benefit from. With strong founding team of tech wizzes, entrepreneurial geniuses and people who struggled with their own payments; Pay First’s first seeds were planted. We leverage the latest technology and industry expertise to deliver a frictionless experience, helping businesses of all sizes navigate the complexities of modern finance with ease"
                 mb="44px"
               />
 

@@ -1,28 +1,68 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+
+const industriesData = {
+  "E-Commerce": {
+    description:
+      "e-Commerce is one of the fastest growing business models as every retail business is reaching the digital landscape. Build a scalable and robust e-store with an experienced team. Grow with proper cart management, payment integration, social media integration, order management, tracking, and product management to reach greater heights.",
+    image: "/hero/background.webp",
+  },
+  Education: {
+    description:
+      "Empower learning with custom eLearning platforms, LMS solutions, and virtual classrooms. We build engaging and scalable education software tailored for institutions and edtech startups.",
+    image: "/images/industries/education.webp",
+  },
+  Healthcare: {
+    description:
+      "From appointment scheduling to telemedicine and EHR systems, we build secure and compliant healthcare software to revolutionize patient care and streamline workflows.",
+    image: "/images/industries/healthcare.webp",
+  },
+  "Real Estate": {
+    description:
+      "Leverage tech in real estate with dynamic listing platforms, virtual tours, CRM systems, and property management tools to drive smarter decisions and faster sales.",
+    image: "/images/industries/real-estate.webp",
+  },
+  NFT: {
+    description:
+      "Launch your NFT platform with seamless minting, wallet integration, and smart contract functionality. We help you build secure, scalable, and user-friendly NFT ecosystems.",
+    image: "/images/industries/nft.webp",
+  },
+  Travel: {
+    description:
+      "We develop feature-rich travel portals, booking engines, itinerary planners, and real-time tracking systems that redefine user travel experiences.",
+    image: "/images/industries/travel.webp",
+  },
+  Food: {
+    description:
+      "Build online food ordering, delivery management, and restaurant POS systems with smooth UI, live tracking, and integrations with popular platforms.",
+    image: "/images/industries/food.webp",
+  },
+  Entertainment: {
+    description:
+      "Deliver immersive entertainment through streaming platforms, media apps, and interactive experiences tailored for today’s digital audience.",
+    image: "/images/industries/entertainment.webp",
+  },
+};
 
 export default function IndustriesSection() {
+  const [industry, setIndustry] = useState("E-Commerce");
+  const current = industriesData[industry];
   return (
     <section className="pt-24">
-      <div className="mb-12 w-[30%] rounded-se-[70px] bg-black py-6 text-white text-center shadow-md">
-          <h2 className="text-2xl font-bold">Industries We Serve</h2>
+      <div className="mb-12 w-[30%] rounded-se-[70px] bg-black py-6 text-center text-white shadow-md">
+        <h2 className="text-2xl font-bold">Industries We Serve</h2>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl">
         <div className="mt-6 flex flex-wrap gap-4 px-8">
-          {[
-            "E-Commerce",
-            "Education",
-            "Healthcare",
-            "Real Estate",
-            "NFT",
-            "Travel",
-            "Food",
-            "Entertainment",
-          ].map((item) => (
+          {Object.keys(industriesData).map((item) => (
             <button
               key={item}
-              className={`rounded-full border px-4 py-2 text-sm font-medium ${
-                item === "E-Commerce"
+              onClick={() => setIndustry(item)}
+              className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+                item === industry
                   ? "bg-black text-white"
                   : "border-black text-black"
               }`}
@@ -32,18 +72,11 @@ export default function IndustriesSection() {
           ))}
         </div>
 
-        {/* E-Commerce Content */}
         <div className="mt-10 grid grid-cols-1 items-center gap-6 px-8 md:grid-cols-2">
           <div>
-            <h3 className="mb-4 text-xl font-bold">E-Commerce</h3>
+            <h3 className="mb-4 text-xl font-bold">{industry}</h3>
             <p className="text-sm leading-relaxed text-gray-700">
-              e-Commerce is one of the fastest growing business models as every
-              retail business is reaching the digital landscape. Build a
-              scalable and robust e-store with an experienced team. Grow with
-              proper cart management, payment integration, social media
-              integration, order management, tracking, and product management to
-              reach greater heights with the Top website and app development
-              company.
+              {current.description}
             </p>
             <button className="mt-6 rounded-full border border-black px-4 py-2 text-sm font-medium transition hover:bg-black hover:text-white">
               Get A Free Quote
@@ -51,51 +84,62 @@ export default function IndustriesSection() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/developer-dark.jpg"
-              alt="Developer coding"
+              src={current.image}
+              alt={`${industry} Image`}
               width={400}
               height={300}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg object-cover shadow-lg"
             />
           </div>
         </div>
+      </div>
 
-        {/* Stats Section */}
-        <div className="mt-20 bg-gradient-to-r from-black to-white-900 px-8 py-12 text-white">
-          <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
-            <div>
-              <h3 className="text-3xl leading-snug font-bold">
-                More Than 5 Years
-                <br /> In The Game And We're <br /> Just Getting Started.
-              </h3>
-              <p className="mt-4 max-w-md text-sm text-gray-300">
-                We are on a mission to build a brand with the goal of providing
-                quality IT development. Our team takes every project like it’s
-                our first and works on it like specialists. With 5+ years of
-                experience, we have served clients in every type of industry and
-                have rich knowledge in the field.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+      <div className=" mt-20 bg-gradient-to-br from-black to-neutral-500 px-8 py-12 text-white">
+        <div className="container mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
+          <div className="flex flex-col space-y-6">
+            <h3 className="text-3xl max-w-md leading-snug font-bold">
+              More Than 5 Years
+               In The Game And We're Just Getting Started.
+            </h3>
+            <p className="max-w-md text-sm text-gray-300">
+              We are on a mission to build a brand with the goal of providing
+              quality IT development. Our team takes every project like it’s our
+              first and works on it like specialists. With 5+ years of
+              experience, we have served clients in every type of industry and
+              have rich knowledge in the field.
+            </p>
+            <div className="font-bold grid grid-cols-2 gap-6 ">
               {[
-                ["5+", "Years of Experience"],
-                ["50+", "Developers"],
-                ["100+", "Happy Clients"],
-                ["20+", "Countries"],
-                ["40+", "Website Designed"],
-                ["100+", "Apps Developed"],
-                ["10+", "AI & IoT Solutions"],
-                ["10+", "Blockchain"],
+                ["40+", "Websites Designed"],
+                ["100+", "Apps Approved"],
               ].map(([value, label]) => (
                 <div
                   key={label}
-                  className="rounded-lg bg-white p-4 text-center text-black shadow transition hover:scale-105"
+                  className="rounded-lg bg-white p-4 text-start text-black shadow transition hover:scale-105"
                 >
-                  <p className="text-xl font-bold">{value}</p>
+                  <p className="text-xl">{value}</p>
                   <p className="mt-1 text-sm">{label}</p>
                 </div>
               ))}
             </div>
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            {[
+              ["5+", "Years of Experience"],
+              ["50+", "Developers"],
+              ["100+", "Happy Clients"],
+              ["20+", "Countries"],
+              ["10+", "AI & IoT Solutions"],
+              ["10+", "Blockchain"],
+            ].map(([value, label]) => (
+              <div
+                key={label}
+                className="font-bold rounded-lg bg-white p-4 text-start text-black shadow transition hover:scale-105"
+              >
+                <p className="text-xl">{value}</p>
+                <p className="mt-1 text-sm">{label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

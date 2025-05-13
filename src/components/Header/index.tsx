@@ -150,13 +150,10 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
-                  className="text-dark bg-white rounded-full hidden px-6 py-2 text-base font-medium hover:opacity-70 md:block dark:text-white"
+                  className="text-sm text-dark bg-white rounded-full hidden px-6 py-2 font-bold hover:opacity-70 md:block dark:text-white"
                 >
                   Get A Free Quote
                 </Link>
-                {/* <div>
-                  <ThemeToggler />
-                </div> */}
               </div>
             </div>
           </div>

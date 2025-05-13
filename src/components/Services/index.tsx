@@ -16,9 +16,9 @@ const services = [
       { icon: Shield, desc: "Custom app development" },
       { icon: Smartphone, desc: "iOS app development" },
       { icon: Smartphone, desc: "Android app development" },
-      "Native App",
-      "Hybrid app development",
-      "Flutter app development",
+      { icon: Shield, desc: "Native App" },
+      { icon: Smartphone, desc: "Hybrid app development" },
+      { icon: Smartphone, desc: "Flutter app development" },
     ],
   },
   {
@@ -68,41 +68,46 @@ const services = [
 const ScrollableServices: FC = () => {
   return (
     <section className="pt-24">
-      <div className="mb-12 w-[90%] sm:w-[60%] rounded-se-[70px] bg-black py-6 text-white text-center shadow-md mx-auto">
-        <h2 className="text-2xl font-bold">
-          Amazing technologies we use, helpful for your business
+      <div className="mb-12 w-[90%] rounded-se-[70px] bg-black py-6 text-center text-white shadow-md sm:w-[60%]">
+        <h2 className="text-2xl font-bold mx-auto">
+          Boosting business growth with our specialized expertise and innovative
+          solutions{" "}
         </h2>
       </div>
 
       <div
-        className="container flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 px-4 sm:px-0"
+        className="scrollbar-none container mx-auto max-w-6xl flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-6 sm:px-0"
         style={{ scrollBehavior: "smooth", touchAction: "pan-y" }}
       >
         {services.map((service, index) => (
           <div
             key={index}
-            className="snap-start shrink-0 w-80 rounded-2xl bg-gradient-to-br from-black to-neutral-800 text-white p-6 flex flex-col justify-between shadow-lg"
+            className="flex w-80 shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-br from-black to-neutral-500 p-6 text-white shadow-lg"
           >
             <div>
-              <h3 className="text-lg font-semibold mb-4">{service.title}</h3>
-              <ul className="space-y-3 text-sm text-white/90">
+              <h3 className="mb-8 text-lg font-semibold">{service.title}</h3>
+              <ul className="space-y-6 text-sm text-white/90">
                 {service.items.map((item, i) => {
                   const isObject = typeof item === "object";
                   const Icon = isObject && item.icon ? item.icon : null;
                   const description = isObject ? item.desc : item;
 
                   return (
-                    <li key={i} className="flex items-center gap-2">
-                      {Icon ? <Icon size={16} className="text-white" /> : <span>•</span>}
+                    <li key={i} className="flex items-center gap-4">
+                      {Icon ? (
+                        <Icon size={16} className="text-white" />
+                      ) : (
+                        <span>•</span>
+                      )}
                       <span>{description}</span>
                     </li>
                   );
                 })}
               </ul>
             </div>
-            <div className="mt-10">
-              <button className="bg-white text-black px-5 py-2 rounded-full font-medium flex items-center gap-2 hover:opacity-90 transition">
-                Explore More <ArrowRight size={16} />
+            <div className="mt-24">
+              <button className="flex items-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-semibold text-black transition hover:opacity-90">
+                Explore More <ArrowRight size={14} />
               </button>
             </div>
           </div>

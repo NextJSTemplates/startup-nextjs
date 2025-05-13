@@ -1,4 +1,3 @@
-import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 const Hero = () => {
@@ -14,63 +13,92 @@ const Hero = () => {
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-2/3">
             <div className="max-w-[800px] text-start text-white">
-              <h5 className="mb-6 text-sm font-bold tracking-widest text-white uppercase">
+              <h5 className="mb-4 text-sm tracking-widest text-white uppercase">
                 Empower. Innovate. Transform
               </h5>
-              <h1 className="mb-6 text-4xl leading-tight font-extrabold sm:text-5xl">
+              <h1 className="mb-5 text-4xl leading-tight font-extrabold sm:text-5xl">
                 Certified Software Development Agency Offering Premium Solutions
                 At Competitive Prices
               </h1>
-              <p className="mb-8 text-base max-w-[600px]">
+              <p className="mb-8 text-base">
                 Aligning your vision with top-rated software solutions driven by
                 innovating AI, AR/VR, and Cloud technologies.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="#"
-                  className="flex hover:bg-opacity-90 rounded-full bg-white px-6 py-3 text-sm font-bold text-black"
+                  className="hover:bg-opacity-90 rounded-full bg-white px-6 py-3 text-sm font-bold text-black"
                 >
                   LET’S TALK
-                  <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
                 <Link
                   href="#"
-                  className="flex rounded-full border border-white px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-black"
+                  className="rounded-full border border-white px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-black"
                 >
                   CONTACT US FOR SOLUTIONS
-                  <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
                 <Link
                   href="#"
-                  className="flex rounded-full border border-white px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-black"
+                  className="rounded-full border border-white px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-black"
                 >
-                  OUR SERVICES
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                  OUR SERVICES →
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="relative w-full mt-12 md:mt-0 md:w-1/3 lg:w-1/2">
-            <div className="absolute top-0 right-0 grid grid-cols-2 gap-4">
-              <div className="flex flex-col items-center space-y-2">
-                <div className="rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur p-2">
-                  <img src="/images/hero/background.webp" alt="Product Designer" className="rounded-lg" />
-                  <p className="mt-2 text-white text-center text-sm font-medium">Product Designer</p>
+          <div className="relative mt-12 w-full md:mt-0 md:w-1/3">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex translate-y-4 flex-col items-center space-y-6">
+                <div className="-translate-x-4 overflow-hidden rounded-xl border border-white bg-transparent p-4">
+                  <div className="px-2">
+                    <img
+                      src="/images/hero/background.webp"
+                      alt="Product Designer"
+                      className="rounded-lg"
+                    />
+                  </div>
+                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
+                    Product Designer
+                  </p>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur p-2">
-                  <img src="/images/hero/background.webp" alt="Product Manager" className="rounded-lg" />
-                  <p className="mt-2 text-white text-center text-sm font-medium">Product Manager</p>
+                <div className="-translate-x-8 overflow-hidden rounded-xl border border-white bg-transparent p-2">
+                  <div className="px-2">
+                    <img
+                      src="/images/hero/background.webp"
+                      alt="Product Designer"
+                      className="rounded-lg"
+                    />
+                  </div>{" "}
+                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
+                    Product Manager
+                  </p>
                 </div>
               </div>
-              <div className="flex flex-col items-center space-y-2">
-                <div className="rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur p-2">
-                  <img src="/images/hero/background.webp" alt="Software Developer" className="rounded-lg" />
-                  <p className="mt-2 text-white text-center text-sm font-medium">Software Developer</p>
+              <div className="flex -translate-y-4 flex-col items-center space-y-6 ">
+                <div className="-translate-x-2 overflow-hidden rounded-xl border border-white bg-transparent p-2">
+                  <div className="px-2">
+                    <img
+                      src="/images/hero/background.webp"
+                      alt="Product Designer"
+                      className="rounded-lg"
+                    />
+                  </div>{" "}
+                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
+                    Software Developer
+                  </p>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur p-2">
-                  <img src="/images/hero/background.webp" alt="Software Tester" className="rounded-lg" />
-                  <p className="mt-2 text-white text-center text-sm font-medium">Software Tester</p>
+                <div className="-translate-x-6 overflow-hidden rounded-xl border border-white bg-transparent p-2">
+                  <div className="px-2">
+                    <img
+                      src="/images/hero/background.webp"
+                      alt="Product Designer"
+                      className="rounded-lg"
+                    />
+                  </div>{" "}
+                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
+                    Software Tester
+                  </p>
                 </div>
               </div>
             </div>

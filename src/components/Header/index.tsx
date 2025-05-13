@@ -141,7 +141,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
-                  className="text-sm text-white/80 bg-transparent rounded-full hidden px-6 py-2 font-bold hover:opacity-70 md:block dark:text-white"
+                  className="text-sm text-black bg-white rounded-full hidden px-6 py-2 font-bold hover:opacity-70 md:block dark:text-white"
                 >
                   Get A Free Quote
                 </Link>

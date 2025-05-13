@@ -196,7 +196,7 @@ const Features = () => {
                   />
                   <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
                 </div>
-                <ExternalLink className="h-4 w-4" />
+                <ExternalLink className="h-5 w-5" />
               </div>
 
               <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -226,7 +226,7 @@ const Features = () => {
                   />
                   <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
                 </div>
-                <ExternalLink className="h-4 w-4" />
+                <ExternalLink className="h-5 w-5" />
               </div>
               <p className="text-sm text-gray-700 dark:text-gray-300">
                 {card.text}

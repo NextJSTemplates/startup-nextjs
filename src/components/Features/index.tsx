@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
+import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 const Features = () => {
   const leftRefs = useRef<HTMLDivElement[]>([]);
@@ -87,14 +89,17 @@ const Features = () => {
     {
       title: "DevOps",
       text: "Get access to custom software for your unique needs including frontend and backend technology.",
+      icon: "/images/features/code.svg",
     },
     {
       title: "Back-End",
       text: "Develop user-friendly mobile experiences for cross-platform mobile applications. We deliver server-oriented applications that cater to changing market needs and robust user convenience.",
+      icon: "/images/features/android.svg",
     },
     {
       title: "Infrastructure",
       text: "Solutions that help organizations scale their resources as per changing demands. We enable our clients to control and offer the best and safest pathways in the cloud journey.",
+      icon: "/images/features/cloud.svg",
     },
   ];
 
@@ -102,20 +107,23 @@ const Features = () => {
     {
       title: "Front-End",
       text: "Create top-rated UI solutions that offer personalized user experience with quality generated content.",
+      icon: "/images/features/searchstar.svg",
     },
     {
       title: "Databases",
       text: "Through Machine Learning Algorithms and ML/AI, we help businesses to leverage AI technologies to drive automation and improve customer experiences.",
+      icon: "/images/features/chip.svg",
     },
     {
       title: "Integrations",
       text: "Immersive solutions behind the physical and virtual world offering customized experiences across industries like healthcare, finance, and others.",
+      icon: "/images/features/vr.svg",
     },
   ];
 
   return (
     <section id="features" className="relative py-16 md:py-20 lg:py-28">
-      <div className="fixed top-0 left-0 z-10 w-screen h-screen pointer-events-none">
+      <div className="pointer-events-none fixed top-0 left-0 z-10 h-screen w-screen">
         {lines.map((line, idx) => {
           if (line.type === "bent") {
             const dx = line.x2 - line.x1;
@@ -161,14 +169,14 @@ const Features = () => {
         })}
       </div>
 
-      <SectionTitle 
-      title="Amazing technologies, helpful for your business"
-      width="w-[70%]"
+      <SectionTitle
+        title="Amazing technologies, helpful for your business"
+        width="w-[70%]"
       />
 
       {/* Cards */}
-      <div className="container relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
-        <div className="flex lg:translate-y-12 flex-col gap-10">
+      <div className="relative z-30 container mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="flex flex-col gap-10 lg:translate-y-12">
           {leftCards.map((card, idx) => (
             <div
               key={idx}
@@ -177,13 +185,28 @@ const Features = () => {
               }}
               className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
             >
-              <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-              <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
+              <div className="flex justify-between">
+                <div className="flex gap-2">
+                  <Image
+                    src={card.icon}
+                    alt="Card Logo"
+                    width={10}
+                    height={10}
+                    className="h-6 w-6"
+                  />
+                  <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
+                </div>
+                <ExternalLink className="h-4 w-4" />
+              </div>
+
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {card.text}
+              </p>
             </div>
           ))}
         </div>
 
-        <div className="flex lg:-translate-y-12 flex-col gap-10">
+        <div className="flex flex-col gap-10 lg:-translate-y-12">
           {rightCards.map((card, idx) => (
             <div
               key={idx}
@@ -192,8 +215,22 @@ const Features = () => {
               }}
               className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
             >
-              <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-              <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
+              <div className="flex justify-between">
+                <div className="flex gap-2">
+                  <Image
+                    src={card.icon}
+                    alt="Card Logo"
+                    width={10}
+                    height={10}
+                    className="h-6 w-6"
+                  />
+                  <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
+                </div>
+                <ExternalLink className="h-4 w-4" />
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {card.text}
+              </p>
             </div>
           ))}
         </div>

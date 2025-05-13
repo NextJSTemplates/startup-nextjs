@@ -1,5 +1,4 @@
-import SharePost from "@/components/Blog/SharePost";
-import TagButton from "@/components/Blog/TagButton";
+
 import Image from "next/image";
 
 import { Metadata } from "next";
@@ -319,19 +318,12 @@ const BlogDetailsPage = () => {
                       <h4 className="text-body-color mb-3 text-sm font-medium">
                         Popular Tags :
                       </h4>
-                      <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
-                      </div>
+
                     </div>
                     <div className="mb-5">
                       <h5 className="text-body-color mb-3 text-sm font-medium sm:text-right">
                         Share this post :
                       </h5>
-                      <div className="flex items-center sm:justify-end">
-                        <SharePost />
-                      </div>
                     </div>
                   </div>
                 </div>

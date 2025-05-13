@@ -1,12 +1,7 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
-} from "react-icons/fa6";
+
 
 export default function Footer() {
   return (
@@ -45,10 +40,10 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <p className="text-md text-sm font-bold">Follow us on</p>
               <div className="flex gap-2">
-                <FaFacebookF />
-                <FaInstagram />
-                <FaXTwitter />
-                <FaLinkedinIn />
+                <Facebook />
+                <Instagram />
+                <Twitter />
+                <Linkedin />
               </div>
             </div>
           </div>

@@ -9,15 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "eslint": "^9.24.0",
     "eslint-config-next": "15.1.6",
+    "lucide-react": "^0.510.0",
     "next": "^15.3.0",
     "next-themes": "^0.2.1",
+    "postcss": "^8.5.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.3",
-    "postcss": "^8.5.3",
-    "@tailwindcss/postcss": "^4.1.3"
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.3"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",
@@ -26,6 +30,7 @@
     "autoprefixer": "^10.4.17",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "tw-animate-css": "^1.2.9",
     "typescript": "^5.3.3"
   }
 }

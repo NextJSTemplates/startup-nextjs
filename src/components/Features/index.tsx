@@ -32,6 +32,10 @@ const Features = () => {
     }[]
   >([]);
   const svgRef = useRef<SVGSVGElement>(null);
+  const [hoveredIndexLeft, setHoveredIndexLeft] = useState<number | null>(null);
+  const [hoveredIndexRight, setHoveredIndexRight] = useState<number | null>(
+    null,
+  );
 
   useEffect(() => {
     const updateLines = () => {
@@ -164,21 +168,18 @@ const Features = () => {
       title: "Databases",
       text: "Through Machine Learning Algorithms and AI, we help businesses leverage technologies to drive automation and improve experiences.",
       icon: "/images/features/chip.svg",
-            stack: [
+      stack: [
         { title: "Postgres", icon: "/images/features/dtbase/postgres.svg" },
-
       ],
-
     },
     {
       title: "Integrations",
       text: "Immersive solutions behind the physical and virtual world offering customized experiences across various industries.",
       icon: "/images/features/vr.svg",
-            stack: [
+      stack: [
         { title: "Rails", icon: "/images/features/bcend/rails.svg" },
         { title: "Ruby", icon: "/images/features/bcend/ruby.svg" },
         { title: "Strapi", icon: "/images/features/bcend/strapi.svg" },
-        { title: "Gitlab", icon: "/images/features/bcend/gitlab.svg" },
       ],
     },
   ];
@@ -254,6 +255,8 @@ const Features = () => {
                 ref={(el) => {
                   leftRefs.current[idx] = el;
                 }}
+                onMouseEnter={() => setHoveredIndexLeft(idx)}
+                onMouseLeave={() => setHoveredIndexLeft(null)}
                 className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="flex justify-between">
@@ -273,6 +276,30 @@ const Features = () => {
                 <p className="text-sm text-gray-700 dark:text-gray-300">
                   {card.text}
                 </p>
+                {hoveredIndexLeft === idx && (
+                  <div className="mt-4 border-t border-gray-100 pt-4 dark:border-gray-700">
+                    <h4 className="mb-2 text-sm font-semibold">
+                      {card.title} Tech Stack
+                    </h4>
+                    <div>
+                      {card.stack.map((stack, i) => (
+                        <div
+                          key={i}
+                          className="flex gap-4 rounded-md px-2 py-1 text-xs"
+                        >
+                          <Image
+                            src={stack.icon}
+                            alt="Stack Logo"
+                            width={10}
+                            height={10}
+                            className="h-6 w-6"
+                          />
+                          <h3 className="mb-2 text-sm">{stack.title}</h3>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -285,6 +312,8 @@ const Features = () => {
                 ref={(el) => {
                   rightRefs.current[idx] = el;
                 }}
+                onMouseEnter={() => setHoveredIndexRight(idx)}
+                onMouseLeave={() => setHoveredIndexRight(null)}
                 className="rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
               >
                 <div className="flex justify-between">
@@ -303,6 +332,33 @@ const Features = () => {
                 <p className="text-sm text-gray-700 dark:text-gray-300">
                   {card.text}
                 </p>
+
+                {hoveredIndexRight === idx && (
+                  <div className="mt-4 border-t border-gray-100 pt-4 dark:border-gray-700">
+                    <h4 className="mb-2 text-sm font-semibold">
+                      {card.title} Tech Stack
+                    </h4>
+                    <div>
+                      {card.stack.map((stack, i) => (
+                        <div
+                          key={i}
+                          className="flex gap-4 rounded-md px-2 py-1 text-xs"
+                        >
+                          <Image
+                            src={stack.icon}
+                            alt="Stack Logo"
+                            width={10}
+                            height={10}
+                            className="h-6 w-6"
+                          />
+                          <h3 className="mb-2 text-sm">
+                            {stack.title}
+                          </h3>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

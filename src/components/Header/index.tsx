@@ -40,7 +40,7 @@ const Header = () => {
       <header className=" left-1/2 -translate-x-1/2 w-[90%] bg-gray-dark/30 dark:shadow-sticky-dark shadow-sticky fixed z-9999 mt-6 rounded-full border border-white  text-center backdrop-blur-xs transition">
         <div className="container">
           <div className="relative flex items-center justify-between px-4">
-            <div className="px-4 xl:mr-12 lg:w-[25%] border">
+            <div className="px-4 xl:mr-12 lg:w-[25%]">
               <Link href="/" className="flex gap-2 header-logo w-full py-2">
                 <Image
                   src="/logo.png"

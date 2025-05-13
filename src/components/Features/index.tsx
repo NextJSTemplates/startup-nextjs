@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import SectionTitle from "../Common/SectionTitle";
 
 const Features = () => {
   const leftRefs = useRef<HTMLDivElement[]>([]);
@@ -114,7 +115,6 @@ const Features = () => {
 
   return (
     <section id="features" className="relative py-16 md:py-20 lg:py-28">
-      {/* Draw lines fixed to the screen (global coords) */}
       <div className="fixed top-0 left-0 z-10 w-screen h-screen pointer-events-none">
         {lines.map((line, idx) => {
           if (line.type === "bent") {
@@ -161,12 +161,9 @@ const Features = () => {
         })}
       </div>
 
-      {/* Title */}
-      <div className="mb-12 w-[90%] rounded-se-[70px] bg-black py-6 text-center text-white shadow-md sm:w-[60%]">
-        <h2 className="text-2xl font-bold">
-          Amazing technologies we use, helpful for your business
-        </h2>
-      </div>
+      <SectionTitle 
+      title="Amazing technologies, helpful for your business"
+      />
 
       {/* Cards */}
       <div className="container relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">

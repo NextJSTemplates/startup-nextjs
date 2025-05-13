@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import SectionTitle from "../Common/SectionTitle";
 
 const industriesData = {
   "E-Commerce": {
@@ -43,9 +44,9 @@ export default function IndustriesSection() {
   const current = industriesData[industry];
   return (
     <section className="pt-24">
-      <div className="mb-12 w-[30%] rounded-se-[70px] bg-black py-6 text-center text-white shadow-md">
-        <h2 className="text-2xl font-bold">Industries We Serve</h2>
-      </div>
+      <SectionTitle 
+        title="Industries We Serve"
+       />
 
       <div className="container mx-auto max-w-6xl">
         <div className="mt-6 flex flex-wrap gap-4 px-8">

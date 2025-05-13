@@ -50,13 +50,16 @@ export default function Footer() {
 
           <div className="flex justify-between">
             <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-2">
               <Image
-                src="/images/logo/logo.png"
+                src="/logo.png"
                 alt="logo"
-                width={100}
-                height={100}
-                className="w-90 dark:hidden"
-              />{" "}
+                width={10}
+                height={10}
+                className="w-12 h-12"
+              /> 
+              <p className="text-2xl font-bold text-white">Classy Endeavours</p>
+              </div>
               <p className="max-w-md text-sm">
                 Classy Endeavours is an IT company leading in SaaS innovation.
                 We create cutting-edge, scalable software solutions that

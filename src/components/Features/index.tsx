@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -9,11 +8,10 @@ const Features = () => {
   const [lines, setLines] = useState<
     {
       type: "bent" | "vertical";
-      d?: string;
-      x1?: number;
-      y1?: number;
-      x2?: number;
-      y2?: number;
+      x1: number;
+      y1: number;
+      x2: number;
+      y2: number;
     }[]
   >([]);
 
@@ -21,11 +19,10 @@ const Features = () => {
     const updateLines = () => {
       const newLines: {
         type: "bent" | "vertical";
-        d?: string;
-        x1?: number;
-        y1?: number;
-        x2?: number;
-        y2?: number;
+        x1: number;
+        y1: number;
+        x2: number;
+        y2: number;
       }[] = [];
 
       leftRefs.current.forEach((left, index) => {
@@ -34,27 +31,30 @@ const Features = () => {
 
         const leftBox = left.getBoundingClientRect();
         const rightBox = right.getBoundingClientRect();
-
-        const offsetY = window.scrollY;
+        const scrollY = window.scrollY;
 
         const startX = leftBox.right;
-        const startY = leftBox.top + leftBox.height / 2 + offsetY;
+        const startY = leftBox.top + leftBox.height / 2 + scrollY;
 
         const endX = rightBox.left;
-        const endY = rightBox.top + rightBox.height / 2 + offsetY;
+        const endY = rightBox.top + rightBox.height / 2 + scrollY;
 
-        const midX = (startX + endX) / 2;
-        const path = `M ${startX} ${startY} C ${midX} ${startY}, ${midX} ${endY}, ${endX} ${endY}`;
-        newLines.push({ type: "bent", d: path });
+        newLines.push({
+          type: "bent",
+          x1: startX,
+          y1: startY,
+          x2: endX,
+          y2: endY,
+        });
 
         if (index > 0 && leftRefs.current[index - 1]) {
           const prev = leftRefs.current[index - 1].getBoundingClientRect();
           newLines.push({
             type: "vertical",
             x1: leftBox.left + leftBox.width / 2,
-            y1: prev.bottom + offsetY,
+            y1: prev.bottom + scrollY,
             x2: leftBox.left + leftBox.width / 2,
-            y2: leftBox.top + offsetY,
+            y2: leftBox.top + scrollY,
           });
         }
 
@@ -63,9 +63,9 @@ const Features = () => {
           newLines.push({
             type: "vertical",
             x1: rightBox.left + rightBox.width / 2,
-            y1: prev.bottom + offsetY,
+            y1: prev.bottom + scrollY,
             x2: rightBox.left + rightBox.width / 2,
-            y2: rightBox.top + offsetY,
+            y2: rightBox.top + scrollY,
           });
         }
       });
@@ -74,10 +74,8 @@ const Features = () => {
     };
 
     updateLines();
-
     window.addEventListener("resize", updateLines);
     window.addEventListener("scroll", updateLines);
-
     return () => {
       window.removeEventListener("resize", updateLines);
       window.removeEventListener("scroll", updateLines);
@@ -98,6 +96,7 @@ const Features = () => {
       text: "Solutions that help organizations scale their resources as per changing demands. We enable our clients to control and offer the best and safest pathways in the cloud journey.",
     },
   ];
+
   const rightCards = [
     {
       title: "Front-End",
@@ -112,86 +111,96 @@ const Features = () => {
       text: "Immersive solutions behind the physical and virtual world offering customized experiences across industries like healthcare, finance, and others.",
     },
   ];
+
   return (
-    <>
-      <section id="features" className="py-16 md:py-20 lg:py-28">
-        <div className="mb-12 w-[90%] rounded-se-[70px] bg-black py-6 text-center text-white shadow-md sm:w-[60%]">
-          <h2 className="text-2xl font-bold">
-            Amazing technologies we use, helpful for your business
-          </h2>
-        </div>
-        <svg
-          className="pointer-events-none absolute top-0 left-0 z-30 h-full w-full"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="bentLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#9b87f5" />
-              <stop offset="100%" stopColor="#0EA5E9" />
-            </linearGradient>
-          </defs>
-          {lines.map((line, idx) =>
-            line.type === "bent" ? (
-              <path
-                key={idx}
-                d={line.d}
-                fill="none"
-                stroke="url(#bentLineGradient)"
-                strokeWidth="3"
-                strokeDasharray="10 5"
-                strokeLinecap="round"
-                className="animate-pulse"
-                opacity="0.7"
-              />
-            ) : (
-              <line
-                key={idx}
-                x1={line.x1}
-                y1={line.y1}
-                x2={line.x2}
-                y2={line.y2}
-                stroke="#8B5CF6"
-                strokeWidth="2.5"
-                strokeDasharray="5 3"
-                opacity="0.8"
-              />
-            ),
-          )}
-        </svg>
+    <section id="features" className="relative py-16 md:py-20 lg:py-28">
+      {/* Draw lines fixed to the screen (global coords) */}
+      <div className="fixed top-0 left-0 z-10 w-screen h-screen pointer-events-none">
+        {lines.map((line, idx) => {
+          if (line.type === "bent") {
+            const dx = line.x2 - line.x1;
+            const dy = line.y2 - line.y1;
+            const length = Math.sqrt(dx * dx + dy * dy);
+            const angle = (Math.atan2(dy, dx) * 180) / Math.PI;
 
-        <div className="container relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
-          <div className="flex translate-y-12 flex-col gap-10">
-            {leftCards.map((card, idx) => (
+            return (
               <div
                 key={idx}
-                ref={(el) => {
-                  if (el) leftRefs.current[idx] = el;
+                style={{
+                  position: "absolute",
+                  left: `${line.x1}px`,
+                  top: `${line.y1}px`,
+                  width: `${length}px`,
+                  height: "3px",
+                  background: "linear-gradient(to right, #9b87f5, #0EA5E9)",
+                  transform: `rotate(${angle}deg)`,
+                  transformOrigin: "0 0",
+                  opacity: 0.7,
+                  borderRadius: "2px",
                 }}
-                className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
-              >
-                <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex -translate-y-12 flex-col gap-10">
-            {rightCards.map((card, idx) => (
+              />
+            );
+          } else {
+            const height = line.y2 - line.y1;
+            return (
               <div
                 key={idx}
-                ref={(el) => {
-                  if (el) rightRefs.current[idx] = el;
+                style={{
+                  position: "absolute",
+                  left: `${line.x1}px`,
+                  top: `${line.y1}px`,
+                  width: "2.5px",
+                  height: `${height}px`,
+                  backgroundColor: "#8B5CF6",
+                  opacity: 0.8,
+                  borderRadius: "1px",
                 }}
-                className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
-              >
-                <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
-              </div>
-            ))}
-          </div>
+              />
+            );
+          }
+        })}
+      </div>
+
+      {/* Title */}
+      <div className="mb-12 w-[90%] rounded-se-[70px] bg-black py-6 text-center text-white shadow-md sm:w-[60%]">
+        <h2 className="text-2xl font-bold">
+          Amazing technologies we use, helpful for your business
+        </h2>
+      </div>
+
+      {/* Cards */}
+      <div className="container relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="flex translate-y-12 flex-col gap-10">
+          {leftCards.map((card, idx) => (
+            <div
+              key={idx}
+              ref={(el) => {
+                if (el) leftRefs.current[idx] = el;
+              }}
+              className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
+            >
+              <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
+            </div>
+          ))}
         </div>
-      </section>
-    </>
+
+        <div className="flex -translate-y-12 flex-col gap-10">
+          {rightCards.map((card, idx) => (
+            <div
+              key={idx}
+              ref={(el) => {
+                if (el) rightRefs.current[idx] = el;
+              }}
+              className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
+            >
+              <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

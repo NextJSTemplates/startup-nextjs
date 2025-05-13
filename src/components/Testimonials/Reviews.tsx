@@ -39,6 +39,8 @@ const ReviewCard = ({
   description: string;
   body: string;
 }) => {
+  const starCount = 5;
+
   return (
     <figure className="hover:animate-zoomIn relative h-full w-64 cursor-pointer overflow-hidden rounded-xl p-6 shadow-sm backdrop-blur-sm hover:shadow-md">
       <div className="flex justify-between">
@@ -59,11 +61,11 @@ const ReviewCard = ({
             </figcaption>
           </div>
         </div>
-        <Star className="h-4 w-4 text-orange-300" />
-        <Star className="h-4 w-4 text-orange-300" />
-        <Star className="text-orange-300 w-4 h-4"/>
-        <Star className="h-4 w-4 text-orange-300" />
-        <Star className="h-4 w-4 text-orange-300" />
+        <div className="flex gap-0.5">
+          {Array.from({ length: starCount }, (_, i) => (
+            <Star key={i} className="h-4 w-4 text-orange-300" />
+          ))}
+        </div>
       </div>
       <blockquote className="mt-4 text-sm">{body}</blockquote>
     </figure>

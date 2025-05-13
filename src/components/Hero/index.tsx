@@ -8,17 +8,17 @@ const Hero = () => {
     >
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center gap-12 lg:gap-0">
           <div className="w-full md:w-2/3">
             <div className="max-w-[800px] text-start text-white">
-              <h5 className="mb-4 text-sm tracking-widest text-white uppercase">
+              <h5 className="mb-6 text-sm tracking-widest text-white uppercase">
                 Empower. Innovate. Transform
               </h5>
-              <h1 className="mb-5 text-4xl leading-tight font-extrabold sm:text-5xl">
+              <h1 className="mb-6 sm:text-lg md:text-xl leading-tight font-extrabold lg:text-4xl">
                 Certified Software Development Agency Offering Premium Solutions
                 At Competitive Prices
               </h1>
-              <p className="mb-8 text-base">
+              <p className="mb-8 text-[14px] sm:text-base max-w-sm md:max-w-md lg:max-w-xl w-full">
                 Aligning your vision with top-rated software solutions driven by
                 innovating AI, AR/VR, and Cloud technologies.
               </p>

@@ -92,7 +92,7 @@ export default function IndustriesSection() {
           <div className="flex flex-col space-y-6">
             <h3 className="text-3xl max-w-md leading-snug font-bold">
               More Than 5 Years
-               In The Game And We're Just Getting Started.
+               In The Game And We&apos;re Just Getting Started.
             </h3>
             <p className="max-w-md text-sm text-gray-300">
               We are on a mission to build a brand with the goal of providing

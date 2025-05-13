@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between">
             <div className="">
               <h3 className="mb-6 text-2xl font-bold md:text-4xl">
-                Let's Grow Together
+                Let&apos;s Grow Together
               </h3>
             </div>
             <div>

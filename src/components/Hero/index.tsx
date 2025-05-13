@@ -53,14 +53,14 @@ const Hero = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex translate-y-4 flex-col items-center space-y-6">
                 <div className="-translate-x-4 overflow-hidden rounded-xl border border-white bg-transparent p-4">
-                  <div className="px-2">
+                  <div>
                     <img
                       src="/images/hero/banner-image-1.svg fill.svg"
                       alt="Product Designer"
                       className="rounded-lg"
                     />
                   </div>
-                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
+                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white -translate-y-4">
                     Product Designer
                   </p>
                 </div>
@@ -72,33 +72,33 @@ const Hero = () => {
                       className="rounded-lg"
                     />
                   </div>{" "}
-                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
+                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white -translate-y-4">
                     Product Manager
                   </p>
                 </div>
               </div>
               <div className="flex -translate-y-4 flex-col items-center space-y-6">
                 <div className="-translate-x-2 overflow-hidden rounded-xl border border-white bg-transparent p-2">
-                  <div className="px-2">
+                  <div>
                     <img
                       src="/images/hero/banner-image-2.svg fill.svg"
                       alt="Product Designer"
                       className="rounded-lg"
                     />
                   </div>{" "}
-                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
+                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white -translate-y-4">
                     Software Developer
                   </p>
                 </div>
                 <div className="-translate-x-6 overflow-hidden rounded-xl border border-white bg-transparent p-2">
-                  <div className="px-2">
+                  <div>
                     <img
                       src="/images/hero/banner-image-4.svg fill.svg"
                       alt="Product Designer"
                       className="rounded-lg"
                     />
                   </div>{" "}
-                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
+                  <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white -translate-y-4">
                     Software Tester
                   </p>
                 </div>

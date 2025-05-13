@@ -163,7 +163,7 @@ const Features = () => {
 
       <SectionTitle 
       title="Amazing technologies, helpful for your business"
-      width="w-[90%]"
+      width="w-[70%]"
       />
 
       {/* Cards */}

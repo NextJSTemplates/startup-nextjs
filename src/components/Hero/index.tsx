@@ -1,3 +1,4 @@
+import { ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 const Hero = () => {
@@ -25,21 +26,24 @@ const Hero = () => {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="#"
-                  className="hover:bg-opacity-90 rounded-full bg-white px-6 py-3 text-sm font-bold text-black"
+                  className="flex gap-2 hover:bg-opacity-90 rounded-full border border-white px-6 py-3 text-sm font-bold text-white"
                 >
                   LET’S TALK
+                  <ExternalLink className="w-4 h-4" />
                 </Link>
                 <Link
                   href="#"
-                  className="rounded-full border border-white px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-black"
+                  className="flex gap-2 rounded-full border border-white px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-black"
                 >
                   CONTACT US FOR SOLUTIONS
+                  <ExternalLink className="w-4 h-4" />
                 </Link>
                 <Link
                   href="#"
-                  className="rounded-full border border-white px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-black"
+                  className="flex gap-2 rounded-full border border-white px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-black"
                 >
-                  OUR SERVICES →
+                  OUR SERVICES 
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>

@@ -73,7 +73,7 @@ const ScrollableServices: FC = () => {
     <SectionTitle 
     title="Boosting business growth with our specialized expertise and innovative
           solutions"
-    width="90%"
+    width="w-[90%]"
     />
 
       <div

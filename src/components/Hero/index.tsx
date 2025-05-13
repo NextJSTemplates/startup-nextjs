@@ -14,7 +14,7 @@ const Hero = () => {
               <h5 className="mb-6 text-sm tracking-widest text-white uppercase">
                 Empower. Innovate. Transform
               </h5>
-              <h1 className="mb-6 sm:text-lg md:text-xl leading-tight font-extrabold lg:text-4xl">
+              <h1 className="mb-6 text-md sm:text-lg md:text-xl leading-tight font-extrabold lg:text-4xl max-w-xl">
                 Certified Software Development Agency Offering Premium Solutions
                 At Competitive Prices
               </h1>

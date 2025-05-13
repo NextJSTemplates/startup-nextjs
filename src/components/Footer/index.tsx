@@ -1,32 +1,41 @@
-import { ExternalLink, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import {
+  ExternalLink,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
 
 export default function Footer() {
   return (
     <section className="relative z-10 bg-white dark:bg-black">
       <footer className="bg-gradient-to-br from-black to-neutral-500 px-8 pt-16 pb-8 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-10">
-          <div className="flex justify-between">
-            <h3 className="mb-6 text-4xl font-bold">Let's Grow Together</h3>
+          <div className="flex flex-col sm:flex-row justify-between">
+            <div className="">
+              <h3 className="mb-6 text-2xl font-bold md:text-4xl">
+                Let's Grow Together
+              </h3>
+            </div>
             <div>
               <Link
                 href="#"
-                className="text-dark flex w-fit gap-2 rounded-full bg-white py-4.5 text-sm font-semibold lg:px-6 dark:text-white/70 dark:hover:text-white"
+                className="text-dark flex w-fit gap-2 rounded-full bg-white px-6 py-4.5 text-sm font-semibold dark:text-white/70 dark:hover:text-white"
               >
                 Contact Us
                 <ExternalLink className="h-4 w-4 text-black" />
               </Link>
             </div>
           </div>
-          <div className="flex justify-between gap-6">
+          <div className="gris-cols-1 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col gap-4 text-sm font-semibold">
               <p>10001, Park Run Drive Las Vegas, NV USA – 89145</p>
               <p className="text-white underline">+702/907-5006</p>
             </div>
             <div className="flex flex-col gap-4 text-sm font-semibold">
-              <p className="font-bold tracking-wide text-4xl">INDIA</p>
+              <p className="text-4xl font-bold tracking-wide">INDIA</p>
               <p className="max-w-xs">
                 Plot No 228, JLPL Industrial Area Sector 82, Mohali India –
                 140308
@@ -48,17 +57,19 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex justify-between">
-            <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div className="flex flex-col gap-4 md:col-span-2">
               <div className="flex items-center gap-2">
-              <Image
-                src="/logo.png"
-                alt="logo"
-                width={10}
-                height={10}
-                className="w-12 h-12"
-              /> 
-              <p className="text-2xl font-bold text-white">Classy Endeavours</p>
+                <Image
+                  src="/logo.png"
+                  alt="logo"
+                  width={10}
+                  height={10}
+                  className="h-12 w-12"
+                />
+                <p className="text-2xl font-bold text-white">
+                  Classy Endeavours
+                </p>
               </div>
               <p className="max-w-md text-sm">
                 Classy Endeavours is an IT company leading in SaaS innovation.
@@ -68,7 +79,7 @@ export default function Footer() {
               </p>
               <Link
                 href="#"
-                className="text-dark flex w-fit gap-2 rounded-full bg-white py-4.5 text-sm font-semibold lg:px-6 dark:text-white/70 dark:hover:text-white"
+                className="text-dark flex w-fit gap-2 rounded-full bg-white px-6 py-4.5 text-sm font-semibold dark:text-white/70 dark:hover:text-white"
               >
                 Work with us
                 <ExternalLink className="h-4 w-4 text-black" />

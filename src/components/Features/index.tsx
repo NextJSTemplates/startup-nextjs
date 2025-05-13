@@ -163,11 +163,12 @@ const Features = () => {
 
       <SectionTitle 
       title="Amazing technologies, helpful for your business"
+      width="w-[90%]"
       />
 
       {/* Cards */}
       <div className="container relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
-        <div className="flex translate-y-12 flex-col gap-10">
+        <div className="flex lg:translate-y-12 flex-col gap-10">
           {leftCards.map((card, idx) => (
             <div
               key={idx}
@@ -182,7 +183,7 @@ const Features = () => {
           ))}
         </div>
 
-        <div className="flex -translate-y-12 flex-col gap-10">
+        <div className="flex lg:-translate-y-12 flex-col gap-10">
           {rightCards.map((card, idx) => (
             <div
               key={idx}

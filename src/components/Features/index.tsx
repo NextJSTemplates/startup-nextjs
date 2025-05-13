@@ -152,7 +152,6 @@ const Features = () => {
           width="w-[70%]"
         />
 
-        {/* SVG for all connections */}
         <svg
           ref={svgRef}
           className="pointer-events-none absolute top-0 left-0 h-full w-full"

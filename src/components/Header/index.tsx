@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <>
-      <header className=" left-1/2 -translate-x-1/2 w-[90%] dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-9999 mt-6 rounded-full border border-white bg-transparent text-center backdrop-blur-xs transition">
+      <header className=" left-1/2 -translate-x-1/2 w-[90%] bg-gray-dark/30 dark:shadow-sticky-dark shadow-sticky fixed z-9999 mt-6 rounded-full border border-white  text-center backdrop-blur-xs transition">
         <div className="container">
           <div className="relative flex items-center justify-between px-4">
             <div className="w-60 max-w-full px-4 xl:mr-12">
@@ -154,9 +154,9 @@ const Header = () => {
                 >
                   Get A Free Quote
                 </Link>
-                <div>
+                {/* <div>
                   <ThemeToggler />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -4,9 +4,8 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden bg-[url('/images/hero/Software-Consulting-and-Development-Company.svg fill.svg')] bg-cover bg-center pt-[120px] pb-16 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+      className="bg-[url('/images/hero/background.svg')] relative z-10 overflow-hidden bg-cover bg-center pt-[120px] pb-16 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
     >
-      <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-black/90 to-white/30"></div>
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="flex flex-wrap items-center">

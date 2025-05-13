@@ -53,9 +53,9 @@ const Hero = () => {
                 <div className="-translate-x-4 overflow-hidden rounded-xl border border-white bg-transparent p-4">
                   <div className="px-2">
                     <img
-                      src="/images/hero/background.webp"
+                      src="/images/hero/person1.jpeg"
                       alt="Product Designer"
-                      className="rounded-lg"
+                      className="rounded-lg h-60"
                     />
                   </div>
                   <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
@@ -65,9 +65,9 @@ const Hero = () => {
                 <div className="-translate-x-8 overflow-hidden rounded-xl border border-white bg-transparent p-2">
                   <div className="px-2">
                     <img
-                      src="/images/hero/background.webp"
+                      src="/images/hero/person2.jpeg"
                       alt="Product Designer"
-                      className="rounded-lg"
+                      className="rounded-lg h-60"
                     />
                   </div>{" "}
                   <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
@@ -79,9 +79,9 @@ const Hero = () => {
                 <div className="-translate-x-2 overflow-hidden rounded-xl border border-white bg-transparent p-2">
                   <div className="px-2">
                     <img
-                      src="/images/hero/background.webp"
+                      src="/images/hero/person3.jpeg"
                       alt="Product Designer"
-                      className="rounded-lg"
+                      className="rounded-lg h-60"
                     />
                   </div>{" "}
                   <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">
@@ -93,7 +93,7 @@ const Hero = () => {
                     <img
                       src="/images/hero/background.webp"
                       alt="Product Designer"
-                      className="rounded-lg"
+                      className="rounded-lg h-60"
                     />
                   </div>{" "}
                   <p className="rounded-b-lg bg-black p-3 text-center text-sm font-medium text-white">

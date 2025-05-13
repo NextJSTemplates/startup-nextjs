@@ -69,14 +69,14 @@ const ScrollableServices: FC = () => {
   return (
     <section className="pt-24">
       <div className="mb-12 w-[90%] rounded-se-[70px] bg-black py-6 text-center text-white shadow-md sm:w-[60%]">
-        <h2 className="text-2xl font-bold mx-auto">
+        <h2 className="text-2xl font-bold ">
           Boosting business growth with our specialized expertise and innovative
-          solutions{" "}
+          solutions
         </h2>
       </div>
 
       <div
-        className="scrollbar-none container mx-auto max-w-6xl flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-6 sm:px-0"
+        className=" hide-scrollbar container mx-auto max-w-6xl flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-6 sm:px-0"
         style={{ scrollBehavior: "smooth", touchAction: "pan-y" }}
       >
         {services.map((service, index) => (

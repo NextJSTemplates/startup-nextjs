@@ -84,6 +84,17 @@ layer(base);
   }
 }
 
+/* globals.css or a component-level <style jsx> */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+
 @utility sticky {
   & .header-logo {
     @apply py-5 lg:py-2;

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -6,65 +7,81 @@ const Features = () => {
   const leftRefs = useRef<HTMLDivElement[]>([]);
   const rightRefs = useRef<HTMLDivElement[]>([]);
   const [lines, setLines] = useState<
-    { type: "bent" | "vertical"; d?: string; x1?: number; y1?: number; x2?: number; y2?: number }[]
-  >([]);
-
-  useEffect(() => {
-    const newLines: {
+    {
       type: "bent" | "vertical";
       d?: string;
       x1?: number;
       y1?: number;
       x2?: number;
       y2?: number;
-    }[] = [];
+    }[]
+  >([]);
 
-    leftRefs.current.forEach((left, index) => {
-      const right = rightRefs.current[index];
-      if (!left || !right) return;
+  useEffect(() => {
+    const updateLines = () => {
+      const newLines: {
+        type: "bent" | "vertical";
+        d?: string;
+        x1?: number;
+        y1?: number;
+        x2?: number;
+        y2?: number;
+      }[] = [];
 
-      const leftBox = left.getBoundingClientRect();
-      const rightBox = right.getBoundingClientRect();
+      leftRefs.current.forEach((left, index) => {
+        const right = rightRefs.current[index];
+        if (!left || !right) return;
 
-      const startX = leftBox.right;
-      const startY = leftBox.top + leftBox.height / 2 + window.scrollY;
+        const leftBox = left.getBoundingClientRect();
+        const rightBox = right.getBoundingClientRect();
 
-      const endX = rightBox.left;
-      const endY = rightBox.top + rightBox.height / 2 + window.scrollY;
+        const offsetY = window.scrollY;
 
-      // Bent line path using cubic Bezier curve
-      const midX = (startX + endX) / 2;
+        const startX = leftBox.right;
+        const startY = leftBox.top + leftBox.height / 2 + offsetY;
 
-      const path = `M ${startX} ${startY} C ${midX} ${startY}, ${midX} ${endY}, ${endX} ${endY}`;
+        const endX = rightBox.left;
+        const endY = rightBox.top + rightBox.height / 2 + offsetY;
 
-      newLines.push({ type: "bent", d: path });
+        const midX = (startX + endX) / 2;
+        const path = `M ${startX} ${startY} C ${midX} ${startY}, ${midX} ${endY}, ${endX} ${endY}`;
+        newLines.push({ type: "bent", d: path });
 
-      // Add vertical lines for left
-      if (index > 0 && leftRefs.current[index - 1]) {
-        const prev = leftRefs.current[index - 1].getBoundingClientRect();
-        newLines.push({
-          type: "vertical",
-          x1: leftBox.left + leftBox.width / 2,
-          y1: prev.bottom + window.scrollY,
-          x2: leftBox.left + leftBox.width / 2,
-          y2: leftBox.top + window.scrollY,
-        });
-      }
+        if (index > 0 && leftRefs.current[index - 1]) {
+          const prev = leftRefs.current[index - 1].getBoundingClientRect();
+          newLines.push({
+            type: "vertical",
+            x1: leftBox.left + leftBox.width / 2,
+            y1: prev.bottom + offsetY,
+            x2: leftBox.left + leftBox.width / 2,
+            y2: leftBox.top + offsetY,
+          });
+        }
 
-      // Add vertical lines for right
-      if (index > 0 && rightRefs.current[index - 1]) {
-        const prev = rightRefs.current[index - 1].getBoundingClientRect();
-        newLines.push({
-          type: "vertical",
-          x1: rightBox.left + rightBox.width / 2,
-          y1: prev.bottom + window.scrollY,
-          x2: rightBox.left + rightBox.width / 2,
-          y2: rightBox.top + window.scrollY,
-        });
-      }
-    });
+        if (index > 0 && rightRefs.current[index - 1]) {
+          const prev = rightRefs.current[index - 1].getBoundingClientRect();
+          newLines.push({
+            type: "vertical",
+            x1: rightBox.left + rightBox.width / 2,
+            y1: prev.bottom + offsetY,
+            x2: rightBox.left + rightBox.width / 2,
+            y2: rightBox.top + offsetY,
+          });
+        }
+      });
 
-    setLines(newLines as { type: "bent" | "vertical"; d?: string; x1?: number; y1?: number; x2?: number; y2?: number }[]);
+      setLines(newLines);
+    };
+
+    updateLines();
+
+    window.addEventListener("resize", updateLines);
+    window.addEventListener("scroll", updateLines);
+
+    return () => {
+      window.removeEventListener("resize", updateLines);
+      window.removeEventListener("scroll", updateLines);
+    };
   }, []);
 
   const leftCards = [
@@ -104,18 +121,27 @@ const Features = () => {
           </h2>
         </div>
         <svg
-          className="pointer-events-none absolute top-0 left-0 z-0 h-full w-full"
+          className="pointer-events-none absolute top-0 left-0 z-30 h-full w-full"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <defs>
+            <linearGradient id="bentLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#9b87f5" />
+              <stop offset="100%" stopColor="#0EA5E9" />
+            </linearGradient>
+          </defs>
           {lines.map((line, idx) =>
             line.type === "bent" ? (
               <path
                 key={idx}
                 d={line.d}
                 fill="none"
-                stroke="#000"
-                strokeWidth="2"
-                strokeDasharray="6 4"
+                stroke="url(#bentLineGradient)"
+                strokeWidth="3"
+                strokeDasharray="10 5"
+                strokeLinecap="round"
+                className="animate-pulse"
+                opacity="0.7"
               />
             ) : (
               <line
@@ -124,14 +150,16 @@ const Features = () => {
                 y1={line.y1}
                 x2={line.x2}
                 y2={line.y2}
-                stroke="#999"
-                strokeWidth="1.5"
+                stroke="#8B5CF6"
+                strokeWidth="2.5"
+                strokeDasharray="5 3"
+                opacity="0.8"
               />
             ),
           )}
         </svg>
 
-        <div className="relative z-10 container mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="container relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
           <div className="flex translate-y-12 flex-col gap-10">
             {leftCards.map((card, idx) => (
               <div
@@ -139,10 +167,10 @@ const Features = () => {
                 ref={(el) => {
                   if (el) leftRefs.current[idx] = el;
                 }}
-                className="dark:bg-dark rounded-md bg-white p-6 shadow-lg transition duration-300 hover:shadow-xl"
+                className="rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
               >
                 <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-                <p className="text-sm text-gray-700">{card.text}</p>
+                <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
               </div>
             ))}
           </div>
@@ -154,10 +182,10 @@ const Features = () => {
                 ref={(el) => {
                   if (el) rightRefs.current[idx] = el;
                 }}
-                className="dark:bg-dark rounded-md bg-white p-6 shadow-lg transition duration-300 hover:shadow-xl"
+                className="rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
               >
                 <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-                <p className="text-sm text-gray-700">{card.text}</p>
+                <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
               </div>
             ))}
           </div>

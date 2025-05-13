@@ -12,7 +12,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
       </div>
       <div className="text-xs text-gray-500 dark:text-gray-400 font-extrabold mb-6 px-6">{publishDate}</div>
 
-      <h3 className="text-lg font-extrabold text-black dark:text-white mb-8 leading-snug px-6 max-w-sm">
+      <h3 className="text-lg font-extrabold text-black dark:text-white mb-8 leading-snug px-6 max-w-sm h-20 max-h-80">
         <Link href="/blog-details">
           {title}
         </Link>

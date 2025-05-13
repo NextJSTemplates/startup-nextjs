@@ -13,7 +13,7 @@ export default function Footer() {
     <section className="relative z-10 bg-white dark:bg-black">
       <footer className="bg-gradient-to-br from-black to-neutral-500 px-8 pt-16 pb-8 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-10">
-          <div className="flex flex-col sm:flex-row justify-between">
+          <div className="flex flex-col justify-between sm:flex-row">
             <div className="">
               <h3 className="mb-6 text-2xl font-bold md:text-4xl">
                 Let&apos;s Grow Together
@@ -35,16 +35,33 @@ export default function Footer() {
               <p className="text-white underline">+702/907-5006</p>
             </div>
             <div className="flex flex-col gap-4 text-sm font-semibold">
-              <p className="text-4xl font-bold tracking-wide">INDIA</p>
+                <Image
+                  src="images/footer/india.svg"
+                  alt="logo"
+                  width={100}
+                  height={100}
+                  
+                />
               <p className="max-w-xs">
                 Plot No 228, JLPL Industrial Area Sector 82, Mohali India –
                 140308
               </p>
               <p className="underline">+91-98554-85133</p>
             </div>
-            <div className="flex flex-col gap-4 text-sm font-semibold">
-              <p className="">Mail us at</p>
-              <p className="font-bold underline">hello@classyendeavors.com</p>
+            <div className="flex gap-2">
+              <div>
+              <Image
+                  src="images/footer/mail.svg"
+                  alt="Mail Logo"
+                  width={10}
+                  height={10}
+                  className="h-12 w-12"
+                />
+              </div>
+              <div className="flex flex-col gap-4 text-sm font-semibold">
+                <p className="">Mail us at</p>
+                <p className="font-bold underline">hello@classyendeavors.com</p>
+              </div>
             </div>
             <div className="flex flex-col gap-4">
               <p className="text-md text-sm font-bold">Follow us on</p>

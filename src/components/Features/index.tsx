@@ -167,7 +167,7 @@ const Features = () => {
                 ref={(el) => {
                   if (el) leftRefs.current[idx] = el;
                 }}
-                className="rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
+                className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
               >
                 <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>
@@ -182,7 +182,7 @@ const Features = () => {
                 ref={(el) => {
                   if (el) rightRefs.current[idx] = el;
                 }}
-                className="rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
+                className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
               >
                 <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">{card.text}</p>

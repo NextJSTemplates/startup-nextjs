@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import SingleFeature from "./SingleFeature";
 
 const Features = () => {
   const leftRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -236,114 +237,23 @@ const Features = () => {
         <div className="relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-16 md:grid-cols-2">
           <div className="flex flex-col gap-12 lg:translate-y-12">
             {leftCards.map((card, idx) => (
-              <div
+              <SingleFeature
                 key={`left-${idx}`}
-                ref={(el) => {
-                  leftRefs.current[idx] = el;
-                }}
-                onMouseEnter={() => setHoveredIndexLeft(idx)}
-                onMouseLeave={() => setHoveredIndexLeft(null)}
-                className="rounded-md p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="flex justify-between">
-                  <div className="flex gap-2">
-                    <Image
-                      src={card.icon}
-                      alt="Card Logo"
-                      width={10}
-                      height={10}
-                      className="h-6 w-6"
-                    />
-                    <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-                  </div>
-                  <ExternalLink className="h-5 w-5" />
-                </div>
-
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  {card.text}
-                </p>
-                {hoveredIndexLeft === idx && (
-                  <div className="absolute mt-4 w-full rounded-md border-t border-gray-100 bg-white p-4 shadow-lg dark:border-gray-700">
-                    {/* <h4 className="mb-2 text-sm font-semibold">
-                      {card.title} Tech Stack
-                    </h4> */}
-                    <div>
-                      {card.stack.map((stack, i) => (
-                        <div
-                          key={i}
-                          className="flex gap-4 rounded-md px-2 py-1 text-xs"
-                        >
-                          <Image
-                            src={stack.icon}
-                            alt="Stack Logo"
-                            width={10}
-                            height={10}
-                            className="h-6 w-6"
-                          />
-                          <h3 className="mb-2 text-sm">{stack.title}</h3>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+                card={card}
+                index={idx}
+                refSetter={(el) => (leftRefs.current[idx] = el)}
+              />
             ))}
           </div>
 
-          {/* Right Column */}
           <div className="flex flex-col gap-12 lg:-translate-y-12">
             {rightCards.map((card, idx) => (
-              <div
+              <SingleFeature
                 key={`right-${idx}`}
-                ref={(el) => {
-                  rightRefs.current[idx] = el;
-                }}
-                onMouseEnter={() => setHoveredIndexRight(idx)}
-                onMouseLeave={() => setHoveredIndexRight(null)}
-                className="rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800 dark:text-white"
-              >
-                <div className="flex justify-between">
-                  <div className="flex gap-2">
-                    <Image
-                      src={card.icon}
-                      alt="Card Logo"
-                      width={10}
-                      height={10}
-                      className="h-6 w-6"
-                    />
-                    <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-                  </div>
-                  <ExternalLink className="h-5 w-5" />
-                </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  {card.text}
-                </p>
-
-                {hoveredIndexRight === idx && (
-                  <div className="absolute mt-4 w-full border-t shadow-lg rounded-md bg-white p-4">
-                    <h4 className="mb-2 text-sm font-semibold">
-                      {card.title} Tech Stack
-                    </h4>
-                    <div>
-                      {card.stack.map((stack, i) => (
-                        <div
-                          key={i}
-                          className="flex gap-4 rounded-md px-2 py-1 text-xs"
-                        >
-                          <Image
-                            src={stack.icon}
-                            alt="Stack Logo"
-                            width={10}
-                            height={10}
-                            className="h-6 w-6"
-                          />
-                          <h3 className="mb-2 text-sm">{stack.title}</h3>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+                card={card}
+                index={idx}
+                refSetter={(el) => (rightRefs.current[idx] = el)}
+              />
             ))}
           </div>
         </div>

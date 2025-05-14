@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <>
-      <header className=" left-1/2 -translate-x-1/2 w-[90%] bg-gray-dark/30 dark:shadow-sticky-dark shadow-sticky fixed z-9999 mt-6 rounded-full border border-white  text-center backdrop-blur-xs transition">
+      <header className=" left-1/2 -translate-x-1/2 w-[90%] bg-gray-dark/30 shadow-sticky fixed z-9999 mt-6 rounded-full border border-white  text-center backdrop-blur-xs transition">
         <div className="container">
           <div className="relative flex items-center justify-between px-4">
             <div className="px-4 xl:mr-12 lg:w-[25%]">
@@ -78,7 +78,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar border-body-color/50 absolute right-0 z-30 w-[250px] rounded border-[.5px] px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -92,8 +92,8 @@ const Header = () => {
                             href={menuItem.path}
                             className={`flex py-2 text-sm lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
-                                ? "text-white dark:text-white"
-                                : "text-white/70 dark:text-white/70 dark:hover:text-white"
+                                ? "text-white"
+                                : "text-white/70"
                             }`}
                           >
                             {menuItem.title}
@@ -102,7 +102,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="text-white/70 flex cursor-pointer items-center justify-between py-2 text-sm lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
+                              className="text-white/70 flex cursor-pointer items-center justify-between py-2 text-sm lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -117,7 +117,7 @@ const Header = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu text-start dark:bg-dark relative top-full left-0 rounded-sm bg-transparent border border-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu text-start relative top-full left-0 rounded-sm bg-transparent border border-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
@@ -125,7 +125,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="block hover:bg-white/10 rounded-sm py-2.5 text-sm px-3 text-white/70 dark:hover:text-white"
+                                  className="block hover:bg-white/10 rounded-sm py-2.5 text-sm px-3 text-white/70"
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -141,7 +141,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
-                  className="text-sm text-black bg-white rounded-full hidden px-6 py-2 font-bold hover:opacity-70 md:block dark:text-white"
+                  className="text-sm text-black bg-white rounded-full hidden px-6 py-2 font-semibold hover:opacity-70 md:block"
                 >
                   Get A Free Quote
                 </Link>

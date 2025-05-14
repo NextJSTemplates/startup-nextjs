@@ -87,7 +87,7 @@ export default function IndustriesSection() {
         </div>
       </div>
 
-      <div className=" mt-20 bg-gradient-to-br from-black to-neutral-500 px-8 py-12 text-white">
+      <div className=" mt-20 bg-gradient-to-br from-black via-black to-neutral-500 px-8 py-12 text-white">
         <div className="container mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
           <div className="flex flex-col space-y-6">
             <h3 className="text-3xl max-w-md leading-snug font-bold">
@@ -110,7 +110,7 @@ export default function IndustriesSection() {
                   key={label}
                   className="rounded-lg bg-white p-4 text-start text-black shadow transition hover:scale-105"
                 >
-                  <p className="text-xl">{value}</p>
+                  <p className="text-xl md:text-2xl font-extrabold">{value}</p>
                   <p className="mt-1 text-sm">{label}</p>
                 </div>
               ))}
@@ -129,7 +129,7 @@ export default function IndustriesSection() {
                 key={label}
                 className="font-bold rounded-lg bg-white p-4 text-start text-black shadow transition hover:scale-105"
               >
-                <p className="text-xl">{value}</p>
+                <p className="text-xl md:text-2xl font-extrabold">{value}</p>
                 <p className="mt-1 text-sm">{label}</p>
               </div>
             ))}

@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <section className="relative z-10 bg-white dark:bg-black">
-      <footer className="bg-gradient-to-br from-black to-neutral-500 px-8 pt-16 pb-8 text-white">
+      <footer className="bg-gradient-to-br from-black via-black to-neutral-500 px-8 pt-16 pb-8 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-10">
           <div className="flex flex-col justify-between sm:flex-row">
             <div className="">

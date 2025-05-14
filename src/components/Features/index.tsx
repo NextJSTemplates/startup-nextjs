@@ -2,22 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
-
-const SectionTitle = ({
-  title,
-  width = "w-full",
-}: {
-  title: string;
-  width?: string;
-}) => {
-  return (
-    <div className="flex w-full justify-center">
-      <h2 className={`text-center text-3xl font-bold md:text-4xl ${width}`}>
-        {title}
-      </h2>
-    </div>
-  );
-};
+import SectionTitle from "../Common/SectionTitle";
 
 const Features = () => {
   const leftRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -186,12 +171,11 @@ const Features = () => {
 
   return (
     <section id="features" className="relative py-16 md:py-20 lg:py-28">
+      <SectionTitle
+        title="Amazing technologies, helpful for your business"
+        width="80%"
+      />
       <div className="container mx-auto px-4">
-        <SectionTitle
-          title="Amazing technologies, helpful for your business"
-          width="w-[70%]"
-        />
-
         <svg
           ref={svgRef}
           className="pointer-events-none absolute top-0 left-0 h-full w-full"
@@ -206,7 +190,7 @@ const Features = () => {
 
           {lines.map((line, idx) => {
             if (line.type === "curved") {
-              // Calculate control points for S-curve
+              // Calculationss for S-curve
               const midX = (line.x1 + line.x2) / 2;
               const controlPoint1X = line.x1 + (midX - line.x1) * 4;
               const controlPoint1Y = line.y1 + 10;
@@ -351,9 +335,7 @@ const Features = () => {
                             height={10}
                             className="h-6 w-6"
                           />
-                          <h3 className="mb-2 text-sm">
-                            {stack.title}
-                          </h3>
+                          <h3 className="mb-2 text-sm">{stack.title}</h3>
                         </div>
                       ))}
                     </div>

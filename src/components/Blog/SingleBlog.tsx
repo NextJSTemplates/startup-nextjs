@@ -6,13 +6,13 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
   const { image, tag, title, publishDate } = blog;
 
   return (
-    <div className="bg-white dark:bg-dark pt-6 shadow-lg rounded-xl text-start border">
-      <div className="text-sm font-extrabold text-black dark:text-white mb-4 px-6 uppercase">
+    <div className="bg-white pt-6 shadow-lg rounded-xl text-start border">
+      <div className="text-sm font-extrabold text-black mb-2 px-6 uppercase">
         {tag}
       </div>
-      <div className="text-xs text-gray-500 dark:text-gray-400 font-extrabold mb-6 px-6">{publishDate}</div>
+      <div className="text-xs text-gray-500 font-extrabold mb-6 px-6">{publishDate}</div>
 
-      <h3 className="text-lg font-extrabold text-black dark:text-white mb-8 leading-snug px-6 max-w-sm h-20 max-h-80">
+      <h3 className="text-lg font-extrabold text-black mb-8 leading-snug px-6 max-w-sm h-20 max-h-80">
         <Link href="/blog-details">
           {title}
         </Link>

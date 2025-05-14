@@ -9,7 +9,7 @@ const blogData: Blog[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
     image: "/images/blog/blog1.png",
 
-    publishDate: "2025",
+    publishDate: "Apr 28, 2025",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const blogData: Blog[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
     image: "/images/blog/blog2.png",
 
-    publishDate: "2025",
+    publishDate: "Apr 25, 2025",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const blogData: Blog[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
     image: "/images/blog/blog3.png",
 
-    publishDate: "2025",
+    publishDate: "Apr 18, 2025",
   },
 ];
 export default blogData;

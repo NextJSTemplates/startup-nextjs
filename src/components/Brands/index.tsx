@@ -4,9 +4,9 @@ import brandsData from "./brandsData";
 
 const Brands = () => {
   return (
-    <section className="relative z-10 pt-24 md:pt-26 lg:pt-32">
+    <section className="relative z-10 pt-24">
       <div className="container">
-        <h2 className="text-dark mb-10 text-center text-2xl font-bold sm:text-3xl dark:text-white">
+        <h2 className="text-black mb-6 text-center text-2xl font-bold sm:text-3xl">
           With help from the biggest companies
         </h2>
 
@@ -35,9 +35,9 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         href="#"
         target="_blank"
         rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
+        className="relative h-10 w-full opacity-70 transition hover:opacity-100 hover:scale-[1.05]"
       >
-        <Image src={image} alt="Brand" fill className="block dark:hidden" />
+        <Image src={image} alt="Brand" fill className="block" />
       </a>
     </div>
   );

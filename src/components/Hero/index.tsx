@@ -116,7 +116,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <div className="flex md:justify-end mr-2">
+      <div className="flex justify-end mr-2">
         <div className="flex shadow-xl z-10 bg-white -translate-y-4 text-[13px] rounded-xs font-bold items-end gap-6 px-8 py-4">
           <p>AR/VR</p> -
           <p>Mobile Apps</p> -

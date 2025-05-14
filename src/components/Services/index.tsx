@@ -14,7 +14,7 @@ const ScrollableServices: FC = () => {
 
       <div className="w-full px-4 sm:px-6">
         <div
-          className="hide-scrollbar mx-auto flex max-w-6xl snap-x snap-mandatory gap-6 overflow-x-auto pb-6"
+          className="hide-scrollbar lg:mx-auto flex w-full max-w-6xl snap-x snap-mandatory gap-6 overflow-x-auto pb-6"
           style={{ scrollBehavior: "smooth", touchAction: "pan-y" }}
         >
           {services.map((service, index) => (

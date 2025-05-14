@@ -1,9 +1,9 @@
-import IndustriesSection from "@/components/About/IndustriesSection";
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
+import Industries from "@/components/Industries/Industries";
 import ScrollableServices from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
@@ -21,7 +21,7 @@ export default function Home() {
       <Brands />
       <ScrollableServices />
       <Features />
-      <IndustriesSection />
+      <Industries />
       <Testimonials />
       <Blog />
     </>

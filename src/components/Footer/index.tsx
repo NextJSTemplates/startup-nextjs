@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <section className="relative z-10">
       <footer className="bg-gradient-to-br from-black via-black to-neutral-500 px-8 pt-16 pb-8 text-white">
@@ -139,3 +139,5 @@ export default function Footer() {
     </section>
   );
 }
+
+export default Footer

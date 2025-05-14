@@ -43,7 +43,7 @@ export default function IndustriesSection() {
   const [industry, setIndustry] = useState("E-Commerce");
   const current = industriesData[industry];
   return (
-    <section className="pt-24">
+    <section className="realtive z-10 py-16 md:pt-20 lg:pt-24">
       <SectionTitle 
         title="Industries We Serve"
        />
@@ -65,13 +65,13 @@ export default function IndustriesSection() {
           ))}
         </div>
 
-        <div className="mt-10 grid grid-cols-1 items-center gap-6 px-8 md:grid-cols-2">
+        <div className="pt-12 grid grid-cols-1 items-center gap-6 px-8 md:grid-cols-2">
           <div>
-            <h3 className="mb-4 text-xl font-bold">{industry}</h3>
+            <h3 className="mb-6 text-xl font-bold">{industry}</h3>
             <p className="text-sm leading-relaxed text-gray-700">
               {current.description}
             </p>
-            <button className="mt-6 rounded-full border border-black px-4 py-2 text-sm font-medium transition hover:bg-black hover:text-white">
+            <button className="mt-8 rounded-full border border-black px-4 py-2 text-xs font-medium transition hover:bg-black hover:text-white">
               Get A Free Quote
             </button>
           </div>

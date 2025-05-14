@@ -24,6 +24,10 @@ const Features = () => {
 
   useEffect(() => {
     const updateLines = () => {
+      if (window.innerWidth < 768) {
+        setLines([]);
+        return;
+      }
       const newLines: {
         type: "curved" | "vertical";
         x1: number;
@@ -106,7 +110,6 @@ const Features = () => {
         { title: "Ansible", icon: "/images/features/devops/ansible.svg" },
         { title: "Chef", icon: "/images/features/devops/chef.svg" },
         { title: "Docker", icon: "/images/features/devops/ansible.svg" },
-        { title: "Gitlab", icon: "/images/features/devops/gitlab.svg" },
       ],
     },
     {
@@ -117,7 +120,6 @@ const Features = () => {
         { title: "Rails", icon: "/images/features/bcend/rails.svg" },
         { title: "Ruby", icon: "/images/features/bcend/ruby.svg" },
         { title: "Strapi", icon: "/images/features/bcend/strapi.svg" },
-        { title: "Gitlab", icon: "/images/features/bcend/gitlab.svg" },
       ],
     },
     {
@@ -170,7 +172,7 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="relative py-16 md:py-20 lg:py-28">
+    <section id="features" className="relative z-10 py-16 md:pt-20 lg:pt-24">
       <SectionTitle
         title="Amazing technologies, helpful for your business"
         width="80%"
@@ -178,7 +180,7 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <svg
           ref={svgRef}
-          className="pointer-events-none absolute top-0 left-0 h-full w-full"
+          className="pointer-events-none absolute top-0 left-0 hidden h-full w-full lg:block"
           style={{ zIndex: 1 }}
         >
           <defs>
@@ -261,10 +263,10 @@ const Features = () => {
                   {card.text}
                 </p>
                 {hoveredIndexLeft === idx && (
-                  <div className="mt-4 border-t border-gray-100 pt-4 dark:border-gray-700">
-                    <h4 className="mb-2 text-sm font-semibold">
+                  <div className="absolute mt-4 w-full rounded-md border-t border-gray-100 bg-white p-4 shadow-lg dark:border-gray-700">
+                    {/* <h4 className="mb-2 text-sm font-semibold">
                       {card.title} Tech Stack
-                    </h4>
+                    </h4> */}
                     <div>
                       {card.stack.map((stack, i) => (
                         <div
@@ -318,7 +320,7 @@ const Features = () => {
                 </p>
 
                 {hoveredIndexRight === idx && (
-                  <div className="mt-4 border-t border-gray-100 pt-4 dark:border-gray-700">
+                  <div className="absolute mt-4 w-full border-t shadow-lg rounded-md bg-white p-4">
                     <h4 className="mb-2 text-sm font-semibold">
                       {card.title} Tech Stack
                     </h4>

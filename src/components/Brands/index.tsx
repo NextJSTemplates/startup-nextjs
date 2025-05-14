@@ -4,7 +4,7 @@ import brandsData from "./brandsData";
 
 const Brands = () => {
   return (
-    <section className="pt-32">
+    <section className="relative z-10 pt-24 md:pt-26 lg:pt-32">
       <div className="container">
         <h2 className="text-dark mb-10 text-center text-2xl font-bold sm:text-3xl dark:text-white">
           With help from the biggest companies

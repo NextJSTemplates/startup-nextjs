@@ -4,25 +4,22 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    description: "Engineering",
-    body: "I've never seen anything like this before. It's amazing. I love it.I don't know what to say. I'm speechless. This is amazing. ",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Emma Hessel",
+    description: "Ekonom - BS Verkstäder",
+    body: "Evity har den bästa supporten jag någonsin varit med om. Det personliga bemötandet och den snabba återkopplingen har skapat en känsla av trygghet och tillit som är mycket värdefull. ",
+    img: "/images/testimonials/auth-01.png",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    description: "Consulting",
-    body: "I don't know what to say. I'm speechless. This is amazing.I don't know what to say. I'm speechless. This is amazing. ",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Nina Wiberg Karlsson",
+    description: "HR-chef - Fyrklövern",
+    body: "Jag uppskattar särskilt att inget tappas bort och att alla delar i processerna fångas upp. Det minskar sårbarheten i organisationen och gör att vi minimerar risken att missa något.",
+    img: "/images/testimonials/auth-02.png",
   },
   {
-    name: "John",
-    username: "@john",
-    description: "Marketing",
-    body: "I'm at a loss for words. This is amazing. I love it.I don't know what to say. I'm speechless. This is amazing. ",
-    img: "https://avatar.vercel.sh/john",
+    name: "Johanna Grimståhl",
+    description: "VD - Brightnest",
+    body: "Med Evity har vi systematiserat allt från medarbetarsamtal till löneprocessen, pulsmätningar, onboarding och offboarding.",
+    img: "/images/testimonials/auth-03.png",
   },
 ];
 
@@ -42,7 +39,7 @@ const ReviewCard = ({
   const starCount = 5;
 
   return (
-    <figure className="hover:animate-zoomIn relative h-full w-64 cursor-pointer overflow-hidden rounded-xl p-6 shadow-sm backdrop-blur-sm hover:shadow-md">
+    <figure className="hover:animate-zoomIn relative h-full w-90 cursor-pointer overflow-hidden rounded-xl p-6 shadow-sm backdrop-blur-sm hover:shadow-md">
       <div className="flex justify-between">
         <div className="flex flex-row items-center gap-2">
           <Image
@@ -74,10 +71,10 @@ const ReviewCard = ({
 
 export const Reviews = () => {
   return (
-    <div className="relative container mx-auto flex w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative container mx-auto flex w-full flex-col items-center justify-center overflow-hidden px-8">
       <Marquee pauseOnHover className="[--duration:20s]">
         {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
       <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>

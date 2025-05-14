@@ -69,7 +69,7 @@ const services = [
 
 const ScrollableServices: FC = () => {
   return (
-    <section id="services" className="relative pt-24">
+    <section id="services" className="relative z-10 pt-16">
       <SectionTitle
         title="Boosting business growth with our specialized expertise and innovative
           solutions"

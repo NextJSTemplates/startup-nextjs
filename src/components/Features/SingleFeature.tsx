@@ -44,10 +44,9 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
         <ExternalLink className="h-5 w-5" />
       </div>
 
-      <p className="text-sm text-gray-700 ">{card.text}</p>
-
+      <p className="text-sm text-gray-700">{card.text}</p>
       {hovered && (
-        <div className="absolute mt-4 w-full rounded-md border-t border-gray-100 bg-white p-4 shadow-lg">
+        <div className="absolute z-10 mt-4 w-full rounded-md border-t border-gray-100 bg-white p-4 shadow-lg">
           <div>
             {card.stack.map((stack, i) => (
               <div

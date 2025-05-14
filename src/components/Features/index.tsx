@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ExternalLink } from "lucide-react";
-import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 
@@ -18,10 +16,6 @@ const Features = () => {
     }[]
   >([]);
   const svgRef = useRef<SVGSVGElement>(null);
-  const [hoveredIndexLeft, setHoveredIndexLeft] = useState<number | null>(null);
-  const [hoveredIndexRight, setHoveredIndexRight] = useState<number | null>(
-    null,
-  );
 
   useEffect(() => {
     const updateLines = () => {

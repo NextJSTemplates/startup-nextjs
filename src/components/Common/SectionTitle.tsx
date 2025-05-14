@@ -14,8 +14,8 @@ const SectionTitle = ({
         return "w-[80%] sm:w-[66%] md:w-[30%]";
       case "50%":
         return "w-[80%] sm:w-[50%";
-      case "70%":
-        return "w-[86%]  sm:w-5/6 md:w-[70%]";
+      case "80%":
+        return "w-[90%]  sm:w-[84%] md:w-[80%]";
       case "100%":
         return "w-full";
       default:

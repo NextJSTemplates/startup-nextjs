@@ -28,39 +28,36 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
       ref={refSetter}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
       <div className="flex justify-between">
         <div className="flex gap-2">
           <Image
             src={card.icon}
-            alt={`${card.title} icon`}
-            width={24}
-            height={24}
+            alt={`${card.icon} icon`}
+            width={10}
+            height={10}
             className="h-6 w-6"
           />
           <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
         </div>
         <ExternalLink className="h-5 w-5" />
       </div>
-
       <p className="text-sm text-gray-700">{card.text}</p>
+
       {hovered && (
-        <div className="absolute z-10 mt-4 w-full rounded-md border-t border-gray-100 bg-white p-4 shadow-lg">
+        <div className="-translate-y-4 p-4 absolute mt-4 w-full rounded-md border-t bg-white shadow-lg">
           <div>
             {card.stack.map((stack, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-4 rounded-md px-2 py-1 text-xs"
-              >
+              <div key={i} className="flex gap-4 rounded-md px-2 py-1 text-xs">
                 <Image
                   src={stack.icon}
-                  alt={`${stack.title} logo`}
-                  width={24}
-                  height={24}
+                  alt="Stack Logo"
+                  width={10}
+                  height={10}
                   className="h-6 w-6"
                 />
-                <h3 className="text-sm">{stack.title}</h3>
+                <h3 className="mb-2 text-sm">{stack.title}</h3>
               </div>
             ))}
           </div>

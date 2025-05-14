@@ -14,11 +14,9 @@ const Footer = () => {
       <footer className="bg-gradient-to-br from-black via-black to-neutral-500 px-8 pt-16 pb-8 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-10">
           <div className="flex flex-col justify-between sm:flex-row">
-            <div className="">
-              <h3 className="mb-6 text-2xl font-bold md:text-4xl">
+              <h3 className="mb-6 text-xl font-bold md:text-2xl lg:text-4xl">
                 Let&apos;s Grow Together
               </h3>
-            </div>
             <div>
               <Link
                 href="#"
@@ -83,7 +81,7 @@ const Footer = () => {
                   height={10}
                   className="h-16 w-16"
                 />
-                <p className="text-2xl font-bold text-white">
+                <p className="text-md font-bold text-white md:text-xl lg:text-2xl">
                   Classy Endeavours
                 </p>
               </div>
@@ -101,7 +99,7 @@ const Footer = () => {
                 <ExternalLink className="h-4 w-4 text-black" />
               </Link>
             </div>
-            <div className="text-[13px]">
+            <div className="text-[12px] md:text-[13px]">
               <h4 className="mb-4 font-semibold">QUICK LINKS</h4>
               <ul className="space-y-2">
                 <li>About</li>
@@ -112,7 +110,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="text-[13px]">
+            <div className="text-[12px] md:text-[13px]">
               <h4 className="mb-4 font-semibold">CORE SERVICES</h4>
               <ul className="space-y-2">
                 <li>AI/ML Development</li>
@@ -128,16 +126,16 @@ const Footer = () => {
         </div>
       </footer>
       <div className="border-t border-white bg-black">
-        <div className=" mx-auto max-w-7xl flex items-center justify-between text-xs text-white p-6">
-        <p>© 2008–2025 · Classy Endeavors · All Rights Reserved</p>
-        <div className="flex gap-6">
-          <a href="#">FAQs</a>
-          <a href="#">Privacy Policy</a>
-        </div>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between p-6 text-xs text-white md:flex-row">
+          <p>© 2008–2025 · Classy Endeavors · All Rights Reserved</p>
+          <div className="flex gap-6 pt-2 md:pt-0">
+            <a href="#">FAQs</a>
+            <a href="#">Privacy Policy</a>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default Footer
+export default Footer;

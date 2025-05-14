@@ -106,7 +106,7 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <svg
           ref={svgRef}
-          className="pointer-events-none absolute top-0 left-0 hidden h-full w-full lg:block"
+          className="pointer-events-none absolute top-0 left-0 hidden h-full w-full md:block"
           style={{ zIndex: 1 }}
         >
           <defs>
@@ -160,7 +160,7 @@ const Features = () => {
         </svg>
 
         <div className="relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-16 md:grid-cols-2">
-          <div className="flex flex-col gap-12 lg:translate-y-12">
+          <div className="flex flex-col gap-12 md:translate-y-12">
             {leftCards.map((card, idx) => (
               <SingleFeature
                 key={`left-${idx}`}
@@ -171,7 +171,7 @@ const Features = () => {
             ))}
           </div>
 
-          <div className="flex flex-col gap-12 lg:-translate-y-12">
+          <div className="flex flex-col gap-12 md:-translate-y-12">
             {rightCards.map((card, idx) => (
               <SingleFeature
                 key={`right-${idx}`}

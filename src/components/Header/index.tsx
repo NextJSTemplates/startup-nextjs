@@ -36,19 +36,21 @@ const Header = () => {
 
   return (
     <>
-      <header className=" left-1/2 -translate-x-1/2 w-[90%] bg-gray-dark/30 shadow-sticky fixed z-9999 mt-6 rounded-full border border-white  text-center backdrop-blur-xs transition">
+      <header className="bg-gray-dark/30 shadow-sticky fixed left-1/2 z-9999 mt-6 w-[90%] -translate-x-1/2 rounded-full border border-white text-center backdrop-blur-xs transition">
         <div className="container">
           <div className="relative flex items-center justify-between px-4">
-            <div className="px-4 xl:mr-12 lg:w-[25%]">
-              <Link href="/" className="flex gap-2 header-logo w-full py-2">
+            <div className="px-4 lg:w-[25%] xl:mr-12">
+              <Link href="/" className="header-logo flex w-full gap-2 py-2">
                 <Image
                   src="/logo.png"
                   alt="logo"
                   width={20}
                   height={20}
-                  className="w-10 h-10"
+                  className="h-12 w-12"
                 />
-                <p className="font-semibold text-sm mt-2.5 text-white hidden lg:block">Classy Endeavors</p>
+                <p className="mt-2.5 hidden text-sm font-semibold text-white lg:block">
+                  Classy Endeavors
+                </p>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -57,7 +59,7 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className=" absolute top-1/2 right-4 block translate-y-[-50%] rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden text-white"
+                  className="absolute top-1/2 right-4 block translate-y-[-50%] rounded-lg px-3 py-[6px] text-white focus:ring-2 lg:hidden"
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 ${
@@ -79,7 +81,7 @@ const Header = () => {
                   id="navbarCollapse"
                   className={`navbar border-body-color/50 absolute right-0 z-30 w-[250px] rounded border-[.5px] px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
-                      ? "visibility top-full opacity-100"
+                      ? "visibility top-full opacity-100 bg-gray-dark/30 backdrop-blur-xs transition rounded-xl"
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
@@ -101,7 +103,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="text-white/70 flex cursor-pointer items-center justify-between py-2 text-sm lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className="flex cursor-pointer items-center justify-between py-2 text-sm text-white/70 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -116,7 +118,7 @@ const Header = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu text-start relative top-full left-0 rounded-sm bg-transparent border border-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu relative top-full left-0 rounded-sm border border-white text-start transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
@@ -124,7 +126,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="block hover:bg-white/10 rounded-sm py-2.5 text-sm px-3 text-white/70"
+                                  className="block rounded-sm px-3 py-2.5 text-sm text-white/70 hover:bg-white/10"
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -140,7 +142,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
-                  className="text-sm text-black bg-white rounded-full hidden px-6 py-2 font-semibold hover:opacity-70 md:block"
+                  className="hidden rounded-full bg-white px-6 py-2 text-sm font-semibold text-black hover:opacity-70 md:block"
                 >
                   Get A Free Quote
                 </Link>

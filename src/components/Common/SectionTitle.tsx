@@ -1,13 +1,12 @@
 const SectionTitle = ({
   title,
   width = "30%",
-  className = ""
+  className = "",
 }: {
   title: string;
   width?: string;
   className?: string;
 }) => {
-
   const calculateWidthClass = (width: string) => {
     switch (width) {
       case "30%":
@@ -15,7 +14,7 @@ const SectionTitle = ({
       case "50%":
         return "w-[80%] sm:w-[50%";
       case "80%":
-        return "w-[90%]  sm:w-[84%] md:w-[80%]";
+        return "w-[94%]  sm:w-[88%] md:w-[86%] lg:w-[80%]";
       case "100%":
         return "w-full";
       default:
@@ -25,9 +24,9 @@ const SectionTitle = ({
 
   return (
     <div
-      className={`mb-12 rounded-se-[70px] bg-black py-6 text-center text-white shadow-md ${calculateWidthClass(width)} ${className}`}
+      className={`mb-12 rounded-se-[70px] bg-black px-8 py-6 text-start md:text-center text-white shadow-md ${calculateWidthClass(width)} ${className}`}
     >
-      <h2 className="text-[14px] font-bold leading-tight sm:text-xl md:text-2xl">
+      <h2 className="text-[14px] leading-tight font-bold sm:text-xl md:text-2xl">
         {title}
       </h2>
     </div>

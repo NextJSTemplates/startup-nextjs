@@ -5,6 +5,7 @@ import { FlipWords } from "../ui/flip-words";
 import { Button } from "../ui/moving-border";
 import { teamMembers } from "./heroData";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const teamOne = teamMembers.slice(0, teamMembers.length / 2);
 const teamTwo = teamMembers.slice(teamMembers.length / 2);
@@ -61,12 +62,12 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.2 }}
-                  className="text-md mb-6 max-w-2xl leading-tight font-extrabold sm:text-lg md:text-xl lg:text-4xl"
+                  className="text-md mb-6 max-w-2xl leading-tight font-extrabold sm:text-lg md:text-xl lg:text-6xl"
                 >
                   We Build{" "}
                   <FlipWords
                     words={words}
-                    className="inline-block text-white font-bold"
+                    className="inline-block font-bold text-white"
                   />{" "}
                   Software
                 </motion.h1>
@@ -135,9 +136,7 @@ export const Hero = () => {
                   <div
                     key={colIndex}
                     className={`flex flex-col items-center space-y-6 ${
-                      colIndex === 0
-                        ? "-translate-y-6"
-                        : "translate-y-6"
+                      colIndex === 0 ? "-translate-y-6" : "translate-y-6"
                     }`}
                   >
                     {team.map((member, index) => {
@@ -163,14 +162,23 @@ export const Hero = () => {
                             delay: 0.1 * index,
                             ease: "easeOut",
                           }}
-                          className={`transform ${bounceClass} ${xTranslate} overflow-hidden rounded-xl border border-white bg-transparent p-4 shadow-2xl backdrop-blur-[4px]`}
+                          className={`transform ${bounceClass} ${xTranslate} h-50 overflow-hidden rounded-xl border border-white bg-transparent p-4 shadow-2xl backdrop-blur-[4px]`}
                         >
-                          <img
-                            src={member.image}
-                            alt={member.name}
-                            className="rounded-lg"
-                          />
-                          <p className="-translate-y-4 rounded-b-lg bg-black p-3 text-center text-[13px] font-medium text-white md:text-[10px] lg:text-[13px]">
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="flex justify-center"
+                          >
+                            <Image
+                              src={member.image}
+                              alt={member.name}
+                              width={400}
+                              height={50}
+                              className="h-35 rounded-lg object-cover shadow-lg transition duration-300 hover:scale-[1.03]"
+                            />
+                          </motion.div>
+                          <p className="rounded-b-lg bg-black p-2 text-center text-[12px] font-medium text-white md:text-[10px] lg:text-[12px]">
                             {member.name}
                           </p>
                         </motion.div>
@@ -191,8 +199,11 @@ export const Hero = () => {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="flex w-full justify-center rounded-md lg:justify-end"
       >
-        <div className="z-10 flex -translate-y-2 items-center gap-2 rounded-xs bg-white px-6 py-4 text-[13px] font-bold text-black shadow-xl">
-          <p>AR/VR</p> -<p>Mobile Apps</p> -<p>Artificial Intelligence</p> -<p>Software Engineering</p>
+        <div className="bg-black ps-2 z-20 -translate-y-6">
+          <div className="z-10 flex translate-y-2 items-center gap-2 rounded-xs bg-white px-6 py-4 text-[13px] font-bold text-black shadow-xl">
+            <p>AR/VR</p> -<p>Mobile Apps</p> -<p>Artificial Intelligence</p> -
+            <p>Software Engineering</p>
+          </div>
         </div>
       </motion.div>
     </>

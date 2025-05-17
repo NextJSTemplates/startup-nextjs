@@ -101,7 +101,7 @@ const Features = () => {
     <section id="features" className="relative z-10 py-16 md:pt-20 lg:pt-24">
       <SectionTitle
         title="Amazing technologies, helpful for your business"
-        width="80%"
+        width="70%"
       />
       <div className="container mx-auto px-4">
         <svg

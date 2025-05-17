@@ -39,7 +39,7 @@ const ScrollableServices: FC = () => {
   return (
     <section id="services" className="relative z-10 pt-24">
       <SectionTitle
-        title="Boosting business growth with our specialized expertise and innovative solutions"
+        title="Your Partner for Custom Apps, Automation & Seamless Support"
         width="80%"
       />
 

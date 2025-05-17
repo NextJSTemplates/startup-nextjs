@@ -162,7 +162,7 @@ export const Hero = () => {
                             delay: 0.1 * index,
                             ease: "easeOut",
                           }}
-                          className={`transform ${bounceClass} ${xTranslate} h-55 overflow-hidden rounded-xl border border-neutral-400 bg-transparent p-4 shadow-2xl backdrop-blur-[4px]`}
+                          className={`transform ${bounceClass} ${xTranslate} h-60 overflow-hidden rounded-xl border border-neutral-400 bg-transparent p-4 shadow-2xl backdrop-blur-[4px]`}
                         >
                           <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -175,7 +175,7 @@ export const Hero = () => {
                               alt={member.name}
                               width={400}
                               height={50}
-                              className="h-40 rounded-lg object-cover shadow-lg transition duration-300 hover:scale-[1.03]"
+                              className="h-45 rounded-lg object-cover shadow-lg transition duration-300 hover:scale-[1.03]"
                             />
                           </motion.div>
                           <p className="-translate-y-2 rounded-b-lg bg-black p-2 text-center text-[12px] font-medium text-white md:text-[10px] lg:text-[12px]">

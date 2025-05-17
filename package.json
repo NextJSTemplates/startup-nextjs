@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.33.0",
     "@tailwindcss/postcss": "^4.1.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "eslint": "^9.24.0",
     "eslint-config-next": "15.1.6",
+    "framer-motion": "^12.12.1",
     "lucide-react": "^0.510.0",
+    "motion": "^12.12.1",
     "next": "^15.3.0",
     "next-themes": "^0.2.1",
     "postcss": "^8.5.3",

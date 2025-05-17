@@ -46,7 +46,7 @@ const ScrollableServices: FC = () => {
       <div className="w-full px-4 sm:px-6">
         <div
           ref={scrollRef}
-          className="hide-scrollbar flex w-full max-w-6xl gap-6 overflow-x-auto pb-6 lg:mx-auto"
+          className="hide-scrollbar flex w-full max-w-7xl gap-6 overflow-x-auto pb-6 lg:mx-auto"
           style={{
             scrollBehavior: "smooth",
             touchAction: "pan-y",

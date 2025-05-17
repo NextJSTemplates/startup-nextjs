@@ -135,7 +135,7 @@ const Features = () => {
         </svg>
 
         <div className="relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-16 md:grid-cols-2">
-          <div className="flex flex-col gap-12 md:translate-y-12">
+          <div className="flex flex-col gap-12 md:translate-y-6">
             {leftCards.map((card, idx) => (
               <SingleFeature
                 key={`left-${idx}`}

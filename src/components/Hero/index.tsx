@@ -34,9 +34,9 @@ export const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-[url('/images/hero/background.svg')] bg-cover bg-center pt-[120px] pb-8 md:pt-[160px] md:pb-[16px] xl:pt-[180px] xl:pb-[90px] 2xl:pt-[180px] 2xl:pb-[80px]"
+        className="relative z-10 overflow-hidden lg:h-screen bg-[url('/images/hero/background.svg')] bg-cover bg-center pt-[160px] pb-24 md:pt-[160px] md:pb-[32px] xl:pt-[160px] xl:pb-[60px] 2xl:pt-[180px] 2xl:pb-[80px]"
       >
-        <div className="relative z-10 container mx-auto max-w-6xl px-4">
+        <div className="relative z-10 container mx-auto md:max-w-8xl lg:max-w-6xl px-6">
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-0">
             <div className="w-full lg:col-span-2">
               <motion.div
@@ -62,7 +62,7 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.2 }}
-                  className="text-md mb-6 max-w-2xl leading-tight font-extrabold sm:text-lg md:text-xl lg:text-6xl"
+                  className="mb-6 max-w-2xl leading-tight font-extrabold sm:text-lg md:text-4xl lg:text-6xl"
                 >
                   We Build{" "}
                   <FlipWords
@@ -76,7 +76,7 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
-                  className="mb-8 w-full max-w-sm text-[13px] sm:text-[14px] md:max-w-md lg:max-w-xl"
+                  className="mb-8 w-full max-w-sm text-[13px] sm:text-[15px] md:max-w-md lg:max-w-xl"
                 >
                   Certified software experts blending precision and creativity
                   to deliver powerful, affordable solutions tailored to your
@@ -120,7 +120,7 @@ export const Hero = () => {
                     >
                       <Button
                         borderRadius="1.75rem"
-                        className="border-neutral-200 bg-transparent px-4 text-[13px] font-bold text-white dark:border-slate-800 dark:bg-slate-900 dark:text-white"
+                        className="border-neutral-400 bg-transparent px-4 text-[13px] font-bold text-white dark:border-slate-800 dark:bg-slate-900 dark:text-white"
                       >
                         {btn.label} {btn.icon}
                       </Button>
@@ -162,7 +162,7 @@ export const Hero = () => {
                             delay: 0.1 * index,
                             ease: "easeOut",
                           }}
-                          className={`transform ${bounceClass} ${xTranslate} h-50 overflow-hidden rounded-xl border border-white bg-transparent p-4 shadow-2xl backdrop-blur-[4px]`}
+                          className={`transform ${bounceClass} ${xTranslate} h-55 overflow-hidden rounded-xl border border-neutral-400 bg-transparent p-4 shadow-2xl backdrop-blur-[4px]`}
                         >
                           <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -175,10 +175,10 @@ export const Hero = () => {
                               alt={member.name}
                               width={400}
                               height={50}
-                              className="h-35 rounded-lg object-cover shadow-lg transition duration-300 hover:scale-[1.03]"
+                              className="h-40 rounded-lg object-cover shadow-lg transition duration-300 hover:scale-[1.03]"
                             />
                           </motion.div>
-                          <p className="rounded-b-lg bg-black p-2 text-center text-[12px] font-medium text-white md:text-[10px] lg:text-[12px]">
+                          <p className="-translate-y-2 rounded-b-lg bg-black p-2 text-center text-[12px] font-medium text-white md:text-[10px] lg:text-[12px]">
                             {member.name}
                           </p>
                         </motion.div>
@@ -193,7 +193,7 @@ export const Hero = () => {
       </section>
 
       {/* Tech strip bottom animation */}
-      <motion.div
+      {/* <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
@@ -205,7 +205,7 @@ export const Hero = () => {
             <p>Software Engineering</p>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </>
   );
 };

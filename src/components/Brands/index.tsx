@@ -1,29 +1,38 @@
+"use client"
+
 import { Brand } from "@/types/brand";
 import Image from "next/image";
 import brandsData from "./brandsData";
 import { Marquee } from "../magicui/marquee";
+import { motion } from "framer-motion";
 
 const Brands = () => {
   return (
     <section className="relative z-10 pt-24">
-      <div className="container">
-        <h2 className="mb-16 text-center text-2xl font-bold text-black sm:text-3xl">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
+        className="container"
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
+          className="mb-16 text-center text-2xl font-bold text-black sm:text-3xl"
+        >
           With help from the biggest companies
-        </h2>
+        </motion.h2>
         <BrandsScrollable />
-      </div>
+      </motion.div>
     </section>
   );
 };
 
 export default Brands;
 
-const BrandCard = ({
-  brand
-}: {
- brand: Brand
-}) => {
-  const image = brand.image
+const BrandCard = ({ brand }: { brand: Brand }) => {
+  const image = brand.image;
 
   return (
     <figure className="hover:animate-zoomIn relative h-full cursor-pointer overflow-hidden rounded-xl">
@@ -33,7 +42,13 @@ const BrandCard = ({
         rel="nofollow noreferrer"
         className="relative w-full opacity-70 transition hover:scale-[1.05] hover:opacity-100"
       >
-        <Image src={image} alt="Brand" className="block" width={160} height={160}/>
+        <Image
+          src={image}
+          alt="Brand"
+          className="block"
+          width={160}
+          height={160}
+        />
       </a>
     </figure>
   );

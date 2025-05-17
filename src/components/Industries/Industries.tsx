@@ -132,7 +132,7 @@ const Industries = () => {
                   variants={flipVariant}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="rounded-lg bg-white p-4 text-start text-black shadow transition hover:scale-[1.05] duration-200"
                 >
                   <p className="text-xl font-extrabold md:text-2xl">{value}</p>

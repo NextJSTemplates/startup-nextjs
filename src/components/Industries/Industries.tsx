@@ -11,11 +11,11 @@ const Industries = () => {
   const current = industriesData[industry];
 
   const flipVariant = {
-    hidden: { rotateY: 90, opacity: 0 },
+    hidden: { rotateY: 100, opacity: 0 },
     visible: (i: number) => ({
       rotateY: 0,
       opacity: 1,
-      transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" },
+      transition: { delay: i * 0.3, duration: 0.8, ease: "easeIn" },
     }),
   };
 
@@ -98,12 +98,11 @@ const Industries = () => {
         </AnimatePresence>
       </motion.div>
 
-      {/* More Than 5 Years Section */}
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
-        className="mt-20 bg-gradient-to-br from-black via-black to-neutral-500 px-8 py-12 text-white"
+        viewport={{ once: false }}
+        className="mt-20 bg-gradient-to-br from-black via-black to-neutral-600 px-8 py-12 text-white"
       >
         <div className="container mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
           <motion.div
@@ -115,7 +114,7 @@ const Industries = () => {
             <h3 className="max-w-md text-3xl leading-snug font-bold">
               More Than 5 Years In The Game And We&apos;re Just Getting Started.
             </h3>
-            <p className="max-w-md text-sm text-gray-300">
+            <p className="max-w-md text-sm text-white/90">
               We are on a mission to build a brand with the goal of providing
               quality IT development. Our team takes every project like it’s our
               first and works on it like specialists. With 5+ years of
@@ -133,8 +132,8 @@ const Industries = () => {
                   variants={flipVariant}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
-                  className="rounded-lg bg-white p-4 text-start text-black shadow transition hover:scale-105"
+                  viewport={{ once: false }}
+                  className="rounded-lg bg-white p-4 text-start text-black shadow transition hover:scale-[1.05] duration-200"
                 >
                   <p className="text-xl font-extrabold md:text-2xl">{value}</p>
                   <p className="mt-1 text-sm">{label}</p>

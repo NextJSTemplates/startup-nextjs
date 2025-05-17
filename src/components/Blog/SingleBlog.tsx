@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import { Blog } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { image, tag, title, publishDate } = blog;
+  const { paragraph, tag, title, publishDate } = blog;
 
   return (
     <motion.div
@@ -14,24 +14,34 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       whileHover={{ scale: 1.02 }}
-      className="pt-6 shadow-lg rounded-md text-start"
+      className="overflow-clip rounded-xl bg-[url('/images/hero/background.svg')] bg-cover bg-center pt-6 text-start shadow-lg"
     >
-      <div className="text-sm font-extrabold text-black mb-2 px-6 uppercase">
-        {tag}
+      <div className="h-80 flex flex-col items-center justify-center">
+        <div className="mb-2 px-6 text-sm font-extrabold text-white uppercase">
+          {tag}
+        </div>
+        <div className="mb-8 px-6 text-xs font-extrabold text-white">
+          {publishDate}
+        </div>
+
+        <h3 className="mb-8 h-20 max-h-90 max-w-sm px-6 text-center text-2xl leading-snug font-extrabold text-white">
+          <Link href="/blog-details">{title}</Link>
+        </h3>
       </div>
-      <div className="text-xs text-gray-500 font-extrabold mb-6 px-6">{publishDate}</div>
 
-      <h3 className="text-lg font-extrabold text-black mb-8 leading-snug px-6 max-w-sm h-20 max-h-80">
-        <Link href="/blog-details">{title}</Link>
-      </h3>
-
-      <div className="relative w-full aspect-square overflow-hidden rounded-t-full h-60">
-        <Image
-          src={image}
-          alt="Blog image"
-          fill
-          className="object-cover rounded-b-md"
-        />
+      <div className="relative flex h-45 w-full flex-col gap-4 bg-black p-4">
+        <div className="flex gap-2">
+          <Image
+            src="/images/testimonials/auth-01.png"
+            alt="Author"
+            width={36}
+            height={36}
+            className="h-8 w-8 rounded-full"
+          />
+          <h1 className="pt-2 text-sm text-[12px] text-white/70">Manu Arora</h1>
+        </div>
+        <h1 className="text-sm font-bold text-white">{title}</h1>
+        <p className="text-[12px] text-white/70">{paragraph}</p>
       </div>
     </motion.div>
   );

@@ -36,7 +36,7 @@ export const Hero = () => {
         id="home"
         className="relative z-10 overflow-hidden lg:h-screen bg-[url('/images/hero/background.svg')] bg-cover bg-center pt-[160px] pb-24 md:pt-[160px] md:pb-[32px] xl:pt-[160px] xl:pb-[60px] 2xl:pt-[180px] 2xl:pb-[80px]"
       >
-        <div className="relative z-10 container mx-auto md:max-w-8xl lg:max-w-6xl px-6">
+        <div className="relative z-10 container mx-auto md:max-w-8xl lg:max-w-7xl px-6">
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-0">
             <div className="w-full lg:col-span-2">
               <motion.div

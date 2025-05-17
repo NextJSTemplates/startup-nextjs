@@ -10,7 +10,7 @@ const Blog = () => {
       <SectionTitle title="Latest Blogs" />
 
       <motion.div
-        className="container mx-auto max-w-6xl"
+        className="container mx-auto max-w-7xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

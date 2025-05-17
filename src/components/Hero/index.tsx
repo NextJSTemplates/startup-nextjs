@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { FlipWords } from "../ui/flip-words";
@@ -15,29 +15,44 @@ export const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden pt-[120px] pb-8 md:pt-[160px] md:pb-[16px] xl:pt-[180px] xl:pb-[90px] 2xl:pt-[180px] 2xl:pb-[80px] bg-[url('/images/hero/background.svg')] bg-cover bg-center"
+        className="relative z-10 overflow-hidden bg-[url('/images/hero/background.svg')] bg-cover bg-center pt-[120px] pb-8 md:pt-[160px] md:pb-[16px] xl:pt-[180px] xl:pb-[90px] 2xl:pt-[180px] 2xl:pb-[80px]"
       >
         <div className="relative z-10 container mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-0">
             <div className="w-full lg:col-span-2">
-              <div
-                className="text-white mx-auto max-w-[900px]"
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="mx-auto max-w-[900px] text-white"
               >
                 <motion.h5
-                initial={{ }}
-                 className="mb-6 text-[13.5px] font-bold tracking-widest uppercase">
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7 }}
+                  className="mb-6 text-[13.5px] font-bold tracking-widest uppercase"
+                >
                   Empower. Innovate. Transform
                 </motion.h5>
-                <h1 className="text-md mb-6 max-w-2xl leading-tight font-extrabold sm:text-lg md:text-xl lg:text-4xl">
-                  We Build [Scalable | Secure | Intelligent ]
-                  Software
-                </h1>
-                <p className="mb-8 w-full max-w-sm text-[13px] sm:text-[14px] md:max-w-md lg:max-w-xl">
+                <motion.h1
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.2 }}
+                  className="text-md mb-6 max-w-2xl leading-tight font-extrabold sm:text-lg md:text-xl lg:text-4xl"
+                >
+                  We Build [Scalable | Secure | Intelligent ] Software
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="mb-8 w-full max-w-sm text-[13px] sm:text-[14px] md:max-w-md lg:max-w-xl"
+                >
                   Certified software experts blending precision and creativity
                   to deliver powerful, affordable solutions tailored to your
                   business.. End-to-end development, seamless integration, and
                   ongoing support — all at unmatched value.
-                </p>
+                </motion.p>
                 <div className="flex flex-wrap gap-4">
                   <Button
                     borderRadius="1.75rem"
@@ -61,7 +76,7 @@ export const Hero = () => {
                     <ArrowRight className="ml-1.5 h-4 w-4" />
                   </Button>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             <div className="relative mt-6 w-full md:mt-0">
@@ -135,7 +150,7 @@ export const Hero = () => {
         </div>
       </section>
       <div className="flex w-full justify-center rounded-md lg:justify-end">
-        <div className="z-10 flex items-center gap-2 rounded-xs bg-white px-6 py-4 text-[13px] font-bold text-black shadow-xl -translate-y-2">
+        <div className="z-10 flex -translate-y-2 items-center gap-2 rounded-xs bg-white px-6 py-4 text-[13px] font-bold text-black shadow-xl">
           <p>AR/VR</p> -<p>Mobile Apps</p> -<p>Artificial Intelligence</p> -
           <p>Software Engineering</p>
         </div>
@@ -143,4 +158,3 @@ export const Hero = () => {
     </>
   );
 };
-

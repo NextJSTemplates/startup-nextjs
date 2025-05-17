@@ -36,13 +36,13 @@ const Industries = () => {
             <p className="text-sm leading-relaxed text-gray-700">
               {current.description}
             </p>
-            <button className="mt-8 rounded-full border border-black px-4 py-2 text-xs font-medium transition hover:bg-black hover:text-white">
+            <button className="mt-8 rounded-full border border-black px-4 py-2 text-sm font-medium transition hover:bg-black hover:text-white">
               Get A Free Quote
             </button>
           </div>
           <div className="flex justify-center">
             <Image
-              src="/images/about/ecommerce.svg"
+              src={current.image}
               alt={`${industry} Image`}
               width={400}
               height={300}
@@ -88,10 +88,11 @@ const Industries = () => {
               ["20+", "Countries"],
               ["10+", "AI & IoT Solutions"],
               ["10+", "Blockchain"],
-            ].map(([value, label]) => (
+            ].map(([value, label], index) => (
               <div
                 key={label}
-                className="rounded-lg bg-white p-4 text-start font-bold text-black shadow transition hover:scale-105"
+                className="rounded-lg bg-white p-4 text-start font-bold text-black shadow transition hover:scale-105 flip-in"
+                style={{ animationDelay: `${index * 0.1}s`}}
               >
                 <p className="text-xl font-extrabold md:text-2xl">{value}</p>
                 <p className="mt-1 text-sm">{label}</p>
@@ -105,3 +106,67 @@ const Industries = () => {
 };
 
 export default Industries;
+
+
+// @keyframes flipIn {
+//   0% {
+//     transform: rotateY(90deg);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: rotateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// .flip-in {
+//   animation: flipIn 0.6s ease-out both;
+//   transform-style: preserve-3d;
+//   backface-visibility: hidden;
+// }
+
+
+{/* <div className="grid grid-cols-2 gap-6">
+  {[
+    ["5+", "Years of Experience"],
+    ["50+", "Developers"],
+    ["100+", "Happy Clients"],
+    ["20+", "Countries"],
+    ["10+", "AI & IoT Solutions"],
+    ["10+", "Blockchain"],
+  ].map(([value, label], index) => (
+    <div
+      key={label}
+      className={`rounded-lg bg-white p-4 text-start font-bold text-black shadow transition hover:scale-105 flip-in`}
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <p className="text-xl font-extrabold md:text-2xl">{value}</p>
+      <p className="mt-1 text-sm">{label}</p>
+    </div>
+  ))}
+</div> */}
+
+
+// tailwind.config.js
+// module.exports = {
+//   theme: {
+//     extend: {
+//       keyframes: {
+//         flipIn: {
+//           '0%': {
+//             transform: 'rotateY(90deg)',
+//             opacity: '0',
+//           },
+//           '100%': {
+//             transform: 'rotateY(0)',
+//             opacity: '1',
+//           },
+//         },
+//       },
+//       animation: {
+//         'flip-in': 'flipIn 0.6s ease-out both',
+//       },
+//     },
+//   },
+// };
+

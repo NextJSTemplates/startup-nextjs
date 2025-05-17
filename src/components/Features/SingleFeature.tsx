@@ -28,7 +28,7 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
       ref={refSetter}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="relative rounded-md bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
       <div className="flex justify-between">
         <div className="flex gap-2">
@@ -43,26 +43,32 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
         </div>
         <ExternalLink className="h-5 w-5" />
       </div>
+
       <p className="text-sm text-gray-700">{card.text}</p>
 
-      {hovered && (
-        <div className="-translate-y-4 p-4 absolute mt-4 w-full rounded-md border-t bg-white shadow-lg">
-          <div>
-            {card.stack.map((stack, i) => (
-              <div key={i} className="flex gap-4 rounded-md px-2 py-1 text-xs">
-                <Image
-                  src={stack.icon}
-                  alt="Stack Logo"
-                  width={10}
-                  height={10}
-                  className="h-6 w-6"
-                />
-                <h3 className="mb-2 text-sm">{stack.title}</h3>
-              </div>
-            ))}
-          </div>
+      <div
+        className={`transition-all duration-300 mt-4 overflow-hidden ${
+          hovered ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="rounded-md border-t pt-4 bg-white">
+          {card.stack.map((stack, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-4 rounded-md px-2 py-1 text-xs"
+            >
+              <Image
+                src={stack.icon}
+                alt="Stack Logo"
+                width={10}
+                height={10}
+                className="h-6 w-6"
+              />
+              <h3 className="text-sm">{stack.title}</h3>
+            </div>
+          ))}
         </div>
-      )}
+      </div>
     </div>
   );
 };

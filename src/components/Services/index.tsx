@@ -1,12 +1,43 @@
-import { FC } from "react";
+"use client";
+import { FC, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import SectionTitle from "../Common/SectionTitle";
 import { services } from "./serviceData";
 import Image from "next/image";
 
 const ScrollableServices: FC = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const scrollStep = container.offsetWidth * 0.7;
+    let scrollPos = 0;
+
+    const scroll = () => {
+      if (!container) return;
+
+      scrollPos += scrollStep;
+
+      if (scrollPos >= container.scrollWidth / 2) {
+        scrollPos = 0;
+        container.scrollLeft = 0;
+      }
+
+      container.scrollTo({
+        left: scrollPos,
+        behavior: "smooth",
+      });
+    };
+
+    const interval = setInterval(scroll, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="services" className="relative z-10 pt-16">
+    <section id="services" className="relative z-10 pt-24">
       <SectionTitle
         title="Boosting business growth with our specialized expertise and innovative solutions"
         width="80%"
@@ -14,10 +45,15 @@ const ScrollableServices: FC = () => {
 
       <div className="w-full px-4 sm:px-6">
         <div
-          className="hide-scrollbar lg:mx-auto flex w-full max-w-6xl snap-x snap-mandatory gap-6 overflow-x-auto pb-6"
-          style={{ scrollBehavior: "smooth", touchAction: "pan-y" }}
+          ref={scrollRef}
+          className="hide-scrollbar flex w-full max-w-6xl gap-6 overflow-x-auto pb-6 lg:mx-auto"
+          style={{
+            scrollBehavior: "smooth",
+            touchAction: "pan-y",
+            whiteSpace: "nowrap",
+          }}
         >
-          {services.map((service, index) => (
+          {[...services].map((service, index) => (
             <div
               key={index}
               className="flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-br from-black via-black to-neutral-500 px-6 py-6 text-white shadow-lg sm:min-w-[320px] lg:min-w-[320px]"

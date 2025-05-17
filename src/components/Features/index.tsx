@@ -116,47 +116,22 @@ const Features = () => {
             </linearGradient>
           </defs>
 
-          {lines.map((line, idx) => {
-            if (line.type === "curved") {
-              // Calculationss for S-curve
-              const midX = (line.x1 + line.x2) / 2;
-              const controlPoint1X = line.x1 + (midX - line.x1) * 4;
-              const controlPoint1Y = line.y1 + 10;
-              const controlPoint2X = line.x2 - (line.x2 - midX) * 4;
-              const controlPoint2Y = line.y2 - 10;
-
-              // SVG path for S-curve
-              const path = `M ${line.x1} ${line.y1} C ${controlPoint1X} ${controlPoint1Y}, ${controlPoint2X} ${controlPoint2Y}, ${line.x2} ${line.y2}`;
-
-              return (
-                <path
-                  key={`curve-${idx}`}
-                  d={path}
-                  fill="none"
-                  stroke="url(#lineGradient)"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  opacity="0.7"
-                />
-              );
-            } else {
-              // Dashed vertical
-              return (
-                <line
-                  key={`vert-${idx}`}
-                  x1={line.x1}
-                  y1={line.y1}
-                  x2={line.x2}
-                  y2={line.y2}
-                  stroke="#000000"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  opacity="0.8"
-                  strokeDasharray="6,4"
-                />
-              );
-            }
-          })}
+          {lines
+            .filter((line) => line.type === "vertical")
+            .map((line, idx) => (
+              <line
+                key={`vert-${idx}`}
+                x1={line.x1}
+                y1={line.y1}
+                x2={line.x2}
+                y2={line.y2}
+                stroke="#000000"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                opacity="0.8"
+                strokeDasharray="6,4"
+              />
+            ))}
         </svg>
 
         <div className="relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-16 md:grid-cols-2">

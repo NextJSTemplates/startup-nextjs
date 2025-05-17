@@ -2,7 +2,7 @@ import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
-import Hero from "@/components/Hero";
+import { Hero } from "@/components/Hero";
 import Industries from "@/components/Industries/Industries";
 import ScrollableServices from "@/components/Services";
 import Testimonials from "@/components/Testimonials";

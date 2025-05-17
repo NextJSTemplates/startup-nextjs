@@ -1,3 +1,6 @@
+"use client"
+import { motion, MotionConfig } from "framer-motion";
+
 const SectionTitle = ({
   title,
   width = "30%",
@@ -25,13 +28,16 @@ const SectionTitle = ({
   };
 
   return (
-    <div
+    <motion.div
+    initial={{ opacity: 0}}
+    whileInView={{ opacity: 1}}
+    transition={{ duration: 0.8, delay: 0.2}}
       className={`mb-12 rounded-se-[70px] bg-black px-8 py-6 text-start text-white shadow-md md:text-center ${calculateWidthClass(width)} ${className}`}
     >
       <h2 className="text-[14px] leading-tight font-bold sm:text-xl md:text-2xl">
         {title}
       </h2>
-    </div>
+    </motion.div>
   );
 };
 

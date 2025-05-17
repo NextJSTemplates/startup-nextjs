@@ -38,14 +38,14 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative rounded-md bg-white p-6 shadow-lg"
+      className="relative rounded-md p-6 shadow-lg"
     >
-      <div className="flex justify-between items-start">
+      <div className="flex items-start justify-between">
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          className="flex gap-2 items-center"
+          className="flex items-center gap-2"
         >
           <Image
             src={card.icon}
@@ -56,10 +56,10 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
           />
           <h3 className="text-lg font-semibold">{card.title}</h3>
         </motion.div>
-        <ExternalLink className="h-5 w-5 text-gray-500" />
+        <ExternalLink className="h-5 w-5 text-black" />
       </div>
 
-      <p className="mt-2 text-sm text-gray-700">{card.text}</p>
+      <p className="mt-2 text-sm text-black">{card.text}</p>
 
       <AnimatePresence>
         {hovered && (
@@ -68,9 +68,9 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="overflow-hidden mt-4"
+            className="mt-4 overflow-hidden"
           >
-            <div className="rounded-md border-t pt-4 bg-white space-y-2">
+            <div className="space-y-2 rounded-md border-t pt-4">
               {card.stack.map((stack, i) => (
                 <motion.div
                   key={i}

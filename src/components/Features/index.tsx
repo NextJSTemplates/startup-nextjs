@@ -20,19 +20,12 @@ const Features = () => {
 
   useEffect(() => {
     const updateLines = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 768 || !svgRef.current) {
         setLines([]);
         return;
       }
-      const newLines: {
-        type: "curved" | "vertical";
-        x1: number;
-        y1: number;
-        x2: number;
-        y2: number;
-      }[] = [];
 
-      if (!svgRef.current) return;
+      const newLines: typeof lines = [];
       const svgRect = svgRef.current.getBoundingClientRect();
       const svgTop = svgRect.top + window.scrollY;
       const svgLeft = svgRect.left;
@@ -86,14 +79,30 @@ const Features = () => {
       setLines(newLines);
     };
 
-    updateLines();
-
     window.addEventListener("resize", updateLines);
     window.addEventListener("scroll", updateLines);
+
+    const observers: ResizeObserver[] = [];
+
+    const observeElements = (refs: (HTMLDivElement | null)[]) => {
+      refs.forEach((el) => {
+        if (el) {
+          const observer = new ResizeObserver(() => {
+            updateLines();
+          });
+          observer.observe(el);
+          observers.push(observer);
+        }
+      });
+    };
+
+    observeElements(leftRefs.current);
+    observeElements(rightRefs.current);
 
     return () => {
       window.removeEventListener("resize", updateLines);
       window.removeEventListener("scroll", updateLines);
+      observers.forEach((observer) => observer.disconnect());
     };
   }, []);
 
@@ -136,23 +145,23 @@ const Features = () => {
 
         <div className="relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-16 md:grid-cols-2">
           <div className="flex flex-col gap-12 md:translate-y-6">
-            {leftCards.map((card, idx) => (
+            {leftCards.map((card, index) => (
               <SingleFeature
-                key={`left-${idx}`}
+                key={`left-${index}`}
                 card={card}
-                index={idx}
-                refSetter={(el) => (leftRefs.current[idx] = el)}
+                index={index}
+                refSetter={(el) => (leftRefs.current[index] = el)}
               />
             ))}
           </div>
 
           <div className="flex flex-col gap-12 md:-translate-y-12">
-            {rightCards.map((card, idx) => (
+            {rightCards.map((card, index) => (
               <SingleFeature
-                key={`right-${idx}`}
+                key={`right-${index}`}
                 card={card}
-                index={idx}
-                refSetter={(el) => (rightRefs.current[idx] = el)}
+                index={index}
+                refSetter={(el) => (rightRefs.current[index] = el)}
               />
             ))}
           </div>

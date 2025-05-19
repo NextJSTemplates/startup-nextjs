@@ -59,7 +59,7 @@ const ScrollableServices: FC = () => {
               className="flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-br from-black via-black to-neutral-500 px-6 py-6 text-white shadow-md sm:min-w-[320px] lg:min-w-[320px]"
             >
               <div>
-                <h3 className="mb-8 font-semibold">{service.title}</h3>
+                <h3 className="mt-4 mb-8 font-bold">{service.title}</h3>
                 <ul className="space-y-6 text-sm text-white/90">
                   {service.items.map((item, i) => (
                     <li key={i} className="flex items-center gap-4">
@@ -68,7 +68,7 @@ const ScrollableServices: FC = () => {
                         alt="logo"
                         width={10}
                         height={10}
-                        className="h-4 w-4"
+                        className="h-5 w-5"
                       />
                       <span>{item.desc}</span>
                     </li>

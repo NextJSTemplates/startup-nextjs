@@ -46,9 +46,9 @@ export const Hero = () => {
           )}
         />
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-        <div className="md:max-w-8xl relative z-10 container mx-auto px-6 lg:max-w-6xl">
-          <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-0">
-            <div className="w-full lg:col-span-2">
+        <div className="md:max-w-8xl relative z-10 container mx-auto lg:max-w-6xl">
+          <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
+            <div className="w-full ">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -72,7 +72,7 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.2 }}
-                  className="mb-6 max-w-2xl leading-tight font-extrabold text-3xl md:text-4xl lg:text-6xl"
+                  className="mb-6 max-w-2xl leading-tight font-extrabold text-3xl md:text-4xl lg:text-5xl"
                 >
                   We Build{" "}
                   <FlipWords
@@ -130,7 +130,7 @@ export const Hero = () => {
                     >
                       <Button
                         borderRadius="1.75rem"
-                        className="border-neutral-400 bg-white dark:bg-black px-4 text-[13px] font-bold text-black dark:text-white dark:border-slate-800"
+                        className="border-neutral-400 bg-white dark:bg-black px-4 text-[12px] font-bold text-black dark:text-white dark:border-slate-800"
                       >
                         {btn.label} {btn.icon}
                       </Button>
@@ -141,7 +141,7 @@ export const Hero = () => {
             </div>
 
             <div className="relative mt-6 w-full md:mt-0">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-12 lg:gap-8 px-4">
                 {[teamOne, teamTwo].map((team, colIndex) => (
                   <div
                     key={colIndex}
@@ -172,7 +172,7 @@ export const Hero = () => {
                             delay: 0.1 * index,
                             ease: "easeOut",
                           }}
-                          className={`transform ${bounceClass} ${xTranslate} h-60 overflow-hidden rounded-xl border border-neutral-250 bg-transparent p-4 shadow-lg backdrop-blur-[2px]`}
+                          className={`transform ${bounceClass} ${xTranslate} h-60 w-full md:w-45 lg:w-60 overflow-hidden rounded-xl border border-neutral-250 bg-transparent p-4 shadow-lg backdrop-blur-[2px]`}
                         >
                           <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -183,9 +183,9 @@ export const Hero = () => {
                             <Image
                               src={member.image}
                               alt={member.name}
-                              width={400}
+                              width={200}
                               height={50}
-                              className="h-45 rounded-lg object-cover shadow-lg transition duration-300 hover:scale-[1.05]"
+                              className="h-45 w-full md:w-80 sm:w-90 rounded-lg object-cover shadow-lg"
                             />
                           </motion.div>
                           <p className="-translate-y-2 rounded-b-lg bg-black p-2 text-center text-[12px] font-medium text-white md:text-[10px] lg:text-[12px]">

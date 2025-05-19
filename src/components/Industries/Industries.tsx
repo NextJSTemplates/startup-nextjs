@@ -102,7 +102,7 @@ const Industries = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="mt-20 bg-gradient-to-br from-black via-black to-neutral-600 px-8 py-12 text-white"
+        className="mt-20 bg-[url('/images/hero/background.svg')] bg-cover bg-center px-8 py-16 text-white"
       >
         <div className="container mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
           <motion.div
@@ -133,7 +133,7 @@ const Industries = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="rounded-lg bg-white p-4 text-start text-black shadow transition hover:scale-[1.05] duration-200"
+                  className="rounded-lg bg-white/95 p-4 text-start text-black transition hover:scale-[1.05] duration-200"
                 >
                   <p className="text-xl font-extrabold md:text-2xl">{value}</p>
                   <p className="mt-1 text-sm">{label}</p>
@@ -142,7 +142,6 @@ const Industries = () => {
             </div>
           </motion.div>
 
-          {/* Flip-in animated stats */}
           <div className="grid grid-cols-2 gap-6">
             {[
               ["5+", "Years of Experience"],
@@ -159,7 +158,7 @@ const Industries = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="rounded-lg bg-white p-4 text-start font-bold text-black shadow transition hover:scale-105"
+                className="rounded-lg bg-white/95 p-4 text-start font-bold text-black transition hover:scale-[1.05]"
               >
                 <p className="text-xl font-extrabold md:text-2xl">{value}</p>
                 <p className="mt-1 text-sm">{label}</p>

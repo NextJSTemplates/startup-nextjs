@@ -11,12 +11,12 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <section className="relative z-10">
-      <footer className="bg-gradient-to-br from-black via-black to-neutral-500 px-8 pt-16 pb-8 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-10">
+      <footer className="relative bg-gradient-to-br from-black via-black to-neutral-500 px-8 pt-16 text-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10 pb-12">
           <div className="flex flex-col justify-between sm:flex-row">
-              <h3 className="mb-6 text-xl font-bold md:text-2xl lg:text-4xl">
-                Let&apos;s Grow Together
-              </h3>
+            <h3 className="mb-6 text-xl font-bold md:text-2xl lg:text-4xl">
+              Let&apos;s Grow Together
+            </h3>
             <div>
               <Link
                 href="#"
@@ -124,16 +124,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
-      <div className="border-t border-white bg-black">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between p-6 text-xs text-white md:flex-row">
-          <p>© 2008–2025 · Classy Endeavors · All Rights Reserved</p>
-          <div className="flex gap-6 pt-2 md:pt-0">
-            <a href="#">FAQs</a>
-            <a href="#">Privacy Policy</a>
+        <div className="border-t border-neutral-500">
+          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between p-6 text-xs text-white md:flex-row">
+            <p>© 2008–2025 · Classy Endeavors · All Rights Reserved</p>
+            <div className="flex gap-6 pt-2 md:pt-0">
+              <a href="#">FAQs</a>
+              <a href="#">Privacy Policy</a>
+            </div>
           </div>
         </div>
-      </div>
+      </footer>
     </section>
   );
 };

@@ -6,6 +6,7 @@ import { Button } from "../ui/moving-border";
 import { teamMembers } from "./heroData";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const teamOne = teamMembers.slice(0, teamMembers.length / 2);
 const teamTwo = teamMembers.slice(teamMembers.length / 2);
@@ -34,16 +35,25 @@ export const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden lg:h-screen bg-[url('/images/hero/background.svg')] bg-cover bg-center pt-[160px] pb-24 md:pt-[160px] md:pb-[32px] xl:pt-[160px] xl:pb-[60px] 2xl:pt-[180px] 2xl:pb-[80px]"
+        className="relative z-10 overflow-hidden pt-[160px] pb-24 md:pt-[160px] md:pb-[32px] lg:h-screen xl:pt-[160px] xl:pb-[60px] 2xl:pt-[180px] 2xl:pb-[80px]"
       >
-        <div className="relative z-10 container mx-auto md:max-w-8xl lg:max-w-7xl px-6">
+        <div
+          className={cn(
+            "absolute inset-0",
+            "[background-size:20px_20px]",
+            "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+            "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
+          )}
+        />
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+        <div className="md:max-w-8xl relative z-10 container mx-auto px-6 lg:max-w-7xl">
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-0">
             <div className="w-full lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="mx-auto max-w-[900px] text-white"
+                className="mx-auto max-w-[900px] text-black dark:text-white"
               >
                 <motion.div
                   variants={staggerWords}
@@ -62,12 +72,12 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.2 }}
-                  className="mb-6 max-w-2xl leading-tight font-extrabold sm:text-lg md:text-4xl lg:text-6xl"
+                  className="mb-6 max-w-2xl leading-tight font-extrabold text-3xl md:text-4xl lg:text-6xl"
                 >
                   We Build{" "}
                   <FlipWords
                     words={words}
-                    className="inline-block font-bold text-white"
+                    className="inline-block font-bold text-black dark:text-white"
                   />{" "}
                   Software
                 </motion.h1>
@@ -76,7 +86,7 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
-                  className="mb-8 w-full max-w-sm text-[13px] sm:text-[15px] md:max-w-md lg:max-w-xl"
+                  className="mb-8 w-full max-w-sm text-[13px] sm:text-[15px] md:max-w-md lg:max-w-xl text-black dark:text-white"
                 >
                   Certified software experts blending precision and creativity
                   to deliver powerful, affordable solutions tailored to your
@@ -120,7 +130,7 @@ export const Hero = () => {
                     >
                       <Button
                         borderRadius="1.75rem"
-                        className="border-neutral-400 bg-transparent px-4 text-[13px] font-bold text-white dark:border-slate-800 dark:bg-slate-900 dark:text-white"
+                        className="border-neutral-400 bg-white dark:bg-black px-4 text-[13px] font-bold text-black dark:text-white dark:border-slate-800"
                       >
                         {btn.label} {btn.icon}
                       </Button>
@@ -131,7 +141,7 @@ export const Hero = () => {
             </div>
 
             <div className="relative mt-6 w-full md:mt-0">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-6">
                 {[teamOne, teamTwo].map((team, colIndex) => (
                   <div
                     key={colIndex}
@@ -162,7 +172,7 @@ export const Hero = () => {
                             delay: 0.1 * index,
                             ease: "easeOut",
                           }}
-                          className={`transform ${bounceClass} ${xTranslate} h-60 overflow-hidden rounded-xl border border-neutral-400 bg-transparent p-4 shadow-2xl backdrop-blur-[4px]`}
+                          className={`transform ${bounceClass} ${xTranslate} h-60 overflow-hidden rounded-xl border border-neutral-250 bg-transparent p-4 shadow-lg backdrop-blur-[3px]`}
                         >
                           <motion.div
                             initial={{ opacity: 0, y: 10 }}

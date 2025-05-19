@@ -38,7 +38,7 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative rounded-md p-6 shadow-lg"
+      className="relative rounded-md p-6 shadow-md"
     >
       <div className="flex items-start justify-between">
         <motion.div

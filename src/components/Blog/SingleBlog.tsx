@@ -14,7 +14,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       whileHover={{ scale: 1.02 }}
-      className="overflow-clip rounded-xl bg-[url('/images/hero/background.svg')] bg-cover bg-center pt-6 text-start shadow-lg"
+      className="overflow-clip rounded-xl bg-[url('/images/hero/background.svg')] bg-cover bg-center border backdrop-blur-sm pt-6 text-start shadow-xl"
     >
       <div className="h-80 flex flex-col items-center justify-center">
         <div className="mb-2 px-6 text-sm font-extrabold text-white uppercase">

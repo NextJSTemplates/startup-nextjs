@@ -17,7 +17,7 @@ const ReviewCard = ({
   const starCount = 5;
 
   return (
-    <figure className="hover:animate-zoomIn relative h-full w-90 cursor-pointer overflow-hidden rounded-xl p-6 shadow-md">
+    <figure className="relative h-full w-90 cursor-pointer overflow-hidden rounded-xl p-6 shadow-md">
       <div className="flex justify-between">
         <div className="flex flex-row items-center gap-2">
           <Image

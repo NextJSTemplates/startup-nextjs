@@ -91,7 +91,7 @@ const Industries = () => {
                 alt={`${industry} Image`}
                 width={400}
                 height={500}
-                className="rounded-lg object-cover shadow-lg h-70 hover:scale-[1.03] transition duration-300"
+                className="rounded-lg object-cover shadow-xl h-70 hover:scale-[1.03] transition duration-300"
               />
             </motion.div>
           </motion.div>
@@ -133,7 +133,7 @@ const Industries = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="rounded-lg bg-white/95 p-4 text-start text-black transition hover:scale-[1.05] duration-200"
+                  className="rounded-lg bg-white p-4 text-start text-black transition hover:scale-[1.05] duration-200"
                 >
                   <p className="text-xl font-extrabold md:text-2xl">{value}</p>
                   <p className="mt-1 text-sm">{label}</p>
@@ -158,7 +158,7 @@ const Industries = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="rounded-lg bg-white/95 p-4 text-start font-bold text-black transition hover:scale-[1.05]"
+                className="rounded-lg bg-white p-4 text-start font-bold text-black transition hover:scale-[1.05] duration-200"
               >
                 <p className="text-xl font-extrabold md:text-2xl">{value}</p>
                 <p className="mt-1 text-sm">{label}</p>

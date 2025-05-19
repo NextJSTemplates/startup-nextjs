@@ -56,7 +56,7 @@ const ScrollableServices: FC = () => {
           {[...services].map((service, index) => (
             <div
               key={index}
-              className="flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-br from-black via-black to-neutral-500 px-6 py-6 text-white shadow-lg sm:min-w-[320px] lg:min-w-[320px]"
+              className="flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-br from-black via-black to-neutral-500 px-6 py-6 text-white shadow-md sm:min-w-[320px] lg:min-w-[320px]"
             >
               <div>
                 <h3 className="mb-8 font-semibold">{service.title}</h3>

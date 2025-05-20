@@ -36,10 +36,10 @@ const Industries = () => {
             <button
               key={item}
               onClick={() => setIndustry(item)}
-              className={`cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition ${
+              className={`cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition hover:scale-[1.05] ${
                 item === industry
-                  ? "bg-neutral-300 text-black"
-                  : "border-neutral-200 text-black hover:bg-neutral-200"
+                  ? "bg-neutral-200 text-black/90"
+                  : "border-neutral-200 text-black/90 hover:bg-neutral-200"
               }`}
             >
               {item}
@@ -54,7 +54,7 @@ const Industries = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 items-center gap-6 px-8 pt-12 md:grid-cols-2"
+            className="grid grid-cols-1 items-center gap-6 px-8 pt-12 md:grid-cols-2 lg:gap-0"
           >
             <div>
               <motion.h3
@@ -77,7 +77,7 @@ const Industries = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
-                className="mt-8 rounded-full border border-black px-4 py-2 text-sm font-medium transition duration-200 hover:scale-[1.05] hover:bg-black hover:text-white"
+                className="mt-8 rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium transition duration-200 hover:scale-[1.05] hover:bg-neutral-200"
               >
                 Get A Free Quote
               </motion.button>
@@ -88,13 +88,15 @@ const Industries = () => {
               transition={{ duration: 0.3 }}
               className="flex justify-center"
             >
-              <Image
-                src={current.image}
-                alt={`${industry} Image`}
-                width={400}
-                height={500}
-                className="h-70 rounded-lg object-cover shadow-xl transition duration-300 hover:scale-[1.03]"
-              />
+              <div className="rounded-lg bg-gradient-to-br from-neutral-200 via-neutral-100 to-neutral-200 p-[6px]">
+                <Image
+                  src={current.image}
+                  alt={`${industry} Image`}
+                  width={400}
+                  height={500}
+                  className="h-90 rounded-lg object-cover shadow-xl transition duration-300"
+                />
+              </div>
             </motion.div>
           </motion.div>
         </AnimatePresence>
@@ -154,27 +156,27 @@ const Industries = () => {
                   "Blockchain Projects Including DApps and Integrations",
                 ],
               ].map(([value, image, label], index) => (
-                <motion.div
-                  key={label}
-                  custom={index}
-                  variants={flipVariant}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  className="relative flex flex-col overflow-hidden rounded-sm bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950"
-                >
-                  <Grid size={20} />
-                  <div className="flex items-center gap-2">
-                    <div className="rounded-md bg-black p-3">
-                      <ChartBar className="h-5 w-5 text-white" />
-                    </div>
+                  <motion.div
+                    key={label}
+                    custom={index}
+                    variants={flipVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="relative flex flex-col overflow-hidden rounded-sm bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950"
+                  >
+                    <Grid size={20} />
+                    <div className="flex items-center gap-2">
+                      <div className="rounded-md bg-black p-3">
+                        <ChartBar className="h-5 w-5 text-white" />
+                      </div>
 
-                    <p className="text-2xl font-bold">{value}</p>
-                  </div>
-                  <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
-                    {label}
-                  </p>
-                </motion.div>
+                      <p className="text-2xl font-bold">{value}</p>
+                    </div>
+                    <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+                      {label}
+                    </p>
+                  </motion.div>
               ))}
             </div>
           </motion.div>

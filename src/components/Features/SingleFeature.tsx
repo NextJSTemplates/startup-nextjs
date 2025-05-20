@@ -3,6 +3,7 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Grid } from "../Industries/Grid";
 
 type StackItem = {
   title: string;
@@ -38,8 +39,9 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative rounded-md p-6 shadow-md"
+      className="relative overflow-hidden rounded-sm bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950"
     >
+
       <div className="flex items-start justify-between">
         <motion.div
           initial={{ opacity: 0, x: -10 }}

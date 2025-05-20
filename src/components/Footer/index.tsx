@@ -1,48 +1,20 @@
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+"use client";
+
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
   return (
     <section className="relative z-10">
-      <footer className="relative bg-gradient-to-br from-black via-black to-neutral-500 px-8 pt-16 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-10 pb-12">
-          {/* <div className="flex flex-col justify-between sm:flex-row">
-            <h3 className="mb-6 text-xl font-bold md:text-2xl lg:text-4xl">
-              Let&apos;s Grow Together
-            </h3>
-            <div>
-              <Link
-                href="#"
-                className="text-dark flex w-fit gap-2 rounded-full bg-white px-6 py-2.5 text-[13px] font-semibold dark:text-white/70 dark:hover:text-white"
-              >
-                Contact Us
-                <ExternalLink className="h-4 w-4 text-black" />
-              </Link>
-            </div>
-          </div> */}
+      <footer className="relative z-10 bg-gradient-to-br from-black via-black to-neutral-500 px-8 pt-16 text-white">
+        <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+          <span className="text-[160px] leading-none font-bold text-neutral-100/10 select-none">
+            Classy Endeavors
+          </span>
+        </div>
+
+        <div className="z-1 mx-auto flex max-w-7xl flex-col gap-10 pb-12">
           <div className="gris-cols-1 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {/* <div className="flex flex-col gap-4 text-[13px] font-semibold">
-              <p>10001, Park Run Drive Las Vegas, NV USA – 89145</p>
-              <p className="text-white underline">+702/907-5006</p>
-            </div> */}
-            {/* <div className="flex flex-col gap-4 text-[13px] font-semibold">
-              <Image
-                src="images/footer/india.svg"
-                alt="logo"
-                width={100}
-                height={100}
-              />
-              <p className="max-w-xs">
-                Plot No 228, JLPL Industrial Area Sector 82, Mohali India –
-                140308
-              </p>
-              <p className="underline">+91-98554-85133</p>
-            </div> */}
             <div className="flex gap-2">
               <div>
                 <Image

@@ -89,7 +89,7 @@ const Industries = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="relative flex flex-col overflow-hidden rounded-sm bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950"
+                    className="relative flex flex-col overflow-hidden rounded-md bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950"
                   >
                     <Grid size={20} />
                     <div className="flex items-center gap-2">

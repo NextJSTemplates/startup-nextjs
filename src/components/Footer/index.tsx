@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <section className="relative z-10">
-      <footer className="via-blac/90 relative z-10 bg-gradient-to-br from-black to-neutral-500 px-8 pt-20 md: lg:pb-48 text-white">
+      <footer className="via-blac/90 relative z-10 bg-gradient-to-br from-black to-neutral-500 px-8 pt-20 md: lg:pb-42 text-white">
         <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center text-center overflow-hidden">
           <span className="translate-y-48 text-[120px] md:text-[130px] lg:text-[160px] leading-none font-bold text-neutral-100/10 select-none">
             Classy Endeavors
@@ -23,9 +23,9 @@ const Footer = () => {
                     alt="logo"
                     width={10}
                     height={10}
-                    className="h-16 w-16"
+                    className="h-14 w-14"
                   />
-                  <p className="text-md font-bold text-white md:text-xl lg:text-2xl">
+                  <p className="text-md font-bold text-white md:text-xl lg:text-4xl">
                     Classy Endeavours
                   </p>
                 </div>

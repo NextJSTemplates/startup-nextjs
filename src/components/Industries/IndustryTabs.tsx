@@ -9,18 +9,18 @@ export const IndustryTabs = () => {
     description: value.description,
     value: key.toLowerCase().replace(/\s+/g, "-"),
     content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 bg-gradient-to-b from-neutral-200 to-transparent">
+      <div className="relative h-full w-full overflow-hidden rounded-2xl bg-gradient-to-b from-neutral-200 via-white to-neutral-100 p-10">
         <IndustryImage image={value.image} />
       </div>
     ),
   }));
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-6">
+    <div className="relative mx-auto my-6 flex h-[20rem] w-full max-w-5xl flex-col items-start justify-start [perspective:1000px] md:h-[40rem]">
       <Tabs tabs={tabs} />
     </div>
   );
-}
+};
 
 const IndustryImage = ({ image }: { image: string }) => {
   return (
@@ -29,7 +29,7 @@ const IndustryImage = ({ image }: { image: string }) => {
       alt="Industry Image"
       width="1000"
       height="1000"
-      className="object-cover object-left-top h-[90%] absolute -bottom-4 inset-x-0 w-[90%] rounded-xl mx-auto"
+      className="absolute inset-x-0 -bottom-4 mx-auto h-[90%] w-[90%] rounded-xl object-cover object-left-top"
     />
   );
 };

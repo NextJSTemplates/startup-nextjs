@@ -37,7 +37,7 @@ const Header = () => {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary" className="rounded-full bg-neutral-300 shadow-none text-[13px]">Get A Free Quote</NavbarButton>
+            <NavbarButton variant="primary" className="rounded-full  bg-gradient-to-b from-neutral-200 via-white to-neutral-200 shadow-none text-[13px]">Get A Free Quote</NavbarButton>
           </div>
         </NavBody>
 

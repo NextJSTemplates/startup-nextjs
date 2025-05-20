@@ -19,11 +19,11 @@ export const Reviews = () => {
   return (
     <div className="relative flex flex-col items-center justify-center overflow-hidden px-12 py-48">
       <div className="pointer-events-none absolute inset-0 mx-auto w-full max-w-7xl overflow-x-visible px-10">
-        <div className="mx-auto grid scale-[1.05] grid-cols-1 gap-6 opacity-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mx-auto grid scale-[1.05] grid-cols-1 gap-6 opacity-25 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="rounded-xl border bg-neutral-200 p-6 shadow"
+              className="rounded-xl border bg-neutral-100 p-6 shadow"
             >
               <p className="line-clamp-4 text-xs font-medium text-gray-800">
                 {review.body}
@@ -44,7 +44,7 @@ export const Reviews = () => {
       </div>
 
       <div className="relative z-30 max-w-7xl px-4 text-center">
-        <div className="absolute -top-16 left-1/2 z-0 w-80 h-88 sm:h-96 sm:w-96 -translate-x-1/2 rounded-full border-none bg-gradient-to-b from-neutral-200 via-white/30 to-transparent"></div>
+        <div className="absolute -top-16 left-1/2 z-0 w-80 h-88 sm:h-96 sm:w-96 -translate-x-1/2 rounded-full border-none bg-gradient-to-b from-neutral-200 via-white/50 to-transparent"></div>
         <div className="relative z-10 flex flex-col items-center">
           <Image
             src={activeReview.img}

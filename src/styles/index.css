@@ -130,6 +130,17 @@ layer(base);
   backface-visibility: hidden;
 }
 
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
 @utility sticky {
   & .header-logo {
     @apply py-5 lg:py-2;

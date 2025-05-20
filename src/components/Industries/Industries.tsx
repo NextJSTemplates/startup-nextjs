@@ -7,6 +7,7 @@ import { industriesData } from "./industriesData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid } from "./Grid";
 import { ChartBar } from "lucide-react";
+import { IndustryTabs } from "./IndustryTabs";
 
 const Industries = () => {
   const [industry, setIndustry] = useState("E-Commerce");
@@ -25,88 +26,13 @@ const Industries = () => {
     <section className="relative z-10 py-16 md:pt-20 lg:pt-24">
       <SectionTitle title="Industries We Serve" />
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.2 }}
-        className="container mx-auto max-w-6xl"
-      >
-        <motion.div className="mt-6 flex flex-wrap gap-4 px-8">
-          {Object.keys(industriesData).map((item) => (
-            <button
-              key={item}
-              onClick={() => setIndustry(item)}
-              className={`cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition hover:scale-[1.05] ${
-                item === industry
-                  ? "bg-neutral-200 text-black/90"
-                  : "border-neutral-200 text-black/90 hover:bg-neutral-200"
-              }`}
-            >
-              {item}
-            </button>
-          ))}
-        </motion.div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={industry}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 items-center gap-6 px-8 pt-12 md:grid-cols-2 lg:gap-0"
-          >
-            <div>
-              <motion.h3
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className="mb-6 text-xl font-bold"
-              >
-                {industry}
-              </motion.h3>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="text-sm leading-relaxed text-black"
-              >
-                {current.description}
-              </motion.p>
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.2 }}
-                className="mt-8 rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium transition duration-200 hover:scale-[1.05] hover:bg-neutral-200"
-              >
-                Get A Free Quote
-              </motion.button>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="flex justify-center"
-            >
-              <div className="rounded-lg bg-gradient-to-br from-neutral-200 via-neutral-100 to-neutral-200 p-[6px]">
-                <Image
-                  src={current.image}
-                  alt={`${industry} Image`}
-                  width={400}
-                  height={500}
-                  className="h-90 rounded-lg object-cover shadow-xl transition duration-300"
-                />
-              </div>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
-      </motion.div>
+      <IndustryTabs />
 
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto mt-20 max-w-7xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-16 text-black"
+        className="container mx-auto mt-32 max-w-7xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-16 text-black"
       >
         <div className="container mx-auto flex max-w-6xl flex-col gap-4">
           <motion.div

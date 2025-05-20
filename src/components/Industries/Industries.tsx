@@ -32,7 +32,7 @@ const Industries = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto mt-32 max-w-7xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-16 text-black"
+        className="container mx-auto mt-32 max-w-7xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-12 text-black"
       >
         <div className="container mx-auto flex max-w-6xl flex-col gap-4">
           <motion.div

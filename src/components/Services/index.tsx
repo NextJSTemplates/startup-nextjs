@@ -76,7 +76,7 @@ const ScrollableServices: FC = () => {
                 </ul>
               </div>
               <div className="mt-24">
-                <button className="flex items-center gap-2 rounded-full bg-neutral-200 px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90">
+                <button className="flex cursor-pointer items-center gap-2 rounded-full bg-neutral-200 px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90">
                   Explore More <ArrowRight size={14} />
                 </button>
               </div>

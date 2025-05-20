@@ -16,7 +16,7 @@ export const Grid = ({
   ];
   return (
     <div className="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-      <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-white/50 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100 dark:from-zinc-900/30 dark:to-zinc-900/30">
+      <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-white/20 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100 dark:from-zinc-900/30 dark:to-zinc-900/30">
         <GridPattern
           width={size ?? 20}
           height={size ?? 20}

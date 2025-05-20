@@ -56,10 +56,10 @@ const ScrollableServices: FC = () => {
           {[...services].map((service, index) => (
             <div
               key={index}
-              className="flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-2xl bg-gradient-to-b from-neutral-100 via-neutral-100 to-transparent px-6 py-6 text-white shadow-md sm:min-w-[320px] lg:min-w-[320px]"
+              className="flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-sm bg-gradient-to-b from-neutral-100 via-neutral-100 to-transparent px-6 py-6 text-white shadow-sm sm:min-w-[320px] lg:min-w-[320px]"
             >
               <div>
-                <h3 className="mt-4 mb-8 font-bold text-black">{service.title}</h3>
+                <h3 className="mt-4 mb-8 font-semibold text-black">{service.title}</h3>
                 <ul className="space-y-6 text-sm text-black/90">
                   {service.items.map((item, i) => (
                     <li key={i} className="flex items-center gap-4">
@@ -76,7 +76,7 @@ const ScrollableServices: FC = () => {
                 </ul>
               </div>
               <div className="mt-24">
-                <button className="flex cursor-pointer items-center gap-2 rounded-full bg-neutral-200 px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90">
+                <button className="flex cursor-pointer items-center gap-2 rounded-full bg-neutral-200 px-6 py-3 text-sm font-medium text-black transition hover:opacity-90">
                   Explore More <ArrowRight size={14} />
                 </button>
               </div>

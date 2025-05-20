@@ -9,7 +9,7 @@ export const IndustryTabs = () => {
     description: value.description,
     value: key.toLowerCase().replace(/\s+/g, "-"),
     content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-b from-neutral-200 to-transparent">
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 bg-gradient-to-b from-neutral-200 to-transparent">
         <IndustryImage image={value.image} />
       </div>
     ),
@@ -29,7 +29,7 @@ const IndustryImage = ({ image }: { image: string }) => {
       alt="Industry Image"
       width="1000"
       height="1000"
-      className="object-cover object-left-top h-[60%] md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+      className="object-cover object-left-top h-[90%] absolute -bottom-4 inset-x-0 w-[90%] rounded-xl mx-auto"
     />
   );
 };

@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useId, useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import { industriesData } from "./industriesData";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, Code, Globe, Users } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { GridPattern } from "../magicui/grid-pattern";
+import { Grid } from "./Grid";
 
 const Industries = () => {
   const [industry, setIndustry] = useState("E-Commerce");
@@ -126,9 +124,17 @@ const Industries = () => {
             </p>
             <div className="grid grid-cols-2 gap-6">
               {[
-                ["40+", "Websites Designed"],
-                ["100+", "Apps Approved"],
-              ].map(([value, label], index) => (
+                [
+                  "5+",
+                  "/images/features/chip.svg",
+                  "Years of Industry Expertise Delivering Tech Solutions",
+                ],
+                [
+                  "50+",
+                  "/images/features/code.svg",
+                  "Experienced Developers Specializing in Modern Stacks",
+                ],
+              ].map(([value, image, label], index) => (
                 <motion.div
                   key={label}
                   custom={index}
@@ -136,10 +142,22 @@ const Industries = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="rounded-lg bg-white/60 p-6 text-start text-black shadow-sm backdrop-blur-sm transition duration-200 hover:scale-[1.05]"
+                  className="relative flex flex-col overflow-hidden rounded-sm shadow-sm bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 dark:from-neutral-900 dark:to-neutral-950"
                 >
-                  <p className="text-xl font-bold md:text-2xl">{value}</p>
-                  <p className="mt-1 text-sm">{label}</p>
+                  <Grid size={20} />
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src={image}
+                      alt="Image"
+                      width={24}
+                      height={24}
+                      className="h-7 w-7"
+                    />
+                    <p className="text-xl font-bold">{value}</p>
+                  </div>
+                  <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+                    {label}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -147,47 +165,51 @@ const Industries = () => {
 
           <div className="grid grid-cols-2 gap-6">
             {[
-              ["5+", "/images/features/chip.svg", "Years of Experience"],
-              ["50+", "/images/features/code.svg", "Developers"],
-              ["100+", "/images/features/vr.svg", "Happy Clients"],
-              ["20+", "/images/features/cloud.svg", "Countries"],
-              ["10+", "/images/features/chip.svg", "AI & IoT Solutions"],
-              ["10+", "/images/features/android.svg", "Blockchain"],
+              [
+                "100+",
+                "/images/features/vr.svg",
+                "Happy Clients Served Across Diverse Industries",
+              ],
+              [
+                "20+",
+                "/images/features/cloud.svg",
+                "Countries with Successful Project Deployments",
+              ],
+              [
+                "10+",
+                "/images/features/chip.svg",
+                "Custom AI & IoT Solutions Tailored to Business Needs",
+              ],
+              [
+                "10+",
+                "/images/features/android.svg",
+                "Blockchain Projects Including DApps and Integrations",
+              ],
             ].map(([value, image, label], index) => (
-              <motion.div
-                key={label}
-                custom={index}
-                variants={flipVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="relative overflow-hidden rounded-lg bg-white/60 p-4 text-start text-black shadow-sm backdrop-blur-sm transition duration-200 hover:scale-[1.05]"
-              >
-                <div className="pointer-events-none absolute top-0 right-0 h-24 w-24">
-                  <GridPattern
-                    width={20}
-                    height={20}
-                    x={-1}
-                    y={-1}
-                    className={cn(
-                      "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]",
-                    )}
-                  />
-                </div>
-
-                {/* Card Content */}
-                <div className="flex items-center gap-2">
-                  <Image
-                    src={image}
-                    alt="Image"
-                    width={24}
-                    height={24}
-                    className="h-7 w-7"
-                  />
-                  <p className="text-xl font-bold">{value}</p>
-                </div>
-                <p className="mt-1 text-sm">{label}</p>
-              </motion.div>
+                <motion.div
+                  key={label}
+                  custom={index}
+                  variants={flipVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="relative flex flex-col overflow-hidden rounded-sm shadow-sm bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 dark:from-neutral-900 dark:to-neutral-950"
+                >
+                  <Grid size={20} />
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src={image}
+                      alt="Image"
+                      width={24}
+                      height={24}
+                      className="h-7 w-7"
+                    />
+                    <p className="text-xl font-bold">{value}</p>
+                  </div>
+                  <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+                    {label}
+                  </p>
+                </motion.div>
             ))}
           </div>
         </div>

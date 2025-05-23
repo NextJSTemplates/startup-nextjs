@@ -1,7 +1,9 @@
 import { Service } from "@/types/service";
+import { Bot, Cloud, Globe, Hospital, Lock, Settings, ShoppingCart } from "lucide-react";
 
 export const services: Service[] = [
   {
+    icon: Lock,
     title: "Software Security",
     items: [
       {
@@ -31,6 +33,7 @@ export const services: Service[] = [
     ],
   },
   {
+    icon: Bot,  
     title: "Integrate And AI Model",
     items: [
       {
@@ -60,6 +63,7 @@ export const services: Service[] = [
     ],
   },
   {
+    icon: Globe,
     title: "Intermodal Saas Solutions",
     items: [
       {
@@ -89,7 +93,8 @@ export const services: Service[] = [
     ],
   },
     {
-    title: "Software Security",
+    icon: ShoppingCart,
+    title: "Scalable E-commerce",
     items: [
       {
         icon: "/images/services/softwaresec/Android app development.svg",
@@ -118,7 +123,8 @@ export const services: Service[] = [
     ],
   },
   {
-    title: "Integrate And AI Model",
+    icon: Cloud,
+    title: "Cloud Computing",
     items: [
       {
         icon: "/images/services/aimodel/Cross-platform experience design.svg",
@@ -147,7 +153,8 @@ export const services: Service[] = [
     ],
   },
   {
-    title: "Intermodal Saas Solutions",
+    icon: Hospital,
+    title: "HIPAA Compliance Software",
     items: [
       {
         icon: "/images/services/saas/Search Engine Optimisation.svg",

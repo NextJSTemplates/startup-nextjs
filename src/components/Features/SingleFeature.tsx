@@ -3,7 +3,6 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Grid } from "../Industries/Grid";
 
 type StackItem = {
   title: string;

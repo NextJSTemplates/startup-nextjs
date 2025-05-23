@@ -1,185 +1,138 @@
+import {
+  Bot,
+  Cloud,
+  Globe,
+  Hospital,
+  Lock,
+  PenTool,
+  Rocket,
+  ShieldCheck,
+  Fingerprint,
+  Bug,
+  FileCode,
+  FileWarning,
+  RotateCcw,
+  Speech,
+  LineChart,
+  MessageCircle,
+  Repeat,
+  ServerCog,
+  CreditCard,
+  Package,
+  Smartphone,
+  Megaphone,
+  GaugeCircle,
+  Users,
+  Code,
+  Settings,
+  Cpu,
+  Activity,
+  DatabaseBackup,
+  Stethoscope,
+  ClipboardList,
+  Shield,
+  BadgeCheck,
+  Building2,
+  ShoppingCart,
+} from "lucide-react";
+
 import { Service } from "@/types/service";
-import { Bot, Cloud, Globe, Hospital, Lock, Settings, ShoppingCart } from "lucide-react";
 
 export const services: Service[] = [
+  {
+    icon: PenTool,
+    title: "UI/UX Design",
+    items: [
+      { icon: Users, desc: "Intuitive & Human-Centered Interfaces" },
+      { icon: Smartphone, desc: "Responsive Web & Mobile Designs" },
+      { icon: Rocket, desc: "High-Fidelity Prototyping" },
+      { icon: FileCode, desc: "UI/UX Wireframing & Branding" },
+      { icon: LineChart, desc: "User Journey Mapping" },
+      { icon: Activity, desc: "A/B Testing & User Feedback Integration" },
+    ],
+  },
+  {
+    icon: Rocket,
+    title: "Software MVP",
+    items: [
+      { icon: Rocket, desc: "Rapid Prototyping & Development" },
+      { icon: Package, desc: "Market-Ready Core Feature Set" },
+      { icon: ServerCog, desc: "Scalable Backend Infrastructure" },
+      { icon: RotateCcw, desc: "Agile-Based Iterative Delivery" },
+      { icon: GaugeCircle, desc: "Cost-Effective Launch Strategy" },
+      { icon: Activity, desc: "User Testing & Early Validation" },
+    ],
+  },
   {
     icon: Lock,
     title: "Software Security",
     items: [
-      {
-        icon: "/images/services/softwaresec/Android app development.svg",
-        desc: "Android app development",
-      },
-      {
-        icon: "/images/services/softwaresec/iOS app development.svg",
-        desc: "iOS app development",
-      },
-      {
-        icon: "/images/services/softwaresec/Android app development.svg",
-        desc: "Android app development",
-      },
-      {
-        icon: "/images/services/softwaresec/Native App.svg",
-        desc: "Native App",
-      },
-      {
-        icon: "/images/services/softwaresec/Hybrid app development.svg",
-        desc: "Hybrid app development",
-      },
-      {
-        icon: "/images/services/softwaresec/Flutter app development.svg",
-        desc: "Flutter app development",
-      },
+      { icon: ShieldCheck, desc: "End-To-End Encryption Protocols" },
+      { icon: Fingerprint, desc: "Secure Authentication Systems" },
+      { icon: Bug, desc: "Regular Vulnerability Assessments" },
+      { icon: Shield, desc: "Compliance With Data Privacy Laws" },
+      { icon: FileCode, desc: "Code Audits & Penetration Testing" },
+      { icon: DatabaseBackup, desc: "Disaster Recovery & Backup Plans" },
     ],
   },
   {
-    icon: Bot,  
-    title: "Integrate And AI Model",
+    icon: Bot,
+    title: "Integrate An AI Model",
     items: [
-      {
-        icon: "/images/services/aimodel/Cross-platform experience design.svg",
-        desc: "Cross Platform experience design",
-      },
-      {
-        icon: "/images/services/aimodel/Wireframe design.svg",
-        desc: "Wireframe redesign",
-      },
-      {
-        icon: "/images/services/aimodel/Software redesign.svg",
-        desc: "Wireframe design",
-      },
-            {
-        icon: "/images/services/aimodel/Cross-platform experience design.svg",
-        desc: "Cross Platform experience design",
-      },
-      {
-        icon: "/images/services/aimodel/Wireframe design.svg",
-        desc: "Wireframe redesign",
-      },
-      {
-        icon: "/images/services/aimodel/Software redesign.svg",
-        desc: "Wireframe design",
-      },
+      { icon: Cpu, desc: "Custom AI Model Deployment" },
+      { icon: Speech, desc: "Natural Language Processing Integration" },
+      { icon: LineChart, desc: "Predictive Analytics & Machine Learning" },
+      { icon: MessageCircle, desc: "AI-Powered Chat Bots & Assistants" },
+      { icon: Repeat, desc: "Automation Of Repetitive Tasks" },
+      { icon: Cloud, desc: "Scalable Cloud-Based AI Inference" },
     ],
   },
   {
     icon: Globe,
-    title: "Intermodal Saas Solutions",
+    title: "Inter Modal SaaS Solutions",
     items: [
-      {
-        icon: "/images/services/saas/Search Engine Optimisation.svg",
-        desc: "Search Engine Optimisation",
-      },
-      {
-        icon: "/images/services/saas/Social Media Marketing.svg",
-        desc: "Social Media Marketing",
-      },
-      {
-        icon: "/images/services/saas/PPC  Management.svg",
-        desc: "PPC Management",
-      },
-      {
-        icon: "/images/services/saas/Graphic design & logo design.svg",
-        desc: "Graphic design & Logo Design",
-      },
-            {
-        icon: "/images/services/saas/PPC  Management.svg",
-        desc: "PPC Management",
-      },
-      {
-        icon: "/images/services/saas/Graphic design & logo design.svg",
-        desc: "Graphic design & Logo Design",
-      },
+      { icon: Building2, desc: "Multi-Tenant SaaS Architecture" },
+      { icon: Code, desc: "API Integrations Across Platforms" },
+      { icon: CreditCard, desc: "Subscription & Billing Systems" },
+      { icon: Package, desc: "Modular Feature Deployment" },
+      { icon: Cloud, desc: "Scalable Hosting Infrastructure" },
+      { icon: LineChart, desc: "Centralized Analytics Dashboards" },
     ],
   },
-    {
+  {
     icon: ShoppingCart,
-    title: "Scalable E-commerce",
+    title: "Scalable E-Commerce",
     items: [
-      {
-        icon: "/images/services/softwaresec/Android app development.svg",
-        desc: "Android app development",
-      },
-      {
-        icon: "/images/services/softwaresec/iOS app development.svg",
-        desc: "iOS app development",
-      },
-      {
-        icon: "/images/services/softwaresec/Android app development.svg",
-        desc: "Android app development",
-      },
-      {
-        icon: "/images/services/softwaresec/Native App.svg",
-        desc: "Native App",
-      },
-      {
-        icon: "/images/services/softwaresec/Hybrid app development.svg",
-        desc: "Hybrid app development",
-      },
-      {
-        icon: "/images/services/softwaresec/Flutter app development.svg",
-        desc: "Flutter app development",
-      },
+      { icon: ShoppingCart, desc: "Custom Storefront Development" },
+      { icon: CreditCard, desc: "Secure Payment Gateway Integration" },
+      { icon: Package, desc: "Inventory & Order Management" },
+      { icon: Smartphone, desc: "Mobile-Optimized Shopping Experience" },
+      { icon: Megaphone, desc: "Marketing & SEO Tools" },
+      { icon: GaugeCircle, desc: "Performance Tuning For High Traffic" },
     ],
   },
   {
     icon: Cloud,
     title: "Cloud Computing",
     items: [
-      {
-        icon: "/images/services/aimodel/Cross-platform experience design.svg",
-        desc: "Cross Platform experience design",
-      },
-      {
-        icon: "/images/services/aimodel/Wireframe design.svg",
-        desc: "Wireframe redesign",
-      },
-      {
-        icon: "/images/services/aimodel/Software redesign.svg",
-        desc: "Wireframe design",
-      },
-            {
-        icon: "/images/services/aimodel/Cross-platform experience design.svg",
-        desc: "Cross Platform experience design",
-      },
-      {
-        icon: "/images/services/aimodel/Wireframe design.svg",
-        desc: "Wireframe redesign",
-      },
-      {
-        icon: "/images/services/aimodel/Software redesign.svg",
-        desc: "Wireframe design",
-      },
+      { icon: Cloud, desc: "AWS, Azure, & GCP Deployment" },
+      { icon: ServerCog, desc: "Auto-Scaling Server Architecture" },
+      { icon: Settings, desc: "CI/CD Pipelines & DevOps Setup" },
+      { icon: Cpu, desc: "Containerization Using Docker/Kubernetes" },
+      { icon: Activity, desc: "Real-Time Monitoring & Alerts" },
+      { icon: DatabaseBackup, desc: "Backup & Disaster Recovery Solutions" },
     ],
   },
   {
     icon: Hospital,
-    title: "HIPAA Compliance Software",
+    title: "HIPAA Compliant Software",
     items: [
-      {
-        icon: "/images/services/saas/Search Engine Optimisation.svg",
-        desc: "Search Engine Optimisation",
-      },
-      {
-        icon: "/images/services/saas/Social Media Marketing.svg",
-        desc: "Social Media Marketing",
-      },
-      {
-        icon: "/images/services/saas/PPC  Management.svg",
-        desc: "PPC Management",
-      },
-      {
-        icon: "/images/services/saas/Graphic design & logo design.svg",
-        desc: "Graphic design & Logo Design",
-      },
-            {
-        icon: "/images/services/saas/PPC  Management.svg",
-        desc: "PPC Management",
-      },
-      {
-        icon: "/images/services/saas/Graphic design & logo design.svg",
-        desc: "Graphic design & Logo Design",
-      },
+      { icon: ShieldCheck, desc: "End-To-End Data Encryption" },
+      { icon: Stethoscope, desc: "Secure Patient Record Management" },
+      { icon: ClipboardList, desc: "Access Control & Audit Trails" },
+      { icon: FileCode, desc: "HIPAA Training & Documentation Support" },
+      { icon: BadgeCheck, desc: "Regular Compliance Audits" },
+      { icon: Hospital, desc: "Custom Workflows For Healthcare Providers" },
     ],
   },
 ];

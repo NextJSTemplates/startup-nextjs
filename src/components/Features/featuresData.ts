@@ -38,7 +38,7 @@
     {
       title: "Front-End",
       text: "Create top-rated UI solutions that offer personalized user experience with quality generated content.",
-      icon: 7,
+      icon: "/images/features/searchstar.svg",
       stack: [
         { title: "CSS 3", icon: "/images/features/frtend/css.svg" },
         { title: "HTML 5", icon: "/images/features/frtend/html.svg" },

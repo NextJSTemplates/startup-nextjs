@@ -4,7 +4,8 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import { Hero } from "@/components/Hero";
 import Industries from "@/components/Industries/Industries";
-import ScrollableServices from "@/components/Services";
+import Services from "@/components/Services";
+import Statistics from "@/components/Statistics";
 import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
@@ -19,9 +20,10 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Brands />
-      <ScrollableServices />
+      <Services />
       <Features />
       <Industries />
+      <Statistics />
       <Testimonials />
       <Blog />
     </>

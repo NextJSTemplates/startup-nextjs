@@ -8,8 +8,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const teamOne = teamMembers.slice(0, teamMembers.length / 2);
-const teamTwo = teamMembers.slice(teamMembers.length / 2);
+const mid = Math.floor(teamMembers.length / 2);
+const teamOne = teamMembers.slice(0, mid);
+const teamTwo = teamMembers.slice(mid);
 const words = ["Scalable", "Secure", "Intelligent"];
 
 const staggerWords = {
@@ -130,7 +131,7 @@ export const Hero = () => {
                     >
                       <Button
                         borderRadius="1.75rem"
-                        className="border-neutral-400 bg-white dark:bg-black px-4 text-[12px] font-bold text-black dark:text-white dark:border-slate-800"
+                        className="border-neutral-300 bg-white dark:bg-black px-4 text-[12px] font-bold text-black dark:text-white dark:border-slate-800"
                       >
                         {btn.label} {btn.icon}
                       </Button>
@@ -172,7 +173,7 @@ export const Hero = () => {
                             delay: 0.1 * index,
                             ease: "easeOut",
                           }}
-                          className={`transform ${bounceClass} ${xTranslate} h-60 w-full md:w-45 lg:w-60 overflow-hidden rounded-xl border border-neutral-250 bg-transparent p-4 shadow-lg backdrop-blur-[2px]`}
+                          className={`transform ${bounceClass} ${xTranslate} h-60 w-full md:w-45 lg:w-60 overflow-hidden rounded-xl border border-neutral-200 bg-gradient-to-b from-bg-neutral-100 via-white to-neutral-100 p-4 shadow-lg backdrop-blur-[2px]`}
                         >
                           <motion.div
                             initial={{ opacity: 0, y: 10 }}

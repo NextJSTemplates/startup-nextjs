@@ -3,9 +3,8 @@ import { FC, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import SectionTitle from "../Common/SectionTitle";
 import { services } from "./serviceData";
-import Image from "next/image";
 
-const ScrollableServices: FC = () => {
+const Services: FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -93,4 +92,4 @@ const ScrollableServices: FC = () => {
   );
 };
 
-export default ScrollableServices;
+export default Services;

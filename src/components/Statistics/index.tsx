@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ChartBar } from "lucide-react";
+import { statistics } from "./statisticsData";
 
 const Statistics = () => {
   const flipVariant = {
@@ -19,9 +20,9 @@ const Statistics = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto mt-32 max-w-7xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-12 text-black"
+        className="container mx-auto max-w-7xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-12 text-black"
       >
-        <div className="container mx-auto flex max-w-6xl flex-col gap-4">
+        <div className="flex flex-col gap-4 px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,40 +38,9 @@ const Statistics = () => {
               first and works on it like specialists.
             </p>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                [
-                  "100+",
-                  "/images/features/vr.svg",
-                  "Happy Clients Served Across Diverse Industries",
-                ],
-                [
-                  "20+",
-                  "/images/features/cloud.svg",
-                  "Countries with Successful Project Deployments",
-                ],
-                [
-                  "10+",
-                  "/images/features/chip.svg",
-                  "Custom AI & IoT Solutions Tailored to Business Needs",
-                ],
-                [
-                  "10+",
-                  "/images/features/android.svg",
-                  "Blockchain Projects Including DApps and Integrations",
-                ],
-                [
-                  "10+",
-                  "/images/features/chip.svg",
-                  "Custom AI & IoT Solutions Tailored to Business Needs",
-                ],
-                [
-                  "10+",
-                  "/images/features/android.svg",
-                  "Blockchain Projects Including DApps and Integrations",
-                ],
-              ].map(([value, image, label], index) => (
+              {statistics.map((stat, index) => (
                 <motion.div
-                  key={label}
+                  key={index}
                   custom={index}
                   variants={flipVariant}
                   initial="hidden"
@@ -84,10 +54,10 @@ const Statistics = () => {
                       <ChartBar className="h-5 w-5 text-white" />
                     </div>
 
-                    <p className="text-2xl font-bold">{value}</p>
+                    <p className="text-2xl font-bold">{stat.value}</p>
                   </div>
                   <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
-                    {label}
+                    {stat.label}
                   </p>
                 </motion.div>
               ))}

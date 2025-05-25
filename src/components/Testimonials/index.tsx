@@ -1,5 +1,5 @@
 import SectionTitle from "../Common/SectionTitle";
-import { Reviews } from "./Reviews";
+import { Reviews } from "./Testimonials";
 
 const Testimonials = () => {
   return (

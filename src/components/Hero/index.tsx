@@ -46,6 +46,8 @@ export const Hero = () => {
             "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
           )}
         />
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         <div className="md:max-w-8xl relative z-10 container mx-auto lg:max-w-6xl">
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">

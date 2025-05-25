@@ -1,6 +1,6 @@
-import { Review } from "@/types/review";
+import { Testimonial } from "@/types/testimonial";
 
-export const reviews: Review[] = [
+export const testimonials: Testimonial[] = [
   {
     name: "Emma Hessel",
     description: "Ekonom - BS Verkstäder",

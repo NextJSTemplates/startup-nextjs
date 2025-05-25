@@ -1,35 +1,25 @@
-import { Blog } from "@/types/blog";
-
-const blogData: Blog[] = [
+const blogPosts = [
   {
-    id: 1,
-    tag: "PORTFOLIO",
-    title: "Simplifying Healthcare in Algeria with Telemedicine Solutions",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog1.png",
-
-    publishDate: "Apr 28, 2025",
+    title: "How To Optimize Progressive Web Apps: Going Beyond The Basics",
+    date: "November 22, 2021",
+    image: "/images/hero/background.svg",
+    href: "#",
+    description: "Learn advanced techniques to enhance the performance and user experience of your progressive web apps."
   },
   {
-    id: 2,
-    tag: "OFFSHORE IT SOLUTIONS", 
-    title: "What is GCC? Common Myths About GCCs",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog2.png",
-
-    publishDate: "Apr 25, 2025",
+    title: "How To Optimize Progressive Web Apps: Going Beyond The Basics",
+    date: "November 16, 2021",
+    image: "/images/hero/background.svg",
+    href: "#",
+    description: "Discover practical tips and best practices to take your PWA development skills to the next level."
   },
   {
-    id: 3,
-    tag: "DESIGN",
-    title: "Top UX/UI Design Trends to Watch in 2025",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog3.png",
-
-    publishDate: "Apr 18, 2025",
-  },
+    title: "How To Optimize Progressive Web Apps: Going Beyond The Basics",
+    date: "November 22, 2021",
+    image: "/images/hero/background.svg",
+    href: "#",
+    description: "Learn advanced techniques to enhance the performance and user experience of your progressive web apps."
+  }
 ];
-export default blogData;
+
+export default blogPosts;

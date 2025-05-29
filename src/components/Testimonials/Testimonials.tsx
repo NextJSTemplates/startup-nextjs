@@ -18,7 +18,7 @@ export const Reviews = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center overflow-hidden px-12 py-48">
-      <div className="pointer-events-none absolute inset-0 mx-auto w-full max-w-7xl overflow-x-visible px-10">
+      <div className="pointer-events-none absolute inset-0 mx-auto w-full max-w-6xl overflow-x-visible px-10">
         <div className="mx-auto grid scale-[1.05] grid-cols-1 gap-6 opacity-25 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {testimonials.map((testimonial, index) => (
             <div

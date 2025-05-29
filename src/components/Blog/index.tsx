@@ -3,6 +3,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import SectionTitle from "../Common/SectionTitle";
 import blogData from "./blogData";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 const Blog = () => {
   return (
@@ -21,13 +22,15 @@ const Blog = () => {
           {blogData.map((post, index) => (
             <div
               key={index}
-              className="group relative rounded-xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 p-4 shadow-sm"
+              className="group relative rounded-xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 py-8 px-6  shadow-sm"
             >
               <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg">
-                <img
+                <Image
                   className="h-full w-full transform object-cover transition-all duration-300 group-hover:scale-125"
                   src={post.image}
                   alt={post.title}
+                  width={100}
+                  height={100}
                 />
               </div>
               <div className="mt-8 mb-6 flex justify-between">

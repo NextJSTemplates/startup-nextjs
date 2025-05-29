@@ -20,7 +20,7 @@ const Statistics = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto max-w-7xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-12 text-black"
+        className="container mx-auto max-w-6xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-12 text-black"
       >
         <div className="flex flex-col gap-4 px-6">
           <motion.div
@@ -46,9 +46,8 @@ const Statistics = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="relative flex flex-col overflow-hidden rounded-md bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950"
+                  className="relative flex flex-col overflow-hidden rounded-xl bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950 max-w-xs mx-auto"
                 >
-                  {/* <Grid size={20} /> */}
                   <div className="flex items-center gap-2">
                     <div className="rounded-md bg-black p-3">
                       <ChartBar className="h-5 w-5 text-white" />

@@ -2,6 +2,7 @@
 
 import { Tabs } from "../ui/tabs";
 import { industriesData } from "./industriesData";
+import Image from "next/image";
 
 export const IndustryTabs = () => {
   const tabs = Object.entries(industriesData).map(([key, value]) => ({
@@ -16,7 +17,7 @@ export const IndustryTabs = () => {
   }));
 
   return (
-    <div className="relative mx-auto my-6 flex h-[20rem] w-full max-w-5xl flex-col items-start justify-start [perspective:1000px] md:h-[40rem]">
+    <div className="relative mx-auto my-6 flex h-[20rem] w-full max-w-6xl flex-col items-start justify-start [perspective:1000px] md:h-[40rem]">
       <Tabs tabs={tabs} />
     </div>
   );
@@ -24,11 +25,11 @@ export const IndustryTabs = () => {
 
 const IndustryImage = ({ image }: { image: string }) => {
   return (
-    <img
+    <Image
       src={image}
       alt="Industry Image"
-      width="1000"
-      height="1000"
+      width={1000}
+      height={1000}
       className="absolute inset-x-0 -bottom-4 mx-auto h-[90%] w-[90%] rounded-xl object-cover object-left-top"
     />
   );

@@ -37,7 +37,7 @@ const Statistics = () => {
               quality IT development. Our team takes every project like it’s our
               first and works on it like specialists.
             </p>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {statistics.map((stat, index) => (
                 <motion.div
                   key={index}

@@ -97,7 +97,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         boxShadow: visible
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "0 0 24px rgba(34, 42, 53, 0.02), 0 1px 1px rgba(0, 0, 0, 0.02), 0 0 0 1px rgba(34, 42, 53, 0.02), 0 0 4px rgba(34, 42, 53, 0.03), 0 16px 68px rgba(47, 48, 55, 0.02), 0 1px 0 rgba(255, 255, 255, 0.1) inset",
-        width: visible ? "40%" : "100%",
+        width: visible ? "60%" : "100%",
         y: visible ? 6 : 0,
       }}
       transition={{
@@ -142,7 +142,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             <a
               href={item.link || "#"}
               onClick={onItemClick}
-              className="relative z-20 px-4 py-1.5 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 transition duration-200 rounded-full"
+              className="relative z-20 px-2 py-1.5 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 transition duration-200 rounded-full"
             >
               {item.name}
             </a>
@@ -268,7 +268,7 @@ export const NavbarLogo = () => {
         height={30}
         className="h-6 w-6"
       />
-      <span className="font-semibold text-sm text-black dark:text-white">Classy Endeavors</span>
+      <span className="font-semibold text-sm hidden sm:block text-black dark:text-white">Classy Endeavors</span>
     </a>
   );
 };

@@ -40,3 +40,5 @@ export const industriesData = {
     image: "/images/industries/entertainment.svg",
   },
 };
+
+

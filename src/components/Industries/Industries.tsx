@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-import { industriesData } from "./industriesData";
 import { IndustryTabs } from "./IndustryTabs";
 
 const Industries = () => {

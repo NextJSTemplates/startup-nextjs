@@ -49,8 +49,8 @@ export const Reviews = () => {
           <Image
             src={activeTestimonial.img}
             alt={activeTestimonial.name}
-            width={80}
-            height={80}
+            width={90}
+            height={90}
             className="mb-6 rounded-full"
           />
           <blockquote className="max-w-xl h-30 sm:h-20 text-center px-4 text-xs sm:text-sm font-semibold text-black">

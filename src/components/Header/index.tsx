@@ -14,20 +14,20 @@ import {
 import { useState } from "react";
 
 const Header = () => {
+
   const navItems = [
-    {
-      name: "Features",
-      link: "#features",
-    },
-    {
-      name: "Pricing",
-      link: "#pricing",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
-  ];
+  { name: "Home", link: "/" },
+  { name: "About", link: "#about" },
+  {
+    name: "Services",
+    children: [
+      { name: "Web Development", link: "#features" },
+      { name: "Mobile Apps", link: "#mobile" },
+    ],
+  },
+  { name: "Contact", link: "#contact" },
+];
+
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

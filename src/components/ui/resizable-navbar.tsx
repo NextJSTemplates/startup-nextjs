@@ -12,6 +12,20 @@ import Image from "next/image";
 
 import React, { useRef, useState } from "react";
 
+interface NavItem {
+  name: string;
+  link?: string;
+  children?: {
+    name: string;
+    link: string;
+  }[];
+}
+
+interface NavItemsProps {
+  items: NavItem[];
+  className?: string;
+  onItemClick?: () => void;
+}
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -22,15 +36,6 @@ interface NavBodyProps {
   children: React.ReactNode;
   className?: string;
   visible?: boolean;
-}
-
-interface NavItemsProps {
-  items: {
-    name: string;
-    link: string;
-  }[];
-  className?: string;
-  onItemClick?: () => void;
 }
 
 interface MobileNavProps {
@@ -121,29 +126,53 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       onMouseLeave={() => setHovered(null)}
       className={cn(
         "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
-        className,
+        className
       )}
     >
-      {items.map((item, idx) => (
-        <a
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
-          key={`link-${idx}`}
-          href={item.link}
-        >
-          {hovered === idx && (
-            <motion.div
-              layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-neutral-100 dark:bg-neutral-800"
-            />
-          )}
-          <span className="relative z-20">{item.name}</span>
-        </a>
-      ))}
+      {items.map((item, idx) => {
+        const hasDropdown = !!item.children?.length;
+
+        return (
+          <div
+            key={`nav-item-${idx}`}
+            className="relative"
+            onMouseEnter={() => hasDropdown && setHovered(idx)}
+            onMouseLeave={() => hasDropdown && setHovered(null)}
+          >
+            <a
+              href={item.link || "#"}
+              onClick={onItemClick}
+              className="relative z-20 px-4 py-1.5 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 transition duration-200 rounded-full"
+            >
+              {item.name}
+            </a>
+
+            {hovered === idx && hasDropdown && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute top-full left-1/2 z-40 mt-5 w-48 -translate-x-1/2 rounded-lg bg-white p-2 shadow-lg dark:bg-neutral-900"
+              >
+                {item.children?.map((subItem, subIdx) => (
+                  <a
+                    key={`dropdown-${subIdx}`}
+                    href={subItem.link}
+                    onClick={onItemClick}
+                    className="block px-4 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800 rounded-full"
+                  >
+                    {subItem.name}
+                  </a>
+                ))}
+              </motion.div>
+            )}
+          </div>
+        );
+      })}
     </motion.div>
   );
 };
+
 
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (

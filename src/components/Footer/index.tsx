@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
@@ -59,29 +60,33 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+
+            {/* QUICK LINKS */}
             <div className="text-[12px] md:text-[13px]">
               <h4 className="mb-4 font-semibold">QUICK LINKS</h4>
               <ul className="space-y-2">
-                <li>About</li>
-                <li>Services</li>
-                <li>Industries</li>
-                <li>Portfolios</li>
-                <li>Blogs</li>
+                <li><Link href="#about">About</Link></li>
+                <li><Link href="#services">Services</Link></li>
+                <li><Link href="#industries">Industries</Link></li>
+                <li><Link href="#portfolios">Portfolios</Link></li>
+                <li><Link href="#blogs">Blogs</Link></li>
               </ul>
             </div>
+
             <div className="text-[12px] md:text-[13px]">
               <h4 className="mb-4 font-semibold">CORE SERVICES</h4>
               <ul className="space-y-2">
-                <li>UI/UX Design</li>
-                <li>Software MVP</li>
-                <li>Software Security</li>
-                <li>Integrating AI Models</li>
-                <li>Inter Modal SAAS Solutions</li>
-                <li>Scalable E-Commerce</li>
-                <li>Cloud Computing</li>
-                <li>HIPAA Compliant Software</li>
+                <li><Link href="/services/ui-ux-design">UI/UX Design</Link></li>
+                <li><Link href="/services/software-mvp">Software MVP</Link></li>
+                <li><Link href="/services/software-security">Software Security</Link></li>
+                <li><Link href="/services/ai-integration">Integrating AI Models</Link></li>
+                <li><Link href="/services/intermodal-saas">Inter Modal SAAS Solutions</Link></li>
+                <li><Link href="/services/ecommerce">Scalable E-Commerce</Link></li>
+                <li><Link href="/services/cloud">Cloud Computing</Link></li>
+                <li><Link href="/services/hipaa-software">HIPAA Compliant Software</Link></li>
               </ul>
             </div>
+
           </div>
         </div>
       </footer>

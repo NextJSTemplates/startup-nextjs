@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-16 md:py-20 lg:py-24">
+    <section id="blogs" className="py-16 md:py-20 lg:py-24">
       <SectionTitle title="Latest Blogs" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

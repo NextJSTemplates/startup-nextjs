@@ -32,9 +32,9 @@ export const Reviews = () => {
                 <Image
                   src={testimonial.img}
                   alt={testimonial.name}
-                  width={24}
-                  height={24}
-                  className="rounded-full"
+                  width={14}
+                  height={14}
+                  className="w-6 h-6 rounded-full"
                 />
                 <span className="text-[10px] text-black">{testimonial.name}</span>
               </div>
@@ -51,9 +51,9 @@ export const Reviews = () => {
             alt={activeTestimonial.name}
             width={90}
             height={90}
-            className="mb-6 rounded-full"
+            className="w-20 h-20 mb-6 rounded-full"
           />
-          <blockquote className="max-w-xl h-30 sm:h-20 text-center px-4 text-xs sm:text-sm font-semibold text-black">
+          <blockquote className="max-w-xl h-30 sm:h-18 text-center px-4 text-xs sm:text-sm font-semibold text-black">
             “{activeTestimonial.body}”
           </blockquote>
           <div className="px-4 text-xs sm:text-sm font-medium text-black">

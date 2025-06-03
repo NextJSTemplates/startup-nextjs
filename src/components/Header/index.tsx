@@ -10,7 +10,6 @@ import {
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
-  NavbarButton,
 } from "../ui/resizable-navbar";
 import { useState } from "react";
 
@@ -71,13 +70,12 @@ const Header = () => {
             </a>
           ))}
           <div className="flex w-full flex-col gap-4">
-            <NavbarButton
-              onClick={() => setIsMobileMenuOpen(false)}
-              variant="primary"
-              className="w-full"
+            <Button
+              borderRadius="1.75rem"
+              className="border-neutral-300 bg-white px-4 text-[12px] font-bold text-black dark:border-slate-800 dark:bg-black dark:text-white"
             >
-              Get A Free Quote
-            </NavbarButton>
+              Contact Us
+            </Button>
           </div>
         </MobileNavMenu>
       </MobileNav>

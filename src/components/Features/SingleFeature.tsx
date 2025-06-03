@@ -46,7 +46,7 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 mb-2"
         >
           <Image
             src={card.icon}
@@ -55,7 +55,7 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
             height={24}
             className="h-6 w-6"
           />
-          <h3 className="text-lg font-semibold">{card.title}</h3>
+          <h3 className="font-semibold">{card.title}</h3>
         </motion.div>
         <ExternalLink className="h-5 w-5 text-black" />
       </div>

@@ -24,7 +24,7 @@ const Blog = () => {
               key={index}
               className="group relative rounded-xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 py-10 px-6  shadow-sm"
             >
-              <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg">
+              <div className="overflow-hidden rounded-lg">
                 <Image
                   className="h-full w-full transform object-cover transition-all duration-300 group-hover:scale-125"
                   src={post.image}

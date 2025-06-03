@@ -79,11 +79,11 @@ const Footer = () => {
                 <li><Link href="/services/ui-ux-design">UI/UX Design</Link></li>
                 <li><Link href="/services/software-mvp">Software MVP</Link></li>
                 <li><Link href="/services/software-security">Software Security</Link></li>
-                <li><Link href="/services/ai-integration">Integrating AI Models</Link></li>
-                <li><Link href="/services/intermodal-saas">Inter Modal SAAS Solutions</Link></li>
+                <li><Link href="/services/ai-integration">Integrate an AI Model</Link></li>
+                <li><Link href="/services/intermodal-saas">Software Development</Link></li>
                 <li><Link href="/services/ecommerce">Scalable E-Commerce</Link></li>
                 <li><Link href="/services/cloud">Cloud Computing</Link></li>
-                <li><Link href="/services/hipaa-software">HIPAA Compliant Software</Link></li>
+                <li><Link href="/services/hipaa-software">Support & Maintenance</Link></li>
               </ul>
             </div>
 

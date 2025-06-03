@@ -1,8 +1,6 @@
 import {
   Bot,
   Cloud,
-  Globe,
-  Hospital,
   Lock,
   PenTool,
   Rocket,
@@ -31,13 +29,10 @@ import {
   Stethoscope,
   ClipboardList,
   Shield,
-  BadgeCheck,
-  Building2,
   ShoppingCart,
 } from "lucide-react";
 
 import { Service } from "@/types/service";
-
 export const services: Service[] = [
   {
     icon: PenTool,
@@ -46,7 +41,7 @@ export const services: Service[] = [
       { icon: Users, desc: "Intuitive & Human-Centered Interfaces" },
       { icon: Smartphone, desc: "Responsive Web & Mobile Designs" },
       { icon: Rocket, desc: "High-Fidelity Prototyping" },
-      { icon: FileCode, desc: "UI/UX Wireframing & Branding" },
+      { icon: FileCode, desc: "Visual Identity & Branding" },
       { icon: LineChart, desc: "User Journey Mapping" },
       { icon: Activity, desc: "A/B Testing & User Feedback Integration" },
     ],
@@ -88,15 +83,15 @@ export const services: Service[] = [
     ],
   },
   {
-    icon: Globe,
-    title: "Inter Modal SaaS Solutions",
+    icon: Code,
+    title: "Software Development",
     items: [
-      { icon: Building2, desc: "Multi-Tenant SaaS Architecture" },
-      { icon: Code, desc: "API Integrations Across Platforms" },
-      { icon: CreditCard, desc: "Subscription & Billing Systems" },
-      { icon: Package, desc: "Modular Feature Deployment" },
-      { icon: Cloud, desc: "Scalable Hosting Infrastructure" },
-      { icon: LineChart, desc: "Centralized Analytics Dashboards" },
+      { icon: FileCode, desc: "Custom Software Tailored To Business Goals" },
+      { icon: Smartphone, desc: "Cross-Platform Web & Mobile Applications" },
+      { icon: Cloud, desc: "Cloud-Native, Scalable Architecture" },
+      { icon: Cpu, desc: "API-Driven Microservices Integration" },
+      { icon: RotateCcw, desc: "Agile Methodology With DevOps Pipelines" },
+      { icon: Activity, desc: "Automated Testing For Smooth Releases" },
     ],
   },
   {
@@ -124,15 +119,15 @@ export const services: Service[] = [
     ],
   },
   {
-    icon: Hospital,
-    title: "HIPAA Compliant Software",
+    icon: Stethoscope,
+    title: "Support & Maintenance",
     items: [
-      { icon: ShieldCheck, desc: "End-To-End Data Encryption" },
-      { icon: Stethoscope, desc: "Secure Patient Record Management" },
-      { icon: ClipboardList, desc: "Access Control & Audit Trails" },
-      { icon: FileCode, desc: "HIPAA Training & Documentation Support" },
-      { icon: BadgeCheck, desc: "Regular Compliance Audits" },
-      { icon: Hospital, desc: "Custom Workflows For Healthcare Providers" },
+      { icon: RotateCcw, desc: "Preventive Care Through Regular Updates" },
+      { icon: Bug, desc: "Bug Fixing And Quick Turnaround" },
+      { icon: FileWarning, desc: "Adaptive Support For Platform Upgrades" },
+      { icon: GaugeCircle, desc: "Performance Tuning & Monitoring" },
+      { icon: Shield, desc: "Security Patching And Threat Management" },
+      { icon: ClipboardList, desc: "Ongoing User Support & Documentation" },
     ],
   },
 ];

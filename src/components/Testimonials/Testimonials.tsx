@@ -51,7 +51,7 @@ export const Reviews = () => {
             alt={activeTestimonial.name}
             width={90}
             height={90}
-            className="w-20 h-20 mb-6 rounded-full"
+            className="w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 mb-6 rounded-full"
           />
           <blockquote className="max-w-xl h-30 sm:h-18 text-center px-4 text-xs sm:text-sm font-semibold text-black">
             “{activeTestimonial.body}”

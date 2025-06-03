@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import { ChevronDown } from "lucide-react";
 import {
   motion,
   AnimatePresence,
@@ -65,7 +66,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   const [visible, setVisible] = useState<boolean>(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
+    if (latest > 600) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -75,7 +76,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      className={cn("fixed inset-x-0 top-6 z-40 w-full max-w-6xl mx-auto", className)}
+      className={cn("fixed inset-x-0 top-6 z-40 w-full max-w-4xl mx-auto", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -142,9 +143,12 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             <a
               href={item.link || "#"}
               onClick={onItemClick}
-              className="relative z-20 px-2 py-1.5 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 transition duration-200 rounded-full"
+              className="flex gap-1 relative z-20 px-2 py-1.5 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 transition duration-200 rounded-full"
             >
               {item.name}
+              {hasDropdown && (
+                <ChevronDown className="w-5 h-5" />
+                )}
             </a>
 
             {hovered === idx && hasDropdown && (
@@ -152,7 +156,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute top-full left-1/2 z-40 mt-5 w-48 -translate-x-1/2 rounded-lg bg-white p-2 shadow-lg dark:bg-neutral-900"
+                className="absolute top-full left-1/2 z-40 mt-1 w-48 -translate-x-1/2 rounded-lg bg-white p-2 shadow-sm dark:bg-neutral-900"
               >
                 {item.children?.map((subItem, subIdx) => (
                   <a
@@ -266,12 +270,12 @@ export const NavbarLogo = () => {
         alt="logo"
         width={30}
         height={30}
-        className="h-6 w-6"
+        className="h-10 w-12"
       />
-      <span className="font-semibold text-sm hidden sm:block text-black dark:text-white">Classy Endeavors</span>
     </a>
   );
 };
+
 
 export const NavbarButton = ({
   href,

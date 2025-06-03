@@ -1,14 +1,13 @@
 "use client";
 
 import SectionTitle from "../Common/SectionTitle";
-import { IndustryTabs } from "./IndustryTabs";
-
+import { AnimatedIndustries } from "../ui/animated-testimonials";
+import { industries } from "./industriesData";
 const Industries = () => {
-
   return (
     <section className="relative z-10 py-16 md:pt-20 lg:pt-24" id="industries">
       <SectionTitle title="Industries We Serve" />
-      <IndustryTabs />
+      <AnimatedIndustries industries={industries} />
     </section>
   );
 };

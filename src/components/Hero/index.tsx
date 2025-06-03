@@ -46,12 +46,12 @@ export const Hero = () => {
             "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
           )}
         />
-              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+        <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         <div className="md:max-w-8xl relative z-10 container mx-auto lg:max-w-6xl">
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
-            <div className="w-full ">
+            <div className="w-full">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -75,7 +75,7 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.2 }}
-                  className="mb-6 max-w-2xl leading-tight font-extrabold text-3xl md:text-4xl lg:text-5xl"
+                  className="mb-6 max-w-2xl text-3xl leading-tight font-extrabold md:text-4xl lg:text-5xl"
                 >
                   We Build{" "}
                   <FlipWords
@@ -89,7 +89,7 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
-                  className="mb-8 w-full max-w-sm text-[13px] sm:text-[15px] md:max-w-md lg:max-w-xl text-black dark:text-white"
+                  className="mb-8 w-full max-w-sm text-[13px] text-black sm:text-[15px] md:max-w-md lg:max-w-xl dark:text-white"
                 >
                   Certified software experts blending precision and creativity
                   to deliver powerful, affordable solutions tailored to your
@@ -133,7 +133,7 @@ export const Hero = () => {
                     >
                       <Button
                         borderRadius="1.75rem"
-                        className="border-neutral-300 bg-white dark:bg-black px-4 text-[12px] font-bold text-black dark:text-white dark:border-slate-800"
+                        className="border-neutral-300 bg-white px-4 text-[12px] font-bold text-black dark:border-slate-800 dark:bg-black dark:text-white"
                       >
                         {btn.label} {btn.icon}
                       </Button>
@@ -144,7 +144,7 @@ export const Hero = () => {
             </div>
 
             <div className="relative mt-6 w-full md:mt-0">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-12 lg:gap-8 px-4">
+              <div className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:gap-12 lg:gap-8">
                 {[teamOne, teamTwo].map((team, colIndex) => (
                   <div
                     key={colIndex}
@@ -175,7 +175,7 @@ export const Hero = () => {
                             delay: 0.1 * index,
                             ease: "easeOut",
                           }}
-                          className={`transform ${bounceClass} ${xTranslate} h-60 w-full md:w-45 lg:w-60 overflow-hidden rounded-xl border border-neutral-200 bg-gradient-to-b from-bg-neutral-100 via-white to-neutral-100 p-4 shadow-lg backdrop-blur-[2px]`}
+                          className={`transform ${bounceClass} ${xTranslate} from-bg-neutral-100 h-60 w-full overflow-hidden rounded-xl border border-neutral-200 bg-gradient-to-b via-white to-neutral-100 p-4 shadow-lg backdrop-blur-[2px] md:w-45 lg:w-60`}
                         >
                           <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -188,7 +188,7 @@ export const Hero = () => {
                               alt={member.name}
                               width={200}
                               height={50}
-                              className="h-45 w-full md:w-80 sm:w-90 rounded-lg object-cover shadow-lg"
+                              className="h-45 w-full rounded-lg object-cover shadow-lg sm:w-90 md:w-80"
                             />
                           </motion.div>
                           <p className="-translate-y-2 rounded-b-lg bg-black p-2 text-center text-[12px] font-medium text-white md:text-[10px] lg:text-[12px]">

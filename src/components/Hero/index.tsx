@@ -80,7 +80,7 @@ export const Hero = () => {
                   We Build{" "}
                   <FlipWords
                     words={words}
-                    className="inline-block font-bold text-black dark:text-white"
+                    className="font-bold text-black dark:text-white"
                   />{" "}
                   Software
                 </motion.h1>

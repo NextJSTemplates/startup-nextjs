@@ -54,13 +54,13 @@ export const AnimatedIndustries = ({
                   initial={{
                     opacity: 0,
                     scale: 0.9,
-                    z: -100,
+                    // z: -100,
                     rotate: randomRotateY(),
                   }}
                   animate={{
                     opacity: isActive(index) ? 1 : 0.7,
                     scale: isActive(index) ? 1 : 0.95,
-                    z: isActive(index) ? 0 : -100,
+                    // z: isActive(index) ? 0 : -100,
                     rotate: isActive(index) ? 0 : randomRotateY(),
                     zIndex: isActive(index)
                       ? 40
@@ -70,7 +70,7 @@ export const AnimatedIndustries = ({
                   exit={{
                     opacity: 0,
                     scale: 0.9,
-                    z: 100,
+                    // z: 100,
                     rotate: randomRotateY(),
                   }}
                   transition={{
@@ -155,7 +155,7 @@ export const AnimatedIndustries = ({
               onClick={handleNext}
               className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
             >
-              <IconArrowRight className="h-6  w-6 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
+              <IconArrowRight className="h-6 w-6 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>
           </div>
         </div>

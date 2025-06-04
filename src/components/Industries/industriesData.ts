@@ -1,10 +1,18 @@
 export const industries = [
   {
     quote:
-      "e-Commerce is one of the fastest growing business models as every retail business is reaching the digital landscape. Build a scalable and robust e-store with an experienced team. Grow with proper cart management, payment integration, social media integration, order management, tracking, and product management to reach greater heights.",
+      "e-Commerce is one of the fastest growing business models as every retail business is reaching the digital landscape. Build a scalable and robust e-store with an experienced team. ",
     name: "E-Commerce",
     designation: "",
     src: "/images/industries/ecommerce.svg",
+    services: [
+      "Cart Management",
+      "Payment Integration",
+      "Social Media Integration",
+      "Order Management",
+      "Tracking",
+      "Product Management",
+    ],
   },
   {
     quote:
@@ -12,6 +20,11 @@ export const industries = [
     name: "Education",
     designation: "",
     src: "/images/industries/education.svg",
+    services: [
+      "Custom eLearning Platforms",
+      "LMS Solutions",
+      "Virtual Classrooms",
+    ],
   },
   {
     quote:
@@ -19,6 +32,11 @@ export const industries = [
     name: "Healthcare",
     designation: "",
     src: "/images/industries/health.svg",
+    services: [
+      "Appointment Scheduling",
+      "Telemedicine",
+      "EHR Systems",
+    ],
   },
   {
     quote:
@@ -26,6 +44,12 @@ export const industries = [
     name: "Real Estate",
     designation: "",
     src: "/images/industries/realestate.svg",
+    services: [
+      "Listing Platforms",
+      "Virtual Tours",
+      "CRM Systems",
+      "Property Management Tools",
+    ],
   },
   {
     quote:
@@ -33,6 +57,11 @@ export const industries = [
     name: "NFT",
     designation: "",
     src: "/images/industries/nft.svg",
+    services: [
+      "Minting",
+      "Wallet Integration",
+      "Smart Contract Functionality",
+    ],
   },
   {
     quote:
@@ -40,6 +69,12 @@ export const industries = [
     name: "Travel",
     designation: "",
     src: "/images/industries/travel.svg",
+    services: [
+      "Travel Portals",
+      "Booking Engines",
+      "Itinerary Planners",
+      "Real-time Tracking Systems",
+    ],
   },
   {
     quote:
@@ -47,6 +82,11 @@ export const industries = [
     name: "Food",
     designation: "",
     src: "/images/industries/food.svg",
+    services: [
+      "Online Food Ordering",
+      "Delivery Management",
+      "Restaurant POS Systems",
+    ],
   },
   {
     quote:
@@ -54,5 +94,10 @@ export const industries = [
     name: "Entertainment",
     designation: "",
     src: "/images/industries/entertainment.svg",
+    services: [
+      "Streaming Platforms",
+      "Media Apps",
+      "Interactive Experiences",
+    ],
   },
 ];

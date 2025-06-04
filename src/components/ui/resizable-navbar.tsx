@@ -26,6 +26,7 @@ interface NavItemsProps {
   items: NavItem[];
   className?: string;
   onItemClick?: () => void;
+  visible?: boolean;
 }
 
 interface NavbarProps {
@@ -91,6 +92,14 @@ export const Navbar = ({ children, className }: NavbarProps) => {
 };
 
 export const NavBody = ({ children, className, visible }: NavBodyProps) => {
+    const childrenWithVisible = React.Children.map(children, (child) =>
+    React.isValidElement(child)
+      ? React.cloneElement(
+          child as React.ReactElement<{ visible?: boolean }>,
+          { visible }
+        )
+      : child,
+  );
   return (
     <motion.div
       animate={{
@@ -114,20 +123,20 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
        className,
       )}
     >
-      {children}
+      {childrenWithVisible}
     </motion.div>
   );
 };
 
-export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
+export const NavItems = ({ items, className, onItemClick, visible }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
-        className
+        "hidden flex-1 flex-row space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        className, visible ? "items-start justify-start" : "inset-0 items-center justify-center"
       )}
     >
       {items.map((item, idx) => {
@@ -259,22 +268,39 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
+  if (visible) {
+    return (
+      <a href="#" className="relative z-20 mr-4 flex items-center px-2 py-1">
+        <Image
+          src="/images/logo/logo-dark.svg"
+          alt="logo"
+          width={30}
+          height={30}
+          className="h-12 w-12"
+        />
+      </a>
+    );
+  }
+
   return (
     <a
       href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-semibold text-black"
     >
       <Image
         src="/images/logo/logo-dark.svg"
         alt="logo"
         width={30}
         height={30}
-        className="h-10 w-12"
+        className="h-9 w-9"
       />
+      <span>Classy endeavors</span>
     </a>
   );
 };
+
+
 
 
 export const NavbarButton = ({

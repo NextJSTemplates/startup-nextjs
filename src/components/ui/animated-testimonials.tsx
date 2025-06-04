@@ -4,6 +4,7 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 
 import { useEffect, useState } from "react";
+import { Badge } from "./badge";
 
 type Industries = {
   quote: string;
@@ -115,10 +116,20 @@ export const AnimatedIndustries = ({
             <h3 className="text-2xl font-bold text-black dark:text-white">
               {industries[active].name}
             </h3>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {industries[active].services.map((service, i) => (
+                <Badge
+                  key={i}
+                  className="text-muted-foreground border-border rounded-full border bg-white px-2 py-1.5"
+                >
+                  {service}
+                </Badge>
+              ))}
+            </div>
             <p className="text-sm text-gray-700 dark:text-neutral-500">
               {industries[active].designation}
             </p>
-            <motion.p className="mt-8 text-black">
+            <motion.p className="mt-6 text-black/80">
               {industries[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -144,7 +155,7 @@ export const AnimatedIndustries = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 pt-12 md:pt-">
             <button
               onClick={handlePrev}
               className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"

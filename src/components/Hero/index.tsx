@@ -77,11 +77,13 @@ export const Hero = () => {
                   transition={{ duration: 0.7, delay: 0.2 }}
                   className="mb-6 max-w-2xl text-3xl leading-tight font-extrabold md:text-4xl lg:text-5xl"
                 >
-                  We Build{" "}
-                  <FlipWords
-                    words={words}
-                    className="font-bold text-black dark:text-white"
-                  />{" "}
+                  <span className="flex items-center gap-2">
+                    We Build{" "}
+                    <FlipWords
+                      words={words}
+                      className="font-bold text-black dark:text-white"
+                    />{" "}
+                  </span>
                   Software
                 </motion.h1>
 

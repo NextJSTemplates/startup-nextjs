@@ -1,5 +1,6 @@
 "use client";
 
+import { ExternalLink } from "lucide-react";
 import { Button } from "../ui/moving-border";
 import {
   Navbar,
@@ -39,9 +40,10 @@ const Header = () => {
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <div className="flex items-center gap-4">
-          <Button className="border-neutral-300 bg-white px-4 text-[14px] font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white">
+        <div className="flex items-center gap-4 ">
+          <Button className="max-w-sm border-neutral-300 bg-white px-4 text-[13px] font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white">
             Contact Us
+            <ExternalLink className="ml-1.5 h-4 w-4" />
           </Button>
         </div>
       </NavBody>

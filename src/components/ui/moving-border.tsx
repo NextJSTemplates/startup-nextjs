@@ -32,7 +32,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "relative h-12 w-fit overflow-hidden bg-transparent p-[1px] text-xl hover:cursor-pointer hover:scale-1.05",
+        "hover:scale-1.05 relative h-12 w-fit overflow-hidden bg-transparent p-[1px] text-xl hover:cursor-pointer",
         containerClassName,
       )}
       style={{
@@ -86,21 +86,37 @@ export const MovingBorder = ({
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
-    const length = pathRef.current?.getTotalLength();
-    if (length) {
+    const path = pathRef.current;
+    if (!path) return;
+
+    let length;
+    try {
+      length = path.getTotalLength();
+    } catch (err) {
+      return; // safely skip frame
+    }
+
+    if (length && !isNaN(length)) {
       const pxPerMillisecond = length / duration;
       progress.set((time * pxPerMillisecond) % length);
     }
   });
 
-  const x = useTransform(
-    progress,
-    (val) => pathRef.current?.getPointAtLength(val).x,
-  );
-  const y = useTransform(
-    progress,
-    (val) => pathRef.current?.getPointAtLength(val).y,
-  );
+  const x = useTransform(progress, (val) => {
+    try {
+      return pathRef.current?.getPointAtLength(val).x ?? 0;
+    } catch {
+      return 0;
+    }
+  });
+
+  const y = useTransform(progress, (val) => {
+    try {
+      return pathRef.current?.getPointAtLength(val).y ?? 0;
+    } catch {
+      return 0;
+    }
+  });
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
 

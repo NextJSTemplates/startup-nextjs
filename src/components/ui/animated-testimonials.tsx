@@ -11,6 +11,7 @@ type Industries = {
   name: string;
   designation: string;
   src: string;
+  services: string[];
 };
 export const AnimatedIndustries = ({
   industries,

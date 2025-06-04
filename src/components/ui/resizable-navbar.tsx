@@ -156,7 +156,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute top-full left-1/2 z-40 mt-1 w-48 -translate-x-1/2 rounded-lg bg-white p-2 shadow-sm dark:bg-neutral-900"
+                className="absolute top-full left-1/2 z-40 mt-1 w-56 -translate-x-1/2 rounded-lg bg-white p-2 shadow-sm dark:bg-neutral-900"
               >
                 {item.children?.map((subItem, subIdx) => (
                   <a

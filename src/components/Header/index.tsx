@@ -20,8 +20,10 @@ const Header = () => {
       name: "Services",
       link: "#services",
       children: [
-        { name: "Web Development", link: "#features" },
-        { name: "Mobile Apps", link: "#mobile" },
+        { name: "Cloud Computing", link: "/services/cloud-computing" },
+        { name: "Mobile Apps", link: "/services/mobile-development" },
+        { name: "Software Development", link: "/services/software-development" },
+        { name: "Artificial Intelligence", link: "/services/ai" },
       ],
     },
     { name: "Industries", link: "#industries" },
@@ -31,16 +33,14 @@ const Header = () => {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   return (
     <Navbar>
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <Button
-            className="border-neutral-300 bg-white px-4 text-[14px] font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white"
-          >
+          <Button className="border-neutral-300 bg-white px-4 text-[14px] font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white">
             Contact Us
           </Button>
         </div>

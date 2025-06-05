@@ -206,21 +206,6 @@ export const Hero = () => {
           </div>
         </div>
       </section>
-
-      {/* Tech strip bottom animation */}
-      {/* <motion.div 
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="flex w-full justify-center rounded-md lg:justify-end"
-      >
-        <div className="bg-black ps-2 z-20 -translate-y-6">
-          <div className="z-10 flex translate-y-2 items-center gap-2 rounded-xs bg-white px-6 py-4 text-[13px] font-bold text-black shadow-xl">
-            <p>AR/VR</p> -<p>Mobile Apps</p> -<p>Artificial Intelligence</p> -
-            <p>Software Engineering</p>
-          </div>
-        </div>
-      </motion.div> */}
     </>
   );
 };

@@ -24,7 +24,7 @@ const Header = () => {
         { name: "Cloud Computing", link: "/services/cloud-computing" },
         { name: "Mobile Apps", link: "/services/mobile-development" },
         { name: "Software Development", link: "/services/software-development" },
-        { name: "Artificial Intelligence", link: "/services/ai" },
+        { name: "Artificial Intelligence", link: "/services/artificial-intelligence" },
       ],
     },
     { name: "Industries", link: "#industries" },

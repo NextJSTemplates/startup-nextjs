@@ -35,7 +35,7 @@ const Footer = () => {
                 <div className="flex gap-2">
                   <div>
                     <Image
-                      src="images/footer/mail.svg"
+                      src="/images/footer/mail.svg"
                       alt="Mail Logo"
                       width={10}
                       height={10}

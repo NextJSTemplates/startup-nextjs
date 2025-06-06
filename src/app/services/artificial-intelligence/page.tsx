@@ -6,6 +6,7 @@ import { Bot, Brain, Clock, ExternalLink } from "lucide-react";
 import { teamMembers } from "@/components/Hero/heroData";
 import Statistics from "@/components/Common/Statistics";
 import Services from "./components/Services";
+import Features from "./components/Features/Features";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",
@@ -22,16 +23,16 @@ export const metadata: Metadata = {
 
 const aiChars = [
   {
-    label: "Smart AI.",
-    icon: <Brain className="h-4 w-4 stroke-2" />,
+    label: "No More Repetitive Tasks.",
+    icon: <Brain className="h-6 w-6 stroke-2" />,
   },
   {
-    label: "Real Actions.",
-    icon: <Bot className="h-4 w-4 stroke-2" />,
+    label: "Smarter Decision-Making",
+    icon: <Bot className="h-6 w-6 stroke-2" />,
   },
   {
-    label: "Constant Growth",
-    icon: <Clock className="h-4 w-4 stroke-2" />,
+    label: "24/7 Availability",
+    icon: <Clock className="h-6 w-6 stroke-2" />,
   },
 ];
 
@@ -52,6 +53,7 @@ const ArtificialIntelligence = () => {
         teamMembers={teamMembers}
       />
       <Services />
+      <Features />
       <Statistics />
     </>
   );

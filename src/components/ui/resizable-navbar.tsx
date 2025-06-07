@@ -77,7 +77,10 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      className={cn("fixed inset-x-0 top-6 z-40 w-full max-w-4xl mx-auto", className)}
+      className={cn(
+        "fixed inset-x-0 top-6 z-40 mx-auto w-full max-w-4xl",
+        className,
+      )}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -92,12 +95,11 @@ export const Navbar = ({ children, className }: NavbarProps) => {
 };
 
 export const NavBody = ({ children, className, visible }: NavBodyProps) => {
-    const childrenWithVisible = React.Children.map(children, (child) =>
+  const childrenWithVisible = React.Children.map(children, (child) =>
     React.isValidElement(child)
-      ? React.cloneElement(
-          child as React.ReactElement<{ visible?: boolean }>,
-          { visible }
-        )
+      ? React.cloneElement(child as React.ReactElement<{ visible?: boolean }>, {
+          visible,
+        })
       : child,
   );
   return (
@@ -119,8 +121,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full px-4 py-2 lg:flex bg-white dark:bg-neutral-950",
-       className,
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-white px-4 py-2 lg:flex dark:bg-neutral-950",
+        className,
       )}
     >
       {childrenWithVisible}
@@ -128,7 +130,12 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   );
 };
 
-export const NavItems = ({ items, className, onItemClick, visible }: NavItemsProps) => {
+export const NavItems = ({
+  items,
+  className,
+  onItemClick,
+  visible,
+}: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
@@ -136,7 +143,10 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
       onMouseLeave={() => setHovered(null)}
       className={cn(
         "hidden flex-1 flex-row space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
-        className, visible ? "items-start justify-start" : "inset-0 items-center justify-center"
+        className,
+        visible
+          ? "items-start justify-start"
+          : "inset-0 items-center justify-center",
       )}
     >
       {items.map((item, idx) => {
@@ -152,12 +162,10 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
             <a
               href={item.link || "#"}
               onClick={onItemClick}
-              className="flex gap-1 relative z-20 px-2 py-1.5 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 transition duration-200 rounded-full"
+              className="relative z-20 flex gap-1 rounded-full px-2 py-1.5 text-neutral-600 transition duration-200 hover:bg-neutral-100 dark:text-neutral-300"
             >
               {item.name}
-              {hasDropdown && (
-                <ChevronDown className="w-5 h-5" />
-                )}
+              {hasDropdown && <ChevronDown className="h-5 w-5" />}
             </a>
 
             {hovered === idx && hasDropdown && (
@@ -165,18 +173,37 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute top-full left-1/2 z-40 mt-1 w-60 -translate-x-1/2 rounded-lg bg-white p-2 shadow-sm dark:bg-neutral-900"
+                className="absolute top-full left-1/2 z-40 mt-1 w-100 -translate-x-1/2 rounded-lg bg-white p-2 shadow-sm dark:bg-neutral-900"
               >
-                {item.children?.map((subItem, subIdx) => (
-                  <a
-                    key={`dropdown-${subIdx}`}
-                    href={subItem.link}
-                    onClick={onItemClick}
-                    className="block px-4 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800 rounded-full"
-                  >
-                    {subItem.name}
-                  </a>
-                ))}
+                <div className="flex justify-between gap-2">
+                  {/* First 4 items (left column) */}
+                  <div className="flex w-1/2 flex-col gap-1">
+                    {item.children?.slice(0, 4).map((subItem, subIdx) => (
+                      <a
+                        key={`dropdown-left-${subIdx}`}
+                        href={subItem.link}
+                        onClick={onItemClick}
+                        className="block rounded-full px-4 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+                      >
+                        {subItem.name}
+                      </a>
+                    ))}
+                  </div>
+
+                  {/* Remaining items (right column) */}
+                  <div className="flex w-1/2 flex-col gap-1">
+                    {item.children?.slice(4).map((subItem, subIdx) => (
+                      <a
+                        key={`dropdown-right-${subIdx}`}
+                        href={subItem.link}
+                        onClick={onItemClick}
+                        className="block rounded-full px-4 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+                      >
+                        {subItem.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             )}
           </div>
@@ -185,7 +212,6 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
     </motion.div>
   );
 };
-
 
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (
@@ -204,7 +230,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         damping: 50,
       }}
       className={cn(
-        "bg-white dark:bg-neutral-950 relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between rounded-full px-6 py-2 lg:hidden",
+        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between rounded-full bg-white px-6 py-2 lg:hidden dark:bg-neutral-950",
         className,
       )}
     >
@@ -299,9 +325,6 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
     </a>
   );
 };
-
-
-
 
 export const NavbarButton = ({
   href,

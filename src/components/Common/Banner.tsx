@@ -22,7 +22,7 @@ const Banner = () => {
             Why Work with Us?
           </h3>
           <p className="text-center">
-            Searching for a dependable UI/UX Design team? You've found your
+            Searching for a dependable UI/UX Design team? You&apos;ve found your
             solution!
           </p>
           <Button className="border border-white/80 px-8 py-6 rounded-full">Contact Us</Button>

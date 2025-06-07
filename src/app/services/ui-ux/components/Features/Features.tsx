@@ -32,7 +32,7 @@ const Features = () => {
             <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
               Why Work with Us?
             </h3>
-            <p className="text-center">Searching for a dependable UI/UX Design team? You've found your solution!</p>
+            <p className="text-center">Searching for a dependable UI/UX Design team? You&apos;ve found your solution!</p>
             <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
               {features.map((feat, index) => (
                 <motion.div

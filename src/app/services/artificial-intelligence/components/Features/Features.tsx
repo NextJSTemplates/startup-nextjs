@@ -48,7 +48,7 @@ const Features = () => {
                       <Image src={feat.icon} alt={feat.label} width={24} height={24} className="h-10 w-10" />
                     </div>
 
-                    <p className="text-5xl font-bold text-muted-foreground/20">0{index+1}</p>
+                    <p className="text-5xl font-bold text-muted-foreground/20">{index+1}</p>
                   </div>
                   <p className="text-lg mt-4 font-bold">{feat.value}</p>
                   <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">

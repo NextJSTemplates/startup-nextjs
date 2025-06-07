@@ -23,8 +23,24 @@ const Header = () => {
       children: [
         { name: "Cloud Computing", link: "/services/cloud-computing" },
         { name: "Mobile Apps", link: "/services/mobile-development" },
-        { name: "Software Development", link: "/services/software-development" },
-        { name: "Artificial Intelligence", link: "/services/artificial-intelligence" },
+        {
+          name: "Software Development",
+          link: "/services/software-development",
+        },
+        {
+          name: "Artificial Intelligence",
+          link: "/services/artificial-intelligence",
+        },
+        { name: "UI/UX", link: "/services/ui-ux" },
+        { name: "Software Security", link: "/services/software-security" },
+        {
+          name: "MVP Development",
+          link: "/services/mvp-development",
+        },
+        {
+          name: "Software Maintainance",
+          link: "/services/software-maintainance",
+        },
       ],
     },
     { name: "Industries", link: "#industries" },
@@ -40,7 +56,7 @@ const Header = () => {
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <div className="flex items-center gap-4 ">
+        <div className="flex items-center gap-4">
           <Button className="max-w-sm border-neutral-300 bg-white px-4 text-[13px] font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white">
             Contact Us
             <ExternalLink className="ml-1.5 h-4 w-4" />

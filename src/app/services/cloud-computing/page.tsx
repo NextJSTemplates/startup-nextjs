@@ -8,6 +8,7 @@ import Banner from "@/components/Common/Banner";
 import Services from "./components/Services/Services";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
 import { cloudData } from "@/components/Common/WhyUs/whyUsData";
+import TechStack from "./components/TechStack/TechStack";
 
 export const metadata: Metadata = {
   title: "Services - Cloud Computing",
@@ -39,6 +40,7 @@ const CloudComputing = () => {
       />
       <Services />
       <WhyUs title="Why Work With Us?" description="Description for Cloud Computing" data={cloudData}/>
+      <TechStack />
       <Banner
         title="Ready to begin your cloud journey?"
         description="Let’s review your setup and explore faster, scalable cloud solutions. Book a free consult."

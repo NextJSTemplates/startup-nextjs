@@ -39,7 +39,7 @@ const Header = () => {
         },
         {
           name: "Software Maintainance",
-          link: "/services/software-maintainance",
+          link: "/services/support-and-maintenance",
         },
       ],
     },

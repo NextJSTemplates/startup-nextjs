@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { uxData } from "./whyUsData";
 import { WhyUsData } from "@/types";
 
 type WhyUsProps = {
@@ -21,12 +20,12 @@ const WhyUs = ({title, description, data}: WhyUsProps) => {
   };
 
   return (
-    <section className="relative z-10 py-16 md:pt-20 lg:pt-24">
+    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto max-w-6xl rounded-2xl px-8 text-black"
+        className="container mx-auto max-w-6xl rounded-lg px-8 text-black"
       >
         <div className="flex flex-col gap-4">
           <motion.div
@@ -48,7 +47,7 @@ const WhyUs = ({title, description, data}: WhyUsProps) => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="relative mx-auto flex flex-col overflow-hidden rounded-xl p-6 shadow-sm"
+                  className="relative mx-auto flex flex-col overflow-hidden rounded-lg border border-border p-6"
                 >
                   <div className="flex items-center justify-between gap-2">
                       <Image
@@ -56,11 +55,11 @@ const WhyUs = ({title, description, data}: WhyUsProps) => {
                         alt={feat.label}
                         width={100}
                         height={100}
-                        className="w-120 rounded-xl"
+                        className="w-120 rounded-lg"
                       />
                   </div>
                   <p className="mt-4 text-lg font-bold">{feat.value}</p>
-                  <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+                  <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400 nax-w-xs">
                     {feat.label}
                   </p>
                 </motion.div>

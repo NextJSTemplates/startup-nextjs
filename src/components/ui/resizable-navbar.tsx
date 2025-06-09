@@ -303,7 +303,7 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
           alt="logo"
           width={30}
           height={30}
-          className="h-12 w-12"
+          className="h-9 w-9"
         />
       </a>
     );

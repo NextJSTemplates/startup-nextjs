@@ -1,4 +1,4 @@
-import { TeamMember } from "@/types/teamMember";
+import { TeamMember } from "@/types";
 
 export const teamMembers: TeamMember[] = [
   {

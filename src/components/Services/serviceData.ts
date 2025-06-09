@@ -1,3 +1,4 @@
+import { Service } from "@/types";
 import {
   Bot,
   Cloud,
@@ -32,7 +33,6 @@ import {
   ShoppingCart,
 } from "lucide-react";
 
-import { Service } from "@/types/service";
 export const services: Service[] = [
   {
     icon: PenTool,

@@ -15,12 +15,13 @@ const Statistics = () => {
   };
 
   return (
-    <section className="relative z-10 py-16 md:pt-20 lg:pt-24">
+    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
+      <div className="px-4">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto max-w-6xl rounded-2xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-12 text-black"
+        className="container mx-auto max-w-6xl rounded-lg bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-8 py-12 text-black"
       >
         <div className="flex flex-col gap-4 px-6">
           <motion.div
@@ -46,7 +47,7 @@ const Statistics = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="relative flex flex-col overflow-hidden rounded-xl bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950 max-w-xs mx-auto"
+                  className="relative flex flex-col overflow-hidden rounded-lg bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950 max-w-xs mx-auto"
                 >
                   <div className="flex items-center gap-2">
                     <div className="rounded-md bg-black p-3">
@@ -64,6 +65,7 @@ const Statistics = () => {
           </motion.div>
         </div>
       </motion.div>
+      </div>
     </section>
   );
 };

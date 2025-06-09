@@ -7,6 +7,8 @@ import { teamMembers } from "@/components/Hero/heroData";
 import Statistics from "@/components/Common/Statistics";
 import Services from "./components/Services";
 import Features from "./components/Features/Features";
+import Industries from "@/components/Common/Industries/Industries";
+import Banner from "@/components/Common/Banner";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",
@@ -54,7 +56,13 @@ const ArtificialIntelligence = () => {
       />
       <Services />
       <Features />
+      <Industries />
       <Statistics />
+      <Banner
+        title="Build the Future with Agentic AI"
+        description="From chat assistants to automation — we help you turn AI into your edge."
+        buttonText="Get Started Now"
+      />
     </>
   );
 };

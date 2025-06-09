@@ -120,7 +120,7 @@ export const Hero = ({
                   return (
                     <motion.div
                       key={index}
-                      className="mb-2 flex flex-col items-start justify-start gap-2 text-sm md:flex-row"
+                      className="mb-2 flex items-start justify-start gap-2 text-sm"
                     >
                       {item.icon}
                       <p className="mt-1 font-medium">{item.label}</p>

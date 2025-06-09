@@ -39,7 +39,7 @@ const UIUXPage = () => {
       <Services />
       <Tools />
       <Features />
-      <Banner />
+      <Banner title="Let's Design Something That Works" description="Get A Free Design" buttonText="Contact Us" />
     </>
   );
 };

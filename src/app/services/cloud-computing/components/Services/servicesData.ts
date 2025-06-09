@@ -1,9 +1,6 @@
-import SingleService from "@/components/Common/SingleService";
-import React from "react";
-
-const aiServices = [
+export const cloudServices = [
   {
-    image: "/images/services/aimodel/Assistants.svg",
+    image: "/images/services/cloud/cuate.svg",
     title: "Smart AI Agents & Chatbots",
     description:
       "Deliver exceptional customer service with intelligent, NLP-based chatbots and virtual agents.",
@@ -14,7 +11,7 @@ const aiServices = [
     ],
   },
   {
-    image: "/images/services/aimodel/Automation.svg",
+    image: "/images/services/cloud/Cloud Strategy Development.svg",
     title: "Workflow Automation",
     description:
       "Eliminate inefficiencies with intelligent automation of repetitive business tasks.",
@@ -25,7 +22,7 @@ const aiServices = [
     ],
   },
   {
-    image: "/images/services/aimodel/Decision-Making.svg",
+    image: "/images/services/cloud/emojione_light-bulb.svg",
     title: "AI-Powered Decision Making",
     description:
       "Enable data-backed strategies with real-time AI insights and analytics dashboards.",
@@ -36,7 +33,7 @@ const aiServices = [
     ],
   },
   {
-    image: "/images/services/aimodel/AI-Agents.svg",
+    image: "/images/services/cloud/amico.svg",
     title: "Custom AI Assistants",
     description:
       "Deploy personalized assistants to automate operations, bookings, and data processing.",
@@ -47,7 +44,18 @@ const aiServices = [
     ],
   },
   {
-    image: "/images/services/aimodel/E-Commerce.svg",
+    image: "/images/services/cloud/Testing & Optimization.svg",
+    title: "AI for E-Commerce",
+    description:
+      "From recommendation engines to dynamic pricing and smart search, supercharge online retail with AI.",
+    services: [
+      { label: "AI-based product recommendations" },
+      { label: "Inventory & logistics predictions" },
+      { label: "Personalized marketing automation" },
+    ],
+  },
+    {
+    image: "/images/services/cloud/rafiki.svg",
     title: "AI for E-Commerce",
     description:
       "From recommendation engines to dynamic pricing and smart search, supercharge online retail with AI.",
@@ -58,28 +66,3 @@ const aiServices = [
     ],
   },
 ];
-const Services = () => {
-  return (
-    <section id="services" className="relative z-10 pt-16 md:pt-20 lg:pt-24">
-      <div className="container mx-auto max-w-6xl">
-        <h1 className="mb-8 text-center text-3xl font-bold">
-          AI-Powered Solutions for Your Business
-        </h1>
-        <div className="grid grid-cols-1 gap-4">
-          {aiServices.map((service, index) => (
-            <SingleService
-              key={index}
-              className={index % 2 !== 0 ? "md:flex-row-reverse" : ""}
-              imageSrc={service.image}
-              title={service.title}
-              description={service.description}
-              services={service.services}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Services;

@@ -1,4 +1,4 @@
-import { Statistics } from "@/types/stats";
+import { Statistics } from "@/types";
 import { ChartBar, Cloud, Cpu, Blocks } from "lucide-react";
 
 export const statistics: Statistics[] = [

@@ -18,5 +18,10 @@ export const features = [
     value: "Testing & Optimization",
     label: "Blockchain Projects Including DApps and Integrations",
     icon: "/images/services/aimodel/ai-step-4.svg",
+  },
+    {
+    value: "Delivery & Maintenance",
+    label: "Blockchain Projects Including DApps and Integrations",
+    icon: "/images/services/aimodel/Healthcare-icon.svg",
   }
 ];

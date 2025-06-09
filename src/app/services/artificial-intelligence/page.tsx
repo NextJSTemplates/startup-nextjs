@@ -44,6 +44,7 @@ const ArtificialIntelligence = () => {
       <Hero
         title="Boost Your Business with Agentic AI"
         subtitle="Harness the transformative power of Artificial Intelligence to optimize workflows, personalize user experiences, and automate operations. At Classy Endeavors, we design and deliver custom AI solutions that make businesses smarter, faster, and more scalable."
+        backgroundImage="/images/services/AIBackground.svg"
         keywords={["Smart AI.", "Real Actions.", "Constant Growth"]}
         services={aiChars}
         ctaButtons={[

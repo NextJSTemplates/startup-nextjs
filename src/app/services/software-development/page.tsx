@@ -25,6 +25,7 @@ const SoftwareDevelopment = () => {
       <Hero
         title="Build Powerful Software That Solves Real Problems"
         subtitle="From web and mobile applications to enterprise-grade platforms, we develop custom software solutions that scale with your business."
+        backgroundImage="/images/services/SDBackground.svg"
         ctaButtons={[
           {
             label: "Start your Design Journey",

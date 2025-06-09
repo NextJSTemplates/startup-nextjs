@@ -5,6 +5,9 @@ import { Hero } from "@/components/Common/ServicesHero";
 import { ExternalLink } from "lucide-react";
 import { teamMembers } from "@/components/Hero/heroData";
 import Banner from "@/components/Common/Banner";
+import Services from "./components/Services/Services";
+import WhyUs from "@/components/Common/WhyUs/WhyUs";
+import { cloudData } from "@/components/Common/WhyUs/whyUsData";
 
 export const metadata: Metadata = {
   title: "Services - Cloud Computing",
@@ -34,6 +37,8 @@ const CloudComputing = () => {
         ]}
         teamMembers={teamMembers}
       />
+      <Services />
+      <WhyUs title="Why Work With Us?" description="Description for Cloud Computing" data={cloudData}/>
       <Banner
         title="Ready to begin your cloud journey?"
         description="Let’s review your setup and explore faster, scalable cloud solutions. Book a free consult."

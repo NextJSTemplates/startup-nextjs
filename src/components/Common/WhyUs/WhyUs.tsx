@@ -2,9 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { features } from "./featureData";
+import { uxData } from "./whyUsData";
+import { WhyUsData } from "@/types";
 
-const Features = () => {
+type WhyUsProps = {
+  title: string;
+  description: string;
+  data: WhyUsData[];
+}
+const WhyUs = ({title, description, data}: WhyUsProps) => {
   const flipVariant = {
     hidden: { rotateY: 100, opacity: 0 },
     visible: (i: number) => ({
@@ -30,11 +36,11 @@ const Features = () => {
             className="flex flex-col space-y-6"
           >
             <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
-              Why Work with Us?
+              {title}
             </h3>
-            <p className="text-center">Searching for a dependable UI/UX Design team? You&apos;ve found your solution!</p>
+            <p className="text-center">{description}</p>
             <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-              {features.map((feat, index) => (
+              {data.map((feat, index) => (
                 <motion.div
                   key={index}
                   custom={index}
@@ -67,4 +73,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default WhyUs;

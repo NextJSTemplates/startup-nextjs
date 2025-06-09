@@ -4,9 +4,10 @@ import { Hero } from "@/components/Common/ServicesHero";
 import { ExternalLink } from "lucide-react";
 import Services from "./components/Services";
 import { teamMembers } from "@/components/Hero/heroData";
-import Features from "./components/Features/Features";
 import Tools from "./components/Tools";
 import Banner from "@/components/Common/Banner";
+import WhyUs from "@/components/Common/WhyUs/WhyUs";
+import { uxData } from "@/components/Common/WhyUs/whyUsData";
 export const metadata: Metadata = {
   title: "Services - UI/UX Design",
   keywords: [
@@ -38,7 +39,7 @@ const UIUXPage = () => {
       
       <Services />
       <Tools />
-      <Features />
+      <WhyUs title="Why Work With Us?" description="Description for UI/UX" data={uxData}/>
       <Banner title="Let's Design Something That Works" description="Get A Free Design" buttonText="Contact Us" />
     </>
   );

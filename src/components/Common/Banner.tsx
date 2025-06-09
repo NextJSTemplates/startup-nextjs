@@ -33,10 +33,10 @@ const Banner = ({title, description, buttonText} : BannerProps) => {
             transition={{ duration: 0.6 }}
             className="relative z-10 flex flex-col items-center justify-center space-y-6 text-black"
           >
-            <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
+            <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold capitalize">
               {title}
             </h3>
-            <p className="text-center text-neutral-600 text-sm">
+            <p className="text-center text-neutral-600">
               {description}
             </p>
             <Button className="rounded-full border border-white/80 bg-black px-8 py-6">

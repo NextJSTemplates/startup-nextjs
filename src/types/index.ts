@@ -74,3 +74,9 @@ export type Testimonial = {
     body: string;
     img: string;
 };
+
+export type WhyUsData = {
+    value: string;
+    label: string;
+    icon: string;
+}

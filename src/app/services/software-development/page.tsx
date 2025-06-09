@@ -35,7 +35,7 @@ const SoftwareDevelopment = () => {
       />
       <Services />
       <Features />
-      <Banner />
+      <Banner title="Let's talk about your software vision" description="Tell us and we're build the right solution for your needs" buttonText="Contact Us" />
     </>
     
   );

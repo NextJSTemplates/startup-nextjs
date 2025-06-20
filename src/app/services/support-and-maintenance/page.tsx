@@ -39,7 +39,6 @@ const SupportAndMaintenance = () => {
             icon: <ExternalLink className="h-4 w-4 stroke-2" />,
           },
         ]}
-        teamMembers={teamMembers}
       />
       <SystemServices />
       <Features />

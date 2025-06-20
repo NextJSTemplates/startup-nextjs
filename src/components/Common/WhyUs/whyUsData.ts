@@ -36,14 +36,12 @@ export const cloudData: WhyUsData[] = [
   },
   {
     value: "Client-Centered Approach",
-    label:
-      "We prioritize your objectives, timelines, and success metrics.",
+    label: "We prioritize your objectives, timelines, and success metrics.",
     icon: "/images/services/cloud/client-centric-approach.svg",
   },
   {
     value: "Advanced Security Protocols",
-    label:
-      "Built-in security and compliance measures to protect your assets.",
+    label: "Built-in security and compliance measures to protect your assets.",
     icon: "/images/services/cloud/Cyber security concept in digital art.svg",
   },
   {
@@ -51,5 +49,32 @@ export const cloudData: WhyUsData[] = [
     label:
       "Faster deployment timelines without sacrificing performance or stability.",
     icon: "/images/services/cloud/faster-time to-market.svg",
+  },
+];
+
+export const mvpData: WhyUsData[] = [
+  {
+    value: "Startups Seeking MVP Validation",
+    label:
+      "We help early-stage startups transform their concepts into functional MVPs with just the core features needed for market testing and early adoption.",
+    icon: "/images/services/mvp/mvp validation.svg",
+  },
+  {
+    value: "Enterprises Exploring New Solutions",
+    label:
+      "Enterprise teams rely on us to build MVPs for new product lines or digital transformation initiatives with reduced risk and faster time to value.",
+    icon: "/images/services/mvp/Solution Provider.svg",
+  },
+  {
+    value: "CTOs, Tech Founders & Non-Technical Entrepreneurs",
+    label:
+      "Whether you're technical or not, our team bridges the gap between your vision and technical execution with full-service design and development support.",
+    icon: "/images/services/mvp/Full-Stack Developers for MVP Development.svg",
+  },
+  {
+    value: "Startups Facing Funding Challenges",
+    label:
+      "We prioritize the features that matter most to help you launch on a lean budget, secure early traction, and attract investor interest.",
+    icon: "/images/services/mvp/mvp scaling.svg",
   },
 ];

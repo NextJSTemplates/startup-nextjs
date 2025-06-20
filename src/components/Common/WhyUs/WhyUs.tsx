@@ -8,8 +8,8 @@ type WhyUsProps = {
   title: string;
   description: string;
   data: WhyUsData[];
-}
-const WhyUs = ({title, description, data}: WhyUsProps) => {
+};
+const WhyUs = ({ title, description, data }: WhyUsProps) => {
   const flipVariant = {
     hidden: { rotateY: 100, opacity: 0 },
     visible: (i: number) => ({
@@ -34,10 +34,10 @@ const WhyUs = ({title, description, data}: WhyUsProps) => {
             transition={{ duration: 0.6 }}
             className="flex flex-col space-y-6"
           >
-            <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
+            <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold capitalize">
               {title}
             </h3>
-            <p className="text-center">{description}</p>
+            <p className="text-center capitalize">{description}</p>
             <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
               {data.map((feat, index) => (
                 <motion.div
@@ -47,19 +47,23 @@ const WhyUs = ({title, description, data}: WhyUsProps) => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="relative mx-auto flex flex-col overflow-hidden rounded-lg border border-border p-6"
+                  className="border-border relative mx-auto flex flex-col overflow-hidden rounded-lg border p-6"
                 >
                   <div className="flex items-center justify-between gap-2">
+                    <div className="relative h-80 w-full">
                       <Image
                         src={feat.icon}
                         alt={feat.label}
-                        width={100}
-                        height={100}
-                        className="w-120 rounded-lg"
+                        // width={100}
+                        // height={100}
+                        layout="fill"
+                        objectFit="cover"
+                        className="h-full w-full rounded-lg"
                       />
+                    </div>
                   </div>
                   <p className="mt-4 text-lg font-bold">{feat.value}</p>
-                  <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400 nax-w-xs">
+                  <p className="nax-w-xs relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
                     {feat.label}
                   </p>
                 </motion.div>

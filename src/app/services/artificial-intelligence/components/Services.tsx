@@ -1,4 +1,5 @@
 import SingleService from "@/components/Common/SingleService";
+import { Badge } from "@/components/ui/badge";
 import React from "react";
 
 const aiServices = [
@@ -62,9 +63,14 @@ const Services = () => {
   return (
     <section id="services" className="relative z-10 pt-16 md:pt-20 lg:pt-24">
       <div className="container mx-auto max-w-6xl">
-        <h1 className="mb-8 text-center text-3xl font-bold">
-          AI-Powered Solutions for Your Business
-        </h1>
+        <div className="flex flex-col items-center justify-center">
+          <Badge className="bg-background border-border mb-4 rounded-md border px-4 py-2 text-sm text-black capitalize">
+            Think like us. Work faster
+          </Badge>
+          <h1 className="mb-8 text-center text-3xl font-bold capitalize">
+            AI-Powered Solutions for Your Business
+          </h1>
+        </div>
         <div className="grid grid-cols-1 gap-4">
           {aiServices.map((service, index) => (
             <SingleService

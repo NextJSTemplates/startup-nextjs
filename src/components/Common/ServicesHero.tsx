@@ -2,7 +2,6 @@
 
 import { Button } from "../ui/moving-border";
 import { motion } from "framer-motion";
-// import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const staggerWords = {
@@ -23,11 +22,6 @@ const wordFadeUp = {
   },
 };
 
-type TeamMember = {
-  name: string;
-  image: string;
-};
-
 type HeroProps = {
   title: string;
   subtitle: string;
@@ -42,7 +36,6 @@ type HeroProps = {
     icon: React.ReactNode;
     href?: string;
   }[];
-  teamMembers: TeamMember[];
 };
 
 export const Hero = ({
@@ -52,14 +45,7 @@ export const Hero = ({
   keywords,
   services,
   ctaButtons,
-  teamMembers,
 }: HeroProps) => {
-  const mid =
-    teamMembers && teamMembers.length > 0
-      ? Math.floor(teamMembers.length / 2)
-      : 0;
-  const teamOne = teamMembers.slice(0, mid);
-  const teamTwo = teamMembers.slice(mid);
 
   return (
     <section
@@ -161,7 +147,7 @@ export const Hero = ({
                   >
                     <Button
                       borderRadius="1.75rem"
-                      className="gap-2 border-neutral-300 bg-white px-4 font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white"
+                      className="gap-2 border-neutral-300 bg-white px-4 font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white capitalize"
                     >
                       {btn.label} {btn.icon}
                     </Button>

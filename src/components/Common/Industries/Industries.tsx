@@ -5,14 +5,14 @@ import { industries } from "./industriesData";
 import Image from "next/image";
 
 const Industries = () => {
-  const flipVariant = {
-    hidden: { rotateY: 100, opacity: 0 },
-    visible: (i: number) => ({
-      rotateY: 0,
-      opacity: 1,
-      transition: { delay: i * 0.3, duration: 0.8, ease: "easeIn" },
-    }),
-  };
+  // const flipVariant = {
+  //   hidden: { rotateY: 100, opacity: 0 },
+  //   visible: (i: number) => ({
+  //     rotateY: 0,
+  //     opacity: 1,
+  //     transition: { delay: i * 0.3, duration: 0.8, ease: "easeIn" },
+  //   }),
+  // };
 
   return (
     <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
@@ -41,7 +41,7 @@ const Industries = () => {
                 <motion.div
                   key={index}
                   custom={index}
-                  variants={flipVariant}
+                  // variants={flipVariant}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}

@@ -10,13 +10,12 @@ export const Footer = () => {
           <div className="mb-8 md:mb-0">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo.png"
+                src="/images/logo/logo.png"
                 alt="logo"
-                width={10}
-                height={10}
-                className="h-14 w-14"
+                width={320}
+                height={320}
+                className="w-80"
               />
-              <h2 className="text-lg font-bold">Classy Endeavors</h2>
             </Link>
             <p className="mt-2 text-sm">
               © {new Date().getFullYear()} Classy Endeavors. All rights
@@ -73,25 +72,20 @@ export const Footer = () => {
               <h4 className="mb-4 font-semibold">Socials</h4>
               <ul className="list-none space-y-2 text-sm">
                 <li>
-                  <Link
-                    href="https://github.com/arihantcodes/spectrum-ui"
-                    className=""
-                  >
+                  <Link href="https://github.com/classy-endeavors" className="">
                     Github
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="https://www.linkedin.com/in/arihantcodes"
+                    href="https://www.linkedin.com/in/classy-endeavors"
                     className=""
                   >
                     LinkedIn
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://x.com/arihantcodes" className="">
-                    X
-                  </Link>
+                  <Link href="https://x.com/classy-endeavors">X</Link>
                 </li>
               </ul>
             </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-background">
+    <footer className="bg-gradient-to-br from-black via-black to-neutral-500 px-8 pt-20 text-white">
       <div className="container mx-auto max-w-7xl border-t px-4 py-12 md:px-6">
         <div className="flex flex-col justify-between md:flex-row">
           <div className="mb-8 md:mb-0">
@@ -19,7 +19,7 @@ export const Footer = () => {
               <h2 className="text-lg font-bold">Classy Endeavors</h2>
             </Link>
             <p className="text-muted-foreground mt-2 text-sm">
-              © {new Date().getFullYear()} Lexnova AI. All rights reserved.
+              © {new Date().getFullYear()} Classy Endeavors. All rights reserved.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
@@ -107,7 +107,7 @@ export const Footer = () => {
         </div>
         <div className="mt-4 flex w-full items-center justify-center">
           <h1 className="from-muted to-muted/5 bg-gradient-to-b bg-clip-text text-center text-3xl font-bold text-transparent select-none md:text-5xl lg:text-[10rem]">
-            Lexnova AI Ltd
+            Classy Endeavors
           </h1>
         </div>
       </div>

@@ -270,7 +270,7 @@ export const MobileNavToggle = ({
 export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
   if (visible) {
     return (
-      <a href="#" className="relative z-20 mr-4 flex items-center px-2 py-1">
+      <a href="/" className="relative z-20 mr-4 flex items-center px-2 py-1">
         <Image
           src="/images/logo/logo-dark.svg"
           alt="logo"

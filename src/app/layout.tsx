@@ -1,8 +1,8 @@
 "use client";
-
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { Providers } from "./providers";
+import { Footer } from "@/components/ui/large-name-footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import Header from "@/components/Header";
 import { Inter, Poppins } from "next/font/google";
 import "../styles/index.css";
 
@@ -34,6 +34,4 @@ export default function RootLayout({
     </html>
   );
 }
-
-import { Providers } from "./providers";
 

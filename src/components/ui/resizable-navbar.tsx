@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import { ChevronDown } from "lucide-react";
 import {
   motion,
   AnimatePresence,
@@ -15,31 +14,26 @@ import React, { useRef, useState } from "react";
 
 interface NavItem {
   name: string;
-  link?: string;
-  children?: {
+  link: string;
+  sublinks?: {
     name: string;
     link: string;
   }[];
 }
-
 interface NavItemsProps {
   items: NavItem[];
   className?: string;
   onItemClick?: () => void;
-  visible?: boolean;
 }
-
 interface NavbarProps {
   children: React.ReactNode;
   className?: string;
 }
-
 interface NavBodyProps {
   children: React.ReactNode;
   className?: string;
   visible?: boolean;
 }
-
 interface MobileNavProps {
   children: React.ReactNode;
   className?: string;
@@ -50,7 +44,6 @@ interface MobileNavHeaderProps {
   children: React.ReactNode;
   className?: string;
 }
-
 interface MobileNavMenuProps {
   children: React.ReactNode;
   className?: string;
@@ -130,79 +123,59 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   );
 };
 
-export const NavItems = ({
-  items,
-  className,
-  onItemClick,
-  visible,
-}: NavItemsProps) => {
+export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "hidden flex-1 flex-row space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
-        className,
-        visible
-          ? "items-start justify-start"
-          : "inset-0 items-center justify-center",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        className
       )}
     >
       {items.map((item, idx) => {
-        const hasDropdown = !!item.children?.length;
+        const hasSublinks = item.sublinks && item.sublinks.length > 0;
 
         return (
           <div
             key={`nav-item-${idx}`}
             className="relative"
-            onMouseEnter={() => hasDropdown && setHovered(idx)}
-            onMouseLeave={() => hasDropdown && setHovered(null)}
+            onMouseEnter={() => setHovered(idx)}
           >
             <a
-              href={item.link || "#"}
               onClick={onItemClick}
-              className="relative z-20 flex gap-1 rounded-full px-2 py-1.5 text-neutral-600 transition duration-200 hover:bg-neutral-100 dark:text-neutral-300"
+              href={item.link}
+              className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
             >
-              {item.name}
-              {hasDropdown && <ChevronDown className="h-5 w-5" />}
+              {hovered === idx && (
+                <motion.div
+                  layoutId="hovered"
+                  className="absolute inset-0 h-full w-full rounded-full bg-zinc-100 dark:bg-neutral-800"
+                />
+              )}
+              <span className="relative z-20">{item.name}</span>
             </a>
 
-            {hovered === idx && hasDropdown && (
+            {hasSublinks && hovered === idx && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute top-full left-1/2 z-40 mt-1 w-100 -translate-x-1/2 rounded-lg bg-white p-2 shadow-sm dark:bg-neutral-900"
+                transition={{ duration: 0.2 }}
+                className="absolute left-1/2 top-full mt-4.5 -translate-x-1/2 whitespace-nowrap rounded-md bg-white shadow-lg dark:bg-neutral-900 z-50"
               >
-                <div className="flex justify-between gap-2">
-                  {/* First 4 items (left column) */}
-                  <div className="flex w-1/2 flex-col gap-1">
-                    {item.children?.slice(0, 4).map((subItem, subIdx) => (
+                <div className="p-3 grid-cols-3 w-fit">
+                  {item.sublinks!.map((sub, subIdx) => (
+                    <div key={`sub-${idx}-${subIdx}`}>
                       <a
-                        key={`dropdown-left-${subIdx}`}
-                        href={subItem.link}
-                        onClick={onItemClick}
-                        className="block rounded-full px-4 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+                        href={sub.link}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-zinc-100 rounded-full"
                       >
-                        {subItem.name}
+                        {sub.name}
                       </a>
-                    ))}
-                  </div>
-
-                  {/* Remaining items (right column) */}
-                  <div className="flex w-1/2 flex-col gap-1">
-                    {item.children?.slice(4).map((subItem, subIdx) => (
-                      <a
-                        key={`dropdown-right-${subIdx}`}
-                        href={subItem.link}
-                        onClick={onItemClick}
-                        className="block rounded-full px-4 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
-                      >
-                        {subItem.name}
-                      </a>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             )}

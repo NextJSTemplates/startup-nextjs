@@ -20,7 +20,7 @@ const Header = () => {
     {
       name: "Services",
       link: "#services",
-      children: [
+      sublinks: [
         { name: "Cloud Computing", link: "/services/cloud-computing" },
         { name: "Mobile Apps", link: "/services/mobile-development" },
         {

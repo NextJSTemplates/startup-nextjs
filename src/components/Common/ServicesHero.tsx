@@ -1,8 +1,17 @@
 "use client";
 
-import { Button } from "../ui/moving-border";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Card, CardTitle } from "../ui/card";
+import { Form, FormControl, FormField, FormItem } from "../ui/form";
+import { Label } from "../ui/label";
+import { Input } from "../ui/input";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
 
 const staggerWords = {
   hidden: {},
@@ -22,6 +31,15 @@ const wordFadeUp = {
   },
 };
 
+const contactSchema = z.object({
+  firstname: z.string().min(1, "Name is required"),
+  lastname: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  phonenumber: z.string().optional(),
+  message: z.string().min(10, "Message must be at least 10 characters long"),
+  companyindustry: z.string().min(3, "Company industry is required"),
+});
+
 type HeroProps = {
   title: string;
   subtitle: string;
@@ -31,11 +49,6 @@ type HeroProps = {
     label: string;
     icon: React.ReactNode;
   }[];
-  ctaButtons: {
-    label: string;
-    icon: React.ReactNode;
-    href?: string;
-  }[];
 };
 
 export const Hero = ({
@@ -44,8 +57,33 @@ export const Hero = ({
   backgroundImage,
   keywords,
   services,
-  ctaButtons,
 }: HeroProps) => {
+
+  const contactForm = useForm<z.infer<typeof contactSchema>>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      phonenumber: "",
+      companyindustry: "",
+      message: "",
+    },
+  });
+  const onContactSubmit = async (data: z.infer<typeof contactSchema>) => {
+    const response = await fetch("/api/hubspot-submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      toast.success("Thanks for contacting us!");
+      contactForm.reset();
+    } else {
+      toast.error("Something went wrong. Please try again later.");
+    }
+  };
 
   return (
     <section
@@ -60,16 +98,6 @@ export const Hero = ({
         quality={90}
         className="absolute inset-0 z-0"
       />
-      {/* <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
-        )}
-      /> */}
-      {/* <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r" />
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l" /> */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
       <div className="md:max-w-8xl relative z-10 container mx-auto lg:max-w-6xl">
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
@@ -138,23 +166,122 @@ export const Hero = ({
                 }}
                 className="flex flex-wrap gap-4"
               >
-                {ctaButtons.map((btn, idx) => (
-                  <motion.div
-                    key={idx}
-                    variants={wordFadeUp}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.97 }}
-                  >
-                    <Button
-                      borderRadius="1.75rem"
-                      className="gap-2 border-neutral-300 bg-white px-4 font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white capitalize"
-                    >
-                      {btn.label} {btn.icon}
-                    </Button>
-                  </motion.div>
-                ))}
               </motion.div>
             </motion.div>
+          </div>
+          <div>
+            <Card className="relative overflow-hidden bg-black text-white border border-border/30">
+              <CardTitle className="text-3xl text-center max-w-md mx-auto capitalize mb-2">How can we help your business?</CardTitle>
+              <Form {...contactForm}>
+                <form
+                  onSubmit={contactForm.handleSubmit(onContactSubmit)}
+                  className="space-y-4 max-w-xl mx-auto rounded-lg"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <FormField
+                      control={contactForm.control}
+                      name="firstname"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormControl>
+                            <Input
+                              id="firstname"
+                              placeholder="First name"
+                              {...field}
+                            />
+                          </FormControl>
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={contactForm.control}
+                      name="lastname"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormControl>
+                            <Input
+                              id="lastname"
+                              placeholder="Last name"
+                              {...field}
+                            />
+                          </FormControl>
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <FormField
+                    control={contactForm.control}
+                    name="phonenumber"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            id="phonenumber"
+                            placeholder="Phone number"
+                            {...field}
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+
+
+                  <FormField
+                    control={contactForm.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            id="email"
+                            type="email"
+                            placeholder="Email address"
+                            {...field}
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={contactForm.control}
+                    name="companyindustry"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            id="companyindustry"
+                            placeholder="Company Industry"
+                            {...field}
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={contactForm.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Textarea
+                            id="message"
+                            placeholder="Project idea..."
+                            {...field}
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                  <Button
+                    className="gap-2 bg-white px-6 rounded-lg font-semibold text-black capitalize"
+                  >
+                    Submit
+                  </Button>
+                </form>
+              </Form>
+            </Card>
           </div>
         </div>
       </div>

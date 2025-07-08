@@ -3,7 +3,6 @@ import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
 import { Bot, Brain, Clock, ExternalLink } from "lucide-react";
-import { teamMembers } from "@/components/Hero/heroData";
 import Statistics from "@/components/Common/Statistics";
 import Services from "./components/Services";
 import Features from "./components/Features/Features";
@@ -47,12 +46,6 @@ const ArtificialIntelligence = () => {
         backgroundImage="/images/services/AIBackground.svg"
         keywords={["Smart AI.", "Real Actions.", "Constant Growth"]}
         services={aiChars}
-        ctaButtons={[
-          {
-            label: "Start your Journey",
-            icon: <ExternalLink className="h-4 w-4 stroke-2" />,
-          },
-        ]}
       />
       <Services />
       <Features />

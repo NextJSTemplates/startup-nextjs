@@ -71,7 +71,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       className={cn(
-        "fixed inset-x-0 top-6 z-40 mx-auto w-full max-w-4xl",
+        "fixed inset-x-0 top-4 z-40 mx-auto w-full max-w-4xl",
         className,
       )}
     >

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Card, CardTitle } from "../ui/card";
+import { Card, CardDescription, CardTitle } from "../ui/card";
 import { Form, FormControl, FormField, FormItem } from "../ui/form";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
@@ -88,7 +88,7 @@ export const Hero = ({
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden pt-[160px] pb-24 md:pt-[160px] md:pb-[32px] lg:h-screen xl:pt-[160px] xl:pb-[60px] 2xl:pt-[180px] 2xl:pb-[80px]"
+      className="relative z-10 overflow-hidden py-16 md:py-24 lg:py-32"
     >
       <Image
         src={backgroundImage}
@@ -171,7 +171,8 @@ export const Hero = ({
           </div>
           <div>
             <Card className="relative overflow-hidden bg-black text-white border border-border/30">
-              <CardTitle className="text-3xl text-center max-w-md mx-auto capitalize mb-2">How can we help your business?</CardTitle>
+              <CardTitle className="text-3xl text-center max-w-md mx-auto capitalize">How can we help your business?</CardTitle>
+              <CardDescription className="text-center text-white mb-2">We&apos;re a message away from bringing your idea to life.</CardDescription>
               <Form {...contactForm}>
                 <form
                   onSubmit={contactForm.handleSubmit(onContactSubmit)}

@@ -53,8 +53,8 @@ const ArtificialIntelligence = () => {
       <Statistics />
       <Banner
         title="Build the Future with Agentic AI"
-        description="From chat assistants to automation — we help you turn AI into your edge."
-        buttonText="Get Started Now"
+        description="Let’s design a unique mobile application that stands out! Click ‘Get Started’ to book a free consultation with our development team and take the first step toward innovation."
+        buttonText="Get your project developed"
       />
     </>
   );

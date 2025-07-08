@@ -10,13 +10,12 @@ type BannerProps = {
 }
 const Banner = ({title, description, buttonText} : BannerProps) => {
   return (
-    <section className="relative py-16 md:pt-20 lg:pt-20">
-      <div className="px-4">
+    <section className="relative py-16 md:py-20 lg:py-24 px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          className="relative z-10 container mx-auto max-w-6xl rounded-lg p-16 md:p-24 bg-neutral-100 overflow-hidden"
+          className="relative z-10 container mx-auto max-w-7xl rounded-lg p-16 md:p-24 bg-neutral-100 overflow-hidden"
         >
           <div
             className={cn(
@@ -44,7 +43,6 @@ const Banner = ({title, description, buttonText} : BannerProps) => {
             </Button>
           </motion.div>
         </motion.div>
-      </div>
     </section>
   );
 };

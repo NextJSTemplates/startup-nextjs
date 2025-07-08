@@ -62,12 +62,9 @@ const aiServices = [
 const Services = () => {
   return (
     <section id="services" className="relative z-10 pt-16 md:pt-20 lg:pt-24">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center justify-center">
-          <Badge className="bg-background border-border mb-4 rounded-md border px-4 py-2 text-sm text-black capitalize">
-            Think like us. Work faster
-          </Badge>
-          <h1 className="mb-8 text-center text-3xl font-bold capitalize">
+          <h1 className="mb-6 text-center text-3xl font-bold capitalize">
             AI-Powered Solutions for Your Business
           </h1>
         </div>

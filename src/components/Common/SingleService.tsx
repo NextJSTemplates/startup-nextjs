@@ -26,15 +26,16 @@ const SingleService = ({
         className,
       )}
     >
-      <div className="">
-        <Image
-          src={imageSrc}
-          alt="Service Image"
-          className="w-100 rounded-lg"
-          width={100}
-          height={100}
-        />
-      </div>
+<div className="w-[300px] h-[300px]">
+  <Image
+    src={imageSrc}
+    alt="Service Image"
+    className="w-full h-full object-cover rounded-lg"
+    width={100}
+    height={100}
+  />
+</div>
+
       <div className="flex flex-col items-start justify-center gap-2">
         <h1 className="text-xl font-bold">{title}</h1>
         <p className="text-sm">{description}</p>

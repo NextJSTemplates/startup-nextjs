@@ -32,9 +32,9 @@ const CloudComputing = () => {
         subtitle="Unlock the full potential of your cloud infrastructure. At Classy Endeavors, we deliver cloud-first strategies that drive scalability, agility, and resilience across your digital ecosystem. Whether you are starting your cloud journey or optimizing your current infrastructure, our experts provide tailored solutions to meet your business goals."
         backgroundImage="/images/services/CloudBackground.svg"
         keywords={[
-          "Scalable Solutions",
-          "Agile Infrastructure",
-          "Cloud-First Strategy",
+          "Scalable. ",
+          "Agile.",
+          "Cloud-First",
         ]}
       />
       <Services />

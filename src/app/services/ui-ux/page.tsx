@@ -29,12 +29,7 @@ const UIUXPage = () => {
         title="Design That Feels Right—and Performs Exceptionally"
         subtitle="We help startups and enterprises craft stunning interfaces and frictionless experiences that delight users and drive growth."
         backgroundImage="/images/services/UIUXBackground.svg"
-        ctaButtons={[
-          {
-            label: "Start your Design Journey",
-            icon: <ExternalLink className="h-4 w-4 stroke-2" />,
-          },
-        ]}
+        keywords={["Intuitive Design.", "User-Centric.", "Engaging Experiences"]}
       />
       
       <Services />

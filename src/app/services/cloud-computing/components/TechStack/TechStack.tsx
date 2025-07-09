@@ -9,7 +9,7 @@ const TechStack = () => {
       <div className="container mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <h2 className="text-3xl font-bold">Technologies We Work With</h2>
-          <p className="max-w-sm text-gray-600 text-sm">
+          <p className="max-w-sm">
             Classy Endeavors harnesses leading cloud and DevOps solutions to
             deliver reliable, efficient management of your cloud infrastructure.
           </p>

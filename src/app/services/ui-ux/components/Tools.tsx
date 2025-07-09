@@ -5,18 +5,18 @@ import React from "react";
 
 const Tools = () => {
   return (
-    <section className="relative z-10 py-16 md:pt-20 lg:pt-24">
+    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto max-w-6xl px-8"
+        className="container mx-auto max-w-7xl px-6"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col space-y-6"
+          className="flex flex-col space-y-2"
         >
           <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
             Our Design and Development Tools

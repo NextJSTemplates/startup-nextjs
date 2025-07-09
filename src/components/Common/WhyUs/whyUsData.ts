@@ -19,12 +19,12 @@ export const uxData: WhyUsData[] = [
       "Our UI/UX solutions are crafted with your KPIs in mind. From conversion-focused layouts to engagement-driven interfaces, we ensure every element works toward your brand’s success and user satisfaction.",
     icon: "/images/services/uiux/Cyber security concept in digital art.svg",
   },
-  {
-    value: "Scalable design systems",
-    label:
-      "Classy Endeavors creates scalable design systems that grow with your business. Our modular approach ensures consistency, efficiency, and easy updates across all your digital products.",
-    icon: "/images/services/uiux/faster-time to-market.svg",
-  },
+  // {
+  //   value: "Scalable design systems",
+  //   label:
+  //     "Classy Endeavors creates scalable design systems that grow with your business. Our modular approach ensures consistency, efficiency, and easy updates across all your digital products.",
+  //   icon: "/images/services/uiux/faster-time to-market.svg",
+  // },
 ];
 
 export const cloudData: WhyUsData[] = [
@@ -44,12 +44,13 @@ export const cloudData: WhyUsData[] = [
     label: "Built-in security and compliance measures to protect your assets.",
     icon: "/images/services/cloud/Cyber security concept in digital art.svg",
   },
-  {
-    value: "Accelerated Product Launch",
-    label:
-      "Faster deployment timelines without sacrificing performance or stability.",
-    icon: "/images/services/cloud/faster-time to-market.svg",
-  },
+  // },
+  // {
+  //   value: "Accelerated Product Launch",
+  //   label:
+  //     "Faster deployment timelines without sacrificing performance or stability.",
+  //   icon: "/images/services/cloud/faster-time to-market.svg",
+  // },
 ];
 
 export const mvpData: WhyUsData[] = [
@@ -71,10 +72,10 @@ export const mvpData: WhyUsData[] = [
       "Whether you're technical or not, our team bridges the gap between your vision and technical execution with full-service design and development support.",
     icon: "/images/services/mvp/Full-Stack Developers for MVP Development.svg",
   },
-  {
-    value: "Startups Facing Funding Challenges",
-    label:
-      "We prioritize the features that matter most to help you launch on a lean budget, secure early traction, and attract investor interest.",
-    icon: "/images/services/mvp/mvp scaling.svg",
-  },
+  // {
+  //   value: "Startups Facing Funding Challenges",
+  //   label:
+  //     "We prioritize the features that matter most to help you launch on a lean budget, secure early traction, and attract investor interest.",
+  //   icon: "/images/services/mvp/mvp scaling.svg",
+  // },
 ];

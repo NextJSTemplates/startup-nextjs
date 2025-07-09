@@ -10,12 +10,7 @@ const SofwareSecurity = () => {
         title="Proactive Software Security to Protect Your Business"
         subtitle="We build secure applications and safeguard your systems from evolving threats with end-to-end cybersecurity practices."
         backgroundImage="/images/services/MVPBackground.svg"
-        ctaButtons={[
-          {
-            label: "Schedule a call",
-            icon: <ExternalLink className="h-4 w-4 stroke-2" />,
-          },
-        ]}
+        keywords={["Secure Software.", "Proactive Protection.", "Business Safety"]}
       />
       <About />
     </>

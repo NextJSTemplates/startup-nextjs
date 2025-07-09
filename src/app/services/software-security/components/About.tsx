@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="relative z-10 py-16 md:pt-20 lg:pt-24">
+    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
       <div className="max-w-5xl mx-auto flex flex-col gap-6 p-6 md:flex-row md:gap-12">
         <div className="flex flex-col items-start justify-center gap-2">
           <h1 className="text-xl font-bold">

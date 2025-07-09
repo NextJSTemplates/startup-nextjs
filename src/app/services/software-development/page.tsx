@@ -26,12 +26,7 @@ const SoftwareDevelopment = () => {
         title="Build Powerful Software That Solves Real Problems"
         subtitle="From web and mobile applications to enterprise-grade platforms, we develop custom software solutions that scale with your business."
         backgroundImage="/images/services/SDBackground.svg"
-        ctaButtons={[
-          {
-            label: "Start your Design Journey",
-            icon: <ExternalLink className="h-4 w-4 stroke-2" />,
-          },
-        ]}
+        keywords={["Custom Software.", "Web Development.", "Mobile Apps."]}
       />
       <Services />
       <Features />

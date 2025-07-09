@@ -29,12 +29,7 @@ const MvpDevelopment = () => {
         title="MVP Development Services"
         subtitle="Bring your product vision to life—fast. At Classy Endeavors, we specialize in MVP (Minimum Viable Product) development that helps startups and enterprises validate ideas, attract investors, and accelerate market entry. Our iterative development approach ensures you get a functional, user-ready product in record time."
         backgroundImage="/images/services/MVPBackground.svg"
-        ctaButtons={[
-          {
-            label: "Schedule a call",
-            icon: <ExternalLink className="h-4 w-4 stroke-2" />,
-          },
-        ]}
+        keywords={["MVP Development", "Startup Acceleration", "Product Validation"]}
       />
       <WhyUs
         title="Who we can help"

@@ -25,20 +25,20 @@ const WhyUs = ({ title, description, data }: WhyUsProps) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto max-w-6xl rounded-lg px-8 text-black"
+        className="container mx-auto max-w-7xl rounded-lg px-6 text-black"
       >
         <div className="flex flex-col gap-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col space-y-6"
+            className="flex flex-col space-y-2"
           >
             <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold capitalize">
               {title}
             </h3>
             <p className="text-center capitalize">{description}</p>
-            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {data.map((feat, index) => (
                 <motion.div
                   key={index}
@@ -54,8 +54,6 @@ const WhyUs = ({ title, description, data }: WhyUsProps) => {
                       <Image
                         src={feat.icon}
                         alt={feat.label}
-                        // width={100}
-                        // height={100}
                         layout="fill"
                         objectFit="cover"
                         className="h-full w-full rounded-lg"

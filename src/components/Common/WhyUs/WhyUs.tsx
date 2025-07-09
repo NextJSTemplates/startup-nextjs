@@ -20,12 +20,12 @@ const WhyUs = ({ title, description, data }: WhyUsProps) => {
   };
 
   return (
-    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
+    <section className="relative z-10 pt-20">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto max-w-7xl rounded-lg px-6 text-black"
+        className="container mx-auto max-w-7xl rounded-lg px-6"
       >
         <div className="flex flex-col gap-4">
           <motion.div
@@ -37,7 +37,7 @@ const WhyUs = ({ title, description, data }: WhyUsProps) => {
             <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold capitalize">
               {title}
             </h3>
-            <p className="text-center capitalize">{description}</p>
+            <p className="text-center capitalize max-w-md mx-auto text-sm">{description}</p>
             <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {data.map((feat, index) => (
                 <motion.div

@@ -1,14 +1,13 @@
 import React from "react";
-
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
-import { ExternalLink } from "lucide-react";
-import { teamMembers } from "@/components/Hero/heroData";
 import Banner from "@/components/Common/Banner";
 import Services from "./components/Services/Services";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
 import { cloudData } from "@/components/Common/WhyUs/whyUsData";
 import TechStack from "./components/TechStack/TechStack";
+import Brands from "@/components/Brands";
+import DvtProcesses from "@/components/Common/DvtProcesses";
 
 export const metadata: Metadata = {
   title: "Services - Cloud Computing",
@@ -23,8 +22,8 @@ export const metadata: Metadata = {
   description:
     "Explore our comprehensive Cloud Computing services, including cloud infrastructure, migration, and management solutions tailored to your business needs.",
 };
-
 const CloudComputing = () => {
+
   return (
     <>
       <Hero
@@ -37,12 +36,14 @@ const CloudComputing = () => {
           "Cloud-First",
         ]}
       />
+      <Brands />
+      <DvtProcesses />
       <Services />
-      <WhyUs title="Why Work With Us?" description="Description for Cloud Computing" data={cloudData}/>
+      <WhyUs title="Why Work With Us?" description="Looking for a trusted partner to guide your business through cloud consulting? You’re in the right place!" data={cloudData}/>
       <TechStack />
       <Banner
         title="Ready to begin your cloud journey?"
-        description="Let’s review your setup and explore faster, scalable cloud solutions. Book a free consult."
+        description="Optimize your cloud infrastructure for greater speed, scalability, and efficiency. Schedule your free expert consultation today and unlock the full potential of your cloud environment."
         buttonText="Contact Us"
       />
     </>

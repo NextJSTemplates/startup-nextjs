@@ -62,10 +62,10 @@ const Services = () => {
   return (
     <section id="services" className="relative z-10 pt-16 md:pt-20 lg:pt-24">
       <div className="container mx-auto max-w-6xl px-8">
-        <h1 className="mb-8 text-center text-3xl font-bold">
+        <h1 className="mb-6 text-center text-3xl font-bold">
           Our Design Capabilities
         </h1>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1">
           {aiServices.map((service, index) => (
             <SingleService
               key={index}

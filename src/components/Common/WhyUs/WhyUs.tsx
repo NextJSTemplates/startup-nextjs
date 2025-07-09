@@ -47,7 +47,7 @@ const WhyUs = ({ title, description, data }: WhyUsProps) => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="border-border relative mx-auto flex flex-col overflow-hidden rounded-lg border p-6"
+                  className="border-border relative mx-auto flex flex-col overflow-hidden rounded-lg border p-6 bg-gradient-to-b from-neutral-100 via-neutral-100 to-background"
                 >
                   <div className="flex items-center justify-between gap-2">
                     <div className="relative h-80 w-full">

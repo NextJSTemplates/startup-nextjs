@@ -71,9 +71,9 @@ const aiServices = [
 ];
 const Services = () => {
   return (
-    <section id="services" className="relative z-10 py-16 md:pt-20 lg:pt-24">
-      <div className="container mx-auto max-w-6xl px-8">
-        <h1 className="mb-8 text-center text-3xl font-bold">
+    <section id="services" className="relative z-10 pt-20">
+      <div className="container mx-auto max-w-7xl px-6">
+        <h1 className="mb-6 text-center text-3xl font-bold">
           What We Offer
         </h1>
         <div className="grid grid-cols-1 gap-4">

@@ -3,48 +3,37 @@
 import { JSX, useRef } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'motion/react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const projects = [
   {
-    title: 'Matthias Leidinger',
+    title: 'Assessment & Planning',
     description:
-      'Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.',
-    src: 'rock.jpg',
-    link: 'https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop',
-    color: '#5196fd',
+      'We begin by thoroughly assessing your current IT infrastructure, business goals, and technical requirements. This phase includes stakeholder interviews, workload analysis, and identifying opportunities for cloud adoption. The outcome is a detailed roadmap tailored to your organization’s needs, ensuring a smooth transition to the cloud.',
+    src: '/images/services/cloud/Cyber security concept in digital art.svg',
   },
   {
-    title: 'Clément Chapillon',
+    title: 'Architecture Design',
     description:
-      'A story on the border between reality and imagination, evoking contradictory feelings about a rocky, wild territory.',
-    src: 'tree.jpg',
-    link: 'https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60',
-    color: '#8f89ff',
+      'Our cloud architects design a scalable, secure, and cost-effective cloud architecture. This involves selecting the right cloud services, defining network topology, security controls, and compliance measures. We ensure the architecture aligns with best practices and supports future growth and innovation.',
+    src: '/images/services/cloud/faster-time to-market.svg',
   },
   {
-    title: 'Zissou',
+    title: 'Migration & Implementation',
     description:
-      'Though he views photography as storytelling, Zissou’s images don’t insist on a narrative—both crisp and ethereal.',
-    src: 'water.jpg',
-    link: 'https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop',
-    color: '#13006c',
+      'We execute the migration plan by moving applications, data, and workloads to the cloud with minimal disruption. Our team leverages automated tools and proven methodologies to ensure data integrity, application compatibility, and business continuity throughout the migration process.',
+    src: '/images/services/cloud/Cyber security concept in digital art.svg',
   },
   {
-    title: 'Mathias Svold and Ulrik Hasemann',
+    title: 'Optimization & Integration',
     description:
-      'A pensive series documenting Denmark’s coastlines, exploring human interaction and disruption of natural spaces.',
-    src: 'house.jpg',
-    link: 'https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60',
-    color: '#ed649e',
+      'After migration, we optimize cloud resources for performance, reliability, and cost-efficiency. This includes integrating cloud services with your existing systems, automating workflows, and implementing monitoring solutions to proactively manage your cloud environment.',
+    src: '/images/services/cloud/faster-time to-market.svg',
   },
   {
-    title: 'Mark Rammers',
+    title: 'Ongoing Support & Innovation',
     description:
-      'Mark Rammers shares his project ‘all over again,’ shot during a residency at Hektor in Lanzarote.',
-    src: 'cactus.jpg',
-    link: 'https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop',
-    color: '#fd521a',
+      'We provide continuous support, monitoring, and maintenance to ensure your cloud environment remains secure and efficient. Our experts help you leverage new cloud features, implement updates, and drive ongoing innovation to keep your business ahead in a rapidly evolving digital landscape.',
+    src: '/images/services/cloud/Server cloud data storage concept cloudscape digital online service for global network web database backup computer infrastructure.svg',
   },
 ];
 
@@ -56,13 +45,16 @@ export default function Index(): JSX.Element {
   });
 
   return (
-    <main className="bg-black" ref={containerRef}>
-      <section className="text-white bg-slate-950 w-full">
+    <main ref={containerRef}>
+      <section className="relative max-w-7xl mx-auto px-6 pt-20">
+        <h1 className="mb-8 text-center text-3xl font-bold">
+          Cloud Solutions for Your Business
+        </h1>
         {projects.map((project, i) => {
           const scale = 1 - (projects.length - i) * 0.05;
           return (
             <Card
-              url={'/images/industries/ecommerce.svg'} key={i}
+              url={project.src} key={i}
               i={i}
               progress={scrollYProgress}
               range={[i * 0.25, 1]}
@@ -81,7 +73,6 @@ interface CardProps {
   description: string;
   src: string;
   url: string;
-  color: string;
   progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
@@ -92,7 +83,6 @@ export const Card: React.FC<CardProps> = ({
   title,
   description,
   url,
-  color,
   progress,
   range,
   targetScale,
@@ -109,45 +99,23 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div
       ref={containerRef}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="flex items-center justify-center sticky top-0 w-full py-12"
     >
       <motion.div
         style={{
-          backgroundColor: color,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="relative -top-[25%] h-[450px] w-[70%] rounded-md p-10 flex flex-col origin-top"
+        className="relative w-full max-w-7xl mx-auto rounded-lg p-8 flex flex-col origin-top bg-gradient-to-b from-neutral-100 via-neutral-100 to-background border border-border"
       >
-        <h2 className="text-2xl text-center font-semibold">{title}</h2>
 
-        <div className="flex h-full mt-5 gap-10">
-          <div className="w-[40%] relative top-[10%]">
+        <div className="flex flex-wrap md:flex-nowrap mt-5 gap-10">
+          <div className="w-full md:w-[40%]">
+            <h2 className="text-2xl text-start font-bold mb-6">{title}</h2>
             <p className="text-sm">{description}</p>
-            <span className="flex items-center gap-2 pt-2">
-              <Link
-                href="#"
-                target="_blank"
-                className="underline cursor-pointer"
-              >
-                See more
-              </Link>
-              <svg
-                width="22"
-                height="12"
-                viewBox="0 0 22 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z"
-                  fill="black"
-                />
-              </svg>
-            </span>
           </div>
 
-          <div className="w-[60%] h-full relative rounded-lg overflow-hidden">
+          <div className="w-full md:w-[60%] aspect-video relative rounded-lg overflow-hidden">
             <motion.div className="w-full h-full" style={{ scale: imageScale }}>
               <Image fill src={url} alt="image" className="object-cover" />
             </motion.div>

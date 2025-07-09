@@ -1,6 +1,9 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import { services } from "./serviceData";
+import { Button } from "../ui/button";
 
 const ServiceCard = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -33,10 +36,9 @@ const ServiceCard = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="w-full px-4 sm:px-6">
       <div
         ref={scrollRef}
-        className="hide-scrollbar flex w-full max-w-7xl gap-6 overflow-x-auto pb-6 lg:mx-auto"
+        className="hide-scrollbar flex w-full max-w-7xl px-6 gap-6 overflow-x-auto lg:mx-auto"
         style={{
           scrollBehavior: "smooth",
           touchAction: "pan-y",
@@ -48,14 +50,14 @@ const ServiceCard = () => {
           return (
             <div
               key={index}
-              className="shadow-m flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-6 py-6 text-white shadow-sm sm:min-w-[320px] lg:min-w-[320px]"
+              className="flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-lg bg-gradient-to-b from-neutral-100 via-neutral-100 to-neutral-50 p-6 sm:min-w-[320px] border border-border"
             >
               <div>
-                <div className="mt-6 mb-10 flex items-center justify-center gap-2">
-                  <Icon className="h-5 w-5 text-black stroke-2" />
-                  <h3 className="font-semibold text-black">{service.title}</h3>
+                <div className="mt-4 mb-10 flex items-center justify-start text-start gap-2">
+                  <Icon className="size-5 stroke-2" />
+                  <h3 className="font-semibold text-lg">{service.title}</h3>
                 </div>
-                <ul className="space-y-6 text-sm text-black/90">
+                <ul className="space-y-6 text-sm">
                   {service.items.map((item, i) => {
                     const Icon = item.icon;
                     return (
@@ -68,15 +70,14 @@ const ServiceCard = () => {
                 </ul>
               </div>
               <div className="mt-24">
-                <button className="flex cursor-pointer items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:opacity-90">
+                <Button className="rounded-full cursor-pointer text-sm p-5">
                   Explore More <ArrowRight size={14} />
-                </button>
+                </Button>
               </div>
             </div>
           );
         })}
       </div>
-    </div>
   );
 };
 

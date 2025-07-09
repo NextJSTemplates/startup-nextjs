@@ -107,12 +107,12 @@ const Features = () => {
   }, []);
 
   return (
-    <section id="features" className="relative z-10 py-16 md:pt-20 lg:pt-24">
+    <section id="features" className="relative z-10 pt-20">
       <SectionTitle
         title="Amazing technologies, helpful for your business"
         width="70%"
       />
-      <div className="container mx-auto px-4">
+      <div className="container max-w-7xl mx-auto px-6">
         <svg
           ref={svgRef}
           className="pointer-events-none absolute top-0 left-0 hidden h-full w-full md:block"
@@ -143,7 +143,7 @@ const Features = () => {
             ))}
         </svg>
 
-        <div className="relative z-30 mx-auto mt-24 grid max-w-6xl grid-cols-1 gap-16 md:grid-cols-2">
+        <div className="relative z-10 mt-16 md:mt-24 grid grid-cols-1 gap-12 md:grid-cols-2">
           <div className="flex flex-col gap-12 md:translate-y-6">
             {leftCards.map((card, index) => (
               <SingleFeature

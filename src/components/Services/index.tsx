@@ -1,11 +1,9 @@
-"use client";
-import { FC } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import ServiceCard from "./ServiceCard";
 
-const Services: FC = () => {
+const Services = () => {
   return (
-    <section id="services" className="relative z-10 pt-24">
+    <section id="services" className="relative z-10 pt-20">
       <SectionTitle
         title="Your Partner for Custom Apps, Automation & Seamless Support"
         width="80%"

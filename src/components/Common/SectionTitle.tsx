@@ -42,7 +42,7 @@ const SectionTitle = ({
           clipPath: "inset(0 0% 0 0)",
         }}
         viewport={{ once: true }}
-        className={`mb-12 rounded-se-[70px] bg-black px-8 py-6 text-start text-white shadow-md md:text-center ${calculateWidthClass(
+        className={`mb-12 rounded-se-[70px] bg-black px-8 py-6 text-start text-white md:text-center ${calculateWidthClass(
           width
         )} ${className}`}
       >

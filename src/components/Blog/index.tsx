@@ -7,22 +7,22 @@ import Image from "next/image";
 
 const Blog = () => {
   return (
-    <section id="blogs" className="py-16 md:py-20 lg:py-24">
+    <section id="blogs" className="relative z-10 py-20">
       <SectionTitle title="Latest Blogs" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-md text-center">
-          <p className="font-pj mt-5 text-sm font-normal text-black">
+          <p className="text-sm mb-6">
             Explore insightful articles and expert tips to help you grow and
             succeed. Stay updated with the latest trends and ideas from our blog
           </p>
         </div>
 
-        <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-x-8 gap-y-8 text-center sm:mt-16 sm:grid-cols-2 sm:text-left md:grid-cols-3 lg:gap-x-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {blogData.map((post, index) => (
             <div
               key={index}
-              className="group relative rounded-xl bg-gradient-to-b from-neutral-100 via-white to-neutral-100 py-10 px-6  shadow-sm"
+              className="group relative rounded-lg bg-gradient-to-b from-neutral-100 via-neutral-100 to-neutral-50 p-6 border border-border"
             >
               <div className="overflow-hidden rounded-lg">
                 <Image
@@ -33,16 +33,16 @@ const Blog = () => {
                   height={100}
                 />
               </div>
-              <div className="mt-8 mb-6 flex justify-between">
-                <p className="font-pj text-sm font-normal text-gray-600">
+              <div className="mt-6 flex justify-between">
+                <p className="text-sm font-normal text-gray-600">
                   {post.date}
                 </p>
                 <ExternalLink className="h-4 w-4 text-gray-600" />
               </div>
-              <p className="font-pj text-md mt-4 font-bold text-black">
+              <p className="text-md mt-4 font-bold">
                 {post.title}
               </p>
-              <p className="mt-6 text-sm text-black">{post.description}</p>
+              <p className="mt-4 text-sm text-black">{post.description}</p>
               <a href={post.href} title={post.title}>
                 <span className="absolute inset-0" aria-hidden="true"></span>
               </a>

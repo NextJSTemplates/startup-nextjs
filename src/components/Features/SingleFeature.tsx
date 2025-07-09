@@ -38,7 +38,7 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative overflow-hidden rounded-xl cursor-pointer bg-gradient-to-b  from-neutral-100 via-white to-neutral-100 p-8 shadow-sm dark:from-neutral-900 dark:to-neutral-950"
+      className="relative overflow-hidden rounded-lg cursor-pointer bg-gradient-to-b  from-neutral-100 via-neutral-100 to-neutral-50 p-8 border border-border"
     >
 
       <div className="flex items-start justify-between">
@@ -57,10 +57,10 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
           />
           <h3 className="font-semibold">{card.title}</h3>
         </motion.div>
-        <ExternalLink className="h-5 w-5 text-black" />
+        <ExternalLink className="size-5" />
       </div>
 
-      <p className="mt-2 text-sm text-black">{card.text}</p>
+      <p className="mt-2 text-sm">{card.text}</p>
 
       <AnimatePresence>
         {hovered && (
@@ -71,14 +71,14 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="mt-4 overflow-hidden"
           >
-            <div className="space-y-2 rounded-xl border-t pt-4">
+            <div className="space-y-2 rounded-lg border-t pt-4">
               {card.stack.map((stack, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="flex items-center gap-3 rounded-xl px-2 py-1 text-xs"
+                  className="flex items-center gap-3 rounded-lg px-2 py-1 text-xs"
                 >
                   <Image
                     src={stack.icon}

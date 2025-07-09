@@ -15,25 +15,24 @@ const Statistics = () => {
   };
 
   return (
-    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="relative z-10 pt-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          className="container mx-auto max-w-7xl rounded-lg bg-gradient-to-b from-neutral-100 via-white to-neutral-100 px-6 py-12 text-black"
+          className="container mx-auto max-w-7xl px-6 rounded-lg bg-gradient-to-b from-neutral-100 via-white to-neutral-100 py-12 text-black border border-border"
         >
           <div className="flex flex-col gap-4 px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col space-y-6"
+              className="flex flex-col space-y-4"
             >
               <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
                 More Than 5 Years In The Game And We&apos;re Just Getting Started.
               </h3>
-              <p className="mx-auto max-w-xl text-center text-sm text-black">
+              <p className="mx-auto max-w-xl text-center text-sm text-black mb-6">
                 We are on a mission to build a brand with the goal of providing
                 quality IT development. Our team takes every project like it’s our
                 first and works on it like specialists.
@@ -65,7 +64,6 @@ const Statistics = () => {
             </motion.div>
           </div>
         </motion.div>
-      </div>
     </section>
   );
 };

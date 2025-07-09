@@ -9,6 +9,7 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 import React, { useRef, useState } from "react";
 
@@ -143,7 +144,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             className="relative"
             onMouseEnter={() => setHovered(idx)}
           >
-            <a
+            <Link
               onClick={onItemClick}
               href={item.link}
               className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
@@ -155,7 +156,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                 />
               )}
               <span className="relative z-20">{item.name}</span>
-            </a>
+            </Link>
 
             {hasSublinks && hovered === idx && (
               <motion.div
@@ -168,12 +169,12 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                 <div className="p-3 grid-cols-3 w-fit">
                   {item.sublinks!.map((sub, subIdx) => (
                     <div key={`sub-${idx}-${subIdx}`}>
-                      <a
+                      <Link
                         href={sub.link}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-zinc-100 rounded-full"
                       >
                         {sub.name}
-                      </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -270,7 +271,7 @@ export const MobileNavToggle = ({
 export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
   if (visible) {
     return (
-      <a href="/" className="relative z-20 mr-4 flex items-center px-2 py-1">
+      <Link href="/" className="relative z-20 mr-4 flex items-center px-2 py-1">
         <Image
           src="/images/logo/logo-dark.svg"
           alt="logo"
@@ -278,12 +279,12 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
           height={30}
           className="h-9 w-9"
         />
-      </a>
+      </Link>
     );
   }
 
   return (
-    <a
+    <Link
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-semibold text-black"
     >
@@ -295,7 +296,7 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
         className="h-9 w-9"
       />
       <span>Classy endeavors</span>
-    </a>
+    </Link>
   );
 };
 

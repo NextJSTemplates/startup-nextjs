@@ -29,10 +29,10 @@ const Statistics = () => {
               transition={{ duration: 0.6 }}
               className="flex flex-col space-y-4"
             >
-              <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
+              <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-semibold">
                 More Than 5 Years In The Game And We&apos;re Just Getting Started.
               </h3>
-              <p className="mx-auto max-w-xl text-center text-sm text-black mb-6">
+              <p className="mx-auto max-w-xl text-center text-sm mb-6">
                 We are on a mission to build a brand with the goal of providing
                 quality IT development. Our team takes every project like it’s our
                 first and works on it like specialists.
@@ -53,9 +53,9 @@ const Statistics = () => {
                         <ChartBar className="h-5 w-5 text-white"/>
                       </div>
 
-                      <p className="text-2xl font-bold">{stat.value}</p>
+                      <p className="text-2xl font-semibold">{stat.value}</p>
                     </div>
-                    <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+                    <p className="relative z-20 mt-4 text-sm">
                       {stat.label}
                     </p>
                   </motion.div>

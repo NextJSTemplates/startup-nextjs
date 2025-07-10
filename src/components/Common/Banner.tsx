@@ -35,7 +35,7 @@ const Banner = ({title, description, buttonText} : BannerProps) => {
             <h3 className="mx-auto max-w-2xl text-center text-3xl leading-snug font-semibold capitalize">
               {title}
             </h3>
-            <p className="text-center max-w-xl mx-auto mb-4">
+            <p className="text-center max-w-xl mx-auto mb-4 text-sm">
               {description}
             </p>
             <Button className="rounded-full border border-white/80 bg-black px-8 py-6">

@@ -18,10 +18,10 @@ const Tools = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col space-y-2"
         >
-          <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
+          <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-semibold">
             Our Design and Development Tools
           </h3>
-          <p className="text-center">
+          <p className="text-center text-sm">
             We leverage the latest tools to create exceptional user experiences.
           </p>
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">

@@ -8,6 +8,7 @@ import Tools from "./components/Tools";
 import Banner from "@/components/Common/Banner";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
 import { uxData } from "@/components/Common/WhyUs/whyUsData";
+import DesignProcess from "./components/DesignProcess";
 export const metadata: Metadata = {
   title: "Services - UI/UX Design",
   keywords: [
@@ -34,8 +35,9 @@ const UIUXPage = () => {
       
       <Services />
       <Tools />
-      <WhyUs title="Why Work With Us?" description="Description for UI/UX" data={uxData}/>
-      <Banner title="Let's Design Something That Works" description="Get A Free Design" buttonText="Contact Us" />
+      <DesignProcess />
+      <WhyUs title="Why Work With Us?" description="Where Creative Vision Meets Precision and Impact" data={uxData}/>
+      <Banner title="Let's Design Something That Works" description="Kickstart Your Next Project With a Free Custom Design — Share Your Idea and Let Our Expert Team Bring It to Life, Absolutely Free!" buttonText="Contact Us" />
     </>
   );
 };

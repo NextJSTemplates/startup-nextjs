@@ -22,22 +22,24 @@ const SingleService = ({
   return (
     <div
       className={cn(
-        "border-border flex flex-col gap-6 p-6 md:flex-row md:gap-12 ",
+        "border-border flex flex-col gap-6 p-6 md:flex-row",
         className,
       )}
     >
-      <div className="w-[300px] h-[300px]">
-        <Image
-          src={imageSrc}
-          alt="Service Image"
-          className="w-full h-full object-cover rounded-lg"
-          width={100}
-          height={100}
-        />
+      <div className="w-1/2 flex justify-center items-center">
+        <div className="w-[300px] h-[300px]">
+          <Image
+            src={imageSrc}
+            alt="Service Image"
+            className="w-full h-full object-cover rounded-lg"
+            width={100}
+            height={100}
+          />
+        </div>
       </div>
 
-      <div className="flex flex-col items-start justify-center gap-2">
-        <h1 className="text-xl font-bold">{title}</h1>
+      <div className="flex flex-col items-start justify-center gap-2 w-1/2">
+        <h1 className="text-xl font-semibold">{title}</h1>
         <p className="text-sm max-w-2xl">{description}</p>
         <div className="mt-4 flex flex-col gap-2">
           {services.map((service, index) => (

@@ -6,6 +6,9 @@ import { teamMembers } from "@/components/Hero/heroData";
 import Services from "./components/Services";
 import Banner from "@/components/Common/Banner";
 import Features from "../artificial-intelligence/components/Features/Features";
+import TechStack from "../cloud-computing/components/TechStack/TechStack";
+import Industries from "@/components/Common/Industries/Industries";
+import Showcase from "@/components/Common/Showcase/Showcase";
 export const metadata: Metadata = {
   title: "Services - Software Development",
   keywords: [
@@ -17,7 +20,6 @@ export const metadata: Metadata = {
   ],
   description:
     "Explore our Software Development services, including custom software solutions, web development, and application development tailored to your business needs.",
-  // other metadata
 };
 const SoftwareDevelopment = () => {
   return (
@@ -29,10 +31,16 @@ const SoftwareDevelopment = () => {
         keywords={["Custom Software.", "Web Development.", "Mobile Apps."]}
       />
       <Services />
+      <Showcase imageSrc="/images/services/cloud/Background (2).svg" title="Enhancement and Technology Refresh" description="Whether you're transitioning to new infrastructure or
+              upgrading existing environments, we handle end-to-end
+              modernization, security enhancements, and technology migrations to
+              support your growth." buttonCta="Get Your Project" />
       <Features />
-      <Banner title="Let's talk about your software vision" description="Tell us and we're build the right solution for your needs" buttonText="Contact Us" />
+      <Industries />
+      <TechStack />
+      <Banner title="Let's talk about your software vision" description="You share your vision, and we’ll handle the rest — from concept to launch, we build the right solution that works for you and your customers." buttonText="Contact Us" />
     </>
-    
+
   );
 };
 

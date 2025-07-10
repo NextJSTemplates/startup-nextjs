@@ -4,8 +4,9 @@ import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
 import Banner from "@/components/Common/Banner";
 import SystemServices from "./components/SupportServices";
-import Features from "./components/Features";
+import Features from "../../../components/Common/Showcase/Showcase";
 import Industries from "./components/Industries";
+import Showcase from "../../../components/Common/Showcase/Showcase";
 
 export const metadata: Metadata = {
   title: "Services - Support And Maintenance",
@@ -34,7 +35,10 @@ const SupportAndMaintenance = () => {
         keywords={["Software Support", "System Maintenance", "Business Continuity"]}
       />
       <SystemServices />
-      <Features />
+      <Showcase imageSrc="/images/services/cloud/Background (2).svg" title="Enhancement and Technology Refresh" description="Whether you're transitioning to new infrastructure or
+              upgrading existing environments, we handle end-to-end
+              modernization, security enhancements, and technology migrations to
+              support your growth." buttonCta="Get Your Project" />
       <Industries />
       <Banner
         title="Don't let security issues disrupt your business"

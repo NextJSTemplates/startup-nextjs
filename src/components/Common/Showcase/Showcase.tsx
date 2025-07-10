@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,19 +7,22 @@ import {
   Database,
   GaugeCircle,
 } from "lucide-react";
-import { motion } from "framer-motion";
 
-const Features = () => {
+type ShowcaseProps = {
+  imageSrc: string;
+  title: string;
+  description: string;
+  buttonCta: string;
+}
+
+const Showcase = ({imageSrc, title, description, buttonCta}: ShowcaseProps) => {
   return (
-    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+    <section className="relative z-10 pt-20">
+      <div
         className="relative p-12"
       >
         <Image
-          src="/images/services/cloud/Background (2).svg"
+          src={imageSrc}
           alt="Tech Background"
           layout="fill"
           objectFit="cover"
@@ -28,21 +30,18 @@ const Features = () => {
           className="absolute inset-0 z-0"
         />
 
-        <div className="relative z-10 grid items-center gap-10 md:grid-cols-2 max-w-6xl mx-auto">
+        <div className="relative z-10 grid grid-cols-1 items-center gap-6 md:grid-cols-2 max-w-7xl mx-auto px-6">
           <div>
-            <h2 className="text-white mb-4 max-w-xs text-4xl leading-tight font-bold">
-              Enhancement and Technology Refresh
+            <h2 className="text-white mb-4 max-w-xs text-3xl leading-tight font-semibold">
+              {title}
             </h2>
-            <p className="mb-6 max-w-md text-gray-200">
-              Whether you&apos;re transitioning to new infrastructure or
-              upgrading existing environments, we handle end-to-end
-              modernization, security enhancements, and technology migrations to
-              support your growth.
+            <p className="mb-6 max-w-md text-foreground">
+              {description}
             </p>
             <Button
-              className="bg-black/80 font-semibold text-white uppercase rounded-full border border-white/80 p-6"
+              className="bg-black/80 font-semibold text-white uppercase rounded-full border border-white/80 p-6 text-sm"
             >
-              Schedule a call
+              {buttonCta}
             </Button>
           </div>
 
@@ -71,12 +70,12 @@ const Features = () => {
             ].map(({ title, icon, desc }) => (
               <Card
                 key={title}
-                className="border-none bg-gray-900/80 backdrop-blur-md"
+                className="border-none bg-gray-900/80 backdrop-blur-md w-full p-8"
               >
-                <CardContent className="p- text-white flex flex-col gap-2">
+                <CardContent className="text-white flex flex-col gap-2">
                   {icon}
                   <h4 className="mb-1 text-lg font-semibold">{title}</h4>
-                  <p className="text-xs leading-relaxed text-gray-300">
+                  <p className="text-sm leading-relaxed text-gray-300">
                     {desc}
                   </p>
                 </CardContent>
@@ -84,9 +83,9 @@ const Features = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
 
-export default Features;
+export default Showcase;

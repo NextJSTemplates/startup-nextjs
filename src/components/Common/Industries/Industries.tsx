@@ -20,12 +20,12 @@ const Industries = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col space-y-6"
+            className="flex flex-col space-y-4"
           >
-            <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold text-white">
-              Industries we&apos;ve enhanced with AI
+            <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-semibold text-white">
+              Industries we&apos;ve enhanced with our Software Development Services
             </h3>
-            <p className="mx-auto max-w-xl text-center text-sm text-white">
+            <p className="mx-auto max-w-xl text-center text-sm text-white mb-6">
               No matter the industry. We build AI to drive growth!
             </p>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -41,9 +41,9 @@ const Industries = () => {
                     <div className="">
                       <Image src={industry.icon} alt={industry.label} width={24} height={24} className="h-9 w-9" />
                     </div>
-                    <p className="text-xl font-bold">{industry.label}</p>
+                    <p className="text-xl font-semibold">{industry.label}</p>
 
-                  <p className="relative z-20 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+                  <p className="relative z-20 text-sm">
                     {industry.description}
                   </p>
                 </motion.div>

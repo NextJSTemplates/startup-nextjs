@@ -57,7 +57,7 @@ const aiServices = [
       { label: "Access your software anytime, anywhere with secure cloud hosting." },
     ],
   },
-    {
+  {
     image: "/images/services/softwaredev/Container (4).svg",
     title: "API Development & Integrations",
     description:
@@ -73,8 +73,8 @@ const Services = () => {
   return (
     <section id="services" className="relative z-10 pt-20">
       <div className="container mx-auto max-w-7xl px-6">
-        <h1 className="mb-6 text-center text-3xl font-bold">
-          What We Offer
+        <h1 className="mb-6 text-center text-3xl font-semibold max-w-xl mx-auto">
+          Custom Software Development Services Powered by AI
         </h1>
         <div className="grid grid-cols-1 gap-4">
           {aiServices.map((service, index) => (

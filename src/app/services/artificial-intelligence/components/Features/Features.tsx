@@ -23,8 +23,8 @@ const Features = () => {
             className="flex flex-col space-y-6"
           >
             <div className="flex flex-col justify-center items-center">
-            <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-bold">
-              Our AI Development Process
+            <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-semibold capitalize">
+              Our Software development process
             </h3>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-6">
@@ -44,8 +44,8 @@ const Features = () => {
 
                     <p className="text-4xl font-bold text-muted-foreground/20">0{index+1}</p>
                   </div>
-                  <p className="text-lg mt-4 font-bold">{feat.value}</p>
-                  <p className="relative z-20 mt-4 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+                  <p className="text-lg mt-4 font-semibold">{feat.value}</p>
+                  <p className="relative z-20 mt-2 text-sm font-normal text-neutral-600 dark:text-neutral-400">
                     {feat.label}
                   </p>
                 </motion.div>

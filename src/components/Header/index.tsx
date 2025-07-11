@@ -16,13 +16,12 @@ import { useState } from "react";
 
 const Header = () => {
   const navItems = [
-    { name: "About Us", link: "/about-us" },
+    { name: "About Us", link: "/" },
     {
       name: "Services",
       link: "#services",
       sublinks: [
         { name: "Cloud Computing", link: "/services/cloud-computing" },
-        { name: "Mobile Apps", link: "/services/mobile-development" },
         {
           name: "Software Development",
           link: "/services/software-development",

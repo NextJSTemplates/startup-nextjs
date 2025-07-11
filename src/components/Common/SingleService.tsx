@@ -26,15 +26,9 @@ const SingleService = ({
         className,
       )}
     >
-      <div className="w-1/2 flex justify-center items-center">
-        <div className="w-[300px] h-[300px]">
-          <Image
-            src={imageSrc}
-            alt="Service Image"
-            className="w-full h-full object-cover rounded-lg"
-            width={100}
-            height={100}
-          />
+      <div className="w-full md:w-[45%] aspect-video relative rounded-lg overflow-hidden">
+        <div className="w-full h-full">
+          <Image fill src={imageSrc} alt="Service Image" className="object-cover" />
         </div>
       </div>
 

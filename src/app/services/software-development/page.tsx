@@ -1,14 +1,12 @@
 import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
-import { ExternalLink } from "lucide-react";
-import { teamMembers } from "@/components/Hero/heroData";
 import Services from "./components/Services";
 import Banner from "@/components/Common/Banner";
-import Features from "../artificial-intelligence/components/Features/Features";
 import TechStack from "../cloud-computing/components/TechStack/TechStack";
 import Industries from "@/components/Common/Industries/Industries";
 import Showcase from "@/components/Common/Showcase/Showcase";
+import Features from "../mvp-development/components/Features/Features";
 export const metadata: Metadata = {
   title: "Services - Software Development",
   keywords: [

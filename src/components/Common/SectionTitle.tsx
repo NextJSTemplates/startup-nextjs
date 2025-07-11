@@ -50,7 +50,7 @@ const SectionTitle = ({
           initial={{ opacity: 0, y: 12, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-          className="text-[14px] leading-tight font-bold sm:text-xl md:text-2xl"
+          className="text-[14px] leading-tight font-semibold sm:text-xl md:text-2xl"
         >
           {title}
         </motion.h2>

@@ -1,7 +1,11 @@
 import { Hero } from "@/components/Common/ServicesHero";
-import { ExternalLink } from "lucide-react";
 import React from "react";
 import About from "./components/About";
+import Banner from "@/components/Common/Banner";
+import Services from "./components/Services";
+import ServiceFeatures from "@/components/Common/ServiceFeatures/ServiceFeatures";
+import { softwareSecurityFeatures } from "@/components/Common/ServiceFeatures/data";
+import WhyUs from "./components/WhyUs";
 
 const SofwareSecurity = () => {
   return (
@@ -13,6 +17,14 @@ const SofwareSecurity = () => {
         keywords={["Secure Software.", "Proactive Protection.", "Business Safety"]}
       />
       <About />
+      <Services />
+      <ServiceFeatures title="Security Assessment Process" serviceFeatures={softwareSecurityFeatures} />
+      <WhyUs />
+      <Banner
+        title="Get Your Software Secured"
+        description="Schedule a free consultation with our security experts and discover how to keep your software safe, compliant, and resilient."
+        buttonText="Contact Us"
+      />
     </>
   );
 };

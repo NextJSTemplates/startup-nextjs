@@ -55,7 +55,7 @@ const SingleFeature = ({ card, index, refSetter }: FeatureProps) => {
             height={24}
             className="h-6 w-6"
           />
-          <h3 className="font-semibold">{card.title}</h3>
+          <h3 className="text-lg font-semibold">{card.title}</h3>
         </motion.div>
         <ExternalLink className="size-5" />
       </div>

@@ -1,13 +1,13 @@
 import React from "react";
-
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
-import { Bot, Brain, Clock, ExternalLink } from "lucide-react";
+import { Bot, Brain, Clock } from "lucide-react";
 import Statistics from "@/components/Common/Statistics";
 import Services from "./components/Services";
-import Features from "./components/Features/Features";
 import Industries from "@/components/Common/Industries/Industries";
 import Banner from "@/components/Common/Banner";
+import { softwareDevFeatures } from "@/components/Common/ServiceFeatures/data";
+import ServiceFeatures from "@/components/Common/ServiceFeatures/ServiceFeatures";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",
@@ -48,7 +48,7 @@ const ArtificialIntelligence = () => {
         services={aiChars}
       />
       <Services />
-      <Features />
+      <ServiceFeatures title="Software Development Features" serviceFeatures={softwareDevFeatures} />
       <Industries />
       <Statistics />
       <Banner

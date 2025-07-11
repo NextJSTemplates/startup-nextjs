@@ -1,127 +1,74 @@
-"use client";
+import React from 'react'
+import {
+  MonitorCheck,
+  Network,
+  Headphones,
+  Server,
+  Users,
+  ClipboardCheck
+} from "lucide-react";
 
-import Image from "next/image";
-import { CheckCircle, MapPin, Users, Clock } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
-
-export default function SystemsServices() {
+const SupportServices = () => {
   return (
-    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        className="container mx-auto max-w-6xl px-8"
-      >
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <div>
-            <Image
-              src="/images/services/cloud/Dedicated Support.svg"
-              alt="Control Room"
-              width={100}
-              height={100}
-              className="w-110 rounded-xl shadow-lg"
-            />
-          </div>
-          <div>
-            <h2 className="mb-4 text-3xl font-bold">
-              Everything You Need, Right Here
-            </h2>
-            <p className="mb-6 text-sm text-gray-600">
-              Classy Endeavors provides full-cycle software care—from initial
-              diagnostics to long-term performance management. With over 15
-              years of experience, we have handled 150+ global software systems
-              and continuously help organizations minimize downtime and improve
-              functionality.
-            </p>
-            <div className="flex space-x-6 rounded-lg bg-black p-8">
-              <div className="border-r border-gray-200 bg-black text-center">
-                <div className="p-4">
-                  <div className="text-2xl font-bold text-white">15+</div>
-                  <div className="text-xs text-gray-100">
-                    Years of turning ideas into digital solutions
+    <section className="relative z-10 pt-20">
+      <div className="container mx-auto max-w-6xl rounded-lg px-6">
+        <h1 className="mx-auto max-w-2xl text-center text-3xl leading-snug font-semibold mb-4">
+          Support Services
+        </h1>
+        <p className="text-sm mb-6 max-w-3xl mx-auto text-center">Our dedicated team handles all aspects of software and infrastructure support services to ensure consistent business continuity and IT performance.</p>
+        <div className="flex flex-col gap-4">
+          {[
+            {
+              icon: MonitorCheck,
+              title: "Continuous Monitoring",
+              description: "Real-time monitoring of network, security events, and system health."
+            },
+            {
+              icon: Network,
+              title: "Client IT Network Evaluation",
+              description: "Evaluate existing environments and identify gaps."
+            },
+            {
+              icon: Headphones,
+              title: "On-Demand Support Services",
+              description: "Fast-response troubleshooting and issue resolution."
+            },
+            {
+              icon: Server,
+              title: "OS and Server Migration",
+              description: "Upgrade systems with minimal disruption."
+            },
+            {
+              icon: Users,
+              title: "Third-Party Maintenance",
+              description: "Support and maintain external or legacy software."
+            },
+            {
+              icon: ClipboardCheck,
+              title: "Pre-Support Audit",
+              description: "Diagnose current environments before launching support operations."
+            }
+          ].map(({ title, description, icon }) => {
+            const Icon = icon
+            return (
+              (
+                <div className="bg-gradient-to-b from-neutral-100 via-neutral-100 to-transparent border border-border p-6 rounded-lg flex gap-3">
+                  <div className="p-3 bg-red-200 rounded-full w-fit h-fit">
+                    <Icon className="text-red-500 size-6" />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <h1 className="font-semibold text-md">{title}</h1>
+                    <p className="text-sm">{description}</p>
                   </div>
                 </div>
-              </div>
-              <div className="rounded-none border-y-0 border-gray-500 bg-black text-center">
-                <div className="p-4">
-                  <div className="text-2xl font-bold text-white">3+</div>
-                  <div className="text-xs text-gray-100">Global Locations</div>
-                </div>
-              </div>
-              <div className="border-l border-gray-200 bg-black text-center">
-                <div className="p-4">
-                  <div className="text-2xl font-bold text-white">150+</div>
-                  <div className="text-xs text-gray-100">
-                    A talented team of tech pros
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              )
+            )
+          })}
         </div>
-
-        <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2">
-          <div className="">
-            <h3 className="mb-4 text-2xl font-bold">
-              Systems We Maintain & Optimize
-            </h3>
-            <p className="mb-6 text-sm text-gray-600">
-              We ensure your systems maintain peak functionality with regular
-              updates, stronger security protocols, and improved performance.
-              Whether it’s cloud applications, AI/ML integrations, databases, or
-              mobile apps, we’ve got it covered.
-            </p>
-
-            <div className="mb-12 flex flex-wrap gap-4">
-              {[
-                { label: "Database apps", icon: "/images/services/cloud/icon1.svg" },
-                { label: "Mobile apps", icon: "/images/services/cloud/icon2.svg" },
-                { label: "AR/VR apps", icon: "/images/services/cloud/icon3.svg" },
-              ].map(({ label, icon }) => (
-                <Card
-                  key={label}
-                  className="rounded-lg text-center shadow-none"
-                >
-                  <CardContent className="flex flex-col items-center">
-                    <Image
-                      src={icon}
-                      alt={`${label} icon`}
-                      width={40}
-                      height={40}
-                      className="mb-2"
-                    />
-                    <div className="text-sm font-medium text-gray-700">
-                      {label}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-          <div className="rounded-xl bg-black p-8 text-white shadow-lg">
-            <h4 className="mb-4 text-xl font-semibold">
-              Comprehensive Services Include
-            </h4>
-            <ul className="space-y-4">
-              {[
-                "Real-Time Error Detection & Resolution",
-                "Monitoring Compatibility with Latest Dependencies",
-                "Avoiding Bug Buildup and Version Drift",
-                "Proactive Updates and Performance Checks",
-                "Implementing Improvements Based on Tech Roadmaps",
-                "Achieving Enhanced ROI with Optimized Systems",
-              ].map((service, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-400" />
-                  <span className="text-sm">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
+      </div>
     </section>
-  );
+
+  )
 }
+
+export default SupportServices

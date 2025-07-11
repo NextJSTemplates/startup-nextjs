@@ -8,6 +8,8 @@ import { mvpData } from "@/components/Common/WhyUs/whyUsData";
 import AboutUs from "./components/About";
 import Features from "./components/Features/Features";
 import HowWeWork from "./components/HowWeWork";
+import Banner from "@/components/Common/Banner";
+import Brands from "@/components/Brands";
 
 export const metadata: Metadata = {
   title: "Services - Mvp Development",
@@ -31,6 +33,7 @@ const MvpDevelopment = () => {
         backgroundImage="/images/services/MVPBackground.svg"
         keywords={["MVP Development", "Startup Acceleration", "Product Validation"]}
       />
+      <Brands />
       <WhyUs
         title="Who we can help"
         description="Description for MVP Development customers"
@@ -39,6 +42,7 @@ const MvpDevelopment = () => {
       <AboutUs />
       <Features />
       <HowWeWork />
+      <Banner title="Let's develop your MVP" description="Hand us the requirements and leave the rest to us. Your solution is lorem ipsum to us" buttonText="Book a call" />
     </>
   );
 };

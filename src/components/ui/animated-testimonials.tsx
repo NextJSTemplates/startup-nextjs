@@ -110,7 +110,7 @@ export const AnimatedIndustries = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-xl font-bold">
+            <h3 className="text-2xl font-semibold">
               {industries[active].name}
             </h3>
             <div className="mt-6 flex flex-wrap gap-2">
@@ -126,7 +126,7 @@ export const AnimatedIndustries = ({
             <p className="text-sm">
               {industries[active].designation}
             </p>
-            <motion.p className="mt-6">
+            <motion.p className="mt-6 text-sm">
               {industries[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

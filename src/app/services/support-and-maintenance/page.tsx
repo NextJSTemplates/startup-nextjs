@@ -3,10 +3,13 @@ import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
 import Banner from "@/components/Common/Banner";
-import SystemServices from "./components/SupportServices";
-import Features from "../../../components/Common/Showcase/Showcase";
+import SystemServices from "./components/Statistics";
 import Industries from "./components/Industries";
 import Showcase from "../../../components/Common/Showcase/Showcase";
+import HowWeWork from "@/components/HowWeWork";
+import { supportMtncProcesses } from "@/components/HowWeWork/data";
+import Statistics from "./components/Statistics";
+import SupportServices from "./components/SupportServices";
 
 export const metadata: Metadata = {
   title: "Services - Support And Maintenance",
@@ -34,11 +37,13 @@ const SupportAndMaintenance = () => {
         backgroundImage="/images/services/SupportBackground.svg"
         keywords={["Software Support", "System Maintenance", "Business Continuity"]}
       />
-      <SystemServices />
+      <Statistics />
       <Showcase imageSrc="/images/services/cloud/Background (2).svg" title="Enhancement and Technology Refresh" description="Whether you're transitioning to new infrastructure or
               upgrading existing environments, we handle end-to-end
               modernization, security enhancements, and technology migrations to
               support your growth." buttonCta="Get Your Project" />
+      <SupportServices />
+      <HowWeWork title="Why Partner with Us?" imageSrc="/images/services/SupportMtncBackground.svg" processes={supportMtncProcesses} />
       <Industries />
       <Banner
         title="Don't let security issues disrupt your business"

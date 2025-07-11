@@ -37,20 +37,20 @@ const AboutUs = () => {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 text-white flex flex-col gap-3">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 pt-24 pb-32 text-white flex flex-col gap-3">
           <p className="text-sm uppercase tracking-wide font-semibold mb-2 max-w-sm" >
             Our First-Hand Experience with the Singapore Market
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-md">
+          <h2 className="text-3xl font-semibold mb-4 max-w-md">
             Coffee Vending Kiosk & Mobile App Engineering
           </h2>
-          <p className="max-w-2xl text-md text-white">
+          <p className="max-w-2xl text-md text-white text-sm">
             We engineered kiosk hardware integration, user interfaces, and backend systems to streamline coffee vending for a real-world client—demonstrating our ability to handle end-to-end MVP needs including:
           </p>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 pt-16 grid gap-8 md:grid-cols-3">
+      <div className="max-w-6xl mx-auto px-4 grid gap-8 sm:grid-cols-2 md:grid-cols-3 pt-16 lg:pt-0 lg:-translate-y-12">
         {highlights.map((item, index) => (
           <div key={index} className="flex flex-col gap-4">
             <div className="w-full h-56 relative rounded-lg overflow-hidden">
@@ -64,7 +64,7 @@ const AboutUs = () => {
             <h3 className="text-lg font-semibold text-neutral-900">
               {item.title}
             </h3>
-            <p className="text-sm text-neutral-600">
+            <p className="text-sm">
               {item.description}
             </p>
           </div>

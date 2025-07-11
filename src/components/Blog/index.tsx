@@ -39,7 +39,7 @@ const Blog = () => {
                 </p>
                 <ExternalLink className="h-4 w-4 text-gray-600" />
               </div>
-              <p className="text-md mt-4 font-bold">
+              <p className="text-md mt-4 font-semibold">
                 {post.title}
               </p>
               <p className="mt-4 text-sm text-black">{post.description}</p>

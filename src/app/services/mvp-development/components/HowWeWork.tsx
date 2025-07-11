@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 const HowWeWork = () => {
   return (
-    <section className="relative z-10 py-16 pb-4 md:pt-20 lg:pt-24">
+    <section className="relative pt-20">
       <div className="relative px-4">
         <div className="absolute inset-0">
           <Image
@@ -19,12 +19,11 @@ const HowWeWork = () => {
             objectFit="cover"
           />
         </div>
-        <div className="mx-auto max-w-6xl">
-          <h3 className="text-white mb-8 text-center text-3xl font-bold">
-            How We Develop Your NVP
-          </h3>
-          
-          <div className="grid grid-cols-1 gap-6 py-16 sm:grid-cols-2 md:grid-cols-3">
+        <div className="relative z-10 mx-auto max-w-7xl py-24 px-6">
+          <h1 className="text-white mb-8 text-center text-3xl font-semibold">
+            How We Develop Your MVP
+          </h1>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             
             {[
               {
@@ -64,8 +63,8 @@ const HowWeWork = () => {
               >
                 <CardContent className="p- flex flex-col gap-2 text-white">
                   {icon}
-                  <h4 className="mb-1 text-lg font-semibold">{title}</h4>
-                  <p className="text-xs leading-relaxed text-gray-300">
+                  <h1 className="mb-1 text-lg font-semibold">{title}</h1>
+                  <p className="text-sm leading-relaxed text-gray-300">
                     {desc}
                   </p>
                 </CardContent>

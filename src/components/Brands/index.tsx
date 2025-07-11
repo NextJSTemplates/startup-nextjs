@@ -15,7 +15,7 @@ const Brands = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.2 }}
-          className="mb-16 text-center text-2xl font-bold text-black sm:text-3xl"
+          className="mb-16 text-center text-2xl font-semibold sm:text-3xl"
         >
           With help from the biggest companies
         </motion.h2>

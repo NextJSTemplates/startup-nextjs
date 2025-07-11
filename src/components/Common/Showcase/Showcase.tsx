@@ -35,11 +35,11 @@ const Showcase = ({imageSrc, title, description, buttonCta}: ShowcaseProps) => {
             <h2 className="text-white mb-4 max-w-xs text-3xl leading-tight font-semibold">
               {title}
             </h2>
-            <p className="mb-6 max-w-md text-foreground">
+            <p className="mb-6 max-w-md text-sm text-white">
               {description}
             </p>
             <Button
-              className="bg-black/80 font-semibold text-white uppercase rounded-full border border-white/80 p-6 text-sm"
+              className="bg-black text-white rounded-full border border-border p-6 text-sm"
             >
               {buttonCta}
             </Button>
@@ -70,7 +70,7 @@ const Showcase = ({imageSrc, title, description, buttonCta}: ShowcaseProps) => {
             ].map(({ title, icon, desc }) => (
               <Card
                 key={title}
-                className="border-none bg-gray-900/80 backdrop-blur-md w-full p-8"
+                className="border-none bg-gray-900/80 backdrop-blur-md w-full"
               >
                 <CardContent className="text-white flex flex-col gap-2">
                   {icon}

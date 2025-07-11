@@ -5,14 +5,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 const Industries = () => {
   return (
-    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
+    <section className="relative z-10 pt-20">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="container mx-auto max-w-6xl rounded-lg px-8 text-black"
+        className="container mx-auto max-w-6xl rounded-lg px-6"
       >
-        <h3 className="mx-auto max-w-2xl text-center text-3xl leading-snug font-bold mb-4">
+        <h3 className="mx-auto max-w-2xl text-center text-3xl leading-snug font-semibold mb-4">
           Industries We Transform with Our IT Excellence
         </h3>
         <div className="mb-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -72,7 +72,7 @@ const Industries = () => {
           ))}
         </div>
 
-        <h3 className="mx-auto max-w-xl text-center text-2xl leading-snug font-bold">
+        <h3 className="mx-auto max-w-xl text-center text-2xl leading-snug font-semibold">
           ... and many more!
         </h3>
       </motion.div>

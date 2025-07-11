@@ -80,3 +80,15 @@ export type WhyUsData = {
     label: string;
     icon: string;
 }
+
+export type Processes = {
+  title: string;
+  icon: LucideIcon;
+  desc: string;
+}
+
+export type ServicesFeatures = {
+  value: string;
+  label: string;
+  icon:  string;
+}

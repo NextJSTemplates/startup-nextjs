@@ -52,7 +52,7 @@ const SupportServices = () => {
             const Icon = icon
             return (
               (
-                <div className="bg-gradient-to-b from-neutral-100 via-neutral-100 to-transparent border border-border p-6 rounded-lg flex gap-3">
+                <div className="bg-gradient-to-b from-neutral-100 via-neutral-100 to-transparent border border-border p-6 rounded-lg flex gap-3" key={title}>
                   <div className="p-3 bg-red-200 rounded-full w-fit h-fit">
                     <Icon className="text-red-500 size-6" />
                   </div>

@@ -61,7 +61,7 @@ const Services = () => {
               const Icon = icon
               return (
                 (
-                  <div className="bg-white p-6 rounded-lg flex gap-3">
+                  <div className="bg-white p-6 rounded-lg flex gap-3" key={title}>
                     <div className="p-3 bg-black/10 rounded-full w-fit h-fit">
                       <Icon className="size-6" />
                     </div>

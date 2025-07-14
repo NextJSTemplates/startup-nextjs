@@ -5,7 +5,7 @@ const Innovations = () => {
   return (
     <section className="relative z-10 pt-20 px-6">
       <div className="bg-gradient-to-b from-black to-gray-900 text-white max-w-7xl mx-auto py-20 px-6 rounded-lg flex flex-col justify-center items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-24">
           <div className="space-y-6 flex flex-col justify-center">
             <h1 className="text-4xl font-semibold leading-tight max-w-md">
               Leading the Next Era of <br /> Language AI for Enterprise Growth
@@ -25,7 +25,7 @@ const Innovations = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-24 items-center mt-12">
           <div className="flex justify-start order-2 md:order-1">
             <Image
               src="/images/about/Vector.png"

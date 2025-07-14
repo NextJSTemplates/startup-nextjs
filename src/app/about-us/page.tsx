@@ -49,7 +49,6 @@ const AboutUsPage = () => {
       <Challenges />
       <WhyUs />
       <OurValues />
-      <InnovationsCarousel />
     </>
   )
 }

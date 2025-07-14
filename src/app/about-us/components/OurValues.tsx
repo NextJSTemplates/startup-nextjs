@@ -26,7 +26,7 @@ const values = [
 
 const OurValues = () => {
   return (
-    <section id="services" className="relative z-10 pt-20">
+    <section id="services" className="relative z-10 py-20">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center justify-center">
           <h1 className="mb-6 text-3xl text-center font-semibold capitalize">

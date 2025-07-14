@@ -1,57 +1,43 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+
+import React from "react";
 
 type Innovation = {
   id: number;
   title: string;
-  description: string;
   logo: string;
 };
 
 const innovations: Innovation[] = [
   {
     id: 1,
-    title: 'CONVOON',
-    description: '',
-    logo: '/images/brands/lyber.svg',
+    title: "CONVOON",
+    logo: "/images/brands/lyber.svg",
   },
   {
     id: 2,
-    title: 'CloudSuite',
-    description: '',
-    logo: '/images/brands/oktopi.svg',
+    title: "CloudSuite",
+    logo: "/images/brands/oktopi.svg",
   },
   {
     id: 3,
-    title: 'CODE VISTA',
-    description:
-      'An innovative dialogue interface that provides question-answering capabilities for code repositories.',
-    logo: '/images/brands/taxi.svg',
+    title: "CODE VISTA",
+    logo: "/images/brands/taxi.svg",
   },
   {
     id: 4,
-    title: 'happyhr.ai',
-    description: '',
-    logo: '/images/brands/way.svg',
+    title: "happyhr.ai",
+    logo: "/images/brands/way.svg",
   },
   {
     id: 5,
-    title: 'MAIA',
-    description: '',
-    logo: '/images/brands/way.svg',
+    title: "MAIA",
+    logo: "/images/brands/way.svg",
   },
 ];
 
 const InnovationsCarousel = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % innovations.length);
-    }, 3000); // change every 3 sec
-    return () => clearInterval(interval);
-  }, []);
+  const radius = 100; // adjust for bigger/smaller arc
 
   return (
     <div className="w-full flex flex-col items-center justify-center py-20">
@@ -61,29 +47,35 @@ const InnovationsCarousel = () => {
         value for our clients across different verticals, and to further enhance
         the efficiency of our own operations.
       </p>
-      <div className="relative w-64 h-64 overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={innovations[current].id}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0 flex flex-col items-center justify-center bg-white shadow-lg rounded-xl p-6"
-          >
-            <img
-              src={innovations[current].logo}
-              alt={innovations[current].title}
-              className="w-24 h-24 object-contain mb-4"
-            />
-            <h3 className="text-lg font-semibold mb-2">
-              {innovations[current].title}
-            </h3>
-            <p className="text-center text-sm">
-              {innovations[current].description}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+
+      <div className="relative w-[500px] h-[250px]">
+        {innovations.map((item, index) => {
+          // spread items evenly over 180 degrees (π radians)
+          const angle = Math.PI * (index / (innovations.length - 1));
+          const x = radius * Math.cos(angle - Math.PI); // shift so it starts at left
+          const y = radius * Math.sin(angle - Math.PI);
+
+          return (
+            <div
+              key={item.id}
+              className="absolute flex flex-col items-center"
+              style={{
+                left: "50%",
+                top: "50%",
+                transform: `translate(${x}px, ${y}px)`,
+              }}
+            >
+              <img
+                src={item.logo}
+                alt={item.title}
+                className="w-16 h-16 object-contain mb-2"
+              />
+              <p className="text-xs font-semibold text-center w-max">
+                {item.title}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -55,4 +55,12 @@ export const heroStatsData = [
     title: "10+",
     subtitle: "customers from 60+ countries"
   },
+  {
+    title: "20+",
+    subtitle: "Domains"
+  },
+  {
+    title: "40+",
+    subtitle: "Recurring customers"
+  },
 ]

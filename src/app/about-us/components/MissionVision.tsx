@@ -31,7 +31,7 @@ const MissionVision = () => {
               </div>
               <div className="flex flex-col gap-4">
                 <h1 className="text-2xl font-semibold">Values</h1>
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc list-inside space-y-2 text-sm">
                   {[
                     "We do what we love and we do it well.",
                     "We take pride in our team and continuously evolve.",

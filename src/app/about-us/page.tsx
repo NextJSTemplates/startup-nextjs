@@ -4,6 +4,7 @@ import React from 'react'
 import Statistics from './components/Statistics';
 import MissionVision from './components/MissionVision';
 import WhyUs from './components/WhyUs';
+import OurValues from './components/OurValues';
 
 export const metadata: Metadata = {
   title: "About Us - EP365 Procurement System",
@@ -35,6 +36,7 @@ const AboutUsPage = () => {
       <Statistics />
       <MissionVision />
       <WhyUs />
+      <OurValues />
     </>
   )
 }

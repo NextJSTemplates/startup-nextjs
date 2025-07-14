@@ -61,7 +61,7 @@ const aiServices = [
 ];
 const Services = () => {
   return (
-    <section id="services" className="relative z-10 pt-16 md:pt-20 lg:pt-24">
+    <section id="services" className="relative z-10 pt-20">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center justify-center">
           <h1 className="mb-6 text-center text-3xl font-semibold capitalize">

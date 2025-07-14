@@ -8,6 +8,7 @@ import Industries from "@/components/Common/Industries/Industries";
 import Banner from "@/components/Common/Banner";
 import { softwareDevFeatures } from "@/components/Common/ServiceFeatures/data";
 import ServiceFeatures from "@/components/Common/ServiceFeatures/ServiceFeatures";
+import ServiceContactForm from "@/components/Common/ServiceContactForm";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",
@@ -46,6 +47,7 @@ const ArtificialIntelligence = () => {
         backgroundImage="/images/services/AIBackground.svg"
         keywords={["Smart AI.", "Real Actions.", "Constant Growth"]}
         services={aiChars}
+        section={<ServiceContactForm />}
       />
       <Services />
       <ServiceFeatures title="Software Development Features" serviceFeatures={softwareDevFeatures} />

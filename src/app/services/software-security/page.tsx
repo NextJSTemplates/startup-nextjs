@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import ServiceFeatures from "@/components/Common/ServiceFeatures/ServiceFeatures";
 import { softwareSecurityFeatures } from "@/components/Common/ServiceFeatures/data";
 import WhyUs from "./components/WhyUs";
+import ServiceContactForm from "@/components/Common/ServiceContactForm";
 
 const SofwareSecurity = () => {
   return (
@@ -15,6 +16,7 @@ const SofwareSecurity = () => {
         subtitle="We build secure applications and safeguard your systems from evolving threats with end-to-end cybersecurity practices."
         backgroundImage="/images/services/MVPBackground.svg"
         keywords={["Secure Software.", "Proactive Protection.", "Business Safety"]}
+        section={<ServiceContactForm />}
       />
       <About />
       <Services />

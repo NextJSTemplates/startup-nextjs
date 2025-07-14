@@ -72,7 +72,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       className={cn(
-        "fixed inset-x-0 top-4 z-40 mx-auto w-full max-w-4xl",
+        "fixed inset-x-0 top-3 z-40 mx-auto w-full max-w-4xl",
         className,
       )}
     >
@@ -277,7 +277,7 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
           alt="logo"
           width={30}
           height={30}
-          className="h-9 w-9"
+          className="h-8 w-8"
         />
       </Link>
     );

@@ -8,6 +8,7 @@ import { cloudData } from "@/components/Common/WhyUs/whyUsData";
 import TechStack from "./components/TechStack/TechStack";
 import Brands from "@/components/Brands";
 import DvtProcesses from "@/components/Common/DvtProcesses";
+import ServiceContactForm from "@/components/Common/ServiceContactForm";
 
 export const metadata: Metadata = {
   title: "Services - Cloud Computing",
@@ -35,6 +36,7 @@ const CloudComputing = () => {
           "Agile.",
           "Cloud-First",
         ]}
+        section={<ServiceContactForm />}
       />
       <Brands />
       <DvtProcesses />

@@ -10,6 +10,7 @@ import HowWeWork from "@/components/HowWeWork";
 import { supportMtncProcesses } from "@/components/HowWeWork/data";
 import Statistics from "./components/Statistics";
 import SupportServices from "./components/SupportServices";
+import ServiceContactForm from "@/components/Common/ServiceContactForm";
 
 export const metadata: Metadata = {
   title: "Services - Support And Maintenance",
@@ -36,6 +37,7 @@ const SupportAndMaintenance = () => {
         subtitle="At Classy Endeavors, we understand that consistent system performance, secure frameworks, and reliable uptime are essential for business growth. Our software support and maintenance services are designed to optimize your systems and keep operations running seamlessly."
         backgroundImage="/images/services/SupportBackground.svg"
         keywords={["Software Support", "System Maintenance", "Business Continuity"]}
+        section={<ServiceContactForm />}
       />
       <Statistics />
       <Showcase imageSrc="/images/services/cloud/Background (2).svg" title="Enhancement and Technology Refresh" description="Whether you're transitioning to new infrastructure or

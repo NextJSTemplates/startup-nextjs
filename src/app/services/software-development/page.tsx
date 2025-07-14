@@ -7,6 +7,7 @@ import TechStack from "../cloud-computing/components/TechStack/TechStack";
 import Industries from "@/components/Common/Industries/Industries";
 import Showcase from "@/components/Common/Showcase/Showcase";
 import Features from "../mvp-development/components/Features/Features";
+import ServiceContactForm from "@/components/Common/ServiceContactForm";
 export const metadata: Metadata = {
   title: "Services - Software Development",
   keywords: [
@@ -27,6 +28,7 @@ const SoftwareDevelopment = () => {
         subtitle="From web and mobile applications to enterprise-grade platforms, we develop custom software solutions that scale with your business."
         backgroundImage="/images/services/SDBackground.svg"
         keywords={["Custom Software.", "Web Development.", "Mobile Apps."]}
+        section={<ServiceContactForm />}
       />
       <Services />
       <Showcase imageSrc="/images/services/cloud/Background (2).svg" title="Enhancement and Technology Refresh" description="Whether you're transitioning to new infrastructure or

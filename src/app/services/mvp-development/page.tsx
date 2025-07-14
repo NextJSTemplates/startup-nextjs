@@ -10,6 +10,7 @@ import Features from "./components/Features/Features";
 import HowWeWork from "./components/HowWeWork";
 import Banner from "@/components/Common/Banner";
 import Brands from "@/components/Brands";
+import ServiceContactForm from "@/components/Common/ServiceContactForm";
 
 export const metadata: Metadata = {
   title: "Services - Mvp Development",
@@ -32,6 +33,7 @@ const MvpDevelopment = () => {
         subtitle="Bring your product vision to life—fast. At Classy Endeavors, we specialize in MVP (Minimum Viable Product) development that helps startups and enterprises validate ideas, attract investors, and accelerate market entry. Our iterative development approach ensures you get a functional, user-ready product in record time."
         backgroundImage="/images/services/MVPBackground.svg"
         keywords={["MVP Development", "Startup Acceleration", "Product Validation"]}
+        section={<ServiceContactForm />}
       />
       <Brands />
       <WhyUs

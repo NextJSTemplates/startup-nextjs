@@ -9,6 +9,7 @@ import Banner from "@/components/Common/Banner";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
 import { uxData } from "@/components/Common/WhyUs/whyUsData";
 import DesignProcess from "./components/DesignProcess";
+import ServiceContactForm from "@/components/Common/ServiceContactForm";
 export const metadata: Metadata = {
   title: "Services - UI/UX Design",
   keywords: [
@@ -31,6 +32,7 @@ const UIUXPage = () => {
         subtitle="We help startups and enterprises craft stunning interfaces and frictionless experiences that delight users and drive growth."
         backgroundImage="/images/services/UIUXBackground.svg"
         keywords={["Intuitive Design.", "User-Centric.", "Engaging Experiences"]}
+        section={<ServiceContactForm />}
       />
       
       <Services />

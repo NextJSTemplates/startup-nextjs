@@ -16,7 +16,7 @@ import { useState } from "react";
 
 const Header = () => {
   const navItems = [
-    { name: "About Us", link: "/" },
+    { name: "About Us", link: "/about-us" },
     {
       name: "Services",
       link: "#services",

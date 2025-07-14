@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { Button } from "../ui/button";
+import { ExternalLink } from "lucide-react";
 
 
 const staggerWords = {
@@ -98,6 +100,11 @@ export const Hero = ({
               >
                 {subtitle}
               </motion.p>
+              <Button className="bg-white rounded-full text-black p-6">Get Started
+                <span>
+                  <ExternalLink className="size-4" />
+                </span>
+              </Button>
               <div className="mb-8">
                 {services?.map((item, index) => {
                   return (

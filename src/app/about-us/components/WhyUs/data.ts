@@ -14,7 +14,7 @@ export const whyUsData = [
   {
     icon: Route, 
     title: "Transparent",
-    descriptiom: "Our cooperation with clients is always open and honest. We ensure regular communication, an established daily reporting system, and tracking tools according to the client’s preferences. Thus, our clients can control all possible aspects of projects."
+    description: "Our cooperation with clients is always open and honest. We ensure regular communication, an established daily reporting system, and tracking tools according to the client’s preferences. Thus, our clients can control all possible aspects of projects."
   },
   {
     icon: Badge,

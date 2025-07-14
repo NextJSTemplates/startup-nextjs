@@ -36,3 +36,23 @@ export const statsData = [
       "We are supporters of a customer-oriented approach and position our relationships with clients as professionals for professionals.",
   },
 ];
+
+
+export const heroStatsData = [
+  {
+    title: "50+",
+    subtitle: "Active client accounts",
+  },
+  {
+    title: "100+",
+    subtitle: "IT professionals",
+  },
+  {
+    title: "500+",
+    subtitle: "End to-end projects"
+  },
+    {
+    title: "10+",
+    subtitle: "customers from 60+ countries"
+  },
+]

@@ -1,6 +1,6 @@
+"use client"
 import React from 'react'
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 import { Card, CardDescription, CardTitle } from '../ui/card';
@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem } from '../ui/form';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Button } from '../ui/button';
+import { useForm } from 'react-hook-form';
 
 const contactSchema = z.object({
   firstname: z.string().min(1, "Name is required"),

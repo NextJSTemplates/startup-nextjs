@@ -9,6 +9,7 @@ import Innovations from './components/Innovations';
 import Challenges from './components/Challenges';
 import ContactUs from './components/ContactUs';
 import { heroStatsData } from './components/Statistics/data';
+import InnovationsCarousel from './components/InnovationCarousel';
 
 export const metadata: Metadata = {
   title: "About Us - EP365 Procurement System",
@@ -48,6 +49,7 @@ const AboutUsPage = () => {
       <Challenges />
       <WhyUs />
       <OurValues />
+      <InnovationsCarousel />
     </>
   )
 }

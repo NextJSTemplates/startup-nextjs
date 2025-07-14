@@ -13,7 +13,7 @@ const MissionVision = () => {
             objectFit="cover"
           />
         </div>
-        <div className="relative container mx-auto max-w-7xl py-24 px-6 text-white">
+        <div className="relative container mx-auto max-w-7xl py-32 px-6 text-white">
           <div className="flex flex-col items-start justify-center">
             <h1 className="mb-6 text-3xl font-semibold capitalize">
               Mission Vision
@@ -31,17 +31,15 @@ const MissionVision = () => {
               </div>
               <div className="flex flex-col gap-4">
                 <h1 className="text-2xl font-semibold">Values</h1>
-                <p className="text-sm">
+                <ul className="list-disc list-inside space-y-2">
                   {[
                     "We do what we love and we do it well.",
                     "We take pride in our team and continuously evolve.",
                     "Working flexibly and openly, we get the necessary results."
                   ].map((item, index) => (
-                    <ul key={index}>
-                      <li>{item}</li>
-                    </ul>
+                    <li key={index}>{item}</li>
                   ))}
-                </p>
+                </ul>
               </div>
             </div>
           </div>

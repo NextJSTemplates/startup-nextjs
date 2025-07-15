@@ -3,10 +3,9 @@ import ServiceCard from "./ServiceCard";
 
 const Services = () => {
   return (
-    <section id="services" className="relative z-10 pt-20">
+    <section id="services" className="relative z-10 pt-20 max-w-7xl mx-auto px-6">
       <SectionTitle
-        title="Your Partner for Custom Apps, Automation & Seamless Support"
-        width="80%"
+        title="Our Services"
       />
       <ServiceCard />
     </section>

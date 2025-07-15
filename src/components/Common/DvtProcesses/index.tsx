@@ -111,7 +111,7 @@ export const Card: React.FC<CardProps> = ({
 
         <div className="flex flex-wrap md:flex-nowrap mt-5 gap-10">
           <div className="w-full md:w-[40%]">
-            <h1 className="text-4xl md:text-5xl font-bold text-muted-foreground/20 mb-4">0{i+1}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-muted-foreground/20 mb-4">0{i + 1}</h1>
             <h2 className="text-2xl text-start font-semibold mb-4">{title}</h2>
             <p className="text-sm">{description}</p>
           </div>

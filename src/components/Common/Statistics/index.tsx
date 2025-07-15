@@ -1,69 +1,41 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-import { ChartBar } from "lucide-react";
 import { statistics } from "./statisticsData";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const Statistics = () => {
-  const flipVariant = {
-    hidden: { rotateY: 100, opacity: 0 },
-    visible: (i: number) => ({
-      rotateY: 0,
-      opacity: 1,
-      transition: { delay: i * 0.3, duration: 0.8, ease: "easeIn" },
-    }),
-  };
-
   return (
     <section className="relative z-10 pt-20">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false }}
-          className="container mx-auto max-w-7xl px-6 rounded-lg bg-gradient-to-b from-neutral-100 via-white to-neutral-100 py-12 text-black border border-border"
-        >
-          <div className="flex flex-col gap-4 px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col space-y-4"
-            >
-              <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-semibold">
-                More Than 5 Years In The Game And We&apos;re Just Getting Started.
-              </h3>
-              <p className="mx-auto max-w-xl text-center text-sm mb-6">
-                We are on a mission to build a brand with the goal of providing
-                quality IT development. Our team takes every project like it’s our
-                first and works on it like specialists.
-              </p>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {statistics.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    custom={index}
-                    variants={flipVariant}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="relative flex flex-col overflow-hidden rounded-lg bg-gradient-to-b from-neutral-100 via-neutral-100 to-white p-8 border border-border"
-                  >
-                    <div className="flex items-center gap-2">
-                      <div className="rounded-md bg-black p-3">
-                        <ChartBar className="h-5 w-5 text-white"/>
-                      </div>
+      <div className=" bg-black py-20 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col space-y-12 text-background">
 
-                      <p className="text-2xl font-semibold">{stat.value}</p>
-                    </div>
-                    <p className="relative z-20 mt-4 text-sm">
-                      {stat.label}
-                    </p>
-                  </motion.div>
-                ))}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {statistics.map((stat, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-end aspect-video rounded-lg bg-white/5 backdrop-blur-sm p-6 transition relative"
+              >
+                <h1 className="text-4xl md:text-5xl font-semibold mb-2">{stat.value}</h1>
+                <p className="text-background/70">{stat.label}</p>
               </div>
-            </motion.div>
+            ))}
+            <div
+              className="relative flex justify-end items-end text-end pb-4 pe-4 aspect-video"
+            >
+              <Link href="/" className="flex gap-2 text-xl text-background/70">About Us
+                <span>
+                  <ArrowRight className="size-6" />
+                </span>
+              </Link>
+            </div>
           </div>
-        </motion.div>
+          <p className="max-w-3xl mb-6 text-background/70">
+            As a trusted software development partner, we help companies worldwide turn complex challenges into practical digital solutions. For more than ten years, clients across North America, Europe, Asia, and Australia have relied on us — from ambitious startups to established global brands.
+            <br /><br /> We handle every stage of the journey, from consulting and development to long-term support. Our promise is simple: we listen, plan, and build software that meets your goals and delivers real results — nothing unnecessary, just technology that works for your business.
+          </p>
+        </div>
+      </div>
     </section>
   );
 };

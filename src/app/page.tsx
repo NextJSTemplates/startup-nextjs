@@ -2,10 +2,11 @@ import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Statistics from "@/components/Common/Statistics";
-import Features from "@/components/Features";
+import ContactUs from "@/components/ContactUs";
 import { Hero } from "@/components/Hero";
 import Industries from "@/components/Industries/Industries";
 import Services from "@/components/Services";
+import Technologies from "@/components/Technologies";
 import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
@@ -21,11 +22,12 @@ export default function Home() {
       <Hero />
       <Brands />
       <Services />
-      <Features />
+      <Technologies />
       <Industries />
       <Statistics />
       <Testimonials />
       <Blog />
+      <ContactUs />
     </>
   );
 }

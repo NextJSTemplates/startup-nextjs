@@ -23,11 +23,6 @@ export const statistics: Statistics[] = [
     icon: Blocks,
   },
   {
-    value: "5+",
-    label: "SaaS Platforms Developed for Scalable Growth",
-    icon: ChartBar,
-  },
-  {
     value: "15+",
     label: "Cross-Platform Mobile Apps Built With Flutter & React Native",
     icon: Cloud,

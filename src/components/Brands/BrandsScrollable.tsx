@@ -1,43 +1,54 @@
 import Image from "next/image";
 import brandsData from "./brandsData";
-import { Marquee } from "../magicui/marquee";
 import { Brand } from "@/types";
 
 const BrandsScrollable = () => {
 
   return (
-    <div className="relative container mx-auto flex w-full flex-col items-center justify-center overflow-hidden px-8">
-      <Marquee pauseOnHover className="[--duration:27s]">
-        {brandsData.map((brand) => (
-          <BrandCard key={brand.id} brand={brand} />
+    <div className="relative container flex w-full items-center justify-center overflow-hidden">
+        {brandsData.map((brand, index) => (
+          <BrandCard index={index} key={brand.id} brand={brand} />
         ))}
-      </Marquee>
     </div>
   );
 };
 
 export default BrandsScrollable;
 
-
-const BrandCard = ({ brand }: { brand: Brand }) => {
+const BrandCard = ({
+  brand,
+  index,
+}: {
+  brand: Brand;
+  index: number;
+}) => {
   const image = brand.image;
+  const isEven = index % 2 === 0;
 
   return (
-    <figure className="hover:animate-zoomIn relative h-full cursor-pointer overflow-hidden rounded-xl">
-      <a
-        href="#"
-        target="_blank"
-        rel="nofollow noreferrer"
-        className="relative w-full opacity-70 transition hover:scale-[1.05] hover:opacity-100"
+    <div className="relative h-40 w-64 flex items-center justify-center">
+      <div
+        className={`h-full w-full flex items-center justify-center bg-neutral-50 ${isEven ? "clip-trapezoid" : "clip-trapezoid-inverted"
+          }`}
       >
-        <Image
-          src={image}
-          alt="Brand"
-          className="block"
-          width={160}
-          height={160}
-        />
-      </a>
-    </figure>
+        <a
+          href="#"
+          target="_blank"
+          rel="nofollow noreferrer"
+          className="flex items-center justify-center"
+        >
+          <Image
+            src={image}
+            alt="Brand"
+            width={100}
+            height={100}
+            className="w-80"
+          />
+        </a>
+      </div>
+    </div>
   );
 };
+
+
+

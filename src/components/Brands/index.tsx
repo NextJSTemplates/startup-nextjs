@@ -1,26 +1,11 @@
-"use client"
-
-import { motion } from "framer-motion";
 import BrandsScrollable from "./BrandsScrollable";
 
 const Brands = () => {
   return (
-    <section className="relative z-10 pt-20" id="brands">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.2 }}
-      >
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2, delay: 0.2 }}
-          className="mb-16 text-center text-2xl font-semibold sm:text-3xl"
-        >
-          With help from the biggest companies
-        </motion.h2>
+    <section className="relative z-10 pt-20 max-w-7xl mx-auto" id="brands">
+      <div>
         <BrandsScrollable />
-      </motion.div>
+      </div>
     </section>
   );
 };

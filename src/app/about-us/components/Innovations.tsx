@@ -7,7 +7,7 @@ const Innovations = () => {
       <div className="bg-gradient-to-b from-black to-gray-900 text-white max-w-7xl mx-auto py-20 px-6 rounded-lg flex flex-col justify-center items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-24">
           <div className="space-y-6 flex flex-col justify-center">
-            <h1 className="text-4xl font-semibold leading-tight max-w-md">
+            <h1 className="text-3xl md:text-4xl font-medium leading-tight max-w-md">
               Leading the Next Era of <br /> Language AI for Enterprise Growth
             </h1>
             <p className="max-w-md text-sm">
@@ -37,13 +37,13 @@ const Innovations = () => {
             />
           </div>
           <div className="space-y-6 order-1 md:order-2">
-            <h2 className="text-3xl font-semibold leading-tight max-w-md">
+            <h2 className="text-3xl font-medium leading-tight max-w-md">
               Expert-Led Innovation, Powered by Collaboration
             </h2>
             <p className="max-w-sm text-sm">
               At Classy Endeavors, our AI and ML engineers bring together diverse skills and a shared passion for advancing language AI. United by purpose, we’re focused on delivering cutting-edge innovations that help developers build meaningful solutions.          </p>
             <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200">
-              Join Us →
+              Let&apos;s Talk →
             </button>
           </div>
         </div>

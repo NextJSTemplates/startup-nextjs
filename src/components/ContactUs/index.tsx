@@ -10,8 +10,9 @@ const steps = [
 ];
 
 const StepsPanel = () => (
-  <div className="p-6 rounded-lg aspect-square relative text-sm w-full md:max-w-md bg-neutral-50 border border-border/50">
-    <h2 className="text-2xl font-medium mb-10">What happens next?</h2>
+  <div className="border border-red-500 border-dashed max-w-md">
+  <div className="p-6 aspect-square relative text-sm w-full md:max-w-md bg-neutral-50 border border-border/50 bottom-4 right-4">
+    <h2 className="text-xl font-medium mb-10">What happens next?</h2>
     <div className="relative text-[13px]">
       {steps.map((step, index) => (
         <div key={index} className="relative pl-12 pb-10 last:pb-0">
@@ -26,6 +27,7 @@ const StepsPanel = () => (
       ))}
     </div>
   </div>
+  </div>
 );
 
 const ContactUs = () => {
@@ -34,7 +36,9 @@ const ContactUs = () => {
       <SectionTitle title="Contact Us" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 justify-center items-center">
         <ContactForm />
-        <StepsPanel />
+        <div className="flex flex-col justify-center items-center">
+          <StepsPanel />
+        </div>
       </div>
     </section>
   );

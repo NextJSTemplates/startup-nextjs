@@ -54,7 +54,7 @@ const ContactForm = () => {
 
   return (
     <div className="">
-      <h1 className="text-2xl font-medium mb-2">How can we help your business?</h1>
+      <h1 className="text-lg font-medium mb-2">How can we help your business?</h1>
       <p className="text-sm mb-6">We&apos;re a message away from bringing your idea to life.</p>
 
       <Form {...form}>

@@ -14,7 +14,7 @@ const Statistics = () => {
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium">{stat.title}</h1>
                 <p className="text-sm font-medium">{stat.subtitle}</p>
                 <hr />
-                <p className="text-foreground/70 text-[13px]">{stat.description}</p>
+                <p className="text-foreground/80 text-[13px]">{stat.description}</p>
               </div>
             ))}
           </div>

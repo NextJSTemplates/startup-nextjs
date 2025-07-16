@@ -23,7 +23,7 @@ export const Reviews = () => {
               <span className="text-xs">{testimonial.description}</span>
             </div>
           </div>
-          <p className="text-[13px] text-foreground/70">
+          <p className="text-[13px] text-foreground/80">
             {testimonial.body}
           </p>
         </div>

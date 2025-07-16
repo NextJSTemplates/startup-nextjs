@@ -7,7 +7,8 @@ import WhyUs from './components/WhyUs';
 import OurValues from './components/OurValues';
 import Challenges from './components/Challenges';
 import ContactUs from '@/components/ContactUs';
-import Testimonials from './components/Testimonials';
+import Leadership from './components/Leadership';
+import TeamOverview from './components/TeamOverview';
 
 export const metadata: Metadata = {
   title: "About Us - EP365 Procurement System",
@@ -38,7 +39,8 @@ const AboutUsPage = () => {
       <Challenges />
       <WhyUs />
       <OurValues />
-      <Testimonials />
+      <Leadership />
+      <TeamOverview />
       <ContactUs />
     </>
   )

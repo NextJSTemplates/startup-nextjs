@@ -10,8 +10,8 @@ const steps = [
 ];
 
 const StepsPanel = () => (
-  <div className="border border-red-500 border-dashed max-w-md">
-  <div className="p-6 aspect-square relative text-sm w-full md:max-w-md bg-neutral-50 border border-border/50 bottom-4 right-4">
+  <div className="border border-red-500 border-dashed max-w-md rounded-md">
+  <div className="p-6 rounded-md aspect-square relative text-sm w-full md:max-w-md bg-neutral-50 border border-border/50 bottom-4 right-4">
     <h2 className="text-xl font-medium mb-10">What happens next?</h2>
     <div className="relative text-[13px]">
       {steps.map((step, index) => (

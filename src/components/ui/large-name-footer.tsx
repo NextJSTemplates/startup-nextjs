@@ -24,7 +24,7 @@ export const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div>
-              <h4 className="mb-4 font-semibold">Pages</h4>
+              <h4 className="mb-4 font-semibold">Services</h4>
               <ul className="list-none space-y-2 text-sm">
                 <li>
                   <Link href="/services/cloud-computing" className="">

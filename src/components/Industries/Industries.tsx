@@ -18,7 +18,7 @@ const Industries = () => {
             onClick={() => setActiveTab(industry.name)}
             className={`text-base font-medium p-4 border-b-2 ${activeTab === industry.name
               ? "border-red-500 text-black"
-              : "border-transparent text-gray-500 hover:text-black"
+              : "border-transparent text-muted-foreground hover:text-black"
               }`}
           >
             {industry.name}
@@ -29,7 +29,7 @@ const Industries = () => {
       {industries
         .filter((industry) => industry.name === activeTab)
         .map((industry) => (
-          <div key={industry.name} className="flex flex-col md:flex-row gap-6 md:gap-12">
+          <div key={industry.name} className="flex flex-col md:flex-row gap-6 md:gap-12 text-foreground/80">
             <div className="flex flex-col gap-4 text-left">
               <h1 className="font-semibold text-lg">{industry.name}</h1>
               <p>{industry.quote}</p>

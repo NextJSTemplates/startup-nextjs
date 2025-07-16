@@ -34,9 +34,9 @@ const ServiceCard = () => {
             <div>
               <div className="mt-4 mb-10 flex items-center justify-start text-start gap-2">
                 <Icon className="size-5 stroke-2" />
-                <h3 className="font-medium text-lg">{service.title}</h3>
+                <h3 className="font-medium text-base">{service.title}</h3>
               </div>
-              <ul className="space-y-6 text-sm">
+              <ul className="space-y-6">
                 {service.items.map((item, i) => {
                   const Icon = item.icon;
                   return (
@@ -50,7 +50,7 @@ const ServiceCard = () => {
             </div>
 
             <div className="mt-24 flex justify-between items-center">
-              <Link href="/about-us" className="text-sm z-10">Learn More</Link>
+              <Link href="/about-us" className="z-10">Learn More</Link>
               <ArrowRight className="size-5 z-10" />
             </div>
 

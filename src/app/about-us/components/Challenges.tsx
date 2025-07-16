@@ -1,3 +1,4 @@
+import SectionTitle from '@/components/Common/SectionTitle'
 import React from 'react'
 
 const challenges = [
@@ -19,14 +20,12 @@ const Challenges = () => {
     <section className="relative z-10 pt-20">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-center">
-          <h1 className="mb-6 text-3xl font-semibold capitalize">
-            Challenges we help to solve
-          </h1>
+          <SectionTitle title="Challenges Solved" className="text-2xl md:text-3xl mb-12"/>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {challenges.map((challenge, index) => (
             <div className="flex flex-col gap-2" key={index}>
-              <h1 className="text-sm font-semibold">{challenge.title}</h1>
-              <p className="text-sm max-w-sm">{challenge.description}</p>
+              <h1 className="text-base font-medium mb-2">{challenge.title}</h1>
+              <p className="max-w-sm text-[13px] text-foreground/80">{challenge.description}</p>
             </div>
           ))}
           </div>

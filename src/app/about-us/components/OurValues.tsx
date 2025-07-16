@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import SectionTitle from '@/components/Common/SectionTitle'
 
 const values = [
   {
@@ -26,17 +27,15 @@ const values = [
 
 const OurValues = () => {
   return (
-    <section id="services" className="relative z-10 py-20">
+    <section id="services" className="relative z-10 pt-20">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="mb-6 text-3xl text-center font-semibold capitalize">
-            Our Values
-          </h1>
-          <div className="flex flex-wrap justify-center gap-6 md:justify-between">
+          <SectionTitle title="Our Values" className="text-2xl md:text-3xl mb-12" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {values.map((value, index) => (
-              <div className="flex flex-col items-center text-center w-[120px] md:w-auto" key={index}>
-                <Image src={value.imageSrc} alt="Value Image" width={100} height={100} className="w-20" />
-                <p className="text-sm font-semibold">{value.title}</p>
+              <div className="flex flex-col items-center text-center w-full" key={index}>
+                <Image src={value.imageSrc} alt="Value Image" width={100} height={100} className="w-25" />
+                <p className="text-[13px] font-medium">{value.title}</p>
               </div>
             ))}
           </div>

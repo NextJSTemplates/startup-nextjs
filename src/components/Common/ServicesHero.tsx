@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { Button } from "../ui/button";
-import { ExternalLink } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 
 const staggerWords = {
@@ -27,6 +26,7 @@ const wordFadeUp = {
 
 type HeroProps = {
   title: string;
+  titleStyles?: string;
   subtitle: string;
   backgroundImage: string;
   keywords?: string[];
@@ -39,6 +39,7 @@ type HeroProps = {
 
 export const Hero = ({
   title,
+  titleStyles,
   subtitle,
   backgroundImage,
   keywords,
@@ -87,7 +88,7 @@ export const Hero = ({
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="mb-6 max-w-2xl text-3xl leading-tight font-extrabold md:text-4xl lg:text-5xl"
+                className={cn("mb-6 max-w-2xl text-3xl leading-tight font-semibold md:text-4xl lg:text-5xl", titleStyles)}
               >
                 {title}
               </motion.h1>
@@ -100,11 +101,11 @@ export const Hero = ({
               >
                 {subtitle}
               </motion.p>
-              <Button className="bg-white rounded-full text-black p-6">Get Started
+              {/* <Button className="bg-white rounded-full text-black p-6">Get Started
                 <span>
                   <ExternalLink className="size-4" />
                 </span>
-              </Button>
+              </Button> */}
               <div className="mb-8">
                 {services?.map((item, index) => {
                   return (

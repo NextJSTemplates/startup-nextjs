@@ -5,12 +5,6 @@ import { FlipWords } from "../ui/flip-words";
 import { Button } from "../ui/moving-border";
 import { teamMembers } from "./heroData";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-
-const mid = Math.floor(teamMembers.length / 2);
-const teamOne = teamMembers.slice(0, mid);
-const teamTwo = teamMembers.slice(mid);
 const words = ["Scalable", "Secure", "Intelligent"];
 
 const staggerWords = {
@@ -36,19 +30,8 @@ export const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden pt-[160px] pb-24 md:pt-[160px] md:pb-[32px] lg:h-screen xl:pt-[160px] xl:pb-[60px] 2xl:pt-[180px] 2xl:pb-[80px]"
+        className="relative z-10 overflow-hidden pt-[160px] pb-24 md:pt-[160px] md:pb-[32px] lg:h-screen xl:pt-[160px] xl:pb-[60px] 2xl:pt-[180px] 2xl:pb-[80px] bg-foreground text-background"
       >
-        <div
-          className={cn(
-            "absolute inset-0",
-            "[background-size:20px_20px]",
-            "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-            "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
-          )}
-        />
-        <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         <div className="md:max-w-8xl relative z-10 container mx-auto lg:max-w-6xl">
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
             <div className="w-full">
@@ -56,7 +39,7 @@ export const Hero = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="mx-auto max-w-[900px] text-black dark:text-white"
+                className="mx-auto max-w-[900px]"
               >
                 <motion.div
                   variants={staggerWords}
@@ -81,7 +64,7 @@ export const Hero = () => {
                     We Build{" "}
                     <FlipWords
                       words={words}
-                      className="font-bold text-black dark:text-white"
+                      className="font-bold"
                     />{" "}
                   </span>
                   Software
@@ -91,7 +74,7 @@ export const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
-                  className="mb-8 w-full max-w-sm text-[13px] text-black sm:text-[15px] md:max-w-md lg:max-w-xl dark:text-white"
+                  className="mb-8 w-full max-w-sm md:max-w-md lg:max-w-xl"
                 >
                   Certified software experts blending precision and creativity
                   to deliver powerful, affordable solutions tailored to your
@@ -143,65 +126,6 @@ export const Hero = () => {
                   ))}
                 </motion.div>
               </motion.div>
-            </div>
-
-            <div className="relative mt-6 w-full md:mt-0">
-              <div className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:gap-12 lg:gap-8">
-                {[teamOne, teamTwo].map((team, colIndex) => (
-                  <div
-                    key={colIndex}
-                    className={`flex flex-col items-center space-y-6 ${
-                      colIndex === 0 ? "-translate-y-6" : "translate-y-6"
-                    }`}
-                  >
-                    {team.map((member, index) => {
-                      const bounceClass =
-                        index % 3 === 0
-                          ? "bounce-slow"
-                          : index % 3 === 1
-                            ? "bounce-medium"
-                            : "bounce-fast";
-
-                      const xTranslate =
-                        index % 2 === 0
-                          ? "translate-x-2 sm:translate-x-3 md:translate-x-4"
-                          : "-translate-x-2 sm:-translate-x-3 md:-translate-x-4";
-
-                      return (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{
-                            duration: 0.5,
-                            delay: 0.1 * index,
-                            ease: "easeOut",
-                          }}
-                          className={`transform ${bounceClass} ${xTranslate} from-bg-neutral-100 h-60 w-full overflow-hidden rounded-xl border border-neutral-200 bg-gradient-to-b via-white to-neutral-100 p-4 shadow-lg backdrop-blur-[2px] md:w-45 lg:w-60`}
-                        >
-                          <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="flex justify-center"
-                          >
-                            <Image
-                              src={member.image}
-                              alt={member.name}
-                              width={200}
-                              height={50}
-                              className="h-45 w-full rounded-lg object-cover shadow-lg sm:w-90 md:w-80"
-                            />
-                          </motion.div>
-                          <p className="-translate-y-2 rounded-b-lg bg-black p-2 text-center text-[12px] font-medium text-white md:text-[10px] lg:text-[12px]">
-                            {member.name}
-                          </p>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>

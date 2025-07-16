@@ -5,10 +5,7 @@ import Statistics from './components/Statistics';
 import MissionVision from './components/MissionVision';
 import WhyUs from './components/WhyUs';
 import OurValues from './components/OurValues';
-import Innovations from './components/Innovations';
 import Challenges from './components/Challenges';
-import { heroStatsData } from './components/Statistics/data';
-import InnovationsCarousel from './components/InnovationCarousel';
 import ContactUs from '@/components/ContactUs';
 import Testimonials from './components/Testimonials';
 

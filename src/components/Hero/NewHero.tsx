@@ -45,7 +45,7 @@ const NewHero = () => {
             <p className="text-base max-w-2xl">
               Certified software experts blending precision and creativity to deliver powerful, affordable solutions tailored to your business. End-to-end development, seamless integration, and ongoing support — all at unmatched value.
             </p>
-            <Button className="text-base font-medium px-8 py-6 rounded-xl bg-white text-black border border-white/10 shadow-none hover:bg-white/90 transition-none">
+            <Button className="text-base font-medium px-8 py-6 rounded-full bg-white text-black border border-white/10 shadow-none hover:bg-white/90 transition-none">
               Get Started
             </Button>
           </div>

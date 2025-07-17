@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { cn } from "@/lib/utils";
+import { Button } from "../ui/button";
+import { ExternalLink } from "lucide-react";
 
 
 const staggerWords = {
@@ -65,10 +67,10 @@ export const Hero = ({
 
       {/* Stripes */}
       <div className="flex justify-end items-end">
-        <div className="pointer-events-none absolute inset-0 z-10 flex justify-around px-[20%]">
-          <div className="w-[2px] bg-white/60 h-full" />
-          <div className="w-[2px] bg-white/60 h-full" />
-          <div className="w-[2px] bg-white/60 h-full" />
+        <div className="pointer-events-none absolute inset-0 z-10 flex justify-around pl-[50%]">
+          <div className="w-[12px] bg-white h-full" />
+          <div className="w-[12px] bg-white h-full" />
+          <div className="w-[12px] bg-white h-full" />
         </div>
       </div>
 
@@ -100,7 +102,7 @@ export const Hero = ({
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className={cn("mb-6 max-w-2xl text-3xl leading-tight font-semibold md:text-4xl lg:text-5xl", titleStyles)}
+                className={cn("mb-6 max-w-2xl text-3xl leading-tight font-semibold md:text-4xl", titleStyles)}
               >
                 {title}
               </motion.h1>
@@ -109,15 +111,15 @@ export const Hero = ({
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="mb-8 w-full max-w-sm text-[13px] sm:text-[15px] md:max-w-md lg:max-w-xl"
+                className="mb-8 w-full max-w-sm text-sm md:max-w-md lg:max-w-xl"
               >
                 {subtitle}
               </motion.p>
-              {/* <Button className="bg-white rounded-full text-black p-6">Get Started
+              <Button className="bg-white rounded-full text-black p-6">Get Started
                 <span>
                   <ExternalLink className="size-4" />
                 </span>
-              </Button> */}
+              </Button>
               <div className="mb-8">
                 {services?.map((item, index) => {
                   return (

@@ -1,7 +1,6 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
-import { Button } from "../ui/moving-border";
 import {
   Navbar,
   NavBody,
@@ -13,6 +12,7 @@ import {
   MobileNavMenu,
 } from "../ui/resizable-navbar";
 import { useState } from "react";
+import { Button } from "../ui/button";
 
 const Header = () => {
   const navItems = [
@@ -56,9 +56,9 @@ const Header = () => {
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <Button className="max-w-sm border-neutral-300 bg-white px-4 text-[13px] font-semibold text-black dark:border-slate-800 dark:bg-black dark:text-white">
+          <Button className="border border-border/50 bg-foreground px-4 text-[13px] font-semibold text-background rounded-full">
             Contact Us
-            <ExternalLink className="ml-1.5 h-4 w-4" />
+            <ExternalLink className="ml-1.5 h-4 w-4 text-primary" />
           </Button>
         </div>
       </NavBody>
@@ -81,15 +81,14 @@ const Header = () => {
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="relative text-neutral-600 dark:text-neutral-300"
+              className="relative text-background"
             >
               <span className="block">{item.name}</span>
             </a>
           ))}
           <div className="flex w-full flex-col gap-4">
             <Button
-              borderRadius="1.75rem"
-              className="border-neutral-300 bg-white px-4 text-[12px] font-bold text-black dark:border-slate-800 dark:bg-black dark:text-white"
+              className="border border-border/50 bg-foreground px-4 text-[12px] font-semibold text-background"
             >
               Contact Us
             </Button>

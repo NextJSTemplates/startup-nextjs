@@ -50,8 +50,8 @@ const ServiceCard = () => {
             </div>
 
             <div className="mt-24 flex justify-between items-center">
-              <Link href="/about-us" className="z-10">Learn More</Link>
-              <ArrowRight className="size-5 z-10" />
+              <Link href="/about-us" className="z-10 font-medium">Learn More</Link>
+              <ArrowRight className="size-4.5 z-10 text-primary hover:scale-[1.1] transition duration-200 cursor-pointer" />
             </div>
 
             {/* Diagonal corner piece */}

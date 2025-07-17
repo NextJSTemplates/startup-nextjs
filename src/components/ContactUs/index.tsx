@@ -20,7 +20,7 @@ const ContactUs = ({content}: ContactUsProps) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 justify-center items-center">
         <ContactForm />
         <div className="flex flex-col justify-center items-center">
-          <div className="border border-red-500 border-dashed max-w-md rounded-md">
+          <div className="border border-primary border-dashed max-w-md rounded-md">
             <div className="p-6 rounded-md aspect-square relative text-sm w-full md:max-w-md bg-neutral-50 border border-border/50 bottom-4 right-4 flex flex-col justify-center">
             {content}
             </div>

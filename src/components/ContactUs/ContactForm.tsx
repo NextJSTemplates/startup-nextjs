@@ -158,13 +158,13 @@ const ContactForm = () => {
             <p className="text-xs text-muted-foreground">
               By clicking Send, you consent to Innowise processing your personal data per our Privacy Policy. By submitting your phone number, you agree we may contact you via voice calls, SMS, and messaging apps.
             </p>
-            <Button type="submit" className="bg-red-600 text-white w-fit px-6">Send</Button>
+            <Button type="submit" className="bg-primary hover:bg-primary/80 cursor-pointer text-white w-fit px-6">Send</Button>
           </div>
         </form>
       </Form>
 
       <p className="mt-4 text-sm">
-        You can also send us your request to <a href="mailto:contact@innowise.com" className="text-red-600 font-medium">contact@innowise.com</a>
+        You can also send us your request to <a href="mailto:contact@innowise.com" className="text-primary font-medium">info@classyendeavors.com</a>
       </p>
     </div>
   );

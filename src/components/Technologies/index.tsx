@@ -17,7 +17,7 @@ const Technologies = () => {
             key={card.title}
             onClick={() => setActiveTab(card.title)}
             className={`text-base font-medium p-4 border-b-2 ${activeTab === card.title
-              ? "border-red-500 text-black"
+              ? "border-primary text-black"
               : "border-transparent text-muted-foreground"
               }`}
           >

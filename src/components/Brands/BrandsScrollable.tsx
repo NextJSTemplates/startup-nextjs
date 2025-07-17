@@ -1,14 +1,19 @@
 import Image from "next/image";
 import brandsData from "./brandsData";
 import { Brand } from "@/types";
+import { Marquee } from "../magicui/marquee";
 
 const BrandsScrollable = () => {
 
   return (
     <div className="relative container flex w-full items-center justify-center overflow-hidden">
+      <Marquee pauseOnHover className="[--duration:27s]">
         {brandsData.map((brand, index) => (
           <BrandCard index={index} key={brand.id} brand={brand} />
         ))}
+      </Marquee>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-background"></div>
     </div>
   );
 };

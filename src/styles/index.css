@@ -338,7 +338,7 @@ layer(base);
   --card-foreground: oklch(1 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(63% 0.15 202);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -415,7 +415,7 @@ layer(base);
     @apply bg-background text-foreground text-sm;
   }
   .custom-bullets li::marker {
-    color: #f87171;
+    color: #0C555D;
   }
   .clip-trapezoid {
     clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);

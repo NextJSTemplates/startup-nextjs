@@ -34,7 +34,7 @@ const Blog = () => {
               <p className="text-sm font-normal text-muted-foreground">
                 {post.date}
               </p>
-              <ExternalLink className="h-4 w-4 text-muted-foreground" />
+              <ExternalLink className="h-4 w-4 text-primary" />
             </div>
             <p className="text-md mt-4 font-medium">
               {post.title}
@@ -48,7 +48,7 @@ const Blog = () => {
       </div>
 
       <div className="mx-auto max-w-md text-center mt-12">
-        <Button className="rounded-none bg-transparent border-b-2 border-black text-black hover:bg-transparent shadow-none hover:scale-[1.1] transition duration-200 cursor-pointer">
+        <Button className="rounded-none bg-transparent border-b-2 border-primary hover:bg-transparent shadow-none hover:scale-[1.1] transition duration-200 cursor-pointer text-primary">
           View More
           <ArrowRight className="w-4 h-4" />
         </Button>

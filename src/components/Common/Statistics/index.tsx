@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 const Statistics = () => {
   return (
     <section className="relative z-10 pt-20">
-      <div className=" bg-black py-20 px-6">
+      <div className=" bg-foreground py-20 px-6">
         <div className="max-w-7xl mx-auto flex flex-col space-y-12 text-background">
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -23,9 +23,9 @@ const Statistics = () => {
             <div
               className="relative flex justify-end items-end text-end pb-4 pe-4 aspect-video"
             >
-              <Link href="/" className="flex gap-2 text-xl text-background/70">About Us
+              <Link href="/about-us" className="flex gap-2 text-xl text-primary hover:scale-[1.1] transition duration-200 border-b border-b-primary p-4">About Us
                 <span>
-                  <ArrowRight className="size-6" />
+                  <ArrowRight className="size-5 mt-1" />
                 </span>
               </Link>
             </div>

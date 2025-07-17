@@ -48,7 +48,7 @@ const OurValues = () => {
                   alt={`${value.title} Image`}
                   width={100}
                   height={100}
-                  className="transition-all duration-500 ease-in-out w-full group-hover:w-24 group-hover:absolute group-hover:bottom-4 group-hover:right-4 group-hover:opacity-40"
+                  className="transition-all duration-500 ease-in-out w-full group-hover:w-20 group-hover:absolute group-hover:bottom-4 group-hover:right-4 group-hover:opacity-40"
                 />
 
                 {/* Title (initially below image) */}

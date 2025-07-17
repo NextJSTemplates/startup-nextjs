@@ -19,7 +19,7 @@ export const testimonials: Testimonial[] = [
     body: "Med Evity har vi systematiserat allt från medarbetarsamtal till löneprocessen, pulsmätningar, onboarding och offboarding.",
     img: "/images/testimonials/person-3.avif",
   },
-    {
+  {
     name: "Emma Hessel",
     description: "Ekonom - BS Verkstäder",
     body: "Evity har den bästa supporten jag någonsin varit med om. Det personliga bemötandet och den snabba återkopplingen har skapat en känsla av trygghet och tillit som är mycket värdefull. bort och att alla delar i processerna fångas upp. Det minskar sårbarheten i organisationen och gör att vi minimerar risken att missa något",
@@ -37,7 +37,7 @@ export const testimonials: Testimonial[] = [
     body: "Med Evity har vi systematiserat allt från medarbetarsamtal till löneprocessen, pulsmätningar, onboarding och offboarding.",
     img: "/images/testimonials/person-3.avif",
   },
-    {
+  {
     name: "Emma Hessel",
     description: "Ekonom - BS Verkstäder",
     body: "Evity har den bästa supporten jag någonsin varit med om. Det personliga bemötandet och den snabba återkopplingen har skapat en känsla av trygghet och tillit som är mycket värdefull. bort och att alla delar i processerna fångas upp. Det minskar sårbarheten i organisationen och gör att vi minimerar risken att missa något",
@@ -55,7 +55,7 @@ export const testimonials: Testimonial[] = [
     body: "Med Evity har vi systematiserat allt från medarbetarsamtal till löneprocessen, pulsmätningar, onboarding och offboarding.",
     img: "/images/testimonials/person-3.avif",
   },
-    {
+  {
     name: "Emma Hessel",
     description: "Ekonom - BS Verkstäder",
     body: "Evity har den bästa supporten jag någonsin varit med om. Det personliga bemötandet och den snabba återkopplingen har skapat en känsla av trygghet och tillit som är mycket värdefull.bort och att alla delar i processerna fångas upp. Det minskar sårbarheten i organisationen och gör att vi minimerar risken att missa något ",
@@ -72,5 +72,5 @@ export const testimonials: Testimonial[] = [
     description: "VD - Brightnest",
     body: "Med Evity har vi systematiserat allt från medarbetarsamtal till löneprocessen, pulsmätningar, onboarding och offboarding.",
     img: "/images/testimonials/person-3.avif",
-  }
+  },
 ];

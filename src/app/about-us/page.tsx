@@ -10,6 +10,8 @@ import ContactUs from '@/components/ContactUs';
 import TeamOverview from './components/TeamOverview';
 import Innovations from './components/Innovations';
 import Testimonials from './components/Testimonials';
+import Image from 'next/image';
+import { Quote } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "About Us - EP365 Procurement System",
@@ -42,7 +44,37 @@ const AboutUsPage = () => {
       <OurValues />
       <Testimonials />
       <TeamOverview />
-      <ContactUs />
+      <ContactUs content={(
+        <div className="flex flex-col gap-4">
+          <h1 className="font-medium text-xl">What our customers say</h1>
+
+          <Quote className="size-5 rotate-180 text-center" fill="black" />
+
+          <p className="text-[13px]">
+            The breadth of knowledge and understanding that ELEKS has within its walls allows us to leverage that expertise to make superior deliverables for our customers. When you work with ELEKS, you are working with the top 1% of the aptitude and engineering excellence of the whole country.
+          </p>
+
+          {/* Second quote aligned to end */}
+          <div className="flex justify-end">
+            <Quote className="size-5" fill="black" />
+          </div>
+
+          <div className="mt-2 flex items-center gap-3">
+            <Image
+              src="/images/testimonials/person-1.avif"
+              alt="Customer"
+              width={14}
+              height={14}
+              className="w-16 h-16 rounded-lg"
+            />
+            <div className="flex flex-col">
+              <h1 className="font-medium">Sam Fleming</h1>
+              <p className="text-[13px]">President, Fleming-AOD</p>
+            </div>
+          </div>
+        </div>
+
+      )} />
     </>
   )
 }

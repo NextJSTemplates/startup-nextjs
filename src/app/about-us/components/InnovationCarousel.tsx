@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import SectionTitle from "@/components/Common/SectionTitle";
+import Image from "next/image";
+import React, { useState } from "react";
 
 type Innovation = {
   id: number;
@@ -37,37 +39,46 @@ const innovations: Innovation[] = [
 ];
 
 const InnovationsCarousel = () => {
-  const radius = 100; // adjust for bigger/smaller arc
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const radius = 200; // circle radius
 
   return (
     <div className="w-full flex flex-col items-center justify-center py-20">
-      <h1 className="text-3xl font-semibold mb-4">Our Innovations</h1>
-      <p className="text-center max-w-xl mb-6 text-sm">
+      <SectionTitle title="Our Innovations" className="text-2xl md:text-3xl mb-6" />
+      <p className="text-center max-w-xl mb-6 text-[13px]">
         Discover our innovation – our IPs and Accelerators to create extra
         value for our clients across different verticals, and to further enhance
         the efficiency of our own operations.
       </p>
 
-      <div className="relative w-[500px] h-[250px]">
+      <div className="relative w-full h-[500px]">
         {innovations.map((item, index) => {
-          // spread items evenly over 180 degrees (π radians)
-          const angle = Math.PI * (index / (innovations.length - 1));
-          const x = radius * Math.cos(angle - Math.PI); // shift so it starts at left
-          const y = radius * Math.sin(angle - Math.PI);
+          // calculate relative position around circle
+          const angle = ((2 * Math.PI) / innovations.length) * (index - activeIndex);
+          const x = radius * Math.sin(angle);
+          const y = -radius * Math.cos(angle); // negative to start from top
+
+          const isActive = index === activeIndex;
 
           return (
             <div
               key={item.id}
-              className="absolute flex flex-col items-center"
+              onClick={() => setActiveIndex(index)}
+              className={`absolute flex flex-col items-center cursor-pointer transition-transform duration-500 ${
+                isActive ? "scale-110 z-20" : "scale-100 z-10"
+              }`}
               style={{
                 left: "50%",
                 top: "50%",
-                transform: `translate(${x}px, ${y}px)`,
+                transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
               }}
             >
-              <img
+              <Image
                 src={item.logo}
                 alt={item.title}
+                width={16}
+                height={16}
                 className="w-16 h-16 object-contain mb-2"
               />
               <p className="text-xs font-semibold text-center w-max">
@@ -79,6 +90,6 @@ const InnovationsCarousel = () => {
       </div>
     </div>
   );
-}
+};
 
-export default InnovationsCarousel
+export default InnovationsCarousel;

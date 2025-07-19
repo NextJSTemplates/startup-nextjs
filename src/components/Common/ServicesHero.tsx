@@ -78,10 +78,7 @@ export const Hero = ({
       <div className="relative z-10 container mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
           <div className="w-full">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+            <div
               className="mx-auto max-w-[900px] text-white"
             >
               {keywords && keywords.length > 0 && (
@@ -92,9 +89,9 @@ export const Hero = ({
                   className="mb-6 flex gap-3 text-[13.5px] font-bold tracking-widest uppercase"
                 >
                   {keywords.map((word, idx) => (
-                    <motion.span key={idx} variants={wordFadeUp}>
+                    <span key={idx}>
                       {word}
-                    </motion.span>
+                    </span>
                   ))}
                 </motion.div>
               )}
@@ -148,7 +145,7 @@ export const Hero = ({
                 className="flex flex-wrap gap-4"
               >
               </motion.div>
-            </motion.div>
+            </div>
           </div>
           {section}
         </div>

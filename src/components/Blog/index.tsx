@@ -19,9 +19,9 @@ const Blog = () => {
         {blogData.map((post, index) => (
           <div
             key={index}
-            className="group relative rounded-lg bg-neutral-50 p-4 border border-border/50"
+            className="group relative rounded-lg transition duration-300 hover:scale[1.1] shadow-sm overflow-clip"
           >
-            <div className="overflow-hidden rounded-lg">
+            <div className="overflow-hidden">
               <Image
                 className="h-full w-full transform object-cover transition-all duration-300 group-hover:scale-125"
                 src={post.image}
@@ -30,19 +30,21 @@ const Blog = () => {
                 height={100}
               />
             </div>
-            <div className="mt-6 flex justify-between">
-              <p className="text-sm font-normal text-muted-foreground">
-                {post.date}
+            <div className="p-4">
+              <div className="mt-6 flex justify-between">
+                <p className="text-sm font-normal text-muted-foreground">
+                  {post.date}
+                </p>
+                <ExternalLink className="h-4 w-4 text-primary" />
+              </div>
+              <p className="text-md mt-4 font-medium">
+                {post.title}
               </p>
-              <ExternalLink className="h-4 w-4 text-primary" />
+              <p className="mt-4 text-sm">{post.description}</p>
+              <a href={post.href} title={post.title}>
+                <span className="absolute inset-0" aria-hidden="true"></span>
+              </a>
             </div>
-            <p className="text-md mt-4 font-medium">
-              {post.title}
-            </p>
-            <p className="mt-4 text-sm">{post.description}</p>
-            <a href={post.href} title={post.title}>
-              <span className="absolute inset-0" aria-hidden="true"></span>
-            </a>
           </div>
         ))}
       </div>

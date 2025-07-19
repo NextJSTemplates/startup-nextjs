@@ -115,7 +115,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-foreground px-4 py-2 lg:flex dark:bg-neutral-950",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-background px-4 py-2 lg:flex dark:bg-neutral-950",
         className,
       )}
     >
@@ -131,7 +131,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-background transition duration-200 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-foreground transition duration-200 lg:flex lg:space-x-2",
         className
       )}
     >
@@ -147,12 +147,12 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             <Link
               onClick={onItemClick}
               href={item.link}
-              className="relative px-4 py-2 text-backgroud"
+              className="relative px-4 py-2"
             >
               {hovered === idx && (
                 <motion.div
                   layoutId="hovered"
-                  className="absolute inset-0 h-full w-full rounded-full border border-border/50"
+                  className="absolute inset-0 h-full w-full rounded-full bg-muted"
                 />
               )}
               <span className="relative z-20">{item.name}</span>
@@ -164,14 +164,14 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute left-1/2 top-full mt-4.5 -translate-x-1/2 whitespace-nowrap rounded-md bg-foreground shadow-lg dark:bg-neutral-900 z-50 min-w-3xl"
+                className="absolute left-1/2 top-full mt-4.5 -translate-x-1/2 whitespace-nowrap rounded-md bg-background shadow-lg dark:bg-neutral-900 z-50 max-w-md"
               >
                 <div className="p-3 grid-cols-3 w-fit">
                   {item.sublinks!.map((sub, subIdx) => (
                     <div key={`sub-${idx}-${subIdx}`}>
                       <Link
                         href={sub.link}
-                        className="block px-4 py-2 text-sm text-background cursor-pointer"
+                        className="block px-4 py-2 text-sm cursor-pointer"
                       >
                         {sub.name}
                       </Link>
@@ -273,7 +273,7 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
     return (
       <Link href="/" className="relative z-20 mr-4 flex items-center px-2 py-1">
         <Image
-          src="/images/logo/logo.svg"
+          src="/images/logo/logo-dark.svg"
           alt="logo"
           width={30}
           height={30}
@@ -286,7 +286,7 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
   return (
     <Link
       href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-semibold text-background"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-semibold"
     >
       <Image
         src="/images/logo/logo-dark.svg"

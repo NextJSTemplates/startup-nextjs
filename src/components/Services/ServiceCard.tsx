@@ -29,7 +29,7 @@ const ServiceCard = () => {
 
           <div
             key={index}
-            className="group relative flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-lg bg-neutral-50 border border-border/50 p-6 sm:min-w-[320px] overflow-hidden transition-all duration-300"
+            className="group relative flex min-w-[280px] shrink-0 snap-start flex-col justify-between rounded-lg border border-primary/50 p-6 sm:min-w-[320px] overflow-hidden transition-all duration-300 text-foreground/80 hover:shadow-[0_0_10px_rgba(13,148,136,0.4)]"
           >
             <div>
               <div className="mt-4 mb-10 flex items-center justify-start text-start gap-2">

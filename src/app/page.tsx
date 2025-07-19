@@ -4,8 +4,6 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Statistics from "@/components/Common/Statistics";
 import ContactUs, { steps } from "@/components/ContactUs";
 import { Hero } from "@/components/Hero";
-import { Scene } from "@/components/hero-section";
-import { NewHero } from "@/components/Hero/NewHero";
 import Industries from "@/components/Industries/Industries";
 import Services from "@/components/Services";
 import Technologies from "@/components/Technologies";
@@ -21,7 +19,7 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
-      <NewHero />
+      <Hero />
       <Brands />
       <Services />
       <Technologies />

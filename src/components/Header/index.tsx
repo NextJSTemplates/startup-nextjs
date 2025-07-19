@@ -56,7 +56,7 @@ const Header = () => {
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <Button className="border border-border/50 bg-foreground px-4 text-[13px] font-semibold text-background rounded-full">
+          <Button className="border border-border bg-background text-foreground px-4 text-[13px] font-semibold rounded-full">
             Contact Us
             <ExternalLink className="ml-1.5 h-4 w-4 text-primary" />
           </Button>
@@ -81,14 +81,14 @@ const Header = () => {
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="relative text-background"
+              className="relative text-foreground"
             >
               <span className="block">{item.name}</span>
             </a>
           ))}
           <div className="flex w-full flex-col gap-4">
             <Button
-              className="border border-border/50 bg-foreground px-4 text-[12px] font-semibold text-background"
+              className="border border-border bg-foreground px-4 text-[12px] font-semibold"
             >
               Contact Us
             </Button>

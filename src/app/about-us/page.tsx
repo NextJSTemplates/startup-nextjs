@@ -13,6 +13,7 @@ import Testimonials from './components/Testimonials';
 import Image from 'next/image';
 import { Quote } from 'lucide-react';
 import { heroStatsData } from './components/Statistics/data';
+import InnovationsCarousel from './components/InnovationCarousel';
 
 export const metadata: Metadata = {
   title: "About Us - EP365 Procurement System",
@@ -35,16 +36,6 @@ const AboutUsPage = () => {
         title="From Concept to Code: Experts in MVPs and Beyond"
         subtitle="Classy Endeavors is a software development and IT consulting company that was founded in 2007. Our company serves IT and non-IT organizations, helping to achieve a variety of goals and objectives with digital solutions and recent trend technologies."
         backgroundImage="/images/services/MVPBackground.svg"
-        section={(
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 bg-white p-6 rounded-lg max-w-lg justify-center items-center">
-            {heroStatsData.map((stat, index) => (
-              <div className="flex flex-col gap-2" key={index}>
-                <h1 className="text-2xl md:text-3xl font-medium">{stat.title}</h1>
-                <p className="text-sm font-medium">{stat.subtitle}</p>
-              </div>
-            ))}
-          </div>
-        )}
       />
       <Statistics />
       <MissionVision />
@@ -54,6 +45,7 @@ const AboutUsPage = () => {
       <OurValues />
       <Testimonials />
       <TeamOverview />
+      <InnovationsCarousel />
       <ContactUs content={(
         <div className="flex flex-col gap-4">
           <h1 className="font-medium text-xl">What our customers say</h1>

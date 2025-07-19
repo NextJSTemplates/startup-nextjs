@@ -3,6 +3,7 @@ import React from "react";
 import { statistics } from "./statisticsData";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Counter from "./Counter";
 
 const Statistics = () => {
   return (
@@ -14,9 +15,11 @@ const Statistics = () => {
             {statistics.map((stat, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-end aspect-video rounded-lg bg-white/5 backdrop-blur-sm p-6 transition relative"
+                className="flex flex-col justify-end aspect-video rounded-lg bg-white/12 backdrop-blur-sm p-6 transition relative"
               >
-                <h1 className="text-4xl md:text-5xl font-semibold mb-2">{stat.value}</h1>
+                <h1 className="text-4xl md:text-5xl font-semibold mb-2">
+                  <Counter target={stat.value} />
+                </h1>
                 <p className="text-background/70">{stat.label}</p>
               </div>
             ))}

@@ -13,7 +13,7 @@ const Statistics = () => {
               <div className="flex flex-col gap-4" key={index}>
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium">{stat.title}</h1>
                 <p className="text-sm font-medium">{stat.subtitle}</p>
-                <hr />
+                <hr className="border-t border-primary/70 py-2 md:py-4" />
                 <p className="text-foreground/80 text-[13px]">{stat.description}</p>
               </div>
             ))}

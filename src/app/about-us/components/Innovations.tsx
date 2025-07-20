@@ -17,7 +17,7 @@ const Innovations = () => {
             <Image
               src="/images/about/Vector (1).png"
               alt="Speaker"
-              className="w-full"
+              className="w-full lg:scale-[1.1] hover:scale-[1.15] transition duration-300"
               width={100}
               height={100}
               quality={100}
@@ -30,7 +30,7 @@ const Innovations = () => {
             <Image
               src="/images/about/Vector.png"
               alt="Team"
-              className="w-full"
+              className="w-full lg:scale-[1.1] hover:scale-[1.15] transition duration-300"
               width={100}
               height={100}
               quality={100}

@@ -52,7 +52,7 @@ export const Hero = ({
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden py-16 md:py-24 lg:py-32"
+      className="relative z-10 overflow-hidden pt-24 pb-16 md:pt-28 md:pb-24 lg:pt-42 lg:pb-28"
     >
       <Image
         src={backgroundImage}
@@ -68,9 +68,9 @@ export const Hero = ({
       {/* Stripes */}
       <div className="flex justify-end items-end">
         <div className="pointer-events-none absolute inset-0 z-10 flex justify-around pl-[50%]">
-          <div className="w-[12px] bg-white h-full" />
-          <div className="w-[12px] bg-white h-full" />
-          <div className="w-[12px] bg-white h-full" />
+          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full" />
+          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full" />
+          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full" />
         </div>
       </div>
 

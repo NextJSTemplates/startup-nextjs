@@ -30,7 +30,6 @@ export const FlipWords = ({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4 }}
-          // className="absolute w-full text-left"
         >
           {words[index]}
         </motion.div>

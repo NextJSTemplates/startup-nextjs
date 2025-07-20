@@ -10,7 +10,7 @@ export const Reviews = () => {
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
-          className="rounded-lg text-foreground/80 bg-neutral-50 border border-border/50 p-6"
+          className="rounded-lg text-foreground/80 border border-border p-6 transition duration-300 hover:shadow-[0_0_5px_rgba(13,148,136,0.4)]"
         >
           <p className="text-sm text-foreground/70 md:min-h-50">
             {testimonial.body}

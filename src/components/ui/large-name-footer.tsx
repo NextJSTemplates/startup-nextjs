@@ -6,7 +6,7 @@ import { TextHoverEffect } from "./text-hover-effect";
 export const Footer = () => {
   return (
     <footer className="bg-gradient-to-br bg-foreground px-8 pt-4 text-white">
-      <div className="container mx-auto max-w-7xl px-4 pt-12 pb-6 md:px-6">
+      <div className="container mx-auto max-w-8xl px-4 pt-12 pb-6 md:px-6">
         <div className="flex flex-col justify-between md:flex-row">
           <div className="mb-8 md:mb-0">
             <Link href="/" className="flex items-center gap-2">

@@ -28,7 +28,6 @@ export const Hero = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center text-center max-w-5xl">
-          {/* Hero title with fixed width container for FlipWords */}
           <div className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold">
             <div className="flex items-center justify-center gap-2 sm:gap-4">
               <span className="whitespace-nowrap">We Build</span>

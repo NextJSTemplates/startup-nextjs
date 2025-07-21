@@ -3,10 +3,10 @@ import ContactForm from "./ContactForm";
 import SectionTitle from "../Common/SectionTitle";
 
 export const steps = [
-  "Once we’ve received and processed your request, we’ll get back to you to detail your project needs and sign an NDA to ensure confidentiality.",
-  "After examining your wants, needs, and expectations, our team will devise a project proposal with the scope of work, team size, time, and cost estimates.",
-  "We’ll arrange a meeting with you to discuss the offer and nail down the details.",
-  "Finally, we’ll sign a contract and start working on your project right away.",
+  "Once we receive your request, we review your project and connect with you to clarify the basics. To protect your idea, we sign a Non-Disclosure Agreement (NDA).",
+  "We assess your goals, expectations, and technical needs. Based on this, we prepare a detailed proposal outlining the scope of work, estimated timeline, team structure, and pricing.",
+  "We schedule a meeting to walk through the proposal, address any questions, and finalize the approach to ensure everything aligns with your vision.",
+  " After mutual agreement, we sign the contract and immediately begin work—delivering efficient, high-quality results from day. By clicking Send, you consent to Classy Endeavors processing your personal data in accordance with our Privacy Policy. By providing your phone number, you agree that we may contact you via calls, SMS, or messaging apps",
 ];
 
 type ContactUsProps = {

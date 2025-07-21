@@ -19,7 +19,7 @@ export const industries = [
       "Empower learning with custom eLearning platforms, LMS solutions, and virtual classrooms. We build engaging and scalable education software tailored for institutions and edtech startups.",
     name: "Education",
     designation: "",
-    src: "/images/industries/education.svg",
+    src: "/images/industries/e-learning.jpeg",
     services: [
       "Custom eLearning Platforms",
       "LMS Solutions",
@@ -31,7 +31,7 @@ export const industries = [
       "From appointment scheduling to telemedicine and EHR systems, we build secure and compliant healthcare software to revolutionize patient care and streamline workflows.",
     name: "Healthcare",
     designation: "",
-    src: "/images/industries/health.svg",
+    src: "/images/industries/healthcare.webp",
     services: [
       "Appointment Scheduling",
       "Telemedicine",
@@ -43,7 +43,7 @@ export const industries = [
       "Leverage tech in real estate with dynamic listing platforms, virtual tours, CRM systems, and property management tools to drive smarter decisions and faster sales.",
     name: "Real Estate",
     designation: "",
-    src: "/images/industries/realestate.svg",
+    src: "/images/industries/real-estate.png",
     services: [
       "Listing Platforms",
       "Virtual Tours",
@@ -56,7 +56,7 @@ export const industries = [
       "Launch your NFT platform with seamless minting, wallet integration, and smart contract functionality. We help you build secure, scalable, and user-friendly NFT ecosystems.",
     name: "NFT",
     designation: "",
-    src: "/images/industries/nft.svg",
+    src: "/images/industries/nft.avif",
     services: [
       "Minting",
       "Wallet Integration",
@@ -68,7 +68,7 @@ export const industries = [
       "We develop feature-rich travel portals, booking engines, itinerary planners, and real-time tracking systems that redefine user travel experiences.",
     name: "Travel",
     designation: "",
-    src: "/images/industries/travel.svg",
+    src: "/images/industries/travel.jpg",
     services: [
       "Travel Portals",
       "Booking Engines",
@@ -81,7 +81,7 @@ export const industries = [
       "Build online food ordering, delivery management, and restaurant POS systems with smooth UI, live tracking, and integrations with popular platforms.",
     name: "Food",
     designation: "",
-    src: "/images/industries/food.svg",
+    src: "/images/industries/food.jpeg",
     services: [
       "Online Food Ordering",
       "Delivery Management",
@@ -93,7 +93,7 @@ export const industries = [
       "Deliver immersive entertainment through streaming platforms, media apps, and interactive experiences tailored for today’s digital audience.",
     name: "Entertainment",
     designation: "",
-    src: "/images/industries/entertainment.svg",
+    src: "/images/industries/entertainment.png",
     services: [
       "Streaming Platforms",
       "Media Apps",

@@ -1,24 +1,24 @@
 const blogPosts = [
   {
-    title: "AI Integration in SaaS: Key Trends for 2025",
-    date: "May 12, 2025",
-    image: "/images/blog/blog-1.avif",
-    href: "#",
-    description: "Explore how artificial intelligence is reshaping SaaS platforms with smarter automation, personalization, and analytics."
+    title: "Social Media App: from initial discussion to handover",
+    date: "Mar 9, 2025",
+    image: "/images/blog/blog1.webp",
+    href: "https://blog.classyendeavors.com/social-media-app-from-initial-discussion-to-handover-b81f5d03774f",
+    description: "Explore project lifecycle, from design to development"
   },
   {
-    title: "Designing Scalable Cloud Architectures in 2025",
-    date: "April 28, 2025",
-    image: "/images/blog/blog-2.avif",
-    href: "#",
-    description: "Dive into the latest strategies for building resilient and scalable cloud infrastructure for modern applications."
+    title: "The Importance of Design: A Comprehensive Exploration",
+    date: "Jan 14, 2025",
+    image: "/images/blog/blog2.webp",
+    href: "https://blog.classyendeavors.com/the-importance-of-design-a-comprehensive-exploration-23a822024bdf",
+    description: "What is Design and Why Does It Matter?"
   },
   {
-    title: "The Future of UI/UX: Microinteractions and Motion Design",
-    date: "March 15, 2025",
-    image: "/images/blog/blog-3.avif",
-    href: "#",
-    description: "Discover how microinteractions and motion design are elevating user experiences in next-gen web and mobile applications."
+    title: "Context Caching vs RAG: A Comprehensive Guide to Enhancing LLM Performance",
+    date: "Jan 4, 2025",
+    image: "/images/blog/blog3.webp",
+    href: "https://blog.classyendeavors.com/context-caching-vs-rag-a-comprehensive-guide-to-enhancing-llm-performance-dbf7470c99b1",
+    description: "Understanding Context Caching and Retrieval-Augmented Generation (RAG)"
   }
 ];
 

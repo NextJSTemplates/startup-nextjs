@@ -4,6 +4,7 @@ import blogData from "./blogData";
 import Image from "next/image";
 import SectionTitle from "@/components/Common/SectionTitle";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Blog = () => {
   return (
@@ -21,13 +22,13 @@ const Blog = () => {
             key={index}
             className="group relative rounded-lg transition duration-300 hover:scale[1.1] shadow-sm overflow-clip"
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden relative h-48 w-full">
               <Image
-                className="h-full w-full transform object-cover transition-all duration-300 group-hover:scale-125"
+                className="transform object-cover transition-all duration-300 group-hover:scale-125"
                 src={post.image}
                 alt={post.title}
-                width={100}
-                height={100}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="p-4">
@@ -41,19 +42,19 @@ const Blog = () => {
                 {post.title}
               </p>
               <p className="mt-4 text-sm">{post.description}</p>
-              <a href={post.href} title={post.title}>
+              <Link href={post.href} target="_blank" title={post.title}>
                 <span className="absolute inset-0" aria-hidden="true"></span>
-              </a>
+              </Link>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mx-auto max-w-md text-center mt-12">
-        <Button className="rounded-none bg-transparent border-b-2 border-primary hover:bg-transparent shadow-none hover:scale-[1.1] transition duration-200 cursor-pointer text-primary">
+      <div className="mx-auto max-w-md flex justify-center items-center text-center mt-12">
+        <Link href="https://blog.classyendeavors.com/" target="_blank" className="rounded-none bg-transparent border-b-2 border-primary hover:bg-transparent shadow-none hover:scale-[1.1] transition duration-200 cursor-pointer text-primary flex w-fit">
           View More
           <ArrowRight className="w-4 h-4" />
-        </Button>
+        </Link>
       </div>
     </section>
   );

@@ -2,13 +2,13 @@ import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
 import { Bot, Brain, Clock } from "lucide-react";
-import Statistics from "@/components/Common/Statistics";
 import Services from "./components/Services";
 import Industries from "@/components/Common/Industries/Industries";
 import Banner from "@/components/Common/Banner";
 import { softwareDevFeatures } from "@/components/Common/ServiceFeatures/data";
 import ServiceFeatures from "@/components/Common/ServiceFeatures/ServiceFeatures";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";
+import Statistics from "@/app/(home)/components/Statistics";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",

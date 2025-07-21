@@ -6,9 +6,9 @@ import Services from "./components/Services/Services";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
 import { cloudData } from "@/components/Common/WhyUs/whyUsData";
 import TechStack from "./components/TechStack/TechStack";
-import Brands from "@/components/Brands";
 import DvtProcesses from "@/components/Common/DvtProcesses";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";
+import Brands from "@/app/(home)/components/Brands";
 
 export const metadata: Metadata = {
   title: "Services - Cloud Computing",

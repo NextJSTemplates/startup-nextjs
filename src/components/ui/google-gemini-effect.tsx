@@ -21,7 +21,7 @@ const GoogleGeminiEffect = ({
       <div className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold">
         <div className="flex items-center justify-center gap-2 sm:gap-4">
           <span className="whitespace-nowrap">We Build</span>
-          <div className="w-32 sm:w-40 md:w-48 lg:w-56 flex justify-center">
+          <div className="w-32 sm:w-40 md:w-48 lg:w-58 flex justify-center">
             <FlipWords words={words} className="font-bold" />
           </div>
           <span className="whitespace-nowrap">Software</span>
@@ -32,7 +32,7 @@ const GoogleGeminiEffect = ({
           `Certified software experts blending precision and creativity to deliver powerful, affordable solutions tailored to your business. End-to-end development, seamless integration, and ongoing support — all at unmatched value.`}
       </p>
       <div className="w-full h-[890px] -top-60 md:-top-35 flex items-center justify-center bg-red-transparent absolute ">
-        <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
+        <button className="font-semibold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
           Contact Us
         </button>
       </div>

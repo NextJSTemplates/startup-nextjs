@@ -2,15 +2,14 @@ import React from "react";
 
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
-import { ExternalLink } from "lucide-react";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
 import { mvpData } from "@/components/Common/WhyUs/whyUsData";
 import AboutUs from "./components/About";
 import Features from "./components/Features/Features";
 import HowWeWork from "./components/HowWeWork";
 import Banner from "@/components/Common/Banner";
-import Brands from "@/components/Brands";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";
+import Brands from "@/app/(home)/components/Brands";
 
 export const metadata: Metadata = {
   title: "Services - Mvp Development",

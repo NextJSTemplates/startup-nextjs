@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
 import Image from "next/image";
 import { technologies } from "./technologiesData";
+import SectionTitle from "@/components/Common/SectionTitle";
 
 const Technologies = () => {
   const [activeTab, setActiveTab] = useState(technologies[0].title);

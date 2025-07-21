@@ -1,9 +1,9 @@
 "use client";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import SectionTitle from "../Common/SectionTitle";
 import blogData from "./blogData";
-import { Button } from "../ui/button";
 import Image from "next/image";
+import SectionTitle from "@/components/Common/SectionTitle";
+import { Button } from "@/components/ui/button";
 
 const Blog = () => {
   return (

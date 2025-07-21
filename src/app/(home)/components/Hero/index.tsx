@@ -1,9 +1,9 @@
 "use client";
+import GoogleGeminiEffect from "@/components/ui/google-gemini-effect";
 import { useScroll, useTransform } from "motion/react";
 import React from "react";
-import GoogleGeminiEffect from "../ui/google-gemini-effect";
 
-const NewHero = () => {
+const Hero = () => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -34,4 +34,4 @@ const NewHero = () => {
   );
 }
 
-export default NewHero
+export default Hero

@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { motion, MotionValue } from "motion/react";
 import React from "react";
 import { FlipWords } from "./flip-words";
-import CircularBackground from "../Hero/CircularBackground";
+import CircularBackground from "@/app/(home)/components/Hero/CircularBackground";
 
 const words = ["Scalable", "Secure", "Smarter"];
 const GoogleGeminiEffect = ({

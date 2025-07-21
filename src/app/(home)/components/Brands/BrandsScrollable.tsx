@@ -1,7 +1,7 @@
 import Image from "next/image";
 import brandsData from "./brandsData";
 import { Brand } from "@/types";
-import { Marquee } from "../magicui/marquee";
+import { Marquee } from "@/components/magicui/marquee";
 
 const BrandsScrollable = () => {
 

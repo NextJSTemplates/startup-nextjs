@@ -1,4 +1,4 @@
-import SectionTitle from "../Common/SectionTitle";
+import SectionTitle from "@/components/Common/SectionTitle";
 import { Reviews } from "./Testimonials";
 
 const Testimonials = () => {

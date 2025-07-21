@@ -1,14 +1,17 @@
-import Blog from "@/components/Blog";
-import Brands from "@/components/Brands";
+
 import ScrollUp from "@/components/Common/ScrollUp";
-import Statistics from "@/components/Common/Statistics";
+
 import ContactUs, { steps } from "@/components/ContactUs";
-import NewHero from "@/components/Hero";
-import Industries from "@/components/Industries/Industries";
-import Services from "@/components/Services";
-import Technologies from "@/components/Technologies";
-import Testimonials from "@/components/Testimonials";
+
 import { Metadata } from "next";
+import Hero from "./(home)/components/Hero";
+import Brands from "./(home)/components/Brands";
+import Services from "./(home)/components/Services";
+import Technologies from "./(home)/components/Technologies";
+import Industries from "./(home)/components/Industries/Industries";
+import Statistics from "./(home)/components/Statistics";
+import Testimonials from "./(home)/components/Testimonials";
+import Blog from "./(home)/components/Blog";
 
 export const metadata: Metadata = {
   title: "Classy Endeavours",
@@ -19,7 +22,7 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
-      <NewHero />
+      <Hero />
       <Brands />
       <Services />
       <Technologies />

@@ -5,7 +5,7 @@ const MissionVision = () => {
   return (
     <section
       id="services"
-      className="relative z-10 mt-20 bg-[url('/images/services/MissionVisionBackground.svg')] bg-cover bg-center bg-fixed"
+      className="relative overflow-hidden z-10 mt-20 bg-[url('/images/services/MissionVisionBackground.svg')] bg-cover bg-center bg-fixed"
     >
       <div className="relative container mx-auto max-w-7xl py-32 px-6 text-white">
         <div className="flex flex-col items-start justify-center">

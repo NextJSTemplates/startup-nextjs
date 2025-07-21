@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Innovations = () => {
   return (
-    <section className="relative z-10 pt-20 px-6">
+    <section className="relative overflow-hidden z-10 pt-20 px-6">
       <div className="bg-gradient-to-b from-black to-gray-900 text-white max-w-7xl mx-auto py-20 px-6 rounded-lg flex flex-col justify-center items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-24">
           <div className="space-y-6 flex flex-col justify-center">

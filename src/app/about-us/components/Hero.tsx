@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
 import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 
 const staggerWords = {
@@ -14,15 +14,6 @@ const staggerWords = {
     transition: {
       staggerChildren: 0.25,
     },
-  },
-};
-
-const wordFadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.3, ease: "easeOut" },
   },
 };
 
@@ -39,7 +30,7 @@ type HeroProps = {
   section?: React.ReactElement
 };
 
-export const Hero = ({
+const Hero = ({
   title,
   titleStyles,
   subtitle,
@@ -64,8 +55,22 @@ export const Hero = ({
       />
       <div className="pointer-events-none absolute inset-0 flex items-end justify-end [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
 
+      <div className="flex justify-end items-end hidden md:block">
+        <div className="pointer-events-none absolute inset-0 z-10 flex justify-around pl-[50%]">
+          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full rounded-lg opacity-80" style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)'
+          }} />
+          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full rounded-lg opacity-80" style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)'
+          }} />
+          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full rounded-lg opacity-80" style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)'
+          }} />
+        </div>
+      </div>
+
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
-      <div className="relative z-10 container mx-auto max-w-7xl px-6">
+      <div className="relative z-20 container mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
           <div className="w-full">
             <div
@@ -143,3 +148,5 @@ export const Hero = ({
     </section>
   );
 };
+
+export default Hero

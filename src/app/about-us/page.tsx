@@ -1,4 +1,3 @@
-import { Hero } from '@/components/Common/ServicesHero';
 import { Metadata } from 'next';
 import React from 'react'
 import Statistics from './components/Statistics';
@@ -11,6 +10,7 @@ import Innovations from './components/Innovations';
 import Testimonials from './components/Testimonials';
 import Image from 'next/image';
 import { Quote } from 'lucide-react';
+import Hero from './components/Hero';
 
 export const metadata: Metadata = {
   title: "About Us - EP365 Procurement System",

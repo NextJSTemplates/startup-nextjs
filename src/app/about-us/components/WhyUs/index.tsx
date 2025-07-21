@@ -4,7 +4,7 @@ import SectionTitle from '@/components/Common/SectionTitle';
 
 const WhyUs = () => {
   return (
-    <section className="relative z-10 pt-20">
+    <section className="relative overflow-hidden z-10 pt-20">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-center">
           <SectionTitle title="Why Us" className="text-2xl md:text-3xl mb-12" />

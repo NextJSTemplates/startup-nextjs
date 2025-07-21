@@ -33,7 +33,7 @@ const values = [
 
 const OurValues = () => {
   return (
-    <section id="services" className="relative z-10 pt-20">
+    <section id="services" className="relative overflow-hidden z-10 pt-20">
       <div className="container px-6">
         <div className="flex flex-col items-center justify-center">
           <SectionTitle title="Our Values" className="text-2xl md:text-3xl mb-12" />

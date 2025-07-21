@@ -1,9 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
-import { ExternalLink } from "lucide-react";
 import Services from "./components/Services";
-import { teamMembers } from "@/components/Hero/heroData";
 import Tools from "./components/Tools";
 import Banner from "@/components/Common/Banner";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";

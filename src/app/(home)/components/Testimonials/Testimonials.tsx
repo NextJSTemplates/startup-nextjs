@@ -10,19 +10,12 @@ export const Reviews = () => {
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
-          className="rounded-lg text-foreground/80 border border-border p-6 transition duration-300 hover:shadow-[0_0_5px_rgba(13,148,136,0.4)]"
+          className="rounded-lg text-foreground/80 border border-border p-6 transition duration-300 hover:border-primary"
         >
           <p className="text-sm text-foreground/70 md:min-h-50 lg:min-h-70">
             {testimonial.body}
           </p>
           <div className="mt-2 flex items-center gap-2">
-            <Image
-              src={testimonial.img}
-              alt={testimonial.name}
-              width={14}
-              height={14}
-              className="w-12 h-12 rounded-full"
-            />
             <div className="flex flex-col">
             <span className="text-sm font-medium">{testimonial.name}</span>
             <span className="text-xs">{testimonial.description}</span>

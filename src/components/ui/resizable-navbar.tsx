@@ -149,13 +149,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               href={item.link}
               className="relative px-4 py-2"
             >
-              {hovered === idx && (
-                <motion.div
-                  layoutId="hovered"
-                  className="absolute inset-0 h-full w-full rounded-full bg-muted"
-                />
-              )}
-              <span className="relative z-20">{item.name}</span>
+              <span className="relative z-20 hover:text-primary transition duration-200">{item.name}</span>
             </Link>
 
             {hasSublinks && hovered === idx && (

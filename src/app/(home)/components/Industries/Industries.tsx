@@ -16,9 +16,9 @@ const Industries = () => {
           <button
             key={index}
             onClick={() => setActiveTab(industry.name)}
-            className={`text-base font-medium p-4 border-b-2 ${activeTab === industry.name
+            className={`text-base font-medium p-4 border-b-2 cursor-pointer ${activeTab === industry.name
               ? "border-primary text-black"
-              : "border-transparent text-muted-foreground hover:text-black"
+              : "border-transparent text-muted-foreground hover:text-primary"
               }`}
           >
             {industry.name}

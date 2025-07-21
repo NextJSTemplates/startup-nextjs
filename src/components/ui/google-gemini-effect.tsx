@@ -4,6 +4,8 @@ import { motion, MotionValue } from "motion/react";
 import React from "react";
 import { FlipWords } from "./flip-words";
 import CircularBackground from "@/app/(home)/components/Hero/CircularBackground";
+import { Button } from "./moving-border";
+import Link from "next/link";
 
 const words = ["Scalable", "Secure", "Smarter"];
 const GoogleGeminiEffect = ({
@@ -31,10 +33,14 @@ const GoogleGeminiEffect = ({
         {description ||
           `Certified software experts blending precision and creativity to deliver powerful, affordable solutions tailored to your business. End-to-end development, seamless integration, and ongoing support — all at unmatched value.`}
       </p>
-      <div className="w-full h-[890px] -top-60 md:-top-35 flex items-center justify-center bg-red-transparent absolute ">
-        <button className="font-semibold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
-          Contact Us
-        </button>
+      <div className="w-full h-[890px] -top-60 md:-top-23 flex items-center justify-center bg-red-transparent absolute">
+        <Button
+          borderRadius="1.75rem"
+          asChild
+          className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-base text-xs font-semibold rounded-full md:px-4 md:py-2 w-full"
+        >
+          <Link href="#contact">Lets Bring Your Ideas to Action</Link>
+        </Button>
       </div>
       <svg
         width="1440"
@@ -164,7 +170,6 @@ const GoogleGeminiEffect = ({
           pathLength={1}
           filter="url(#blurMe)"
         />
-
         <defs>
           <filter id="blurMe">
             <feGaussianBlur in="SourceGraphic" stdDeviation="5" />

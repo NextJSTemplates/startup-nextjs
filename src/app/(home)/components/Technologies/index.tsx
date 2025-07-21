@@ -16,9 +16,9 @@ const Technologies = () => {
           <button
             key={card.title}
             onClick={() => setActiveTab(card.title)}
-            className={`text-base font-medium p-4 border-b-2 ${activeTab === card.title
+            className={`text-base font-medium p-4 border-b-2 cursor-pointer ${activeTab === card.title
               ? "border-primary text-black"
-              : "border-transparent text-muted-foreground"
+              : "border-transparent text-muted-foreground hover:text-primary"
               }`}
           >
             {card.title}

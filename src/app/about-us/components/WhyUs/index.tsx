@@ -13,8 +13,10 @@ const WhyUs = () => {
               const Icon = item.icon;
               return (
                 <div className="flex flex-col gap-4 md:gap-6" key={index}>
-                  <Icon className="size-6" />
-                  <p className="text-base font-medium">{item.title}</p>
+                  <div className="flex gap-2 hover:text-primary transition duration-200 cursor-pointer">
+                    <Icon className="size-6" />
+                    <p className="text-base font-medium">{item.title}</p>
+                  </div>
                   <p className="text-[13px] text-foreground/80">{item.description}</p>
                 </div>
               )

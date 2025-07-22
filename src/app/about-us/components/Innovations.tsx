@@ -33,8 +33,8 @@ const Innovations = () => {
               src="/images/about/Vector.png"
               alt="Speaker"
               className="w-full lg:scale-[1.1] hover:scale-[1.15] transition duration-300"
-              width={400}  // Increased from 100
-              height={400} // Increased from 100
+              width={400} 
+              height={400} 
               quality={100}
               priority
             />

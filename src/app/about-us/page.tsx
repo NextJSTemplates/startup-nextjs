@@ -29,11 +29,7 @@ export const metadata: Metadata = {
 const AboutUsPage = () => {
   return (
     <>
-      <Hero
-        title="From Concept to Code: Experts in MVPs and Beyond"
-        subtitle="Classy Endeavors is a software development and IT consulting company that was founded in 2007. Our company serves IT and non-IT organizations, helping to achieve a variety of goals and objectives with digital solutions and recent trend technologies."
-        backgroundImage="/images/services/MVPBackground.svg"
-      />
+      <Hero />
       <Statistics />
       <MissionVision />
       <WhyUs />

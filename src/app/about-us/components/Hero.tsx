@@ -1,151 +1,58 @@
-"use client";
+import { Cpu, ShieldCheck, Layers, Zap } from "lucide-react";
+import { Scene } from "@/components/hero-section";
+import { Button } from "@/components/ui/moving-border";
+import Link from "next/link";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import React from "react";
-import { cn } from "@/lib/utils";
-import { ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-
-const staggerWords = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.25,
-    },
+const features = [
+  {
+    icon: Cpu,
+    title: "Performance",
+    description: "Ultra-fast data processing in every situation.",
   },
-};
+  {
+    icon: ShieldCheck,
+    title: "Security",
+    description: "Advanced protection for complete peace of mind.",
+  },
+  {
+    icon: Layers,
+    title: "Modularity",
+    description: "Easy integration with existing architecture.",
+  },
+  {
+    icon: Zap,
+    title: "Responsiveness",
+    description: "Instant response to every command.",
+  },
 
-type HeroProps = {
-  title: string;
-  titleStyles?: string;
-  subtitle: string;
-  backgroundImage: string;
-  keywords?: string[];
-  services?: {
-    label: string;
-    icon: React.ReactNode;
-  }[];
-  section?: React.ReactElement
-};
+];
 
-const Hero = ({
-  title,
-  titleStyles,
-  subtitle,
-  backgroundImage,
-  keywords,
-  services,
-  section
-}: HeroProps) => {
-
+const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative z-10 overflow-hidden pt-24 pb-16 md:pt-28 md:pb-24 lg:pt-42 lg:pb-28"
-    >
-      <Image
-        src={backgroundImage}
-        alt="Tech Background"
-        layout="fill"
-        objectFit="cover"
-        quality={90}
-        className="absolute inset-0 z-0"
-      />
-      <div className="pointer-events-none absolute inset-0 flex items-end justify-end [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
-
-      <div className="flex justify-end items-end hidden md:block">
-        <div className="pointer-events-none absolute inset-0 z-10 flex justify-around pl-[50%]">
-          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full rounded-lg opacity-80" style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)'
-          }} />
-          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full rounded-lg opacity-80" style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)'
-          }} />
-          <div className="w-[6px] md:w-[8px] lg:w-[10px] bg-white h-full rounded-lg opacity-80" style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)'
-          }} />
-        </div>
-      </div>
-
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
-      <div className="relative z-20 container mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
-          <div className="w-full">
-            <div
-              className="mx-auto max-w-[900px] text-white"
+    <div className="min-h-svh bg-linear-to-br from-[#000] to-[#1A2428] text-white flex flex-col items-center justify-center p-8">
+      <div className="w-full max-w-6xl space-y-12 relative z-10">
+        <div className="flex flex-col items-center text-center space-y-8">
+          <div className="space-y-6 flex items-center justify-center flex-col ">
+            <h1 className="text-3xl md:text-6xl font-semibold tracking-tight max-w-3xl">
+              Driven by Innovation. Defined by Integrity
+            </h1>
+            <p className="text-sm md:text-base text-neutral-300 max-w-2xl">
+              At Classy Endeavors, we're more than a software development agency — we're your strategic technology partner. With a passionate team of designers, developers, and engineers, we craft scalable, user-focused solutions that align with your business goals. From idea to execution, we commit to transparency, quality, and long-term impact
+            </p>
+            <Button
+              borderRadius="1.75rem"
+              asChild
+              className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-base text-xs font-semibold rounded-full md:px-4 md:py-2 w-full"
             >
-              {keywords && keywords.length > 0 && (
-                <motion.div
-                  variants={staggerWords}
-                  initial="hidden"
-                  whileInView="visible"
-                  className="mb-6 flex gap-3 text-[13.5px] font-bold tracking-widest uppercase"
-                >
-                  {keywords.map((word, idx) => (
-                    <span key={idx}>
-                      {word}
-                    </span>
-                  ))}
-                </motion.div>
-              )}
-              <motion.h1
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className={cn("mb-6 max-w-2xl text-3xl leading-tight font-semibold md:text-4xl", titleStyles)}
-              >
-                {title}
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="mb-8 w-full max-w-sm text-sm md:max-w-md lg:max-w-xl"
-              >
-                {subtitle}
-              </motion.p>
-              <Button className="bg-white rounded-full text-black p-6">Get Started
-                <span>
-                  <ExternalLink className="size-4" />
-                </span>
-              </Button>
-              <div className="mb-8">
-                {services?.map((item, index) => {
-                  return (
-                    <motion.div
-                      key={index}
-                      className="mb-2 flex items-start justify-start gap-2 text-sm"
-                    >
-                      {item.icon}
-                      <p className="mt-1 font-medium">{item.label}</p>
-                    </motion.div>
-                  );
-                })}
-              </div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                variants={{
-                  hidden: {},
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.15,
-                      delayChildren: 0.6,
-                    },
-                  },
-                }}
-                className="flex flex-wrap gap-4"
-              >
-              </motion.div>
-            </div>
+              <Link href="#contact">Let&apos;s Bring Your Ideas to Action</Link>
+            </Button>
           </div>
-          {section}
         </div>
       </div>
-    </section>
+      <div className='absolute inset-0'>
+        <Scene />
+      </div>
+    </div>
   );
 };
 

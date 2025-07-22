@@ -39,7 +39,7 @@ const GoogleGeminiEffect = ({
           asChild
           className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-base text-xs font-semibold rounded-full md:px-4 md:py-2 w-full"
         >
-          <Link href="#contact">Lets Bring Your Ideas to Action</Link>
+          <Link href="#contact">Let&apos;s Bring Your Ideas to Action</Link>
         </Button>
       </div>
       <svg

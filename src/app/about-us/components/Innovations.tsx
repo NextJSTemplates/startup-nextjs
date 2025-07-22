@@ -11,7 +11,7 @@ const Innovations = () => {
               Empowering Your Business <br /> with Smarter AI Solutions
             </h1>
             <p className="max-w-md text-sm">
-              At Classy Endeavors, we deliver advanced AI services tailored to your business needs—ranging from machine learning and natural language processing to computer vision and intelligent automation. Whether you're looking to enhance customer experiences, automate complex workflows, or gain predictive insights, our AI experts craft scalable, secure, and high-performance solutions.
+              At Classy Endeavors, we deliver advanced AI services tailored to your business needs—ranging from machine learning and natural language processing to computer vision and intelligent automation. Whether you&apos;re looking to enhance customer experiences, automate complex workflows, or gain predictive insights, our AI experts craft scalable, secure, and high-performance solutions.
               We also leverage AI internally to streamline development, boost accuracy, and reduce time to market—ensuring faster, more cost-effective project delivery for our clients      </p>
           </div>
           <div className="flex justify-start">

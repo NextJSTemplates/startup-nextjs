@@ -37,7 +37,7 @@ const Hero = () => {
               Driven by Innovation. Defined by Integrity
             </h1>
             <p className="text-sm md:text-base text-neutral-300 max-w-2xl">
-              At Classy Endeavors, we're more than a software development agency — we're your strategic technology partner. With a passionate team of designers, developers, and engineers, we craft scalable, user-focused solutions that align with your business goals. From idea to execution, we commit to transparency, quality, and long-term impact
+              At Classy Endeavors, we&apos;re more than a software development agency — we&apos;re your strategic technology partner. With a passionate team of designers, developers, and engineers, we craft scalable, user-focused solutions that align with your business goals. From idea to execution, we commit to transparency, quality, and long-term impact
             </p>
             <Button
               borderRadius="1.75rem"

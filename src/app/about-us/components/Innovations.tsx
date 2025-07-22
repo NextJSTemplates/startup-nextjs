@@ -44,7 +44,7 @@ const Innovations = () => {
               Expert-Led Innovation, Powered by Collaboration
             </h2>
             <p className="max-w-sm text-sm">
-              At Classy Endeavors, our AI and ML engineers bring together diverse skills and a shared passion for advancing language AI. United by purpose, we’re focused on delivering cutting-edge innovations that help developers build meaningful solutions.          </p>
+              At Classy Endeavors, our AI and ML engineers bring together diverse skills and a shared passion for advancing language AI. United by purpose, we&apos;re focused on delivering cutting-edge innovations that help developers build meaningful solutions.          </p>
             <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200">
               Let&apos;s Talk →
             </button>

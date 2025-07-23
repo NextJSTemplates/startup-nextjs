@@ -30,7 +30,7 @@ const Challenges = () => {
               const Icon = challenge.icon;
               return (
                 <div className="flex flex-col gap-2" key={index}>
-                  <div className="flex gap-2 justify-start items-center transition duration-300">
+                  <div className="flex gap-2 justify-start items-center transition duration-300 hover:text-primary cursor-pointer">
                     <Icon className="size-4.5" />
                     <h1 className="text-base font-medium">{challenge.title}</h1>
                   </div>

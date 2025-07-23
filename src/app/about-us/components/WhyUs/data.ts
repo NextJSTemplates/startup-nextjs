@@ -4,7 +4,8 @@ export const whyUsData = [
   {
     icon: CheckCircle,
     title: "Result-oriented",
-    description: "For our company, the only indicator of the project’s success is the achievement of the goals and objectives set by the client. Due to high-quality project management and a team of IT talents, we carry out our work as quickly and efficiently as possible."
+    description: "For our company, the only indicator of the project’s success is the achievement of the goals and objectives set by the client. Due to high-quality project management and a team of IT talents, we carry out our work as quickly and efficiently as possible.",
+    
   },
   {
     icon: Route,

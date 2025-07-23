@@ -21,7 +21,6 @@ const Innovations = () => {
             </div>
           </div>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-24 items-center mt-12">
           <div className="w-full aspect-video relative rounded-lg overflow-hidden flex justify-start order-2 md:order-1">
             <div className="w-full h-full">

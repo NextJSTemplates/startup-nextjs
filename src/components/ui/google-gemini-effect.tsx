@@ -33,7 +33,7 @@ const GoogleGeminiEffect = ({
         {description ||
           `Certified software experts blending precision and creativity to deliver powerful, affordable solutions tailored to your business. End-to-end development, seamless integration, and ongoing support — all at unmatched value.`}
       </p>
-      <div className="w-full h-[890px] -top-55 md:-top-23 flex items-center justify-center bg-red-transparent absolute">
+      <div className="w-full h-[890px] -top-55 sm:-top-50 md:-top-30 lg:-top-23 flex items-center justify-center bg-red-transparent absolute">
         <Button
           borderRadius="1.75rem"
           asChild

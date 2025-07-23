@@ -15,7 +15,7 @@ export const Footer = () => {
                 alt="logo"
                 width={320}
                 height={320}
-                className="w-80"
+                className="w-50 lg:w-60"
               />
             </Link>
             <p className="mt-2 text-sm">

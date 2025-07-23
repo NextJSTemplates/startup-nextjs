@@ -1,6 +1,9 @@
+"use client"
+
 import React from 'react'
 import { whyUsData } from './data'
 import SectionTitle from '@/components/Common/SectionTitle';
+import { HoverEffect } from '@/components/ui/card-hover-effect';
 
 const WhyUs = () => {
   return (
@@ -8,7 +11,7 @@ const WhyUs = () => {
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-center">
           <SectionTitle title="Why Us" className="text-2xl md:text-3xl mb-12" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {whyUsData.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -21,7 +24,8 @@ const WhyUs = () => {
                 </div>
               )
             })}
-          </div>
+          </div> */}
+          <HoverEffect items={whyUsData} />
         </div>
       </div>
     </section>

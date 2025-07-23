@@ -1,24 +1,28 @@
 import SectionTitle from '@/components/Common/SectionTitle'
-import { DollarSign, Info } from 'lucide-react'
 import React from 'react'
+import { UserCog, DollarSign, RefreshCcw } from "lucide-react";
 
 const challenges = [
   {
     title: "IT expertise gap",
-    icon: Info,
-    description: "We help our customers get rid of expertise and technological gaps, offering the experienced teams of IT professionals  to complete software development projects of any complexity."
+    icon: UserCog, 
+    description:
+      "We help our customers get rid of expertise and technological gaps, offering the experienced teams of IT professionals to complete software development projects of any complexity.",
   },
   {
     title: "Cost reduction",
     icon: DollarSign,
-    description: "Classy Endeavors provides IT outsourcing services and helps clients around the world to optimize software development costs. Our team has all the needed expertise to carry out turnkey projects, quickly complete tasks and bring all the benefits of outsourcing."
+    description:
+      "Classy Endeavors provides IT outsourcing services and helps clients around the world to optimize software development costs. Our team has all the needed expertise to carry out turnkey projects, quickly complete tasks and bring all the benefits of outsourcing.",
   },
   {
     title: "Digital transformation",
-    icon: Info,
-    description: "Our team can help you plan and implement digital transformation initiatives, covering all possible stages. Classy Endeavors is a reliable partner on the path to digital success and business optimization."
-  }
-]
+    icon: RefreshCcw,
+    description:
+      "Our team can help you plan and implement digital transformation initiatives, covering all possible stages. Classy Endeavors is a reliable partner on the path to digital success and business optimization.",
+  },
+];
+
 const Challenges = () => {
   return (
     <section className="relative overflow-hidden z-10 pt-20">

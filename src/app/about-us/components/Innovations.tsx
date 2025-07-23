@@ -5,17 +5,15 @@ const Innovations = () => {
   return (
     <section className="relative overflow-hidden z-10 pt-20 px-6">
       <div className="bg-gradient-to-b from-black to-gray-900 text-white max-w-7xl mx-auto py-20 px-6 rounded-lg flex flex-col justify-center items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-center lg:gap-24">
           <div className="space-y-6 flex flex-col justify-center max-w-md mx-auto">
             <h1 className="text-3xl md:text-4xl font-medium leading-tight">
               Empowering Your Business <br /> with Smarter AI Solutions
             </h1>
             <p className="text-sm">
-              At Classy Endeavors, we deliver advanced AI services tailored to your business needs—ranging from machine learning and natural language processing to computer vision and intelligent automation. Whether you&apos;re looking to enhance customer experiences, automate complex workflows, or gain predictive insights, our AI experts craft scalable, secure, and high-performance solutions.
-              We also leverage AI internally to streamline development, boost accuracy, and reduce time to market—ensuring faster, more cost-effective project delivery for our clients.     </p>
+              Classy Endeavors provides customized AI solutions—including machine learning, NLP, computer vision, and automation—to help businesses improve customer experiences, automate tasks, and gain insights. They also use AI internally to speed up development, increase accuracy, and deliver projects faster and more cost-effectively. </p>
           </div>
-
-          <div className="w-full aspect-video relative rounded-lg overflow-hidden">
+          <div className="w-full  h-full relative rounded-lg overflow-hidden">
             <div className="w-full h-full">
               <Image fill src="/images/about/AI_CE.avif" alt="image" className="object-cover" />
             </div>

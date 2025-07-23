@@ -22,7 +22,7 @@ const GoogleGeminiEffect = ({
       <CircularBackground />
       <div className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold">
         <div className="flex items-center justify-center gap-2 sm:gap-4">
-          <span className="whitespace-nowrap">We Build</span>
+          <span className="whitespace-nowrap">We Build </span>
           <div className="w-32 sm:w-40 md:w-48 lg:w-58 flex justify-center">
             <FlipWords words={words} className="font-bold" />
           </div>
@@ -33,13 +33,15 @@ const GoogleGeminiEffect = ({
         {description ||
           `Certified software experts blending precision and creativity to deliver powerful, affordable solutions tailored to your business. End-to-end development, seamless integration, and ongoing support — all at unmatched value.`}
       </p>
-      <div className="w-full h-[890px] -top-60 md:-top-23 flex items-center justify-center bg-red-transparent absolute">
+      <div className="w-full h-[890px] -top-55 md:-top-23 flex items-center justify-center bg-red-transparent absolute">
         <Button
           borderRadius="1.75rem"
           asChild
           className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-base text-xs font-semibold rounded-full md:px-4 md:py-2 w-full"
         >
-          <Link href="#contact">Let&apos;s Bring Your Ideas to Action</Link>
+          <Link href="#contact">
+            <span className="mx-2">Let&apos;s Bring Your Ideas to Action</span>
+          </Link>
         </Button>
       </div>
       <svg

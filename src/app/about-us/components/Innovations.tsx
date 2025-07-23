@@ -14,8 +14,8 @@ const Innovations = () => {
               Classy Endeavors provides customized AI solutions—including machine learning, NLP, computer vision, and automation—to help businesses improve customer experiences, automate tasks, and gain insights. They also use AI internally to speed up development, increase accuracy, and deliver projects faster and more cost-effectively. </p>
           </div>
           <div className="w-full  h-full relative rounded-lg overflow-hidden">
-            <div className="w-full h-full">
-              <Image fill src="/images/about/AI_CE.avif" alt="image" className="object-cover" />
+            <div className="w-full md:h-full aspect-square">
+              <Image fill src="/images/about/AI_CE_3.avif" alt="image" className="object-cover" />
             </div>
           </div>
         </div>

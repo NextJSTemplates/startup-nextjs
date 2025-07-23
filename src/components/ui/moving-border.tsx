@@ -82,7 +82,7 @@ export const MovingBorder = ({
   ry?: string;
   [key: string]: any;
 }) => {
-const pathRef = useRef<SVGRectElement | null>(null);
+  const pathRef = useRef<SVGPathElement | null>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
@@ -95,11 +95,26 @@ const pathRef = useRef<SVGRectElement | null>(null);
 
   const x = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).x,
+    (val) => {
+      if (!pathRef.current) return 0;
+      try {
+        return pathRef.current.getPointAtLength(val).x;
+      } catch (error) {
+        return 0;
+      }
+    }
   );
+
   const y = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).y,
+    (val) => {
+      if (!pathRef.current) return 0;
+      try {
+        return pathRef.current.getPointAtLength(val).y;
+      } catch (error) {
+        return 0;
+      }
+    }
   );
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
@@ -112,14 +127,13 @@ const pathRef = useRef<SVGRectElement | null>(null);
         className="absolute h-full w-full"
         width="100%"
         height="100%"
+        viewBox="0 0 100 100"
         {...otherProps}
       >
-        <rect
+        <path
           fill="none"
-          width="100%"
-          height="100%"
-          rx={rx}
-          ry={ry}
+          stroke="none"
+          d="M 20 0 L 80 0 Q 100 0 100 20 L 100 80 Q 100 100 80 100 L 20 100 Q 0 100 0 80 L 0 20 Q 0 0 20 0 Z"
           ref={pathRef}
         />
       </svg>

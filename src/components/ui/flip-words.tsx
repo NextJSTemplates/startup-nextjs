@@ -22,7 +22,7 @@ export const FlipWords = ({
   }, [words.length, duration]);
 
   return (
-    <div className={cn("relativ h-[1.25em] overflow-hidden", className)}>
+    <div className={cn("relativ overflow-hidden", className)}>
       <AnimatePresence mode="wait">
         <motion.div
           key={index}

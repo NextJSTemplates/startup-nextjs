@@ -92,12 +92,14 @@ const Header = () => {
             </a>
           ))}
           <div className="flex w-full flex-col gap-4">
-            <Button
-              asChild
-              className="border border-border bg-foreground px-4 text-[12px] font-semibold"
-            >
-              <Link href="#contact">Contact Us</Link>
-            </Button>
+          <Button
+            asChild
+            borderRadius="1.75rem"
+            className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-base text-xs font-semibold rounded-full md:px-4 md:py-2 w-full"
+          >
+            <Link href="#contact">Contact Us</Link>
+            <ExternalLink className="text-primary w-4 h-4 ml-2" />
+          </Button> 
           </div>
         </MobileNavMenu>
       </MobileNav>

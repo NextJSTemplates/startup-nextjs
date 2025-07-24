@@ -199,33 +199,32 @@ const Header = () => {
     return current ? `${current.flag} ${current.name}` : '🇺🇸 English';
   };
 
-  // Recreate navItems whenever language changes
   const navItems = [
     { name: t("aboutUs"), link: "/about-us" },
     {
       name: t("services"),
       link: "#services",
-      sublinks: [
-        { name: t("cloudComputing"), link: "/services/cloud-computing" },
-        {
-          name: t("softwareDevelopment"),
-          link: "/services/software-development",
-        },
-        {
-          name: t("artificialIntelligence"),
-          link: "/services/artificial-intelligence",
-        },
-        { name: t("uiUx"), link: "/services/ui-ux" },
-        { name: t("softwareSecurity"), link: "/services/software-security" },
-        {
-          name: t("mvpDevelopment"),
-          link: "/services/mvp-development",
-        },
-        {
-          name: t("softwareMaintenance"),
-          link: "/services/support-and-maintenance",
-        },
-      ],
+      // sublinks: [
+      //   { name: t("cloudComputing"), link: "/services/cloud-computing" },
+      //   {
+      //     name: t("softwareDevelopment"),
+      //     link: "/services/software-development",
+      //   },
+      //   {
+      //     name: t("artificialIntelligence"),
+      //     link: "/services/artificial-intelligence",
+      //   },
+      //   { name: t("uiUx"), link: "/services/ui-ux" },
+      //   { name: t("softwareSecurity"), link: "/services/software-security" },
+      //   {
+      //     name: t("mvpDevelopment"),
+      //     link: "/services/mvp-development",
+      //   },
+      //   {
+      //     name: t("softwareMaintenance"),
+      //     link: "/services/support-and-maintenance",
+      //   },
+      // ],
     },
     { name: t("industries"), link: "#industries" },
     { name: t("portfolios"), link: "/portfolios" },
@@ -251,15 +250,14 @@ const Header = () => {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-base text-xs font-semibold rounded-full md:px-4 md:py-2 flex items-center gap-2"
+              <div
+                className="text-foreground z-30 md:text-base text-xs font-semibold md:py-2 flex items-center gap-2"
               >
                 <Globe className="w-4 h-4" />
                 <span className="hidden md:inline">{getCurrentLanguageName()}</span>
                 <span className="md:hidden">{languages.find(lang => lang.code === currentLanguage)?.flag || '🇺🇸'}</span>
                 <ChevronDown className="w-3 h-3" />
-              </Button>
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48">
               <DropdownMenuLabel>{t("language")}</DropdownMenuLabel>

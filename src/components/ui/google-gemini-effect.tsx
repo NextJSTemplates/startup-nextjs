@@ -6,8 +6,8 @@ import { FlipWords } from "./flip-words";
 import CircularBackground from "@/app/(home)/components/Hero/CircularBackground";
 import { Button } from "./moving-border";
 import Link from "next/link";
+import { useLanguage } from "@/components/Header"; 
 
-const words = ["Scalable", "Secure", "Smarter"];
 const GoogleGeminiEffect = ({
   pathLengths,
   description,
@@ -17,21 +17,24 @@ const GoogleGeminiEffect = ({
   description?: string;
   className?: string;
 }) => {
+  const { t } = useLanguage();
+
+  const words = [t("scalable"), t("secure"), t("smarter")];
+
   return (
     <div className={cn("relative z-10 sticky top-80", className)}>
       <CircularBackground />
       <div className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold">
         <div className="flex items-center justify-center gap-2 sm:gap-4">
-          <span className="whitespace-nowrap">We Build </span>
-          <div className="w-32 sm:w-40 md:w-48 lg:w-58 flex justify-center">
+          <span className="whitespace-nowrap">{t("weBuild")} </span>
+          <div className="w-32 sm:w-40 md:min-w-50 lg:min-w-60 flex justify-center">
             <FlipWords words={words} className="font-bold" />
           </div>
-          <span className="whitespace-nowrap">Software</span>
+          <span className="whitespace-nowrap">{t("software")}</span>
         </div>
       </div>
       <p className="text-sm md:text-base font-normal text-center text-muted-foreground mt-4 max-w-xl mx-auto">
-        {description ||
-          `Certified software experts blending precision and creativity to deliver powerful, affordable solutions tailored to your business. End-to-end development, seamless integration, and ongoing support — all at unmatched value.`}
+        {description || t("heroDescription")}
       </p>
       <div className="w-full h-[890px] -top-55 sm:-top-50 md:-top-30 lg:-top-23 flex items-center justify-center bg-red-transparent absolute">
         <Button
@@ -40,7 +43,7 @@ const GoogleGeminiEffect = ({
           className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-base text-xs font-semibold rounded-full md:px-4 md:py-2 w-full"
         >
           <Link href="#contact">
-            <span className="mx-2">Let&apos;s Bring Your Ideas to Action</span>
+            <span className="mx-2">{t("bringIdeasToAction")}</span>
           </Link>
         </Button>
       </div>

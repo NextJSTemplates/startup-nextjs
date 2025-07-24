@@ -2,11 +2,16 @@
 
 import { ArrowRight } from "lucide-react";
 import React, { useEffect, useRef } from "react";
-import { services } from "./serviceData";
+import { getServices } from "./serviceData";
 import Link from "next/link";
+import { useLanguage } from "@/components/Header"; // Update this path based on your project structure
 
 const ServiceCard = () => {
+  const { t } = useLanguage();
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Get services with translated content
+  const services = getServices(t);
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -95,7 +100,7 @@ const ServiceCard = () => {
         WebkitOverflowScrolling: "touch",
       }}
     >
-      {[...services].map((service, index) => {
+      {services.map((service, index) => {
         const Icon = service.icon;
         return (
           <div
@@ -127,7 +132,7 @@ const ServiceCard = () => {
                 className="z-10 font-medium touch-manipulation"
                 onClick={(e) => e.stopPropagation()} 
               >
-                Learn More
+                {t("learnMore")}
               </Link>
               <ArrowRight className="size-4.5 z-10 text-primary hover:scale-[1.1] transition duration-200 cursor-pointer touch-manipulation" />
             </div>

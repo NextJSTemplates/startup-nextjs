@@ -60,6 +60,7 @@ export type Statistics ={
   value: string;
   icon: LucideIcon;
   label: string;
+  labelKey: string;
 
 }
 
@@ -73,6 +74,8 @@ export type Testimonial = {
     description: string;
     body: string;
     img: string;
+    descriptionKey: string;
+    bodyKey: string;
 };
 
 export type WhyUsData = {

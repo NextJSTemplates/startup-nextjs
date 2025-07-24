@@ -9,21 +9,24 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "../ui/select";
-
-const contactSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  company: z.string().min(1, "Company is required"),
-  email: z.string().email("Invalid email"),
-  phone: z.string().min(1, "Phone is required"),
-  budget: z.string().optional(),
-  message: z.string().min(10, "Please describe your needs"),
-  file: z
-    .instanceof(File)
-    .optional()
-    .or(z.undefined()), 
-});
+import { useLanguage } from "@/components/Header";
 
 const ContactForm = () => {
+  const { t } = useLanguage();
+
+  const contactSchema = z.object({
+    name: z.string().min(1, t("nameRequired")),
+    company: z.string().min(1, t("companyRequired")),
+    email: z.string().email(t("invalidEmail")),
+    phone: z.string().min(1, t("phoneRequired")),
+    budget: z.string().optional(),
+    message: z.string().min(10, t("describeNeeds")),
+    file: z
+      .instanceof(File)
+      .optional()
+      .or(z.undefined()), 
+  });
+
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -73,23 +76,23 @@ const ContactForm = () => {
       });
 
       if (res.ok) {
-        toast.success("Thanks for contacting us!");
+        toast.success(t("thanksForContact"));
         form.reset();
       } else {
         const errorText = await res.text();
         console.error("Submission error:", errorText);
-        toast.error("Something went wrong. Try again.");
+        toast.error(t("somethingWentWrong"));
       }
     } catch (error) {
       console.error("Network error:", error);
-      toast.error("Network error. Please check your connection.");
+      toast.error(t("networkError"));
     }
   };
 
   return (
     <div className="">
-      <h1 className="text-lg font-medium mb-2">How can we help your business?</h1>
-      <p className="text-sm mb-6">We&apos;re a message away from bringing your idea to life.</p>
+      <h1 className="text-lg font-medium mb-2">{t("howCanWeHelp")}</h1>
+      <p className="text-sm mb-6">{t("messageAwayText")}</p>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -100,7 +103,7 @@ const ContactForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Name*" {...field} className="shadow-none border-b border-b-muted-foreground rounded-none" />
+                    <Input placeholder={t("namePlaceholder")} {...field} className="shadow-none border-b border-b-muted-foreground rounded-none" />
                   </FormControl>
                 </FormItem>
               )}
@@ -111,7 +114,7 @@ const ContactForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Company*" {...field} className="shadow-none border-b border-b-muted-foreground rounded-none" />
+                    <Input placeholder={t("companyPlaceholder")} {...field} className="shadow-none border-b border-b-muted-foreground rounded-none" />
                   </FormControl>
                 </FormItem>
               )}
@@ -125,7 +128,7 @@ const ContactForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Corporate email*" type="email" {...field} className="shadow-none border-b border-b-muted-foreground rounded-none" />
+                    <Input placeholder={t("corporateEmailPlaceholder")} type="email" {...field} className="shadow-none border-b border-b-muted-foreground rounded-none" />
                   </FormControl>
                 </FormItem>
               )}
@@ -138,7 +141,7 @@ const ContactForm = () => {
                   <FormControl>
                     <Input 
                       type="tel" 
-                      placeholder="Phone*" 
+                      placeholder={t("phonePlaceholder")} 
                       {...field} 
                       className="shadow-none border-b border-b-muted-foreground rounded-none" 
                     />
@@ -156,13 +159,13 @@ const ContactForm = () => {
                 <FormControl>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Project budget" />
+                      <SelectValue placeholder={t("projectBudgetPlaceholder")} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="under_10k">Under $10k</SelectItem>
-                      <SelectItem value="10k_50k">$10k - $50k</SelectItem>
-                      <SelectItem value="50k_100k">$50k - $100k</SelectItem>
-                      <SelectItem value="above_100k">Above $100k</SelectItem>
+                      <SelectItem value="under_10k">{t("budgetUnder10k")}</SelectItem>
+                      <SelectItem value="10k_50k">{t("budget10k50k")}</SelectItem>
+                      <SelectItem value="50k_100k">{t("budget50k100k")}</SelectItem>
+                      <SelectItem value="above_100k">{t("budgetAbove100k")}</SelectItem>
                     </SelectContent>
                   </Select>
                 </FormControl>
@@ -176,7 +179,7 @@ const ContactForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Textarea placeholder="Describe your needs in detail*" {...field} className="shadow-none border-b border-b-muted-foreground rounded-none" />
+                  <Textarea placeholder={t("describeNeedsPlaceholder")} {...field} className="shadow-none border-b border-b-muted-foreground rounded-none" />
                 </FormControl>
               </FormItem>
             )}
@@ -204,17 +207,17 @@ const ContactForm = () => {
           
           <div className="flex flex-col md:flex-row justify-between gap-4">
             <p className="text-xs text-muted-foreground">
-              By clicking Send, you consent to Innowise processing your personal data per our Privacy Policy. By submitting your phone number, you agree we may contact you via voice calls, SMS, and messaging apps.
+              {t("privacyConsentText")}
             </p>
             <Button type="submit" className="bg-primary hover:bg-primary/80 cursor-pointer text-white w-fit px-6">
-              Send
+              {t("sendButton")}
             </Button>
           </div>
         </form>
       </Form>
 
       <p className="mt-4 text-sm">
-        You can also send us your request to <a href="mailto:info@classyendeavors.com" className="text-primary font-medium">info@classyendeavors.com</a>
+        {t("alternativeContactText")} <a href="mailto:info@classyendeavors.com" className="text-primary font-medium">info@classyendeavors.com</a>
       </p>
     </div>
   );

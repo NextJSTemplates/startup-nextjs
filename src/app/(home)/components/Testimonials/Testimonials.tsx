@@ -1,11 +1,16 @@
 import Image from "next/image";
 import { testimonials } from "./testimonialsData";
+import { useLanguage } from "@/components/Header"; // Import the language hook
 
 export const Reviews = () => {
+  const { t } = useLanguage(); // Use the language hook
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <div>
-        <p className="text-foreground/80 max-w-xs">At Classy Endeavors, we earn our clients’ trust by treating every project as if it were our own. We prioritize your business objectives, crafting tailored digital solutions that solve real problems—not just ticking off feature lists. Our goal is to deliver value-driven results that support long-term growth and success.</p>
+        <p className="text-foreground/80 max-w-xs">
+          {t("testimonialsIntroText")}
+        </p>
       </div>
       {testimonials.map((testimonial, index) => (
         <div
@@ -13,12 +18,12 @@ export const Reviews = () => {
           className="rounded-lg text-foreground/80 border border-border p-6 transition duration-300 hover:border-primary"
         >
           <p className="text-sm text-foreground/70 md:min-h-50 lg:min-h-70">
-            {testimonial.body}
+            {t(testimonial.bodyKey) || testimonial.body}
           </p>
           <div className="mt-2 flex items-center gap-2">
             <div className="flex flex-col">
-            <span className="text-sm font-medium">{testimonial.name}</span>
-            <span className="text-xs">{testimonial.description}</span>
+              <span className="text-sm font-medium">{testimonial.name}</span>
+              <span className="text-xs">{t(testimonial.descriptionKey) || testimonial.description}</span>
             </div>
           </div>
         </div>

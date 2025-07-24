@@ -72,7 +72,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       className={cn(
-        "fixed inset-x-0 top-3 z-40 mx-auto w-full max-w-5xl",
+        "fixed inset-x-0 top-3 z-40 mx-auto w-full max-w-6xl",
         className,
       )}
     >
@@ -263,19 +263,19 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
-  if (visible) {
-    return (
-      <Link href="/" className="relative z-20 mr-4 flex items-center px-2 py-1">
-        <Image
-          src="/images/logo/logo-dark.svg"
-          alt="logo"
-          width={30}
-          height={30}
-          className="h-8 w-8"
-        />
-      </Link>
-    );
-  }
+  // if (visible) {
+  //   return (
+  //     <Link href="/" className="relative z-20 mr-4 flex items-center px-2 py-1">
+  //       <Image
+  //         src="/images/logo/logo-dark.svg"
+  //         alt="logo"
+  //         width={30}
+  //         height={30}
+  //         className="h-8 w-8"
+  //       />
+  //     </Link>
+  //   );
+  // }
 
   return (
     <Link

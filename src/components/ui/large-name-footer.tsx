@@ -2,8 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TextHoverEffect } from "./text-hover-effect";
+import { useLanguage } from "@/components/Header";
 
 export const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-gradient-to-br bg-foreground px-8 pt-4 text-white">
       <div className="container mx-auto max-w-8xl px-4 pt-12 pb-6 md:px-6">
@@ -12,69 +15,68 @@ export const Footer = () => {
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/images/logo/logo.png"
-                alt="logo"
+                alt={t("logoAlt")}
                 width={320}
                 height={320}
                 className="w-50 lg:w-60"
               />
             </Link>
             <p className="mt-2 text-sm">
-              © {new Date().getFullYear()} Classy Endeavors. All rights
-              reserved.
+              © {new Date().getFullYear()} Classy Endeavors. {t("allRightsReserved")}
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div>
-              <h4 className="mb-4 font-semibold">Services</h4>
+              <h4 className="mb-4 font-semibold">{t("services")}</h4>
               <ul className="list-none space-y-2 text-sm">
                 <li>
                   <Link href="/services/cloud-computing" className="">
-                    Cloud Computing
+                    {t("cloudComputing")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/mobile-development" className="">
-                    Mobile Development
+                    {t("mobileDevelopment")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/software-development" className="">
-                    Software Development
+                    {t("softwareDevelopment")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/artificial-intelligence" className="">
-                    Artificial Intelligence
+                    {t("artificialIntelligence")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/ui-ux" className="">
-                    UI/UX
+                    {t("uiUx")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/software-security" className="">
-                    Software Security
+                    {t("softwareSecurity")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/mvp-development" className="">
-                    MVP Development
+                    {t("mvpDevelopment")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/support-and-maintenance" className="">
-                    Software Maintenance
+                    {t("softwareMaintenance")}
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="mb-4 font-semibold">Socials</h4>
+              <h4 className="mb-4 font-semibold">{t("socials")}</h4>
               <ul className="list-none space-y-2 text-sm">
                 <li>
                   <Link href="https://github.com/classy-endeavors" className="">
-                    Github
+                    {t("github")}
                   </Link>
                 </li>
                 <li>
@@ -82,25 +84,25 @@ export const Footer = () => {
                     href="https://www.linkedin.com/in/classy-endeavors"
                     className=""
                   >
-                    LinkedIn
+                    {t("linkedin")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://x.com/classy-endeavors">X</Link>
+                  <Link href="https://x.com/classy-endeavors">{t("xTwitter")}</Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="mb-4 font-semibold">Legal</h4>
+              <h4 className="mb-4 font-semibold">{t("legal")}</h4>
               <ul className="list-none space-y-2 text-sm">
                 <li>
                   <Link href="/privacy-policy" className="">
-                    Privacy Policy
+                    {t("privacyPolicy")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/tos" className="">
-                    Terms of Service
+                    {t("termsOfService")}
                   </Link>
                 </li>
               </ul>

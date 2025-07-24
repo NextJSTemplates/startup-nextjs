@@ -23,121 +23,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-// Language Context
+import { translations } from "@/lib/translations"; 
+
 const LanguageContext = createContext({
   currentLanguage: 'en',
   setLanguage: (lang: string) => { },
   t: (key: string) => key
 });
-
-// Language translations
-const translations = {
-  en: {
-    aboutUs: "About Us",
-    services: "Services",
-    cloudComputing: "Cloud Computing",
-    softwareDevelopment: "Software Development",
-    artificialIntelligence: "Artificial Intelligence",
-    uiUx: "UI/UX",
-    softwareSecurity: "Software Security",
-    mvpDevelopment: "MVP Development",
-    softwareMaintenance: "Software Maintenance",
-    industries: "Industries",
-    portfolios: "Portfolios",
-    blogs: "Blogs",
-    contactUs: "Contact Us",
-    language: "Language",
-    english: "English",
-    french: "French",
-    dutch: "Dutch",
-    spanish: "Spanish",
-    german: "German"
-  },
-  fr: {
-    aboutUs: "À Propos",
-    services: "Services",
-    cloudComputing: "Cloud Computing",
-    softwareDevelopment: "Développement Logiciel",
-    artificialIntelligence: "Intelligence Artificielle",
-    uiUx: "UI/UX",
-    softwareSecurity: "Sécurité Logicielle",
-    mvpDevelopment: "Développement MVP",
-    softwareMaintenance: "Maintenance Logicielle",
-    industries: "Industries",
-    portfolios: "Portfolios",
-    blogs: "Blogs",
-    contactUs: "Nous Contacter",
-    language: "Langue",
-    english: "Anglais",
-    french: "Français",
-    dutch: "Néerlandais",
-    spanish: "Espagnol",
-    german: "Allemand"
-  },
-  nl: {
-    aboutUs: "Over Ons",
-    services: "Diensten",
-    cloudComputing: "Cloud Computing",
-    softwareDevelopment: "Software Ontwikkeling",
-    artificialIntelligence: "Kunstmatige Intelligentie",
-    uiUx: "UI/UX",
-    softwareSecurity: "Software Beveiliging",
-    mvpDevelopment: "MVP Ontwikkeling",
-    softwareMaintenance: "Software Onderhoud",
-    industries: "Industrieën",
-    portfolios: "Portfolio's",
-    blogs: "Blogs",
-    contactUs: "Contact Opnemen",
-    language: "Taal",
-    english: "Engels",
-    french: "Frans",
-    dutch: "Nederlands",
-    spanish: "Spaans",
-    german: "Duits"
-  },
-  es: {
-    aboutUs: "Sobre Nosotros",
-    services: "Servicios",
-    cloudComputing: "Computación en la Nube",
-    softwareDevelopment: "Desarrollo de Software",
-    artificialIntelligence: "Inteligencia Artificial",
-    uiUx: "UI/UX",
-    softwareSecurity: "Seguridad de Software",
-    mvpDevelopment: "Desarrollo MVP",
-    softwareMaintenance: "Mantenimiento de Software",
-    industries: "Industrias",
-    portfolios: "Portafolios",
-    blogs: "Blogs",
-    contactUs: "Contáctanos",
-    language: "Idioma",
-    english: "Inglés",
-    french: "Francés",
-    dutch: "Holandés",
-    spanish: "Español",
-    german: "Alemán"
-  },
-  de: {
-    aboutUs: "Über Uns",
-    services: "Dienstleistungen",
-    cloudComputing: "Cloud Computing",
-    softwareDevelopment: "Software-Entwicklung",
-    artificialIntelligence: "Künstliche Intelligenz",
-    uiUx: "UI/UX",
-    softwareSecurity: "Software-Sicherheit",
-    mvpDevelopment: "MVP-Entwicklung",
-    softwareMaintenance: "Software-Wartung",
-    industries: "Branchen",
-    portfolios: "Portfolios",
-    blogs: "Blogs",
-    contactUs: "Kontakt",
-    language: "Sprache",
-    english: "Englisch",
-    french: "Französisch",
-    dutch: "Niederländisch",
-    spanish: "Spanisch",
-    german: "Deutsch"
-  }
-};
 
 // Language Provider Component
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
@@ -204,30 +96,8 @@ const Header = () => {
     {
       name: t("services"),
       link: "#services",
-      // sublinks: [
-      //   { name: t("cloudComputing"), link: "/services/cloud-computing" },
-      //   {
-      //     name: t("softwareDevelopment"),
-      //     link: "/services/software-development",
-      //   },
-      //   {
-      //     name: t("artificialIntelligence"),
-      //     link: "/services/artificial-intelligence",
-      //   },
-      //   { name: t("uiUx"), link: "/services/ui-ux" },
-      //   { name: t("softwareSecurity"), link: "/services/software-security" },
-      //   {
-      //     name: t("mvpDevelopment"),
-      //     link: "/services/mvp-development",
-      //   },
-      //   {
-      //     name: t("softwareMaintenance"),
-      //     link: "/services/support-and-maintenance",
-      //   },
-      // ],
     },
     { name: t("industries"), link: "#industries" },
-    { name: t("portfolios"), link: "/portfolios" },
     { name: t("blogs"), link: "/blogs" },
   ];
 
@@ -243,24 +113,24 @@ const Header = () => {
             className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-sm text-xs font-semibold rounded-full md:px-4 md:py-2"
           >
             <Link href="#contact" className="flex items-center gap-2">
-              {t("Contact Us")}
+              {t("contactUs")}
               <ExternalLink className="text-primary w-4 h-4" />
             </Link>
           </Button>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div
-                className="text-foreground z-30 md:text-base text-xs font-semibold md:py-2 flex items-center gap-2"
+              <button
+                className="text-foreground z-30 md:text-base text-xs font-semibold md:py-2 flex items-center gap-2 cursor-pointer hover:text-primary transition-colors"
               >
                 <Globe className="w-4 h-4" />
                 <span className="hidden md:inline">{getCurrentLanguageName()}</span>
                 <span className="md:hidden">{languages.find(lang => lang.code === currentLanguage)?.flag || '🇺🇸'}</span>
                 <ChevronDown className="w-3 h-3" />
-              </div>
+              </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48">
-              <DropdownMenuLabel>{t("language")}</DropdownMenuLabel>
+              <DropdownMenuLabel className="text-sm">{t("language")}</DropdownMenuLabel>
               <DropdownMenuSeparator />
               {languages.map((language) => (
                 <DropdownMenuItem
@@ -318,7 +188,6 @@ const Header = () => {
               </Link>
             </Button>
 
-            {/* Mobile Language Selector */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button

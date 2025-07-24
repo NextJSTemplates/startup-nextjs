@@ -3,13 +3,16 @@ import { useState } from "react";
 import Image from "next/image";
 import { technologies } from "./technologiesData";
 import SectionTitle from "@/components/Common/SectionTitle";
+import { useLanguage } from "@/components/Header"; 
 
 const Technologies = () => {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState(technologies[0].title);
+  
   return (
     <section id="features" className="relative z-10 pt-20 max-w-7xl mx-auto px-6">
       <SectionTitle
-        title="Our Technologies"
+        title={t("ourTechnologies")}
       />
       <div className="flex flex-wrap gap-4 border-b border-gray-200 mb-8">
         {technologies.map((card) => (
@@ -30,7 +33,7 @@ const Technologies = () => {
         .filter((card) => card.title === activeTab)
         .map((card) => (
           <div key={card.title} className="flex flex-col md:flex-row gap-6 md:gap-12">
-            <table className="text-left border-b border-gray-200  w-full md:w-2/3">
+            <table className="text-left border-b border-gray-200 w-full md:w-2/3">
               <tbody>
                 {card.tech.map((item) => (
                   <tr key={item.title} className="border-b border-gray-200">

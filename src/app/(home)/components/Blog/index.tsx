@@ -3,17 +3,18 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import blogData from "./blogData";
 import Image from "next/image";
 import SectionTitle from "@/components/Common/SectionTitle";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useLanguage } from "@/components/Header"; 
 
 const Blog = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="blogs" className="relative z-10 pt-20 max-w-7xl mx-auto px-6">
-      <SectionTitle title="Latest Blogs" />
+      <SectionTitle title={t("latestBlogs")} />
 
       <p className="max-w-xl mb-12 text-sm">
-        Explore insightful articles and expert tips to help you grow and
-        succeed. Stay updated with the latest trends and ideas from our blog
+        {t("blogDescription")}
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -52,7 +53,7 @@ const Blog = () => {
 
       <div className="mx-auto max-w-md flex justify-center items-center text-center mt-12">
         <Link href="https://blog.classyendeavors.com/" target="_blank" className="rounded-none bg-transparent border-b-2 border-primary hover:bg-transparent shadow-none hover:scale-[1.1] transition duration-200 cursor-pointer text-primary flex w-fit">
-          View More
+          {t("viewMore")}
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

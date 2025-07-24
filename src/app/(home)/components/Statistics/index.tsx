@@ -4,8 +4,11 @@ import { statistics } from "./statisticsData";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Counter from "./Counter";
+import { useLanguage } from "@/components/Header";
 
 const Statistics = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative z-10 pt-20">
       <div className=" bg-foreground py-20 px-6">
@@ -20,13 +23,14 @@ const Statistics = () => {
                 <h1 className="text-4xl md:text-5xl font-semibold mb-2">
                   <Counter target={stat.value} />
                 </h1>
-                <p className="text-background/70">{stat.label}</p>
+                <p className="text-background/70">{t(stat.labelKey) || stat.label}</p>
               </div>
             ))}
             <div
               className="relative flex justify-end items-end text-end pb-4 pe-4 aspect-video"
             >
-              <Link href="/about-us" className="flex gap-2 text-xl text-primary hover:scale-[1.1] transition duration-200 border-b border-b-primary p-4">About Us
+              <Link href="/about-us" className="flex gap-2 text-xl text-primary hover:scale-[1.1] transition duration-200 border-b border-b-primary p-4">
+                {t("aboutUs")}
                 <span>
                   <ArrowRight className="size-5 mt-1" />
                 </span>
@@ -34,8 +38,7 @@ const Statistics = () => {
             </div>
           </div>
           <p className="max-w-3xl mb-6 text-background/70">
-            As a trusted software development partner, we help companies worldwide turn complex challenges into practical digital solutions. For more than ten years, clients across North America, Europe, Asia, and Australia have relied on us — from ambitious startups to established global brands.
-            <br /><br /> We handle every stage of the journey, from consulting and development to long-term support. Our promise is simple: we listen, plan, and build software that meets your goals and delivers real results — nothing unnecessary, just technology that works for your business.
+            {t("statisticsDescription")}
           </p>
         </div>
       </div>

@@ -108,10 +108,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="mt-12 flex w-full items-center justify-center">
-          {/* <h1 className="from-muted/50 to-muted/5 bg-gradient-to-b bg-clip-text text-center text-3xl font-bold text-transparent select-none md:text-4xl lg:text-[8rem]"> */}
-                  <TextHoverEffect text="CLASSY ENDEAVORS" />
-
-          {/* </h1> */}
+          <TextHoverEffect text="CLASSY ENDEAVORS" />
         </div>
       </div>
     </footer>

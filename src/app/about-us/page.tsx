@@ -6,9 +6,6 @@ import WhyUs from './components/WhyUs';
 import OurValues from './components/OurValues';
 import Challenges from './components/Challenges';
 import ContactUs from '@/components/ContactUs';
-import Innovations from './components/Innovations';
-import Testimonials from './components/Testimonials';
-import Image from 'next/image';
 import { Quote } from 'lucide-react';
 import Hero from './components/Hero';
 
@@ -33,10 +30,8 @@ const AboutUsPage = () => {
       <Statistics />
       <MissionVision />
       <WhyUs />
-      <Innovations />
       <Challenges />
       <OurValues />
-      <Testimonials />
       <ContactUs content={(
         <div className="flex flex-col gap-4">
           <h1 className="font-medium text-xl">What our customers say</h1>

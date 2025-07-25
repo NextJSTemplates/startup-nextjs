@@ -3,6 +3,7 @@
 import React from 'react'
 import SectionTitle from '@/components/Common/SectionTitle'
 import { useLanguage } from '@/components/Header'
+import Section from '@/components/Section'
 
 const Statistics = () => {
   const { t } = useLanguage()
@@ -40,8 +41,7 @@ const Statistics = () => {
   ]
 
   return (
-    <section className="relative overflow-hidden z-10 pt-20">
-      <div className="container mx-auto max-w-7xl px-6">
+    <Section>
         <div className="flex flex-col items-start justify-center">
           <SectionTitle title={t("aboutStatsSectionTitle")} className="text-2xl md:text-3xl mb-12" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -55,8 +55,7 @@ const Statistics = () => {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+    </Section>
   )
 }
 

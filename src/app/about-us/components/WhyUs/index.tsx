@@ -5,9 +5,10 @@ import SectionTitle from '@/components/Common/SectionTitle';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
 import { useLanguage } from '@/components/Header'
 import { Badge, CheckCircle, Route, Scan } from "lucide-react";
+import Section from '@/components/Section';
 
 const WhyUs = () => {
-  const { t } = useLanguage() 
+  const { t } = useLanguage()
 
   const whyUsData = [
     {
@@ -23,7 +24,7 @@ const WhyUs = () => {
       link: "/"
     },
     {
-      icon: Scan, 
+      icon: Scan,
       title: t("aboutWhyUsTransparentTitle"),
       description: t("aboutWhyUsTransparentDescription"),
       link: "/"
@@ -37,14 +38,12 @@ const WhyUs = () => {
   ]
 
   return (
-    <section className="relative overflow-hidden z-10 pt-20">
-      <div className="container mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-start justify-center">
-          <SectionTitle title={t("aboutWhyUsTitle")} className="text-2xl md:text-3xl mb-12" />
-          <HoverEffect items={whyUsData} />
-        </div>
+    <Section>
+      <div className="flex flex-col items-start justify-center">
+        <SectionTitle title={t("aboutWhyUsTitle")} className="text-2xl md:text-3xl mb-12" />
+        <HoverEffect items={whyUsData} />
       </div>
-    </section>
+    </Section>
   )
 }
 

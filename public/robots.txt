@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ce-website-new.vercel.app
+
+# Sitemaps
+Sitemap: https://ce-website-new.vercel.app/sitemap.xml

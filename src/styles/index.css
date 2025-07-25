@@ -415,7 +415,7 @@ layer(base);
     @apply bg-background text-foreground text-sm;
   }
   .custom-bullets li::marker {
-    color: #0C555D;
+    color: #187F8D;
   }
   .clip-trapezoid {
     clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);

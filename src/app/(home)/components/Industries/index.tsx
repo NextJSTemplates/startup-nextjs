@@ -44,7 +44,7 @@ const Industries = () => {
               </ul>
             </div>
 
-            <div className="relative w-full md:w-[80%] aspect-video rounded-lg overflow-clip">
+            <div className="relative w-full md:w-[80%] aspect-video rounded-lg overflow-clip hover:scale-[1.05] transition duration-300">
               <Image
                 src={industry.src}
                 alt={t(industry.nameKey) || industry.name}

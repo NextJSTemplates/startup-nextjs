@@ -262,24 +262,11 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
-  // if (visible) {
-  //   return (
-  //     <Link href="/" className="relative z-20 mr-4 flex items-center px-2 py-1">
-  //       <Image
-  //         src="/images/logo/logo-dark.svg"
-  //         alt="logo"
-  //         width={30}
-  //         height={30}
-  //         className="h-8 w-8"
-  //       />
-  //     </Link>
-  //   );
-  // }
+export const NavbarLogo = () => {
 
   return (
     <Link
-      href="#"
+      href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-semibold"
     >
       <Image

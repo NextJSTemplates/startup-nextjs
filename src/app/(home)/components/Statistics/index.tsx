@@ -18,7 +18,7 @@ const Statistics = () => {
             {statistics.map((stat, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-end aspect-video rounded-lg bg-white/12 backdrop-blur-sm p-6 transition relative"
+                className="flex flex-col justify-end aspect-video rounded-lg bg-white/12 backdrop-blur-sm p-6 relative hover:scale-[1.05] transition duration-300 cursor-pointer"
               >
                 <h1 className="text-4xl md:text-5xl font-semibold mb-2">
                   <Counter target={stat.value} />

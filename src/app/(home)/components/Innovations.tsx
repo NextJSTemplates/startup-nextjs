@@ -19,14 +19,14 @@ const Innovations = () => {
             </p>
           </div>
           <div className="w-full h-full relative rounded-lg overflow-hidden">
-            <div className="w-full md:h-full aspect-square">
+            <div className="w-full aspect-square hover:scale-[1.05] transition duration-300">
               <Image fill src="/images/about/AI_CE_3.avif" alt={t("aiSolutionsImageAlt")} className="object-cover" />
             </div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-24 items-center mt-12">
-          <div className="w-full aspect-video relative rounded-lg overflow-hidden flex justify-start order-2 md:order-1">
-            <div className="w-full h-full">
+          <div className="w-full h-full relative rounded-lg overflow-hidden flex justify-start order-2 md:order-1">
+            <div className="w-full aspect-square hover:scale-[1.05] transition duration-300">
               <Image fill src="/images/about/Team_CE.jpg" alt={t("teamImageAlt")} className="object-cover" />
             </div>
           </div>

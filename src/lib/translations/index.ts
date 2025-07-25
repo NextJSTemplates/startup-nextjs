@@ -1311,6 +1311,19 @@ export const translations = {
       "Programamos una reunión para revisar la propuesta, abordar cualquier pregunta y finalizar el enfoque para asegurar que todo se alinee con tu visión.",
     step4:
       "Después del acuerdo mutuo, firmamos el contrato y comenzamos inmediatamente el trabajo, entregando resultados eficientes y de alta calidad desde el primer día. Al hacer clic en Enviar, consientes que Classy Endeavors procese tus datos personales de acuerdo con nuestra Política de Privacidad. Al proporcionar tu número de teléfono, aceptas que podemos contactarte a través de llamadas, SMS o aplicaciones de mensajería",
+    logoAlt: "logo",
+    allRightsReserved: "Todos los derechos reservados.",
+
+    // Socials section
+    socials: "Redes Sociales",
+    github: "Github",
+    linkedin: "LinkedIn",
+    xTwitter: "X",
+
+    // Legal section
+    legal: "Legal",
+    privacyPolicy: "Política de Privacidad",
+    termsOfService: "Términos del Servicio",
     aboutInnovation: "Innovación",
     aboutIntegrity: "Integridad",
     aboutDrivenBy: "Impulsado por",

@@ -27,7 +27,7 @@ const GoogleGeminiEffect = ({
       <div className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold">
         <div className="flex items-center justify-center gap-2 sm:gap-4">
           <span className="whitespace-nowrap">{t("weBuild")} </span>
-          <div className="w-32 sm:w-40 md:min-w-50 lg:min-w-60 flex justify-center">
+          <div className="flex justify-center">
             <FlipWords words={words} className="font-bold" />
           </div>
           <span className="whitespace-nowrap">{t("software")}</span>

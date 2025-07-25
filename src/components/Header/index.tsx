@@ -139,7 +139,7 @@ const Header = () => {
       link: "#services",
     },
     { name: t("industries"), link: "#industries" },
-    { name: t("blogs"), link: "/blogs" },
+    { name: t("blogs"), link: "https://blog.classyendeavors.com/" },
   ];
 
   const handleLanguageSelect = (languageCode, closeDropdown) => {

@@ -11,18 +11,9 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "../ui/resizable-navbar";
-import { useState, createContext, useContext, useEffect } from "react";
+import { useState, createContext, useContext, useEffect, useRef } from "react";
 import { Button } from "../ui/moving-border";
 import Link from "next/link";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
 import { translations } from "@/lib/translations"; 
 
 const LanguageContext = createContext({
@@ -31,13 +22,11 @@ const LanguageContext = createContext({
   t: (key: string) => key
 });
 
-// Language Provider Component
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
   const [currentLanguage, setCurrentLanguage] = useState('en');
 
   const setLanguage = (lang: string) => {
     setCurrentLanguage(lang);
-    // Store in localStorage for persistence
     if (typeof window !== 'undefined') {
       localStorage.setItem('preferred-language', lang);
     }
@@ -63,7 +52,6 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
   );
 };
 
-// Custom hook to use language context
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context) {
@@ -72,11 +60,65 @@ export const useLanguage = () => {
   return context;
 };
 
+const CustomDropdown = ({ children, trigger, className = "" }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <div onClick={() => setIsOpen(!isOpen)}>
+        {trigger}
+      </div>
+      
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 z-40" 
+            onClick={() => setIsOpen(false)}
+          />
+          
+          {/* Dropdown Content */}
+          <div className={`absolute right-0 top-full mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-50 ${className}`}>
+            {children({ closeDropdown: () => setIsOpen(false) })}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
 const Header = () => {
   const { t, currentLanguage, setLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Define languages inside component to get fresh translations
   const languages = [
     { code: 'en', name: t("english"), flag: '🇺🇸' },
     { code: 'fr', name: t("french"), flag: '🇫🇷' },
@@ -85,7 +127,6 @@ const Header = () => {
     { code: 'de', name: t("german"), flag: '🇩🇪' },
   ];
 
-  // Get current language display with fresh translations
   const getCurrentLanguageName = () => {
     const current = languages.find(lang => lang.code === currentLanguage);
     return current ? `${current.flag} ${current.name}` : '🇺🇸 English';
@@ -100,6 +141,11 @@ const Header = () => {
     { name: t("industries"), link: "#industries" },
     { name: t("blogs"), link: "/blogs" },
   ];
+
+  const handleLanguageSelect = (languageCode, closeDropdown) => {
+    setLanguage(languageCode);
+    closeDropdown();
+  };
 
   return (
     <Navbar>
@@ -118,38 +164,43 @@ const Header = () => {
             </Link>
           </Button>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                className="text-foreground z-30 md:text-base text-xs font-semibold md:py-2 flex items-center gap-2 cursor-pointer hover:text-primary transition-colors"
-              >
+          {/* Desktop Language Dropdown */}
+          <CustomDropdown
+            className="w-48"
+            trigger={
+              <button className="text-foreground z-30 md:text-base text-xs font-semibold md:py-2 flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
                 <Globe className="w-4 h-4" />
                 <span className="hidden md:inline">{getCurrentLanguageName()}</span>
                 <span className="md:hidden">{languages.find(lang => lang.code === currentLanguage)?.flag || '🇺🇸'}</span>
                 <ChevronDown className="w-3 h-3" />
               </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-48">
-              <DropdownMenuLabel className="text-sm">{t("language")}</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              {languages.map((language) => (
-                <DropdownMenuItem
-                  key={language.code}
-                  onClick={() => setLanguage(language.code)}
-                  className={`flex items-center gap-2 cursor-pointer ${currentLanguage === language.code
-                      ? 'bg-primary/10 text-primary font-medium text-xs md:text-sm'
-                      : ''
+            }
+          >
+            {({ closeDropdown }) => (
+              <div className="py-2">
+                <div className="px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700">
+                  {t("language")}
+                </div>
+                {languages.map((language) => (
+                  <button
+                    key={language.code}
+                    onClick={() => handleLanguageSelect(language.code, closeDropdown)}
+                    className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors ${
+                      currentLanguage === language.code
+                        ? 'bg-primary/10 text-primary font-medium'
+                        : 'text-gray-700 dark:text-gray-300'
                     }`}
-                >
-                  <span>{language.flag}</span>
-                  <span>{language.name}</span>
-                  {currentLanguage === language.code && (
-                    <span className="ml-auto text-primary">✓</span>
-                  )}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+                  >
+                    <span>{language.flag}</span>
+                    <span>{language.name}</span>
+                    {currentLanguage === language.code && (
+                      <span className="ml-auto text-primary">✓</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+          </CustomDropdown>
         </div>
       </NavBody>
 
@@ -189,8 +240,9 @@ const Header = () => {
             </Button>
 
             {/* Mobile Language Selector */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+            <CustomDropdown
+              className="w-48"
+              trigger={
                 <Button
                   borderRadius="1.75rem"
                   className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 text-xs font-semibold rounded-full px-4 py-2 w-full flex items-center justify-center gap-2"
@@ -199,31 +251,37 @@ const Header = () => {
                   <span>{getCurrentLanguageName()}</span>
                   <ChevronDown className="w-3 h-3" />
                 </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="center" className="w-48">
-                <DropdownMenuLabel>{t("language")}</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                {languages.map((language) => (
-                  <DropdownMenuItem
-                    key={language.code}
-                    onClick={() => {
-                      setLanguage(language.code);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className={`flex items-center gap-2 cursor-pointer ${currentLanguage === language.code
-                        ? 'bg-primary/10 text-primary font-medium'
-                        : ''
+              }
+            >
+              {({ closeDropdown }) => (
+                <div className="py-2">
+                  <div className="px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700">
+                    {t("language")}
+                  </div>
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
+                      onClick={() => {
+                        setLanguage(language.code);
+                        setIsMobileMenuOpen(false);
+                        closeDropdown();
+                      }}
+                      className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors ${
+                        currentLanguage === language.code
+                          ? 'bg-primary/10 text-primary font-medium'
+                          : 'text-gray-700 dark:text-gray-300'
                       }`}
-                  >
-                    <span>{language.flag}</span>
-                    <span>{language.name}</span>
-                    {currentLanguage === language.code && (
-                      <span className="ml-auto text-primary">✓</span>
-                    )}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                    >
+                      <span>{language.flag}</span>
+                      <span>{language.name}</span>
+                      {currentLanguage === language.code && (
+                        <span className="ml-auto text-primary">✓</span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </CustomDropdown>
           </div>
         </MobileNavMenu>
       </MobileNav>

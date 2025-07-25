@@ -11,7 +11,7 @@ const Statistics = () => {
 
   return (
     <section className="relative z-10 pt-20">
-      <div className=" bg-foreground py-20 px-6">
+      <div className="bg-foreground py-20 px-6">
         <div className="max-w-7xl mx-auto flex flex-col space-y-12 text-background">
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

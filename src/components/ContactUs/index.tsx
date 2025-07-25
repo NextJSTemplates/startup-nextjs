@@ -3,6 +3,7 @@ import React from "react";
 import ContactForm from "./ContactForm";
 import SectionTitle from "../Common/SectionTitle";
 import { useLanguage } from "@/components/Header";
+import Section from "../Section";
 
 type ContactUsProps = {
   content?: React.ReactNode
@@ -17,7 +18,7 @@ const ContactUs = ({content}: ContactUsProps) => {
     t("step4")
     ];
   return (
-    <section className="relative z-10 py-20 max-w-7xl mx-auto px-6" id="contact">
+    <Section id="contact" className="pb-20">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 justify-center items-center">
         <div>
@@ -45,7 +46,7 @@ const ContactUs = ({content}: ContactUsProps) => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

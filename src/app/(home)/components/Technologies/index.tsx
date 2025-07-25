@@ -4,13 +4,14 @@ import Image from "next/image";
 import { technologies } from "./technologiesData";
 import SectionTitle from "@/components/Common/SectionTitle";
 import { useLanguage } from "@/components/Header"; 
+import Section from "@/components/Section";
 
 const Technologies = () => {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState(technologies[0].title);
   
   return (
-    <section id="features" className="relative z-10 pt-20 max-w-7xl mx-auto px-6">
+    <Section id="features">
       <SectionTitle
         title={t("ourTechnologies")}
       />
@@ -66,7 +67,7 @@ const Technologies = () => {
             </div>
           </div>
         ))}
-    </section>
+    </Section>
   );
 };
 

@@ -5,12 +5,13 @@ import Image from "next/image";
 import SectionTitle from "@/components/Common/SectionTitle";
 import Link from "next/link";
 import { useLanguage } from "@/components/Header"; 
+import Section from "@/components/Section";
 
 const Blog = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="blogs" className="relative z-10 pt-20 max-w-7xl mx-auto px-6">
+    <Section id="blogs">
       <SectionTitle title={t("latestBlogs")} />
 
       <p className="max-w-xl mb-12 text-sm">
@@ -57,7 +58,7 @@ const Blog = () => {
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useLanguage } from '@/components/Header';
+import { Button } from '@/components/ui/button';
 
 const Innovations = () => {
   const { t } = useLanguage();
@@ -37,9 +38,9 @@ const Innovations = () => {
             <p className="max-w-sm text-sm">
               {t("expertLedInnovationDescription")}
             </p>
-            <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200">
+            <Button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200">
               {t("letsTalk")} →
-            </button>
+            </Button>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import brandsData from "./brandsData";
+import brandsData from "./data";
 import { Brand } from "@/types";
 import { Marquee } from "@/components/magicui/marquee";
 

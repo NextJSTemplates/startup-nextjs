@@ -5,13 +5,14 @@ import { industries } from "./industriesData";
 import Image from "next/image";
 import SectionTitle from "@/components/Common/SectionTitle";
 import { useLanguage } from "@/components/Header"; 
+import Section from "@/components/Section";
 
 const Industries = () => {
   const { t } = useLanguage(); 
   const [activeTab, setActiveTab] = useState(industries[0].name);
 
   return (
-    <section className="relative z-10 pt-20 max-w-7xl mx-auto px-6" id="industries">
+    <Section id="industries">
       <SectionTitle title={t("industriesWeServe")} />
       <div className="flex flex-wrap gap-4 border-b border-gray-200 mb-8">
         {industries.map((industry, index) => (
@@ -54,7 +55,7 @@ const Industries = () => {
             </div>
           </div>
         ))}
-    </section>
+    </Section>
   );
 };
 

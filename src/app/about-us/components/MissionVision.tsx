@@ -1,7 +1,11 @@
+"use client"
 import React from 'react'
 import SectionTitle from '@/components/Common/SectionTitle'
+import { useLanguage } from '@/components/Header'
 
 const MissionVision = () => {
+  const { t } = useLanguage()
+
   return (
     <section
       id="services"
@@ -10,25 +14,25 @@ const MissionVision = () => {
       <div className="relative container mx-auto max-w-7xl py-32 px-6 text-white">
         <div className="flex flex-col items-start justify-center">
           <SectionTitle
-            title="Mission and Vision"
+            title={t("aboutMissionVisionTitle")}
             className="text-2xl md:text-3xl border-b-2 py-6"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div className="flex flex-col gap-4">
-              <h1 className="text-xl font-medium">Vision</h1>
+              <h1 className="text-xl font-medium">{t("aboutVisionTitle")}</h1>
               <p className="text-sm">
-                Our company’s vision is fully defined by a simple but comprehensive phrase — We Develop the World.
+                {t("aboutVisionDescription")}
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="text-xl font-medium">Mision</h1>
+              <h1 className="text-xl font-medium">{t("aboutMissionTitle")}</h1>
               <p className="text-sm">
-                We develop software. We work alongside our clients to make the world a better place for everyone.
+                {t("aboutMissionDescription")}
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="text-xl font-medium">Values</h1>
-              <p className="text-sm">We do what we love and we do it well, taking pride in our team and continuously evolving. By working flexibly and openly, we achieve the results that matter.</p>
+              <h1 className="text-xl font-medium">{t("aboutValuesTitle")}</h1>
+              <p className="text-sm">{t("aboutValuesDescription")}</p>
             </div>
           </div>
         </div>

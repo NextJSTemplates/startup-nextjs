@@ -251,22 +251,106 @@ export const translations = {
       "We schedule a meeting to walk through the proposal, address any questions, and finalize the approach to ensure everything aligns with your vision.",
     step4:
       "After mutual agreement, we sign the contract and immediately begin work—delivering efficient, high-quality results from day. By clicking Send, you consent to Classy Endeavors processing your personal data in accordance with our Privacy Policy. By providing your phone number, you agree that we may contact you via calls, SMS, or messaging apps",
-        // Footer translations
+    // Footer translations
     logoAlt: "logo",
     allRightsReserved: "All rights reserved.",
-  
+
     // Socials section
     socials: "Socials",
     github: "Github",
     linkedin: "LinkedIn",
     xTwitter: "X",
-    
+
     // Legal section
     legal: "Legal",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
-  
-    },
+    aboutInnovation: "Innovation",
+    aboutIntegrity: "Integrity",
+    aboutDrivenBy: "Driven by",
+    aboutDefinedBy: "Defined by",
+    aboutDescription:
+      "At Classy Endeavors, we're more than a software development agency — we're your strategic technology partner. With a passionate team of designers, developers, and engineers, we craft scalable, user-focused solutions that align with your business goals. From idea to execution, we commit to transparency, quality, and long-term impact",
+    aboutCTA: "Let's Bring Your Ideas to Action",
+
+    // Statistics Section
+    aboutStatsSectionTitle: "Brief Facts",
+    aboutStatsYearsSubtitle: "Years of expertise",
+    aboutStatsYearsDescription:
+      "A considerable experience in the IT market allows our company to leverage a rich technological and business management expertise to complete projects of various complexity levels most efficiently and quickly.",
+    aboutStatsProfessionalsSubtitle: "IT professionals",
+    aboutStatsProfessionalsDescription:
+      "Classy Endeavors is constantly increasing the number of highly qualified IT specialists in-house. Besides developers, our team consists of business analysts, UI/UX designers, QA specialists, and DevOps engineers.",
+    aboutStatsDomainsSubtitle: "domains",
+    aboutStatsDomainsDescription:
+      "Over the years, our team has accumulated extensive experience with numerous technology and business domains. We select specialists for projects based on their experience in the relevant industry.",
+    aboutStatsCustomersSubtitle: "recurring customers",
+    aboutStatsCustomersDescription:
+      "We focus on excellence and adhere to high standards, clean code, and user-centered solutions. Our customers appreciate effective delivery, come back with new projects, and recommend our services to other partners.",
+    aboutStatsProjectsSubtitle: "delivered projects",
+    aboutStatsProjectsDescription:
+      "As a software development company, Classy Endeavors creates a wide range of applications for achieving various business goals.",
+    aboutStatsCountriesSubtitle: "customers from 60+ countries",
+    aboutStatsCountriesDescription:
+      "We are supporters of a customer-oriented approach and position our relationships with clients as professionals for professionals.",
+
+    // Hero Stats
+    aboutHeroStatsActiveClients: "Active client accounts",
+    aboutHeroStatsProfessionals: "IT professionals",
+    aboutHeroStatsProjects: "End to-end projects",
+    aboutHeroStatsCountries: "customers from 60+ countries",
+    aboutHeroStatsDomains: "Domains",
+    aboutHeroStatsRecurring: "Recurring customers",
+    aboutMissionVisionTitle: "Mission and Vision",
+    aboutVisionTitle: "Vision",
+    aboutVisionDescription:
+      "Our company's vision is fully defined by a simple but comprehensive phrase — We Develop the World.",
+    aboutMissionTitle: "Mission",
+    aboutMissionDescription:
+      "We develop software. We work alongside our clients to make the world a better place for everyone.",
+    aboutValuesTitle: "Values",
+    aboutValuesDescription:
+      "We do what we love and we do it well, taking pride in our team and continuously evolving. By working flexibly and openly, we achieve the results that matter.",
+    aboutWhyUsTitle: "Why Us",
+    aboutWhyUsResultTitle: "Result-oriented",
+    aboutWhyUsResultDescription:
+      "For our company, the only indicator of the project's success is the achievement of the goals and objectives set by the client. Due to high-quality project management and a team of IT talents, we carry out our work as quickly and efficiently as possible.",
+    aboutWhyUsFlexibleTitle: "Flexible",
+    aboutWhyUsFlexibleDescription:
+      "Our team already numbers 2000+ highly qualified IT professionals. It allows us to quickly adapt to the needs of our clients. We provide rapid team ramp-up and easily scale it up and down depending on the changing conditions of the project.",
+    aboutWhyUsTransparentTitle: "Transparent",
+    aboutWhyUsTransparentDescription:
+      "Our cooperation with clients is always open and honest. We ensure regular communication, an established daily reporting system, and tracking tools according to the client's preferences. Thus, our clients can control all possible aspects of projects.",
+    aboutWhyUsExperiencedTitle: "Experienced",
+    aboutWhyUsExperiencedDescription:
+      "Classy Endeavors has established well-managed processes software development services. They are based on the best examples of IT outsourcing and can be easily aligned to the specifics of customers and their projects.",
+    aboutChallengesTitle: "Challenges Solved",
+    aboutChallengesExpertiseTitle: "IT expertise gap",
+    aboutChallengesExpertiseDescription:
+      "We help our customers get rid of expertise and technological gaps, offering the experienced teams of IT professionals to complete software development projects of any complexity.",
+    aboutChallengesCostTitle: "Cost reduction",
+    aboutChallengesCostDescription:
+      "Classy Endeavors provides IT outsourcing services and helps clients around the world to optimize software development costs. Our team has all the needed expertise to carry out turnkey projects, quickly complete tasks and bring all the benefits of outsourcing.",
+    aboutChallengesDigitalTitle: "Digital transformation",
+    aboutChallengesDigitalDescription:
+      "Our team can help you plan and implement digital transformation initiatives, covering all possible stages. Classy Endeavors is a reliable partner on the path to digital success and business optimization.",
+    aboutOurValues: "Our Values",
+    aboutSpeed: "Speed",
+    aboutSpeedDescription:
+      "We accelerate delivery and execution to help you achieve faster time-to-market with agile, efficient processes.",
+    aboutScale: "Scale",
+    aboutScaleDescription:
+      "We empower your business to grow and expand seamlessly, handling increased demand without compromising quality.",
+    aboutQuality: "Quality",
+    aboutQualityDescription:
+      "We maintain the highest standards to deliver exceptional results, ensuring consistency and attention to detail every time.",
+    aboutGlobalPresence: "Global Presence",
+    aboutGlobalPresenceDescription:
+      "With teams and partners worldwide, we provide reliable services wherever you need us, bridging gaps across markets.",
+    aboutCompliance: "Compliance",
+    aboutComplianceDescription:
+      "We strictly adhere to industry standards and regulations to protect your business and maintain full legal alignment.",
+  },
   fr: {
     // Navigation
     aboutUs: "À Propos",
@@ -522,7 +606,7 @@ export const translations = {
       "Nous planifions une réunion pour passer en revue la proposition, répondre à toutes les questions et finaliser l'approche pour nous assurer que tout correspond à votre vision.",
     step4:
       "Après accord mutuel, nous signons le contrat et commençons immédiatement le travail - livrant des résultats efficaces et de haute qualité dès le premier jour. En cliquant sur Envoyer, vous consentez à ce que Classy Endeavors traite vos données personnelles conformément à notre Politique de Confidentialité. En fournissant votre numéro de téléphone, vous acceptez que nous puissions vous contacter par appels, SMS ou applications de messagerie",
-  logoAlt: "logo",
+    logoAlt: "logo",
     allRightsReserved: "Tous droits réservés.",
 
     // Socials section
@@ -530,12 +614,97 @@ export const translations = {
     github: "Github",
     linkedin: "LinkedIn",
     xTwitter: "X",
-    
+
     // Legal section
     legal: "Légal",
     privacyPolicy: "Politique de Confidentialité",
     termsOfService: "Conditions d'Utilisation",
-    },
+    aboutInnovation: "Innovation",
+    aboutIntegrity: "Intégrité",
+    aboutDrivenBy: "Motivé par",
+    aboutDefinedBy: "Défini par",
+    aboutDescription:
+      "Chez Classy Endeavors, nous sommes plus qu'une agence de développement logiciel — nous sommes votre partenaire technologique stratégique. Avec une équipe passionnée de designers, développeurs et ingénieurs, nous créons des solutions évolutives et axées sur l'utilisateur qui s'alignent sur vos objectifs commerciaux. De l'idée à l'exécution, nous nous engageons à la transparence, la qualité et l'impact à long terme",
+    aboutCTA: "Donnons Vie à Vos Idées",
+    aboutStatsSectionTitle: "Faits Brefs",
+    aboutStatsYearsSubtitle: "Années d'expertise",
+    aboutStatsYearsDescription:
+      "Une expérience considérable sur le marché informatique permet à notre entreprise de tirer parti d'une riche expertise technologique et de gestion d'entreprise pour réaliser des projets de différents niveaux de complexité de manière plus efficace et rapide.",
+    aboutStatsProfessionalsSubtitle: "professionnels IT",
+    aboutStatsProfessionalsDescription:
+      "Classy Endeavors augmente constamment le nombre de spécialistes IT hautement qualifiés en interne. En plus des développeurs, notre équipe se compose d'analystes commerciaux, de designers UI/UX, de spécialistes QA et d'ingénieurs DevOps.",
+    aboutStatsDomainsSubtitle: "domaines",
+    aboutStatsDomainsDescription:
+      "Au fil des années, notre équipe a accumulé une vaste expérience dans de nombreux domaines technologiques et commerciaux. Nous sélectionnons les spécialistes pour les projets en fonction de leur expérience dans l'industrie pertinente.",
+    aboutStatsCustomersSubtitle: "clients récurrents",
+    aboutStatsCustomersDescription:
+      "Nous nous concentrons sur l'excellence et adhérons à des normes élevées, du code propre et des solutions centrées sur l'utilisateur. Nos clients apprécient une livraison efficace, reviennent avec de nouveaux projets et recommandent nos services à d'autres partenaires.",
+    aboutStatsProjectsSubtitle: "projets livrés",
+    aboutStatsProjectsDescription:
+      "En tant qu'entreprise de développement logiciel, Classy Endeavors crée une large gamme d'applications pour atteindre divers objectifs commerciaux.",
+    aboutStatsCountriesSubtitle: "clients de 60+ pays",
+    aboutStatsCountriesDescription:
+      "Nous soutenons une approche centrée sur le client et positionnons nos relations avec les clients comme des professionnels pour des professionnels.",
+
+    // Hero Stats
+    aboutHeroStatsActiveClients: "Comptes clients actifs",
+    aboutHeroStatsProfessionals: "professionnels IT",
+    aboutHeroStatsProjects: "Projets de bout en bout",
+    aboutHeroStatsCountries: "clients de 60+ pays",
+    aboutHeroStatsDomains: "Domaines",
+    aboutHeroStatsRecurring: "Clients récurrents",
+    // Mission and Vision Section
+    aboutMissionVisionTitle: "Mission et Vision",
+    aboutVisionTitle: "Vision",
+    aboutVisionDescription:
+      "La vision de notre entreprise est entièrement définie par une phrase simple mais complète — Nous Développons le Monde.",
+    aboutMissionTitle: "Mission",
+    aboutMissionDescription:
+      "Nous développons des logiciels. Nous travaillons aux côtés de nos clients pour rendre le monde meilleur pour tous.",
+    aboutValuesTitle: "Valeurs",
+    aboutValuesDescription:
+      "Nous faisons ce que nous aimons et nous le faisons bien, en étant fiers de notre équipe et en évoluant continuellement. En travaillant de manière flexible et ouverte, nous obtenons les résultats qui comptent.",
+    // Why Us Section
+    aboutWhyUsTitle: "Pourquoi Nous",
+    aboutWhyUsResultTitle: "Axé sur les résultats",
+    aboutWhyUsResultDescription:
+      "Pour notre entreprise, le seul indicateur du succès du projet est l'atteinte des buts et objectifs fixés par le client. Grâce à une gestion de projet de haute qualité et à une équipe de talents IT, nous réalisons notre travail aussi rapidement et efficacement que possible.",
+    aboutWhyUsFlexibleTitle: "Flexible",
+    aboutWhyUsFlexibleDescription:
+      "Notre équipe compte déjà plus de 2000 professionnels IT hautement qualifiés. Cela nous permet de nous adapter rapidement aux besoins de nos clients. Nous fournissons une montée en puissance rapide de l'équipe et l'adaptons facilement selon les conditions changeantes du projet.",
+    aboutWhyUsTransparentTitle: "Transparent",
+    aboutWhyUsTransparentDescription:
+      "Notre coopération avec les clients est toujours ouverte et honnête. Nous assurons une communication régulière, un système de rapport quotidien établi, et des outils de suivi selon les préférences du client. Ainsi, nos clients peuvent contrôler tous les aspects possibles des projets.",
+    aboutWhyUsExperiencedTitle: "Expérimenté",
+    aboutWhyUsExperiencedDescription:
+      "Classy Endeavors a établi des processus bien gérés pour les services de développement logiciel. Ils sont basés sur les meilleurs exemples d'externalisation IT et peuvent être facilement alignés aux spécificités des clients et de leurs projets.",
+    aboutChallengesTitle: "Défis Résolus",
+    aboutChallengesExpertiseTitle: "Écart d'expertise IT",
+    aboutChallengesExpertiseDescription:
+      "Nous aidons nos clients à se débarrasser des lacunes d'expertise et technologiques, en offrant des équipes expérimentées de professionnels IT pour réaliser des projets de développement logiciel de toute complexité.",
+    aboutChallengesCostTitle: "Réduction des coûts",
+    aboutChallengesCostDescription:
+      "Classy Endeavors fournit des services d'externalisation IT et aide les clients du monde entier à optimiser les coûts de développement logiciel. Notre équipe possède toute l'expertise nécessaire pour réaliser des projets clés en main, accomplir rapidement les tâches et apporter tous les avantages de l'externalisation.",
+    aboutChallengesDigitalTitle: "Transformation numérique",
+    aboutChallengesDigitalDescription:
+      "Notre équipe peut vous aider à planifier et mettre en œuvre des initiatives de transformation numérique, couvrant toutes les étapes possibles. Classy Endeavors est un partenaire fiable sur le chemin du succès numérique et de l'optimisation commerciale.",
+    aboutOurValues: "Nos Valeurs",
+    aboutSpeed: "Rapidité",
+    aboutSpeedDescription:
+      "Nous accélérons la livraison et l'exécution pour vous aider à atteindre un time-to-market plus rapide avec des processus agiles et efficaces.",
+    aboutScale: "Échelle",
+    aboutScaleDescription:
+      "Nous donnons à votre entreprise les moyens de croître et de s'étendre de manière transparente, en gérant une demande accrue sans compromettre la qualité.",
+    aboutQuality: "Qualité",
+    aboutQualityDescription:
+      "Nous maintenons les normes les plus élevées pour livrer des résultats exceptionnels, garantissant cohérence et attention aux détails à chaque fois.",
+    aboutGlobalPresence: "Présence Mondiale",
+    aboutGlobalPresenceDescription:
+      "Avec des équipes et des partenaires dans le monde entier, nous fournissons des services fiables partout où vous en avez besoin, comblant les lacunes entre les marchés.",
+    aboutCompliance: "Conformité",
+    aboutComplianceDescription:
+      "Nous respectons strictement les normes et réglementations de l'industrie pour protéger votre entreprise et maintenir un alignement juridique complet.",
+  },
   nl: {
     ourTechnologies: "Onze technologieën",
     // Hero/GoogleGeminiEffect Component
@@ -790,7 +959,7 @@ export const translations = {
       "We plannen een vergadering om het voorstel door te nemen, eventuele vragen te beantwoorden en de aanpak te finaliseren om ervoor te zorgen dat alles aansluit bij uw visie.",
     step4:
       "Na wederzijdse overeenstemming ondertekenen we het contract en beginnen onmiddellijk met het werk - waarbij we vanaf dag één efficiënte, hoogwaardige resultaten leveren. Door op Verzenden te klikken, stemt u ermee in dat Classy Endeavors uw persoonlijke gegevens verwerkt in overeenstemming met ons Privacybeleid. Door uw telefoonnummer op te geven, gaat u ermee akkoord dat we contact met u opnemen via oproepen, SMS of messaging-apps",
-  // Footer translations
+    // Footer translations
     logoAlt: "logo",
     allRightsReserved: "Alle rechten voorbehouden.",
 
@@ -799,12 +968,95 @@ export const translations = {
     github: "Github",
     linkedin: "LinkedIn",
     xTwitter: "X",
-    
+
     // Legal section
     legal: "Juridisch",
     privacyPolicy: "Privacybeleid",
     termsOfService: "Servicevoorwaarden",
-    },
+    aboutInnovation: "Innovatie",
+    aboutIntegrity: "Integriteit",
+    aboutDrivenBy: "Gedreven door",
+    aboutDefinedBy: "Gedefinieerd door",
+    aboutDescription:
+      "Bij Classy Endeavors zijn we meer dan een softwareontwikkelingsbureau — we zijn uw strategische technologiepartner. Met een gepassioneerd team van ontwerpers, ontwikkelaars en ingenieurs creëren we schaalbare, gebruikersgerichte oplossingen die aansluiten bij uw bedrijfsdoelen. Van idee tot uitvoering, wij zetten ons in voor transparantie, kwaliteit en langetermijnimpact",
+    aboutCTA: "Laten We Uw Ideeën tot Actie Brengen",
+    aboutStatsSectionTitle: "Korte Feiten",
+    aboutStatsYearsSubtitle: "Jaren expertise",
+    aboutStatsYearsDescription:
+      "Aanzienlijke ervaring in de IT-markt stelt ons bedrijf in staat om rijke technologische en bedrijfsmanagement expertise te benutten om projecten van verschillende complexiteitsniveaus het meest efficiënt en snel te voltooien.",
+    aboutStatsProfessionalsSubtitle: "IT-professionals",
+    aboutStatsProfessionalsDescription:
+      "Classy Endeavors vergroot voortdurend het aantal hooggekwalificeerde IT-specialisten in huis. Naast ontwikkelaars bestaat ons team uit business analisten, UI/UX designers, QA specialisten en DevOps engineers.",
+    aboutStatsDomainsSubtitle: "domeinen",
+    aboutStatsDomainsDescription:
+      "Door de jaren heen heeft ons team uitgebreide ervaring opgedaan met talrijke technologie- en bedrijfsdomeinen. We selecteren specialisten voor projecten op basis van hun ervaring in de relevante industrie.",
+    aboutStatsCustomersSubtitle: "terugkerende klanten",
+    aboutStatsCustomersDescription:
+      "We focussen op excellentie en houden ons aan hoge standaarden, schone code en gebruikersgerichte oplossingen. Onze klanten waarderen effectieve levering, komen terug met nieuwe projecten en bevelen onze diensten aan bij andere partners.",
+    aboutStatsProjectsSubtitle: "geleverde projecten",
+    aboutStatsProjectsDescription:
+      "Als softwareontwikkelingsbedrijf creëert Classy Endeavors een breed scala aan applicaties voor het bereiken van verschillende bedrijfsdoelen.",
+    aboutStatsCountriesSubtitle: "klanten uit 60+ landen",
+    aboutStatsCountriesDescription:
+      "We steunen een klantgerichte benadering en positioneren onze relaties met klanten als professionals voor professionals.",
+
+    // Hero Stats
+    aboutHeroStatsActiveClients: "Actieve klantaccounts",
+    aboutHeroStatsProfessionals: "IT-professionals",
+    aboutHeroStatsProjects: "End-to-end projecten",
+    aboutHeroStatsCountries: "klanten uit 60+ landen",
+    aboutHeroStatsDomains: "Domeinen",
+    aboutHeroStatsRecurring: "Terugkerende klanten",
+    aboutMissionVisionTitle: "Missie en Visie",
+    aboutVisionTitle: "Visie",
+    aboutVisionDescription:
+      "De visie van ons bedrijf wordt volledig gedefinieerd door een eenvoudige maar uitgebreide zin — Wij Ontwikkelen de Wereld.",
+    aboutMissionTitle: "Missie",
+    aboutMissionDescription:
+      "Wij ontwikkelen software. We werken samen met onze klanten om de wereld een betere plek te maken voor iedereen.",
+    aboutValuesTitle: "Waarden",
+    aboutValuesDescription:
+      "We doen wat we leuk vinden en we doen het goed, trots op ons team en voortdurend evoluerend. Door flexibel en open te werken, bereiken we de resultaten die ertoe doen.",
+    aboutWhyUsTitle: "Waarom Wij",
+    aboutWhyUsResultTitle: "Resultaatgericht",
+    aboutWhyUsResultDescription:
+      "Voor ons bedrijf is de enige indicator van projectsucces het bereiken van de doelen en doelstellingen die door de klant zijn gesteld. Dankzij hoogwaardige projectmanagement en een team van IT-talenten, voeren we ons werk zo snel en efficiënt mogelijk uit.",
+    aboutWhyUsFlexibleTitle: "Flexibel",
+    aboutWhyUsFlexibleDescription:
+      "Ons team telt al meer dan 2000 hooggekwalificeerde IT-professionals. Dit stelt ons in staat om snel aan te passen aan de behoeften van onze klanten. We bieden snelle team opschaling en schalen gemakkelijk op en neer afhankelijk van de veranderende projectomstandigheden.",
+    aboutWhyUsTransparentTitle: "Transparant",
+    aboutWhyUsTransparentDescription:
+      "Onze samenwerking met klanten is altijd open en eerlijk. We zorgen voor regelmatige communicatie, een vastgesteld dagelijks rapportagesysteem, en tracking tools volgens de voorkeuren van de klant. Zo kunnen onze klanten alle mogelijke aspecten van projecten controleren.",
+    aboutWhyUsExperiencedTitle: "Ervaren",
+    aboutWhyUsExperiencedDescription:
+      "Classy Endeavors heeft goed beheerde processen voor softwareontwikkelingsdiensten vastgesteld. Ze zijn gebaseerd op de beste voorbeelden van IT-outsourcing en kunnen gemakkelijk worden afgestemd op de specificaties van klanten en hun projecten.",
+    aboutChallengesTitle: "Opgeloste Uitdagingen",
+    aboutChallengesExpertiseTitle: "IT-expertise kloof",
+    aboutChallengesExpertiseDescription:
+      "We helpen onze klanten om expertise- en technologische kloven weg te nemen, door ervaren teams van IT-professionals aan te bieden voor het voltooien van softwareontwikkelingsprojecten van elke complexiteit.",
+    aboutChallengesCostTitle: "Kostenreductie",
+    aboutChallengesCostDescription:
+      "Classy Endeavors biedt IT-outsourcingdiensten en helpt klanten wereldwijd om softwareontwikkelingskosten te optimaliseren. Ons team heeft alle benodigde expertise om kant-en-klare projecten uit te voeren, taken snel te voltooien en alle voordelen van outsourcing te brengen.",
+    aboutChallengesDigitalTitle: "Digitale transformatie",
+    aboutChallengesDigitalDescription:
+      "Ons team kan u helpen bij het plannen en implementeren van digitale transformatie-initiatieven, waarbij alle mogelijke stadia worden gedekt. Classy Endeavors is een betrouwbare partner op het pad naar digitaal succes en bedrijfsoptimalisatie.",
+    aboutOurValues: "Onze Waarden",
+    aboutSpeed: "Snelheid",
+    aboutSpeedDescription:
+      "Wij versnellen levering en uitvoering om u te helpen snellere time-to-market te bereiken met wendbare, efficiënte processen.",
+    aboutScale: "Schaal",
+    aboutScaleDescription:
+      "Wij stellen uw bedrijf in staat om naadloos te groeien en uit te breiden, waarbij we toegenomen vraag aankunnen zonder kwaliteit in te boeten.",
+    aboutQuality: "Kwaliteit",
+    aboutQualityDescription:
+      "Wij handhaven de hoogste standaarden om uitzonderlijke resultaten te leveren, waarbij we consistentie en aandacht voor detail garanderen.",
+    aboutGlobalPresence: "Wereldwijde Aanwezigheid",
+    aboutGlobalPresenceDescription:
+      "Met teams en partners wereldwijd bieden wij betrouwbare diensten waar u ons ook nodig heeft, waarbij we kloven tussen markten overbruggen.",
+    aboutCompliance: "Naleving",
+    aboutComplianceDescription:
+      "Wij houden ons strikt aan industriestandaarden en regelgeving om uw bedrijf te beschermen en volledige juridische afstemming te behouden.",
+  },
   es: {
     // Hero/GoogleGeminiEffect Component
     ourTechnologies: "Nuestras Tecnologías",
@@ -1059,6 +1311,89 @@ export const translations = {
       "Programamos una reunión para revisar la propuesta, abordar cualquier pregunta y finalizar el enfoque para asegurar que todo se alinee con tu visión.",
     step4:
       "Después del acuerdo mutuo, firmamos el contrato y comenzamos inmediatamente el trabajo, entregando resultados eficientes y de alta calidad desde el primer día. Al hacer clic en Enviar, consientes que Classy Endeavors procese tus datos personales de acuerdo con nuestra Política de Privacidad. Al proporcionar tu número de teléfono, aceptas que podemos contactarte a través de llamadas, SMS o aplicaciones de mensajería",
+    aboutInnovation: "Innovación",
+    aboutIntegrity: "Integridad",
+    aboutDrivenBy: "Impulsado por",
+    aboutDefinedBy: "Definido por",
+    aboutDescription:
+      "En Classy Endeavors, somos más que una agencia de desarrollo de software — somos su socio tecnológico estratégico. Con un equipo apasionado de diseñadores, desarrolladores e ingenieros, creamos soluciones escalables y centradas en el usuario que se alinean con sus objetivos comerciales. Desde la idea hasta la ejecución, nos comprometemos con la transparencia, la calidad y el impacto a largo plazo",
+    aboutCTA: "Llevemos Sus Ideas a la Acción",
+    aboutStatsSectionTitle: "Datos Breves",
+    aboutStatsYearsSubtitle: "Años de experiencia",
+    aboutStatsYearsDescription:
+      "Una experiencia considerable en el mercado de TI permite a nuestra empresa aprovechar una rica experiencia tecnológica y de gestión empresarial para completar proyectos de varios niveles de complejidad de manera más eficiente y rápida.",
+    aboutStatsProfessionalsSubtitle: "profesionales de TI",
+    aboutStatsProfessionalsDescription:
+      "Classy Endeavors aumenta constantemente el número de especialistas en TI altamente calificados internamente. Además de desarrolladores, nuestro equipo consiste en analistas de negocio, diseñadores UI/UX, especialistas en QA e ingenieros DevOps.",
+    aboutStatsDomainsSubtitle: "dominios",
+    aboutStatsDomainsDescription:
+      "A lo largo de los años, nuestro equipo ha acumulado amplia experiencia con numerosos dominios tecnológicos y empresariales. Seleccionamos especialistas para proyectos basándose en su experiencia en la industria relevante.",
+    aboutStatsCustomersSubtitle: "clientes recurrentes",
+    aboutStatsCustomersDescription:
+      "Nos enfocamos en la excelencia y adherimos a altos estándares, código limpio y soluciones centradas en el usuario. Nuestros clientes aprecian la entrega efectiva, regresan con nuevos proyectos y recomiendan nuestros servicios a otros socios.",
+    aboutStatsProjectsSubtitle: "proyectos entregados",
+    aboutStatsProjectsDescription:
+      "Como empresa de desarrollo de software, Classy Endeavors crea una amplia gama de aplicaciones para lograr varios objetivos comerciales.",
+    aboutStatsCountriesSubtitle: "clientes de 60+ países",
+    aboutStatsCountriesDescription:
+      "Somos partidarios de un enfoque orientado al cliente y posicionamos nuestras relaciones con los clientes como profesionales para profesionales.",
+
+    // Hero Stats
+    aboutHeroStatsActiveClients: "Cuentas de clientes activos",
+    aboutHeroStatsProfessionals: "profesionales de TI",
+    aboutHeroStatsProjects: "Proyectos de extremo a extremo",
+    aboutHeroStatsCountries: "clientes de 60+ países",
+    aboutHeroStatsDomains: "Dominios",
+    aboutHeroStatsRecurring: "Clientes recurrentes",
+    aboutMissionVisionTitle: "Misión y Visión",
+    aboutVisionTitle: "Visión",
+    aboutVisionDescription:
+      "La visión de nuestra empresa está completamente definida por una frase simple pero integral — Desarrollamos el Mundo.",
+    aboutMissionTitle: "Misión",
+    aboutMissionDescription:
+      "Desarrollamos software. Trabajamos junto a nuestros clientes para hacer del mundo un lugar mejor para todos.",
+    aboutValuesTitle: "Valores",
+    aboutValuesDescription:
+      "Hacemos lo que amamos y lo hacemos bien, sintiendo orgullo por nuestro equipo y evolucionando continuamente. Al trabajar de manera flexible y abierta, logramos los resultados que importan.",
+    aboutWhyUsTitle: "Por Qué Nosotros",
+    aboutWhyUsResultTitle: "Orientado a resultados",
+    aboutWhyUsResultDescription:
+      "Para nuestra empresa, el único indicador del éxito del proyecto es el logro de las metas y objetivos establecidos por el cliente. Debido a la gestión de proyectos de alta calidad y un equipo de talentos de TI, llevamos a cabo nuestro trabajo de la manera más rápida y eficiente posible.",
+    aboutWhyUsFlexibleTitle: "Flexible",
+    aboutWhyUsFlexibleDescription:
+      "Nuestro equipo ya cuenta con más de 2000 profesionales de TI altamente calificados. Esto nos permite adaptarnos rápidamente a las necesidades de nuestros clientes. Proporcionamos rápida ampliación del equipo y lo escalamos fácilmente hacia arriba y hacia abajo dependiendo de las condiciones cambiantes del proyecto.",
+    aboutWhyUsTransparentTitle: "Transparente",
+    aboutWhyUsTransparentDescription:
+      "Nuestra cooperación con los clientes es siempre abierta y honesta. Aseguramos comunicación regular, un sistema de informes diarios establecido, y herramientas de seguimiento según las preferencias del cliente. Así, nuestros clientes pueden controlar todos los aspectos posibles de los proyectos.",
+    aboutWhyUsExperiencedTitle: "Experimentado",
+    aboutWhyUsExperiencedDescription:
+      "Classy Endeavors ha establecido procesos bien gestionados para servicios de desarrollo de software. Están basados en los mejores ejemplos de externalización de TI y pueden alinearse fácilmente con las especificidades de los clientes y sus proyectos.",
+    aboutChallengesTitle: "Desafíos Resueltos",
+    aboutChallengesExpertiseTitle: "Brecha de experiencia en TI",
+    aboutChallengesExpertiseDescription:
+      "Ayudamos a nuestros clientes a deshacerse de las brechas de experiencia y tecnológicas, ofreciendo equipos experimentados de profesionales de TI para completar proyectos de desarrollo de software de cualquier complejidad.",
+    aboutChallengesCostTitle: "Reducción de costos",
+    aboutChallengesCostDescription:
+      "Classy Endeavors proporciona servicios de externalización de TI y ayuda a clientes de todo el mundo a optimizar los costos de desarrollo de software. Nuestro equipo tiene toda la experiencia necesaria para llevar a cabo proyectos llave en mano, completar tareas rápidamente y traer todos los beneficios de la externalización.",
+    aboutChallengesDigitalTitle: "Transformación digital",
+    aboutChallengesDigitalDescription:
+      "Nuestro equipo puede ayudarte a planificar e implementar iniciativas de transformación digital, cubriendo todas las etapas posibles. Classy Endeavors es un socio confiable en el camino hacia el éxito digital y la optimización empresarial.",
+    aboutOurValues: "Nuestros Valores",
+    aboutSpeed: "Velocidad",
+    aboutSpeedDescription:
+      "Aceleramos la entrega y ejecución para ayudarte a lograr un time-to-market más rápido con procesos ágiles y eficientes.",
+    aboutScale: "Escala",
+    aboutScaleDescription:
+      "Empoderamos a tu negocio para crecer y expandirse sin problemas, manejando una demanda aumentada sin comprometer la calidad.",
+    aboutQuality: "Calidad",
+    aboutQualityDescription:
+      "Mantenemos los más altos estándares para entregar resultados excepcionales, asegurando consistencia y atención al detalle en todo momento.",
+    aboutGlobalPresence: "Presencia Global",
+    aboutGlobalPresenceDescription:
+      "Con equipos y socios en todo el mundo, proporcionamos servicios confiables donde sea que nos necesites, cerrando brechas entre mercados.",
+    aboutCompliance: "Cumplimiento",
+    aboutComplianceDescription:
+      "Nos adherimos estrictamente a los estándares y regulaciones de la industria para proteger tu negocio y mantener una alineación legal completa.",
   },
   de: {
     // Hero/GoogleGeminiEffect Component
@@ -1315,18 +1650,101 @@ export const translations = {
       "Wir vereinbaren ein Meeting, um den Vorschlag durchzugehen, alle Fragen zu beantworten und den Ansatz zu finalisieren, um sicherzustellen, dass alles mit Ihrer Vision übereinstimmt.",
     step4:
       "Nach gegenseitiger Vereinbarung unterzeichnen wir den Vertrag und beginnen sofort mit der Arbeit - und liefern vom ersten Tag an effiziente, hochwertige Ergebnisse. Durch Klicken auf Senden stimmen Sie zu, dass Classy Endeavors Ihre persönlichen Daten gemäß unserer Datenschutzrichtlinie verarbeitet. Durch Angabe Ihrer Telefonnummer stimmen Sie zu, dass wir Sie über Anrufe, SMS oder Messaging-Apps kontaktieren können",
-  logoAlt: "logo",
+    logoAlt: "logo",
     allRightsReserved: "Todos los derechos reservados.",
-  
+
     // Socials section
     socials: "Redes Sociales",
     github: "Github",
     linkedin: "LinkedIn",
     xTwitter: "X",
-    
+
     // Legal section
     legal: "Legal",
     privacyPolicy: "Política de Privacidad",
     termsOfService: "Términos de Servicio",
-    },
+    aboutInnovation: "Innovation",
+    aboutIntegrity: "Integrität",
+    aboutDrivenBy: "Angetrieben von",
+    aboutDefinedBy: "Definiert durch",
+    aboutDescription:
+      "Bei Classy Endeavors sind wir mehr als nur eine Softwareentwicklungsagentur — wir sind Ihr strategischer Technologiepartner. Mit einem leidenschaftlichen Team aus Designern, Entwicklern und Ingenieuren schaffen wir skalierbare, benutzerorientierte Lösungen, die sich an Ihren Geschäftszielen orientieren. Von der Idee bis zur Umsetzung verpflichten wir uns zu Transparenz, Qualität und langfristiger Wirkung",
+    aboutCTA: "Bringen Wir Ihre Ideen in Aktion",
+    aboutStatsSectionTitle: "Kurze Fakten",
+    aboutStatsYearsSubtitle: "Jahre Expertise",
+    aboutStatsYearsDescription:
+      "Beträchtliche Erfahrung im IT-Markt ermöglicht es unserem Unternehmen, reiche technologische und Geschäftsmanagement-Expertise zu nutzen, um Projekte verschiedener Komplexitätsstufen am effizientesten und schnellsten abzuschließen.",
+    aboutStatsProfessionalsSubtitle: "IT-Fachkräfte",
+    aboutStatsProfessionalsDescription:
+      "Classy Endeavors erhöht kontinuierlich die Anzahl hochqualifizierter IT-Spezialisten im Haus. Neben Entwicklern besteht unser Team aus Business-Analysten, UI/UX-Designern, QA-Spezialisten und DevOps-Ingenieuren.",
+    aboutStatsDomainsSubtitle: "Bereiche",
+    aboutStatsDomainsDescription:
+      "Über die Jahre hat unser Team umfangreiche Erfahrungen mit zahlreichen Technologie- und Geschäftsbereichen gesammelt. Wir wählen Spezialisten für Projekte basierend auf ihrer Erfahrung in der relevanten Branche aus.",
+    aboutStatsCustomersSubtitle: "wiederkehrende Kunden",
+    aboutStatsCustomersDescription:
+      "Wir konzentrieren uns auf Exzellenz und halten uns an hohe Standards, sauberen Code und benutzerorientierte Lösungen. Unsere Kunden schätzen effektive Lieferung, kommen mit neuen Projekten zurück und empfehlen unsere Dienste anderen Partnern.",
+    aboutStatsProjectsSubtitle: "gelieferte Projekte",
+    aboutStatsProjectsDescription:
+      "Als Softwareentwicklungsunternehmen erstellt Classy Endeavors eine breite Palette von Anwendungen zur Erreichung verschiedener Geschäftsziele.",
+    aboutStatsCountriesSubtitle: "Kunden aus 60+ Ländern",
+    aboutStatsCountriesDescription:
+      "Wir unterstützen einen kundenorientierten Ansatz und positionieren unsere Beziehungen zu Kunden als Profis für Profis.",
+
+    // Hero Stats
+    aboutHeroStatsActiveClients: "Aktive Kundenkonten",
+    aboutHeroStatsProfessionals: "IT-Fachkräfte",
+    aboutHeroStatsProjects: "End-to-End-Projekte",
+    aboutHeroStatsCountries: "Kunden aus 60+ Ländern",
+    aboutHeroStatsDomains: "Bereiche",
+    aboutHeroStatsRecurring: "Wiederkehrende Kunden",
+    aboutMissionVisionTitle: "Mission und Vision",
+    aboutVisionTitle: "Vision",
+    aboutVisionDescription:
+      "Die Vision unseres Unternehmens wird vollständig durch einen einfachen, aber umfassenden Satz definiert — Wir Entwickeln die Welt.",
+    aboutMissionTitle: "Mission",
+    aboutMissionDescription:
+      "Wir entwickeln Software. Wir arbeiten mit unseren Kunden zusammen, um die Welt für alle zu einem besseren Ort zu machen.",
+    aboutValuesTitle: "Werte",
+    aboutValuesDescription:
+      "Wir tun, was wir lieben, und wir tun es gut, sind stolz auf unser Team und entwickeln uns kontinuierlich weiter. Durch flexibles und offenes Arbeiten erzielen wir die Ergebnisse, die zählen.",
+    aboutWhyUsTitle: "Warum Wir",
+    aboutWhyUsResultTitle: "Ergebnisorientiert",
+    aboutWhyUsResultDescription:
+      "Für unser Unternehmen ist der einzige Indikator für den Projekterfolg das Erreichen der vom Kunden gesetzten Ziele und Vorgaben. Durch hochwertiges Projektmanagement und ein Team von IT-Talenten führen wir unsere Arbeit so schnell und effizient wie möglich durch.",
+    aboutWhyUsFlexibleTitle: "Flexibel",
+    aboutWhyUsFlexibleDescription:
+      "Unser Team umfasst bereits über 2000 hochqualifizierte IT-Fachkräfte. Dies ermöglicht es uns, uns schnell an die Bedürfnisse unserer Kunden anzupassen. Wir bieten schnelle Team-Aufstockung und skalieren je nach sich ändernden Projektbedingungen einfach hoch und runter.",
+    aboutWhyUsTransparentTitle: "Transparent",
+    aboutWhyUsTransparentDescription:
+      "Unsere Zusammenarbeit mit Kunden ist immer offen und ehrlich. Wir gewährleisten regelmäßige Kommunikation, ein etabliertes tägliches Berichtssystem und Tracking-Tools entsprechend den Kundenpräferenzen. So können unsere Kunden alle möglichen Aspekte der Projekte kontrollieren.",
+    aboutWhyUsExperiencedTitle: "Erfahren",
+    aboutWhyUsExperiencedDescription:
+      "Classy Endeavors hat gut verwaltete Prozesse für Softwareentwicklungsdienstleistungen etabliert. Sie basieren auf den besten Beispielen von IT-Outsourcing und können leicht an die Spezifika der Kunden und ihrer Projekte angepasst werden.",
+    aboutChallengesTitle: "Gelöste Herausforderungen",
+    aboutChallengesExpertiseTitle: "IT-Expertise-Lücke",
+    aboutChallengesExpertiseDescription:
+      "Wir helfen unseren Kunden, Expertise- und Technologielücken zu beseitigen, indem wir erfahrene Teams von IT-Fachkräften anbieten, um Softwareentwicklungsprojekte jeder Komplexität abzuschließen.",
+    aboutChallengesCostTitle: "Kostenreduzierung",
+    aboutChallengesCostDescription:
+      "Classy Endeavors bietet IT-Outsourcing-Dienstleistungen und hilft Kunden weltweit, Softwareentwicklungskosten zu optimieren. Unser Team verfügt über alle erforderlichen Fachkenntnisse, um schlüsselfertige Projekte durchzuführen, Aufgaben schnell zu erledigen und alle Vorteile des Outsourcings zu bringen.",
+    aboutChallengesDigitalTitle: "Digitale Transformation",
+    aboutChallengesDigitalDescription:
+      "Unser Team kann Ihnen bei der Planung und Umsetzung von digitalen Transformationsinitiativen helfen und dabei alle möglichen Phasen abdecken. Classy Endeavors ist ein zuverlässiger Partner auf dem Weg zum digitalen Erfolg und zur Geschäftsoptimierung.",
+    aboutOurValues: "Unsere Werte",
+    aboutSpeed: "Geschwindigkeit",
+    aboutSpeedDescription:
+      "Wir beschleunigen Lieferung und Ausführung, um Ihnen dabei zu helfen, eine schnellere Markteinführungszeit mit agilen, effizienten Prozessen zu erreichen.",
+    aboutScale: "Skalierung",
+    aboutScaleDescription:
+      "Wir befähigen Ihr Unternehmen, nahtlos zu wachsen und zu expandieren, wobei wir erhöhte Nachfrage bewältigen, ohne die Qualität zu beeinträchtigen.",
+    aboutQuality: "Qualität",
+    aboutQualityDescription:
+      "Wir halten die höchsten Standards aufrecht, um außergewöhnliche Ergebnisse zu liefern und dabei Konsistenz und Aufmerksamkeit für Details jedes Mal zu gewährleisten.",
+    aboutGlobalPresence: "Globale Präsenz",
+    aboutGlobalPresenceDescription:
+      "Mit Teams und Partnern weltweit bieten wir zuverlässige Dienstleistungen, wo immer Sie uns brauchen, und überbrücken Lücken zwischen Märkten.",
+    aboutCompliance: "Compliance",
+    aboutComplianceDescription:
+      "Wir halten uns strikt an Industriestandards und Vorschriften, um Ihr Unternehmen zu schützen und vollständige rechtliche Ausrichtung zu gewährleisten.",
+  },
 };

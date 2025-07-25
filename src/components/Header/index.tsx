@@ -188,6 +188,7 @@ const Header = () => {
               </Link>
             </Button>
 
+            {/* Mobile Language Selector */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button

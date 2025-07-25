@@ -1,30 +1,46 @@
 "use client"
 
 import React from 'react'
-import { whyUsData } from './data'
 import SectionTitle from '@/components/Common/SectionTitle';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
+import { useLanguage } from '@/components/Header'
+import { Badge, CheckCircle, Route, Scan } from "lucide-react";
 
 const WhyUs = () => {
+  const { t } = useLanguage() 
+
+  const whyUsData = [
+    {
+      icon: CheckCircle,
+      title: t("aboutWhyUsResultTitle"),
+      description: t("aboutWhyUsResultDescription"),
+      link: "/"
+    },
+    {
+      icon: Route,
+      title: t("aboutWhyUsFlexibleTitle"),
+      description: t("aboutWhyUsFlexibleDescription"),
+      link: "/"
+    },
+    {
+      icon: Scan, 
+      title: t("aboutWhyUsTransparentTitle"),
+      description: t("aboutWhyUsTransparentDescription"),
+      link: "/"
+    },
+    {
+      icon: Badge,
+      title: t("aboutWhyUsExperiencedTitle"),
+      description: t("aboutWhyUsExperiencedDescription"),
+      link: "/"
+    }
+  ]
+
   return (
     <section className="relative overflow-hidden z-10 pt-20">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-center">
-          <SectionTitle title="Why Us" className="text-2xl md:text-3xl mb-12" />
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {whyUsData.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div className="flex flex-col gap-4 md:gap-6" key={index}>
-                  <div className="flex gap-2 hover:text-primary transition duration-200 cursor-pointer">
-                    <Icon className="size-6" />
-                    <p className="text-base font-medium">{item.title}</p>
-                  </div>
-                  <p className="text-[13px] text-foreground/80">{item.description}</p>
-                </div>
-              )
-            })}
-          </div> */}
+          <SectionTitle title={t("aboutWhyUsTitle")} className="text-2xl md:text-3xl mb-12" />
           <HoverEffect items={whyUsData} />
         </div>
       </div>

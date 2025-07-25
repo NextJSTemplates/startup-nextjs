@@ -1,42 +1,45 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
 import SectionTitle from '@/components/Common/SectionTitle'
-
-const values = [
-  {
-    imageSrc: "/images/about/speed.webp.svg",
-    title: "Speed",
-    description: "We accelerate delivery and execution to help you achieve faster time-to-market with agile, efficient processes."
-  },
-  {
-    imageSrc: "/images/about/scale.webp.svg",
-    title: "Scale",
-    description: "We empower your business to grow and expand seamlessly, handling increased demand without compromising quality."
-  },
-  {
-    imageSrc: "/images/about/quality.webp.svg",
-    title: "Quality",
-    description: "We maintain the highest standards to deliver exceptional results, ensuring consistency and attention to detail every time."
-  },
-  {
-    imageSrc: "/images/about/global-presence.webp.svg",
-    title: "Global Presence",
-    description: "With teams and partners worldwide, we provide reliable services wherever you need us, bridging gaps across markets."
-  },
-  {
-    imageSrc: "/images/about/compliance.webp.svg",
-    title: "Compliance",
-    description: "We strictly adhere to industry standards and regulations to protect your business and maintain full legal alignment."
-  }
-]
-
+import { useLanguage } from '@/components/Header';
 
 const OurValues = () => {
+  const { t } = useLanguage();
+
+  const values = [
+    {
+      imageSrc: "/images/about/speed.webp.svg",
+      title: t("aboutSpeed"),
+      description: t("aboutSpeedDescription")
+    },
+    {
+      imageSrc: "/images/about/scale.webp.svg",
+      title: t("aboutScale"),
+      description: t("aboutScaleDescription")
+    },
+    {
+      imageSrc: "/images/about/quality.webp.svg",
+      title: t("aboutQuality"),
+      description: t("aboutQualityDescription")
+    },
+    {
+      imageSrc: "/images/about/global-presence.webp.svg",
+      title: t("aboutGlobalPresence"),
+      description: t("aboutGlobalPresenceDescription")
+    },
+    {
+      imageSrc: "/images/about/compliance.webp.svg",
+      title: t("aboutCompliance"),
+      description: t("aboutComplianceDescription")
+    }
+  ]
+
   return (
     <section id="services" className="relative overflow-hidden z-10 pt-20">
       <div className="container px-6">
         <div className="flex flex-col items-center justify-center">
-          <SectionTitle title="Our Values" className="text-2xl md:text-3xl mb-12" />
+          <SectionTitle title={t("aboutOurValues")} className="text-2xl md:text-3xl mb-12" />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {values.map((value, index) => (
                 <div

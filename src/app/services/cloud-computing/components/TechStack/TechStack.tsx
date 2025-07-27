@@ -31,15 +31,16 @@ const TechStack = () => {
                 {(group.stack || group.stacks).map((icon: string, iconIdx: number) => (
                   <div
                     key={iconIdx}
-                    className="flex items-center justify-center rounded-md border border-gray-200 p-3 bg-white"
+                    className="h-24 flex items-center justify-center rounded-md border border-gray-200 p-3 bg-white"
                   >
                     <Image
                       src={icon}
                       alt={`${group.title}-${iconIdx}`}
-                      width={70}
-                      height={70}
+                      width={48}
+                      height={48}
                       quality={100}
-                      className="object-contain"
+                      className="object-contain w-auto h-auto max-w-12 max-h-12"
+                      unoptimized
                     />
                   </div>
                 ))}

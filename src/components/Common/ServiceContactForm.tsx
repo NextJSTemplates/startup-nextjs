@@ -67,6 +67,7 @@ const ServiceContactForm = () => {
                       <Input
                         id="firstname"
                         placeholder="First name"
+                        className="border border-border/50"
                         {...field}
                       />
                     </FormControl>
@@ -82,6 +83,7 @@ const ServiceContactForm = () => {
                       <Input
                         id="lastname"
                         placeholder="Last name"
+                        className="border border-border/50"
                         {...field}
                       />
                     </FormControl>
@@ -99,6 +101,7 @@ const ServiceContactForm = () => {
                     <Input
                       id="phonenumber"
                       placeholder="Phone number"
+                      className="border border-border/50"
                       {...field}
                     />
                   </FormControl>
@@ -117,6 +120,7 @@ const ServiceContactForm = () => {
                       id="email"
                       type="email"
                       placeholder="Email address"
+                      className="border border-border/50"
                       {...field}
                     />
                   </FormControl>
@@ -133,6 +137,7 @@ const ServiceContactForm = () => {
                     <Input
                       id="companyindustry"
                       placeholder="Company Industry"
+                      className="border border-border/50"
                       {...field}
                     />
                   </FormControl>
@@ -148,6 +153,7 @@ const ServiceContactForm = () => {
                     <Textarea
                       id="message"
                       placeholder="Project idea..."
+                      className="border border-border/50"
                       {...field}
                     />
                   </FormControl>

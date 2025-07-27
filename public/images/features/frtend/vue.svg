@@ -1,9 +1,5 @@
-<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="24" height="24" transform="translate(0 0.351562)" fill="url(#pattern0_2702_12145)"/>
-<defs>
-<pattern id="pattern0_2702_12145" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_2702_12145" transform="scale(0.0416667)"/>
-</pattern>
-<image id="image0_2702_12145" width="24" height="24" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAeFBMVEVHcEw1SV02i3NAuII6sX09t39AuINAuINAt4I6rno+uIFAuIM/t4I/t4I0SV06tIA+t4JAuIM/uIJAuINAuYA/t4E0SF00SF0ySFsyRl05fG85e200SFw0SF1BuIM1SV41U2E9oXs8lnc/rH84bWo2XmU6gXA5d21dh/7rAAAAHnRSTlMAvxPVGjDk+8IJgfJXd9YhaJanuUWjZOlAVr+/o6L3+WvVAAAA00lEQVR42qWO1w6DMAwATRoyGmiA7mXTRf//D2sDqkDwUvVeMqTzGX4nbp1z5yRJdp5fO76c+KOK4POAeKuJVgeAw4qoviGGpQdIHSK+ieiq1IWPhp8uZdsXlpUX0f543BO9WLC5B0aJcpdhMugugoKWzCA+ntTyfCCaDDp8aTulE2zZC4M+vfmykHKv5G2/L/OqX/QCEZuaGhEiDCiC9KUcChiiK+lLudIwYmOwxWxgjF+y0pfHpNKXVSfkQQSYEtfWriPMkBmTwRyq3GqYRUf4hw8M3hZdl8+8ZQAAAABJRU5ErkJggg=="/>
-</defs>
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 4L16 28L30 4H24.5L16 18.5L7.5 4H2Z" fill="#41B883"/>
+<path d="M7.5 4L16 18.5L24.5 4H19.5L16.0653 10.0126L12.5 4H7.5Z" fill="#35495E"/>
 </svg>

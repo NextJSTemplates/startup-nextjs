@@ -72,7 +72,7 @@ const Services = () => {
           {aiServices.map((service, index) => (
             <SingleService
               key={index}
-              className={index % 2 !== 0 ? "md:flex-row-reverse" : ""}
+              className={index % 2 !== 0 ? "md:flex-row-reverse" : "md:gap-12"}
               imageSrc={service.image}
               title={service.title}
               description={service.description}

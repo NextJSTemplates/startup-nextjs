@@ -29,7 +29,7 @@ const ServiceFeatures = ({title, serviceFeatures}: ServiceFeaturesProps) => {
               {title}
             </h3>
             </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-6">
               {serviceFeatures.map((feat, index) => (
                 <motion.div
                   key={index}

@@ -102,12 +102,12 @@ export const Hero = ({
               >
                 {subtitle}
               </motion.p>
-              <Button className="bg-white rounded-full text-black p-6">Get Started
+              <Button className="bg-background hover:bg-background rounded-full text-foreground p-6">Get Started
                 <span>
                   <ExternalLink className="size-4" />
                 </span>
               </Button>
-              <div className="mb-8">
+              <div className="mt-8">
                 {services?.map((item, index) => {
                   return (
                     <motion.div

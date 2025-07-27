@@ -271,7 +271,7 @@ export const translations = {
     aboutDefinedBy: "Defined by",
     aboutDescription:
       "At Classy Endeavors, we're more than a software development agency — we're your strategic technology partner. With a passionate team of designers, developers, and engineers, we craft scalable, user-focused solutions that align with your business goals. From idea to execution, we commit to transparency, quality, and long-term impact",
-    aboutCTA: "Let's Bring Your Ideas to Action",
+    aboutCTA: "Accelerate Your Vision",
 
     // Statistics Section
     aboutStatsSectionTitle: "Brief Facts",

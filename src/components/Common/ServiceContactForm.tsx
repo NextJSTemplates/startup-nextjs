@@ -49,7 +49,7 @@ const ServiceContactForm = () => {
 
   return (
     <div className="p-[1.5px] rounded-lg bg-gradient-to-b from-muted-foreground to-transparent w-full h-fit">
-      <Card className="relative rounded-lg overflow-hidden bg-black text-white border-none">
+      <Card className="relative rounded-lg overflow-hidden bg-neutral-900 text-white border-none">
         <CardTitle className="text-3xl text-center max-w-md mx-auto capitalize">How can we help your business?</CardTitle>
         <CardDescription className="text-center text-white mb-2">We&apos;re a message away from bringing your idea to life.</CardDescription>
         <Form {...contactForm}>

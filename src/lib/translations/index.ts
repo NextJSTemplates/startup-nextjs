@@ -9,6 +9,7 @@ export const translations = {
     uiUx: "UI/UX",
     softwareSecurity: "Software Security",
     mvpDevelopment: "MVP Development",
+    mobileDevelopment: "Mobile Development",
     softwareMaintenance: "Software Maintenance",
     industries: "Industries",
     portfolios: "Portfolios",

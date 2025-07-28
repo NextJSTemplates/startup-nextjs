@@ -38,13 +38,13 @@ const OurValues = () => {
 
   return (
     <Section>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-centern">
         <SectionTitle title={t("aboutOurValues")} className="text-2xl md:text-3xl mb-12" />
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {values.map((value, index) => (
             <div
               key={index}
-              className="group relative flex flex-col items-center justify-center text-center w-50 h-72 p-12 rounded-lg overflow-hidden transition-all duration-500 hover:border hover:border-primary/50 hover:shadow-[0_0_5px_rgba(13,148,136,0.4)]"
+              className="group relative flex flex-col items-center justify-center text-center h-72 p-12 rounded-lg overflow-hidden transition-all duration-500 hover:border hover:border-primary/50 hover:shadow-[0_0_5px_rgba(13,148,136,0.4)] "
             >
               <Image
                 src={value.imageSrc}
@@ -55,7 +55,7 @@ const OurValues = () => {
               />
 
               <p
-                className="mt-4 text-[14px] font-semibold transition-all duration-500 ease-in-out max-w-xs group-hover:mt-0 group-hover:absolute group-hover:top-6 group-hover:left-6 group-hover:text-left"
+                className="mt-4 text-[14px] font-semibold transition-all duration-500 ease-in-out max-w-xs group-hover:mt-0 group-hover:absolute group-hover:top-6 group-hover:left-6 group-hover:text-left mx-auto"
               >
                 {value.title}
               </p>

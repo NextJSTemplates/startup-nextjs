@@ -80,8 +80,6 @@ const CustomDropdown = ({ children, trigger, className = "" }) => {
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('keydown', handleEscape);
-      // Prevent body scroll
-      document.body.style.overflow = 'hidden';
     }
 
     return () => {

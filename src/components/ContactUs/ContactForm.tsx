@@ -1,15 +1,66 @@
 "use client";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
+import { ChevronDown } from "lucide-react";
 import { Form, FormField, FormItem, FormControl } from "../ui/form";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "../ui/select";
 import { useLanguage } from "@/components/Header";
+
+const CustomDropdown = ({ children, trigger, className = "" }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <div onClick={() => setIsOpen(!isOpen)}>
+        {trigger}
+      </div>
+      
+      {isOpen && (
+        <>
+          <div 
+            className="fixed inset-0 z-40" 
+            onClick={() => setIsOpen(false)}
+          />
+          
+          <div className={`absolute left-0 top-full mt-2 bg-background dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-50 ${className}`}>
+            {children({ closeDropdown: () => setIsOpen(false) })}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 const ContactForm = () => {
   const { t } = useLanguage();
@@ -39,6 +90,18 @@ const ContactForm = () => {
       file: undefined,
     },
   });
+
+  const budgetOptions = [
+    { value: "under_10k", label: t("budgetUnder10k") },
+    { value: "10k_50k", label: t("budget10k50k") },
+    { value: "50k_100k", label: t("budget50k100k") },
+    { value: "above_100k", label: t("budgetAbove100k") },
+  ];
+
+  const getBudgetLabel = (value: string) => {
+    const option = budgetOptions.find(opt => opt.value === value);
+    return option ? option.label : t("projectBudgetPlaceholder");
+  };
 
   const onSubmit = async (data: z.infer<typeof contactSchema>) => {
     try {
@@ -157,17 +220,42 @@ const ContactForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <SelectTrigger>
-                      <SelectValue placeholder={t("projectBudgetPlaceholder")} />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="under_10k">{t("budgetUnder10k")}</SelectItem>
-                      <SelectItem value="10k_50k">{t("budget10k50k")}</SelectItem>
-                      <SelectItem value="50k_100k">{t("budget50k100k")}</SelectItem>
-                      <SelectItem value="above_100k">{t("budgetAbove100k")}</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <CustomDropdown
+                    className="w-full"
+                    trigger={
+                      <div className="flex h-10 w-full border-b border-b-muted-foreground bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer justify-between items-center">
+                        <span className={field.value ? "text-foreground" : "text-muted-foreground"}>
+                          {field.value ? getBudgetLabel(field.value) : t("projectBudgetPlaceholder")}
+                        </span>
+                        <ChevronDown className="w-4 h-4" />
+                      </div>
+                    }
+                  >
+                    {({ closeDropdown }) => (
+                      <div className="py-2 w-full">
+                        {budgetOptions.map((option) => (
+                          <button
+                            key={option.value}
+                            type="button"
+                            onClick={() => {
+                              field.onChange(option.value);
+                              closeDropdown();
+                            }}
+                            className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
+                              field.value === option.value
+                                ? 'bg-primary/10 text-primary font-medium'
+                                : 'text-gray-700 dark:text-gray-300'
+                            }`}
+                          >
+                            {option.label}
+                            {field.value === option.value && (
+                              <span className="ml-auto text-primary">✓</span>
+                            )}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </CustomDropdown>
                 </FormControl>
               </FormItem>
             )}

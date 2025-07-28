@@ -9,7 +9,7 @@ type SectionProps = {
 
 const Section = ({ children, className, id }: SectionProps) => {
   return (
-    <section className={cn("relative z-10 pt-20 max-w-7xl mx-auto px-6", className)} id={id}>
+    <section className={cn("relative z-10 pt-20 max-w-7xl mx-auto px-6 overflow-hidden", className)} id={id}>
       {children}
     </section>
   );

@@ -20,7 +20,7 @@ const Hero = () => {
     }
   ];
   return (
-    <div className="min-h-svh bg-linear-to-br from-[#000] to-[#1A2428] text-white flex flex-col items-center justify-center p-8">
+    <div className="h-screen bg-linear-to-br from-[#000] to-[#1A2428] text-white flex flex-col items-center justify-center p-8 overflow-hidden">
       <div className="w-full max-w-6xl space-y-12 relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">
           <div className="flex items-center justify-center flex-col ">
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className='absolute inset-0'>
+      <div className='absolute inset-0 z-0 pointer-events-none overflow-hidden'>
         <Scene />
       </div>
     </div>

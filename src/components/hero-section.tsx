@@ -1,7 +1,7 @@
 "use client"
 import React, { useRef } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import { TextureLoader, Shape, ExtrudeGeometry, Group } from 'three';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Shape, ExtrudeGeometry, Group } from 'three';
 
 const Box = ({ position, rotation }) => {
     const shape = new Shape();

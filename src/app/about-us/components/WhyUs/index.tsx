@@ -38,7 +38,7 @@ const WhyUs = () => {
   ]
 
   return (
-    <Section>
+    <Section className="px-4">
       <div className="flex flex-col items-start justify-center">
         <SectionTitle title={t("aboutWhyUsTitle")} className="text-2xl md:text-3xl mb-12" />
         <HoverEffect items={whyUsData} />

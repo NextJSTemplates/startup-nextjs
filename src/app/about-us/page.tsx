@@ -3,7 +3,7 @@ import React from 'react'
 import Statistics from './components/Statistics';
 import MissionVision from './components/MissionVision';
 import WhyUs from './components/WhyUs';
-import OurValues from './components/OurValues';
+import OurValues from './components/ourValues';
 import Challenges from './components/Challenges';
 import ContactUs from '@/components/ContactUs';
 import { Quote } from 'lucide-react';

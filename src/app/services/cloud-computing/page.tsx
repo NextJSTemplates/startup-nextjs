@@ -4,7 +4,7 @@ import { Hero } from "@/components/Common/ServicesHero";
 import Banner from "@/components/Common/Banner";
 import Services from "./components/Services/Services";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
-import { cloudData } from "@/components/Common/WhyUs/whyUsData";
+import { cloudData } from "@/components/Common/WhyUs/data";
 import TechStack from "./components/TechStack/TechStack";
 import DvtProcesses from "@/components/Common/DvtProcesses";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";

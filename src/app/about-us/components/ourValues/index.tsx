@@ -38,13 +38,41 @@ const OurValues = () => {
 
   return (
     <Section>
-      <div className="flex flex-col items-center justify-centern">
+      <div className="flex flex-col items-center justify-center">
         <SectionTitle title={t("aboutOurValues")} className="text-2xl md:text-3xl mb-12" />
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        
+        <div className="md:hidden flex flex-col gap-6 w-full max-w-sm">
           {values.map((value, index) => (
             <div
               key={index}
-              className="group relative flex flex-col items-center justify-center text-center h-72 p-12 rounded-lg overflow-hidden transition-all duration-500 hover:border hover:border-primary/50 hover:shadow-[0_0_5px_rgba(13,148,136,0.4)] "
+              className="bg-background border border-border rounded-xl p-6 min-h-[280px] flex flex-col"
+            >
+              <h1 className="text-base font-medium mb-4">
+                {value.title}
+              </h1>
+              
+              <p className="text-sm text-foreground/80 flex-1 mb-6">
+                {value.description}
+              </p>
+              
+              <div className="flex justify-end">
+                <Image
+                  src={value.imageSrc}
+                  alt={`${value.title} Image`}
+                  width={80}
+                  height={80}
+                  className="opacity-60"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden md:grid grid-cols-3 lg:grid-cols-5 gap-6">
+          {values.map((value, index) => (
+            <div
+              key={index}
+              className="group relative flex flex-col items-center justify-center text-center h-72 p-12 rounded-lg overflow-hidden transition-all duration-500 hover:border hover:border-primary/50 hover:shadow-[0_0_5px_rgba(13,148,136,0.4)]"
             >
               <Image
                 src={value.imageSrc}

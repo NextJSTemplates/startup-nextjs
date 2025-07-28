@@ -5,7 +5,7 @@ import Services from "./components/Services";
 import Tools from "./components/Tools";
 import Banner from "@/components/Common/Banner";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
-import { uxData } from "@/components/Common/WhyUs/whyUsData";
+import { uxData } from "@/components/Common/WhyUs/data";
 import DesignProcess from "./components/DesignProcess";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";
 export const metadata: Metadata = {

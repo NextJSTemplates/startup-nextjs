@@ -3,7 +3,7 @@ import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
 import WhyUs from "@/components/Common/WhyUs/WhyUs";
-import { mvpData } from "@/components/Common/WhyUs/whyUsData";
+import { mvpData } from "@/components/Common/WhyUs/data";
 import AboutUs from "./components/About";
 import Features from "./components/Features/Features";
 import HowWeWork from "./components/HowWeWork";

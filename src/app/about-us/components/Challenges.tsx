@@ -30,16 +30,16 @@ const Challenges = () => {
     <Section>
       <div className="flex flex-col items-start justify-center">
         <SectionTitle title={t("aboutChallengesTitle")} className="text-2xl md:text-3xl mb-12" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 sm:gap-6">
           {challenges.map((challenge, index) => {
             const Icon = challenge.icon;
             return (
               <div className="flex flex-col gap-2" key={index}>
-                <div className="flex gap-2 justify-start items-center transition duration-300 hover:text-primary cursor-pointer">
+                <div className="flex gap-2 justify-start items-center transition duration-300 hover:text-primary cursor-pointer mb-4">
                   <Icon className="size-4.5" />
                   <h1 className="text-base font-medium">{challenge.title}</h1>
                 </div>
-                <p className="max-w-sm text-[13px] text-foreground/80">{challenge.description}</p>
+                <p className="max-w-sm text-foreground/80">{challenge.description}</p>
               </div>
             )
           })}

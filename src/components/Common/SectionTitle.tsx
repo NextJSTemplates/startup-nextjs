@@ -8,7 +8,7 @@ const SectionTitle = ({
   className
 }: SectionTitleProps) => {
   return (
-    <h1 className={cn("text-3xl md:text-4xl mb-8 font-medium", className)}>{title}</h1>
+    <h1 className={cn("text-3xl md:text-4xl mb-12 font-medium", className)}>{title}</h1>
   );
 };
 

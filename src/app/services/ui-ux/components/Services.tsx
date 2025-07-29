@@ -1,5 +1,9 @@
-import SingleService from "@/components/Common/SingleService";
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
+import SectionTitle from "@/components/Common/SectionTitle";
+import Image from "next/image";
+import Section from "@/components/Section";
 
 const aiServices = [
   {
@@ -59,26 +63,44 @@ const aiServices = [
   },
 ];
 const Services = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const selected = aiServices[selectedIndex];
+
   return (
-    <section id="services" className="relative z-10 pt-16 md:pt-20 lg:pt-24">
-      <div className="container mx-auto max-w-6xl px-8">
-        <h1 className="mb-6 text-center text-3xl font-semibold max-w-2xl mx-auto">
-          Transforming Your Ideas Into Beautiful, Impactful Designs That Deliver Results
-        </h1>
-        <div className="grid grid-cols-1">
-          {aiServices.map((service, index) => (
-            <SingleService
+    <Section className="pb-20">
+      <SectionTitle title="Flip ideas into joyful experiences" className="text-2xl md:text-3xl" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+        <div className="space-y-4 border-l-1 h-fit">
+          {aiServices.map((item, index) => (
+            <div
               key={index}
-              className={index % 2 !== 0 ? "md:flex-row-reverse" : ""}
-              imageSrc={service.image}
-              title={service.title}
-              description={service.description}
-              services={service.services}
-            />
+              className={`cursor-pointer font-medium py-2 px-4 ${selectedIndex === index
+                ? "text-black border-l-3 border-red-600 pl-4"
+                : "text-gray-600 hover:text-black"
+                }`}
+              onClick={() => setSelectedIndex(index)}
+            >
+              {item.title}
+            </div>
           ))}
         </div>
+
+        <div className="md:col-span-2 space-y-4">
+          <h3 className="text-xl font-medium">{selected.title}</h3>
+          <p className="max-w-xl">{selected.description}</p>
+          {selected.image && (
+            <div className="w-full aspect-video relative h-70 rounded-lg overflow-clip">
+              <Image
+                src={selected.image}
+                alt={selected.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
+        </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

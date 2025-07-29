@@ -8,6 +8,10 @@ import WhyUs from "@/components/Common/WhyUs/WhyUs";
 import { uxData } from "@/components/Common/WhyUs/data";
 import DesignProcess from "./components/DesignProcess";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";
+import Features from "./components/Features";
+import CaseStudies from "./components/CaseStudies";
+import Industries from "./components/Industries";
+import ContactUs from "@/components/ContactUs";
 export const metadata: Metadata = {
   title: "Services - UI/UX Design",
   keywords: [
@@ -30,14 +34,15 @@ const UIUXPage = () => {
         subtitle="We help startups and enterprises craft stunning interfaces and frictionless experiences that delight users and drive growth."
         backgroundImage="/images/services/UIUXBackground.svg"
         keywords={["Intuitive Design.", "User-Centric.", "Engaging Experiences"]}
-        section={<ServiceContactForm />}
       />
-      
       <Services />
+      <Features />
       <Tools />
+      <CaseStudies />
       <DesignProcess />
-      <WhyUs title="Why Work With Us?" description="Where Creative Vision Meets Precision and Impact" data={uxData}/>
+      <Industries />
       <Banner title="Let's Design Something That Works" description="Kickstart Your Next Project With a Free Custom Design — Share Your Idea and Let Our Expert Team Bring It to Life, Absolutely Free!" buttonText="Contact Us" />
+      <ContactUs />
     </>
   );
 };

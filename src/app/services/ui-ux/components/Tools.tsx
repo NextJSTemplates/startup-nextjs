@@ -1,4 +1,5 @@
 "use client";
+import SectionTitle from "@/components/Common/SectionTitle";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -18,9 +19,7 @@ const Tools = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col space-y-2"
         >
-          <h3 className="mx-auto max-w-xl text-center text-3xl leading-snug font-semibold">
-            Our Design and Development Tools
-          </h3>
+          <SectionTitle title="Our Design and Development Tools" className="text-2xl md:text-3xl text-center mb-4" />
           <p className="text-center text-sm">
             We leverage the latest tools to create exceptional user experiences.
           </p>

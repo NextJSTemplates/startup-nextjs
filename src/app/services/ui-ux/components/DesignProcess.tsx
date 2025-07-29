@@ -1,71 +1,61 @@
-import React from 'react'
-import Image from 'next/image'
-const designProcesses = [
+import React from "react";
+import Section from "@/components/Section";
+import SectionTitle from "@/components/Common/SectionTitle";
+
+const items = [
   {
-    title: "Discovery & Research",
-    desc: "Understand user behavior and define goals."
+    title: "Risk-proof project scoping",
+    description:
+      "At Innowise, we believe that getting on the same page from the start is key. At the beginning of each project, we clarify your requirements and prepare technical specifications, which helps us avoid risks and out-of-scope tasks.",
   },
   {
-    title: "Information Architecture",
-    desc: "Structuring flows for intuitive navigation."
+    title: "Realistic cost estimation",
+    description:
+      "Our specialists consider a variety of different factors — project scale, complexity, team size, designers’ skill sets, and so on — for an accurate cost estimate that truly reflects the scope of the work. We keep excess spending at bay.",
   },
   {
-    title: "Design & Prototype",
-    desc: "Collaborative UI creation in Figma or Adobe XD."
+    title: "Collaboration at all levels",
+    description:
+      "Our UI/UX design company fosters open and transparent communication to keep you informed on project progress and resolve challenges on the fly. We offer effective cooperation from day one and make sure you’re always involved in the process.",
   },
   {
-    title: "User Testing",
-    desc: "Validate usability with real users."
+    title: "Proactive risk management",
+    description:
+      "Starting from requirements analysis, we identify potential roadblocks early on and resolve minor issues before they have a chance to become big problems. This way, our professionals can keep the design project on track.",
   },
   {
-    title: "Iteration & Delivery",
-    desc: "Final handover and support for implementation."
-  }
-]
+    title: "Extensive documentation",
+    description:
+      "We maintain comprehensive UX documentation throughout the entire project lifecycle to provide clarity, streamline team onboarding, and align products with the strategy. As a result, you’ll always have the information you need right at hand.",
+  },
+  {
+    title: "Consistent reporting",
+    description:
+      "With strategic meetings and status reports, we make sure you’re never left in the dark when it comes to your project’s progress. At Innowise, we’re committed to keeping you informed and encouraged to chip in every step of the way!",
+  },
+];
+
 const DesignProcess = () => {
   return (
-    <section className="relative z-10 pt-20">
-      <div className="container mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gradient-to-b from-neutral-100 via-neutral-100 to-transparent border border-border rounded-lg p-8">
-          <div className="flex flex-col">
-            <h1 className="mb-6 text-3xl font-semibold capitalize">
-              Our Design process
-            </h1>
-            <div className="grid grid-cols-1 gap-4">
+    <Section>
+        <SectionTitle title="Our holistic approach to UI/UX design services" className="text-2xl md:text-3xl" />
+        <p className="text-muted-foreground mb-12 max-w-3xl">
+          Through our collaborative approach and thorough planning, we create catchy, user-friendly designs on time and budget.
+        </p>
 
-              {designProcesses.map((process, index) => (
-                <div className="flex gap-4" key={index}>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Image
-                      src="/images/services/blue-check.svg fill.svg"
-                      className="h-5 w-5"
-                      width={6}
-                      height={6}
-                      alt="Check"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <h1 className="font-semibold">{process.title}</h1>
-                    <p className="text-sm">{process.desc}</p>
-                  </div>
-                </div>
-
-              ))}
+        <div className="grid md:grid-cols-3 gap-8">
+          {items.map((item, idx) => (
+            <div key={idx} className="flex flex-col gap-2">
+              <h3 className="font-medium text-base">
+                <span className="text-red-600 mr-1">•</span>
+                {item.title}
+              </h3>
+              <p className="text-muted-foreground">{item.description}</p>
             </div>
-          </div>
-          <div className="flex justify-center items-center rounded-lg overflow-clip">
-            <Image
-              src="/images/services/uiux/Cyber security concept in digital art.svg"
-              alt="Design Process"
-              className="w-100 rounded-lg"
-              width={100}
-              height={100}
-            />
-          </div>
+          ))}
         </div>
-      </div>
-    </section>
-  )
-}
+    </Section>
+  );
+};
 
-export default DesignProcess
+export default DesignProcess;

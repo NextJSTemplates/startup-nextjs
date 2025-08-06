@@ -1,6 +1,6 @@
 # Startup - Free Next.js Startup Website Template
 
-Startup free, open-source, and premium-quality startup website template for Next.js comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
+Startup is a free, open-source, and premium-quality [**Next.js startup website template**](https://nextjstemplates.com/templates/startup) that comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
 
 If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
 
@@ -21,7 +21,7 @@ and Much More ...
 | All The Integrations - Auth, DB, Payments, Blog and many more ...             | ❌ No      | ✅ Yes |
 | Homepage Variations             | 1      | 2 |
 | Additional SaaS Pages and Components             | ❌ No      | ✅ Yes |
-| Functional Blog with Sanity       | ❌ No      | ✅ Yes | ✅ Yes |
+| Functional Blog with Sanity       | ❌ No      | ✅ Yes |
 | Use with Commercial Projects            | ✅ Yes      | ✅ Yes      |
 | Lifetime Free Updates             | ✅ Yes      | ✅ Yes |
 | Email Support       | ❌ No         | ✅ Yes       |
@@ -35,15 +35,15 @@ and Much More ...
 Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
 
 
-### [🚀 View Free Demo](https://startup.nextjstemplates.com/)
+- [🚀 View Free Demo](https://startup.nextjstemplates.com/)
 
-### [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
+- [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
 
-### [📦 Download](https://nextjstemplates.com/templates/startup)
+- [📦 Download](https://nextjstemplates.com/templates/startup)
 
-### [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+- [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
 
-### [🔌 Documentation](https://nextjstemplates.com/docs)
+- [🔌 Documentation](https://nextjstemplates.com/docs)
 
 ### ⚡ Deploy Now
 

@@ -9,6 +9,9 @@ import TechStack from "./components/TechStack/TechStack";
 import DvtProcesses from "@/components/Common/DvtProcesses";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";
 import Brands from "@/app/(home)/components/Brands";
+import CaseStudies from "@/components/Common/CaseStudies";
+import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
+import FAQ from "@/components/Common/FAQ/FAQ";
 
 export const metadata: Metadata = {
   title: "Services - Cloud Computing",
@@ -31,18 +34,12 @@ const CloudComputing = () => {
         title="Cloud Consulting Services"
         subtitle="Unlock the full potential of your cloud infrastructure. At Classy Endeavors, we deliver cloud-first strategies that drive scalability, agility, and resilience across your digital ecosystem. Whether you are starting your cloud journey or optimizing your current infrastructure, our experts provide tailored solutions to meet your business goals."
         backgroundImage="/images/services/CloudBackground.svg"
-        keywords={[
-          "Scalable. ",
-          "Agile.",
-          "Cloud-First",
-        ]}
-        section={<ServiceContactForm />}
       />
       <Brands />
       <DvtProcesses />
-      <Services />
-      <WhyUs title="Why Work With Us?" description="Looking for a trusted partner to guide your business through cloud consulting? You’re in the right place!" data={cloudData}/>
+      <CaseStudies title="Case studies of our cloud computing services" caseStudies={caseStudies} />
       <TechStack />
+      <FAQ />
       <Banner
         title="Ready to begin your cloud journey?"
         description="Optimize your cloud infrastructure for greater speed, scalability, and efficiency. Schedule your free expert consultation today and unlock the full potential of your cloud environment."

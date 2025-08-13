@@ -8,6 +8,7 @@ import ServiceFeatures from "@/components/Common/ServiceFeatures";
 import CaseStudies from "@/components/Common/CaseStudies";
 import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
 import FAQ from "@/components/Common/FAQ/FAQ";
+import Process from "./components/Process";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",
@@ -32,6 +33,7 @@ const ArtificialIntelligence = () => {
       />
       <ServiceFeatures title="AI Services Features" features={uiuxServices} />
       <Industries />
+      <Process />
       <CaseStudies title="Case studies of our AI services" caseStudies={caseStudies} />
       <FAQ />
       <Banner

@@ -48,7 +48,7 @@ export default function Index(): JSX.Element {
     <main ref={containerRef}>
       <section className="relative max-w-7xl mx-auto px-6 pt-20">
         <h1 className="mb-8 text-center text-3xl font-semibold">
-          Cloud Development Process
+          Cloud Development Process 
         </h1>
         {projects.map((project, i) => {
           const scale = 1 - (projects.length - i) * 0.05;

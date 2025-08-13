@@ -1,17 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { industries } from "./industriesData";
 import Image from "next/image";
 import SectionTitle from "@/components/Common/SectionTitle";
 import Section from "@/components/Section";
-
-const Industries = () => {
+import { ServiceIndustry } from "@/types";
+type ServiceIndustryProps = {
+  title: string;
+  industries: ServiceIndustry[];
+}
+const ServiceIndustries = ({ title, industries }: ServiceIndustryProps) => {
   const [activeTab, setActiveTab] = useState(industries[0].name);
 
   return (
     <Section id="industries">
-      <SectionTitle title="User interface and experience design for every industry" className="text-2xl md:text-3xl" />
+      <SectionTitle title={title} className="text-2xl md:text-3xl" />
       <div className="flex flex-wrap gap-4 border-b border-gray-200 mb-8">
         {industries.map((industry, index) => (
           <button
@@ -57,4 +60,4 @@ const Industries = () => {
   );
 };
 
-export default Industries;
+export default ServiceIndustries;

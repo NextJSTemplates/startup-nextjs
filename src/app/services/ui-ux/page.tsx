@@ -1,17 +1,17 @@
 import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
-import Services from "./components/Services";
 import Tools from "./components/Tools";
 import Banner from "@/components/Common/Banner";
-import WhyUs from "@/components/Common/WhyUs/WhyUs";
-import { uxData } from "@/components/Common/WhyUs/data";
 import DesignProcess from "./components/DesignProcess";
-import ServiceContactForm from "@/components/Common/ServiceContactForm";
 import Features from "./components/Features";
-import CaseStudies from "./components/CaseStudies";
-import Industries from "./components/Industries";
 import ContactUs from "@/components/ContactUs";
+import ServiceIndustries from "@/components/Common/ServiceIndustries";
+import { industries } from "@/components/Common/ServiceIndustries/serviceIndustriesData";
+import CaseStudies from "@/components/Common/CaseStudies";
+import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
+import ServiceFeatures from "@/components/Common/ServiceFeatures";
+import { uiuxServices } from "@/components/Common/ServiceFeatures/serviceFeaturesData";
 export const metadata: Metadata = {
   title: "Services - UI/UX Design",
   keywords: [
@@ -35,12 +35,12 @@ const UIUXPage = () => {
         backgroundImage="/images/services/UIUXBackground.svg"
         keywords={["Intuitive Design.", "User-Centric.", "Engaging Experiences"]}
       />
-      <Services />
+      <ServiceFeatures title="Our UI/UX Design Services" features={uiuxServices} />
       <Features />
       <Tools />
-      <CaseStudies />
+      <CaseStudies title="Case studies of our UI/UX design services" caseStudies={caseStudies} />
       <DesignProcess />
-      <Industries />
+      <ServiceIndustries title="Industries we serve" industries={industries} />
       <Banner title="Let's Design Something That Works" description="Kickstart Your Next Project With a Free Custom Design — Share Your Idea and Let Our Expert Team Bring It to Life, Absolutely Free!" buttonText="Contact Us" />
       <ContactUs />
     </>

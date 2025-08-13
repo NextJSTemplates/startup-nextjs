@@ -1,13 +1,15 @@
 import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
-import Services from "./components/Services";
 import Banner from "@/components/Common/Banner";
 import TechStack from "../cloud-computing/components/TechStack/TechStack";
-import Industries from "@/components/Common/Industries/Industries";
 import Showcase from "@/components/Common/Showcase/Showcase";
-import Features from "../mvp-development/components/Features/Features";
-import ServiceContactForm from "@/components/Common/ServiceContactForm";
+import ServiceFeatures from "@/components/Common/ServiceFeatures";
+import { uiuxServices } from "@/components/Common/ServiceFeatures/serviceFeaturesData";
+import ServiceIndustries from "@/components/Common/ServiceIndustries";
+import { industries } from "@/components/Common/ServiceIndustries/serviceIndustriesData";
+import CaseStudies from "@/components/Common/CaseStudies";
+import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
 export const metadata: Metadata = {
   title: "Services - Software Development",
   keywords: [
@@ -27,17 +29,15 @@ const SoftwareDevelopment = () => {
         title="Build Powerful Software That Solves Real Problems"
         subtitle="From web and mobile applications to enterprise-grade platforms, we develop custom software solutions that scale with your business."
         backgroundImage="/images/services/SDBackground.svg"
-        keywords={["Custom Software.", "Web Development.", "Mobile Apps."]}
-        section={<ServiceContactForm />}
       />
-      <Services />
+      <ServiceFeatures title="Software Development Features" features={uiuxServices} />
       <Showcase imageSrc="/images/services/cloud/Background (2).svg" title="Enhancement and Technology Refresh" description="Whether you're transitioning to new infrastructure or
               upgrading existing environments, we handle end-to-end
               modernization, security enhancements, and technology migrations to
               support your growth." buttonCta="Get Your Project" />
-      <Features />
-      <Industries />
       <TechStack />
+      <ServiceIndustries title="Industries we serve" industries={industries} />
+      <CaseStudies title="Case studies of our software development services" caseStudies={caseStudies} />
       <Banner title="Let's talk about your software vision" description="You share your vision, and we’ll handle the rest — from concept to launch, we build the right solution that works for you and your customers." buttonText="Contact Us" />
     </>
 

@@ -1,4 +1,6 @@
-export const industries = [
+import { ServiceIndustry } from "@/types";
+
+export const industries: ServiceIndustry[] = [
   {
     quote:
       "e-Commerce is one of the fastest growing business models as every retail business is reaching the digital landscape. Build a scalable and robust e-store with an experienced team.",

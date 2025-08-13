@@ -17,7 +17,7 @@ type ShowcaseProps = {
 
 const Showcase = ({imageSrc, title, description, buttonCta}: ShowcaseProps) => {
   return (
-    <section className="relative z-10 pt-20">
+    <section className="relative z-10">
       <div
         className="relative p-12"
       >

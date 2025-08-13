@@ -6,6 +6,16 @@ export type Industry ={
   description?: string;
   icon: string;
 }
+export type ServiceIndustry = {
+  quote: string;
+  quoteKey: string;
+  name: string;
+  nameKey: string;
+  designation: string;
+  src: string;
+  services: string[];
+  servicesKeys: string[];
+}
 export type Author = {
   name: string;
   image: string;
@@ -91,7 +101,14 @@ export type Processes = {
 }
 
 export type ServicesFeatures = {
-  value: string;
-  label: string;
-  icon:  string;
+  image: string;
+  title: string;
+  description: string;
+  services: string[]
+}
+
+export type CaseStudy = {
+  title: string;
+  image: string;
+  categories: string[];
 }

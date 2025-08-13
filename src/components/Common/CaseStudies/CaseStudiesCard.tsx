@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { useLanguage } from "@/components/Header";
-import { caseStudies } from "./caseStudiesData";
+import { CaseStudy } from "@/types";
 
-const CaseStudiesCard = () => {
+const CaseStudiesCard = ({caseStudies}: {caseStudies: CaseStudy[]}) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

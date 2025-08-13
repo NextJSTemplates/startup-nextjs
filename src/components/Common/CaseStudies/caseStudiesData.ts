@@ -1,4 +1,6 @@
-export const caseStudies = [
+import { CaseStudy } from "@/types";
+
+export const caseStudies: CaseStudy[] = [
   {
     title:
       "Pharma video production: easy-to-follow 3D visualization on cancer immunotherapy",

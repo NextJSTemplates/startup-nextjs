@@ -71,20 +71,6 @@ export const Hero = ({
             <div
               className="mx-auto max-w-[900px] text-white"
             >
-              {keywords && keywords.length > 0 && (
-                <motion.div
-                  variants={staggerWords}
-                  initial="hidden"
-                  whileInView="visible"
-                  className="mb-6 flex gap-3 text-[13.5px] font-bold tracking-widest uppercase"
-                >
-                  {keywords.map((word, idx) => (
-                    <span key={idx}>
-                      {word}
-                    </span>
-                  ))}
-                </motion.div>
-              )}
               <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}

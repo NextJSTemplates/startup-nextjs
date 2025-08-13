@@ -2,13 +2,12 @@ import React from "react";
 import { Metadata } from "next";
 import { Hero } from "@/components/Common/ServicesHero";
 import { Bot, Brain, Clock } from "lucide-react";
-import Services from "./components/Services";
 import Industries from "@/components/Common/Industries/Industries";
 import Banner from "@/components/Common/Banner";
-import { softwareDevFeatures } from "@/components/Common/ServiceFeatures/data";
-import ServiceFeatures from "@/components/Common/ServiceFeatures/ServiceFeatures";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";
 import Statistics from "@/app/(home)/components/Statistics";
+import { uiuxServices } from "@/components/Common/ServiceFeatures/serviceFeaturesData";
+import ServiceFeatures from "@/components/Common/ServiceFeatures";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",
@@ -49,8 +48,7 @@ const ArtificialIntelligence = () => {
         services={aiChars}
         section={<ServiceContactForm />}
       />
-      <Services />
-      <ServiceFeatures title="Software Development Features" serviceFeatures={softwareDevFeatures} />
+      <ServiceFeatures title="AI Services Features" features={uiuxServices} />
       <Industries />
       <Statistics />
       <Banner

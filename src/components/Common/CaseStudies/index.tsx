@@ -3,17 +3,21 @@
 import SectionTitle from "@/components/Common/SectionTitle";
 import Section from "@/components/Section";
 import CaseStudiesCard from "./CaseStudiesCard";
-
-const Services = () => {
+import { CaseStudy } from "@/types";
+type CaseStudiesProps = {
+  title: string;
+  caseStudies: CaseStudy[];
+}
+const CaseStudies = ({title, caseStudies}: CaseStudiesProps) => {
   return (
     <Section id="case-studies">
       <SectionTitle
-        title="Case studies of our UI/UX design services"
+        title={title}
         className="text-2xl md:text-3xl"
       />
-      <CaseStudiesCard />
+      <CaseStudiesCard caseStudies={caseStudies} />
     </Section>
   );
 };
 
-export default Services;
+export default CaseStudies;

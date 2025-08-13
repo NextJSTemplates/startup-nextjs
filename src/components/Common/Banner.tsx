@@ -12,7 +12,7 @@ type BannerProps = {
 }
 const Banner = ({ title, description, buttonText }: BannerProps) => {
   return (
-    <Section>
+    <Section className="pb-20">
       <motion.div
         initial="hidden"
         whileInView="visible"

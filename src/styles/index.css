@@ -261,6 +261,7 @@ layer(base);
   --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite
     alternate;
   --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+  --muted-foreground: var(----muted-foreground);
   @keyframes shimmer-slide {
     to {
       transform: translate(calc(100cqw - 100%), 0);
@@ -422,5 +423,18 @@ layer(base);
   }
   .clip-trapezoid-inverted {
     clip-path: polygon(0 0%, 100% 0%, 95% 100%, 5% 100%);
+  }
+}
+
+/*
+  ---break---
+*/
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

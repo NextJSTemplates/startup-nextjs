@@ -7,10 +7,12 @@ import {
   GaugeCircle,
   MonitorSmartphone,
 } from "lucide-react";
+import Section from "@/components/Section";
+import SectionTitle from "@/components/Common/SectionTitle";
 const HowWeWork = () => {
-  return (
-    <section className="relative pt-20">
-      <div className="relative px-4">
+  return ( 
+    <Section>
+      <div className="relative px-4 rounded-lg overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/services/mvp/CoffeeVending.svg"
@@ -19,10 +21,8 @@ const HowWeWork = () => {
             objectFit="cover"
           />
         </div>
-        <div className="relative z-10 mx-auto max-w-7xl py-24 px-6">
-          <h1 className="text-white mb-8 text-center text-3xl font-semibold">
-            How We Develop Your MVP
-          </h1>
+        <div className="relative z-10 py-20 px-6">
+          <SectionTitle title="Our MVP development process" className="text-white text-center" />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             
             {[
@@ -59,12 +59,12 @@ const HowWeWork = () => {
             ].map(({ title, icon, desc }) => (
               <Card
                 key={title}
-                className="border-none bg-gray-900/40 backdrop-blur-md"
+                className="border-none bg-neutral-900/40 rounded-lg backdrop-blur-md"
               >
-                <CardContent className="p- flex flex-col gap-2 text-white">
+                <CardContent className="flex flex-col gap-2 text-white">
                   {icon}
-                  <h1 className="mb-1 text-lg font-semibold">{title}</h1>
-                  <p className="text-sm leading-relaxed text-gray-300">
+                  <h1 className="mb-1 text-lg font-medium">{title}</h1>
+                  <p>
                     {desc}
                   </p>
                 </CardContent>
@@ -73,7 +73,7 @@ const HowWeWork = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -1,22 +1,24 @@
+import { Truck, Monitor, Code, Rocket } from "lucide-react";
+
 export const features = [
   {
     value: "Fast Delivery",
     label: "Launch within weeks with our agile methodology.",
-    icon: "/images/services/aimodel/01.svg",
+    icon: Truck,
   },
   {
     value: "User-Focused Design",
     label: "UI/UX that enhances usability and engagement.",
-    icon: "/images/services/aimodel/02.svg",
+    icon: Monitor,
   },
   {
     value: "Scalable Codebase",
     label: "Built with growth in mind using modern frameworks.",
-    icon: "/images/services/aimodel/ai-step-3.svg",
+    icon: Code,
   },
   {
     value: "Startup Savvy",
     label: "We understand startup constraints and align with your funding timeline and vision.",
-    icon: "/images/services/aimodel/ai-step-4.svg",
-  }
+    icon: Rocket,
+  },
 ];

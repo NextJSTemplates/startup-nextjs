@@ -7,6 +7,7 @@ import { useLanguage } from "@/components/Header";
 import Section from "@/components/Section";
 import { getMediumPosts } from "@/lib/medium";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Blog = () => {
   const [posts, setPosts] = useState<any[]>([]);
@@ -35,7 +36,7 @@ const Blog = () => {
             className="group relative rounded-lg transition duration-300 hover:scale[1.1] shadow-sm overflow-clip"
           >
             <div className="overflow-hidden relative h-48 w-full">
-              <img
+              <Image
                 className="transform object-cover transition-all duration-300 group-hover:scale-125"
                 src={post.thumbnail || "https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png"}
                 alt={post.title}

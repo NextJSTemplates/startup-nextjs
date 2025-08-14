@@ -74,7 +74,7 @@ const Testimonials = () => {
                   </div>
 
                   <blockquote className="leading-relaxed mb-6 text-center">
-                    "{testimonial.text}"
+                    &quot;{testimonial.text}&quot;
                   </blockquote>
 
                   <div className="text-center">

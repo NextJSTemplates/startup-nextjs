@@ -8,6 +8,7 @@ import {
   ClipboardCheck
 } from "lucide-react";
 import Image from 'next/image';
+import SectionTitle from '@/components/Common/SectionTitle';
 
 const Services = () => {
   return (
@@ -22,10 +23,8 @@ const Services = () => {
           />
         </div>
         <div className="relative z-10 container mx-auto max-w-7xl rounded-lg px-6">
-          <h1 className="mx-auto max-w-2xl text-center text-3xl leading-snug font-semibold mb-6 text-white">
-            Security Services We Offer
-          </h1>
-          <div className="flex flex-col gap-4">
+          <SectionTitle title="Security Services We Offer" className="text-white text-center" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               {
                 icon: MonitorCheck,
@@ -61,14 +60,10 @@ const Services = () => {
               const Icon = icon
               return (
                 (
-                  <div className="bg-white p-6 rounded-lg flex gap-3" key={title}>
-                    <div className="p-3 bg-black/10 rounded-full w-fit h-fit">
-                      <Icon className="size-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <h1 className="font-semibold text-md">{title}</h1>
-                      <p className="text-sm">{description}</p>
-                    </div>
+                  <div className="bg-white p-6 lg:p-7 rounded-lg flex flex-col gap-4" key={title}>
+                      <Icon className="size-6 text-primary" />
+                      <h1 className="font-semibold">{title}</h1>
+                      <p>{description}</p>
                   </div>
                 )
               )

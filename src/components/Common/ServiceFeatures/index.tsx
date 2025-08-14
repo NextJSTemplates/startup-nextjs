@@ -37,7 +37,7 @@ const ServiceFeatures = ({title, features}: ServiceFeatureProps) => {
           <h3 className="text-xl font-medium">{selected.title}</h3>
           <p className="max-w-xl">{selected.description}</p>
           {selected.image && (
-            <div className="w-full aspect-video relative h-70 rounded-lg overflow-clip">
+            <div className="w-full aspect-video relative max-w-xl h-70 rounded-lg overflow-clip">
               <Image
                 src={selected.image}
                 alt={selected.title}

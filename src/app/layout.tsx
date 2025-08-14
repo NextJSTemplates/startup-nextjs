@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Header from "@/components/Header";
 import { Inter, Poppins } from "next/font/google";
 import "../styles/index.css";
+import Navbar from "@/components/Common/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"], 
@@ -23,7 +24,7 @@ export default function RootLayout({
 
       <body className={`${poppins.variable}`}>
         <Providers>
-          <Header />
+          <Navbar />
           {children}
           <Footer />
           <ScrollToTop />

@@ -40,6 +40,8 @@ const Blog = () => {
                 className="transform object-cover transition-all duration-300 group-hover:scale-125"
                 src={post.thumbnail || "https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png"}
                 alt={post.title}
+                width={100}
+                height={100}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>

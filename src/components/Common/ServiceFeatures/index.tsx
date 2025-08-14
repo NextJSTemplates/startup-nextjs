@@ -23,7 +23,7 @@ const ServiceFeatures = ({title, features}: ServiceFeatureProps) => {
             <div
               key={index}
               className={`cursor-pointer font-medium py-2 px-4 ${selectedIndex === index
-                ? "text-black border-l-3 border-red-600 pl-4"
+                ? "text-black border-l-3 border-primary pl-4"
                 : "text-gray-600 hover:text-black"
                 }`}
               onClick={() => setSelectedIndex(index)}

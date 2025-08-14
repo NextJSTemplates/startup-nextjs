@@ -17,7 +17,7 @@ type ShowcaseProps = {
 
 const Showcase = ({imageSrc, title, description, buttonCta}: ShowcaseProps) => {
   return (
-    <section className="relative z-10">
+    <section className="relative z-1 mt-20">
       <div
         className="relative p-12"
       >
@@ -72,10 +72,10 @@ const Showcase = ({imageSrc, title, description, buttonCta}: ShowcaseProps) => {
                 key={title}
                 className="border-none bg-gray-900/80 backdrop-blur-md w-full"
               >
-                <CardContent className="text-white flex flex-col gap-2">
+                <CardContent className="flex flex-col gap-2">
                   {icon}
-                  <h4 className="mb-1 text-lg font-semibold">{title}</h4>
-                  <p className="text-sm leading-relaxed text-gray-300">
+                  <h4 className="mb-1 text-lg font-medium">{title}</h4>
+                  <p>
                     {desc}
                   </p>
                 </CardContent>

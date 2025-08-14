@@ -12,6 +12,8 @@ import CaseStudies from "@/components/Common/CaseStudies";
 import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
 import ServiceFeatures from "@/components/Common/ServiceFeatures";
 import { uiuxServices } from "@/components/Common/ServiceFeatures/serviceFeaturesData";
+import Testimonials from "@/components/Common/Testimonials";
+import FAQ from "@/components/Common/FAQ/FAQ";
 export const metadata: Metadata = {
   title: "Services - UI/UX Design",
   keywords: [
@@ -41,6 +43,8 @@ const UIUXPage = () => {
       <CaseStudies title="Case studies of our UI/UX design services" caseStudies={caseStudies} />
       <DesignProcess />
       <ServiceIndustries title="Industries we serve" industries={industries} />
+      <Testimonials />
+      <FAQ />
       <Banner title="Let's Design Something That Works" description="Kickstart Your Next Project With a Free Custom Design — Share Your Idea and Let Our Expert Team Bring It to Life, Absolutely Free!" buttonText="Contact Us" />
       <ContactUs />
     </>

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import Section from "../Section";
 import Link from "next/link";
@@ -12,7 +11,7 @@ type BannerProps = {
 }
 const Banner = ({ title, description, buttonText }: BannerProps) => {
   return (
-    <Section className="pb-20">
+    <Section>
       <motion.div
         initial="hidden"
         whileInView="visible"

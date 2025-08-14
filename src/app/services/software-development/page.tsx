@@ -10,6 +10,8 @@ import ServiceIndustries from "@/components/Common/ServiceIndustries";
 import { industries } from "@/components/Common/ServiceIndustries/serviceIndustriesData";
 import CaseStudies from "@/components/Common/CaseStudies";
 import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
+import Testimonials from "@/components/Common/Testimonials";
+import FAQ from "@/components/Common/FAQ/FAQ";
 export const metadata: Metadata = {
   title: "Services - Software Development",
   keywords: [
@@ -38,6 +40,8 @@ const SoftwareDevelopment = () => {
       <TechStack />
       <ServiceIndustries title="Industries we serve" industries={industries} />
       <CaseStudies title="Case studies of our software development services" caseStudies={caseStudies} />
+      <Testimonials />
+      <FAQ />
       <Banner title="Let's talk about your software vision" description="You share your vision, and we’ll handle the rest — from concept to launch, we build the right solution that works for you and your customers." buttonText="Contact Us" />
     </>
 

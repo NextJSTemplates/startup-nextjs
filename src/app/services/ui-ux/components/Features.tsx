@@ -18,7 +18,7 @@ const services = [
 
 const Features = () => {
   return (
-    <section className="bg-[#F4F6FC]">
+    <section className="bg-[#F4F6FC] mt-20">
       <Section className="pb-20">
         <SectionTitle title="Everything we cover" className="text-2xl md:text-3xl" />
         <p className="max-w-2xl text-gray-700 mb-12">

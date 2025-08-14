@@ -47,7 +47,7 @@ const DesignProcess = () => {
           {items.map((item, idx) => (
             <div key={idx} className="flex flex-col gap-2">
               <h3 className="font-medium text-base">
-                <span className="text-red-600 mr-1">•</span>
+                <span className="text-primary mr-1">•</span>
                 {item.title}
               </h3>
               <p className="text-muted-foreground">{item.description}</p>

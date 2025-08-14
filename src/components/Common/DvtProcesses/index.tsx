@@ -3,6 +3,8 @@
 import { JSX, useRef } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'motion/react';
 import Image from 'next/image';
+import SectionTitle from '../SectionTitle';
+import Section from '@/components/Section';
 
 const projects = [
   {
@@ -46,10 +48,8 @@ export default function Index(): JSX.Element {
 
   return (
     <main ref={containerRef}>
-      <section className="relative max-w-7xl mx-auto px-6 pt-20">
-        <h1 className="mb-8 text-center text-3xl font-semibold">
-          Cloud Development Process 
-        </h1>
+      <Section>
+        <SectionTitle title="Cloud Development Process" className="text-center" />
         {projects.map((project, i) => {
           const scale = 1 - (projects.length - i) * 0.05;
           return (
@@ -62,7 +62,7 @@ export default function Index(): JSX.Element {
               {...project} />
           );
         })}
-      </section>
+      </Section>
     </main>
   );
 }

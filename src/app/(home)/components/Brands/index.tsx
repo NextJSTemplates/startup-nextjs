@@ -1,12 +1,15 @@
+import Section from "@/components/Section";
 import BrandsScrollable from "./BrandsScrollable";
+import SectionTitle from "@/components/Common/SectionTitle";
 
 const Brands = () => {
   return (
-    <section className="relative z-10 pt-20 max-w-7xl mx-auto" id="brands">
+    <Section>
+      <SectionTitle title="Trusted by Global Partners" className="text-center" />
       <div>
         <BrandsScrollable />
       </div>
-    </section>
+    </Section>
   );
 };
 

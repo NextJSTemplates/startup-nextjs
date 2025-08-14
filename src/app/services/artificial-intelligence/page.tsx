@@ -9,6 +9,7 @@ import CaseStudies from "@/components/Common/CaseStudies";
 import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
 import FAQ from "@/components/Common/FAQ/FAQ";
 import Process from "./components/Process";
+import Testimonials from "@/components/Common/Testimonials";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",
@@ -35,6 +36,7 @@ const ArtificialIntelligence = () => {
       <Industries />
       <Process />
       <CaseStudies title="Case studies of our AI services" caseStudies={caseStudies} />
+      <Testimonials />
       <FAQ />
       <Banner
         title="Build the Future with Agentic AI"

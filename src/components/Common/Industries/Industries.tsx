@@ -7,7 +7,7 @@ import Image from "next/image";
 const Industries = () => {
 
   return (
-    <section className="relative z-10">
+    <section className="relative z-10 mt-20">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial="hidden"

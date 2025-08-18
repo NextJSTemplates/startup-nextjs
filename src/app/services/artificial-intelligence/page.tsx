@@ -10,6 +10,7 @@ import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
 import FAQ from "@/components/Common/FAQ/FAQ";
 import Process from "./components/Process";
 import Testimonials from "@/components/Common/Testimonials";
+import { faqData } from "@/components/Common/FAQ/faqData";
 
 export const metadata: Metadata = {
   title: "Services - Artificial Intelligence",
@@ -36,8 +37,7 @@ const ArtificialIntelligence = () => {
       <Industries />
       <Process />
       <CaseStudies title="Case studies of our AI services" caseStudies={caseStudies} />
-      <Testimonials />
-      <FAQ />
+      <FAQ faqs={faqData} />
       <Banner
         title="Build the Future with Agentic AI"
         description="Let’s design a unique mobile application that stands out! Click ‘Get Started’ to book a free consultation with our development team and take the first step toward innovation."

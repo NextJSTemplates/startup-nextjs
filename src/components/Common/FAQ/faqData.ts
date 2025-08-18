@@ -1,4 +1,6 @@
-export const faqData = [
+import { FaqData } from "@/types";
+
+export const faqData: FaqData[] = [
   {
     question: "What programming languages and frameworks do you support?",
     answer:
@@ -50,3 +52,28 @@ export const faqData = [
       "Yes. We design applications with scalability in mind, leveraging cloud infrastructure, load balancing, and modular architecture so your software can handle increased demand without performance loss.",
   },
 ];
+
+
+export const uiuxFaqs: FaqData[] = [
+  {
+    question: "What is the difference between UI and UX design?",
+    answer: "UI (User Interface) focuses on the visual design, layout, and aesthetics of a product, while UX (User Experience) ensures the product is intuitive, userfriendly, and meets the needs of your customers. Both work together to create a seamless digital experience"
+  },
+  {
+    question: "Why does my business need UI/UX design services?",
+    answer: "Great UI/UX design enhances customer satisfaction, improves engagement, increases conversions, and builds brand loyalty. A well-designed product ensures users not only enjoy the experience but also keep coming back."
+
+  },
+  {
+    question: " How long does it take to design a UI/UX project?",
+    answer: "The timeline depends on the project’s complexity and requirements. A simple web app may take a few weeks, while a complex enterprise platform could take several months. We follow a structured design process to deliver on time without compromising quality"
+  },
+   {
+    question: "Do you provide prototypes and wireframes before final design?",
+    answer: "Yes! We create wireframes, prototypes, and mockups at different stages of the design process. This helps you visualize the product early, test usability, and make informed decisions before moving to development."
+   },
+   {
+    question: "Can you redesign my existing app or website?",
+    answer: "Absolutely. We specialize in UI/UX redesign services to improve usability, modernize interfaces, and align your product with current design trends while keeping your business goals and users in mind."
+   }
+]

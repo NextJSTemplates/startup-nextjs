@@ -1,22 +1,34 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ContactForm from "./ContactForm";
 import SectionTitle from "../Common/SectionTitle";
 import { useLanguage } from "@/components/Header";
 import Section from "../Section";
+import { Testimonial } from "@/types";
+import { Star } from "lucide-react";
+import { uiuxTestimonials } from "./testimonialsData";
 
-type ContactUsProps = {
-  content?: React.ReactNode
-}
-
-const ContactUs = ({ content }: ContactUsProps) => {
+const ContactUs = ({ testimonials = uiuxTestimonials }: { testimonials?: Testimonial[] }) => {
   const { t } = useLanguage();
-  const getTranslatedSteps = () => [
-    t("step1"),
-    t("step2"),
-    t("step3"),
-    t("step4")
-  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  const renderStars = (rating) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <Star
+        key={index}
+        className={`w-5 h-5 ${index < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+          }`}
+      />
+    ))
+  }
   return (
     <Section id="contact" className="pb-20">
 
@@ -26,19 +38,33 @@ const ContactUs = ({ content }: ContactUsProps) => {
           <ContactForm />
         </div>
         <div className="flex flex-col justify-center items-center mt-4 md:mt-0">
-          <div className="border border-primary border-dashed  rounded-md">
-            <div className="p-6 rounded-md relative text-sm w-full lg:max-w-md bg-neutral-50 border border-border/50 bottom-4 right-4 flex flex-col justify-center">
-              <h2 className="text-xl font-medium mb-10">{t("whatHappensNext")}</h2>
-              <div className="relative text-[13px]">
-                {getTranslatedSteps().map((step, index) => (
-                  <div key={index} className="relative pl-12 pb-10 last:pb-0">
-                    {index !== getTranslatedSteps().length - 1 && (
-                      <div className="absolute left-4 top-8 w-px h-full bg-gray-300"></div>
-                    )}
-                    <div className="absolute left-0 top-0 w-8 h-8 rounded-full bg-white border-2 border-gray-400 flex items-center justify-center text-sm font-semibold text-gray-700 z-10">
-                      {index + 1}
+          <div className="border border-primary border-dashed rounded-md">
+            <div className="p-6 rounded-md relative text-sm lg:w-[450px] bg-neutral-50 border border-border/50 bottom-4 right-4 flex flex-col justify-center">
+              <div className="p-10 min-h-[280px] relative">
+                {testimonials.map((testimonial, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-10 flex flex-col justify-center transition-all duration-500 ${index === currentIndex
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-5'
+                      }`}
+                  >
+                    <div className="flex mb-6">
+                      <div className="flex space-x-1">
+                        {renderStars(testimonial.rating)}
+                      </div>
                     </div>
-                    <p className="leading-relaxed">{step}</p>
+                    <blockquote className="leading-relaxed text-foreground mb-8 italic">
+                      &quot;{testimonial.text}&quot;
+                    </blockquote>
+                    <div>
+                      <div className="font-semibold text-foreground text-lg mb-1">
+                        {testimonial.author}
+                      </div>
+                      <div className="text-muted-foreground text-sm">
+                        {testimonial.position}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

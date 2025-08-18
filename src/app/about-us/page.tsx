@@ -32,29 +32,7 @@ const AboutUsPage = () => {
       <WhyUs />
       <Challenges />
       <OurValues />
-      <ContactUs content={(
-        <div className="flex flex-col gap-4">
-          <h1 className="font-medium text-xl">What our customers say</h1>
-
-          <Quote className="size-5 rotate-180 text-center text-teal-700" fill="teal" />
-
-          <p className="text-[13px]">
-            Working with Classy Endeavors was a game-changer for our business. The design team brought our vision to life with an intuitive and modern UI that our users love. Their frontend developers ensured a smooth, responsive interface across all devices, while the backend team built a solid, scalable architecture that runs flawlessly. Throughout the project, communication was clear, timelines were met, and their team felt like an extension of ours. We couldn’t have asked for a better tech partner!
-          </p>
-
-          <div className="flex justify-end">
-            <Quote className="size-5 text-teal-700" fill="teal" />
-          </div>
-
-          <div className="mt-2 flex items-center gap-3">
-            <div className="flex flex-col">
-              <h1 className="font-medium">Priya Malhotra</h1>
-              <p className="text-[13px]">Founder - Eduline Learning</p>
-            </div>
-          </div>
-        </div>
-
-      )} />
+      <ContactUs />
     </>
   )
 }

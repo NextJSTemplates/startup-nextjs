@@ -7,9 +7,8 @@ import Services from "./(home)/components/Services";
 import Technologies from "./(home)/components/Technologies";
 import Industries from "./(home)/components/Industries";
 import Statistics from "./(home)/components/Statistics";
-import Testimonials from "./(home)/components/Testimonials";
-import Blog from "./(home)/components/Blog";
 import Innovations from "./(home)/components/Innovations";
+import Blog from "@/components/Common/Blog";
 
 export const metadata: Metadata = {
   title: "Classy Endeavours",
@@ -27,8 +26,7 @@ export default function Home() {
       <Technologies />
       <Industries />
       <Statistics />
-      <Testimonials />
-      <Blog />
+      <Blog blogLink="https://blog.classyendeavors.com/feed" />
      <ContactUs />
     </>
   );

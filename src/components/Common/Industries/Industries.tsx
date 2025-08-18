@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { industries } from "./data";
+import { industries } from "./industriesData";
 import Image from "next/image";
 
 const Industries = () => {

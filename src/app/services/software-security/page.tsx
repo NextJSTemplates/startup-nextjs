@@ -11,6 +11,7 @@ import CaseStudies from "@/components/Common/CaseStudies";
 import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
 import ServiceFeatures from "@/components/Common/ServiceFeatures";
 import { uiuxServices } from "@/components/Common/ServiceFeatures/serviceFeaturesData";
+import { faqData } from "@/components/Common/FAQ/faqData";
 
 const SofwareSecurity = () => {
   return (
@@ -25,8 +26,7 @@ const SofwareSecurity = () => {
       <Services />
       <ServiceIndustries title="Industries we serve" industries={industries} />
       <CaseStudies title="Software Security Case Studies" caseStudies={caseStudies} />
-      <Testimonials />
-      <FAQ />
+      <FAQ faqs={faqData} />
       <Banner
         title="Get Your Software Secured"
         description="Schedule a free consultation with our security experts and discover how to keep your software safe, compliant, and resilient."

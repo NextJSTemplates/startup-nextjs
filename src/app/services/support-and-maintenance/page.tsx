@@ -6,8 +6,6 @@ import Banner from "@/components/Common/Banner";
 import SystemServices from "./components/Statistics";
 import Industries from "./components/Industries";
 import Showcase from "../../../components/Common/Showcase/Showcase";
-import HowWeWork from "@/components/HowWeWork";
-import { supportMtncProcesses } from "@/components/HowWeWork/data";
 import Statistics from "./components/Statistics";
 import SupportServices from "./components/SupportServices";
 import ServiceContactForm from "@/components/Common/ServiceContactForm";
@@ -45,12 +43,10 @@ const SupportAndMaintenance = () => {
               modernization, security enhancements, and technology migrations to
               support your growth." buttonCta="Get Your Project" />
       <SupportServices />
-      <HowWeWork title="Why Partner with Us?" imageSrc="/images/services/SupportMtncBackground.svg" processes={supportMtncProcesses} />
       <Industries />
       <Banner
         title="Don't let security issues disrupt your business"
-        description="Our experts at Classy Endeavors are ready to provide insights and strategies
-tailored to your unique requirements."
+        description="Our experts at Classy Endeavors are ready to provide insights and strategies tailored to your unique requirements."
         buttonText="Book a Consultation"
       />
     </>

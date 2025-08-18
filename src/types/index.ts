@@ -80,12 +80,10 @@ export type TeamMember  = {
 }
 
 export type Testimonial = {
-    name: string;
-    description: string;
-    body: string;
-    img: string;
-    descriptionKey: string;
-    bodyKey: string;
+    rating: number;
+    text: string;
+    author: string;
+    position: string;
 };
 
 export type WhyUsData = {
@@ -110,4 +108,17 @@ export type CaseStudy = {
   title: string;
   image: string;
   categories: string[];
+}
+
+export type BlogPost = {
+  title: string;
+  date: string;
+  image: string;
+  href: string;
+  description: string;
+}
+
+export type FaqData = {
+  question: string;
+  answer: string;
 }

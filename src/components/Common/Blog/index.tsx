@@ -9,17 +9,17 @@ import { getMediumPosts } from "@/lib/medium";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const Blog = () => {
+const Blog = ({blogLink}: {blogLink: string}) => {
   const [posts, setPosts] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const data = await getMediumPosts();
+      const data = await getMediumPosts(blogLink);
       setPosts(data.slice(0, 3));
     };
 
     fetchPosts();
-  }, []);
+  }, [blogLink]);
 
   const { t } = useLanguage();
 

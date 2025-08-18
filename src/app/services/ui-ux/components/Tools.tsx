@@ -1,50 +1,80 @@
 "use client";
 import SectionTitle from "@/components/Common/SectionTitle";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import Section from "@/components/Section";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import React from "react";
+
+const toolsData = [
+  {
+    category: "UI/UX and Graphic Design",
+    tools: [
+      "Sketch",
+      "Figma",
+      "Adobe XD",
+      "InVision Studio",
+      "Proto.io",
+      "Marvel",
+      "Zeplin",
+      "FlowMapp",
+      "Balsamiq",
+      "Hotjar",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe After Effects",
+      "Adobe InDesign",
+      "CorelDRAW",
+    ],
+  },
+  {
+    category: "3D Modelling and Animation",
+    tools: [
+      "Blender",
+      "Cinema 4D",
+      "Maya",
+      "3ds Max",
+      "ZBrush",
+      "Substance Painter",
+    ],
+  },
+  {
+    category: "Frontend Development",
+    tools: ["React", "Next.js", "Vue", "Tailwind CSS", "TypeScript"],
+  },
+  {
+    category: "Backend Development",
+    tools: ["Node.js", "Express", "NestJS", "Django", "Laravel"],
+  },
+];
 
 const Tools = () => {
   return (
-    <section className="relative z-10 pt-16 md:pt-20 lg:pt-24">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        className="container mx-auto max-w-7xl px-6"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col space-y-2"
-        >
-          <SectionTitle title="Our Design and Development Tools" className="text-2xl md:text-3xl text-center mb-4" />
-          <p className="text-center text-sm">
-            We leverage the latest tools to create exceptional user experiences.
-          </p>
-          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            {[
-              { label: "Figma", icon: "/images/services/uiux/figma.svg" },
-              { label: "Adobe XD", icon: "/images/services/uiux/adobexd.svg" },
-              { label: "Zeplin", icon: "/images/services/uiux/zeplin.svg" },
-              { label: "InVision", icon: "/images/services/uiux/invision.svg" },
-              { label: "Adobe Photoshop", icon: "/images/services/uiux/photoshop.svg" },
-            ].map((tool, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Image src={tool.icon} alt={tool.label} className="w-100" width={100} height={100} />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </motion.div>
-    </section>
+    <Section>
+      <div className="flex flex-col space-y-6">
+        <SectionTitle
+          title=" Core Technologies we use for UI/UX Graphic design"
+        />
+
+        <Accordion type="single" collapsible className="w-full max-w-4xl">
+          {toolsData.map((item, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger className="text-base font-semibold">
+                {item.category}
+              </AccordionTrigger>
+              <AccordionContent>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-4">
+                  {item.tools.map((tool, i) => (
+                    <li key={i} className="text-sm text-foreground">
+                      <span className="text-primary text-base">~ </span>
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </Section>
   );
 };
 

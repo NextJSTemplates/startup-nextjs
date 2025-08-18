@@ -3,58 +3,38 @@ import { ServicesFeatures } from "@/types";
 export const uiuxServices: ServicesFeatures[] = [
   {
     image: "/images/services/uiux/client-centric-approach.svg",
-    title: "User Research & Persona Mapping",
+    title: "Web & Mobile UI/UX Design",
     description:
-      "Deliver exceptional customer service with intelligent, NLP-based chatbots and virtual agents.",
-    services: [
-      "Empathy-driven insights to guide design strategy",
-      "User interviews and surveys to guide UX strategy.",
-      "User segmentation for personalized UI/UX solutions.",
-    ],
-    
+      "We create sleek, responsive, and user-friendly interfaces for web and mobile platforms. Our designs focus on seamless navigation, accessibility, and brand consistency—ensuring every click, swipe, and tap is effortless and memorable.",
   },
   {
     image: "/images/services/uiux/Cyber security concept in digital art.svg",
-    title: "Wireframing & Prototyping",
+    title: "App & Website Redesign",
     description:
-      "Eliminate inefficiencies with intelligent automation of repetitive business tasks.",
-    services: [
-      "High-fidelity, interactive prototypes for stakeholder validation.",
-      "Accurate design planning before development.",
-      "Fast iterations for feedback-driven improvements.",
-    ],
+      "Revitalize outdated apps or websites with a modern, high-performance design that aligns with your brand identity and user expectations. We enhance usability, aesthetics, and functionality to improve engagement and retention.",
   },
   {
     image: "/images/services/uiux/faster-time to-market.svg",
-    title: "Web & Mobile UI Design",
+    title: "UI/UX Design Audit",
     description:
-      "Enable data-backed strategies with real-time AI insights and analytics dashboards.",
-    services: [
-      "Responsive, intuitive design systems for all screens.",
-      "Pixel-perfect layouts optimized for user engagement.",
-      "Fast-loading, user-focused web design solutions.",
-    ],
+      "Through a detailed analysis of your product’s design, we identify usability issues, accessibility gaps, and opportunities for improvement. Our audits provide actionable insights to optimize user flow and boost overall performance.",
   },
   {
     image: "/images/services/uiux/Cyber security concept in digital art.svg",
-    title: "UX Audits & Optimization",
+    title: "UI/UX Design Research",
     description:
-      "Deploy personalized assistants to automate operations, bookings, and data processing.",
-    services: [
-      "Improve retention, usability, and accessibility across products.",
-      "Data-driven insights to refine user experience.",
-      "Actionable recommendations for design improvements.",
-    ],
+      "We conduct in-depth user research, competitor analysis, and usability testing to understand your audience’s needs and behaviors. This data-driven approach ensures our designs are grounded in real user expectations and market trends.",
   },
   {
     image: "/images/services/uiux/Server cloud data storage concept cloudscape digital online service for global network web database backup computer infrastructure.svg",
-    title: "Brand Identity Integration",
+    title: "Design Strategy Development",
     description:
-      "From recommendation engines to dynamic pricing and smart search, supercharge online retail with AI.",
-    services: [
-      "UI aligned with your brand voice, colors, and tone.",
-      "Seamless integration of brand elements into UI design.",
-      "Enhanced brand recall through cohesive design.",
-    ],
+      "Our team develops a comprehensive design roadmap that aligns with your business objectives, market positioning, and growth plans. We ensure every design decision supports your brand’s long-term success.",
+  },
+  {
+    image: "/images/services/uiux/client-centric-approach.svg",
+    title: "Product Design",
+    description:
+      "From concept to launch, we design digital products that combine aesthetic appeal with functional excellence. Our focus is on delivering solutions that solve problems, engage users, and drive business value.",
   },
 ];

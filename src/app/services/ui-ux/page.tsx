@@ -32,12 +32,15 @@ const UIUXPage = () => {
   return (
     <>
       <Hero
-        title="Design That Feels Right—and Performs Exceptionally"
-        subtitle="We help startups and enterprises craft stunning interfaces and frictionless experiences that delight users and drive growth."
+        title="Transform Ideas into Exceptional Digital Experiences"
+        subtitle="At Classy Endeavors, we craft user experiences that delight, engage,
+and convert. Our UI/UX design services blend creativity, functionality, and
+business goals—turning your vision into intuitive digital products that leave a
+lasting impression."
         backgroundImage="/images/services/UIUXBackground.svg"
         keywords={["Intuitive Design.", "User-Centric.", "Engaging Experiences"]}
       />
-      <ServiceFeatures title="Our UI/UX Design Services" features={uiuxServices} />
+      <ServiceFeatures title="Turning Your Ideas into Seamless Designs" features={uiuxServices} />
       <Features />
       <Tools />
       <CaseStudies title="Case studies of our UI/UX design services" caseStudies={caseStudies} />

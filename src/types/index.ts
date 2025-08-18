@@ -104,7 +104,6 @@ export type ServicesFeatures = {
   image: string;
   title: string;
   description: string;
-  services: string[]
 }
 
 export type CaseStudy = {

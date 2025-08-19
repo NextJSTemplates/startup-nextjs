@@ -49,12 +49,6 @@ export const products = [
     icon: Compass,
   },
   {
-    title: "Print Design",
-    description:
-      "Tangible designs that make a statement in the physical world.",
-    icon: Printer,
-  },
-  {
     title: "Web App Design",
     description:
       "Responsive web applications that perform beautifully across all devices.",

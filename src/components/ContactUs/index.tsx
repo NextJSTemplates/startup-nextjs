@@ -31,7 +31,6 @@ const ContactUs = ({ testimonials = uiuxTestimonials }: { testimonials?: Testimo
   }
   return (
     <Section id="contact" className="pb-20">
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 justify-center items-center">
         <div>
           <SectionTitle title={t("contact")} />
@@ -39,8 +38,8 @@ const ContactUs = ({ testimonials = uiuxTestimonials }: { testimonials?: Testimo
         </div>
         <div className="flex flex-col justify-center items-center mt-4 md:mt-0">
           <div className="border border-primary border-dashed rounded-md">
-            <div className="p-6 rounded-md relative text-sm lg:w-[450px] bg-neutral-50 border border-border/50 bottom-4 right-4 flex flex-col justify-center">
-              <div className="p-10 min-h-[280px] relative">
+            <div className="p-6 rounded-md relative text-sm w-[350px] md:w-[400px] lg:w-[450px] bg-neutral-50 border border-border/50 bottom-4 right-4 flex flex-col justify-center">
+              <div className="p-10 min-h-[400px] relative">
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={index}

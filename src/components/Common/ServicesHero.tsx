@@ -1,30 +1,11 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { ExternalLink } from "lucide-react";
-
-
-const staggerWords = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.25,
-    },
-  },
-};
-
-const wordFadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.3, ease: "easeOut" },
-  },
-};
+import { useRouter } from "next/navigation";
 
 type HeroProps = {
   title: string;
@@ -48,7 +29,7 @@ export const Hero = ({
   services,
   section
 }: HeroProps) => {
-
+  const router = useRouter()
   return (
     <section
       id="home"
@@ -88,7 +69,8 @@ export const Hero = ({
               >
                 {subtitle}
               </motion.p>
-              <Button className="bg-background hover:bg-background rounded-full text-foreground p-6">Get Started
+              <Button className="bg-background hover:bg-background rounded-full text-foreground p-6 cursor-pointer" onClick={() => router.push("#contact")}
+              >Get Started
                 <span>
                   <ExternalLink className="size-4" />
                 </span>

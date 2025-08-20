@@ -54,7 +54,7 @@ export const HoverEffect = ({
             </AnimatePresence>
             <Card>
               <CardTitle className="flex gap-2 font-medium text-base transition duration-300 hover:text-primary">
-                <Icon className="size-5" />
+                <Icon className="size-5 text-primary" />
                 {item.title}
               </CardTitle>
               <CardDescription>{item.description}</CardDescription>

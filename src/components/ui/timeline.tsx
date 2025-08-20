@@ -17,7 +17,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 key={index}
                 className="flex flex-col items-center text-center relative"
               >
-                <div className="hidden lg:block absolute top-3 left-0 right-0 h-[2px] bg-primary/50 dark:bg-neutral-700 z-0" />
+                <div className="absolute top-3 left-0 right-0 h-[2px] bg-primary/50 dark:bg-neutral-700 z-0" />
 
                 <div
                   className="absolute top-0 z-10"

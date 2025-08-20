@@ -82,7 +82,7 @@ const Navbar = ({ className }: { className?: string }) => {
           </MenuItem>
           <HoveredLink href="https://blog.classyendeavors.com/">Blogs</HoveredLink>
         </Menu>
-        <CustomButton title="Contact Us" />
+        <CustomButton title="Contact Us" link="mailto:info@classyendeavors.com" />
       </div>
 
       <button
@@ -153,7 +153,7 @@ const Navbar = ({ className }: { className?: string }) => {
             </div>
 
             <HoveredLink href="https://blog.classyendeavors.com/">Blogs</HoveredLink>
-            <CustomButton title="Contact Us" />
+            <CustomButton title="Contact Us" link="mailto:info@classyendeavors.com" />
           </div>
         </div>
       )}

@@ -21,7 +21,7 @@ const Banner = ({ title, description }: BannerProps) => {
       <p className="text-muted-foreground max-w-xl mx-auto mb-4 text-sm">
         {description}
       </p>
-      <CustomButton title="Contact Us" />
+      <CustomButton title="Contact Us" link="mailto:info@classyendeavors.com" />
     </motion.div>
   );
 };

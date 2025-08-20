@@ -7,6 +7,7 @@ import CircularBackground from "@/app/(home)/components/Hero/CircularBackground"
 import { Button } from "./moving-border";
 import Link from "next/link";
 import { useLanguage } from "@/components/Header"; 
+import CustomButton from "../Common/CustomButton";
 
 const GoogleGeminiEffect = ({
   pathLengths,
@@ -37,15 +38,7 @@ const GoogleGeminiEffect = ({
         {description || t("heroDescription")}
       </p>
       <div className="w-full h-[890px] -top-55 sm:-top-50 md:-top-30 lg:-top-23 flex items-center justify-center bg-red-transparent absolute">
-        <Button
-          borderRadius="1.75rem"
-          asChild
-          className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 z-30 md:text-base text-xs font-semibold rounded-full md:px-4 md:py-2 w-full"
-        >
-          <Link href="#contact">
-            <span className="mx-2">{t("bringIdeasToAction")}</span>
-          </Link>
-        </Button>
+        <CustomButton title={t("bringIdeasToAction")} link="#contact" />
       </div>
       <svg
         width="1440"

@@ -1,57 +1,28 @@
 import { FaqData } from "@/types";
 
-export const faqData: FaqData[] = [
+export const aiFaqs: FaqData[] = [
   {
-    question: "What programming languages and frameworks do you support?",
-    answer:
-      "We work with a wide range of modern technologies, including JavaScript, TypeScript, Python, Java, PHP, and C#. On the framework side, we regularly use React, Angular, Vue, Node.js, Django, Spring Boot, and Laravel, among others. Our team chooses the best stack for your project's needs.",
+    question: "What kind of business problems can AI solve?",
+    answer: "AI can help businesses streamline operations, improve decision-making, enhance customer service, and unlock new growth opportunities. From automating repetitive tasks to predicting customer behavior or detecting fraud, AI solutions are designed to address real-world challenges across industries."
   },
   {
-    question: "Can you integrate with our existing systems and APIs?",
-    answer:
-      "Yes. We have extensive experience connecting applications to third-party APIs, databases, and enterprise systems. Whether it’s REST, GraphQL, SOAP, or custom integrations, we ensure seamless communication between your software and existing infrastructure.",
+    question: "How long does it take to develop a custom AI solution?",
+    answer: "The timeline for AI development depends on the complexity of the project, the availability of quality data, and the required integrations. On average, an AI project may take a few weeks for a prototype and several months for a production-ready solution. At Classy Endeavors, we follow an agile process to deliver value at every stage."
   },
   {
-    question: "How do you ensure code quality and maintainability?",
-    answer:
-      "We follow industry best practices, including code reviews, automated testing, continuous integration, and adherence to clean coding standards. Our documentation and modular architecture ensure your project remains maintainable and scalable over time.",
+    question: "Do I need a lot of data to use AI in my business?",
+    answer: "While large datasets can improve AI accuracy, many solutions can start with smaller, structured data combined with pre-trained models. Our experts help you assess your current data, fill in the gaps, and design AI systems that grow smarter as more data becomes available."
   },
   {
-    question: "Do you provide ongoing maintenance and support after launch?",
-    answer:
-      "Yes. We offer flexible maintenance plans covering bug fixes, security updates, performance monitoring, and feature enhancements. Our goal is to keep your software running smoothly long after deployment.",
+    question: "How secure is AI for my business operations?",
+    answer: "Security is a top priority in AI development. We design AI systems with built-in safeguards to prevent data leaks, bias, or misuse. With advanced monitoring, compliance checks, and cybersecurity measures, our solutions ensure sensitive business data remains protected."
   },
   {
-    question: "Can you help with both front-end and back-end development?",
-    answer:
-      "Absolutely. We provide full-stack development services, building user-friendly interfaces on the front end and robust, secure, and scalable back-end systems to power your applications.",
-  },
-  {
-    question: "How do you handle project timelines and deadlines?",
-    answer:
-      "We use agile project management to break work into manageable sprints, providing regular updates and progress reports. This approach keeps projects on track while allowing flexibility for changes.",
-  },
-  {
-    question: "What is your process for gathering requirements?",
-    answer:
-      "We start with discovery workshops and stakeholder interviews to fully understand your goals, challenges, and vision. From there, we create detailed specifications, wireframes, and prototypes to ensure alignment before development begins.",
-  },
-  {
-    question: "Do you offer custom software solutions or only prebuilt products?",
-    answer:
-      "We specialize in custom software tailored to your exact needs, but we can also adapt or enhance existing solutions when appropriate. Our focus is on delivering the best fit for your business goals.",
-  },
-  {
-    question: "How do you ensure security and compliance in your software?",
-    answer:
-      "We implement secure coding practices, regular vulnerability scanning, and encryption standards like TLS and AES. We can also align development with compliance requirements such as GDPR, HIPAA, or PCI-DSS when needed.",
-  },
-  {
-    question: "Can you scale the application as our user base grows?",
-    answer:
-      "Yes. We design applications with scalability in mind, leveraging cloud infrastructure, load balancing, and modular architecture so your software can handle increased demand without performance loss.",
-  },
-];
+    question: "Will AI replace human workers in my company?",
+    answer: "AI is not designed to replace humans but to empower them. It takes over repetitive and time-consuming tasks, allowing employees to focus on creative, strategic, and high-value work. This creates a more productive workplace and helps businesses stay competitive."
+  }
+]
+
 
 
 export const uiuxFaqs: FaqData[] = [

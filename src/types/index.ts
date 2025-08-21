@@ -99,7 +99,7 @@ export type Processes = {
 }
 
 export type ServicesFeatures = {
-  image: string;
+  image?: string;
   title: string;
   description: string;
 }

@@ -39,7 +39,7 @@ export default function FAQ({ faqs }: { faqs: FaqData[] }) {
             ))}
           </Accordion>
         </div>
-        <Banner title="Let's Design Something That Works" description="Kickstart Your Next Project With a Free Custom Design — Share Your Idea and Let Our Expert Team Bring It to Life, Absolutely Free!" buttonText="Contact Us" />
+        <Banner title="Lead the Market with AI Today!" description="AI isn’t the future, it’s the now. Let’s create intelligent solutions that put your business ahead of the curve." buttonText="Talk to Our Experts" />
       </div>
     </Section>
   );

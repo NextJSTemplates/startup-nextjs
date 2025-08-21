@@ -37,8 +37,8 @@ const Navbar = ({ className }: { className?: string }) => {
         <Menu setActive={setActive}>
           <HoveredLink href="/about-us">About Us</HoveredLink>
           <MenuItem setActive={setActive} active={active} item="Products">
-            <div className="text-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
-              <ProductItem
+            <div className="text-sm grid grid-cols-1 md:grid-cols-2 gap-10 p-4">
+              {/* <ProductItem
                 title="Cloud Computing"
                 href="/services/cloud-computing"
                 description="Scalable cloud solutions for modern businesses."
@@ -52,7 +52,7 @@ const Navbar = ({ className }: { className?: string }) => {
                 title="Software Development"
                 href="/services/software-development"
                 description="Custom software tailored to your business needs."
-              />
+              /> */}
               <ProductItem
                 title="Artificial Intelligence"
                 href="/services/artificial-intelligence"
@@ -63,7 +63,7 @@ const Navbar = ({ className }: { className?: string }) => {
                 href="/services/ui-ux"
                 description="Intuitive design that elevates user experience."
               />
-              <ProductItem
+              {/* <ProductItem
                 title="Software Security"
                 href="/services/software-security"
                 description="Protect applications with enterprise-grade security."
@@ -77,7 +77,7 @@ const Navbar = ({ className }: { className?: string }) => {
                 title="Software Maintenance"
                 href="/services/software-maintenance"
                 description="Ongoing updates and support for long-term success."
-              />
+              /> */}
             </div>
           </MenuItem>
           <HoveredLink href="https://blog.classyendeavors.com/">Blogs</HoveredLink>
@@ -108,7 +108,7 @@ const Navbar = ({ className }: { className?: string }) => {
 
               {active === "Products" && (
                 <div className="flex flex-col space-y-3 p-4 mt-2 border rounded-lg">
-                  <ProductItem
+                  {/* <ProductItem
                     title="Cloud Computing"
                     href="/services/cloud-computing"
                     description="Scalable cloud solutions for modern businesses."
@@ -122,7 +122,7 @@ const Navbar = ({ className }: { className?: string }) => {
                     title="Software Development"
                     href="/services/software-development"
                     description="Custom software tailored to your business needs."
-                  />
+                  /> */}
                   <ProductItem
                     title="Artificial Intelligence"
                     href="/services/artificial-intelligence"
@@ -133,7 +133,7 @@ const Navbar = ({ className }: { className?: string }) => {
                     href="/services/ui-ux"
                     description="Intuitive design that elevates user experience."
                   />
-                  <ProductItem
+                  {/* <ProductItem
                     title="Software Security"
                     href="/services/software-security"
                     description="Protect applications with enterprise-grade security."
@@ -147,7 +147,7 @@ const Navbar = ({ className }: { className?: string }) => {
                     title="Software Maintenance"
                     href="/services/software-maintenance"
                     description="Ongoing updates and support for long-term success."
-                  />
+                  /> */}
                 </div>
               )}
             </div>

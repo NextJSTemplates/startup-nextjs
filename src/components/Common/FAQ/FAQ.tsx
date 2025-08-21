@@ -8,7 +8,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { FaqData } from '@/types';
 import Banner from '../Banner';
 
-export default function FAQ({ faqs }: { faqs: FaqData[] }) {
+type FAQProps = {
+  bannerTitle?: string;
+  bannerDesc?:  string;
+  bannerCTA?: string;
+  faqs: FaqData[]
+}
+export default function FAQ({bannerTitle, bannerDesc, bannerCTA, faqs} : FAQProps) {
   return (
     <Section>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
@@ -39,7 +45,7 @@ export default function FAQ({ faqs }: { faqs: FaqData[] }) {
             ))}
           </Accordion>
         </div>
-        <Banner title="Lead the Market with AI Today!" description="AI isn’t the future, it’s the now. Let’s create intelligent solutions that put your business ahead of the curve." buttonText="Talk to Our Experts" />
+        <Banner title={bannerTitle || "Let's Design Something That Works"} description={bannerDesc || "Kickstart Your Next Project With a Free Custom Design — Share Your Idea and Let Our Expert Team Bring It to Life, Absolutely Free!"} buttonText={bannerCTA || "Contact Us"} />
       </div>
     </Section>
   );

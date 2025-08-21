@@ -39,7 +39,7 @@ const ArtificialIntelligence = () => {
       <Process />
       <Steps />
       <ServiceIndustries title="Industries we serve" industries={industries} />
-      <FAQ faqs={aiFaqs} />
+      <FAQ faqs={aiFaqs} bannerTitle="Lead the Market with AI Today!" bannerDesc="AI isn’t the future, it’s the now. Let’s create intelligent solutions that put your business ahead of the curve." bannerCTA="Talk to Our Experts"  />      
       <ContactUs testimonials={aiTestimonials} />
     </>
   );

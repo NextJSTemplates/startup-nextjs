@@ -30,17 +30,17 @@ export const Footer = () => {
               <h4 className="mb-4 font-semibold">{t("services")}</h4>
               <ul className="list-none space-y-2 text-sm">
                 <li>
-                  <Link href="/services/cloud-computing" className="">
+                  <Link href="/" className="">
                     {t("cloudComputing")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/mobile-development" className="">
+                  <Link href="/" className="">
                     {t("mobileDevelopment")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/software-development" className="">
+                  <Link href="/" className="">
                     {t("softwareDevelopment")}
                   </Link>
                 </li>
@@ -55,17 +55,17 @@ export const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/software-security" className="">
+                  <Link href="/" className="">
                     {t("softwareSecurity")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/mvp-development" className="">
+                  <Link href="/" className="">
                     {t("mvpDevelopment")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/support-and-maintenance" className="">
+                  <Link href="/" className="">
                     {t("softwareMaintenance")}
                   </Link>
                 </li>

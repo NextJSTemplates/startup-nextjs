@@ -13,7 +13,6 @@ import { uiuxServices } from "@/components/Common/ServiceFeatures/serviceFeature
 import Testimonials from "@/components/Common/Testimonials";
 import CaseStudies from "@/components/Common/CaseStudies";
 import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
-import { faqData } from "@/components/Common/FAQ/faqData";
 
 export const metadata: Metadata = {
   title: "Services - Mvp Development",
@@ -42,7 +41,6 @@ const MvpDevelopment = () => {
       <Features />
       <HowWeWork />
       <CaseStudies title="MVP Case Studies" caseStudies={caseStudies} />
-      <FAQ faqs={faqData} />
       <Banner title="Let's develop your MVP" description="Hand us the requirements and leave the rest to us. Your solution is lorem ipsum to us" buttonText="Book a call" />
     </>
   );

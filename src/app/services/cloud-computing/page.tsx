@@ -13,7 +13,6 @@ import CaseStudies from "@/components/Common/CaseStudies";
 import { caseStudies } from "@/components/Common/CaseStudies/caseStudiesData";
 import FAQ from "@/components/Common/FAQ/FAQ";
 import Testimonials from "@/components/Common/Testimonials";
-import { faqData } from "@/components/Common/FAQ/faqData";
 
 export const metadata: Metadata = {
   title: "Services - Cloud Computing",
@@ -41,7 +40,6 @@ const CloudComputing = () => {
       <DvtProcesses />
       <CaseStudies title="Case studies of our cloud computing services" caseStudies={caseStudies} />
       <TechStack />
-      <FAQ faqs={faqData} />
       <Banner
         title="Ready to begin your cloud journey?"
         description="Optimize your cloud infrastructure for greater speed, scalability, and efficiency. Schedule your free expert consultation today and unlock the full potential of your cloud environment."

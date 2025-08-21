@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://ce-website-new.vercel.app</loc><lastmod>2025-08-19T13:20:07.545Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/services/mvp-development</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/sitemap</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/services/software-security</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/services/cloud-computing</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/services/software-development</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/services/support-and-maintenance</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/services/ui-ux</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/services/artificial-intelligence</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://ce-website-new.vercel.app/about-us</loc><lastmod>2025-08-19T13:20:07.546Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/services/artificial-intelligence</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/services/software-security</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/sitemap</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/services/software-development</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/services/mvp-development</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/services/ui-ux</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/services/support-and-maintenance</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/services/cloud-computing</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ce-website-new.vercel.app/about-us</loc><lastmod>2025-08-21T17:57:31.083Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

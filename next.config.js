@@ -1,12 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['avatar.vercel.sh', 'cdn-images-1.medium.com'],
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "avatar.vercel.sh",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn-images-1.medium.com",
+      },
+      {
+        protocol: "https",
+        hostname: "miro.medium.com",
+      },
+      {
+        protocol: "https",
+        hostname: "medium.com",
+      },
+      {
+        protocol: "https",
         hostname: "cdn.sanity.io",
-        port: "",
       },
     ],
   },

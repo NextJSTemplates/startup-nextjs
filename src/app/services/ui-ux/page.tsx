@@ -44,7 +44,7 @@ lasting impression."
       <Tools />
       <DesignProcess />
       <ServiceIndustries title="Industries we serve" industries={industries} />
-      <Blog blogLink="https://blog.classyendeavors.com/feed?topic=design" />
+      <Blog blogLink="https://blog.classyendeavors.com/feed" />
       <FAQ faqs={uiuxFaqs} />
       <ContactUs testimonials={uiuxTestimonials} />
     </>

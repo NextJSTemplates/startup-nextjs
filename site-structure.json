@@ -1,0 +1,109 @@
+{
+  "site": {
+    "name": "Assistant Video Editor Jobs",
+    "baseUrl": "https://assistantvideoeditorjobs.com",
+    "navigation": [
+      {
+        "title": "Home",
+        "path": "/",
+        "children": []
+      },
+      {
+        "title": "Jobs",
+        "path": "/jobs",
+        "children": [
+          {
+            "title": "Assistant Video Editor Jobs",
+            "path": "/jobs/assistant-video-editor-jobs"
+          },
+          {
+            "title": "Freelance Jobs",
+            "path": "/jobs/freelance-assistant-video-editor"
+          },
+          {
+            "title": "Remote Jobs",
+            "path": "/jobs/remote-assistant-video-editor"
+          },
+          {
+            "title": "Entry-Level Jobs",
+            "path": "/jobs/entry-level-assistant-video-editor"
+          },
+          {
+            "title": "Salary & Career Path",
+            "path": "/jobs/salary-career"
+          }
+        ]
+      },
+      {
+        "title": "Guides",
+        "path": "/guides",
+        "children": [
+          {
+            "title": "What Does an Assistant Video Editor Do?",
+            "path": "/guides/what-does-an-assistant-video-editor-do"
+          },
+          {
+            "title": "How to Become an Assistant Video Editor",
+            "path": "/guides/how-to-become"
+          },
+          {
+            "title": "Skills Needed",
+            "path": "/guides/skills"
+          },
+          {
+            "title": "Resume & Portfolio Tips",
+            "path": "/guides/resume-portfolio"
+          },
+          {
+            "title": "Interview Preparation",
+            "path": "/guides/interview-preparation"
+          }
+        ]
+      },
+      {
+        "title": "Tools",
+        "path": "/tools",
+        "children": [
+          {
+            "title": "Best Free Editing Software",
+            "path": "/tools/free-editing-software"
+          },
+          {
+            "title": "Paid Editing Tools",
+            "path": "/tools/paid-editing-tools"
+          },
+          {
+            "title": "Resume Templates",
+            "path": "/tools/resume-templates"
+          },
+          {
+            "title": "Project Management Tools",
+            "path": "/tools/project-management-tools"
+          }
+        ]
+      },
+      {
+        "title": "Blog",
+        "path": "/blog",
+        "children": [
+          {
+            "title": "Assistant Video Editor vs Video Editor",
+            "path": "/blog/assistant-vs-video-editor"
+          },
+          {
+            "title": "Finding Freelance Clients",
+            "path": "/blog/finding-freelance-clients"
+          },
+          {
+            "title": "AI Tools for Video Editors",
+            "path": "/blog/ai-tools-for-video-editors"
+          },
+          {
+            "title": "Daily Tasks of an Assistant Editor",
+            "path": "/blog/daily-tasks"
+          }
+        ]
+      }
+    ]
+  }
+}

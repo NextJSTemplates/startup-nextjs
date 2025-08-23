@@ -25,6 +25,7 @@ layer(base);
 
   --color-body-color: #788293;
   --color-body-color-dark: #959cb1;
+  --color-border-body-color: #e3e8ef;
 
   --color-stroke-stroke: #e3e8ef;
   --color-stroke-dark: #353943;
@@ -131,5 +132,160 @@ layer(base);
 @layer components {
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .border-body-color {
+    border-color: var(--color-border-body-color);
+  }
+  
+  .border-stroke {
+    border-color: var(--color-stroke-stroke);
+  }
+  
+  .text-body-color {
+    color: var(--color-body-color);
+  }
+  
+  .text-body-color-dark {
+    color: var(--color-body-color-dark);
+  }
+  
+  .bg-gray-light {
+    background-color: var(--color-gray-light);
+  }
+  
+  .bg-gray-dark {
+    background-color: var(--color-gray-dark);
+  }
+  
+  .bg-dark {
+    background-color: var(--color-dark);
+  }
+  
+  .bg-bg-color-dark {
+    background-color: var(--color-bg-color-dark);
+  }
+  
+  .bg-gray-2 {
+    background-color: #f8f9fa;
+  }
+  
+  .bg-dark-bg {
+    background-color: #1e232e;
+  }
+  
+  .ease-in-up {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .shadow-btn {
+    box-shadow: var(--shadow-btn);
+  }
+  
+  .shadow-btn-hover {
+    box-shadow: var(--shadow-btn-hover);
+  }
+  
+  .shadow-btn-light {
+    box-shadow: var(--shadow-btn-light);
+  }
+  
+  .shadow-sticky {
+    box-shadow: var(--shadow-sticky);
+  }
+  
+  .shadow-sticky-dark {
+    box-shadow: var(--shadow-sticky-dark);
+  }
+  
+  .shadow-gray-dark {
+    box-shadow: 0px 5px 15px rgba(30, 35, 46, 0.1);
+  }
+  
+  .shadow-three {
+    box-shadow: var(--shadow-three);
+  }
+  
+  .shadow-one {
+    box-shadow: var(--shadow-one);
+  }
+  
+  .shadow-two {
+    box-shadow: var(--shadow-two);
+  }
+  
+  .shadow-submit {
+    box-shadow: var(--shadow-submit);
+  }
+  
+  .shadow-submit-dark {
+    box-shadow: var(--shadow-submit-dark);
+  }
+  
+  .shadow-sign-up {
+    box-shadow: var(--shadow-sign-up);
+  }
+  
+  .shadow-feature-2 {
+    box-shadow: var(--shadow-feature-2);
+  }
+  
+  .drop-shadow-three {
+    filter: drop-shadow(var(--drop-shadow-three));
+  }
+  
+  .drop-shadow-none {
+    filter: drop-shadow(none);
+  }
+  
+  .shadow-switch-1 {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-signUp {
+    box-shadow: 0px 5px 15px rgba(4, 10, 34, 0.2);
+  }
+  
+  .font-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  
+  .time {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .price {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  
+  .amount {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  
+  .navbar {
+    transition: all 0.3s ease;
+  }
+  
+  .submenu {
+    transition: top 0.3s ease;
+  }
+  
+  .header {
+    transition: all 0.3s ease;
+  }
+  
+  .rounded-xs {
+    border-radius: 0.125rem;
+  }
+  
+  .outline-hidden {
+    outline: none;
   }
 }

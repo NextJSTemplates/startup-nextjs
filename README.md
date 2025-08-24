@@ -1,74 +1,73 @@
-# Startup - Free Next.js Startup Website Template
+# Assistant Video Editor - Career Platform
 
-Startup is a free, open-source, and premium-quality [**Next.js startup website template**](https://nextjstemplates.com/templates/startup) that comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
+Assistant Video Editor is a comprehensive platform designed to connect Assistant Video Editor professionals with job opportunities, career resources, and industry insights. Built with Next.js, this platform provides everything needed for Assistant Video Editors to advance their careers.
 
-If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
+## 🎯 Platform Features
 
-### ✨ Key Features
-- Crafted for Startup and SaaS Business
-- Next.js and Tailwind CSS
-- All Essential Business Sections and Pages
-- High-quality and Clean Design
-- Dark and Light Version
-- TypeScript Support
-and Much More ...
+- **Job Listings**: Browse Assistant Video Editor positions across different categories
+- **Career Guides**: Comprehensive resources for Assistant Video Editor skill development and career growth
+- **Tools & Resources**: Free editing software, resume templates, and career tools for Assistant Video Editors
+- **Blog & Insights**: Industry trends, tips, and professional development articles for Assistant Video Editors
+- **Community**: Connect with other Assistant Video Editor professionals
 
-### 🙌 Detailed comparison between the Free and Pro versions of Startup
+## 🚀 Getting Started
 
-| Feature             | Free | Pro |
-|---------------------|------------|----------|
-| Next.js Landing Page             | ✅ Yes      | ✅ Yes      |
-| All The Integrations - Auth, DB, Payments, Blog and many more ...             | ❌ No      | ✅ Yes |
-| Homepage Variations             | 1      | 2 |
-| Additional SaaS Pages and Components             | ❌ No      | ✅ Yes |
-| Functional Blog with Sanity       | ❌ No      | ✅ Yes |
-| Use with Commercial Projects            | ✅ Yes      | ✅ Yes      |
-| Lifetime Free Updates             | ✅ Yes      | ✅ Yes |
-| Email Support       | ❌ No         | ✅ Yes       |
-| Community Support         | ✅ Yes         | ✅ Yes       |
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
 
-### [🔥 Get Startup Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+### Installation
 
-[![Startup Pro](https://raw.githubusercontent.com/NextJSTemplates/startup-nextjs/main/startup-pro.webp)](https://nextjstemplates.com/templates/saas-starter-startup)
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/assistant-video-editor.git
+```
 
-Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
+2. Install dependencies
+```bash
+npm install
+```
 
+3. Run the development server
+```bash
+npm run dev
+```
 
-- [🚀 View Free Demo](https://startup.nextjstemplates.com/)
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-- [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
+## 🛠️ Built With
 
-- [📦 Download](https://nextjstemplates.com/templates/startup)
+- **Next.js 13+** - React framework with App Router
+- **TypeScript** - Type safety and better development experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **Responsive Design** - Mobile-first approach
 
-- [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+## 📱 Pages & Components
 
-- [🔌 Documentation](https://nextjstemplates.com/docs)
+- **Homepage** - Hero section, features, and platform overview for Assistant Video Editors
+- **Jobs** - Assistant Video Editor job listings by category (freelance, remote, entry-level)
+- **Guides** - Career development resources and tutorials for Assistant Video Editors
+- **Tools** - Free software, templates, and career tools for Assistant Video Editors
+- **Blog** - Industry insights and professional tips for Assistant Video Editors
+- **Contact** - Get in touch with our Assistant Video Editor team
 
-### ⚡ Deploy Now
+## 🔧 Customization
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
+The platform is designed to be easily customizable for Assistant Video Editor needs:
+- Update content in `src/data/site-content.ts`
+- Modify navigation in `src/components/Header/menuData.tsx`
+- Customize styling with Tailwind CSS classes
+- Add new pages following the existing structure
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
+## 📄 License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### 📄 License
-Startup is 100% free and open-source, feel free to use with your personal and commercial projects.
+## 🤝 Contributing
 
-### 💜 Support
-If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
+We welcome contributions from the Assistant Video Editor community! Please feel free to submit a Pull Request.
 
-### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)
+## 📞 Support
 
-### Update Log
-
-**10 April 2025**
-- Fix peer deps issue with Next.js 15
-- Upgrade to tailwind v4
-- Refactored blog cards for handling edge cases(text ellipsis on bio, keeping author details at the bottom etc.)
-- Re-wrote blog details page with icons separation, fallback author image and better markup.
-- Fixed duplicate key errors on homepage.
-- Separated icons on theme-switcher button, and refactored scroll-to-top button.
-
-**29 Jan 2025**
-- Upgraded to Next.js 15
+For support, email us at support@assistantvideoeditor.com or visit our website.

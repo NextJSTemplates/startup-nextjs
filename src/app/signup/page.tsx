@@ -3,9 +3,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign Up Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Sign Up Page for Startup Nextjs Template",
-  // other metadata
+  title: "Sign Up | Assistant Video Editor - Create Your Account",
+  description: "Join Assistant Video Editor to access exclusive job opportunities, career resources, and connect with the Assistant Video Editor community.",
 };
 
 const SignupPage = () => {
@@ -177,7 +176,7 @@ const SignupPage = () => {
                   </div>
                 </form>
                 <p className="text-body-color text-center text-base font-medium">
-                  Already using Startup?{" "}
+                  Already using Assistant Video Editor?{" "}
                   <Link href="/signin" className="text-primary hover:underline">
                     Sign in
                   </Link>

@@ -75,12 +75,6 @@ const menuData: Menu[] = [
         path: "/guides/resume-portfolio",
         newTab: false,
       },
-      {
-        id: 35,
-        title: "Interview Preparation",
-        path: "/guides/interview-preparation",
-        newTab: false,
-      },
     ],
   },
   {
@@ -96,56 +90,44 @@ const menuData: Menu[] = [
         newTab: false,
       },
       {
-        id: 42,
-        title: "Paid Editing Tools",
-        path: "/tools/paid-editing-tools",
-        newTab: false,
-      },
-      {
         id: 43,
         title: "Resume Templates",
         path: "/tools/resume-templates",
         newTab: false,
       },
-      {
-        id: 44,
-        title: "Project Management Tools",
-        path: "/tools/project-management-tools",
-        newTab: false,
-      },
     ],
   },
+  // {
+  //   id: 5,
+  //   title: "Blog",
+  //   path: "/blog",
+  //   newTab: false,
+  //   submenu: [
+  //     {
+  //       id: 51,
+  //       title: "Assistant Video Editor vs Video Editor",
+  //       path: "/blog/assistant-vs-video-editor",
+  //       newTab: false,
+  //     },
+  //     {
+  //       id: 52,
+  //       title: "Finding Freelance Clients",
+  //       path: "/blog/finding-freelance-clients",
+  //       newTab: false,
+  //     },
+  //     {
+  //       id: 53,
+  //       title: "AI Tools for Video Editors",
+  //       path: "/blog/ai-tools-for-video-editors",
+  //       newTab: false,
+  //     },
+  //   ],
+  // },
   {
-    id: 5,
-    title: "Blog",
-    path: "/blog",
+    id: 6,
+    title: "Feedback",
+    path: "/feedback",
     newTab: false,
-    submenu: [
-      {
-        id: 51,
-        title: "Assistant Video Editor vs Video Editor",
-        path: "/blog/assistant-vs-video-editor",
-        newTab: false,
-      },
-      {
-        id: 52,
-        title: "Finding Freelance Clients",
-        path: "/blog/finding-freelance-clients",
-        newTab: false,
-      },
-      {
-        id: 53,
-        title: "AI Tools for Video Editors",
-        path: "/blog/ai-tools-for-video-editors",
-        newTab: false,
-      },
-      {
-        id: 54,
-        title: "Daily Tasks of an Assistant Editor",
-        path: "/blog/daily-tasks",
-        newTab: false,
-      },
-    ],
   },
 ];
 

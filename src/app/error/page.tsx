@@ -3,9 +3,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Error Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Error Page for Startup Nextjs Template",
-  // other metadata
+  title: "Page Not Found | Assistant Video Editor",
+  description: "The page you're looking for doesn't exist. Return to our homepage to explore Assistant Video Editor job opportunities and career resources.",
 };
 
 const ErrorPage = () => {

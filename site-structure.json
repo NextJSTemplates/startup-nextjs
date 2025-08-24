@@ -53,10 +53,6 @@
           {
             "title": "Resume & Portfolio Tips",
             "path": "/guides/resume-portfolio"
-          },
-          {
-            "title": "Interview Preparation",
-            "path": "/guides/interview-preparation"
           }
         ]
       },
@@ -69,40 +65,33 @@
             "path": "/tools/free-editing-software"
           },
           {
-            "title": "Paid Editing Tools",
-            "path": "/tools/paid-editing-tools"
-          },
-          {
             "title": "Resume Templates",
             "path": "/tools/resume-templates"
-          },
-          {
-            "title": "Project Management Tools",
-            "path": "/tools/project-management-tools"
           }
         ]
       },
+      // {
+      //   "title": "Blog",
+      //   "path": "/blog",
+      //   "children": [
+      //     {
+      //       "title": "Assistant Video Editor vs Video Editor",
+      //       "path": "/blog/assistant-vs-video-editor"
+      //     },
+      //     {
+      //       "title": "Finding Freelance Clients",
+      //       "path": "/blog/finding-freelance-clients"
+      //     },
+      //     {
+      //       "title": "AI Tools for Video Editors",
+      //       "path": "/blog/ai-tools-for-video-editors"
+      //     }
+      //   ]
+      // },
       {
-        "title": "Blog",
-        "path": "/blog",
-        "children": [
-          {
-            "title": "Assistant Video Editor vs Video Editor",
-            "path": "/blog/assistant-vs-video-editor"
-          },
-          {
-            "title": "Finding Freelance Clients",
-            "path": "/blog/finding-freelance-clients"
-          },
-          {
-            "title": "AI Tools for Video Editors",
-            "path": "/blog/ai-tools-for-video-editors"
-          },
-          {
-            "title": "Daily Tasks of an Assistant Editor",
-            "path": "/blog/daily-tasks"
-          }
-        ]
+        "title": "Feedback",
+        "path": "/feedback",
+        "children": []
       }
     ]
   }

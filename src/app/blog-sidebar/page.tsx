@@ -7,9 +7,8 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
-  // other metadata
+  title: "Blog | Assistant Video Editor - Career Insights & Tips",
+  description: "Explore our comprehensive blog covering Assistant Video Editor careers, industry trends, skill development, and job search strategies for Assistant Video Editors.",
 };
 
 const BlogSidebarPage = () => {

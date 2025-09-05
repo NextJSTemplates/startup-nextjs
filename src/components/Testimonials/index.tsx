@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "John Doe",
+    designation: "Directrice Transformation Digitale @TechCorp",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "UnLeashLab nous a permis d’aligner notre stratégie IT sur nos objectifs business. Leur expertise en Business Analysis a été un véritable accélérateur pour notre transformation.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Marc Lefebvre",
+    designation: "Responsable RH @Innova",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Grâce à l’accompagnement d’UnLeashLab, nous avons recruté les bons Business Analysts en un temps record. Leur méthodologie a fait la différence.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Stephane Martin",
+    designation: "Business Analyst Senior",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Le programme BA Care m’a permis de retrouver confiance et équilibre dans mon métier. Un soutien précieux et adapté à la réalité de notre quotidien.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -37,8 +37,8 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Ils nous font confiance"
+          paragraph="Découvrez comment UnLeashLab accompagne ses clients dans leurs défis stratégiques, technologiques et humains."
           center
         />
 
@@ -48,6 +48,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
+
       <div className="absolute right-0 top-5 z-[-1]">
         <svg
           width="238"
@@ -85,8 +86,8 @@ const Testimonials = () => {
               y2="459.865"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              <stop stopColor="#48937E" />
+              <stop offset="1" stopColor="#48937E" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_83:2"
@@ -96,12 +97,13 @@ const Testimonials = () => {
               y2="675.565"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              <stop stopColor="#48937E" />
+              <stop offset="1" stopColor="#48937E" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
       </div>
+
       <div className="absolute bottom-5 left-0 z-[-1]">
         <svg
           width="279"
@@ -137,8 +139,8 @@ const Testimonials = () => {
               y2="8.15715"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#48937E" stopOpacity="0" />
+              <stop offset="1" stopColor="#48937E" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_72:302"
@@ -148,8 +150,8 @@ const Testimonials = () => {
               y2="-2.84285"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#48937E" stopOpacity="0" />
+              <stop offset="1" stopColor="#48937E" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_72:302"
@@ -159,8 +161,8 @@ const Testimonials = () => {
               y2="19.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#48937E" stopOpacity="0" />
+              <stop offset="1" stopColor="#48937E" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_72:302"
@@ -170,8 +172,8 @@ const Testimonials = () => {
               y2="31.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#48937E" stopOpacity="0" />
+              <stop offset="1" stopColor="#48937E" />
             </linearGradient>
           </defs>
         </svg>

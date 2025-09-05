@@ -4,17 +4,17 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Contact Page for Startup Nextjs Template",
-  // other metadata
+  title: "Contact | UnLeashLab - Expert en Business Analysis",
+  description:
+    "Contactez UnLeashLab pour vos besoins en Business Analysis, conseil IT, recrutement de Business Analysts et accompagnement stratégique.",
 };
 
 const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Contact Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Contactez-nous"
+        description="Besoin d’un accompagnement en Business Analysis, IT Advisory ou recrutement de Business Analysts ? Laissez-nous un message, notre équipe reviendra vers vous rapidement."
       />
 
       <Contact />

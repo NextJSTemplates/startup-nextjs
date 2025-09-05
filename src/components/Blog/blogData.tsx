@@ -1,47 +1,51 @@
 import { Blog } from "@/types/blog";
 
-const blogData: Blog[] = [
+const blogData: (Blog & { quote?: string })[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "Business IT Advisory",
+    quote: "« Faites de la technologie un levier stratégique »",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-01.jpg",
+      "Dans un monde où succès rime avec agilité et innovation, UnLeash Lab vous aide à aligner votre stratégie technologique sur vos objectifs métier. Grâce à notre accompagnement personnalisé, optimisez vos investissements IT, simplifiez vos décisions stratégiques et accélérez votre transformation numérique.",
+    image: "/images/blog/ImageService1.jpg",
     author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "UnLeashLab",
+      image: "/images/blog/ImageService1.png",
+      designation: "",
     },
-    tags: ["creative"],
+    tags: ["Business", "IT"],
     publishDate: "2025",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "Recrutement de Business Analysts",
+    quote: "« Recrutez efficacement les meilleurs Business Analysts »",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-02.jpg",
+      "Parce que peu d’entreprises comprennent réellement le rôle stratégique du Business Analyst, les méthodes classiques de recrutement peinent à détecter les meilleurs talents. Grâce à notre expertise unique, identifiez, évaluez et intégrez efficacement les profils capables de faire la différence dans votre organisation.",
+    image: "/images/blog/ImageService2.jpg",
     author: {
-      name: "Musharof Chy",
-      image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      name: "UnLeashLab",
+      image: "/images/services/icon-recrutement.png",
+      designation: "",
     },
-    tags: ["computer"],
+    tags: ["RH", "Business Analyst"],
     publishDate: "2025",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "BA Care",
+    quote: "« Un accompagnement dédié aux Business Analysts »",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-03.jpg",
+      "Le métier de Business Analyst est exigeant : pression constante, complexité relationnelle, stress psychologique… Ce rôle, pourtant clé, est souvent mal compris, laissant les Business Analysts isolés face à ces défis. C’est pourquoi nous avons créé BA Care, un accompagnement confidentiel et personnalisé pour relever les défis quotidiens de votre métier. Retrouvez confiance, sérénité et plaisir dans votre métier !",
+    image: "/images/blog/ImageService3.jpg",
     author: {
-      name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "UnLeashLab",
+      image: "/images/services/icon-care.png",
+      designation: "",
     },
-    tags: ["design"],
+    tags: ["Support", "Care"],
     publishDate: "2025",
   },
 ];
+
 export default blogData;

@@ -5,17 +5,17 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
+  title: "À Propos | UnLeashLab - Expert en Business Analysis",
+  description:
+    "Découvrez UnLeashLab : plus de 15 ans d’expertise en Business Analysis et accompagnement humain pour transformer vos défis en opportunités durables.",
 };
 
 const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="En savoir plus "
+        description="UnLeashLab accompagne les individus et les organisations en combinant Business Analysis, psychologie et stratégie pour révéler leur plein potentiel."
       />
       <AboutSectionOne />
       <AboutSectionTwo />

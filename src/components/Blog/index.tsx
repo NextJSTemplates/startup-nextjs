@@ -10,8 +10,8 @@ const Blog = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Nos Services"
+          paragraph="UnLeashLab vous accompagne avec des solutions sur mesure en Business IT, recrutement et soutien aux Business Analysts."
           center
         />
 

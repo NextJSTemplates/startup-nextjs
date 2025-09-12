@@ -11,14 +11,27 @@ L’objectif est de moderniser le site, améliorer son design et ses performance
 Ouvrir un terminal et taper :
 ```bash
 git clone git@github.com:anaskad01/startup-nextjs.git
-2. Se déplacer dans le dossier du projet :
+```
+
+### 2. Se déplacer dans le dossier du projet
+
+```bash
 cd startup-nextjs
-3. Installer toutes les dépendances
-Toujours dans le dossier du projet, lancer :
+```
+
+### 3. Installer toutes les dépendances
+
+```bash
 npm install
+```
 👉 Cette commande télécharge et installe toutes les librairies nécessaires.
-4. Lancer le serveur en mode développement
-Taper :
+
+### 4. Lancer le serveur en mode développement
+
+```bash
 npm run dev
+```
+
 👉 Le projet sera accessible dans un navigateur à l’adresse :
-http://localhost:3000
+
+

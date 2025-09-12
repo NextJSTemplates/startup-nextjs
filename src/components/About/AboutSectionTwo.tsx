@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 const AboutSectionTwo = () => {
+  const { messages } = useLanguage();
+
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -29,36 +34,28 @@ const AboutSectionTwo = () => {
               
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Une mission claire
+                  {messages.about2.missionTitle}
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  UnLeashLab a été fondé avec la volonté profonde d’aider les
-                  individus et les organisations à dépasser leurs défis
-                  quotidiens grâce à une combinaison unique de Business Analysis,
-                  psychologie et stratégie.
+                  {messages.about2.missionText}
                 </p>
               </div>
 
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Une expertise éprouvée
+                  {messages.about2.expertiseTitle}
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Forts de plus de 15 ans d’expérience en consulting Business et
-                  IT, nous mettons notre savoir-faire au service de vos besoins
-                  avec rigueur, professionnalisme et bienveillance.
+                  {messages.about2.expertiseText}
                 </p>
               </div>
 
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Une approche humaine
+                  {messages.about2.humanTitle}
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Nous croyons qu’une écoute attentive, une compréhension
-                  profonde et une démarche collaborative sont essentielles pour
-                  révéler le plein potentiel de nos clients et assurer une
-                  transformation durable.
+                  {messages.about2.humanText}
                 </p>
               </div>
 

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { useLanguage } from "@/context/LanguageContext";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,7 +11,9 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
-  const List = ({ text }) => (
+  const { messages } = useLanguage();
+
+  const List = ({ text }: { text: string }) => (
     <p className="text-body-color mb-5 flex items-center text-lg font-medium">
       <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
         {checkIcon}
@@ -25,23 +30,23 @@ const AboutSectionOne = () => {
             
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="À Propos"
-                paragraph="Expert en Business Analysis et accompagnement humain, nous aidons les individus et les organisations à dépasser leurs défis quotidiens. Notre approche repose sur l’analyse de la valeur, la psychologie et l’accompagnement stratégique pour apporter des solutions innovantes, adaptées à chaque réalité."
+                title={messages.about.title}
+                paragraph={messages.about.paragraph}
                 mb="44px"
               />
 
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="+15 ans d’expérience Business & IT" />
-                    <List text="Analyse de la valeur et stratégie" />
-                    <List text="Approche humaine et bienveillante" />
+                    {messages.about.list1.map((item: string, i: number) => (
+                      <List key={i} text={item} />
+                    ))}
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Solutions sur mesure" />
-                    <List text="Innovation durable" />
-                    <List text="Accompagnement collaboratif" />
+                    {messages.about.list2.map((item: string, i: number) => (
+                      <List key={i} text={item} />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -52,7 +57,7 @@ const AboutSectionOne = () => {
                 <div className="relative">
                   <Image
                     src="/images/about/about-top.png"
-                    alt="UnLeashLab - À propos"
+                    alt="UnLeashLab - About"
                     width={400}
                     height={600}
                     className="object-cover rounded-lg"

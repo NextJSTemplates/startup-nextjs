@@ -1,8 +1,13 @@
+"use client";
+
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Features = () => {
+  const { messages } = useLanguage();
+
   return (
     <section
       id="features"
@@ -33,7 +38,6 @@ const Features = () => {
               repeatCount="indefinite"
             />
           </circle>
-
           <polygon
             points="50,15 90,35 90,75 50,95 10,75 10,35"
             fill="#2DD4BF"
@@ -47,7 +51,6 @@ const Features = () => {
               repeatCount="indefinite"
             />
           </polygon>
-
           <rect x="200" y="500" width="28" height="28" fill="#10B981" opacity="0.45">
             <animateTransform
               attributeName="transform"
@@ -57,7 +60,6 @@ const Features = () => {
               repeatCount="indefinite"
             />
           </rect>
-
           <rect x="1000" y="200" width="22" height="22" fill="#16A34A" opacity="0.4">
             <animateTransform
               attributeName="transform"
@@ -72,19 +74,17 @@ const Features = () => {
 
       <div className="container relative z-10">
         <SectionTitle
-          title="Notre Méthodologie"
+          title={messages.featuresSection.title}
           paragraph=""
           center
         />
 
         <blockquote className="text-center text-lg italic text-primary mb-4">
-          « Une approche centrée sur l'humain »
+          {messages.featuresSection.quote}
         </blockquote>
 
         <p className="max-w-3xl mx-auto text-center text-body-color dark:text-body-color-dark mb-12">
-          Chez Unleash Lab, l'humain est au cœur de notre méthodologie.
-          Nous combinons Business Analysis, analyse de valeur et psychologie
-          pour vous offrir un accompagnement pertinent et approfondi.
+          {messages.featuresSection.intro}
         </p>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">

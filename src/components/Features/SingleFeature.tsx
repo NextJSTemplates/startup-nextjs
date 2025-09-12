@@ -1,20 +1,23 @@
+"use client";
+
 import { Feature } from "@/types/feature";
+import { useLanguage } from "@/context/LanguageContext";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, paragraph } = feature;
+  const { messages } = useLanguage();
+
   return (
-    <div className="w-full">
-      <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="bg-primary/10 text-primary mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md">
-          {icon}
-        </div>
-        <h3 className="mb-5 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
-          {title}
-        </h3>
-        <p className="text-body-color pr-[10px] text-base leading-relaxed font-medium">
-          {paragraph}
-        </p>
+    <div className="p-6 bg-white dark:bg-dark rounded-lg shadow-md hover:shadow-lg transition">
+      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-md border border-primary bg-primary/10 text-primary">
+        {feature.icon}
       </div>
+
+      <h3 className="text-xl font-semibold text-black dark:text-white mb-3">
+        {messages.features[feature.id].title}
+      </h3>
+      <p className="text-gray-600 dark:text-gray-300">
+        {messages.features[feature.id].paragraph}
+      </p>
     </div>
   );
 };

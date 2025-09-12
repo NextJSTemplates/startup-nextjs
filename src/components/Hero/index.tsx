@@ -1,7 +1,9 @@
 "use client";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const NeuralNetwork = () => {
   const nodes = [
@@ -94,7 +96,7 @@ const Typewriter = ({ text }: { text: string }) => {
       setDisplayed(text.slice(0, i + 1));
       i++;
       if (i === text.length) clearInterval(interval);
-    }, 120); // vitesse de l'écriture
+    }, 120);
     return () => clearInterval(interval);
   }, [text]);
 
@@ -106,25 +108,22 @@ const Typewriter = ({ text }: { text: string }) => {
 };
 
 const Hero = () => {
+  const { messages } = useLanguage();
+
   return (
     <section className="relative bg-white dark:bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center min-h-[700px]">
         
-        {/* Texte */}
         <div className="w-full lg:w-1/2 py-20 text-center lg:text-left">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black dark:text-white leading-tight tracking-tight">
-          <Typewriter text="UnLeashLab" />
-          <span className="block text-[#48937E]">
-            Expert en Business Analysis
-          </span>
-        </h1>
-
-
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black dark:text-white leading-tight tracking-tight">
+            <Typewriter text={messages.hero.title} />
+            <span className="block text-[#48937E]">
+              {messages.hero.subtitle}
+            </span>
+          </h1>
 
           <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto lg:mx-0">
-            Nous transformons la complexité en clarté et libérons le potentiel
-            de votre entreprise grâce à une expertise unique en Business
-            Analysis et innovation durable.
+            {messages.hero.description}
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -132,18 +131,17 @@ const Hero = () => {
               href="/blog"
               className="px-8 py-4 text-lg font-semibold rounded-md bg-[#48937E] text-white hover:bg-[#367463] transition"
             >
-              Découvrez nos services
+              {messages.hero.ctaServices}
             </Link>
             <Link
               href="/contact"
               className="px-8 py-4 text-lg font-semibold rounded-md border border-[#48937E] text-[#48937E] hover:bg-[#48937E] hover:text-white transition"
             >
-              Contactez-nous
+              {messages.hero.ctaContact}
             </Link>
           </div>
         </div>
 
-        {/* Réseau animé */}
         <div className="w-full lg:w-1/2 h-[400px] flex items-center justify-center">
           <NeuralNetwork />
         </div>

@@ -1,21 +1,17 @@
+"use client";
 import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Services | UnLeashLab - Expert en Business Analysis",
-  description:
-    "Découvrez les services UnLeashLab : conseil en Business IT, recrutement de Business Analysts et accompagnement BA Care.",
-};
+import { useLanguage } from "@/context/LanguageContext";
 
 const ServicesPage = () => {
+  const { messages } = useLanguage();
+
   return (
     <>
       <Breadcrumb
-        pageName="Nos Services"
-        description="UnLeashLab vous accompagne avec des solutions sur mesure : conseil en Business IT, recrutement ciblé et soutien dédié aux Business Analysts."
+        pageName={messages.servicesPage.breadcrumb.title}
+        description={messages.servicesPage.breadcrumb.description}
       />
 
       <section className="pt-[120px] pb-[120px]">

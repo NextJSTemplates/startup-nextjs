@@ -1,7 +1,8 @@
-import type { JSX } from "react";
+import { ReactNode } from "react";
+
 export type Feature = {
-  id: number;
-  icon: JSX.Element;
-  title: string;
-  paragraph: string;
+  id: string;
+  icon: ReactNode;
+  title?: string;       
+  paragraph?: string;  
 };

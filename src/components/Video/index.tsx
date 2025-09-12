@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function CallToActionVideo() {
   const [videoError, setVideoError] = useState(false);
+  const { messages } = useLanguage();
 
   return (
     <section className="relative z-10 py-24 md:py-32 overflow-hidden">
@@ -29,17 +31,16 @@ export default function CallToActionVideo() {
 
       <div className="container relative z-10 text-center text-white">
         <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
-          Prêt à libérer le potentiel de votre entreprise ?
+          {messages.ctaVideo.title}
         </h2>
         <p className="mb-10 max-w-2xl mx-auto text-lg md:text-xl">
-          Nous vous accompagnons dans vos projets stratégiques grâce à une expertise unique en
-          Business Analysis et innovation durable.
+          {messages.ctaVideo.paragraph}
         </p>
         <Link
           href="#contact"
           className="inline-block rounded-md bg-primary px-8 py-4 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
         >
-          🚀 Prendre rendez-vous
+          {messages.ctaVideo.button}
         </Link>
       </div>
     </section>

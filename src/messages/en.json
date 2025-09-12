@@ -1,0 +1,209 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+
+  "header": {
+    "space": "My account"
+  },
+
+  "hero": {
+    "title": "Unleash Lab",
+    "subtitle": "Expert in Business Analysis",
+    "description": "We turn complexity into clarity and unlock your company’s potential through unique expertise in Business Analysis and sustainable innovation.",
+    "ctaServices": "Discover our services",
+    "ctaContact": "Contact us"
+  },
+
+  "featuresSection": {
+    "title": "Our Methodology",
+    "quote": "« A human-centered approach »",
+    "intro": "At Unleash Lab, people are at the heart of our methodology. We combine Business Analysis, value analysis, and psychology to provide you with relevant and in-depth support."
+  },
+
+
+  "features": {
+    "understand": {
+      "title": "Understanding you",
+      "paragraph": "We take the time to get to know who you are, to grasp your challenges as you experience them day to day, and to clearly identify your needs, vision, and feelings."
+    },
+    "explore": {
+      "title": "Exploring possibilities",
+      "paragraph": "After understanding your personal and professional reality, we explore together all the possible options — “Nothing is impossible, everything is allowed.”"
+    },
+    "implement": {
+      "title": "Concrete implementation",
+      "paragraph": "We define and deploy the chosen actions and solutions together. We support you throughout the process to help you overcome potential difficulties."
+    },
+    "prepare": {
+      "title": "Preparing for change",
+      "paragraph": "We anticipate the future by actively preparing your adaptation to change. We equip you with the necessary tools and strengthen your confidence."
+    }
+  },
+  
+  "ctaVideo": {
+    "title": "Ready to unlock your company’s potential?",
+    "paragraph": "We support you in your strategic projects with unique expertise in Business Analysis and sustainable innovation.",
+    "button": "🚀 Book an appointment"
+  },
+
+  "testimonialsSection": {
+    "title": "They trust us",
+    "paragraph": "Discover how UnLeashLab supports its clients in their strategic, technological, and human challenges."
+  },
+  "testimonials": [
+    {
+      "name": "John Doe",
+      "designation": "Digital Transformation Director @TechCorp",
+      "content": "UnLeashLab helped us align our IT strategy with our business goals. Their expertise in Business Analysis has been a real accelerator for our transformation."
+    },
+    {
+      "name": "Marc Lefebvre",
+      "designation": "HR Manager @Innova",
+      "content": "Thanks to UnLeashLab’s support, we recruited the right Business Analysts in record time. Their methodology made the difference."
+    },
+    {
+      "name": "Stephane Martin",
+      "designation": "Senior Business Analyst",
+      "content": "The Pro Pulse program helped me regain confidence and balance in my job. A precious support adapted to our daily reality."
+    },
+    {
+      "name": "Claire Dubois",
+      "designation": "CEO @NextLevel",
+      "content": "The Pro Pulse program helped me regain confidence and balance in my job. A precious support adapted to our daily reality."
+    },
+    {
+      "name": "Karim Benali",
+      "designation": "Product Owner @AgileWorks",
+      "content": "The Pro Pulse program helped me regain confidence and balance in my job. A precious support adapted to our daily reality."
+    },
+    {
+      "name": "Sophie Morel",
+      "designation": "Digital Transformation Consultant",
+      "content": "The Pro Pulse program helped me regain confidence and balance in my job. A precious support adapted to our daily reality."
+    }
+  ],
+
+
+  "signup": {
+    "title": "Create your account",
+    "subtitle": "It’s totally free and super easy",
+    "google": "Sign in with Google",
+    "github": "Sign in with GitHub",
+    "or": "Or, register with your email",
+    "fullname": "Full Name",
+    "fullnamePlaceholder": "Enter your full name",
+    "email": "Work Email",
+    "emailPlaceholder": "Enter your Email",
+    "password": "Your Password",
+    "passwordPlaceholder": "Enter your Password",
+    "terms": "By creating an account, you agree to the",
+    "termsLink": "Terms and Conditions",
+    "privacy": "and our",
+    "privacyLink": "Privacy Policy",
+    "signupButton": "Sign up",
+    "already": "Already using Startup?",
+    "signinLink": "Sign in"
+  },
+
+  "about": {
+    "title": "About Us",
+    "paragraph": "Experts in Business Analysis and human-centered support, we help individuals and organizations overcome their daily challenges. Our approach is based on value analysis, psychology, and strategic guidance to deliver innovative solutions tailored to each reality.",
+    "list1": [
+      "15+ years of Business & IT experience",
+      "Value analysis and strategy",
+      "Human and empathetic approach"
+    ],
+    "list2": [
+      "Tailor-made solutions",
+      "Sustainable innovation",
+      "Collaborative support"
+    ]
+  },
+
+
+  "about2": {
+    "missionTitle": "A clear mission",
+    "missionText": "UnleashLab was founded with the deep ambition to help individuals and organizations overcome daily challenges through a unique combination of Business Analysis, psychology, and strategy.",
+    "expertiseTitle": "Proven expertise",
+    "expertiseText": "With over 15 years of experience in Business and IT consulting, we put our expertise at your service with rigor, professionalism, and care.",
+    "humanTitle": "A human-centered approach",
+    "humanText": "We believe that attentive listening, deep understanding, and a collaborative approach are essential to unlock the full potential of our clients and ensure lasting transformation."
+  },
+  
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Leave us your details and a message, and we’ll get back to you quickly.",
+    "form": {
+      "nom": "Last Name",
+      "nomPlaceholder": "Your last name",
+      "prenom": "First Name",
+      "prenomPlaceholder": "Your first name",
+      "telephone": "Phone",
+      "telephonePlaceholder": "Your phone number",
+      "entreprise": "Company",
+      "entreprisePlaceholder": "Your company name",
+      "email": "Email",
+      "emailPlaceholder": "Your email address",
+      "message": "Message",
+      "messagePlaceholder": "Your message",
+      "submit": "Send"
+    },
+    "info": {
+      "title": "Contact Information",
+      "addressTitle": "Address",
+      "emailTitle": "Email"
+    }
+  },
+
+  "footer": {
+  "description": "UnLeashLab supports companies and individuals in their strategic projects with unique expertise in Business Analysis and sustainable innovation.",
+  "navigation": {
+    "title": "Navigation",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "legal": {
+    "title": "Legal",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
+  },
+  "support": {
+    "title": "Support",
+    "contact": "Contact us",
+    "email": "contact@unleash-lab.tech"
+  },
+  "copyright": "All rights reserved."
+},
+
+  "contactPage": {
+    "breadcrumb": {
+      "title": "Contact us",
+      "description": "Need support in Business Analysis, IT Advisory or Business Analyst recruitment? Leave us a message and our team will get back to you quickly."
+    }
+  },
+
+  "servicesPage": {
+  "breadcrumb": {
+    "title": "Our Services",
+    "description": "UnleashLab supports you with tailor-made solutions: Business IT consulting, targeted recruitment and dedicated support for Business Analysts."
+  }
+},
+
+"aboutPage": {
+  "breadcrumb": {
+    "title": "Learn more",
+    "description": "UnleashLab supports individuals and organizations by combining Business Analysis, psychology and strategy to unlock their full potential."
+  }
+}
+
+
+}
+
+
+
+

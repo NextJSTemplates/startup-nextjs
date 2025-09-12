@@ -1,44 +1,43 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = () => {
+  const { messages } = useLanguage();
+
   return (
     <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
-          {/* Logo + description */}
           <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
             <div className="mb-12 max-w-[360px] lg:mb-16">
               <Link href="/" className="mb-8 inline-block">
                 <Image
                   src="/images/logo/logo-no-background.svg"
-                  alt="UnLeashLab logo"
+                  alt="Unleash Lab logo"
                   className="w-full dark:hidden"
                   width={160}
                   height={40}
                 />
                 <Image
                   src="/images/logo/logo-no-background.svg"
-                  alt="UnLeashLab logo"
+                  alt="Unleash Lab logo"
                   className="hidden w-full dark:block"
                   width={160}
                   height={40}
                 />
               </Link>
               <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                UnLeashLab accompagne les entreprises et les individus dans
-                leurs projets stratégiques grâce à une expertise unique en
-                Business Analysis et en innovation durable.
+                {messages.footer.description}
               </p>
             </div>
           </div>
 
-          {/* Useful Links */}
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-12 lg:mb-16">
               <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                Navigation
+                {messages.footer.navigation.title}
               </h2>
               <ul>
                 <li>
@@ -46,7 +45,7 @@ const Footer = () => {
                     href="/blog"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    Services
+                    {messages.footer.navigation.services}
                   </Link>
                 </li>
                 <li>
@@ -54,7 +53,7 @@ const Footer = () => {
                     href="/about"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    À propos
+                    {messages.footer.navigation.about}
                   </Link>
                 </li>
                 <li>
@@ -62,18 +61,17 @@ const Footer = () => {
                     href="/contact"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    Contact
+                    {messages.footer.navigation.contact}
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Terms */}
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-12 lg:mb-16">
               <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                Légal
+                {messages.footer.legal.title}
               </h2>
               <ul>
                 <li>
@@ -81,7 +79,7 @@ const Footer = () => {
                     href="/terms"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    Conditions d’utilisation
+                    {messages.footer.legal.terms}
                   </Link>
                 </li>
                 <li>
@@ -89,7 +87,7 @@ const Footer = () => {
                     href="/privacy"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    Politique de confidentialité
+                    {messages.footer.legal.privacy}
                   </Link>
                 </li>
               </ul>
@@ -99,7 +97,7 @@ const Footer = () => {
           <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
             <div className="mb-12 lg:mb-16">
               <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                Support
+                {messages.footer.support.title}
               </h2>
               <ul>
                 <li>
@@ -107,15 +105,15 @@ const Footer = () => {
                     href="/contact"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    Nous contacter
+                    {messages.footer.support.contact}
                   </Link>
                 </li>
                 <li>
                   <a
-                    href="mailto:contact@unleashlab.com"
+                    href="mailto:contact@unleash-lab.tech"
                     className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    contact@unleashlab.com
+                    {messages.footer.support.email}
                   </a>
                 </li>
               </ul>
@@ -123,11 +121,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+
         <div className="py-8">
           <p className="text-center text-base text-body-color dark:text-white">
-            © {new Date().getFullYear()} UnLeashLab. Tous droits réservés.
+            © {new Date().getFullYear()} Unleash Lab. {messages.footer.copyright}
           </p>
         </div>
       </div>

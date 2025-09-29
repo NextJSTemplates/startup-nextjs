@@ -1,37 +1,50 @@
-# 🌐 Refonte du site Unleash Lab
+# Startup NextJS
 
-Ce dépôt contient le code de la **refonte du site Unleash Lab**, développé avec **Next.js**, **React**, **TailwindCSS** et **TypeScript**.  
-L’objectif est de moderniser le site, améliorer son design et ses performances, et faciliter le déploiement.
+Template perso basé sur Next.js 15 avec TypeScript et Tailwind.
 
----
-
-## 📥 Installation et lancement du projet
-
-### 1. Cloner ce dépôt
-Ouvrir un terminal et taper :
-```bash
-git clone git@github.com:anaskad01/startup-nextjs.git
-```
-
-### 2. Se déplacer dans le dossier du projet
+## Setup
 
 ```bash
+git clone <repo>
 cd startup-nextjs
-```
-
-### 3. Installer toutes les dépendances
-
-```bash
 npm install
-```
-👉 Cette commande télécharge et installe toutes les librairies nécessaires.
-
-### 4. Lancer le serveur en mode développement
-
-```bash
 npm run dev
 ```
 
-👉 Le projet sera accessible dans un navigateur à l’adresse :
+## Stack
 
+- Next.js 15 (App Router)
+- TypeScript 
+- TailwindCSS
+- React Hook Form + Zod pour les formulaires
+- Framer Motion pour les animations
 
+## Structure
+
+```
+src/
+├── app/           # Pages Next.js 15
+├── components/    # Composants UI
+├── lib/          # Utils et config
+├── hooks/        # Custom hooks
+└── styles/       # CSS
+```
+
+## Scripts
+
+```bash
+npm run dev     # Dev server
+npm run build   # Build prod
+npm run test    # Tests Jest
+npm run lint    # ESLint
+```
+
+## Notes
+
+- Error boundaries configurés
+- Formulaires avec validation Zod
+- SEO basique intégré
+- i18n FR/EN/DE
+- PWA ready avec service worker
+
+Les configs sont dans les fichiers standards (tsconfig, tailwind.config, etc.).

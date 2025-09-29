@@ -36,67 +36,48 @@ const Header = () => {
     <header
       className={`header top-0 left-0 z-40 flex w-full items-center ${
         sticky
-          ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-white/80 backdrop-blur-xs transition"
-          : "absolute bg-transparent"
+          ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-white/95 backdrop-blur-md transition"
+          : "absolute bg-white/10 backdrop-blur-sm"
       }`}
     >
       <div className="container">
-        <div className="relative -mx-4 flex items-center justify-between">
+        <div className="relative -mx-4 flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="w-60 max-w-full px-4 xl:mr-12">
+          <div className="w-40 sm:w-50 lg:w-60 max-w-full px-4 xl:mr-12">
             <Link
               href="/"
               className={`header-logo block w-full ${
-                sticky ? "py-5 lg:py-2" : "py-8"
+                sticky ? "py-3 lg:py-2" : "py-4 lg:py-8"
               } `}
             >
               <Image
                 src="/images/logo/svgviewer-output.svg"
                 alt="logo"
-                width={140}
-                height={30}
-                className="w-full dark:hidden"
+                width={120}
+                height={24}
+                className="w-full dark:hidden sm:w-[140px] sm:h-[30px]"
               />
               <Image
                 src="/images/logo/svgviewer-output.svg"
                 alt="logo"
-                width={140}
-                height={30}
-                className="hidden w-full dark:block"
+                width={120}
+                height={24}
+                className="hidden w-full dark:block sm:w-[140px] sm:h-[30px]"
               />
             </Link>
           </div>
 
           <div className="flex w-full items-center justify-between px-4">
-            <button
-              onClick={navbarToggleHandler}
-              id="navbarToggler"
-              aria-label="Mobile Menu"
-              className="ring-primary absolute top-1/2 right-4 block translate-y-[-50%] rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden"
-            >
-              <span
-                className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                  navbarOpen ? "top-[7px] rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                  navbarOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                  navbarOpen ? "top-[-8px] -rotate-45" : ""
-                }`}
-              />
-            </button>
-
+            {/* Espace vide sur mobile pour équilibrer le layout */}
+            <div className="lg:hidden"></div>
+            
+            {/* Navigation Menu - à gauche sur desktop, dropdown sur mobile */}
             <nav
               id="navbarCollapse"
-              className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+              className={`navbar border-body-color/20 dark:border-body-color/10 dark:bg-gray-dark absolute left-0 top-full z-30 w-full rounded-b-xl border bg-white/95 backdrop-blur-md px-6 py-6 shadow-xl duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none ${
                 navbarOpen
-                  ? "visibility top-full opacity-100"
-                  : "invisible top-[120%] opacity-0"
+                  ? "visibility opacity-100"
+                  : "invisible opacity-0"
               }`}
             >
               <ul className="block lg:flex lg:space-x-12">
@@ -105,21 +86,22 @@ const Header = () => {
                     {menuItem.path ? (
                       <Link
                         href={menuItem.path}
+                        onClick={() => setNavbarOpen(false)}
                         className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                           pathname === menuItem.path
                             ? "text-primary dark:text-white"
                             : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                         }`}
                       >
-                        {messages.menu[menuItem.id]}
+                        {messages.menu[menuItem.id as keyof typeof messages.menu]}
                       </Link>
                     ) : (
                       <>
                         <p
                           onClick={() => handleSubmenu(index)}
-                          className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
+                          className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                         >
-                          {messages.menu[menuItem.id]}
+                          {messages.menu[menuItem.id as keyof typeof messages.menu]}
                           <span className="pl-3">
                             <svg width="25" height="24" viewBox="0 0 25 24">
                               <path
@@ -140,9 +122,10 @@ const Header = () => {
                             <Link
                               href={submenuItem.path}
                               key={subIndex}
+                              onClick={() => setNavbarOpen(false)}
                               className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-white/70 dark:hover:text-white"
                             >
-                              {messages.menu[submenuItem.id]}
+                              {messages.menu[submenuItem.id as keyof typeof messages.menu]}
                             </Link>
                           ))}
                         </div>
@@ -150,23 +133,37 @@ const Header = () => {
                     )}
                   </li>
                 ))}
+                
+                {/* Mon espace - visible seulement sur mobile dans le menu dropdown */}
+                <li className="lg:hidden border-t border-gray-200 dark:border-gray-700 mt-4 pt-4">
+                  <Link
+                    href="/signin"
+                    onClick={() => setNavbarOpen(false)}
+                    className="flex items-center gap-3 py-3 px-4 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
+                  >
+                    <FaUser className="h-5 w-5" />
+                    {messages.header.space}
+                  </Link>
+                </li>
               </ul>
             </nav>
 
-            <div className="flex items-center justify-end pr-16 lg:pr-0 space-x-4">
-              <div className="relative hidden md:inline-block">
+            {/* Utilitaires - groupés à droite */}
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              {/* Sélecteur de langue */}
+              <div className="relative inline-block">
                 <select
                   value={locale}
                   onChange={(e) => setLocale(e.target.value as "fr" | "en" | "de")}
-                  className="appearance-none bg-none px-4 pr-10 py-2 text-sm font-medium text-dark focus:outline-none focus:ring-0 dark:bg-none dark:text-white"
+                  className="appearance-none bg-transparent px-2 sm:px-3 pr-7 sm:pr-8 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-dark focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition-colors"
                 >
-                  <option value="fr">🇫🇷 Français</option>
-                  <option value="en">🇬🇧 English</option>
-                  <option value="de">🇩🇪 Deutsch</option>
+                  <option value="fr">🇫🇷 FR</option>
+                  <option value="en">🇺🇸 EN</option>
+                  <option value="de">🇩🇪 DE</option>
                 </select>
-                <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-500 dark:text-gray-400">
+                <span className="pointer-events-none absolute inset-y-0 right-1.5 sm:right-2 flex items-center text-gray-500 dark:text-gray-400">
                   <svg
-                    className="h-4 w-4"
+                    className="h-3 w-3 sm:h-4 sm:w-4"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -181,15 +178,41 @@ const Header = () => {
                 </span>
               </div>
 
+              {/* Bouton de connexion */}
               <Link
                 href="/signin"
-                className="ease-in-up shadow-btn hover:shadow-btn-hover bg-primary hover:bg-primary/90 hidden rounded-md px-6 py-3 text-base font-medium text-white transition md:flex items-center gap-2"
+                className="ease-in-up shadow-btn hover:shadow-btn-hover bg-primary hover:bg-primary/90 hidden md:flex rounded-md px-3 sm:px-4 lg:px-6 py-2 lg:py-3 text-xs sm:text-sm lg:text-base font-medium text-white transition items-center gap-1 sm:gap-2"
               >
-                <FaUser className="h-5 w-5" />
-                {messages.header.space}
+                <FaUser className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
+                <span className="hidden sm:inline">{messages.header.space}</span>
               </Link>
 
+              {/* Theme Toggler */}
               <ThemeToggler />
+
+              {/* Burger Menu - en dernier */}
+              <button
+                onClick={navbarToggleHandler}
+                id="navbarToggler"
+                aria-label="Mobile Menu"
+                className="ring-primary block rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-2 transition-colors lg:hidden"
+              >
+                <span
+                  className={`relative my-1 block h-0.5 w-6 bg-black transition-all duration-300 dark:bg-white ${
+                    navbarOpen ? "top-[6px] rotate-45" : ""
+                  }`}
+                />
+                <span
+                  className={`relative my-1 block h-0.5 w-6 bg-black transition-all duration-300 dark:bg-white ${
+                    navbarOpen ? "opacity-0" : ""
+                  }`}
+                />
+                <span
+                  className={`relative my-1 block h-0.5 w-6 bg-black transition-all duration-300 dark:bg-white ${
+                    navbarOpen ? "top-[-6px] -rotate-45" : ""
+                  }`}
+                />
+              </button>
             </div>
           </div>
         </div>

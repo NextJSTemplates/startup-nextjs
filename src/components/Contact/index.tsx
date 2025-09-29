@@ -1,10 +1,78 @@
 "use client";
 
-import NewsLatterBox from "./NewsLatterBox";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactFormSchema, type ContactFormData } from "@/lib/validations";
 import { useLanguage } from "@/context/LanguageContext";
+import { useErrorHandler } from "@/components/ErrorBoundary";
+import NewsLatterBox from "./NewsLatterBox";
 
 const Contact = () => {
   const { messages } = useLanguage();
+  const { handleError } = useErrorHandler();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid, touchedFields },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    mode: "onChange",
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      setIsSubmitting(true);
+      setSubmitSuccess(false);
+
+      // Simulation d'envoi API
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      console.log("📧 Form data:", data);
+      
+      // Ici vous ajouteriez l'appel à votre API
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data),
+      // });
+
+      setSubmitSuccess(true);
+      reset();
+      
+      // Scroll to success message
+      setTimeout(() => {
+        document.getElementById('contact-success')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+
+    } catch (error) {
+      handleError(error as Error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Helper pour les classes d'erreur
+  const getInputClasses = (fieldName: keyof ContactFormData) => {
+    const hasError = errors[fieldName];
+    const isTouched = touchedFields[fieldName];
+    
+    let baseClasses = "w-full rounded-xs border bg-[#f8f8f8] px-4 py-3 text-base text-body-color outline-none transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two sm:px-6";
+    
+    if (hasError) {
+      baseClasses += " border-red-500 focus:border-red-500 dark:focus:border-red-500";
+    } else if (isTouched) {
+      baseClasses += " border-green-500 focus:border-green-500 dark:focus:border-green-500";
+    } else {
+      baseClasses += " border-stroke focus:border-primary dark:focus:border-primary dark:focus:shadow-none";
+    }
+    
+    return baseClasses;
+  };
 
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
@@ -27,16 +95,17 @@ const Contact = () => {
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
                       <label
-                        htmlFor="nom"
+                        htmlFor="lastName"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {messages.contact.form.nom}
+                        {messages.contact.form.lastName}
                       </label>
                       <input
                         type="text"
-                        id="nom"
-                        placeholder={messages.contact.form.nomPlaceholder}
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        id="lastName"
+                        name="lastName"
+                        placeholder={messages.contact.form.lastNamePlaceholder}
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -44,16 +113,17 @@ const Contact = () => {
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
                       <label
-                        htmlFor="prenom"
+                        htmlFor="firstName"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {messages.contact.form.prenom}
+                        {messages.contact.form.firstName}
                       </label>
                       <input
                         type="text"
-                        id="prenom"
-                        placeholder={messages.contact.form.prenomPlaceholder}
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        id="firstName"
+                        name="firstName"
+                        placeholder={messages.contact.form.firstNamePlaceholder}
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -61,16 +131,17 @@ const Contact = () => {
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
                       <label
-                        htmlFor="tel"
+                        htmlFor="phone"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {messages.contact.form.telephone}
+                        {messages.contact.form.phone}
                       </label>
                       <input
                         type="tel"
-                        id="tel"
-                        placeholder={messages.contact.form.telephonePlaceholder}
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        id="phone"
+                        name="phone"
+                        placeholder={messages.contact.form.phonePlaceholder}
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -78,16 +149,17 @@ const Contact = () => {
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
                       <label
-                        htmlFor="entreprise"
+                        htmlFor="company"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {messages.contact.form.entreprise}
+                        {messages.contact.form.company}
                       </label>
                       <input
                         type="text"
-                        id="entreprise"
-                        placeholder={messages.contact.form.entreprisePlaceholder}
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        id="company"
+                        name="company"
+                        placeholder={messages.contact.form.companyPlaceholder}
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
                   </div>

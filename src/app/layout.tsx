@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import "../styles/index.css";
 import { Providers } from "./providers";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { AuthProvider } from "@/hooks/useAuth";
 import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,14 +30,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <ErrorBoundary>
           <Providers>
-            <LanguageProvider>
-              <Header />
-              <main className="min-h-screen">
-                {children}
-              </main>
-              <Footer />
-              <ScrollToTop />
-            </LanguageProvider>
+            <AuthProvider>
+              <LanguageProvider>
+                <Header />
+                <main className="min-h-screen">
+                  {children}
+                </main>
+                <Footer />
+                <ScrollToTop />
+              </LanguageProvider>
+            </AuthProvider>
           </Providers>
         </ErrorBoundary>
       </body>

@@ -194,13 +194,23 @@
   }
 },
 
-"aboutPage": {
-  "breadcrumb": {
-    "title": "Mehr erfahren",
-    "description": "UnleashLab begleitet Einzelpersonen und Organisationen, indem Business Analysis, Psychologie und Strategie kombiniert werden, um ihr volles Potenzial zu entfalten."
+  "aboutPage": {
+    "breadcrumb": {
+      "title": "Mehr erfahren",
+      "description": "UnleashLab begleitet Einzelpersonen und Organisationen, indem Business Analysis, Psychologie und Strategie kombiniert werden, um ihr volles Potenzial zu entfalten."
+    }
+  },
+
+  "profile": {
+    "linkedinImport": {
+      "title": "LinkedIn Import",
+      "description": "Importieren Sie automatisch Ihre Daten aus Ihrem LinkedIn-Profil (Name, Vorname, Berufsbezeichnung).",
+      "button": "Von LinkedIn importieren",
+      "importing": "Import läuft...",
+      "success": "LinkedIn-Informationen erfolgreich importiert! Vergessen Sie nicht zu speichern.",
+      "errorNoUrl": "Bitte geben Sie zunächst Ihre LinkedIn-URL ein",
+      "errorNetwork": "Netzwerkfehler beim LinkedIn-Import",
+      "note": "Stellen Sie sicher, dass Ihr LinkedIn-Profil öffentlich oder teilbar ist, um den Datenimport zu ermöglichen."
+    }
   }
 }
-
-}
-
-

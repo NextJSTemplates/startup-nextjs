@@ -136,4 +136,45 @@ layer(base);
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
   }
+  
+  /* Force transparent backgrounds ONLY for desktop navigation elements */
+  @media (min-width: 1024px) {
+    .desktop-nav-link,
+    .desktop-nav-link::before,
+    .desktop-nav-link::after {
+      background-color: transparent !important;
+      background: transparent !important;
+      background-image: none !important;
+    }
+    
+    .desktop-nav-link:hover,
+    .desktop-nav-link:hover::before,
+    .desktop-nav-link:hover::after {
+      background-color: transparent !important;
+      background: transparent !important;
+      background-image: none !important;
+    }
+    
+    .desktop-nav-link:focus,
+    .desktop-nav-link:focus::before,
+    .desktop-nav-link:focus::after {
+      background-color: transparent !important;
+      background: transparent !important;
+      background-image: none !important;
+    }
+    
+    .desktop-nav-link:active,
+    .desktop-nav-link:active::before,
+    .desktop-nav-link:active::after {
+      background-color: transparent !important;
+      background: transparent !important;
+      background-image: none !important;
+    }
+    
+    .desktop-nav-link:visited {
+      background-color: transparent !important;
+      background: transparent !important;
+      background-image: none !important;
+    }
+  }
 }

@@ -257,7 +257,7 @@ function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-export default {
+const analyticsUtils = {
   ANALYTICS_CONFIG,
   ANALYTICS_EVENTS,
   getGoogleAnalyticsScript,
@@ -266,3 +266,5 @@ export default {
   useScrollTracking,
   setupErrorTracking,
 };
+
+export default analyticsUtils;

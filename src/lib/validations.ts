@@ -77,7 +77,9 @@ export const getErrorMessages = (locale: 'fr' | 'en') => {
   return messages[locale];
 };
 
-export default {
+const validationUtils = {
   contactFormSchema,
   getErrorMessages,
 };
+
+export default validationUtils;

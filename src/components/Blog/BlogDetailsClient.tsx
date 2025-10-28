@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import blogData from "./blogData";
 
@@ -31,7 +32,7 @@ const BlogDetailsClient = ({ id }: { id: number }) => {
 
       <div className="mb-16 relative w-full overflow-hidden rounded-2xl shadow-xl">
         <div className="relative aspect-video w-full">
-          <img src={blog.image} alt={title} className="object-cover w-full h-full" />
+          <Image src={blog.image} alt={title} fill className="object-cover" />
           <div className="absolute inset-0 bg-[#48937E]/50 mix-blend-multiply" />
         </div>
       </div>

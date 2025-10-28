@@ -5,9 +5,9 @@ import BlogDetailsClient from "@/components/Blog/BlogDetailsClient";
 import { Metadata } from "next";
 
 interface Props {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

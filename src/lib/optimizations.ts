@@ -3,7 +3,7 @@
  * Utilitaires pour l'optimisation des performances et du SEO
  */
 
-import React from 'react';
+import React, { useEffect, useRef, useCallback, useMemo } from 'react';
 
 // Types pour l'optimisation des images
 export interface OptimizedImageConfig {
@@ -61,13 +61,14 @@ export const useLazyLoading = (options?: {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [options?.threshold, options?.rootMargin, hasLoaded]);
@@ -88,13 +89,19 @@ export const useResourcePreload = () => {
     }
   }, []);
 
-  const preloadImage = React.useCallback((src: string) => {
-    preloadResource(src, 'image');
-  }, [preloadResource]);
+  const preloadImage = React.useCallback(
+    (src: string) => {
+      preloadResource(src, 'image');
+    },
+    [preloadResource]
+  );
 
-  const preloadFont = React.useCallback((src: string, type = 'font/woff2') => {
-    preloadResource(src, 'font', type);
-  }, [preloadResource]);
+  const preloadFont = React.useCallback(
+    (src: string, type = 'font/woff2') => {
+      preloadResource(src, 'font', type);
+    },
+    [preloadResource]
+  );
 
   return {
     preloadResource,
@@ -202,14 +209,16 @@ export const useOptimizedCallback = <T extends (...args: any[]) => any>(
   callback: T,
   deps: React.DependencyList
 ): T => {
-  return React.useCallback(callback, deps);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  return useCallback(callback, deps);
 };
 
 export const useOptimizedMemo = <T>(
   factory: () => T,
   deps: React.DependencyList
 ): T => {
-  return React.useMemo(factory, deps);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  return useMemo(factory, deps);
 };
 
 // Service Worker registration
@@ -288,7 +297,7 @@ export const cacheStrategies = {
   },
 };
 
-export default {
+const optimizationUtils = {
   createOptimizedImageConfig,
   useLazyLoading,
   useResourcePreload,
@@ -299,3 +308,5 @@ export default {
   registerServiceWorker,
   cacheStrategies,
 };
+
+export default optimizationUtils;

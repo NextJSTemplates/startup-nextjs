@@ -81,7 +81,7 @@ export const getSectionSpacing = () => {
   return SPACING.section;
 };
 
-export default {
+const responsiveUtils = {
   BREAKPOINTS,
   CONTAINER_PADDING,
   GRID_GAPS,
@@ -93,3 +93,5 @@ export default {
   getContainerClasses,
   getSectionSpacing
 };
+
+export default responsiveUtils;

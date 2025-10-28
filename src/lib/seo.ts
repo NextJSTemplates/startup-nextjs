@@ -260,7 +260,7 @@ export const generatePageMetadata = (
 };
 
 export { SITE_CONFIG };
-export default {
+const seoUtils = {
   defaultMetadata,
   defaultViewport,
   generateOrganizationSchema,
@@ -269,3 +269,5 @@ export default {
   generatePageMetadata,
   SITE_CONFIG,
 };
+
+export default seoUtils;

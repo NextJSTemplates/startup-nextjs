@@ -177,6 +177,9 @@
     "contact": "Nous contacter",
     "email": "contact@unleash-lab.tech"
   },
+  "address": {
+    "full": "Unleash Lab\n1 Rue Gustave-Moynier\n1202 Genève, Suisse"
+  },
   "copyright": "Tous droits réservés."
   },
 
@@ -212,6 +215,40 @@
       "errorNetwork": "Erreur de réseau lors de l'import LinkedIn",
       "note": "Assurez-vous que votre profil LinkedIn est public ou partageable pour permettre l'import des données."
     }
+  },
+
+  "aboutUs": {
+    "title": "À Propos",
+    "subtitle": "Expert en Business Analysis et accompagnement humain, nous aidons les individus et les organisations à dépasser leurs défis quotidiens.",
+    "content": {
+      "paragraph1": "Unleash Lab a été fondé avec la volonté profonde d'aider les individus et les organisations à dépasser leurs défis quotidiens. Spécialisés en analyse de la valeur, psychologie et accompagnement stratégique, nous proposons une approche innovante, centrée sur la compréhension fine des personnes et de leurs enjeux.",
+      "paragraph2": "Fort de plus de 15 ans d'expérience en consulting Business et IT, nous mettons notre savoir-faire au service de vos besoins avec bienveillance, professionnalisme et rigueur. Notre combinaison unique de compétences nous permet de vous offrir un accompagnement sur mesure parfaitement adapté à votre réalité.",
+      "paragraph3": "Notre équipe est convaincue qu'une écoute attentive, une compréhension profonde et une démarche collaborative sont essentielles pour révéler votre plein potentiel. Avec passion et engagement, nous vous aidons à avancer, à vous transformer et à atteindre durablement vos objectifs."
+    },
+    "buttons": {
+      "services": "Découvrir nos services",
+      "contact": "Nous contacter"
+    },
+    "cards": {
+      "promise": {
+        "title": "Notre promesse",
+        "description": "Accompagnement humain, résultats mesurables et approche sur-mesure."
+      },
+      "experience": {
+        "title": "Expérience",
+        "description": "Plus de 15 ans d'expérience en consulting Business & IT."
+      },
+      "approach": {
+        "title": "Approche",
+        "description": "Analyse de la valeur, psychologie et stratégie intégrée."
+      }
+    }
+  },
+
+  "proPulseVideo": {
+    "title": "Pro Pulse — Coaching & mentorat 60 min",
+    "description": "Sessions de 60 minutes, réservables en ligne pour débloquer vos enjeux métier, prioriser les actions et repartir avec des solutions concrètes.",
+    "button": "Découvrir"
   }
 }
 

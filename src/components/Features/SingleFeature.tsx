@@ -7,9 +7,9 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { messages } = useLanguage();
 
   return (
-    <div className="group p-4 sm:p-6 lg:p-8 bg-white dark:bg-dark rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-800 hover:border-primary/20">
+    <div className="group p-4 sm:p-6 lg:p-8 bg-white dark:bg-dark rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 dark:border-gray-800 hover:border-primary/10">
       {/* Icon */}
-      <div className="mb-4 sm:mb-6 flex h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 items-center justify-center rounded-xl border-2 border-primary bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+      <div className="mb-4 sm:mb-6 flex h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 items-center justify-center rounded-xl border-2 border-primary bg-primary/10 text-primary group-hover:bg-primary/20 transition-all duration-200">
         <div className="text-2xl sm:text-3xl lg:text-4xl">
           {feature.icon}
         </div>

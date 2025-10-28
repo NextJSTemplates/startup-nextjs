@@ -177,6 +177,9 @@
     "contact": "Contact us",
     "email": "contact@unleash-lab.tech"
   },
+  "address": {
+    "full": "Unleash Lab\n1 Rue Gustave-Moynier\n1202 Geneva, Switzerland"
+  },
   "copyright": "All rights reserved."
 },
 
@@ -212,5 +215,39 @@
       "errorNetwork": "Network error during LinkedIn import",
       "note": "Make sure your LinkedIn profile is public or shareable to allow data import."
     }
+  },
+
+  "aboutUs": {
+    "title": "About Us",
+    "subtitle": "Experts in Business Analysis and human-centered support, we help individuals and organizations overcome their daily challenges.",
+    "content": {
+      "paragraph1": "Unleash Lab was founded with the deep desire to help individuals and organizations overcome their daily challenges. Specialized in value analysis, psychology and strategic support, we offer an innovative approach, focused on fine understanding of people and their issues.",
+      "paragraph2": "With over 15 years of experience in Business and IT consulting, we put our expertise at your service with kindness, professionalism and rigor. Our unique combination of skills allows us to offer you tailor-made support perfectly adapted to your reality.",
+      "paragraph3": "Our team is convinced that attentive listening, deep understanding and a collaborative approach are essential to reveal your full potential. With passion and commitment, we help you move forward, transform yourself and achieve your goals sustainably."
+    },
+    "buttons": {
+      "services": "Discover our services",
+      "contact": "Contact us"
+    },
+    "cards": {
+      "promise": {
+        "title": "Our promise",
+        "description": "Human support, measurable results and tailor-made approach."
+      },
+      "experience": {
+        "title": "Experience",
+        "description": "Over 15 years of experience in Business & IT consulting."
+      },
+      "approach": {
+        "title": "Approach",
+        "description": "Value analysis, psychology and integrated strategy."
+      }
+    }
+  },
+
+  "proPulseVideo": {
+    "title": "Pro Pulse — 60 min Coaching & Mentoring",
+    "description": "60-minute sessions, bookable online to unlock your business challenges, prioritize actions and leave with concrete solutions.",
+    "button": "Discover"
   }
 }

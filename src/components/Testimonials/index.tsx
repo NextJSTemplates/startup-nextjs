@@ -33,7 +33,7 @@ const Testimonials = () => {
           center
         />
 
-        <div className="relative mt-10">
+  <div className="relative mt-10 testimonials-swiper">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}

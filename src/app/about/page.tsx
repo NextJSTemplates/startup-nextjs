@@ -1,6 +1,5 @@
 "use client";
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import SimpleAbout from "@/components/About/SimpleAbout";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -13,8 +12,7 @@ const AboutPage = () => {
         pageName={messages.aboutPage.breadcrumb.title}
         description={messages.aboutPage.breadcrumb.description}
       />
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      <SimpleAbout />
     </>
   );
 };

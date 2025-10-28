@@ -16,7 +16,7 @@ const BlogDetailsPage = () => {
           Pro Pulse – Coaching et Mentorat à la Demande
         </h1>
 
-        <p className="mb-12 text-lg leading-relaxed text-body-color dark:text-gray-300 sm:text-xl">
+        <p className="mb-12 text-lg leading-relaxed text-body-color dark:text-gray-300 sm:text-xl text-justify">
           <strong>Pro Pulse</strong> est né d’un constat simple : les Business
           Analysts et les professionnels évoluent dans des environnements
           complexes, exigeants et souvent stressants. Pour répondre à ces défis,
@@ -38,115 +38,9 @@ const BlogDetailsPage = () => {
             <div className="absolute inset-0 bg-[#48937E]/50 mix-blend-multiply"></div>
           </div>
         </div>
-        <div className="mt-20">
-            <Testimonials /> 
-        </div>
+    {/* Testimonials removed from generic blog-details page; kept only on Pro Pulse detail */}
 
-        <h2 className="mb-12 text-3xl font-bold text-black dark:text-white sm:text-4xl">
-          Fonctionnalités futures
-        </h2>
-
-        <div className="space-y-12">
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-one dark:border-gray-700 dark:bg-dark dark:shadow-gray-dark">
-            <h3 className="mb-4 text-2xl font-semibold text-black dark:text-white">
-              1. Choisir votre créneau
-            </h3>
-            <p className="mb-6 text-base leading-relaxed text-body-color dark:text-gray-300">
-              Avec Pro Pulse, chaque session dure <strong>1 heure</strong>. Ce
-              format est volontaire : il est suffisamment long pour aborder un
-              sujet en profondeur, mais assez court pour rester concentré et
-              efficace. Vous ouvrez le calendrier, vous choisissez votre
-              créneau, et vous êtes assuré d’avoir une session dédiée à vos
-              besoins.
-            </p>
-
-            <div className="rounded-lg border border-gray-200 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800">
-              <div className="grid grid-cols-7 text-center text-sm font-medium text-gray-500 dark:text-gray-400">
-                {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map((d) => (
-                  <div key={d}>{d}</div>
-                ))}
-              </div>
-              <div className="mt-2 grid grid-cols-7 gap-2 text-center text-sm">
-                {Array.from({ length: 28 }, (_, i) => (
-                  <div
-                    key={i}
-                    className="rounded-md bg-white py-3 text-gray-600 shadow-sm dark:bg-gray-700 dark:text-gray-300"
-                  >
-                    {i + 1}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-one dark:border-gray-700 dark:bg-dark dark:shadow-gray-dark">
-            <h3 className="mb-4 text-2xl font-semibold text-black dark:text-white">
-              2. Définir le sujet
-            </h3>
-            <p className="mb-6 text-base leading-relaxed text-body-color dark:text-gray-300">
-              Chaque professionnel fait face à des enjeux différents :
-              <strong> évolution de carrière</strong>,{" "}
-              <strong>adoption de nouveaux outils</strong>,{" "}
-              <strong>gestion de projet</strong>, ou encore{" "}
-              <strong>difficultés relationnelles</strong>. Vous pourrez définir
-              votre sujet à l’avance pour que la session soit parfaitement
-              adaptée à vos besoins.
-            </p>
-            <select
-              disabled
-              className="w-full rounded-lg border border-gray-300 bg-gray-100 p-3 text-gray-500 dark:border-gray-600 dark:bg-gray-800"
-            >
-              <option>Développement de carrière</option>
-              <option>Outils et méthodes</option>
-              <option>Gestion de projet</option>
-              <option>Autre sujet</option>
-            </select>
-          </div>
-
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-one dark:border-gray-700 dark:bg-dark dark:shadow-gray-dark">
-            <h3 className="mb-4 text-2xl font-semibold text-black dark:text-white">
-              3. Paiement sécurisé
-            </h3>
-            <p className="mb-6 text-base leading-relaxed text-body-color dark:text-gray-300">
-              Une fois votre créneau et votre sujet définis, vous confirmerez
-              votre réservation par un <strong>paiement en ligne sécurisé</strong>.
-              Simple, rapide et fiable.
-            </p>
-            <button
-              disabled
-              className="mx-auto block cursor-not-allowed rounded-full bg-primary py-3 px-6 text-base font-semibold text-white shadow-md transition hover:bg-primary/90"
-            >
-              💳 Procéder au paiement
-            </button>
-          </div>
-
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-one dark:border-gray-700 dark:bg-dark dark:shadow-gray-dark">
-            <h3 className="mb-4 text-2xl font-semibold text-black dark:text-white">
-              4. Partager votre feedback
-            </h3>
-            <p className="mb-6 text-base leading-relaxed text-body-color dark:text-gray-300">
-              Après chaque session, vous pourrez partager vos{" "}
-              <strong>retours</strong>. Ces retours seront utilisés pour
-              améliorer constamment le service et constituer une{" "}
-              <strong>base de connaissances collective</strong> au bénéfice de
-              toute la communauté.
-            </p>
-            <textarea
-              disabled
-              placeholder="Vos retours"
-              className="w-full rounded-lg border border-gray-300 bg-gray-100 p-3 text-gray-500 dark:border-gray-600 dark:bg-gray-800"
-              rows={4}
-            />
-            
-            <button
-              disabled
-              className="mx-auto mt-4 block cursor-not-allowed rounded-full bg-primary py-3 px-6 text-base font-semibold text-white shadow-md transition hover:bg-primary/90"
-            >
-              🚀 Envoyer
-            </button>
-
-          </div>
-        </div>
+        {/* 'Fonctionnalités futures' section removed per request */}
       </div>
     </section>
   );

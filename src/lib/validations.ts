@@ -107,7 +107,7 @@ export type SigninFormData = z.infer<typeof signinFormSchema>;
 export type NewsletterData = z.infer<typeof newsletterSchema>;
 
 // Messages d'erreur personnalisés par langue
-export const getErrorMessages = (locale: 'fr' | 'en' | 'de') => {
+export const getErrorMessages = (locale: 'fr' | 'en') => {
   const messages = {
     fr: {
       required: 'Ce champ est obligatoire',
@@ -128,16 +128,6 @@ export const getErrorMessages = (locale: 'fr' | 'en' | 'de') => {
       acceptTerms: 'You must accept the terms',
       phoneFormat: 'Invalid phone format',
       nameFormat: 'Only letters are allowed',
-    },
-    de: {
-      required: 'Dieses Feld ist erforderlich',
-      email: 'Ungültiges E-Mail-Format',
-      minLength: (min: number) => `Mindestens ${min} Zeichen erforderlich`,
-      maxLength: (max: number) => `Maximal ${max} Zeichen erlaubt`,
-      passwordMismatch: 'Passwörter stimmen nicht überein',
-      acceptTerms: 'Sie müssen die Bedingungen akzeptieren',
-      phoneFormat: 'Ungültiges Telefonformat',
-      nameFormat: 'Nur Buchstaben sind erlaubt',
     }
   };
   

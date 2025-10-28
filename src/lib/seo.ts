@@ -47,9 +47,9 @@ export const defaultMetadata: Metadata = {
   
   // Open Graph
   openGraph: {
-    type: 'website',
-    locale: 'fr_FR',
-    alternateLocale: ['en_US', 'de_DE'],
+  type: 'website',
+  locale: 'fr_FR',
+  alternateLocale: ['en_US'],
     url: SITE_CONFIG.url,
     title: SITE_CONFIG.title,
     description: SITE_CONFIG.description,
@@ -106,12 +106,11 @@ export const defaultMetadata: Metadata = {
   },
   
   // Alternates
-  alternates: {
+    alternates: {
     canonical: SITE_CONFIG.url,
     languages: {
       'fr-FR': '/fr',
       'en-US': '/en',
-      'de-DE': '/de',
     },
   },
   
@@ -163,7 +162,7 @@ export const generateOrganizationSchema = () => {
         '@type': 'ContactPoint',
         telephone: '+41-78-936-5736',
         contactType: 'customer service',
-        availableLanguage: ['French', 'English', 'German'],
+        availableLanguage: ['French', 'English'],
       },
     ],
     sameAs: [
@@ -174,7 +173,7 @@ export const generateOrganizationSchema = () => {
       '@type': 'Place',
       name: 'Switzerland, France, Europe',
     },
-    areaServed: ['CH', 'FR', 'DE', 'EU'],
+  areaServed: ['CH', 'FR', 'EU'],
     knowsAbout: SITE_CONFIG.keywords,
     makesOffer: [
       {
@@ -212,7 +211,7 @@ export const generateWebSiteSchema = () => {
         url: `${SITE_CONFIG.url}/images/logo/logo.svg`,
       },
     },
-    inLanguage: ['fr-FR', 'en-US', 'de-DE'],
+  inLanguage: ['fr-FR', 'en-US'],
   };
 };
 

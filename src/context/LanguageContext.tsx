@@ -3,9 +3,8 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import fr from "@/messages/fr.json";
 import en from "@/messages/en.json";
-import de from "@/messages/de.json";
 
-type Locale = "fr" | "en" | "de";
+type Locale = "fr" | "en";
 type Messages = typeof fr;
 
 interface LanguageContextProps {
@@ -19,7 +18,7 @@ const LanguageContext = createContext<LanguageContextProps | undefined>(undefine
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState<Locale>("fr");
 
-  const messages: Record<Locale, Messages> = { fr, en, de };
+  const messages: Record<Locale, Messages> = { fr, en };
 
   return (
     <LanguageContext.Provider value={{ locale, messages: messages[locale], setLocale }}>

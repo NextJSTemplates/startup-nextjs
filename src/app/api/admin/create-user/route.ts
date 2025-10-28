@@ -10,7 +10,6 @@ import bcrypt from 'bcryptjs';
 
 export async function POST(request: NextRequest) {
   try {
-    // Vérifier l'authentification
     const token = request.cookies.get('auth-token')?.value;
     
     if (!token) {
@@ -20,11 +19,9 @@ export async function POST(request: NextRequest) {
       }, { status: 401 });
     }
 
-    // Vérifier et décoder le token
     const jwtSecret = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
     const decoded = jwt.verify(token, jwtSecret) as any;
     
-    // Récupérer l'utilisateur actuel
     const dbAdapter = getDatabase();
     const currentUser = await dbAdapter.getUserById(decoded.userId);
     
@@ -35,10 +32,8 @@ export async function POST(request: NextRequest) {
       }, { status: 403 });
     }
 
-    // Récupérer les données du formulaire
     const { email, password, first_name, last_name, phone, user_type, linkedin_url } = await request.json();
 
-    // Validation basique
     if (!email || !password || !first_name || !last_name || !phone || !user_type) {
       return NextResponse.json({
         success: false,
@@ -46,7 +41,6 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
-    // Vérifier si l'email existe déjà
     const existingUser = await dbAdapter.getUserByEmail(email);
     if (existingUser) {
       return NextResponse.json({
@@ -55,10 +49,8 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
-    // Hasher le mot de passe
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    // Créer l'utilisateur directement via l'adaptateur
     const userData = {
       email,
       hashedPassword,
@@ -66,7 +58,7 @@ export async function POST(request: NextRequest) {
       last_name,
       phone,
       user_type: user_type as 'admin' | 'enterprise' | 'client' | 'coach_therapist',
-      isVerified: true, // Les comptes créés par admin sont automatiquement vérifiés
+      isVerified: true, 
       linkedin_url: linkedin_url || null
     };
 

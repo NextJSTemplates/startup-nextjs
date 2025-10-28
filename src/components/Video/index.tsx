@@ -30,17 +30,17 @@ export default function CallToActionVideo() {
       </div>
 
       <div className="container relative z-10 text-center text-white">
-        <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
-          {messages.ctaVideo.title}
+        <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
+          {messages.proPulseVideo.title}
         </h2>
-        <p className="mb-10 max-w-2xl mx-auto text-lg md:text-xl">
-          {messages.ctaVideo.paragraph}
+        <p className="mb-8 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+          {messages.proPulseVideo.description}
         </p>
         <Link
-          href="#contact"
+          href="/blog-details/3"
           className="inline-block rounded-md bg-primary px-8 py-4 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
         >
-          {messages.ctaVideo.button}
+          {messages.proPulseVideo.button}
         </Link>
       </div>
     </section>

@@ -12,4 +12,12 @@ export type Blog = {
   author: Author;
   tags: string[];
   publishDate: string;
+  // Optional full content split into paragraphs for blog details pages
+  content?: string[];
+  // Optional short quote or excerpt used by some posts
+  quote?: string;
+  // Optional English translations
+  title_en?: string;
+  paragraph_en?: string;
+  content_en?: string[];
 };

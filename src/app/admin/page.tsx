@@ -35,23 +35,19 @@ const AdminPanel = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Gérer l'affichage de la modal
   useEffect(() => {
     if (editingUser) {
-      // Empêcher le scroll et cacher tout
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'fixed';
       document.body.style.width = '100%';
       document.body.style.height = '100%';
     } else {
-      // Restaurer l'affichage normal
       document.body.style.overflow = '';
       document.body.style.position = '';
       document.body.style.width = '';
       document.body.style.height = '';
     }
     
-    // Cleanup au démontage
     return () => {
       document.body.style.overflow = '';
       document.body.style.position = '';
@@ -60,7 +56,6 @@ const AdminPanel = () => {
     };
   }, [editingUser]);
 
-  // Redirection si pas admin
   useEffect(() => {
     if (!loading && (!user || user.user_type !== 'admin')) {
       router.push('/dashboard');
@@ -132,7 +127,7 @@ const AdminPanel = () => {
       });
 
       if (response.ok) {
-        await fetchUsers(); // Rafraîchir la liste
+        await fetchUsers(); 
         setEditingUser(null);
         setEditFormData({
           first_name: '',
@@ -179,7 +174,6 @@ const AdminPanel = () => {
     );
   }
 
-  // Redirection si pas admin (ne devrait pas être affiché mais pour sécurité)
   if (!user || user.user_type !== 'admin') {
     return null;
   }

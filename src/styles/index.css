@@ -22,7 +22,9 @@ layer(base);
   --color-white: #ffffff;       
   --color-black: #000000;      
   --color-dark: #1a1a1a;        
-  --color-primary: #48937E;     
+  /* Increased contrast primary (darker, more saturated) for better button visibility */
+  --color-primary: #1F6F5B;     /* darker green */
+  --color-primary-rgb: 31,111,91;
   --color-accent: #e5e5e5;      
 
   /* Dark mode background / text */
@@ -130,6 +132,20 @@ layer(base);
     color: var(--color-body-color-dark);
     background-color: var(--color-bg-color-dark);
   }
+
+  /* Assurer un background uniforme pour la page principale */
+  main {
+    background-color: var(--color-white);
+  }
+
+  .dark main {
+    background-color: var(--color-bg-color-dark);
+  }
+
+  /* S'assurer que toutes les sections principales ont un background cohérent par défaut */
+  section:not([class*="bg-primary"]):not([class*="bg-gradient"]) {
+    background-color: inherit;
+  }
 }
 
 @layer components {
@@ -137,44 +153,111 @@ layer(base);
     @apply inline-flex;
   }
   
-  /* Force transparent backgrounds ONLY for desktop navigation elements */
-  @media (min-width: 1024px) {
-    .desktop-nav-link,
-    .desktop-nav-link::before,
-    .desktop-nav-link::after {
-      background-color: transparent !important;
-      background: transparent !important;
-      background-image: none !important;
-    }
-    
-    .desktop-nav-link:hover,
-    .desktop-nav-link:hover::before,
-    .desktop-nav-link:hover::after {
-      background-color: transparent !important;
-      background: transparent !important;
-      background-image: none !important;
-    }
-    
-    .desktop-nav-link:focus,
-    .desktop-nav-link:focus::before,
-    .desktop-nav-link:focus::after {
-      background-color: transparent !important;
-      background: transparent !important;
-      background-image: none !important;
-    }
-    
-    .desktop-nav-link:active,
-    .desktop-nav-link:active::before,
-    .desktop-nav-link:active::after {
-      background-color: transparent !important;
-      background: transparent !important;
-      background-image: none !important;
-    }
-    
-    .desktop-nav-link:visited {
-      background-color: transparent !important;
-      background: transparent !important;
-      background-image: none !important;
-    }
+  /* KILL ALL NAVBAR BACKGROUNDS AND TRANSITIONS EXCEPT AUTH BUTTONS */
+  header,
+  #navbarCollapse,
+  #navbarCollapse *:not(.bg-primary),
+  nav,
+  nav *:not(.bg-primary),
+  ul,
+  li,
+  .desktop-nav-link,
+  .desktop-nav-link::before,
+  .desktop-nav-link::after {
+    background: inherit !important;
+    background-color: inherit !important;
+    background-image: none !important;
+    transition: none !important;
   }
+  
+  /* Allow color transitions on text and preserve auth button styles */
+  .desktop-nav-link {
+    transition: color 0.15s ease-in-out !important;
+  }
+  
+  /* Preserve primary button styles for auth buttons */
+  /* Primary color for buttons and accents - use variable for consistency */
+  button.bg-primary,
+  a.bg-primary,
+  .bg-primary {
+    background-color: var(--color-primary) !important;
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important; /* ensure readable label */
+    transition: background-color 0.12s ease-in-out, box-shadow 0.12s ease-in-out !important;
+    box-shadow: var(--shadow-btn) !important;
+  }
+  
+  button.bg-primary:hover,
+  a.bg-primary:hover,
+  .bg-primary:hover {
+    /* stronger, fully opaque hover for better contrast */
+    background-color: rgba(var(--color-primary-rgb), 1) !important;
+    background: rgba(var(--color-primary-rgb), 1) !important;
+    box-shadow: var(--shadow-btn-hover) !important;
+    transform: translateY(-2px);
+  }
+  
+  #navbarCollapse ul li:hover,
+  #navbarCollapse ul li a:hover,
+  .desktop-nav-link:hover,
+  .desktop-nav-link:hover::before,
+  .desktop-nav-link:hover::after {
+    background-color: transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+  
+  #navbarCollapse ul li:focus,
+  #navbarCollapse ul li a:focus,
+  .desktop-nav-link:focus,
+  .desktop-nav-link:focus::before,
+  .desktop-nav-link:focus::after {
+    background-color: transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+  
+  #navbarCollapse ul li:active,
+  #navbarCollapse ul li a:active,
+  .desktop-nav-link:active,
+  .desktop-nav-link:active::before,
+  .desktop-nav-link:active::after {
+    background-color: transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+}
+
+/* Testimonials swiper pagination spacing to avoid overlaying cards */
+.testimonials-swiper {
+  padding-bottom: 3rem; /* create space for bullets */
+  position: relative; /* ensure absolute pagination is positioned to this wrapper */
+}
+
+.testimonials-swiper .swiper-pagination {
+  /* place pagination in the normal flow below the slides so it doesn't overlap cards */
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  margin-top: 1rem !important;
+  z-index: 20 !important;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  background: var(--color-primary) !important;
+  opacity: 0.95 !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 6px !important;
+  border-radius: 9999px !important;
+}
+
+.dark .testimonials-swiper .swiper-pagination-bullet {
+  background: var(--color-primary) !important;
+}
+
+/* Allow pagination to be visible even if Swiper sets overflow:hidden */
+.testimonials-swiper .swiper {
+  overflow: visible !important;
 }

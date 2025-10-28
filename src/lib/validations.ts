@@ -44,67 +44,10 @@ export const contactFormSchema = z.object({
     .max(1000, 'Le message ne peut pas dépasser 1000 caractères'),
 });
 
-// Schema pour l'inscription
-export const signupFormSchema = z.object({
-  fullName: z
-    .string()
-    .min(2, 'Le nom complet doit contenir au moins 2 caractères')
-    .max(100, 'Le nom complet ne peut pas dépasser 100 caractères')
-    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, 'Le nom ne peut contenir que des lettres'),
-  
-  email: z
-    .string()
-    .email('Format d\'email invalide')
-    .min(5, 'L\'email doit contenir au moins 5 caractères')
-    .max(100, 'L\'email ne peut pas dépasser 100 caractères'),
-  
-  password: z
-    .string()
-    .min(8, 'Le mot de passe doit contenir au moins 8 caractères')
-    .max(128, 'Le mot de passe ne peut pas dépasser 128 caractères')
-    .regex(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/,
-      'Le mot de passe doit contenir au moins: 1 minuscule, 1 majuscule, 1 chiffre, 1 caractère spécial'
-    ),
-  
-  confirmPassword: z.string(),
-  
-  acceptTerms: z
-    .boolean()
-    .refine(val => val === true, 'Vous devez accepter les conditions d\'utilisation'),
-}).refine((data) => data.password === data.confirmPassword, {
-  message: 'Les mots de passe ne correspondent pas',
-  path: ['confirmPassword'],
-});
 
-// Schema pour la connexion
-export const signinFormSchema = z.object({
-  email: z
-    .string()
-    .email('Format d\'email invalide')
-    .min(5, 'L\'email doit contenir au moins 5 caractères'),
-  
-  password: z
-    .string()
-    .min(8, 'Le mot de passe doit contenir au moins 8 caractères'),
-  
-  rememberMe: z.boolean().optional(),
-});
-
-// Schema pour le formulaire de newsletter
-export const newsletterSchema = z.object({
-  email: z
-    .string()
-    .email('Format d\'email invalide')
-    .min(5, 'L\'email doit contenir au moins 5 caractères')
-    .max(100, 'L\'email ne peut pas dépasser 100 caractères'),
-});
 
 // Types TypeScript générés à partir des schemas
 export type ContactFormData = z.infer<typeof contactFormSchema>;
-export type SignupFormData = z.infer<typeof signupFormSchema>;
-export type SigninFormData = z.infer<typeof signinFormSchema>;
-export type NewsletterData = z.infer<typeof newsletterSchema>;
 
 // Messages d'erreur personnalisés par langue
 export const getErrorMessages = (locale: 'fr' | 'en') => {
@@ -136,8 +79,5 @@ export const getErrorMessages = (locale: 'fr' | 'en') => {
 
 export default {
   contactFormSchema,
-  signupFormSchema,
-  signinFormSchema,
-  newsletterSchema,
   getErrorMessages,
 };

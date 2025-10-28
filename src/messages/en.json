@@ -6,9 +6,7 @@
     "contact": "Contact"
   },
 
-  "header": {
-    "space": "My account"
-  },
+
 
   "hero": {
     "title": "Unleash Lab",
@@ -88,26 +86,7 @@
   ],
 
 
-  "signup": {
-    "title": "Create your account",
-    "subtitle": "It’s totally free and super easy",
-    "google": "Sign in with Google",
-    "github": "Sign in with GitHub",
-    "or": "Or, register with your email",
-    "fullname": "Full Name",
-    "fullnamePlaceholder": "Enter your full name",
-    "email": "Work Email",
-    "emailPlaceholder": "Enter your Email",
-    "password": "Your Password",
-    "passwordPlaceholder": "Enter your Password",
-    "terms": "By creating an account, you agree to the",
-    "termsLink": "Terms and Conditions",
-    "privacy": "and our",
-    "privacyLink": "Privacy Policy",
-    "signupButton": "Sign up",
-    "already": "Already using Startup?",
-    "signinLink": "Sign in"
-  },
+
 
   "about": {
     "title": "About Us",

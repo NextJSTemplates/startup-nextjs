@@ -1,5 +1,4 @@
 import { Menu } from "@/types/menu";
-
 const menuData: Menu[] = [
   {
     id: "home",
@@ -22,5 +21,4 @@ const menuData: Menu[] = [
     newTab: false,
   },
 ];
-
 export default menuData;

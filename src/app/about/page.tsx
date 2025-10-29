@@ -8,10 +8,6 @@ const AboutPage = () => {
 
   return (
     <>
-      <Breadcrumb
-        pageName={messages.aboutPage.breadcrumb.title}
-        description={messages.aboutPage.breadcrumb.description}
-      />
       <SimpleAbout />
     </>
   );

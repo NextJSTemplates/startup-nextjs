@@ -1,5 +1,4 @@
 import { Blog } from "@/types/blog";
-
 const blogData: (Blog & { quote?: string })[] = [
   {
     id: 1,
@@ -86,5 +85,4 @@ const blogData: (Blog & { quote?: string })[] = [
     publishDate: "2025",
   },
 ];
-
 export default blogData;

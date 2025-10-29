@@ -1,19 +1,15 @@
 "use client";
-
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import { useLanguage } from "@/context/LanguageContext";
-
 const AboutSectionOne = () => {
   const { messages } = useLanguage();
-
   const stats = [
     { number: "15+", label: "Années d'expérience" },
     { number: "200+", label: "Projets réalisés" },
     { number: "50+", label: "Clients satisfaits" },
     { number: "98%", label: "Taux de satisfaction" }
   ];
-
   const values = [
     {
       icon: (
@@ -43,10 +39,9 @@ const AboutSectionOne = () => {
       description: "Accompagnement humain et empathique de nos clients"
     }
   ];
-
   return (
     <>
-      {/* Section Hero About */}
+      {}
       <section className="bg-gradient-to-br from-primary/5 via-white to-primary/5 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16 md:pt-20 lg:pt-28">
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
@@ -84,7 +79,7 @@ const AboutSectionOne = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
                 </div>
-                {/* Floating card */}
+                {}
                 <div className="absolute -bottom-6 -left-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
                   <div className="flex items-center space-x-3">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
@@ -103,8 +98,7 @@ const AboutSectionOne = () => {
           </div>
         </div>
       </section>
-
-      {/* Section Statistiques */}
+      {}
       <section className="py-16 md:py-20">
         <div className="container">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
@@ -121,8 +115,7 @@ const AboutSectionOne = () => {
           </div>
         </div>
       </section>
-
-      {/* Section Valeurs */}
+      {}
       <section className="bg-gray-50 py-16 dark:bg-gray-800 md:py-20">
         <div className="container">
           <div className="mb-16 text-center">
@@ -153,5 +146,4 @@ const AboutSectionOne = () => {
     </>
   );
 };
-
 export default AboutSectionOne;

@@ -46,7 +46,7 @@ const Header = () => {
       <div className="container">
         <div className="relative -mx-4 flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="w-40 sm:w-50 lg:w-60 max-w-full px-4 xl:mr-12">
+          <div className="w-48 sm:w-56 lg:w-72 max-w-full px-4 xl:mr-12">
             <Link
               href="/"
               className={`header-logo block w-full ${
@@ -56,16 +56,16 @@ const Header = () => {
               <Image
                 src="/images/logo/svgviewer-output.svg"
                 alt="logo"
-                width={120}
-                height={24}
-                className="w-full dark:hidden sm:w-[140px] sm:h-[30px]"
+                width={350}
+                height={70}
+                className="w-full dark:hidden sm:w-[350px] sm:h-[70px] lg:w-[400px] lg:h-[80px]"
               />
               <Image
                 src="/images/logo/svgviewer-output.svg"
                 alt="logo"
-                width={120}
-                height={24}
-                className="hidden w-full dark:block sm:w-[140px] sm:h-[30px]"
+                width={350}
+                height={70}
+                className="hidden w-full dark:block sm:w-[350px] sm:h-[70px] lg:w-[400px] lg:h-[80px]"
               />
             </Link>
           </div>
@@ -145,29 +145,14 @@ const Header = () => {
             <div className="flex items-center space-x-2 sm:space-x-3">
               {/* Sélecteur de langue */}
               <div className="relative inline-block">
-                <select
-                  value={locale}
-                  onChange={(e) => setLocale(e.target.value as "fr" | "en")}
-                  className="appearance-none bg-transparent px-2 sm:px-3 pr-7 sm:pr-8 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-dark focus:outline-none dark:text-white transition-colors"
+                <button
+                  onClick={() => setLocale(locale === "fr" ? "en" : "fr")}
+                  className="flex items-center space-x-2 px-3 sm:px-4 py-2 text-sm font-medium text-dark hover:text-primary focus:outline-none dark:text-white dark:hover:text-primary transition-colors rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  <option value="fr">🇫🇷 FR</option>
-                  <option value="en">🇺🇸 EN</option>
-                </select>
-                <span className="pointer-events-none absolute inset-y-0 right-1.5 sm:right-2 flex items-center text-gray-500 dark:text-gray-400">
-                  <svg
-                    className="h-3 w-3 sm:h-4 sm:w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </span>
+                  <span className="text-sm font-semibold">
+                    {locale === "fr" ? "FR" : "EN"}
+                  </span>
+                </button>
               </div>
 
 

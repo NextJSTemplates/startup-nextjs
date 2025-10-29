@@ -32,18 +32,11 @@ const ContactForm = () => {
     try {
       setIsSubmitting(true);
       setSubmitSuccess(false);
-      // Envoi réel vers l'API interne
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
 
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body?.error || 'Erreur lors de l\'envoi du message');
-      }
-
+      // Simulation d'envoi API
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      console.log("📧 Form data:", data);
+      
       setSubmitSuccess(true);
       reset();
       

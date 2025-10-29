@@ -8,10 +8,6 @@ const ContactPage = () => {
 
   return (
     <>
-      <Breadcrumb
-        pageName={messages.contactPage.breadcrumb.title}
-        description={messages.contactPage.breadcrumb.description}
-      />
       <Contact />
     </>
   );

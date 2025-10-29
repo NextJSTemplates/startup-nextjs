@@ -1,13 +1,10 @@
 "use client";
-
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
 import { useLanguage } from "@/context/LanguageContext";
-
 const Features = () => {
   const { messages } = useLanguage();
-
   return (
     <section
       id="features"
@@ -71,22 +68,18 @@ const Features = () => {
           </rect>
         </svg>
       </div>
-
       <div className="container relative z-10">
         <SectionTitle
           title={messages.featuresSection.title}
           paragraph=""
           center
         />
-
         <blockquote className="text-center text-lg italic text-primary mb-4">
           {messages.featuresSection.quote}
         </blockquote>
-
         <p className="max-w-3xl mx-auto text-center text-body-color dark:text-body-color-dark mb-12">
           {messages.featuresSection.intro}
         </p>
-
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 sm:gap-8 lg:gap-10 xl:gap-12">
           {featuresData.map((feature) => (
             <SingleFeature key={feature.id} feature={feature} />
@@ -96,5 +89,4 @@ const Features = () => {
     </section>
   );
 };
-
 export default Features;

@@ -1,7 +1,6 @@
 import { Brand } from "@/types/brand";
 import Image from "next/image";
 import brandsData from "./brandsData";
-
 const Brands = () => {
   return (
     <section className="pt-16">
@@ -19,12 +18,9 @@ const Brands = () => {
     </section>
   );
 };
-
 export default Brands;
-
 const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, imageLight, name } = brand;
-
   return (
     <div className="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
       <a

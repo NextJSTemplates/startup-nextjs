@@ -1,11 +1,8 @@
 "use client";
-
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-
 const AboutSectionTwo = () => {
   const { messages } = useLanguage();
-
   const timeline = [
     {
       year: "2008",
@@ -28,7 +25,6 @@ const AboutSectionTwo = () => {
       description: "Intégration des technologies LinkedIn et outils numériques pour un accompagnement moderne"
     }
   ];
-
   const expertise = [
     {
       icon: (
@@ -58,10 +54,9 @@ const AboutSectionTwo = () => {
       description: "Définition de stratégies, innovation managériale et transformation digitale"
     }
   ];
-
   return (
     <>
-      {/* Section Mission & Expertise */}
+      {}
       <section className="py-16 md:py-20">
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
@@ -77,7 +72,7 @@ const AboutSectionTwo = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent" />
                 </div>
-                {/* Badge certification */}
+                {}
                 <div className="absolute -top-4 -right-4 rounded-full bg-primary p-4 text-white shadow-lg">
                   <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -85,7 +80,6 @@ const AboutSectionTwo = () => {
                 </div>
               </div>
             </div>
-
             <div className="w-full px-4 lg:w-1/2">
               <div className="max-w-[500px]">
                 <div className="mb-8">
@@ -99,7 +93,6 @@ const AboutSectionTwo = () => {
                     {messages.about2.missionText}
                   </p>
                 </div>
-
                 <div className="mb-8">
                   <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
                     {messages.about2.expertiseTitle}
@@ -108,7 +101,6 @@ const AboutSectionTwo = () => {
                     {messages.about2.expertiseText}
                   </p>
                 </div>
-
                 <div className="rounded-lg bg-primary/5 p-6">
                   <h3 className="mb-3 text-lg font-bold text-black dark:text-white">
                     {messages.about2.humanTitle}
@@ -122,8 +114,7 @@ const AboutSectionTwo = () => {
           </div>
         </div>
       </section>
-
-      {/* Section Expertise */}
+      {}
       <section className="bg-gray-50 py-16 dark:bg-gray-800 md:py-20">
         <div className="container">
           <div className="mb-16 text-center">
@@ -151,8 +142,7 @@ const AboutSectionTwo = () => {
           </div>
         </div>
       </section>
-
-      {/* Section Timeline */}
+      {}
       <section className="py-16 md:py-20">
         <div className="container">
           <div className="mb-16 text-center">
@@ -186,5 +176,4 @@ const AboutSectionTwo = () => {
     </>
   );
 };
-
 export default AboutSectionTwo;

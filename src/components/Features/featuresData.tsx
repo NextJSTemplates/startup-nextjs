@@ -1,6 +1,5 @@
 import { Feature } from "@/types/feature";
 import { FaUser, FaLightbulb, FaCogs, FaChartLine } from "react-icons/fa";
-
 const featuresData: Feature[] = [
   {
     id: "understand",
@@ -19,5 +18,4 @@ const featuresData: Feature[] = [
     icon: <FaChartLine className="text-primary text-4xl" />,
   },
 ];
-
 export default featuresData;

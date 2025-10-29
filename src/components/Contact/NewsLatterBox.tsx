@@ -19,13 +19,12 @@ const NewsLatterBox = () => {
         </li>
         <li>
           <strong className="block text-dark dark:text-white">Téléphone</strong>
-          <a href="tel:+41789365736" className="hover:underline">
-            +41 78 936 57 36
+          <a href="tel:+41784744219" className="hover:underline">
+            +41 78 474 42 19
           </a>
         </li>
       </ul>
     </div>
   );
 };
-
 export default NewsLatterBox;

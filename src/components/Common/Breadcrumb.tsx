@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 const Breadcrumb = ({
   pageName,
   description,
@@ -42,7 +41,6 @@ const Breadcrumb = ({
             </div>
           </div>
         </div>
-
         <div>
           <span className="absolute left-0 top-0 z-[-1]">
             <svg
@@ -50,7 +48,7 @@ const Breadcrumb = ({
               height="254"
               viewBox="0 0 287 254"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"//www.w3.org/2000/svg"
             >
               <path
                 opacity="0.1"
@@ -78,7 +76,7 @@ const Breadcrumb = ({
               height="258"
               viewBox="0 0 628 258"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"//www.w3.org/2000/svg"
             >
               <path
                 opacity="0.1"
@@ -121,5 +119,4 @@ const Breadcrumb = ({
     </>
   );
 };
-
 export default Breadcrumb;

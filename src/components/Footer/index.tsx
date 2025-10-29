@@ -41,8 +41,8 @@ const Footer = () => {
                   <Image
                     src="/images/logo/logo-no-background.svg"
                     alt="Unleash Lab logo"
-                    width={180}
-                    height={45}
+                    width={400}
+                    height={100}
                     className="dark:brightness-0 dark:invert"
                   />
                 </Link>

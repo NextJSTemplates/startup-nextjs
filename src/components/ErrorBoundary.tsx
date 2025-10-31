@@ -1,7 +1,3 @@
-/**
- * Error Boundary & Global Error Handling - Unleash Lab
- * Gestion globale des erreurs avec boundaries et logging
- */
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -18,7 +14,6 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-// Error Boundary Class Component
 class ErrorBoundaryClass extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -32,7 +27,6 @@ class ErrorBoundaryClass extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('🚨 Error Boundary Caught:', error, errorInfo);
     
-    // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
     }
@@ -44,7 +38,6 @@ class ErrorBoundaryClass extends Component<Props, State> {
   }
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Integration avec un service de monitoring (Sentry, LogRocket, etc.)
     const errorReport = {
       message: error.message,
       stack: error.stack,

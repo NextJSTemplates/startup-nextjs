@@ -14,7 +14,6 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Unleash Lab - Expert en Business Analysis",
   description: "This is Home for Startup Nextjs Template",
-  // other metadata
 };
 
 export default function Home() {
@@ -23,6 +22,7 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
+      <Brands />
       <Video />
       <Contact />
     </>

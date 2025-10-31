@@ -114,7 +114,6 @@ const Hero = () => {
     <section className="relative bg-white dark:bg-black overflow-hidden h-screen pt-32 sm:pt-28 lg:pt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row items-center justify-center h-full pb-12 sm:pb-8 lg:pb-0">
         
-        {/* Text Content */}
         <div className="w-full lg:w-1/2 py-8 sm:py-12 lg:py-20 text-center lg:text-left order-2 lg:order-1">
           <h1 className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white leading-tight tracking-tight">
             <Typewriter text={messages.hero.title} />
@@ -127,7 +126,6 @@ const Hero = () => {
             {messages.hero.description}
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
             <Link
               href="/blog"
@@ -144,7 +142,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Visual Content */}
         <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] flex items-center justify-center order-1 lg:order-2 mb-6 sm:mb-8 lg:mb-0">
           <NeuralNetwork />
         </div>

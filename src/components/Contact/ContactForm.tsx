@@ -1,7 +1,3 @@
-/**
- * Contact Form Component - Unleash Lab
- * Formulaire de contact avec validation complète, gestion d'erreurs et UX optimisée
- */
 "use client";
 
 import { useState } from "react";
@@ -33,14 +29,12 @@ const ContactForm = () => {
       setIsSubmitting(true);
       setSubmitSuccess(false);
 
-      // Simulation d'envoi API
       await new Promise(resolve => setTimeout(resolve, 2000));
       console.log("📧 Form data:", data);
       
       setSubmitSuccess(true);
       reset();
       
-      // Scroll to success message
       setTimeout(() => {
         document.getElementById('contact-success')?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
@@ -52,7 +46,6 @@ const ContactForm = () => {
     }
   };
 
-  // Helper pour les classes d'erreur
   const getInputClasses = (fieldName: keyof ContactFormData) => {
     const hasError = errors[fieldName];
     const isTouched = touchedFields[fieldName];
@@ -76,7 +69,6 @@ const ContactForm = () => {
         <div className="-mx-4 flex flex-wrap lg:items-stretch">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             
-            {/* Message de succès */}
             {submitSuccess && (
               <div id="contact-success" className="mb-8 rounded-lg bg-green-50 border border-green-200 p-6 dark:bg-green-900/20 dark:border-green-800">
                 <div className="flex items-center">
@@ -108,7 +100,6 @@ const ContactForm = () => {
               <form onSubmit={handleSubmit(onSubmit)} noValidate>
                 <div className="-mx-4 flex flex-wrap">
                   
-                  {/* Nom de famille */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-6 md:mb-8">
                       <label
@@ -140,7 +131,6 @@ const ContactForm = () => {
                     </div>
                   </div>
 
-                  {/* Prénom */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-6 md:mb-8">
                       <label
@@ -172,7 +162,6 @@ const ContactForm = () => {
                     </div>
                   </div>
 
-                  {/* Email */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-6 md:mb-8">
                       <label
@@ -204,7 +193,6 @@ const ContactForm = () => {
                     </div>
                   </div>
 
-                  {/* Entreprise */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-6 md:mb-8">
                       <label
@@ -236,7 +224,6 @@ const ContactForm = () => {
                     </div>
                   </div>
 
-                  {/* Message */}
                   <div className="w-full px-4">
                     <div className="mb-6 md:mb-8">
                       <label
@@ -268,7 +255,6 @@ const ContactForm = () => {
                     </div>
                   </div>
 
-                  {/* Bouton de soumission */}
                   <div className="w-full px-4">
                     <button
                       type="submit"
@@ -293,7 +279,6 @@ const ContactForm = () => {
                       )}
                     </button>
                     
-                    {/* Indicateur de progression */}
                     {isSubmitting && (
                       <div className="mt-4">
                         <div className="bg-gray-200 rounded-full h-2 dark:bg-gray-700">

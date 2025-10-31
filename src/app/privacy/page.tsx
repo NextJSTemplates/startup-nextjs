@@ -48,7 +48,7 @@ const PrivacyPage = () => {
                         </div>
                       </section>
 
-                      <section id="collecte" className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
+                      <section id="collecte" className="p-4 rounded-lg bg-white dark:bg-zinc-800 border">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">2</div>
@@ -87,7 +87,7 @@ const PrivacyPage = () => {
                         </div>
                       </section>
 
-                      <section id="partage" className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
+                      <section id="partage" className="p-4 rounded-lg bg-white dark:bg-zinc-800 border">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">4</div>
@@ -116,7 +116,7 @@ const PrivacyPage = () => {
                         </div>
                       </section>
 
-                      <section id="droits" className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
+                      <section id="droits" className="p-4 rounded-lg bg-white dark:bg-zinc-800 border">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">6</div>
@@ -150,7 +150,7 @@ const PrivacyPage = () => {
                         </div>
                       </section>
 
-                      <section id="contact" className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
+                      <section id="contact" className="p-4 rounded-lg bg-white dark:bg-zinc-800 border">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">8</div>

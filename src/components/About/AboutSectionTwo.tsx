@@ -6,7 +6,7 @@ const AboutSectionTwo = () => {
   const timeline = [
     {
       year: "2008",
-      title: "Fondation d'UnLeashLab",
+      title: "Fondation d'Unleash Lab",
       description: "Début de l'aventure avec une vision claire : révéler le potentiel humain et organisationnel"
     },
     {
@@ -65,7 +65,7 @@ const AboutSectionTwo = () => {
                 <div className="relative overflow-hidden rounded-2xl">
                   <Image
                     src="/images/about/aboutSecond.jpg"
-                    alt="UnLeashLab équipe"
+                    alt="Unleash Lab équipe"
                     width={500}
                     height={600}
                     className="object-cover"

@@ -1,7 +1,3 @@
-/**
- * Responsive Test Component - Unleash Lab
- * Composant pour tester visuellement tous les breakpoints
- */
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -31,7 +27,6 @@ const ResponsiveTest = () => {
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 p-4 sm:p-6 lg:p-8 min-h-screen">
-      {/* Header */}
       <div className="mb-8 text-center">
         <h1 className={`${TYPOGRAPHY.h1} text-black dark:text-white mb-4`}>
           🧪 Test Responsive Design
@@ -46,7 +41,6 @@ const ResponsiveTest = () => {
         </div>
       </div>
 
-      {/* Breakpoints Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-12">
         {Object.entries(BREAKPOINTS).map(([key, value]) => (
           <div 
@@ -59,7 +53,6 @@ const ResponsiveTest = () => {
         ))}
       </div>
 
-      {/* Typography Test */}
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 mb-8 shadow-lg">
         <h2 className={`${TYPOGRAPHY.h2} text-black dark:text-white mb-6`}>
           Typography Test
@@ -80,7 +73,6 @@ const ResponsiveTest = () => {
         </div>
       </div>
 
-      {/* Buttons Test */}
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 mb-8 shadow-lg">
         <h2 className={`${TYPOGRAPHY.h2} text-black dark:text-white mb-6`}>
           Buttons Test
@@ -96,7 +88,6 @@ const ResponsiveTest = () => {
         </div>
       </div>
 
-      {/* Grid Test */}
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 mb-8 shadow-lg">
         <h2 className={`${TYPOGRAPHY.h2} text-black dark:text-white mb-6`}>
           Features Grid Test
@@ -119,7 +110,6 @@ const ResponsiveTest = () => {
         </div>
       </div>
 
-      {/* Contact Form Test */}
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
         <h2 className={`${TYPOGRAPHY.h2} text-black dark:text-white mb-6`}>
           Contact Form Test
@@ -159,7 +149,6 @@ const ResponsiveTest = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <div className="mt-8 text-center">
         <p className="text-gray-500 dark:text-gray-400">
           ✅ Responsive Design Test - Unleash Lab 2025

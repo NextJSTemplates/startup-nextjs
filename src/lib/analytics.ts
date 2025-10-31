@@ -1,7 +1,4 @@
-/**
- * Performance Monitoring & Analytics - Unleash Lab
- * Configuration pour le monitoring des performances et analytics
- */
+
 
 declare global {
   interface Window {
@@ -10,7 +7,6 @@ declare global {
   }
 }
 
-// Configuration Analytics
 export const ANALYTICS_CONFIG = {
   googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID,
   gtagConfig: {
@@ -24,7 +20,6 @@ export const ANALYTICS_CONFIG = {
   },
 };
 
-// Types pour les événements
 export interface AnalyticsEvent {
   action: string;
   category: string;
@@ -33,9 +28,7 @@ export interface AnalyticsEvent {
   custom_parameters?: Record<string, any>;
 }
 
-// Fonction pour envoyer des événements
 export const trackEvent = (event: AnalyticsEvent) => {
-  // Mode DEV - Log dans la console
   if (process.env.NODE_ENV === 'development') {
     console.log('🔥 ANALYTICS EVENT:', {
       action: event.action,
@@ -46,7 +39,6 @@ export const trackEvent = (event: AnalyticsEvent) => {
     });
   }
   
-  // Mode PRODUCTION - Envoi à Google Analytics
   if (typeof window !== 'undefined' && window.gtag && process.env.NODE_ENV === 'production') {
     window.gtag('event', event.action, {
       event_category: event.category,
@@ -57,16 +49,14 @@ export const trackEvent = (event: AnalyticsEvent) => {
   }
 };
 
-// Événements prédéfinis
+
 export const ANALYTICS_EVENTS = {
-  // Navigation
   PAGE_VIEW: (page: string) => trackEvent({
     action: 'page_view',
     category: 'navigation',
     label: page,
   }),
   
-  // Engagement
   SCROLL_DEPTH: (depth: number) => trackEvent({
     action: 'scroll',
     category: 'engagement',
@@ -74,7 +64,6 @@ export const ANALYTICS_EVENTS = {
     value: depth,
   }),
   
-  // Formulaires
   FORM_START: (formName: string) => trackEvent({
     action: 'form_start',
     category: 'form',
@@ -94,7 +83,6 @@ export const ANALYTICS_EVENTS = {
     custom_parameters: { error_type: error },
   }),
   
-  // Interactions
   CLICK_CTA: (ctaName: string, location: string) => trackEvent({
     action: 'click',
     category: 'cta',
@@ -102,7 +90,6 @@ export const ANALYTICS_EVENTS = {
     custom_parameters: { location },
   }),
   
-  // Performance
   PERFORMANCE_METRIC: (metric: string, value: number) => trackEvent({
     action: 'performance',
     category: 'metrics',
@@ -111,7 +98,6 @@ export const ANALYTICS_EVENTS = {
   }),
 };
 
-// Hook pour le tracking des performances
 export const usePerformanceTracking = () => {
   const trackWebVitals = (metric: any) => {
     ANALYTICS_EVENTS.PERFORMANCE_METRIC(metric.name, metric.value);
@@ -122,21 +108,17 @@ export const usePerformanceTracking = () => {
       const perfData = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       
       if (perfData) {
-        // DOM Content Loaded
         const dcl = perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart;
         ANALYTICS_EVENTS.PERFORMANCE_METRIC('dom_content_loaded', dcl);
         
-        // Load Complete
         const loadComplete = perfData.loadEventEnd - perfData.loadEventStart;
         ANALYTICS_EVENTS.PERFORMANCE_METRIC('load_complete', loadComplete);
         
-        // First Contentful Paint
         const fcp = performance.getEntriesByName('first-contentful-paint')[0];
         if (fcp) {
           ANALYTICS_EVENTS.PERFORMANCE_METRIC('first_contentful_paint', fcp.startTime);
         }
         
-        // Largest Contentful Paint
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
@@ -146,7 +128,6 @@ export const usePerformanceTracking = () => {
         try {
           observer.observe({ entryTypes: ['largest-contentful-paint'] });
         } catch (e) {
-          // LCP not supported
         }
       }
     }
@@ -158,7 +139,6 @@ export const usePerformanceTracking = () => {
   };
 };
 
-// Configuration pour les scripts Google Analytics
 export const getGoogleAnalyticsScript = () => {
   if (!ANALYTICS_CONFIG.googleAnalyticsId) {
     return null;
@@ -175,7 +155,6 @@ export const getGoogleAnalyticsScript = () => {
   };
 };
 
-// Monitoring des erreurs JavaScript
 export const setupErrorTracking = () => {
   if (typeof window !== 'undefined') {
     window.addEventListener('error', (event) => {
@@ -204,7 +183,6 @@ export const setupErrorTracking = () => {
   }
 };
 
-// Hook pour le tracking du scroll
 export const useScrollTracking = () => {
   const trackScrollDepth = () => {
     let maxScroll = 0;
@@ -242,7 +220,6 @@ export const useScrollTracking = () => {
   return { trackScrollDepth };
 };
 
-// Utilitaire throttle
 function throttle<T extends (...args: any[]) => any>(
   func: T,
   limit: number

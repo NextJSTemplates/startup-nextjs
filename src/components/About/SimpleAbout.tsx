@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 const SimpleAbout: React.FC = () => {
   const { messages } = useLanguage();
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-gradient-to-br from-gray-50 to-white dark:from-zinc-900 dark:to-zinc-800 overflow-hidden">
       {/* Decorative background shapes (subtle) */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-[-80px] top-[-80px] h-[380px] w-[380px] rounded-full bg-primary/10 blur-3xl opacity-30 dark:opacity-10" />
@@ -16,11 +16,11 @@ const SimpleAbout: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <header className="mb-16 text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black dark:text-white mb-6 leading-tight">
+          <header className="mb-16 text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-4 leading-tight">
               {messages.aboutUs.title}
             </h1>
-            <p className="text-xl md:text-2xl text-body-color dark:text-gray-300 leading-relaxed font-light">
+            <p className="text-lg text-body-color dark:text-gray-300">
               {messages.aboutUs.subtitle}
             </p>
           </header>
@@ -29,7 +29,7 @@ const SimpleAbout: React.FC = () => {
           <div className="grid lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Main Content */}
             <main className="lg:col-span-3">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 dark:border-gray-700 h-full flex flex-col justify-between">
+              <div className="bg-white dark:bg-zinc-800 rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 dark:border-zinc-700 h-full flex flex-col justify-between">
                 <div className="prose prose-lg dark:prose-invert max-w-none flex-grow">
                   <p className="text-lg leading-relaxed text-body-color dark:text-gray-300 mb-6">
                     {messages.aboutUs.content.paragraph1}
@@ -45,7 +45,7 @@ const SimpleAbout: React.FC = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 pt-6 border-t border-gray-100 dark:border-zinc-700">
                   <a 
                     href="/blog" 
                     className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-primary rounded-xl shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
@@ -65,7 +65,7 @@ const SimpleAbout: React.FC = () => {
             {/* Sidebar Cards */}
             <aside className="lg:col-span-1">
               <div className="sticky top-8 space-y-6 w-full">
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-white dark:bg-zinc-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-zinc-700 hover:shadow-xl transition-shadow duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                       <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ const SimpleAbout: React.FC = () => {
                   <p className="text-body-color dark:text-gray-300 leading-relaxed">{messages.aboutUs.cards.promise.description}</p>
                 </div>
 
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-white dark:bg-zinc-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-zinc-700 hover:shadow-xl transition-shadow duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                       <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@ const SimpleAbout: React.FC = () => {
                   <p className="text-body-color dark:text-gray-300 leading-relaxed">{messages.aboutUs.cards.experience.description}</p>
                 </div>
 
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-white dark:bg-zinc-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-zinc-700 hover:shadow-xl transition-shadow duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                       <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

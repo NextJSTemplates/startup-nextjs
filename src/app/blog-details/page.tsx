@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 const BlogDetailsPage = () => {
   return (
-    <section className="pt-[150px] pb-[120px] bg-gray-light dark:bg-bg-color-dark">
+    <section className="pt-[150px] pb-[120px] bg-gray-light dark:bg-zinc-900">
       <div className="container max-w-6xl">
         <h1 className="mb-6 text-4xl font-bold leading-tight text-black dark:text-white sm:text-5xl">
           Pro Pulse – Coaching et Mentorat à la Demande

@@ -3,6 +3,9 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "businessITAdvisory": "Business IT Advisory",
+    "recruitment": "Business Analyst Recruitment",
+    "proPulse": "Pro Pulse",
     "contact": "Contact"
   },
 
@@ -50,18 +53,18 @@
 
   "testimonialsSection": {
     "title": "They trust us",
-    "paragraph": "Discover how UnLeashLab supports its clients in their strategic, technological, and human challenges."
+    "paragraph": "Discover how Unleash Lab supports its clients in their strategic, technological, and human challenges."
   },
   "testimonials": [
     {
       "name": "John Doe",
       "designation": "Digital Transformation Director @TechCorp",
-      "content": "UnLeashLab helped us align our IT strategy with our business goals. Their expertise in Business Analysis has been a real accelerator for our transformation."
+      "content": "Unleash Lab helped us align our IT strategy with our business goals. Their expertise in Business Analysis has been a real accelerator for our transformation."
     },
     {
       "name": "Marc Lefebvre",
       "designation": "HR Manager @Innova",
-      "content": "Thanks to UnLeashLab’s support, we recruited the right Business Analysts in record time. Their methodology made the difference."
+      "content": "Thanks to Unleash Lab's support, we recruited the right Business Analysts in record time. Their methodology made the difference."
     },
     {
       "name": "Stephane Martin",
@@ -106,7 +109,7 @@
 
   "about2": {
     "missionTitle": "A clear mission",
-    "missionText": "UnleashLab was founded with the deep ambition to help individuals and organizations overcome daily challenges through a unique combination of Business Analysis, psychology, and strategy.",
+    "missionText": "Unleash Lab was founded with the deep ambition to help individuals and organizations overcome daily challenges through a unique combination of Business Analysis, psychology, and strategy.",
     "expertiseTitle": "Proven expertise",
     "expertiseText": "With over 15 years of experience in Business and IT consulting, we put our expertise at your service with rigor, professionalism, and care.",
     "humanTitle": "A human-centered approach",
@@ -139,7 +142,7 @@
   },
 
   "footer": {
-  "description": "UnLeashLab supports companies and individuals in their strategic projects with unique expertise in Business Analysis and sustainable innovation.",
+  "description": "Unleash Lab supports companies and individuals in their strategic projects with unique expertise in Business Analysis and sustainable innovation.",
   "navigation": {
     "title": "Navigation",
     "services": "Services",
@@ -172,14 +175,14 @@
   "servicesPage": {
   "breadcrumb": {
     "title": "Our Services",
-    "description": "UnleashLab supports you with tailor-made solutions: Business IT consulting, targeted recruitment and dedicated support for Business Analysts."
+    "description": "Unleash Lab supports you with tailor-made solutions: Business IT consulting, targeted recruitment and dedicated support for Business Analysts."
   }
 },
 
   "aboutPage": {
     "breadcrumb": {
       "title": "About Us",
-      "description": "UnleashLab unlocks the potential of individuals and organizations through a unique approach combining Business Analysis, psychology and innovative strategy."
+      "description": "Unleash Lab unlocks the potential of individuals and organizations through a unique approach combining Business Analysis, psychology and innovative strategy."
     }
   },
 

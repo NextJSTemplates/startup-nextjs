@@ -6,9 +6,9 @@ const blogData: (Blog & { quote?: string })[] = [
     title_en: "Business IT Advisory",
     quote: "« Faites de la technologie un levier stratégique »",
     paragraph:
-      "Dans un monde où réussite rime avec agilité et innovation, UnLeashLab aligne votre stratégie technologique sur vos objectifs métier. Grâce à un accompagnement sur‑mesure, optimisez vos investissements IT, clarifiez vos décisions stratégiques et accélérez votre transformation numérique.",
+      "Dans un monde où réussite rime avec agilité et innovation, Unleash Lab aligne votre stratégie technologique sur vos objectifs métier. Grâce à un accompagnement sur‑mesure, optimisez vos investissements IT, clarifiez vos décisions stratégiques et accélérez votre transformation numérique.",
     paragraph_en:
-      "In a world where success demands agility and innovation, UnLeashLab aligns your technology strategy with your business objectives. With tailored support, optimize your IT investments, clarify strategic decisions and accelerate your digital transformation.",
+      "In a world where success demands agility and innovation, Unleash Lab aligns your technology strategy with your business objectives. With tailored support, optimize your IT investments, clarify strategic decisions and accelerate your digital transformation.",
     content: [
       "La technologie ne doit plus être un centre de coût, mais un levier de création de valeur. Nous commençons par un diagnostic pragmatique des priorités métier et des systèmes existants pour identifier les leviers d'impact rapide.",
       "Puis nous co-construisons une feuille de route opérationnelle : priorisation des chantiers, arbitrages budgétaires et recommandations d'architecture adaptées à vos contraintes. L'objectif : transformer les choix technologiques en résultats mesurables.",
@@ -21,7 +21,7 @@ const blogData: (Blog & { quote?: string })[] = [
     ],
     image: "/images/blog/ImageService1.jpg",
     author: {
-      name: "UnLeashLab",
+      name: "Unleash Lab",
       image: "/images/blog/ImageService1.png",
       designation: "",
     },
@@ -49,7 +49,7 @@ const blogData: (Blog & { quote?: string })[] = [
     ],
     image: "/images/blog/ImageService2.jpg",
     author: {
-      name: "UnLeashLab",
+      name: "Unleash Lab",
       image: "/images/services/icon-recrutement.png",
       designation: "",
     },
@@ -77,7 +77,7 @@ const blogData: (Blog & { quote?: string })[] = [
     ],
     image: "/images/blog/ImageService3.jpg",
     author: {
-      name: "UnLeashLab",
+      name: "Unleash Lab",
       image: "/images/services/icon-care.png",
       designation: "",
     },

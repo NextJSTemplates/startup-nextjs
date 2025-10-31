@@ -5,6 +5,34 @@ layer(base);
 
 @custom-variant dark (&:is(.dark *));
 
+.submenu,
+div.submenu,
+header .submenu,
+nav .submenu,
+.header .submenu {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid rgba(229, 231, 235, 0.5) !important;
+  z-index: 9999 !important;
+}
+
+html.dark .submenu,
+html.dark div.submenu,
+html.dark header .submenu,
+html.dark nav .submenu,
+html.dark .header .submenu,
+.dark .submenu,
+.dark div.submenu,
+.dark header .submenu,
+.dark nav .submenu,
+.dark .header .submenu {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  border: 1px solid rgba(75, 85, 99, 0.5) !important;
+}
+
 
 @theme {
   /* Breakpoints */
@@ -22,6 +50,7 @@ layer(base);
   --color-white: #ffffff;       
   --color-black: #000000;      
   --color-dark: #1a1a1a;        
+
   /* Increased contrast primary (darker, more saturated) for better button visibility */
   --color-primary: #1F6F5B;     /* darker green */
   --color-primary-rgb: 31,111,91;
@@ -62,7 +91,6 @@ layer(base);
   --shadow-btn: 0px 1px 2px rgba(0, 0, 0, 0.12);
   --shadow-btn-hover: 0px 2px 4px rgba(0, 0, 0, 0.16);
 
-  /* Drop shadows */
   --drop-shadow-three: 0px 5px 15px rgba(0, 0, 0, 0.08);
 }
 
@@ -78,6 +106,49 @@ layer(base);
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  :root {
+    --submenu-bg: #ffffff;
+    --submenu-border: rgba(229, 231, 235, 0.5);
+    --header-bg: #ffffff;
+    --header-border: rgba(229, 231, 235, 1);
+  }
+
+  html.dark {
+    --submenu-bg: #18181b;
+    --submenu-border: rgba(39, 39, 42, 0.8);
+    --header-bg: #111827;
+    --header-border: rgba(75, 85, 99, 1);
+  }
+
+  .dark .submenu {
+    background-color: var(--color-bg-color-dark) !important;
+    border-color: rgba(39, 39, 42, 0.8) !important;
+  }
+
+  .header.mobile-menu-open {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(229, 231, 235, 1) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+
+
+  .dark .header.mobile-menu-open {
+    background-color: #111827 !important;
+    border-bottom: 1px solid rgba(75, 85, 99, 1) !important;
+  }
+
+  body.mobile-menu-open .header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(229, 231, 235, 1) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  body.mobile-menu-open.dark .header,
+  .dark body.mobile-menu-open .header {
+    background-color: #111827 !important;
+    border-bottom: 1px solid rgba(75, 85, 99, 1) !important;
   }
 }
 
@@ -133,7 +204,6 @@ layer(base);
     background-color: var(--color-bg-color-dark);
   }
 
-  /* Assurer un background uniforme pour la page principale */
   main {
     background-color: var(--color-white);
   }
@@ -142,7 +212,13 @@ layer(base);
     background-color: var(--color-bg-color-dark);
   }
 
-  /* S'assurer que toutes les sections principales ont un background cohérent par défaut */
+  .submenu {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--color-stroke-stroke) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
   section:not([class*="bg-primary"]):not([class*="bg-gradient"]) {
     background-color: inherit;
   }
@@ -153,7 +229,6 @@ layer(base);
     @apply inline-flex;
   }
   
-  /* KILL ALL NAVBAR BACKGROUNDS AND TRANSITIONS EXCEPT AUTH BUTTONS */
   header,
   #navbarCollapse,
   #navbarCollapse *:not(.bg-primary),
@@ -170,19 +245,17 @@ layer(base);
     transition: none !important;
   }
   
-  /* Allow color transitions on text and preserve auth button styles */
   .desktop-nav-link {
     transition: color 0.15s ease-in-out !important;
   }
   
-  /* Preserve primary button styles for auth buttons */
-  /* Primary color for buttons and accents - use variable for consistency */
+
   button.bg-primary,
   a.bg-primary,
   .bg-primary {
     background-color: var(--color-primary) !important;
     background: var(--color-primary) !important;
-    color: var(--color-white) !important; /* ensure readable label */
+    color: var(--color-white) !important; 
     transition: background-color 0.12s ease-in-out, box-shadow 0.12s ease-in-out !important;
     box-shadow: var(--shadow-btn) !important;
   }
@@ -190,7 +263,6 @@ layer(base);
   button.bg-primary:hover,
   a.bg-primary:hover,
   .bg-primary:hover {
-    /* stronger, fully opaque hover for better contrast */
     background-color: rgba(var(--color-primary-rgb), 1) !important;
     background: rgba(var(--color-primary-rgb), 1) !important;
     box-shadow: var(--shadow-btn-hover) !important;
@@ -228,14 +300,12 @@ layer(base);
   }
 }
 
-/* Testimonials swiper pagination spacing to avoid overlaying cards */
 .testimonials-swiper {
-  padding-bottom: 3rem; /* create space for bullets */
-  position: relative; /* ensure absolute pagination is positioned to this wrapper */
+  padding-bottom: 3rem; 
+  position: relative; 
 }
 
 .testimonials-swiper .swiper-pagination {
-  /* place pagination in the normal flow below the slides so it doesn't overlap cards */
   position: relative !important;
   bottom: auto !important;
   left: auto !important;
@@ -257,7 +327,6 @@ layer(base);
   background: var(--color-primary) !important;
 }
 
-/* Allow pagination to be visible even if Swiper sets overflow:hidden */
 .testimonials-swiper .swiper {
   overflow: visible !important;
 }

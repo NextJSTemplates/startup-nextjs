@@ -1,11 +1,7 @@
-/**
- * Optimizations Utils - Unleash Lab
- * Utilitaires pour l'optimisation des performances et du SEO
- */
+
 
 import React, { useEffect, useRef, useCallback, useMemo } from 'react';
 
-// Types pour l'optimisation des images
 export interface OptimizedImageConfig {
   src: string;
   alt: string;
@@ -17,7 +13,6 @@ export interface OptimizedImageConfig {
   className?: string;
 }
 
-// Configuration pour l'optimisation des images
 export const createOptimizedImageConfig = ({
   src,
   alt,
@@ -38,7 +33,6 @@ export const createOptimizedImageConfig = ({
   className,
 });
 
-// Lazy Loading Hook avec Intersection Observer
 export const useLazyLoading = (options?: {
   threshold?: number;
   rootMargin?: string;
@@ -76,7 +70,6 @@ export const useLazyLoading = (options?: {
   return { isVisible, ref, hasLoaded };
 };
 
-// Hook pour précharger les ressources critiques
 export const useResourcePreload = () => {
   const preloadResource = React.useCallback((href: string, as: string, type?: string) => {
     if (typeof document !== 'undefined') {
@@ -110,14 +103,11 @@ export const useResourcePreload = () => {
   };
 };
 
-// Compression et optimisation des données
 export const optimizeData = {
-  // Compression JSON
   compressJSON: (data: any): string => {
     return JSON.stringify(data, null, 0);
   },
 
-  // Décompression sécurisée
   parseJSON: <T = any>(jsonString: string): T | null => {
     try {
       return JSON.parse(jsonString);
@@ -126,7 +116,6 @@ export const optimizeData = {
     }
   },
 
-  // Debounce pour optimiser les appels
   debounce: <T extends (...args: any[]) => any>(
     func: T,
     wait: number
@@ -138,7 +127,6 @@ export const optimizeData = {
     };
   },
 
-  // Throttle pour limiter les appels
   throttle: <T extends (...args: any[]) => any>(
     func: T,
     limit: number
@@ -153,7 +141,6 @@ export const optimizeData = {
     };
   },
 
-  // Memoization simple
   memoize: <T extends (...args: any[]) => any>(func: T): T => {
     const cache = new Map();
     return ((...args: Parameters<T>): ReturnType<T> => {
@@ -168,12 +155,9 @@ export const optimizeData = {
   },
 };
 
-// Optimisations CSS-in-JS
 export const cssOptimizations = {
-  // Variables CSS dynamiques
   cssVar: (name: string, value: string) => ({ [`--${name}`]: value }),
 
-  // Media queries optimisées
   breakpoints: {
     sm: '640px',
     md: '768px',
@@ -182,7 +166,6 @@ export const cssOptimizations = {
     '2xl': '1536px',
   },
 
-  // Classes utilitaires communes
   commonClasses: {
     container: 'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8',
     flexCenter: 'flex items-center justify-center',
@@ -193,7 +176,6 @@ export const cssOptimizations = {
     focusVisible: 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
   },
 
-  // Animations optimisées
   animations: {
     fadeIn: 'animate-in fade-in duration-500',
     fadeOut: 'animate-out fade-out duration-300',
@@ -204,12 +186,10 @@ export const cssOptimizations = {
   },
 };
 
-// Hook pour optimiser les re-renders
 export const useOptimizedCallback = <T extends (...args: any[]) => any>(
   callback: T,
   deps: React.DependencyList
 ): T => {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   return useCallback(callback, deps);
 };
 
@@ -217,24 +197,20 @@ export const useOptimizedMemo = <T>(
   factory: () => T,
   deps: React.DependencyList
 ): T => {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   return useMemo(factory, deps);
 };
 
-// Service Worker registration
 export const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
     try {
       const registration = await navigator.serviceWorker.register('/sw.js');
       console.log('Service Worker registered:', registration);
       
-      // Vérifier les mises à jour
       registration.addEventListener('updatefound', () => {
         const newWorker = registration.installing;
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
             if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // Nouvelle version disponible
               if (confirm('Une nouvelle version est disponible. Recharger la page ?')) {
                 window.location.reload();
               }
@@ -250,9 +226,7 @@ export const registerServiceWorker = async () => {
   }
 };
 
-// Cache strategies
 export const cacheStrategies = {
-  // Cache First (pour les assets statiques)
   cacheFirst: async (request: Request): Promise<Response> => {
     const cache = await caches.open('static-cache-v1');
     const cached = await cache.match(request);
@@ -265,7 +239,6 @@ export const cacheStrategies = {
     return response;
   },
 
-  // Network First (pour les données dynamiques)
   networkFirst: async (request: Request): Promise<Response> => {
     const cache = await caches.open('dynamic-cache-v1');
     try {
@@ -281,7 +254,6 @@ export const cacheStrategies = {
     }
   },
 
-  // Stale While Revalidate (pour un équilibre performance/fraîcheur)
   staleWhileRevalidate: async (request: Request): Promise<Response> => {
     const cache = await caches.open('swr-cache-v1');
     const cached = await cache.match(request);

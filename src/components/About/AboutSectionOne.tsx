@@ -48,7 +48,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 lg:mb-0">
                 <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-                  À propos d'UnLeashLab
+                  À propos d'Unleash Lab
                 </span>
                 <h1 className="mb-6 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl">
                   Révéler le potentiel de{" "}
@@ -72,7 +72,7 @@ const AboutSectionOne = () => {
                 <div className="relative overflow-hidden rounded-2xl">
                   <Image
                     src="/images/about/about-top.png"
-                    alt="UnLeashLab - About"
+                    alt="Unleash Lab - About"
                     width={500}
                     height={600}
                     className="object-cover"

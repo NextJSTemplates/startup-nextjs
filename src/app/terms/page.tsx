@@ -38,7 +38,7 @@ const TermsPage = () => {
                         </div>
                       </section>
 
-                      <section id="licence" className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
+                      <section id="licence" className="p-4 rounded-lg bg-white dark:bg-zinc-800 border">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">2</div>
@@ -72,7 +72,7 @@ const TermsPage = () => {
                         </div>
                       </section>
 
-                      <section id="limitations" className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
+                      <section id="limitations" className="p-4 rounded-lg bg-white dark:bg-zinc-800 border">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">4</div>
@@ -96,7 +96,7 @@ const TermsPage = () => {
                         </div>
                       </section>
 
-                      <section id="liens" className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
+                      <section id="liens" className="p-4 rounded-lg bg-white dark:bg-zinc-800 border">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">6</div>
@@ -120,7 +120,7 @@ const TermsPage = () => {
                         </div>
                       </section>
 
-                      <section id="loi" className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
+                      <section id="loi" className="p-4 rounded-lg bg-white dark:bg-zinc-800 border">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">8</div>

@@ -1,11 +1,5 @@
-/**
- * Validation Schemas - Unleash Lab
- * Schémas de validation avec Zod pour tous les formulaires
- */
-
 import { z } from 'zod';
 
-// Schema pour le formulaire de contact
 export const contactFormSchema = z.object({
   firstName: z
     .string()
@@ -46,10 +40,8 @@ export const contactFormSchema = z.object({
 
 
 
-// Types TypeScript générés à partir des schemas
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 
-// Messages d'erreur personnalisés par langue
 export const getErrorMessages = (locale: 'fr' | 'en') => {
   const messages = {
     fr: {

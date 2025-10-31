@@ -8,7 +8,7 @@ const ServicesPage = () => {
   const { messages } = useLanguage();
 
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-gradient-to-br from-gray-50 to-white dark:from-zinc-900 dark:to-zinc-800 overflow-hidden">
       {/* Decorative background shapes (subtle) */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-[-80px] top-[-80px] h-[380px] w-[380px] rounded-full bg-primary/10 blur-3xl opacity-30 dark:opacity-10" />
@@ -18,11 +18,11 @@ const ServicesPage = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <header className="mb-16 text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black dark:text-white mb-6 leading-tight">
+          <header className="mb-16 text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-4 leading-tight">
               {messages.servicesPage.breadcrumb.title}
             </h1>
-            <p className="text-xl md:text-2xl text-body-color dark:text-gray-300 leading-relaxed font-light">
+            <p className="text-lg text-body-color dark:text-gray-300">
               {messages.servicesPage.breadcrumb.description}
             </p>
           </header>

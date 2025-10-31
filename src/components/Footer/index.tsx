@@ -31,10 +31,9 @@ const Footer = () => {
   }));
 
   return (
-    <footer className="relative z-10 border-t border-primary/40 bg-primary/30 pt-16 dark:border-gray-700 dark:bg-gray-900 md:pt-20 lg:pt-24">
+    <footer className="relative z-10 border-t border-primary/40 bg-primary/30 pt-16 dark:border-transparent dark:bg-zinc-900 md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            {/* Company Info */}
             <div className="w-full px-4 md:w-1/2 lg:w-5/12">
               <div className="mb-12 max-w-[400px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
@@ -50,34 +49,44 @@ const Footer = () => {
                   {messages.footer.description}
                 </p>
                 
-                {/* Contact Info */}
                 <div className="mb-6 space-y-3">
                   <div className="flex items-center space-x-3">
                     <svg className="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href={`mailto:${messages.footer.support.email}`} className="text-body-color hover:text-primary transition-colors dark:text-gray-300">
+                    <a href={`mailto:${messages.footer.support.email}`} className="text-body-color hover:text-primary transition-colors dark:text-white dark:hover:text-black">
                       {messages.footer.support.email}
                     </a>
                   </div>
-                  {/* phone removed per request */}
+                  <div className="flex items-center space-x-3">
+                    <svg className="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <a href="tel:+41784744219" className="text-body-color hover:text-primary transition-colors dark:text-white dark:hover:text-black">
+                      +41 78 474 42 19
+                    </a>
+                  </div>
                   <div className="flex items-start space-x-3">
                     <svg className="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <address className="not-italic text-body-color dark:text-gray-300">
+                    <a 
+                      href="https://maps.google.com/?q=1+Rue+Gustave-Moynier,+1202+Genève,+Suisse"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="not-italic text-body-color hover:text-primary transition-colors dark:text-gray-300"
+                    >
                       {messages.footer.address.full.split("\n").map((line: string, i: number) => (
                         <span key={i}>
                           {line}
                           <br />
                         </span>
                       ))}
-                    </address>
+                    </a>
                   </div>
                 </div>
 
-                {/* Social Links */}
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
                     <a
@@ -95,7 +104,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div className="w-full px-4 sm:w-1/2 md:w-1/4 lg:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h3 className="mb-8 text-lg font-bold text-black dark:text-white">
@@ -116,7 +124,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Services */}
             <div className="w-full px-4 sm:w-1/2 md:w-1/4 lg:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h3 className="mb-8 text-lg font-bold text-black dark:text-white">
@@ -137,14 +144,12 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Legal & Support */}
             <div className="w-full px-4 md:w-1/2 lg:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h3 className="mb-8 text-lg font-bold text-black dark:text-white">
                   {messages.footer.support.title} &nbsp;•&nbsp; {messages.footer.legal.title}
                 </h3>
                 <ul className="space-y-3">
-                  {/* Centre d'aide removed per request */}
                   <li>
                     <Link
                       href="/terms"
@@ -161,7 +166,6 @@ const Footer = () => {
                       {messages.footer.legal.privacy}
                     </Link>
                   </li>
-                  {/* Gestion des cookies removed per request */}
                 </ul>
 
 
@@ -169,7 +173,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Bottom Bar */}
           <div className="border-t border-gray-200 py-8 dark:border-gray-700">
             <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
               <p className="text-sm text-body-color dark:text-gray-400">
@@ -182,7 +185,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Background Pattern (avoid blocking pointer events) */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent pointer-events-none"></div>
         </div>

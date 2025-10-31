@@ -3,6 +3,9 @@
     "home": "Accueil",
     "about": "À propos",
     "services": "Services",
+    "businessITAdvisory": "Business IT Advisory",
+    "recruitment": "Recrutement de Business Analysts",
+    "proPulse": "Pro Pulse",
     "contact": "Contact"
   },
 
@@ -25,19 +28,19 @@
   "features": {
     "understand": {
       "title": "Vous comprendre",
-      "paragraph": "Nous prenons le temps de découvrir qui vous êtes, de saisir vos problématiques telles que vous les vivez au quotidien, et de cerner précisément vos besoins, votre vision et votre ressenti."
+      "paragraph": "Nous prenons le temps de découvrir qui vous êtes, de saisir vos problématiques telles que vous les vivez au quotidien, et de cerner précisément vos besoins, votre vision et votre ressenti. Cette phase d'écoute active nous permet d'établir une base solide pour notre collaboration."
     },
     "explore": {
       "title": "Explorer le champ des possibles",
-      "paragraph": "Après avoir appréhendé votre réalité personnelle et professionnelle, nous explorons ensemble toutes les options et pistes possibles — « Rien n'est impossible, tout est permis »."
+      "paragraph": "Après avoir appréhendé votre réalité personnelle et professionnelle, nous explorons ensemble toutes les options et pistes possibles — « Rien n'est impossible, tout est permis ». Cette approche créative libère votre potentiel et révèle des solutions innovantes adaptées à votre contexte unique."
     },
     "implement": {
       "title": "Mise en œuvre concrète",
-      "paragraph": "Nous définissons et déployons ensemble les actions et solutions retenues. Nous vous accompagnons tout au long du processus pour vous aider à surmonter les éventuelles difficultés."
+      "paragraph": "Nous définissons et déployons ensemble les actions et solutions retenues. Nous vous accompagnons tout au long du processus pour vous aider à surmonter les éventuelles difficultés. Notre méthodologie pragmatique garantit des résultats mesurables et durables."
     },
     "prepare": {
       "title": "Préparer le changement",
-      "paragraph": "Nous anticipons l'avenir en préparant activement votre adaptation au changement. Nous vous dotons des outils nécessaires et renforçons votre confiance."
+      "paragraph": "Nous anticipons l'avenir en préparant activement votre adaptation au changement. Nous vous dotons des outils nécessaires et renforçons votre confiance. Cette démarche proactive vous assure une transition sereine et une montée en compétence progressive."
     }
   },
 
@@ -50,18 +53,18 @@
 
     "testimonialsSection": {
     "title": "Ils nous font confiance",
-    "paragraph": "Découvrez comment UnLeashLab accompagne ses clients dans leurs défis stratégiques, technologiques et humains."
+    "paragraph": "Découvrez comment Unleash Lab accompagne ses clients dans leurs défis stratégiques, technologiques et humains."
   },
   "testimonials": [
     {
       "name": "John Doe",
       "designation": "Directrice Transformation Digitale @TechCorp",
-      "content": "UnLeashLab nous a permis d’aligner notre stratégie IT sur nos objectifs business. Leur expertise en Business Analysis a été un véritable accélérateur pour notre transformation."
+      "content": "Unleash Lab nous a permis d'aligner notre stratégie IT sur nos objectifs business. Leur expertise en Business Analysis a été un véritable accélérateur pour notre transformation."
     },
     {
       "name": "Marc Lefebvre",
       "designation": "Responsable RH @Innova",
-      "content": "Grâce à l’accompagnement d’UnLeashLab, nous avons recruté les bons Business Analysts en un temps record. Leur méthodologie a fait la différence."
+      "content": "Grâce à l'accompagnement d'Unleash Lab, nous avons recruté les bons Business Analysts en un temps record. Leur méthodologie a fait la différence."
     },
     {
       "name": "Stephane Martin",
@@ -106,7 +109,7 @@
 
   "about2": {
     "missionTitle": "Une mission claire",
-    "missionText": "UnleashLab a été fondé avec la volonté profonde d’aider les individus et les organisations à dépasser leurs défis quotidiens grâce à une combinaison unique de Business Analysis, psychologie et stratégie.",
+    "missionText": "Unleash Lab a été fondé avec la volonté profonde d'aider les individus et les organisations à dépasser leurs défis quotidiens grâce à une combinaison unique de Business Analysis, psychologie et stratégie.",
     "expertiseTitle": "Une expertise éprouvée",
     "expertiseText": "Forts de plus de 15 ans d’expérience en consulting Business et IT, nous mettons notre savoir-faire au service de vos besoins avec rigueur, professionnalisme et bienveillance.",
     "humanTitle": "Une approche humaine",
@@ -139,7 +142,7 @@
   },
 
   "footer": {
-  "description": "UnLeashLab accompagne les entreprises et les individus dans leurs projets stratégiques grâce à une expertise unique en Business Analysis et en innovation durable.",
+  "description": "Unleash Lab accompagne les entreprises et les individus dans leurs projets stratégiques grâce à une expertise unique en Business Analysis et en innovation durable.",
   "navigation": {
     "title": "Navigation",
     "services": "Services",
@@ -172,14 +175,14 @@
     "servicesPage": {
     "breadcrumb": {
       "title": "Nos Services",
-      "description": "UnleashLab vous accompagne avec des solutions sur mesure : conseil en Business IT, recrutement ciblé et soutien dédié aux Business Analysts."
+      "description": "Unleash Lab vous accompagne avec des solutions sur mesure : conseil en Business IT, recrutement ciblé et soutien dédié aux Business Analysts."
     }
   },
 
   "aboutPage": {
     "breadcrumb": {
       "title": "À propos",
-      "description": "UnleashLab révèle le potentiel des individus et organisations grâce à une approche unique alliant Business Analysis, psychologie et stratégie innovante."
+      "description": "Unleash Lab révèle le potentiel des individus et organisations grâce à une approche unique alliant Business Analysis, psychologie et stratégie innovante."
     }
   },
 

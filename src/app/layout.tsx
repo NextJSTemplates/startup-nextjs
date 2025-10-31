@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Providers>
             <LanguageProvider>
               <Header />
-              <main className="min-h-screen pb-16 md:pb-20 lg:pb-24">
+              <main className="min-h-screen">
                 {children}
               </main>
               <Footer />

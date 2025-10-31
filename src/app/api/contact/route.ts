@@ -13,21 +13,17 @@ export async function POST(req: Request) {
   try {
     const body: RequestBody = await req.json();
 
-    // Basic validation
     if (!body?.email || !body?.message || !body?.lastName) {
       return NextResponse.json({ error: 'Données incomplètes' }, { status: 400 });
     }
 
-    // SMTP config via env vars
     const SMTP_HOST = process.env.SMTP_HOST;
     const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
     const SMTP_USER = process.env.SMTP_USER;
     const SMTP_PASS = process.env.SMTP_PASS;
 
-    // Recipient fallback
     const RECIPIENT = process.env.CONTACT_RECIPIENT || 'anaskadar01@gmail.com';
 
-    // Create transporter: prefer real SMTP from env, otherwise fall back to Ethereal (free test account)
     let transporter;
     let usingEthereal = false;
 
@@ -35,14 +31,13 @@ export async function POST(req: Request) {
       transporter = nodemailer.createTransport({
         host: SMTP_HOST,
         port: SMTP_PORT,
-        secure: SMTP_PORT === 465, // true for 465, false for other ports
+        secure: SMTP_PORT === 465, 
         auth: {
           user: SMTP_USER,
           pass: SMTP_PASS,
         },
       });
     } else {
-      // No SMTP provided — create a free Ethereal account for testing
       usingEthereal = true;
       const testAccount = await nodemailer.createTestAccount();
       transporter = nodemailer.createTransport({
@@ -66,7 +61,6 @@ export async function POST(req: Request) {
       html: `<pre style="font-family:inherit;white-space:pre-wrap">${mailBody}</pre>`,
     });
 
-    // If using Ethereal (test account), return the preview URL so the developer can view the message
     if (usingEthereal) {
       const previewUrl = nodemailer.getTestMessageUrl(info) || null;
       return NextResponse.json({ ok: true, previewUrl });

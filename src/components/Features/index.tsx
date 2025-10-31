@@ -8,7 +8,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="relative py-16 md:py-20 lg:py-28 overflow-hidden bg-white dark:bg-gray-dark"
+      className="relative py-16 md:py-20 lg:py-28 overflow-hidden bg-white dark:bg-black"
     >
       <div className="absolute inset-0 z-0 opacity-30 dark:opacity-40 pointer-events-none">
         <svg

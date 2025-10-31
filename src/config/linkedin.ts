@@ -1,7 +1,3 @@
-/**
- * CONFIGURATION LINKEDIN API - VERSION SIMPLIFIÉE
- * APIs supportées : Sign In with LinkedIn (OpenID Connect) + Share on LinkedIn
- */
 
 export const LINKEDIN_CONFIG = {
   CLIENT_ID: process.env.LINKEDIN_CLIENT_ID || '',
@@ -15,7 +11,7 @@ export const LINKEDIN_CONFIG = {
   
   AUTHORIZATION_URL: 'https://www.linkedin.com/oauth/v2/authorization',
   TOKEN_URL: 'https://www.linkedin.com/oauth/v2/accessToken',
-  PROFILE_URL: 'https://api.linkedin.com/v2/userinfo'  // OpenID Connect
+  PROFILE_URL: 'https://api.linkedin.com/v2/userinfo'  
 };
 
 export interface LinkedInTokenResponse {
@@ -25,13 +21,13 @@ export interface LinkedInTokenResponse {
 }
 
 export interface LinkedInOpenIDProfile {
-  sub: string;           // ID LinkedIn
-  name: string;          // Nom complet
-  given_name: string;    // Prénom
-  family_name: string;   // Nom de famille
-  picture?: string;      // Photo de profil
-  email?: string;        // Email (si autorisé)
-  locale?: string;       // Langue/région
+  sub: string;           
+  name: string;          
+  given_name: string;    
+  family_name: string;   
+  picture?: string;      
+  email?: string;        
+  locale?: string;       
 }
 
 export function buildLinkedInAuthUrl(state?: string): string {

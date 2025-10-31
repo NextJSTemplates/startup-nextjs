@@ -1,11 +1,5 @@
-/**
- * SEO & Metadata Configuration - Unleash Lab
- * Configuration centralisée pour le SEO, metadata et Schema.org
- */
-
 import type { Metadata, Viewport } from 'next';
 
-// Configuration de base
 const SITE_CONFIG = {
   name: 'Unleash Lab',
   title: 'Unleash Lab - Expert en Business Analysis',
@@ -33,7 +27,7 @@ const SITE_CONFIG = {
   }
 };
 
-// Metadata par défaut
+
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: {
@@ -45,7 +39,6 @@ export const defaultMetadata: Metadata = {
   authors: SITE_CONFIG.authors,
   creator: SITE_CONFIG.creator,
   
-  // Open Graph
   openGraph: {
   type: 'website',
   locale: 'fr_FR',
@@ -65,7 +58,6 @@ export const defaultMetadata: Metadata = {
     ],
   },
   
-  // Twitter
   twitter: {
     card: 'summary_large_image',
     title: SITE_CONFIG.title,
@@ -74,7 +66,6 @@ export const defaultMetadata: Metadata = {
     creator: '@unleashlab',
   },
   
-  // Robots
   robots: {
     index: true,
     follow: true,
@@ -83,10 +74,8 @@ export const defaultMetadata: Metadata = {
     'max-snippet': -1,
   },
   
-  // Manifest
   manifest: '/manifest.json',
   
-  // Icons
   icons: {
     icon: '/favicon.ico',
     shortcut: '/images/favicon.png',
@@ -96,7 +85,6 @@ export const defaultMetadata: Metadata = {
     ],
   },
   
-  // Verification
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
     yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
@@ -105,7 +93,7 @@ export const defaultMetadata: Metadata = {
     },
   },
   
-  // Alternates
+
     alternates: {
     canonical: SITE_CONFIG.url,
     languages: {
@@ -114,16 +102,13 @@ export const defaultMetadata: Metadata = {
     },
   },
   
-  // Format detection
   formatDetection: {
     telephone: false,
   },
   
-  // Category
   category: 'business',
 };
 
-// Viewport configuration
 export const defaultViewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
@@ -135,7 +120,6 @@ export const defaultViewport: Viewport = {
   userScalable: true,
 };
 
-// Schema.org JSON-LD
 export const generateOrganizationSchema = () => {
   return {
     '@context': 'https://schema.org',
@@ -228,7 +212,6 @@ export const generateBreadcrumbSchema = (items: Array<{ name: string; url?: stri
   };
 };
 
-// Helper pour générer des metadata de page
 export const generatePageMetadata = (
   page: {
     title: string;

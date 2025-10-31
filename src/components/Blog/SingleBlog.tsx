@@ -16,7 +16,7 @@ const SingleBlog = ({ blog }: { blog: BlogWithQuote }) => {
   return (
     <Link
       href={`/blog-details/${(blog as any).id}`}
-      className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative flex h-full flex-col overflow-hidden"
+      className="group bg-white dark:bg-zinc-800 rounded-2xl shadow-lg border border-gray-100 dark:border-zinc-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative flex h-full flex-col overflow-hidden"
     >
       <div className="relative block aspect-video w-full">
         <Image src={image} alt={title} fill className="object-cover" />

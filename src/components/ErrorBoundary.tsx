@@ -25,7 +25,9 @@ class ErrorBoundaryClass extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('🚨 Error Boundary Caught:', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('🚨 Error Boundary Caught:', error, errorInfo);
+    }
     
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
@@ -47,7 +49,9 @@ class ErrorBoundaryClass extends Component<Props, State> {
       url: window.location.href,
     };
     
-    console.log('📊 Error logged:', errorReport);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 Error logged:', errorReport);
+    }
     // fetch('/api/log-error', { method: 'POST', body: JSON.stringify(errorReport) });
   };
 
@@ -124,7 +128,9 @@ export const useErrorHandler = () => {
   }, []);
   
   const handleError = React.useCallback((error: Error) => {
-    console.error('🚨 Error handled:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('🚨 Error handled:', error);
+    }
     setError(error);
   }, []);
   

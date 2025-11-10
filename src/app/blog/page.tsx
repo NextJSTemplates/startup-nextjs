@@ -7,6 +7,14 @@ import { useLanguage } from "@/context/LanguageContext";
 const ServicesPage = () => {
   const { messages } = useLanguage();
 
+  const formatText = (text: string) => {
+    let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    formatted = formatted.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    
+    return formatted;
+  };
+
   return (
     <section className="relative py-20 md:py-28 bg-gradient-to-br from-gray-50 to-white dark:from-zinc-900 dark:to-zinc-800 overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -20,9 +28,12 @@ const ServicesPage = () => {
             <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-4 leading-tight">
               {messages.servicesPage.breadcrumb.title}
             </h1>
-            <p className="text-xl text-body-color dark:text-gray-300">
-              {messages.servicesPage.breadcrumb.description}
-            </p>
+            <p 
+              className="text-xl text-primary dark:text-primary italic font-medium"
+              dangerouslySetInnerHTML={{
+                __html: formatText(messages.servicesPage.breadcrumb.description)
+              }}
+            />
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">

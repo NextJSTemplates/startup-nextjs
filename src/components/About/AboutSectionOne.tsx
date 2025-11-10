@@ -55,7 +55,7 @@ const AboutSectionOne = () => {
                   <span className="text-primary">{messages.aboutSectionOne.titleHighlight}</span>
                 </h1>
                 <p className="mb-8 text-lg leading-relaxed text-body-color">
-                  {messages.about.paragraph}
+                  {messages.about2.missionText}
                 </p>
                 <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <button className="rounded-md bg-primary px-8 py-3 text-base font-semibold text-white transition hover:bg-primary/90">

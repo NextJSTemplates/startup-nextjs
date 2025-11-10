@@ -21,11 +21,25 @@ const Brands = () => {
     if (!isAutoPlaying) return;
     
     const interval = setInterval(() => {
-      setCurrentGroup((prevGroup) => prevGroup === 0 ? 1 : 0);
-    }, 4000); // Change toutes les 4 secondes
+      setCurrentGroup(prev => {
+        const next = prev === 0 ? 1 : 0;
+        return next;
+      });
+    }, 3000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+    };
   }, [isAutoPlaying]);
+
+  // Force un premier changement après 3 secondes au montage
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentGroup(1);
+    }, 3000);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   const currentBrands = groups[currentGroup] || [];
   // Optimisation par logo pour un meilleur rendu
@@ -126,17 +140,22 @@ const Brands = () => {
               </div>
             </div>
 
-            {/* Indicateurs de pagination - EN DEHORS du conteneur */}
+            {/* Indicateurs de pagination fonctionnels */}
             <div className="flex justify-center space-x-3 mt-6">
               {groups.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none ${
                     currentGroup === index
                       ? "bg-primary scale-125"
                       : "bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-500"
                   }`}
-                  onClick={() => setCurrentGroup(index)}
+                  onClick={() => {
+                    setCurrentGroup(index);
+                    setIsAutoPlaying(false);
+                    // Reprendre l'auto-play après 8 secondes
+                    setTimeout(() => setIsAutoPlaying(true), 8000);
+                  }}
                 />
               ))}
             </div>

@@ -103,7 +103,7 @@
 
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Laissez-nous vos coordonnées et un message, nous reviendrons vers vous rapidement.",
+    "subtitle": "*Laissez-nous vos coordonnées et un message, nous reviendrons vers vous rapidement.*",
     "form": {
       "lastName": "Nom",
       "lastNamePlaceholder": "Votre nom",
@@ -175,14 +175,14 @@
   "contactPage": {
     "breadcrumb": {
       "title": "Contactez-nous",
-      "description": "Besoin d’un accompagnement en Business Analysis, IT Advisory ou recrutement de Business Analysts ? Laissez-nous un message, notre équipe reviendra vers vous rapidement."
+      "description": "*Besoin d'un accompagnement en Business Analysis, IT Advisory ou recrutement de Business Analysts ? Laissez-nous un message, notre équipe reviendra vers vous rapidement.*"
     }
   },
 
     "servicesPage": {
     "breadcrumb": {
       "title": "Nos Services",
-      "description": "Découvrez nos services spécialisés pour vous accompagner dans vos défis Business et IT."
+      "description": "*Découvrez nos services spécialisés pour vous accompagner dans vos défis Business et IT.*"
     }
   },
 
@@ -193,26 +193,15 @@
     }
   },
 
-  "profile": {
-    "linkedinImport": {
-      "title": "Import LinkedIn",
-      "description": "Importez automatiquement vos informations depuis votre profil LinkedIn (nom, prénom, titre professionnel).",
-      "button": "Importer depuis LinkedIn",
-      "importing": "Import en cours...",
-      "success": "Informations LinkedIn importées avec succès ! N'oubliez pas de sauvegarder.",
-      "errorNoUrl": "Veuillez d'abord renseigner votre URL LinkedIn",
-      "errorNetwork": "Erreur de réseau lors de l'import LinkedIn",
-      "note": "Assurez-vous que votre profil LinkedIn est public ou partageable pour permettre l'import des données."
-    }
-  },
+
 
   "aboutUs": {
     "title": "À Propos",
-    "subtitle": "Unleash Lab est né d'une observation simple devenue conviction.",
+    "subtitle": "<strong>Unleash Lab</strong> est né d'une observation simple devenue conviction.",
     "content": {
-      "paragraph1": "Dans la plupart des organisations, la complexité ne vient pas des outils, mais du manque de clarté, d'alignement et de vision partagée entre les équipes. Nous aidons les entreprises à retrouver de la lisibilité dans leurs projets, à reconnecter leurs besoins, leurs équipes et leurs systèmes.",
-      "paragraph2": "**Notre approche repose sur trois piliers :** l'analyse de la valeur, pour comprendre ce qui compte vraiment, la psychologie appliquée, pour fluidifier la collaboration, et l'accompagnement stratégique, pour transformer les idées en résultats concrets.",
-      "paragraph3": "Avec méthode, écoute et pragmatisme, nous accompagnons nos clients à chaque étape de leur transformation pour des livrables clairs, des décisions alignées et des résultats durables. Forts de plus de 15 ans d'expérience en consulting Business et IT, nous mettons notre expertise au service de vos priorités avec écoute, précision et exigence."
+      "paragraph1": "Dans la plupart des organisations, la complexité ne vient pas des outils, **mais du manque de clarté, d'alignement et de vision partagée entre les équipes.**<br><br>Nous aidons les entreprises à retrouver de la lisibilité dans leurs projets, à reconnecter leurs besoins, leurs équipes et leurs systèmes.",
+      "paragraph2": "**Notre approche repose sur trois piliers :**<br><br>• **L'analyse de la valeur**, pour comprendre ce qui compte vraiment.<br>• **La psychologie appliquée**, pour fluidifier la collaboration.<br>• **L'accompagnement stratégique**, pour transformer les idées en résultats concrets.",
+      "paragraph3": "Avec méthode, écoute et pragmatisme, nous accompagnons nos clients à chaque étape de leur transformation pour des **livrables clairs, des décisions alignées et des résultats durables.**<br><br>Forts de plus de 15 ans d'expérience en consulting Business et IT, nous mettons notre expertise au service de vos priorités avec **écoute, précision et exigence.**"
     },
     "buttons": {
       "services": "Découvrir nos services",
@@ -235,7 +224,7 @@
   },
 
   "proPulseVideo": {
-    "title": "Pro Pulse — Coaching & mentorat 60 min",
+    "title": "Pro Pulse — Coaching & Mentorat",
     "description": "Sessions de 60 minutes, réservables en ligne pour débloquer vos enjeux métier, prioriser les actions et repartir avec des solutions concrètes.",
     "button": "Découvrir"
   },
@@ -245,12 +234,7 @@
     "description": "Nous sommes fiers de collaborer avec des entreprises qui partagent notre vision de l'excellence et de l'innovation."
   },
 
-  "signin": {
-    "title": "Connectez-vous à votre compte",
-    "description": "Accédez à votre espace personnel sécurisé.",
-    "metaTitle": "Connexion | Unleash Lab",
-    "metaDescription": "Connectez-vous à votre compte"
-  },
+
 
   "common": {
     "discover": "Découvrir",

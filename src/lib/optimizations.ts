@@ -204,7 +204,6 @@ export const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
     try {
       const registration = await navigator.serviceWorker.register('/sw.js');
-      console.log('Service Worker registered:', registration);
       
       registration.addEventListener('updatefound', () => {
         const newWorker = registration.installing;
@@ -221,7 +220,7 @@ export const registerServiceWorker = async () => {
       
       return registration;
     } catch (error) {
-      console.error('Service Worker registration failed:', error);
+      // Silent fail in production
     }
   }
 };

@@ -10,13 +10,8 @@ const DYNAMIC_CACHE = 'dynamic-cache-v1';
 // Assets à mettre en cache immédiatement
 const STATIC_ASSETS = [
   '/',
-  '/about',
-  '/contact',
-  '/blog',
-  '/offline',
   '/manifest.json',
-  '/images/logo/logo.svg',
-  '/images/logo/favicon.png',
+  // Icons et assets statiques cachés
 ];
 
 // Installation du Service Worker

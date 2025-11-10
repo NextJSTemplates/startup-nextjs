@@ -8,7 +8,49 @@ const SimpleAbout: React.FC = () => {
   
   const formatText = (text: string) => {
     // Convertit **texte** en <strong>texte</strong>
-    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Convertit *texte* en <em>texte</em> pour l'italique
+    formatted = formatted.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    
+    // Convertit les listes à puces simples (• item) en HTML list
+    if (formatted.includes('•')) {
+      // Split par <br><br> pour séparer les paragraphes
+      const parts = formatted.split('<br><br>');
+      
+      formatted = parts.map(part => {
+        if (part.includes('•')) {
+          // C'est une liste à puces
+          const items = part.split('<br>').map(item => {
+            if (item.trim().startsWith('•')) {
+              return `<li>${item.replace('•', '').trim()}</li>`;
+            }
+            return item;
+          });
+          
+          // Trouve l'index du premier élément de liste
+          let listStartIndex = -1;
+          let nonListContent = '';
+          
+          for (let i = 0; i < items.length; i++) {
+            if (items[i].startsWith('<li>')) {
+              listStartIndex = i;
+              break;
+            } else {
+              nonListContent += (nonListContent ? '<br>' : '') + items[i];
+            }
+          }
+          
+          if (listStartIndex !== -1) {
+            const listItems = items.slice(listStartIndex).filter(item => item.startsWith('<li>'));
+            return nonListContent + '<ul class="list-none space-y-2 mt-4">' + listItems.join('') + '</ul>';
+          }
+        }
+        return part;
+      }).join('<br><br>');
+    }
+    
+    return formatted;
   };
 
   return (
@@ -26,9 +68,12 @@ const SimpleAbout: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-4 leading-tight">
               {messages.aboutUs.title}
             </h1>
-            <p className="text-lg text-body-color dark:text-gray-300">
-              {messages.aboutUs.subtitle}
-            </p>
+            <p 
+              className="text-lg text-primary dark:text-primary italic font-medium"
+              dangerouslySetInnerHTML={{
+                __html: formatText(messages.aboutUs.subtitle)
+              }}
+            />
           </header>
 
           {/* Content Grid */}
@@ -38,21 +83,21 @@ const SimpleAbout: React.FC = () => {
               <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 dark:border-zinc-700">
                 <div className="max-w-none">
                   <div 
-                    className="text-lg leading-relaxed text-body-color dark:text-gray-300 mb-5 text-justify"
+                    className="text-lg leading-relaxed text-body-color dark:text-gray-300 mb-5 text-justify prose prose-lg max-w-none"
                     dangerouslySetInnerHTML={{
                       __html: formatText(messages.aboutUs.content.paragraph1)
                     }}
                   />
                   
                   <div 
-                    className="text-lg leading-relaxed text-body-color dark:text-gray-300 mb-5 text-justify"
+                    className="text-lg leading-relaxed text-body-color dark:text-gray-300 mb-5 text-justify prose prose-lg max-w-none [&_ul]:pl-0 [&_li]:pl-6 [&_li]:relative [&_li:before]:content-['•'] [&_li:before]:absolute [&_li:before]:left-0 [&_li:before]:text-primary [&_li:before]:font-bold"
                     dangerouslySetInnerHTML={{
                       __html: formatText(messages.aboutUs.content.paragraph2)
                     }}
                   />
                   
                   <div 
-                    className="text-lg leading-relaxed text-body-color dark:text-gray-300 mb-6 text-justify"
+                    className="text-lg leading-relaxed text-body-color dark:text-gray-300 mb-6 text-justify prose prose-lg max-w-none"
                     dangerouslySetInnerHTML={{
                       __html: formatText(messages.aboutUs.content.paragraph3)
                     }}

@@ -118,6 +118,56 @@ const PhoneInput = () => {
 
 const Contact = () => {
   const { messages } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const formatText = (text: string) => {
+    // Convertit **texte** en <strong>texte</strong>
+    let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Convertit *texte* en <em>texte</em> pour l'italique
+    formatted = formatted.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    
+    return formatted;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      lastName: formData.get('lastName') as string,
+      firstName: formData.get('firstName') as string,
+      email: formData.get('email') as string,
+      company: formData.get('company') as string,
+      message: formData.get('message') as string,
+      phone: formData.get('phone') as string,
+      countryCode: formData.get('countryCode') as string,
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="relative py-20 md:py-28 bg-white dark:bg-black overflow-hidden">
@@ -132,9 +182,12 @@ const Contact = () => {
             <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-4 leading-tight">
               {messages.contact.title}
             </h1>
-            <p className="text-lg text-body-color dark:text-gray-300">
-              {messages.contact.subtitle}
-            </p>
+            <p 
+              className="text-lg text-primary dark:text-primary italic font-medium"
+              dangerouslySetInnerHTML={{
+                __html: formatText(messages.contact.subtitle)
+              }}
+            />
           </header>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
@@ -149,7 +202,7 @@ const Contact = () => {
                   </p>
                 </div>
                 
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label htmlFor="firstName" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.firstName}</label>
@@ -161,7 +214,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label htmlFor="email" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.email}</label>
-                      <input type="email" id="email" placeholder={messages.contact.form.emailPlaceholder} className="w-full rounded-lg border border-stroke bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-zinc-800 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary" />
+                      <input type="email" id="email" name="email" placeholder={messages.contact.form.emailPlaceholder} className="w-full rounded-lg border border-stroke bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-zinc-800 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary" />
                     </div>
                     <div>
                       <label htmlFor="phone" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.phone}</label>
@@ -177,13 +230,32 @@ const Contact = () => {
                     <textarea name="message" id="message" rows={6} placeholder={messages.contact.form.messagePlaceholder} className="w-full resize-none rounded-lg border border-stroke bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-zinc-800 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary"></textarea>
                   </div>
                   <div className="flex justify-start">
-                    <button type="submit" className="inline-flex items-center justify-center px-8 py-3 text-sm font-medium text-white bg-primary rounded-lg shadow-sm hover:bg-primary/90 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 min-w-[140px] group">
-                      <span>{messages.contact.form.submit}</span>
-                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
+                    <button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="inline-flex items-center justify-center px-8 py-3 text-sm font-medium text-white bg-primary rounded-lg shadow-sm hover:bg-primary/90 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 min-w-[140px] group disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <span>{isSubmitting ? 'Envoi...' : messages.contact.form.submit}</span>
+                      {!isSubmitting && (
+                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      )}
                     </button>
                   </div>
+
+                  {/* Messages de feedback */}
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                      <p className="text-green-800 text-sm">Message envoyé avec succès ! Nous vous recontacterons bientôt.</p>
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <p className="text-red-800 text-sm">Erreur lors de l'envoi. Veuillez réessayer.</p>
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

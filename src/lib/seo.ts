@@ -76,13 +76,9 @@ export const defaultMetadata: Metadata = {
   
   manifest: '/manifest.json',
   
+  // Icône vide transparente
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/images/favicon.png',
-    apple: [
-      { url: '/images/favicon.png' },
-      { url: '/images/favicon.png', sizes: '180x180' },
-    ],
+    icon: '/favicon.svg',
   },
   
   verification: {

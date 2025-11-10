@@ -22,7 +22,7 @@ const ErrorPage = () => {
                     height="210"
                     viewBox="0 0 474 210"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="http://www.w3.org/2000/svg"//www.w3.org/2000/svg"
                   >
                     <path
                       opacity="0.5"
@@ -164,7 +164,7 @@ const ErrorPage = () => {
             height="286"
             viewBox="0 0 406 286"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"//www.w3.org/2000/svg"
           >
             <g opacity="0.5">
               <rect
@@ -350,7 +350,7 @@ const ErrorPage = () => {
             height="286"
             viewBox="0 0 406 286"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"//www.w3.org/2000/svg"
           >
             <g opacity="0.5">
               <rect

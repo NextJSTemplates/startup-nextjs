@@ -1,81 +1,351 @@
-import NewsLatterBox from "./NewsLatterBox";
+"use client";
 
-const Contact = () => {
+import { useLanguage } from "@/context/LanguageContext";
+import { useState, useRef, useEffect } from "react";
+
+const countries = [
+  { code: "+41", nameKey: "switzerland" },
+  { code: "+33", nameKey: "france" },
+  { code: "+49", nameKey: "germany" },
+  { code: "+39", nameKey: "italy" },
+  { code: "+43", nameKey: "austria" },
+  { code: "+423", nameKey: "liechtenstein" },
+  { code: "+32", nameKey: "belgium" },
+  { code: "+352", nameKey: "luxembourg" },
+  { code: "+31", nameKey: "netherlands" },
+  { code: "+34", nameKey: "spain" },
+  { code: "+351", nameKey: "portugal" },
+  { code: "+44", nameKey: "unitedKingdom" },
+];
+
+const PhoneInput = () => {
+  const { messages } = useLanguage();
+  const [selectedCountry, setSelectedCountry] = useState(countries[0]); // Suisse par défaut
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const filteredCountries = countries.filter(country => {
+    const countryName = messages.countries[country.nameKey] || country.nameKey;
+    return countryName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+           country.code.includes(searchTerm);
+  });
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+        setSearchTerm("");
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div
-              className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
-              data-wow-delay=".15s
-              "
-            >
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Need Help? Open a Ticket
-              </h2>
-              <p className="mb-12 text-base font-medium text-body-color">
-                Our support team will get back to you ASAP via email.
-              </p>
-              <form>
-                <div className="-mx-4 flex flex-wrap">
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="name"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter your name"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Email
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="message"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Message
-                      </label>
-                      <textarea
-                        name="message"
-                        rows={5}
-                        placeholder="Enter your Message"
-                        className="border-stroke w-full resize-none rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <button className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Submit Ticket
-                    </button>
-                  </div>
+    <div className="w-full rounded-lg border border-stroke bg-transparent dark:border-transparent dark:bg-zinc-800 dark:shadow-two flex">
+      <div className="relative" ref={dropdownRef}>
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center justify-center px-4 py-3 text-base text-body-color outline-none focus:border-primary dark:text-body-color-dark transition-colors duration-200 hover:text-primary"
+        >
+          <span className="font-medium whitespace-nowrap">{selectedCountry.code}</span>
+          <svg 
+            className={`w-4 h-4 ml-2 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        {isOpen && (
+          <div className="absolute top-full left-0 w-72 mt-1 bg-white dark:bg-zinc-800 border border-stroke dark:border-zinc-600 rounded-lg shadow-xl z-50 max-h-64 overflow-hidden">
+            <div className="p-3 border-b border-stroke dark:border-gray-600">
+              <input
+                type="text"
+                placeholder={messages.contact.info.searchCountry}
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-3 py-2 text-sm bg-transparent border border-stroke dark:border-zinc-600 rounded-md outline-none focus:border-primary dark:text-body-color-dark"
+              />
+            </div>
+            <div className="max-h-48 overflow-y-auto">
+              {filteredCountries.map((country) => {
+                const countryName = messages.countries[country.nameKey] || country.nameKey;
+                return (
+                  <button
+                    key={country.code}
+                    type="button"
+                    onClick={() => {
+                      setSelectedCountry(country);
+                      setIsOpen(false);
+                      setSearchTerm("");
+                    }}
+                    className="flex items-center gap-3 w-full px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150"
+                  >
+                    <span className="font-medium text-body-color dark:text-body-color-dark">{country.code}</span>
+                    <span className="text-sm text-body-color/70 dark:text-body-color-dark/70">{countryName}</span>
+                  </button>
+                );
+              })}
+              {filteredCountries.length === 0 && (
+                <div className="px-4 py-3 text-sm text-body-color/70 dark:text-body-color-dark/70 text-center">
+                  {messages.contact.info.noCountryFound}
                 </div>
-              </form>
+              )}
             </div>
           </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
+        )}
+      </div>
+      
+      <div className="w-px bg-stroke dark:bg-zinc-600"></div>
+      
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        placeholder={messages.contact.form.phonePlaceholder}
+        className="flex-1 bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:text-body-color-dark" 
+      />
+      <input type="hidden" name="countryCode" value={selectedCountry.code} />
+    </div>
+  );
+};
+
+const Contact = () => {
+  const { messages } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const formatText = (text: string) => {
+    // Convertit **texte** en <strong>texte</strong>
+    let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Convertit *texte* en <em>texte</em> pour l'italique
+    formatted = formatted.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    
+    return formatted;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      lastName: formData.get('lastName') as string,
+      firstName: formData.get('firstName') as string,
+      email: formData.get('email') as string,
+      company: formData.get('company') as string,
+      message: formData.get('message') as string,
+      phone: formData.get('phone') as string,
+      countryCode: formData.get('countryCode') as string,
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section id="contact" className="relative py-20 md:py-28 bg-white dark:bg-black overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute left-[-80px] top-[-80px] h-[380px] w-[380px] rounded-full bg-primary/10 blur-3xl opacity-30 dark:opacity-10" />
+        <div className="absolute right-[-60px] bottom-[-60px] h-[320px] w-[320px] rounded-full bg-teal-200/10 blur-2xl opacity-25 dark:opacity-6" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <header className="mb-16 text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white mb-4 leading-tight">
+              {messages.contact.title}
+            </h1>
+            <p 
+              className="text-lg text-primary dark:text-primary italic font-medium"
+              dangerouslySetInnerHTML={{
+                __html: formatText(messages.contact.subtitle)
+              }}
+            />
+          </header>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="lg:col-span-2">
+              <div className="bg-white dark:bg-gray-dark rounded-2xl shadow-lg border border-stroke dark:border-strokedark p-6 lg:p-8">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-black dark:text-white mb-4">
+                    {messages.contact.info.formTitle}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {messages.contact.info.formDescription}
+                  </p>
+                </div>
+                
+                <form onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <label htmlFor="firstName" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.firstName}</label>
+                      <input type="text" id="firstName" name="firstName" placeholder={messages.contact.form.firstNamePlaceholder} className="w-full rounded-lg border border-stroke bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-zinc-800 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary" />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.lastName}</label>
+                      <input type="text" id="lastName" name="lastName" placeholder={messages.contact.form.lastNamePlaceholder} className="w-full rounded-lg border border-stroke bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-zinc-800 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary" />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.email}</label>
+                      <input type="email" id="email" name="email" placeholder={messages.contact.form.emailPlaceholder} className="w-full rounded-lg border border-stroke bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-zinc-800 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary" />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.phone}</label>
+                      <PhoneInput />
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <label htmlFor="company" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.company}</label>
+                    <input type="text" id="company" name="company" placeholder={messages.contact.form.companyPlaceholder} className="w-full rounded-lg border border-stroke bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-zinc-800 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary" />
+                  </div>
+                  <div className="mb-8">
+                    <label htmlFor="message" className="mb-3 block text-sm font-medium text-dark dark:text-white">{messages.contact.form.message}</label>
+                    <textarea name="message" id="message" rows={6} placeholder={messages.contact.form.messagePlaceholder} className="w-full resize-none rounded-lg border border-stroke bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-zinc-800 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary"></textarea>
+                  </div>
+                  <div className="flex justify-start">
+                    <button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="inline-flex items-center justify-center px-8 py-3 text-sm font-medium text-white bg-primary rounded-lg shadow-sm hover:bg-primary/90 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 min-w-[140px] group disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <span>{isSubmitting ? 'Envoi...' : messages.contact.form.submit}</span>
+                      {!isSubmitting && (
+                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Messages de feedback */}
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                      <p className="text-green-800 text-sm">Message envoyé avec succès ! Nous vous recontacterons bientôt.</p>
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <p className="text-red-800 text-sm">Erreur lors de l'envoi. Veuillez réessayer.</p>
+                    </div>
+                  )}
+                </form>
+              </div>
+            </div>
+
+            <div className="lg:col-span-1">
+              <div className="bg-white dark:bg-gray-dark rounded-2xl shadow-lg border border-stroke dark:border-strokedark p-6 lg:p-8 h-full">
+                <h3 className="text-2xl font-bold text-black dark:text-white mb-8">
+                  {messages.contact.info.title}
+                </h3>
+
+                <div className="space-y-8">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-black dark:text-white mb-2">
+                        {messages.contact.info.addressTitle}
+                      </h4>
+                      <a 
+                        href="https://maps.google.com/?q=1+Rue+Gustave-Moynier,+1202+Genève,+Suisse"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary leading-relaxed transition-colors cursor-pointer inline-block"
+                      >
+                        Unleash Lab Sàrl<br />
+                        1 Rue Gustave-Moynier<br />
+                        1202 Genève, Suisse
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.945a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-black dark:text-white mb-2">
+                        {messages.contact.info.emailTitle}
+                      </h4>
+                      <a href="mailto:contact@unleash-lab.tech" className="text-sm text-primary hover:text-primary/80 transition-colors duration-200 font-medium">
+                        contact@unleash-lab.tech
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-black dark:text-white mb-2">
+                        {messages.contact.info.phoneTitle}
+                      </h4>
+                      <a href="tel:+41784744219" className="text-sm text-primary hover:text-primary/80 transition-colors duration-200 font-medium">
+                        +41 78 474 42 19
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-black dark:text-white mb-2">
+                        {messages.contact.info.hoursTitle}
+                      </h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        {messages.contact.info.hoursText.split('\n').map((line, index) => (
+                          <span key={index}>
+                            {line}
+                            {index < messages.contact.info.hoursText.split('\n').length - 1 && <br />}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

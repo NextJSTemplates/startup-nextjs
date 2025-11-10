@@ -6,7 +6,6 @@ const PricingBox = (props: {
   children: React.ReactNode;
 }) => {
   const { price, duration, packageName, subtitle, children } = props;
-
   return (
     <div className="w-full">
       <div className="shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark relative z-10 rounded-xs bg-white px-8 py-10">
@@ -76,5 +75,4 @@ const PricingBox = (props: {
     </div>
   );
 };
-
 export default PricingBox;

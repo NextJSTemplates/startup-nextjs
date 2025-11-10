@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 const RelatedPost = ({
   image,
   slug,
@@ -33,5 +32,4 @@ const RelatedPost = ({
     </div>
   );
 };
-
 export default RelatedPost;

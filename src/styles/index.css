@@ -5,7 +5,37 @@ layer(base);
 
 @custom-variant dark (&:is(.dark *));
 
+.submenu,
+div.submenu,
+header .submenu,
+nav .submenu,
+.header .submenu {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid rgba(229, 231, 235, 0.5) !important;
+  z-index: 9999 !important;
+}
+
+html.dark .submenu,
+html.dark div.submenu,
+html.dark header .submenu,
+html.dark nav .submenu,
+html.dark .header .submenu,
+.dark .submenu,
+.dark div.submenu,
+.dark header .submenu,
+.dark nav .submenu,
+.dark .header .submenu {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  border: 1px solid rgba(75, 85, 99, 0.5) !important;
+}
+
+
 @theme {
+  /* Breakpoints */
   --breakpoint-*: initial;
   --breakpoint-xs: 450px;
   --breakpoint-sm: 575px;
@@ -14,21 +44,28 @@ layer(base);
   --breakpoint-xl: 1200px;
   --breakpoint-2xl: 1400px;
 
+  /* Core colors */
   --color-current: currentColor;
   --color-transparent: transparent;
-  --color-white: #ffffff;
-  --color-black: #121723;
-  --color-dark: #1d2430;
-  --color-primary: #4a6cf7;
-  --color-yellow: #fbb040;
-  --color-bg-color-dark: #171c28;
+  --color-white: #ffffff;       
+  --color-black: #000000;      
+  --color-dark: #1a1a1a;        
 
-  --color-body-color: #788293;
-  --color-body-color-dark: #959cb1;
+  /* Increased contrast primary (darker, more saturated) for better button visibility */
+  --color-primary: #1F6F5B;     /* darker green */
+  --color-primary-rgb: 31,111,91;
+  --color-accent: #e5e5e5;      
 
-  --color-stroke-stroke: #e3e8ef;
-  --color-stroke-dark: #353943;
+  /* Dark mode background / text */
+  --color-bg-color-dark: #0d1117;     
+  --color-body-color: #4b5563;        
+  --color-body-color-dark: #d1d5db;   
 
+  /* Strokes / borders */
+  --color-stroke-stroke: #e5e7eb;
+  --color-stroke-dark: #2d2d2d;
+
+  /* Neutral grays */
   --color-gray-50: #f9fafb;
   --color-gray-100: #f3f4f6;
   --color-gray-200: #e5e7eb;
@@ -39,24 +76,22 @@ layer(base);
   --color-gray-700: #374151;
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
-  --color-gray-950: #030712;
-  --color-gray-dark: #1e232e;
-  --color-gray-light: #f0f2f9;
+  --color-gray-dark: #1a1a1a;
+  --color-gray-light: #f7f7f7;
 
-  --shadow-sign-up: 0px 5px 10px rgba(4, 10, 34, 0.2);
-  --shadow-one: 0px 2px 3px rgba(7, 7, 77, 0.05);
-  --shadow-two: 0px 5px 10px rgba(6, 8, 15, 0.1);
-  --shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
-  --shadow-sticky: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-  --shadow-sticky-dark: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
-  --shadow-feature-2: 0px 10px 40px rgba(48, 86, 211, 0.12);
-  --shadow-submit: 0px 5px 20px rgba(4, 10, 34, 0.1);
-  --shadow-submit-dark: 0px 5px 20px rgba(4, 10, 34, 0.1);
-  --shadow-btn: 0px 1px 2px rgba(4, 10, 34, 0.15);
-  --shadow-btn-hover: 0px 1px 2px rgba(0, 0, 0, 0.15);
-  --shadow-btn-light: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  /* Shadows */
+  --shadow-sign-up: 0px 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-one: 0px 2px 3px rgba(0, 0, 0, 0.05);
+  --shadow-two: 0px 5px 10px rgba(0, 0, 0, 0.08);
+  --shadow-three: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  --shadow-sticky: inset 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+  --shadow-sticky-dark: inset 0 -1px 0 0 rgba(255, 255, 255, 0.08);
+  --shadow-feature-2: 0px 10px 40px rgba(0, 0, 0, 0.08);
+  --shadow-submit: 0px 5px 20px rgba(0, 0, 0, 0.08);
+  --shadow-btn: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  --shadow-btn-hover: 0px 2px 4px rgba(0, 0, 0, 0.16);
 
-  --drop-shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
+  --drop-shadow-three: 0px 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 @utility container {
@@ -64,14 +99,6 @@ layer(base);
   padding-inline: 1rem;
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -79,6 +106,49 @@ layer(base);
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  :root {
+    --submenu-bg: #ffffff;
+    --submenu-border: rgba(229, 231, 235, 0.5);
+    --header-bg: #ffffff;
+    --header-border: rgba(229, 231, 235, 1);
+  }
+
+  html.dark {
+    --submenu-bg: #18181b;
+    --submenu-border: rgba(39, 39, 42, 0.8);
+    --header-bg: #111827;
+    --header-border: rgba(75, 85, 99, 1);
+  }
+
+  .dark .submenu {
+    background-color: var(--color-bg-color-dark) !important;
+    border-color: rgba(39, 39, 42, 0.8) !important;
+  }
+
+  .header.mobile-menu-open {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(229, 231, 235, 1) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+
+
+  .dark .header.mobile-menu-open {
+    background-color: #111827 !important;
+    border-bottom: 1px solid rgba(75, 85, 99, 1) !important;
+  }
+
+  body.mobile-menu-open .header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(229, 231, 235, 1) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  body.mobile-menu-open.dark .header,
+  .dark body.mobile-menu-open .header {
+    background-color: #111827 !important;
+    border-bottom: 1px solid rgba(75, 85, 99, 1) !important;
   }
 }
 
@@ -125,6 +195,32 @@ layer(base);
 @layer base {
   body {
     font-family: "Inter", sans-serif;
+    color: var(--color-body-color);
+    background-color: var(--color-white);
+  }
+
+  .dark body {
+    color: var(--color-body-color-dark);
+    background-color: var(--color-bg-color-dark);
+  }
+
+  main {
+    background-color: var(--color-white);
+  }
+
+  .dark main {
+    background-color: var(--color-bg-color-dark);
+  }
+
+  .submenu {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--color-stroke-stroke) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  section:not([class*="bg-primary"]):not([class*="bg-gradient"]) {
+    background-color: inherit;
   }
 }
 
@@ -132,4 +228,105 @@ layer(base);
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
   }
+  
+  header,
+  #navbarCollapse,
+  #navbarCollapse *:not(.bg-primary),
+  nav,
+  nav *:not(.bg-primary),
+  ul,
+  li,
+  .desktop-nav-link,
+  .desktop-nav-link::before,
+  .desktop-nav-link::after {
+    background: inherit !important;
+    background-color: inherit !important;
+    background-image: none !important;
+    transition: none !important;
+  }
+  
+  .desktop-nav-link {
+    transition: color 0.15s ease-in-out !important;
+  }
+  
+
+  button.bg-primary,
+  a.bg-primary,
+  .bg-primary {
+    background-color: var(--color-primary) !important;
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important; 
+    transition: background-color 0.12s ease-in-out, box-shadow 0.12s ease-in-out !important;
+    box-shadow: var(--shadow-btn) !important;
+  }
+  
+  button.bg-primary:hover,
+  a.bg-primary:hover,
+  .bg-primary:hover {
+    background-color: rgba(var(--color-primary-rgb), 1) !important;
+    background: rgba(var(--color-primary-rgb), 1) !important;
+    box-shadow: var(--shadow-btn-hover) !important;
+    transform: translateY(-2px);
+  }
+  
+  #navbarCollapse ul li:hover,
+  #navbarCollapse ul li a:hover,
+  .desktop-nav-link:hover,
+  .desktop-nav-link:hover::before,
+  .desktop-nav-link:hover::after {
+    background-color: transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+  
+  #navbarCollapse ul li:focus,
+  #navbarCollapse ul li a:focus,
+  .desktop-nav-link:focus,
+  .desktop-nav-link:focus::before,
+  .desktop-nav-link:focus::after {
+    background-color: transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+  
+  #navbarCollapse ul li:active,
+  #navbarCollapse ul li a:active,
+  .desktop-nav-link:active,
+  .desktop-nav-link:active::before,
+  .desktop-nav-link:active::after {
+    background-color: transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
+}
+
+.testimonials-swiper {
+  padding-bottom: 3rem; 
+  position: relative; 
+}
+
+.testimonials-swiper .swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  margin-top: 1rem !important;
+  z-index: 20 !important;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  background: var(--color-primary) !important;
+  opacity: 0.95 !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 6px !important;
+  border-radius: 9999px !important;
+}
+
+.dark .testimonials-swiper .swiper-pagination-bullet {
+  background: var(--color-primary) !important;
+}
+
+.testimonials-swiper .swiper {
+  overflow: visible !important;
 }

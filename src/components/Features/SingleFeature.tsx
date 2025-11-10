@@ -1,20 +1,34 @@
+"use client";
+
 import { Feature } from "@/types/feature";
+import { useLanguage } from "@/context/LanguageContext";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, paragraph } = feature;
+  const { messages } = useLanguage();
+
+  const formatText = (text: string) => {
+    // Convertit **texte** en <strong>texte</strong>
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  };
+
   return (
-    <div className="w-full">
-      <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="bg-primary/10 text-primary mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md">
-          {icon}
+    <div className="group p-8 lg:p-10 bg-white dark:bg-dark rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 dark:border-gray-800 hover:border-primary/10 h-full flex flex-col">
+      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl border-2 border-primary bg-primary/10 text-primary group-hover:bg-primary/20 transition-all duration-200">
+        <div className="text-4xl">
+          {feature.icon}
         </div>
-        <h3 className="mb-5 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
-          {title}
-        </h3>
-        <p className="text-body-color pr-[10px] text-base leading-relaxed font-medium">
-          {paragraph}
-        </p>
       </div>
+
+      <h3 className="text-2xl font-bold text-black dark:text-white mb-5 leading-tight">
+        {messages.features[feature.id].title}
+      </h3>
+      
+      <div 
+        className="text-base text-gray-600 dark:text-gray-300 leading-relaxed flex-1 text-justify"
+        dangerouslySetInnerHTML={{
+          __html: formatText(messages.features[feature.id].paragraph)
+        }}
+      />
     </div>
   );
 };

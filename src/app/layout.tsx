@@ -1,37 +1,45 @@
-"use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
+import { Providers } from "./providers";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebSiteSchema();
 
+  return (
+    <html suppressHydrationWarning lang="fr">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-          <ScrollToTop />
-        </Providers>
+        <ErrorBoundary>
+          <Providers>
+            <LanguageProvider>
+              <Header />
+              <main className="min-h-screen">
+                {children}
+              </main>
+              <Footer />
+              <ScrollToTop />
+            </LanguageProvider>
+          </Providers>
+        </ErrorBoundary>
       </body>
     </html>
   );
 }
-
-import { Providers } from "./providers";
-

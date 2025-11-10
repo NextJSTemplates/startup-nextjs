@@ -1,0 +1,88 @@
+{
+  "name": "Unleash Lab - Expert en Business Analysis",
+  "short_name": "Unleash Lab",
+  "description": "Nous transformons la complexité en clarté et libérons le potentiel de votre entreprise grâce à une expertise unique en Business Analysis et innovation durable.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": ["business", "consulting", "productivity"],
+  "screenshots": [
+    {
+      "src": "/images/screenshots/mobile-1.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Interface mobile optimisée"
+    },
+    {
+      "src": "/images/screenshots/desktop-1.png", 
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Interface desktop complète"
+    }
+  ],
+  "icons": [],
+  "shortcuts": [
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Contactez Unleash Lab directement",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/images/icons/contact-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "short_name": "Services", 
+      "description": "Découvrez nos services",
+      "url": "/about",
+      "icons": [
+        {
+          "src": "/images/icons/services-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Blog",
+      "short_name": "Blog",
+      "description": "Lisez nos derniers articles",
+      "url": "/blog",
+      "icons": [
+        {
+          "src": "/images/icons/blog-96x96.png", 
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://unleash-lab.tech"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "mailto",
+      "url": "/contact?email=%s"
+    }
+  ]
+}

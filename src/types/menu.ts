@@ -1,7 +1,8 @@
+// types/menu.ts
 export type Menu = {
-  id: number;
-  title: string;
+  id: string;              
+  title?: string;         
   path?: string;
-  newTab: boolean;
+  newTab?: boolean;
   submenu?: Menu[];
 };

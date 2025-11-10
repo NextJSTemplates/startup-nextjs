@@ -28,19 +28,19 @@
   "features": {
     "understand": {
       "title": "Vous comprendre",
-      "paragraph": "Nous prenons le temps de découvrir qui vous êtes, de saisir vos problématiques telles que vous les vivez au quotidien, et de cerner précisément vos besoins, votre vision et votre ressenti. Cette phase d'écoute active nous permet d'établir une base solide pour notre collaboration."
+      "paragraph": "Nous prenons le temps de vous écouter, de comprendre votre environnement et d'identifier vos besoins réels tels que vous les vivez chaque jour. Notre objectif : saisir votre vision, vos enjeux et votre ressenti pour agir juste."
     },
     "explore": {
       "title": "Explorer le champ des possibles",
-      "paragraph": "Après avoir appréhendé votre réalité personnelle et professionnelle, nous explorons ensemble toutes les options et pistes possibles — « Rien n'est impossible, tout est permis ». Cette approche créative libère votre potentiel et révèle des solutions innovantes adaptées à votre contexte unique."
+      "paragraph": "Après avoir saisi votre réalité métier et humaine, nous explorons ensemble toutes les pistes et alternatives possibles. Chez Unleash Lab, **« rien n'est impossible, tout est permis »**."
     },
     "implement": {
       "title": "Mise en œuvre concrète",
-      "paragraph": "Nous définissons et déployons ensemble les actions et solutions retenues. Nous vous accompagnons tout au long du processus pour vous aider à surmonter les éventuelles difficultés. Notre méthodologie pragmatique garantit des résultats mesurables et durables."
+      "paragraph": "Nous définissons et déployons ensemble les solutions retenues. Chaque étape est cadrée, mesurable et orientée résultat. Nous restons présents pour fluidifier l'avancement et lever les obstacles."
     },
     "prepare": {
       "title": "Préparer le changement",
-      "paragraph": "Nous anticipons l'avenir en préparant activement votre adaptation au changement. Nous vous dotons des outils nécessaires et renforçons votre confiance. Cette démarche proactive vous assure une transition sereine et une montée en compétence progressive."
+      "paragraph": "Nous anticipons les transformations et accompagnons leur adoption. Notre rôle : vous donner les outils, les repères et la confiance nécessaires pour rendre le changement durable, naturel et maîtrisé."
     }
   },
 
@@ -92,21 +92,6 @@
 
 
 
-  "about": {
-    "title": "À Propos",
-    "paragraph": "Expert en Business Analysis et accompagnement humain, nous aidons les individus et les organisations à dépasser leurs défis quotidiens. Notre approche repose sur l’analyse de la valeur, la psychologie et l’accompagnement stratégique pour apporter des solutions innovantes, adaptées à chaque réalité.",
-    "list1": [
-      "+15 ans d’expérience Business & IT",
-      "Analyse de la valeur et stratégie",
-      "Approche humaine et bienveillante"
-    ],
-    "list2": [
-      "Solutions sur mesure",
-      "Innovation durable",
-      "Accompagnement collaboratif"
-    ]
-  },
-
   "about2": {
     "missionTitle": "Une mission claire",
     "missionText": "Unleash Lab a été fondé avec la volonté profonde d'aider les individus et les organisations à dépasser leurs défis quotidiens grâce à une combinaison unique de Business Analysis, psychologie et stratégie.",
@@ -135,10 +120,32 @@
       "submit": "Envoyer"
     },
     "info": {
-      "title": "Informations de Contact",
+      "title": "Informations de contact",
       "addressTitle": "Adresse",
-      "emailTitle": "Email"
+      "emailTitle": "Email",
+      "phoneTitle": "Téléphone",
+      "hoursTitle": "Horaires",
+      "hoursText": "Lun - Ven: 9h00 - 17h00\nSam - Dim: Fermé",
+      "formTitle": "Envoyez-nous un message",
+      "formDescription": "Décrivez-nous votre projet et nous vous recontacterons dans les plus brefs délais.",
+      "searchCountry": "Rechercher un pays...",
+      "noCountryFound": "Aucun pays trouvé"
     }
+  },
+
+  "countries": {
+    "switzerland": "Suisse",
+    "france": "France",
+    "germany": "Allemagne", 
+    "italy": "Italie",
+    "austria": "Autriche",
+    "liechtenstein": "Liechtenstein",
+    "belgium": "Belgique",
+    "luxembourg": "Luxembourg",
+    "netherlands": "Pays-Bas",
+    "spain": "Espagne",
+    "portugal": "Portugal",
+    "unitedKingdom": "Royaume-Uni"
   },
 
   "footer": {
@@ -175,7 +182,7 @@
     "servicesPage": {
     "breadcrumb": {
       "title": "Nos Services",
-      "description": "Unleash Lab vous accompagne avec des solutions sur mesure : conseil en Business IT, recrutement ciblé et soutien dédié aux Business Analysts."
+      "description": "Découvrez nos services spécialisés pour vous accompagner dans vos défis Business et IT."
     }
   },
 
@@ -201,11 +208,11 @@
 
   "aboutUs": {
     "title": "À Propos",
-    "subtitle": "Expert en Business Analysis et accompagnement humain, nous aidons les individus et les organisations à dépasser leurs défis quotidiens.",
+    "subtitle": "Unleash Lab est né d'une observation simple devenue conviction.",
     "content": {
-      "paragraph1": "Unleash Lab a été fondé avec la volonté profonde d'aider les individus et les organisations à dépasser leurs défis quotidiens. Spécialisés en analyse de la valeur, psychologie et accompagnement stratégique, nous proposons une approche innovante, centrée sur la compréhension fine des personnes et de leurs enjeux.",
-      "paragraph2": "Fort de plus de 15 ans d'expérience en consulting Business et IT, nous mettons notre savoir-faire au service de vos besoins avec bienveillance, professionnalisme et rigueur. Notre combinaison unique de compétences nous permet de vous offrir un accompagnement sur mesure parfaitement adapté à votre réalité.",
-      "paragraph3": "Notre équipe est convaincue qu'une écoute attentive, une compréhension profonde et une démarche collaborative sont essentielles pour révéler votre plein potentiel. Avec passion et engagement, nous vous aidons à avancer, à vous transformer et à atteindre durablement vos objectifs."
+      "paragraph1": "Dans la plupart des organisations, la complexité ne vient pas des outils, mais du manque de clarté, d'alignement et de vision partagée entre les équipes. Nous aidons les entreprises à retrouver de la lisibilité dans leurs projets, à reconnecter leurs besoins, leurs équipes et leurs systèmes.",
+      "paragraph2": "**Notre approche repose sur trois piliers :** l'analyse de la valeur, pour comprendre ce qui compte vraiment, la psychologie appliquée, pour fluidifier la collaboration, et l'accompagnement stratégique, pour transformer les idées en résultats concrets.",
+      "paragraph3": "Avec méthode, écoute et pragmatisme, nous accompagnons nos clients à chaque étape de leur transformation pour des livrables clairs, des décisions alignées et des résultats durables. Forts de plus de 15 ans d'expérience en consulting Business et IT, nous mettons notre expertise au service de vos priorités avec écoute, précision et exigence."
     },
     "buttons": {
       "services": "Découvrir nos services",
@@ -214,15 +221,15 @@
     "cards": {
       "promise": {
         "title": "Notre promesse",
-        "description": "Accompagnement humain, résultats mesurables et approche sur-mesure."
+        "description": "Des livrables utiles, exploitables et porteurs de valeur durable."
       },
       "experience": {
-        "title": "Expérience",
-        "description": "Plus de 15 ans d'expérience en consulting Business & IT."
+        "title": "Notre force",
+        "description": "Une combinaison unique de compétences : business analysis, support au recrutement et accompagnement humain."
       },
       "approach": {
-        "title": "Approche",
-        "description": "Analyse de la valeur, psychologie et stratégie intégrée."
+        "title": "Notre approche",
+        "description": "L'analyse de la valeur, la psychologie appliquée et l'accompagnement stratégique."
       }
     }
   },
@@ -231,6 +238,33 @@
     "title": "Pro Pulse — Coaching & mentorat 60 min",
     "description": "Sessions de 60 minutes, réservables en ligne pour débloquer vos enjeux métier, prioriser les actions et repartir avec des solutions concrètes.",
     "button": "Découvrir"
+  },
+
+  "brandsSection": {
+    "title": "Nos consultants ont travaillé pour",
+    "description": "Nous sommes fiers de collaborer avec des entreprises qui partagent notre vision de l'excellence et de l'innovation."
+  },
+
+  "signin": {
+    "title": "Connectez-vous à votre compte",
+    "description": "Accédez à votre espace personnel sécurisé.",
+    "metaTitle": "Connexion | Unleash Lab",
+    "metaDescription": "Connectez-vous à votre compte"
+  },
+
+  "common": {
+    "discover": "Découvrir",
+    "learnMore": "En savoir plus",
+    "readMore": "Lire la suite",
+    "seeMore": "Voir plus",
+    "discoverServices": "Découvrir nos services",
+    "ourTeam": "Notre équipe"
+  },
+
+  "aboutSectionOne": {
+    "tagline": "À propos d'Unleash Lab",
+    "title": "Révéler le potentiel de",
+    "titleHighlight": "chaque organisation"
   }
 }
 

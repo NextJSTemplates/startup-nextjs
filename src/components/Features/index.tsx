@@ -80,7 +80,7 @@ const Features = () => {
         <p className="max-w-3xl mx-auto text-center text-body-color dark:text-body-color-dark mb-12">
           {messages.featuresSection.intro}
         </p>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 sm:gap-8 lg:gap-10 xl:gap-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
           {featuresData.map((feature) => (
             <SingleFeature key={feature.id} feature={feature} />
           ))}

@@ -4,18 +4,18 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useState, useRef, useEffect } from "react";
 
 const countries = [
-  { code: "+41", name: "Suisse" },
-  { code: "+33", name: "France" },
-  { code: "+49", name: "Allemagne" },
-  { code: "+39", name: "Italie" },
-  { code: "+43", name: "Autriche" },
-  { code: "+423", name: "Liechtenstein" },
-  { code: "+32", name: "Belgique" },
-  { code: "+352", name: "Luxembourg" },
-  { code: "+31", name: "Pays-Bas" },
-  { code: "+34", name: "Espagne" },
-  { code: "+351", name: "Portugal" },
-  { code: "+44", name: "Royaume-Uni" },
+  { code: "+41", nameKey: "switzerland" },
+  { code: "+33", nameKey: "france" },
+  { code: "+49", nameKey: "germany" },
+  { code: "+39", nameKey: "italy" },
+  { code: "+43", nameKey: "austria" },
+  { code: "+423", nameKey: "liechtenstein" },
+  { code: "+32", nameKey: "belgium" },
+  { code: "+352", nameKey: "luxembourg" },
+  { code: "+31", nameKey: "netherlands" },
+  { code: "+34", nameKey: "spain" },
+  { code: "+351", nameKey: "portugal" },
+  { code: "+44", nameKey: "unitedKingdom" },
 ];
 
 const PhoneInput = () => {
@@ -25,10 +25,11 @@ const PhoneInput = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const filteredCountries = countries.filter(country =>
-    country.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    country.code.includes(searchTerm)
-  );
+  const filteredCountries = countries.filter(country => {
+    const countryName = messages.countries[country.nameKey] || country.nameKey;
+    return countryName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+           country.code.includes(searchTerm);
+  });
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -66,31 +67,34 @@ const PhoneInput = () => {
             <div className="p-3 border-b border-stroke dark:border-gray-600">
               <input
                 type="text"
-                placeholder="Rechercher un pays..."
+                placeholder={messages.contact.info.searchCountry}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-3 py-2 text-sm bg-transparent border border-stroke dark:border-zinc-600 rounded-md outline-none focus:border-primary dark:text-body-color-dark"
               />
             </div>
             <div className="max-h-48 overflow-y-auto">
-              {filteredCountries.map((country) => (
-                <button
-                  key={country.code}
-                  type="button"
-                  onClick={() => {
-                    setSelectedCountry(country);
-                    setIsOpen(false);
-                    setSearchTerm("");
-                  }}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150"
-                >
-                  <span className="font-medium text-body-color dark:text-body-color-dark">{country.code}</span>
-                  <span className="text-sm text-body-color/70 dark:text-body-color-dark/70">{country.name}</span>
-                </button>
-              ))}
+              {filteredCountries.map((country) => {
+                const countryName = messages.countries[country.nameKey] || country.nameKey;
+                return (
+                  <button
+                    key={country.code}
+                    type="button"
+                    onClick={() => {
+                      setSelectedCountry(country);
+                      setIsOpen(false);
+                      setSearchTerm("");
+                    }}
+                    className="flex items-center gap-3 w-full px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150"
+                  >
+                    <span className="font-medium text-body-color dark:text-body-color-dark">{country.code}</span>
+                    <span className="text-sm text-body-color/70 dark:text-body-color-dark/70">{countryName}</span>
+                  </button>
+                );
+              })}
               {filteredCountries.length === 0 && (
                 <div className="px-4 py-3 text-sm text-body-color/70 dark:text-body-color-dark/70 text-center">
-                  Aucun pays trouvé
+                  {messages.contact.info.noCountryFound}
                 </div>
               )}
             </div>
@@ -138,10 +142,10 @@ const Contact = () => {
               <div className="bg-white dark:bg-gray-dark rounded-2xl shadow-lg border border-stroke dark:border-strokedark p-6 lg:p-8">
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-black dark:text-white mb-4">
-                    Envoyez-nous un message
+                    {messages.contact.info.formTitle}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Décrivez-nous votre projet et nous vous recontacterons dans les plus brefs délais.
+                    {messages.contact.info.formDescription}
                   </p>
                 </div>
                 
@@ -187,7 +191,7 @@ const Contact = () => {
             <div className="lg:col-span-1">
               <div className="bg-white dark:bg-gray-dark rounded-2xl shadow-lg border border-stroke dark:border-strokedark p-6 lg:p-8 h-full">
                 <h3 className="text-2xl font-bold text-black dark:text-white mb-8">
-                  Informations de contact
+                  {messages.contact.info.title}
                 </h3>
 
                 <div className="space-y-8">
@@ -239,7 +243,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-black dark:text-white mb-2">
-                        Téléphone
+                        {messages.contact.info.phoneTitle}
                       </h4>
                       <a href="tel:+41784744219" className="text-sm text-primary hover:text-primary/80 transition-colors duration-200 font-medium">
                         +41 78 474 42 19
@@ -255,11 +259,15 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-black dark:text-white mb-2">
-                        Horaires
+                        {messages.contact.info.hoursTitle}
                       </h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                        Lun - Ven: 9h00 - 17h00<br />
-                        Sam - Dim: Fermé
+                        {messages.contact.info.hoursText.split('\n').map((line, index) => (
+                          <span key={index}>
+                            {line}
+                            {index < messages.contact.info.hoursText.split('\n').length - 1 && <br />}
+                          </span>
+                        ))}
                       </p>
                     </div>
                   </div>

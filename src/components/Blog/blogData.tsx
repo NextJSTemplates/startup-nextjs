@@ -6,18 +6,18 @@ const blogData: (Blog & { quote?: string })[] = [
     title_en: "Business IT Advisory",
     quote: "« Faites de la technologie un levier stratégique »",
     paragraph:
-      "Dans un monde où réussite rime avec agilité et innovation, Unleash Lab aligne votre stratégie technologique sur vos objectifs métier. Grâce à un accompagnement sur‑mesure, optimisez vos investissements IT, clarifiez vos décisions stratégiques et accélérez votre transformation numérique.",
+      "Le succès ne vient pas des outils, mais de la manière dont vous les reliez à vos processus et votre stratégie. Découvrez notre approche pour optimiser vos investissements IT...",
     paragraph_en:
-      "In a world where success demands agility and innovation, Unleash Lab aligns your technology strategy with your business objectives. With tailored support, optimize your IT investments, clarify strategic decisions and accelerate your digital transformation.",
+      "Success doesn't come from tools, but from how you connect them to your processes and strategy. At Unleash Lab, we help you transform your information system into a true engine of performance and clarity. Through tailored support, the goal is to optimize your IT investments, simplify your strategic decisions and sustainably accelerate your digital transformation.",
     content: [
-      "La technologie ne doit plus être un centre de coût, mais un levier de création de valeur. Nous commençons par un diagnostic pragmatique des priorités métier et des systèmes existants pour identifier les leviers d'impact rapide.",
-      "Puis nous co-construisons une feuille de route opérationnelle : priorisation des chantiers, arbitrages budgétaires et recommandations d'architecture adaptées à vos contraintes. L'objectif : transformer les choix technologiques en résultats mesurables.",
-      "Enfin, nous accompagnons la mise en œuvre avec gouvernance, pilotage et transfert de compétences pour garantir que vos investissements IT délivrent agilité, résilience et avantage concurrentiel durable."
+      "Le succès ne vient pas des outils, mais de la manière dont vous les reliez à vos processus et votre stratégie. Chez Unleash Lab, nous vous aidons à transformer votre système d'information en un véritable moteur de performance et de clarté.",
+      "Grâce à un accompagnement sur mesure, l'objectif est d'optimiser vos investissements IT, de simplifier vos décisions stratégiques et d'accélérer durablement votre transformation numérique.",
+      "Notre approche pragmatique commence par comprendre vos enjeux métier réels pour ensuite aligner technologie et stratégie, garantissant ainsi un retour sur investissement mesurable et durable."
     ],
     content_en: [
-      "Technology should no longer be a cost center but a lever for value creation. We start with a pragmatic diagnosis of business priorities and existing systems to identify quick-impact levers.",
-      "Then we co-create an operational roadmap: prioritizing initiatives, budget trade-offs and architecture recommendations tailored to your constraints. The goal: turn technology choices into measurable results.",
-      "Finally, we support implementation with governance, delivery oversight and skills transfer to ensure your IT investments deliver agility, resilience and sustainable competitive advantage."
+      "Success doesn't come from tools, but from how you connect them to your processes and strategy. At Unleash Lab, we help you transform your information system into a true engine of performance and clarity.",
+      "Through tailored support, the goal is to optimize your IT investments, simplify your strategic decisions and sustainably accelerate your digital transformation.",
+      "Our pragmatic approach starts by understanding your real business challenges and then aligning technology with strategy, ensuring measurable and sustainable return on investment."
     ],
     image: "/images/blog/ImageService1.jpg",
     author: {
@@ -32,20 +32,20 @@ const blogData: (Blog & { quote?: string })[] = [
     id: 2,
     title: "Recrutement de Business Analysts",
     title_en: "Business Analyst Recruitment",
-    quote: "« Recrutez efficacement les meilleurs Business Analysts »",
+    quote: "« Recrutez les Business Analysts qui feront la différence »",
     paragraph:
-      "Parce que peu d'entreprises comprennent réellement le rôle stratégique du Business Analyst, les méthodes classiques de recrutement peinent à détecter les meilleurs talents. Grâce à notre expertise unique, identifiez, évaluez et intégrez efficacement les profils capables de faire la différence.",
+      "Trop d'entreprises recrutent des profils techniques sans mesurer la dimension stratégique du rôle ni l'importance des softskills. Résultat : des projets qui avancent, sans atteindre leur plein potentiel. Découvrez comment identifier les profils qui feront vraiment la différence...",
     paragraph_en:
-      "Many companies still misunderstand the strategic role of the Business Analyst, and traditional hiring methods struggle to identify top talent. With our unique expertise, identify, evaluate and onboard profiles that truly make a difference.",
+      "Too many companies hire technical profiles without measuring the strategic dimension of the role or the importance of soft skills. Result: projects that move forward, without reaching their full potential because, due to the lack of critical analysis, communication and influence, the Business Analyst loses their strategic impact. At Unleash Lab, we help you identify, evaluate and integrate Business Analysts who will make a difference in your organization.",
     content: [
-      "Identifier un excellent Business Analyst demande plus qu'une grille de compétences : il faut mesurer sa capacité à traduire des enjeux métiers complexes en solutions concrètes. Nous commençons par définir avec vous le rôle attendu, les livrables et les critères de succès propres à votre organisation.",
-      "Ensuite, notre approche combine évaluations pratiques, études de cas sur-mesure et entretiens comportementaux pour révéler la finesse analytique, la clarté de communication et la capacité d'influence des candidats. Nous évaluons également l'adéquation culturelle pour garantir des intégrations pérennes.",
-      "Enfin, nous accompagnons l'intégration opérationnelle : onboarding structuré, premières missions cadrées et points de suivi réguliers pour mesurer la performance et accélérer la montée en compétence. Résultat : des recrutements plus pertinents, une productivité plus rapide et un impact business tangible.",
+      "Trop d'entreprises recrutent des profils techniques sans mesurer la dimension stratégique du rôle ni l'importance des softskills. Résultat : des projets qui avancent, sans atteindre leur plein potentiel car, en raison de l'absence d'analyse critique, de communication et d'influence, le Business Analyst perd son impact stratégique.",
+      "Chez Unleash Lab, nous vous aidons à identifier, évaluer et intégrer les Business Analysts qui feront la différence dans votre organisation.",
+      "Des profils qui comprennent autant le métier que la technique, mais qui ont surtout le bon mindset et les softskills en adéquation avec votre projet et/ou votre organisation."
     ],
     content_en: [
-      "Identifying a great Business Analyst requires more than a checklist: you must assess their ability to translate complex business issues into concrete solutions. We start by defining the expected role, deliverables and success criteria tailored to your organization.",
-      "Our approach combines practical assessments, custom case studies and behavioural interviews to reveal analytical depth, clarity of communication and influencing skills. We also evaluate cultural fit to ensure sustainable hires.",
-      "Finally, we support operational onboarding: structured onboarding, initial mission framing and regular checkpoints to measure performance and accelerate ramp-up. The result: more relevant hires, faster productivity and measurable business impact."
+      "Too many companies hire technical profiles without measuring the strategic dimension of the role or the importance of soft skills. Result: projects that move forward, without reaching their full potential because, due to the lack of critical analysis, communication and influence, the Business Analyst loses their strategic impact.",
+      "At Unleash Lab, we help you identify, evaluate and integrate Business Analysts who will make a difference in your organization.",
+      "Profiles who understand both business and technology, but above all have the right mindset and soft skills that match your project and/or organization."
     ],
     image: "/images/blog/ImageService2.jpg",
     author: {
@@ -60,20 +60,20 @@ const blogData: (Blog & { quote?: string })[] = [
     id: 3,
     title: "Pro Pulse",
     title_en: "Pro Pulse",
-    quote: "« Un accompagnement dédié aux Business Analysts »",
+    quote: "« Un accompagnement pour clarifier, décider et agir face aux situations complexes »",
     paragraph:
-      "Un service unique de coaching et de mentorat pensé pour redonner confiance, équilibre et performance aux Business Analysts.",
+      "Chaque métier est exigeant. Pression sur les résultats, complexité relationnelle, enjeux multiples. Parce que chacun, à un moment ou à un autre, peut se retrouver face à des situations complexes qui demandent clarté et sérénité...",
     paragraph_en:
-      "A unique coaching and mentoring service designed to restore confidence, balance and performance to Business Analysts.",
+      "Every profession is demanding. Pressure for results, relational complexity, multiple stakes... Because everyone, at some point, can face situations where it becomes difficult to see clearly, convince, decide, manage a relationship... That's why we created Pro Pulse: confidential, personalized and caring support, designed to bring clarity, help make the right decisions and regain confidence and serenity in action.",
     content: [
-      "Pro Pulse propose des sessions courtes, ciblées et actionnables : 60 minutes pour travailler sur une problématique métier précise, une difficulté relationnelle, ou une question de pratique professionnelle.",
-      "Chaque session est préparée : vous partagez votre contexte en amont, nous ciblons les leviers, et nous repartons avec un plan d’actions concret. Nos coachs et mentors sont des professionnels expérimentés qui combinent expertise BA et posture pédagogique.",
-      "Les bénéfices constatés : meilleures priorisations, réduction du stress lié aux décisions, montée en compétence accélérée et capacité à produire des livrables à forte valeur ajoutée. Réservez à la demande et bénéficiez d’un suivi adapté si vous optez pour un accompagnement sur plusieurs sessions.",
+      "Chaque métier est exigeant. Pression sur les résultats, complexité relationnelle, enjeux multiples. Parce que chacun, à un moment ou à un autre, peut se retrouver face à des situations où il devient difficile d'y voir clair, convaincre, trancher, gérer une relation.",
+      "C'est pour cela que nous avons créé Pro Pulse : un accompagnement confidentiel, personnalisé et bienveillant, conçu pour apporter de la clarté, aider à prendre les bonnes décisions et retrouver confiance et sérénité dans l'action.",
+      "Pro Pulse, c'est l'espace où l'on prend enfin soin de ceux qui accompagnent le changement."
     ],
     content_en: [
-      "Pro Pulse offers short, focused and actionable sessions: 60 minutes to work on a specific business problem, a relational difficulty, or a professional practice question.",
-      "Each session is prepared: you share your context in advance, we target levers, and we leave with a concrete action plan. Our coaches and mentors are experienced professionals who combine BA expertise with a pedagogical approach.",
-      "Observed benefits: better prioritization, reduced decision-related stress, accelerated skill development and the ability to deliver high-value outputs. Book on demand and opt for continued support across multiple sessions if desired."
+      "Every profession is demanding. Pressure for results, relational complexity, multiple stakes... Because everyone, at some point, can face situations where it becomes difficult to see clearly, convince, decide, manage a relationship...",
+      "That's why we created Pro Pulse: confidential, personalized and caring support, designed to bring clarity, help make the right decisions and regain confidence and serenity in action.",
+      "Pro Pulse is the space where we finally take care of those who support change."
     ],
     image: "/images/blog/ImageService3.jpg",
     author: {

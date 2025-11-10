@@ -1,7 +1,33 @@
+"use client";
+
 import { Brand } from "@/types/brand";
 import Image from "next/image";
 import brandsData from "./brandsData";
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+
 const Brands = () => {
+  const { messages } = useLanguage();
+  const [currentGroup, setCurrentGroup] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Créer 2 groupes fixes dans l'ordre demandé
+  const group1 = brandsData.filter(brand => [1, 2, 3, 4].includes(brand.id)); // Globaz, Procimmo, TCS, UCI
+  const group2 = brandsData.filter(brand => [5, 6, 7, 8].includes(brand.id)); // Roche, Jaeger, Mirabaud, UNHCR
+  const groups = [group1, group2];
+
+  // Auto-défilement entre les 2 groupes
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentGroup((prevGroup) => prevGroup === 0 ? 1 : 0);
+    }, 4000); // Change toutes les 4 secondes
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
+
+  const currentBrands = groups[currentGroup] || [];
   // Optimisation par logo pour un meilleur rendu
   const getLogoConfig = (brandId: number) => {
     switch (brandId) {
@@ -33,25 +59,29 @@ const Brands = () => {
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-[570px] text-center lg:mb-20">
               <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
-                Nos consultants ont travaillé pour
+                {messages.brandsSection.title}
               </h2>
               <p className="text-base !leading-relaxed text-body-color md:text-lg">
-                Nous sommes fiers de collaborer avec des entreprises qui partagent notre vision de l'excellence et de l'innovation.
+                {messages.brandsSection.description}
               </p>
             </div>
           </div>
         </div>
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="overflow-hidden rounded-xl bg-white border border-gray-200/30 dark:bg-zinc-800 dark:border-zinc-700/50 shadow-[0_0_15px_rgba(0,0,0,0.06),0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_0_20px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300">
+            <div 
+              className="overflow-hidden rounded-xl bg-white border border-gray-200/30 dark:bg-zinc-800 dark:border-zinc-700/50 shadow-[0_0_15px_rgba(0,0,0,0.06),0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_0_20px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+              onMouseEnter={() => setIsAutoPlaying(false)}
+              onMouseLeave={() => setIsAutoPlaying(true)}
+            >
               <div className="grid grid-cols-2 gap-0 md:grid-cols-4">
-                {brandsData.map((brand) => {
+                {currentBrands.map((brand) => {
                   const logoClasses = getLogoConfig(brand.id);
                   const logoSrc = brand.image;
                   
                   return (
                     <div 
-                      key={brand.id} 
+                      key={`group-${currentGroup}-brand-${brand.id}`} 
                       className="group relative flex h-56 items-center justify-center border-r border-b border-gray-100 p-1 transition-all duration-300 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-zinc-700 last:border-r-0 md:last:border-r [&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r [&:nth-child(4n)]:md:border-r-0 [&:nth-last-child(-n+4)]:border-b-0 md:[&:nth-last-child(-n+4)]:border-b [&:nth-last-child(-n+2)]:border-b-0"
                     >
                       {/* Logo Image - caché en mode sombre */}
@@ -94,6 +124,21 @@ const Brands = () => {
                   );
                 })}
               </div>
+            </div>
+
+            {/* Indicateurs de pagination - EN DEHORS du conteneur */}
+            <div className="flex justify-center space-x-3 mt-6">
+              {groups.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentGroup === index
+                      ? "bg-primary scale-125"
+                      : "bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-500"
+                  }`}
+                  onClick={() => setCurrentGroup(index)}
+                />
+              ))}
             </div>
           </div>
         </div>

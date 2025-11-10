@@ -137,8 +137,30 @@
     "info": {
       "title": "Contact Information",
       "addressTitle": "Address",
-      "emailTitle": "Email"
+      "emailTitle": "Email",
+      "phoneTitle": "Phone",
+      "hoursTitle": "Business Hours",
+      "hoursText": "Mon - Fri: 9:00 AM - 5:00 PM\nSat - Sun: Closed",
+      "formTitle": "Send us a message",
+      "formDescription": "Describe your project and we will contact you back as soon as possible.",
+      "searchCountry": "Search for a country...",
+      "noCountryFound": "No country found"
     }
+  },
+
+  "countries": {
+    "switzerland": "Switzerland",
+    "france": "France", 
+    "germany": "Germany",
+    "italy": "Italy",
+    "austria": "Austria",
+    "liechtenstein": "Liechtenstein",
+    "belgium": "Belgium",
+    "luxembourg": "Luxembourg",
+    "netherlands": "Netherlands",
+    "spain": "Spain",
+    "portugal": "Portugal",
+    "unitedKingdom": "United Kingdom"
   },
 
   "footer": {
@@ -231,5 +253,32 @@
     "title": "Pro Pulse — 60 min Coaching & Mentoring",
     "description": "60-minute sessions, bookable online to unlock your business challenges, prioritize actions and leave with concrete solutions.",
     "button": "Discover"
+  },
+
+  "brandsSection": {
+    "title": "Our consultants have worked for",
+    "description": "We are proud to collaborate with companies that share our vision of excellence and innovation."
+  },
+
+  "signin": {
+    "title": "Sign in to your account",
+    "description": "Access your secure personal space.",
+    "metaTitle": "Sign In | Unleash Lab",
+    "metaDescription": "Sign in to your account"
+  },
+
+  "common": {
+    "discover": "Discover",
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "seeMore": "See More",
+    "discoverServices": "Discover our services",
+    "ourTeam": "Our Team"
+  },
+
+  "aboutSectionOne": {
+    "tagline": "About Unleash Lab",
+    "title": "Reveal the potential of",
+    "titleHighlight": "every organization"
   }
 }

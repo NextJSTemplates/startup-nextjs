@@ -48,21 +48,21 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 lg:mb-0">
                 <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-                  À propos d'Unleash Lab
+                  {messages.aboutSectionOne.tagline}
                 </span>
                 <h1 className="mb-6 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl">
-                  Révéler le potentiel de{" "}
-                  <span className="text-primary">chaque organisation</span>
+                  {messages.aboutSectionOne.title}{" "}
+                  <span className="text-primary">{messages.aboutSectionOne.titleHighlight}</span>
                 </h1>
                 <p className="mb-8 text-lg leading-relaxed text-body-color">
                   {messages.about.paragraph}
                 </p>
                 <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <button className="rounded-md bg-primary px-8 py-3 text-base font-semibold text-white transition hover:bg-primary/90">
-                    Découvrir nos services
+                    {messages.common.discoverServices}
                   </button>
                   <button className="rounded-md border border-primary px-8 py-3 text-base font-semibold text-primary transition hover:bg-primary hover:text-white">
-                    Notre équipe
+                    {messages.common.ourTeam}
                   </button>
                 </div>
               </div>

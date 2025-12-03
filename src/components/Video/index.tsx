@@ -34,7 +34,7 @@ export default function Video() {
                     <button
                       aria-label="video play button"
                       onClick={() => setOpen(true)}
-                      className="text-primary flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/75 transition hover:bg-white"
+                      className="text-primary flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/75 transition hover:bg-white cursor-pointer"
                     >
                       <svg
                         width="16"

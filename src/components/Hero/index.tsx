@@ -18,7 +18,7 @@ const Hero = () => {
                   Startup is free Next.js template for startups and SaaS
                   business websites comes with all the essential pages,
                   components, and sections you need to launch a complete
-                  business website, built-with Next 13.x and Tailwind CSS.
+                  business website, built-with Next 16.x and Tailwind CSS.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link

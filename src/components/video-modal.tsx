@@ -4,15 +4,15 @@ type PropsType = {
   isOpen: boolean;
   onClose: () => void;
 } & (
-  | {
+    | {
       channel: "youtube";
       videoId: string;
     }
-  | {
+    | {
       channel?: "custom";
       src: string;
     }
-);
+  );
 
 export default function VideoModal({ isOpen, onClose, ...props }: PropsType) {
   if (!isOpen) return null;
@@ -30,7 +30,7 @@ export default function VideoModal({ isOpen, onClose, ...props }: PropsType) {
       <div className="relative w-full max-w-4xl bg-gray-900">
         <button
           onClick={onClose}
-          className="absolute -top-2 -right-4 translate-x-full text-7xl leading-none text-white"
+          className="absolute -top-2 -right-4 translate-x-full text-7xl leading-none text-white cursor-pointer"
         >
           <span className="sr-only">Close modal</span>
           &times;

@@ -56,20 +56,17 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <Image
-                  src="/images/logo/logo-2.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
-                />
-                <Image
-                  src="/images/logo/logo.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
-                />
+                <Link
+                  href="/"
+                  className={`header-logo block w-full ${
+                  sticky ? "py-5 lg:py-2" : "py-8"
+                  } `}
+                >
+                <span className="text-3xl font-bold text-white dark:text-white">
+                CETify
+                </span>
+                </Link>
+
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -159,17 +156,17 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
+                {/* <Link
                   href="/signin"
                   className="text-dark hidden px-7 py-3 text-base font-medium hover:opacity-70 md:block dark:text-white"
                 >
                   Sign In
-                </Link>
+                </Link> */}
                 <Link
-                  href="/signup"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfg8IQVyqkLv76b7654WZ690KaAJRRu6-70BIuY6D2If3yb0A/viewform"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover bg-primary hover:bg-primary/90 hidden rounded-xs px-8 py-3 text-base font-medium text-white transition duration-300 md:block md:px-9 lg:px-6 xl:px-9"
                 >
-                  Sign Up
+                  Book Demo
                 </Link>
                 <div>
                   <ThemeToggler />

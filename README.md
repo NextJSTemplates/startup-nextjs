@@ -1,81 +1,58 @@
-# Startup - Free Next.js Startup Website Template
+# Yacob Tech | Startup
 
-Startup is a free, open-source, and premium-quality [**Next.js startup website template**](https://nextjstemplates.com/templates/startup) that comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
+**Building Tomorrow, Today.**
 
-If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
+A corporate technology website based on the open-source Startup Next.js template.
 
-### ✨ Key Features
+## Official services
 
-- Crafted for Startup and SaaS Business
-- Next.js and Tailwind CSS
-- All Essential Business Sections and Pages
-- High-quality and Clean Design
-- Dark and Light Version
-- TypeScript Support
-and Much More ...
+- Web and software development
+- IT support and networking
+- Digital solutions and innovation
+- AI solutions and automation
+- Technology training and education
+- Business and school management systems
 
-### 🙌 Detailed comparison between the Free and Pro versions of Startup
+## Current implementation status
 
-| Feature             | Free | Pro |
-|---------------------|------------|----------|
-| Next.js Landing Page             | ✅ Yes      | ✅ Yes      |
-| All The Integrations - Auth, DB, Payments, Blog and many more ...             | ❌ No      | ✅ Yes |
-| Homepage Variations             | 1      | 2 |
-| Additional SaaS Pages and Components             | ❌ No      | ✅ Yes |
-| Functional Blog with Sanity       | ❌ No      | ✅ Yes |
-| Use with Commercial Projects            | ✅ Yes      | ✅ Yes      |
-| Lifetime Free Updates             | ✅ Yes      | ✅ Yes |
-| Email Support       | ❌ No         | ✅ Yes       |
-| Community Support         | ✅ Yes         | ✅ Yes       |
+- Branded homepage, service cards, business-sector section, company introduction, navigation, and contact form UI are committed on `feature/corporate-platform`.
+- The contact form calls a server-side Next.js API route.
+- The API validates and stores enquiries in Supabase using a server-only service-role key and can send notifications through Resend.
+- A Supabase migration is provided in `supabase/migrations/202610250001_create_contact_messages.sql`.
+- Blog cards currently show planned editorial topics; they are not yet a CMS-backed blog.
+- Full English/Afaan Oromo/Amharic translation, authenticated admin dashboard, broader content management, automated tests, and production deployment remain to be implemented and verified.
 
-### [🔥 Get Startup Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+## Local development
 
-[![Startup Pro](https://raw.githubusercontent.com/NextJSTemplates/startup-nextjs/main/startup-pro.webp)](https://nextjstemplates.com/templates/saas-starter-startup)
+Requirements: Node.js 20 or later and npm.
 
-Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
+```bash
+npm install
+cp .env.example .env.local
+npm run dev
+```
 
-- [🚀 View Free Demo](https://startup.nextjstemplates.com/)
+Open [http://localhost:3000](http://localhost:3000).
 
-- [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
+## Contact form setup
 
-- [📦 Download](https://nextjstemplates.com/templates/startup)
+1. Create a Supabase project.
+2. Run the SQL migration from `supabase/migrations/202610250001_create_contact_messages.sql` in the Supabase SQL Editor.
+3. Set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in local `.env.local` and in Vercel project environment variables. The service-role key must remain server-side and must never use a `NEXT_PUBLIC_` prefix.
+4. Configure Resend and a verified sending domain, then set `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, and `CONTACT_FROM_EMAIL`.
+5. Send a test enquiry and verify both the saved database row and email delivery before launch.
 
-- [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+If email settings are absent or the email provider fails, the API may save the enquiry but will return a message indicating that email notification is unavailable. Do not treat email delivery as verified until a real test succeeds.
 
-- [🔌 Documentation](https://nextjstemplates.com/docs)
+## Security notes
 
-### ⚡ Deploy Now
+- The contact table has Row Level Security enabled and does not grant direct access to anonymous or authenticated browser clients.
+- The service-role key is used only in the server-side route.
+- The contact form includes input validation and a honeypot, but production deployment should add a durable rate limiter and abuse monitoring.
+- Admin authentication and role-based content management are not implemented yet.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
+## Original template and license
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
+This project is based on [NextJSTemplates/startup-nextjs](https://github.com/NextJSTemplates/startup-nextjs). The upstream project is licensed under the MIT License. Keep the original copyright and license notice in `LICENSE` and preserve applicable attribution.
 
-### 📄 License
-
-Startup is 100% free and open-source, feel free to use with your personal and commercial projects.
-
-### 💜 Support
-
-If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
-
-### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)
-
-### Update Log
-
-**03 December 2025**
-
-- Upgrade to Next.js 16
-- Fixed video modal issue
-
-**10 April 2025**
-
-- Fix peer deps issue with Next.js 15
-- Upgrade to tailwind v4
-- Refactored blog cards for handling edge cases(text ellipsis on bio, keeping author details at the bottom etc.)
-- Re-wrote blog details page with icons separation, fallback author image and better markup.
-- Fixed duplicate key errors on homepage.
-- Separated icons on theme-switcher button, and refactored scroll-to-top button.
-
-**29 Jan 2025**
-
-- Upgraded to Next.js 15
+Original template copyright: Next.js Templates (2023).

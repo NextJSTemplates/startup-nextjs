@@ -15,6 +15,10 @@ const Sitemap = () => {
       { name: "UI/UX", url: "https://ce-website-new.vercel.app/services/ui-ux" },
       { name: "Support & Maintenance", url: "https://ce-website-new.vercel.app/services/support-and-maintenance" },
     ],
+    Legal: [
+      { name: "Privacy Policy", url: "https://ce-website-new.vercel.app/privacy-policy" },
+      { name: "Terms of Service", url: "https://ce-website-new.vercel.app/tos" },
+    ],
     Blogs: [
       { name: "Classy Endeavors Blogs", url: "https://blog.classyendeavors.com/" },
     ],

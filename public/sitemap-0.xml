@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>http://localhost:3000/sitemap</loc><lastmod>2025-10-06T09:07:10.121Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/mvp-development</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/software-security</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/software-development</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/support-and-maintenance</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/ui-ux</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/artificial-intelligence</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/cloud-computing</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/about-us</loc><lastmod>2025-10-06T09:07:10.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/sitemap</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/about-us</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/services/software-security</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/services/support-and-maintenance</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/services/artificial-intelligence</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/tos</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/privacy-policy</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/services/cloud-computing</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/services/ui-ux</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/services/mvp-development</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com/services/software-development</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://classyendeavors.com</loc><lastmod>2026-11-02T10:06:40.834Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

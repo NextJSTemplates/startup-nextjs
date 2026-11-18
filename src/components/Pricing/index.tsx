@@ -5,19 +5,20 @@ import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+  
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Simple Annual Licensing for CET Institutes"
+          paragraph="CETify is licensed annually to coaching institutes—not sold per student. Pricing is based on institute size, batches, and required analytics depth."
           center
           width="665px"
         />
 
-        <div className="w-full">
+
+        {/* <div className="w-full">
           <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
             <span
               onClick={() => setIsMonthly(true)}
@@ -55,36 +56,37 @@ const Pricing = () => {
               Yearly
             </span>
           </div>
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            packageName="Institute License"
+            price="Custom"
+            duration="Annual"
+            subtitle="For small to mid-sized CET coaching institutes"
+>
+            <OfferList text="QC-verified CET mock tests" status="active" />
+            <OfferList text="Faculty & batch analytics dashboard" status="active" />
+            <OfferList text="Time-per-question insights" status="active" />
+            <OfferList text="PCM / PCB support" status="active" />
+            <OfferList text="Multi-batch management" status="active" />
+            <OfferList text="Email & WhatsApp support" status="active" />
           </PricingBox>
+
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
-          </PricingBox>
-          <PricingBox
+            packageName="Early Access Partner"
+            price="Limited"
+            duration="Offer"
+            subtitle="For institutes seeking a competitive edge"
+>
+            <OfferList text="Everything in Institute License" status="active" />
+            <OfferList text="Priority onboarding & setup" status="active" />
+            <OfferList text="Early access to new features" status="active" />
+            <OfferList text="Dedicated CET-season support" status="active" />
+            <OfferList text="Feedback-driven feature influence" status="active" />
+            </PricingBox>
+
+          {/* <PricingBox
             packageName="Plus"
             price={isMonthly ? "589" : "999"}
             duration={isMonthly ? "mo" : "yr"}
@@ -96,7 +98,7 @@ const Pricing = () => {
             <OfferList text="Email Support" status="active" />
             <OfferList text="Lifetime Access" status="active" />
             <OfferList text="Free Lifetime Updates" status="active" />
-          </PricingBox>
+          </PricingBox> */}
         </div>
       </div>
 

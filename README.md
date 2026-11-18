@@ -62,6 +62,11 @@ If you like the template, please star this repository to inspire the team to cre
 
 ### Update Log
 
+**17 November 2026**
+
+- Upgrade dependencies.
+- Fixed some code and config changes needed for the new versions.
+
 **03 December 2025**
 
 - Upgrade to Next.js 16
